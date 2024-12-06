@@ -1,12 +1,8 @@
 {
   "recentFiles": [
     {
-      "basename": "图解释",
-      "path": "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/图解释.md"
-    },
-    {
-      "basename": "Zipf ’s law",
-      "path": "Papers/QAs/A Review of Cooperation in Multi-agent Learning/Zipf ’s law.md"
+      "basename": "MCTS",
+      "path": "Papers/Concepts/MCTS/MCTS.md"
     },
     {
       "basename": "MCTS与MC的区别",
@@ -15,6 +11,14 @@
     {
       "basename": "search",
       "path": "Papers/Concepts/MCTS/search.md"
+    },
+    {
+      "basename": "图解释",
+      "path": "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/图解释.md"
+    },
+    {
+      "basename": "Zipf ’s law",
+      "path": "Papers/QAs/A Review of Cooperation in Multi-agent Learning/Zipf ’s law.md"
     },
     {
       "basename": "Backpropagation",
@@ -43,10 +47,6 @@
     {
       "basename": "Euclidean (L2) norm",
       "path": "Papers/QAs/Proximal Learning With Opponent-Learning Awareness/Euclidean (L2) norm.md"
-    },
-    {
-      "basename": "MCTS",
-      "path": "Papers/Concepts/MCTS/MCTS.md"
     },
     {
       "basename": "Arrow’s Theorem",

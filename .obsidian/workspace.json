@@ -4,193 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "25c7eca6a4f41faa",
+        "id": "a9ea5b50a7e0f9c4",
         "type": "tabs",
         "children": [
           {
-            "id": "f530984e091b08d5",
+            "id": "4029d3897c82dda1",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "创建链接.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "创建链接"
-            }
-          },
-          {
-            "id": "41ffed3f67f41520",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Papers/未命名 1/未命名 2/未命名 1.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "未命名 1"
-            }
-          },
-          {
-            "id": "8da7c1b57b0effae",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Papers/未命名 1/未命名 1/未命名 2.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "未命名 2"
-            }
-          },
-          {
-            "id": "d8ad891fbeef5d64",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Papers/未命名 1/A Review of Cooperation in Multi-agent Learning/cheap talk.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "cheap talk"
-            }
-          },
-          {
-            "id": "ed19c6c84d73a286",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Papers/未命名 1/A Review of Cooperation in Multi-agent Learning/cheap talk.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "cheap talk"
-            }
-          },
-          {
-            "id": "e8f3e2ee0798cfe0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Papers/未命名 1/A Review of Cooperation in Multi-agent Learning/Zipf ’s law.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Zipf ’s law"
-            }
-          },
-          {
-            "id": "47cd7cee684919e4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Papers/未命名 1/A Review of Cooperation in Multi-agent Learning/cheap talk.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "cheap talk"
-            }
-          },
-          {
-            "id": "45639a9c25dd5912",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Papers/未命名 1/A Review of Cooperation in Multi-agent Learning/Arrow’s Theorem.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Arrow’s Theorem"
-            }
-          },
-          {
-            "id": "13131d040d970417",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Papers/Concepts/MCTS/MCTS与MC的区别.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "MCTS与MC的区别"
-            }
-          },
-          {
-            "id": "0b44c9f5c0ee1283",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Papers/Concepts/MCTS/MCTS.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "MCTS"
-            }
-          },
-          {
-            "id": "3a5317fc0d557c0a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Papers/Concepts/MCTS/MCTS与MC的区别.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "MCTS与MC的区别"
-            }
-          },
-          {
-            "id": "89942d448eaa059d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "创建链接.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "创建链接"
-            }
-          },
-          {
-            "id": "b82eec4829ef367e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Papers/Concepts/MCTS/MCTS.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "MCTS"
+              "title": "New tab"
             }
           }
-        ],
-        "currentTab": 7
+        ]
       }
     ],
     "direction": "vertical"
@@ -212,7 +39,7 @@
                 "sortOrder": "byCreatedTimeReverse"
               },
               "icon": "lucide-folder-closed",
-              "title": "文件列表"
+              "title": "Files"
             }
           },
           {
@@ -256,7 +83,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 207.5
+    "width": 253.5
   },
   "right": {
     "id": "7606efc67cf0ade4",
@@ -317,11 +144,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "欢迎.md"
-              },
+              "state": {},
               "icon": "lucide-list",
-              "title": "欢迎 的大纲"
+              "title": "大纲"
             }
           },
           {
@@ -363,44 +188,44 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "obsidian-kanban:创建新看板": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "obsidian-kanban:Create new board": false,
       "obsidian-git:Open Git source control": false,
-      "switcher:打开快速切换": false,
-      "graph:查看关系图谱": false,
-      "canvas:新建白板": false,
-      "daily-notes:打开/创建今天的日记": false,
-      "templates:插入模板": false,
-      "command-palette:打开命令面板": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
       "templater-obsidian:Templater": false,
-      "obsidian-excalidraw-plugin:新建绘图文件": false
+      "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "45639a9c25dd5912",
+  "active": "76680d06691bde68",
   "lastOpenFiles": [
-    "Papers/未命名 1/A Review of Cooperation in Multi-agent Learning/未命名.md",
+    "Papers/未命名 1/未命名 3/未命名.md",
+    "Papers/Concepts/MCTS/MCTS.md",
+    "Papers/Concepts/MCTS/MCTS与MC的区别.md",
     "Papers/未命名 1/A Review of Cooperation in Multi-agent Learning/Arrow’s Theorem.md",
     "Papers/未命名 1/A Review of Cooperation in Multi-agent Learning/cheap talk.md",
     "Papers/未命名 1/A Review of Cooperation in Multi-agent Learning/Zipf ’s law.md",
+    "Papers/未命名 1/未命名 1/未命名 2.md",
+    "Papers/未命名 1/A Review of Cooperation in Multi-agent Learning/未命名.md",
     "Papers/未命名 1/A Review of Cooperation in Multi-agent Learning/Hanabi.md",
     "Papers/未命名 1/A Review of Cooperation in Multi-agent Learning/aligned=pure common interest.md",
-    "Papers/未命名 1/未命名 1/未命名 2.md",
     "Papers/未命名 1/未命名 2/未命名 1.md",
     "创建链接.md",
     "Papers/未命名 1/未命名 3",
     "Papers/未命名 1/未命名 2",
     "Papers/未命名 1/未命名 1",
     "Papers/未命名 1/A Review of Cooperation in Multi-agent Learning",
-    "Papers/Concepts/MCTS/MCTS.md",
     "Papers/Concepts/MCTS/未命名.md",
-    "Papers/未命名 1/未命名 3/未命名.md",
     "未命名",
     "Papers/未命名 1/未命名.md",
     "Papers/未命名 1/未命名 3.md",
     "Papers/未命名 1/未命名 5.md",
     "Papers/未命名 1/未命名 4.md",
     "Papers/Concepts/MCTS/search.md",
-    "Papers/Concepts/MCTS/MCTS与MC的区别.md",
     "欢迎发.md",
     "Papers/Concepts/MCTS",
     "Papers/未命名 1",

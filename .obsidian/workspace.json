@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "4d24faff8770a212",
+        "id": "62706aa94f32a2ac",
         "type": "tabs",
         "children": [
           {
-            "id": "6fe058584515c8ec",
+            "id": "e5ee6fb9182c50ed",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "未命名/未命名.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "未命名"
+              "title": "新标签页"
             }
           }
         ]
@@ -209,10 +205,14 @@
   },
   "active": "76680d06691bde68",
   "lastOpenFiles": [
+    "Papers/未命名 1",
+    "Papers/Concepts",
+    "Papers/未命名.md",
+    "未命名/未命名看板.md",
+    "未命名/未命名.canvas",
     "未命名/未命名",
     "欢迎.md",
-    "未命名/未命名.md",
-    "未命名",
+    "Papers",
     "ObsidianVault",
     "未命名看板.md",
     "未命名看板 1.md",

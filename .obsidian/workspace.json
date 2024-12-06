@@ -183,7 +183,8 @@
               "title": "Advanced Tables"
             }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
@@ -204,7 +205,7 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "b725bca47c7650c6",
+  "active": "76680d06691bde68",
   "lastOpenFiles": [
     "Papers/QAs/Proximal Learning With Opponent-Learning Awareness/Euclidean (L2) norm.md",
     "Papers/QAs/Learning to Balance Altruism and Self-interest Bas/w-o.md",

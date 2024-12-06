@@ -9,4 +9,4 @@ and [AlphaGoZero](https://deepmind.com/blog/alphago-zero-learning-scratch/) in 2
 1. learn by repeatedly playing against itself
 2. distill that experience back into the neural network
 
-## Exploration and Exploitation: Upper Confidence Bounds
+## to achieve Exploration and Exploitation: Upper Confidence Bounds

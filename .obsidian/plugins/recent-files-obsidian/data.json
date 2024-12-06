@@ -1,44 +1,64 @@
 {
   "recentFiles": [
     {
-      "basename": "cheap talk",
-      "path": "Papers/未命名 1/A Review of Cooperation in Multi-agent Learning/cheap talk.md"
+      "basename": "search",
+      "path": "Papers/Concepts/MCTS/search.md"
     },
     {
-      "basename": "SCG-repara-SF",
-      "path": "Papers/未命名 1/DiCE-The Infinitely Differentiable Monte Carlo Es/SCG-repara-SF.md"
+      "basename": "Euclidean (L2) norm",
+      "path": "Papers/QAs/Proximal Learning With Opponent-Learning Awareness/Euclidean (L2) norm.md"
     },
     {
-      "basename": "Backpropagation",
-      "path": "Papers/未命名 1/DiCE-The Infinitely Differentiable Monte Carlo Es/Backpropagation.md"
-    },
-    {
-      "basename": "Hanabi",
-      "path": "Papers/未命名 1/A Review of Cooperation in Multi-agent Learning/Hanabi.md"
-    },
-    {
-      "basename": "图解释",
-      "path": "Papers/未命名 1/DiCE-The Infinitely Differentiable Monte Carlo Es/图解释.md"
-    },
-    {
-      "basename": "Surrogate loss function",
-      "path": "Papers/未命名 1/DiCE-The Infinitely Differentiable Monte Carlo Es/Surrogate loss function.md"
+      "basename": "w-o",
+      "path": "Papers/QAs/Learning to Balance Altruism and Self-interest Bas/w-o.md"
     },
     {
       "basename": "公式推导Higher Order Derivatives",
-      "path": "Papers/未命名 1/DiCE-The Infinitely Differentiable Monte Carlo Es/公式推导Higher Order Derivatives.md"
+      "path": "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/公式推导Higher Order Derivatives.md"
+    },
+    {
+      "basename": "Surrogate loss function",
+      "path": "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/Surrogate loss function.md"
+    },
+    {
+      "basename": "SCG-repara-SF",
+      "path": "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/SCG-repara-SF.md"
+    },
+    {
+      "basename": "Score Function",
+      "path": "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/Score Function.md"
+    },
+    {
+      "basename": "Backpropagation",
+      "path": "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/Backpropagation.md"
+    },
+    {
+      "basename": "图解释",
+      "path": "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/图解释.md"
+    },
+    {
+      "basename": "Arrow’s Theorem",
+      "path": "Papers/QAs/A Review of Cooperation in Multi-agent Learning/Arrow’s Theorem.md"
+    },
+    {
+      "basename": "Hanabi",
+      "path": "Papers/QAs/A Review of Cooperation in Multi-agent Learning/Hanabi.md"
+    },
+    {
+      "basename": "Zipf ’s law",
+      "path": "Papers/QAs/A Review of Cooperation in Multi-agent Learning/Zipf ’s law.md"
+    },
+    {
+      "basename": "aligned=pure common interest",
+      "path": "Papers/QAs/A Review of Cooperation in Multi-agent Learning/aligned=pure common interest.md"
+    },
+    {
+      "basename": "cheap talk",
+      "path": "Papers/QAs/A Review of Cooperation in Multi-agent Learning/cheap talk.md"
     },
     {
       "basename": "未命名 5",
       "path": "Papers/未命名 1/DiCE-The Infinitely Differentiable Monte Carlo Es/未命名 5.md"
-    },
-    {
-      "basename": "Score Function",
-      "path": "Papers/未命名 1/DiCE-The Infinitely Differentiable Monte Carlo Es/Score Function.md"
-    },
-    {
-      "basename": "Euclidean (L2) norm",
-      "path": "Papers/未命名 1/Proximal Learning With Opponent-Learning Awareness/Euclidean (L2) norm.md"
     },
     {
       "basename": "MCTS",
@@ -47,34 +67,6 @@
     {
       "basename": "MCTS与MC的区别",
       "path": "Papers/Concepts/MCTS/MCTS与MC的区别.md"
-    },
-    {
-      "basename": "Arrow’s Theorem",
-      "path": "Papers/未命名 1/A Review of Cooperation in Multi-agent Learning/Arrow’s Theorem.md"
-    },
-    {
-      "basename": "Zipf ’s law",
-      "path": "Papers/未命名 1/A Review of Cooperation in Multi-agent Learning/Zipf ’s law.md"
-    },
-    {
-      "basename": "未命名 2",
-      "path": "Papers/未命名 1/未命名 1/未命名 2.md"
-    },
-    {
-      "basename": "aligned=pure common interest",
-      "path": "Papers/未命名 1/A Review of Cooperation in Multi-agent Learning/aligned=pure common interest.md"
-    },
-    {
-      "basename": "创建链接",
-      "path": "创建链接.md"
-    },
-    {
-      "basename": "search",
-      "path": "Papers/Concepts/MCTS/search.md"
-    },
-    {
-      "basename": "欢迎发",
-      "path": "欢迎发.md"
     },
     {
       "basename": "未命名",

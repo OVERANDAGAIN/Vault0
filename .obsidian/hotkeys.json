@@ -4,5 +4,13 @@
       "modifiers": [],
       "key": "F2"
     }
+  ],
+  "app:delete-file": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "Delete"
+    }
   ]
 }

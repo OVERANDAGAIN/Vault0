@@ -5,6 +5,18 @@
       "path": "创建链接.md"
     },
     {
+      "basename": "MCTS",
+      "path": "Papers/Concepts/MCTS/MCTS.md"
+    },
+    {
+      "basename": "search",
+      "path": "Papers/Concepts/MCTS/search.md"
+    },
+    {
+      "basename": "MCTS与MC的区别",
+      "path": "Papers/Concepts/MCTS/MCTS与MC的区别.md"
+    },
+    {
       "basename": "欢迎发",
       "path": "欢迎发.md"
     },

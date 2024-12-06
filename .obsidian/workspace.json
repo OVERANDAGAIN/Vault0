@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "62706aa94f32a2ac",
+        "id": "25c7eca6a4f41faa",
         "type": "tabs",
         "children": [
           {
-            "id": "e5ee6fb9182c50ed",
+            "id": "f530984e091b08d5",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -203,15 +203,17 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "76680d06691bde68",
+  "active": "f530984e091b08d5",
   "lastOpenFiles": [
+    "创建链接.md",
+    "欢迎发.md",
+    "Papers/Concepts/MCTS",
     "Papers/未命名 1",
     "Papers/Concepts",
     "Papers/未命名.md",
     "未命名/未命名看板.md",
     "未命名/未命名.canvas",
     "未命名/未命名",
-    "欢迎.md",
     "Papers",
     "ObsidianVault",
     "未命名看板.md",

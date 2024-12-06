@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Papers/QAs/Proximal Learning With Opponent-Learning Awareness/Euclidean (L2) norm.md",
+                "file": "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/Score Function.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Euclidean (L2) norm"
+              "title": "Score Function"
             }
           }
         ]
@@ -148,9 +148,11 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {},
+              "state": {
+                "file": "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/Score Function.md"
+              },
               "icon": "lucide-list",
-              "title": "大纲"
+              "title": "Score Function 的大纲"
             }
           },
           {
@@ -182,13 +184,27 @@
               "icon": "spreadsheet",
               "title": "Advanced Tables"
             }
+          },
+          {
+            "id": "038d06cdc8381008",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "添加笔记属性"
+            }
           }
         ],
-        "currentTab": 5
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 250.5
+    "width": 461.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -202,22 +218,23 @@
       "obsidian-git:Open Git source control": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
       "templater-obsidian:Templater": false,
-      "obsidian-excalidraw-plugin:新建绘图文件": false
+      "obsidian-excalidraw-plugin:新建绘图文件": false,
+      "markdown-importer:打开 Markdown 格式转换器": false
     }
   },
-  "active": "b725bca47c7650c6",
+  "active": "7746ac004a8a19a9",
   "lastOpenFiles": [
+    "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/Surrogate loss function.md",
+    "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/公式推导Higher Order Derivatives.md",
+    "Papers/QAs/Proximal Learning With Opponent-Learning Awareness/Euclidean (L2) norm.md",
     "Papers/Concepts/MCTS/MCTS.md",
     "Papers/Concepts/MCTS/MCTS与MC的区别.md",
     "Papers/Concepts/MCTS/search.md",
-    "Papers/QAs/Proximal Learning With Opponent-Learning Awareness/Euclidean (L2) norm.md",
     "Papers/QAs/Learning to Balance Altruism and Self-interest Bas/w-o.md",
     "欢迎发.md",
     "创建链接.md",
-    "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/公式推导Higher Order Derivatives.md",
     "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/attchments/Pasted image 20241206171755.png",
     "Papers/未命名 1/DiCE-The Infinitely Differentiable Monte Carlo Es/Pasted image 20241206171218.png",
-    "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/Surrogate loss function.md",
     "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/SCG-repara-SF.md",
     "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/attchments/Pasted image 20241206171713.png",
     "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/attchments/Pasted image 20241206171653.png",

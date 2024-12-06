@@ -2,6 +2,6 @@
   "promptDelete": true,
   "trashOption": "local",
   "showUnsupportedFiles": true,
-  "attachmentFolderPath": "E:\\ObsidianLib\\attachments",
+  "attachmentFolderPath": "/",
   "newFileLocation": "current"
 }

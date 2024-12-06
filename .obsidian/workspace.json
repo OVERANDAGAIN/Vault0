@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/Score Function.md",
+                "file": "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/图解释.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Score Function"
+              "title": "图解释"
             }
           }
         ]
@@ -98,12 +98,44 @@
         "type": "tabs",
         "children": [
           {
+            "id": "f77037ae7c8b53df",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
+            }
+          },
+          {
+            "id": "1b4883188cadf218",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {},
+              "icon": "spreadsheet",
+              "title": "Advanced Tables"
+            }
+          },
+          {
+            "id": "7746ac004a8a19a9",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/图解释.md"
+              },
+              "icon": "lucide-list",
+              "title": "图解释 的大纲"
+            }
+          },
+          {
             "id": "9f39ad243124278a",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Papers/QAs/Proximal Learning With Opponent-Learning Awareness/Euclidean (L2) norm.md",
+                "file": "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/图解释.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +145,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Euclidean (L2) norm 的反向链接列表"
+              "title": "图解释 的反向链接列表"
             }
           },
           {
@@ -122,12 +154,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "欢迎.md",
+                "file": "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/图解释.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "欢迎 的出链列表"
+              "title": "图解释 的出链列表"
             }
           },
           {
@@ -144,28 +176,6 @@
             }
           },
           {
-            "id": "7746ac004a8a19a9",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/Score Function.md"
-              },
-              "icon": "lucide-list",
-              "title": "Score Function 的大纲"
-            }
-          },
-          {
-            "id": "f77037ae7c8b53df",
-            "type": "leaf",
-            "state": {
-              "type": "calendar",
-              "state": {},
-              "icon": "calendar-with-checkmark",
-              "title": "Calendar"
-            }
-          },
-          {
             "id": "a84728f6c4cddc69",
             "type": "leaf",
             "state": {
@@ -173,16 +183,6 @@
               "state": {},
               "icon": "git-pull-request",
               "title": "Source Control"
-            }
-          },
-          {
-            "id": "1b4883188cadf218",
-            "type": "leaf",
-            "state": {
-              "type": "advanced-tables-toolbar",
-              "state": {},
-              "icon": "spreadsheet",
-              "title": "Advanced Tables"
             }
           },
           {
@@ -200,11 +200,11 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 6
       }
     ],
     "direction": "horizontal",
-    "width": 461.5
+    "width": 293.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -222,20 +222,26 @@
       "markdown-importer:打开 Markdown 格式转换器": false
     }
   },
-  "active": "7746ac004a8a19a9",
+  "active": "b725bca47c7650c6",
   "lastOpenFiles": [
-    "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/Surrogate loss function.md",
-    "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/公式推导Higher Order Derivatives.md",
-    "Papers/QAs/Proximal Learning With Opponent-Learning Awareness/Euclidean (L2) norm.md",
-    "Papers/Concepts/MCTS/MCTS.md",
+    "Excalidraw/Drawing 2024-12-06 17.52.24.excalidraw.md",
+    "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/图解释.md",
+    "Excalidraw",
+    "Papers/QAs/A Review of Cooperation in Multi-agent Learning/Zipf ’s law.md",
     "Papers/Concepts/MCTS/MCTS与MC的区别.md",
     "Papers/Concepts/MCTS/search.md",
+    "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/Backpropagation.md",
+    "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/Score Function.md",
+    "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/SCG-repara-SF.md",
+    "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/Surrogate loss function.md",
+    "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/公式推导Higher Order Derivatives.md",
     "Papers/QAs/Learning to Balance Altruism and Self-interest Bas/w-o.md",
+    "Papers/QAs/Proximal Learning With Opponent-Learning Awareness/Euclidean (L2) norm.md",
+    "Papers/Concepts/MCTS/MCTS.md",
     "欢迎发.md",
     "创建链接.md",
     "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/attchments/Pasted image 20241206171755.png",
     "Papers/未命名 1/DiCE-The Infinitely Differentiable Monte Carlo Es/Pasted image 20241206171218.png",
-    "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/SCG-repara-SF.md",
     "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/attchments/Pasted image 20241206171713.png",
     "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/attchments/Pasted image 20241206171653.png",
     "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/attchments/Pasted image 20241206171643.png",
@@ -244,12 +250,8 @@
     "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/attchments/Pasted image 20241206171632.png",
     "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/attchments/Pasted image 20241206171622.png",
     "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/attchments/Pasted image 20241206171617.png",
-    "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/Score Function.md",
-    "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/Backpropagation.md",
-    "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/图解释.md",
     "Papers/QAs/A Review of Cooperation in Multi-agent Learning/Arrow’s Theorem.md",
     "Papers/QAs/A Review of Cooperation in Multi-agent Learning/Hanabi.md",
-    "Papers/QAs/A Review of Cooperation in Multi-agent Learning/Zipf ’s law.md",
     "Papers/QAs/A Review of Cooperation in Multi-agent Learning/aligned=pure common interest.md",
     "Papers/QAs/A Review of Cooperation in Multi-agent Learning/cheap talk.md",
     "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/attchments",
@@ -268,7 +270,6 @@
     "Papers/QAs",
     "Papers/Concepts",
     "Papers/未命名.md",
-    "未命名/未命名.canvas",
-    "未命名/未命名"
+    "未命名/未命名.canvas"
   ]
 }

@@ -10,3 +10,5 @@ and [AlphaGoZero](https://deepmind.com/blog/alphago-zero-learning-scratch/) in 2
 2. distill that experience back into the neural network
 
 ## to achieve Exploration and Exploitation: Upper Confidence Bounds
+
+- [ ] 

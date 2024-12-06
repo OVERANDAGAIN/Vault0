@@ -14,5 +14,7 @@
   "obsidian-icon-folder",
   "obsidian-git",
   "dataview",
-  "editing-toolbar"
+  "editing-toolbar",
+  "tag-wrangler",
+  "quickadd"
 ]

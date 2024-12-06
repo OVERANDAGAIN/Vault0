@@ -1,12 +1,20 @@
 {
   "recentFiles": [
     {
-      "basename": "search",
-      "path": "Papers/Concepts/MCTS/search.md"
-    },
-    {
       "basename": "Euclidean (L2) norm",
       "path": "Papers/QAs/Proximal Learning With Opponent-Learning Awareness/Euclidean (L2) norm.md"
+    },
+    {
+      "basename": "MCTS",
+      "path": "Papers/Concepts/MCTS/MCTS.md"
+    },
+    {
+      "basename": "MCTS与MC的区别",
+      "path": "Papers/Concepts/MCTS/MCTS与MC的区别.md"
+    },
+    {
+      "basename": "search",
+      "path": "Papers/Concepts/MCTS/search.md"
     },
     {
       "basename": "w-o",
@@ -59,14 +67,6 @@
     {
       "basename": "未命名 5",
       "path": "Papers/未命名 1/DiCE-The Infinitely Differentiable Monte Carlo Es/未命名 5.md"
-    },
-    {
-      "basename": "MCTS",
-      "path": "Papers/Concepts/MCTS/MCTS.md"
-    },
-    {
-      "basename": "MCTS与MC的区别",
-      "path": "Papers/Concepts/MCTS/MCTS与MC的区别.md"
     },
     {
       "basename": "未命名",

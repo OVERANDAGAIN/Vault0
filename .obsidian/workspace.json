@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Papers/Concepts/MCTS/search.md",
+                "file": "Papers/QAs/Proximal Learning With Opponent-Learning Awareness/Euclidean (L2) norm.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "search"
+              "title": "Euclidean (L2) norm"
             }
           }
         ]
@@ -87,7 +87,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 257.5
+    "width": 283.5
   },
   "right": {
     "id": "7606efc67cf0ade4",
@@ -103,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Papers/Concepts/MCTS/search.md",
+                "file": "Papers/QAs/Proximal Learning With Opponent-Learning Awareness/Euclidean (L2) norm.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +113,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "search 的反向链接列表"
+              "title": "Euclidean (L2) norm 的反向链接列表"
             }
           },
           {
@@ -205,8 +205,11 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "76680d06691bde68",
+  "active": "b725bca47c7650c6",
   "lastOpenFiles": [
+    "Papers/Concepts/MCTS/MCTS.md",
+    "Papers/Concepts/MCTS/MCTS与MC的区别.md",
+    "Papers/Concepts/MCTS/search.md",
     "Papers/QAs/Proximal Learning With Opponent-Learning Awareness/Euclidean (L2) norm.md",
     "Papers/QAs/Learning to Balance Altruism and Self-interest Bas/w-o.md",
     "欢迎发.md",
@@ -234,8 +237,6 @@
     "Papers/QAs/A Review of Cooperation in Multi-agent Learning/cheap talk.md",
     "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/attchments",
     "Papers/未命名 1/A Review of Cooperation in Multi-agent Learning/未命名.md",
-    "Papers/Concepts/MCTS/MCTS.md",
-    "Papers/Concepts/MCTS/MCTS与MC的区别.md",
     "Papers/QAs/Proximal Learning With Opponent-Learning Awareness",
     "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es",
     "Papers/QAs/Learning to Balance Altruism and Self-interest Bas",
@@ -246,7 +247,6 @@
     "Papers/未命名 1/未命名 3.md",
     "Papers/未命名 1/未命名 5.md",
     "Papers/未命名 1/未命名 4.md",
-    "Papers/Concepts/MCTS/search.md",
     "Papers/Concepts/MCTS",
     "Papers/QAs",
     "Papers/Concepts",

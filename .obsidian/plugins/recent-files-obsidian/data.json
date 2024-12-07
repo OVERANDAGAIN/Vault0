@@ -1,6 +1,22 @@
 {
   "recentFiles": [
     {
+      "basename": "MCTS search",
+      "path": "Papers/Concepts/MCTS/MCTS search.md"
+    },
+    {
+      "basename": "MCTS与MC的区别",
+      "path": "Papers/Concepts/MCTS/MCTS与MC的区别.md"
+    },
+    {
+      "basename": "图解释",
+      "path": "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/图解释.md"
+    },
+    {
+      "basename": "Backpropagation",
+      "path": "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/Backpropagation.md"
+    },
+    {
       "basename": "Score Function",
       "path": "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/Score Function.md"
     },
@@ -9,24 +25,8 @@
       "path": "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/SCG-repara-SF.md"
     },
     {
-      "basename": "Backpropagation",
-      "path": "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/Backpropagation.md"
-    },
-    {
-      "basename": "图解释",
-      "path": "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/图解释.md"
-    },
-    {
-      "basename": "MCTS search",
-      "path": "Papers/Concepts/MCTS/MCTS search.md"
-    },
-    {
       "basename": "MCTS",
       "path": "Papers/Concepts/MCTS/MCTS.md"
-    },
-    {
-      "basename": "MCTS与MC的区别",
-      "path": "Papers/Concepts/MCTS/MCTS与MC的区别.md"
     },
     {
       "basename": "Zipf ’s law",

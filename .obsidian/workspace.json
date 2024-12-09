@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Templates/Logbook/未命名.md",
+                "file": "Templates/Logbook/log git.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "未命名"
+              "title": "log git"
             }
           }
         ]
@@ -103,10 +103,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Templates/Logbook/未命名.md"
+                "file": "Templates/Logbook/log git.md"
               },
               "icon": "lucide-list",
-              "title": "未命名 的大纲"
+              "title": "log git 的大纲"
             }
           },
           {
@@ -115,7 +115,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Templates/Logbook/未命名.md",
+                "file": "Templates/Logbook/log git.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,7 +125,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "未命名 的反向链接列表"
+              "title": "log git 的反向链接列表"
             }
           },
           {
@@ -134,12 +134,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Templates/Logbook/未命名.md",
+                "file": "Templates/Logbook/log git.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "未命名 的出链列表"
+              "title": "log git 的出链列表"
             }
           },
           {
@@ -189,10 +189,11 @@
   },
   "active": "441f31a4ae1eff03",
   "lastOpenFiles": [
+    "Logbook/Git/Termux Bash.md",
+    "Problems/Packages/importlib.md",
+    "Templates/Logbook/log git.md",
     "Templates/Papers/paper QAs.md",
-    "Templates/Logbook/未命名.md",
     "Templates/Logbook",
-    "Logbook/Git/未命名.md",
     "Problems/Run/OOM.md",
     "Logbook/Git",
     "Problems/Run/HOP初运行.md",
@@ -203,7 +204,6 @@
     "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/Backpropagation.md",
     "Problems/Run/no pth.md",
     "Problems/Run/no GPU.md",
-    "Problems/Packages/importlib.md",
     "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/图解释.md",
     "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/Score Function.md",
     "Papers/QAs/A Review of Cooperation in Multi-agent Learning/Zipf ’s law.md",

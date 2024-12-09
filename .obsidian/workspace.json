@@ -278,12 +278,13 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "b9834fcb0c313806",
+  "active": "76680d06691bde68",
   "lastOpenFiles": [
     "Problems/Run/未命名.md",
+    "Problems/Run/GPU.md",
     "Templates/Problems/Problem Name.md",
-    "Problems/Run",
     "Problems/Packages/importlib.md",
+    "Problems/Run",
     "Templates/Problems/Run",
     "Papers/QAs/A Review of Cooperation in Multi-agent Learning/Hanabi.md",
     "Papers/QAs/A Review of Cooperation in Multi-agent Learning/aligned=pure common interest.md",
@@ -325,7 +326,6 @@
     "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/attchments",
     "Papers/未命名 1/A Review of Cooperation in Multi-agent Learning/未命名.md",
     "Papers/QAs/Proximal Learning With Opponent-Learning Awareness",
-    "Papers/未命名 1/未命名.md",
     "未命名/未命名.canvas"
   ]
 }

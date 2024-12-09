@@ -9,6 +9,10 @@
       "path": "Problems/Run/未命名.md"
     },
     {
+      "basename": "GPU",
+      "path": "Problems/Run/GPU.md"
+    },
+    {
       "basename": "Problem Name",
       "path": "Templates/Problems/Problem Name.md"
     },

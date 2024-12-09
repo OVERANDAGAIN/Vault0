@@ -69,12 +69,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Problems/Run/no pth.md",
+                "file": "Problems/Run/OOM.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "no pth"
+              "title": "OOM"
             }
           }
         ],
@@ -160,10 +160,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Problems/Run/no pth.md"
+                "file": "Problems/Run/OOM.md"
               },
               "icon": "lucide-list",
-              "title": "no pth 的大纲"
+              "title": "OOM 的大纲"
             }
           },
           {
@@ -172,7 +172,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Problems/Run/no pth.md",
+                "file": "Problems/Run/OOM.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -182,7 +182,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "no pth 的反向链接列表"
+              "title": "OOM 的反向链接列表"
             }
           },
           {
@@ -191,12 +191,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Problems/Run/no pth.md",
+                "file": "Problems/Run/OOM.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "no pth 的出链列表"
+              "title": "OOM 的出链列表"
             }
           },
           {
@@ -236,7 +236,8 @@
               "title": "添加笔记属性"
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -259,10 +260,10 @@
   },
   "active": "b9834fcb0c313806",
   "lastOpenFiles": [
-    "Problems/Run/no GPU.md",
-    "Problems/Packages/importlib.md",
-    "Problems/Run/no pth.md",
     "Problems/Run/HOP初运行.md",
+    "Problems/Run/no GPU.md",
+    "Problems/Run/no pth.md",
+    "Problems/Packages/importlib.md",
     "Problems/Run/OOM.md",
     "Templates/Problems/Problem Name.md",
     "2024-12-09.md",

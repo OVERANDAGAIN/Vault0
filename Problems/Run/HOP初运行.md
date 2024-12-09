@@ -8,9 +8,9 @@ HOP
 ```
 
 # Codes
-[[no pth]]
+no pth
 
-[[no GPU]]
+no GPU
 
 msg_code/train.py:254
 ```python
@@ -25,6 +25,20 @@ for i in range(4):
 
 # Solutions
 ## Changes 
+[[no pth]]
+
+[[no GPU]]
+
+msg_code/train.py:254   检查点
+```python
+### a3c_trainer.restore('./checkpoint_010004/checkpoint-10004')
+```
+
+msg_code/train.py:256 ToM权重加载逻辑
+```python
+### for i in range(4):  
+	### a3c_trainer.get_policy(f'ToM{i+1}').set_weights(torch.load(f'./state_dict/ToM/ToM{i+1}.pth'))
+```
 
 ## GPT_Answers
 根据你的代码，我对整个运行流程进行了分析，重点是如何从零开始运行，以及如何调整代码避免依赖缺失文件和路径的错误。
@@ -125,55 +139,6 @@ if not os.path.exists(config['lola_config']['save_dir']):
 去除依赖检查点和预训练权重后，训练逻辑可以保持不变：
 
 ```python
-for i in range(5001):
-    result = a3c_trainer.train()
-    print(pretty_print(result))
-    
-    if i % 1000 == 0:
-        checkpoint = a3c_trainer.save()
-        print(f"Checkpoint saved at {checkpoint}")
-```
-
----
-
-### **最终调整后的关键逻辑**
-
-整合上述修改后，程序的核心逻辑如下：
-
-```python
-# Restore checkpoint if exists
-try:
-    checkpoint_path = './checkpoint_010004/checkpoint-10004'
-    if os.path.exists(checkpoint_path):
-        a3c_trainer.restore(checkpoint_path)
-        print(f"Checkpoint restored from {checkpoint_path}")
-    else:
-        print(f"No checkpoint found at {checkpoint_path}. Starting from scratch.")
-except Exception as e:
-    print(f"Error restoring checkpoint: {e}. Starting from scratch.")
-
-# Load ToM weights if available
-for i in range(4):
-    try:
-        weight_path = f'./state_dict/ToM/ToM{i+1}.pth'
-        if os.path.exists(weight_path):
-            a3c_trainer.get_policy(f'ToM{i+1}').set_weights(torch.load(weight_path))
-            print(f"Loaded weights for ToM{i+1} from {weight_path}")
-        else:
-            print(f"No weights found for ToM{i+1} at {weight_path}. Using random initialization.")
-    except Exception as e:
-        print(f"Error loading weights for ToM{i+1}: {e}. Using random initialization.")
-
-# Ensure save directories exist
-if not os.path.exists(config['moa_config']['save_dir']):
-    os.makedirs(config['moa_config']['save_dir'])
-    print(f"Created save directory: {config['moa_config']['save_dir']}")
-
-if not os.path.exists(config['lola_config']['save_dir']):
-    os.makedirs(config['lola_config']['save_dir'])
-    print(f"Created save directory: {config['lola_config']['save_dir']}")
-
-# Training loop
 for i in range(5001):
     result = a3c_trainer.train()
     print(pretty_print(result))

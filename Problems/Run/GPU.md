@@ -8,10 +8,10 @@ D:\anaconda\envs\HOP\python.exe E:\HOP\msg_code\train.py 2024-12-09 11:04:52,944
 ```
 
 # Codes
+E:\HOP\msg_code\train.py
 ```python
 config['num_gpus']=1
 ```
-
 
 # Solutions
 从上述日志中可以看出，报错是由于你的机器未检测到 GPU，而当前的配置中可能要求使用 GPU（`num_gpus` 或 `num_gpus_per_worker` 配置未设置为 0）。

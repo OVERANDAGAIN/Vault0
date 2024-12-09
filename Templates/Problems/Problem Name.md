@@ -8,9 +8,6 @@
 ```
 
 # Codes
-```python
-
-```
 
 ```python
 

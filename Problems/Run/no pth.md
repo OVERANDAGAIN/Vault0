@@ -109,7 +109,39 @@ config['lola_config']={
 - `exp20241209_111213_4p`
 - `exp20241209_111602_4p`
 
-### 解决方法
+## change
+```python
+config['moa_config']={  
+    'moa_batch_size':512,  
+    'moa_update_time':15,  
+    'moa_buffer_capacity':1000,  
+    'shovel_buffer_capacity':100,  
+    'load_dir':None,  
+    #'load_dir':'./params/exp20230119_004042_4p',  
+    'save_dir':f'./params/exp{time.strftime("%Y%m%d_%H%M%S")}_{config["env_config"]["player_num"]}p'  
+}  
+os.makedirs(config['moa_config']['save_dir'])
+```
+
+```python
+config['lola_config']={  
+    'moa_batch_size':128,  
+    'moa_update_time':15,  
+    'buffer_capacity':200,  
+    'lr':2e-4,  
+    'gamma': 0.99,  
+    'id': 1,  
+    'env_creator':env_creator,  
+    'env_num':25,  
+    'load_dir':None,  
+    #'load_dir':'./params/lola/exp20230123_185154_4p',  
+    'save_dir':f'./params/lola/exp{time.strftime("%Y%m%d_%H%M%S")}_{config["env_config"]["player_num"]}p',  
+    'train':False,  
+}  
+os.makedirs(config['lola_config']['save_dir'])
+```
+
+### GPT_解决方法
 
 1. **检查生成路径与配置是否一致**： 确保训练过程中生成的模型文件路径，与加载模型时的路径一致。如果生成的文件夹名称是动态的（时间戳），你需要调整代码中 `config['moa_config']['load_dir']` 的配置。
     

@@ -1,6 +1,5 @@
 #papers
 #paper_QAs 
-#paper 
 
 [https://storchastic.readthedocs.io/en/latest/intro.informal.html](https://storchastic.readthedocs.io/en/latest/intro.informal.html)
 

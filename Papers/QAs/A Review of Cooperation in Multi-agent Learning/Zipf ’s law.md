@@ -1,6 +1,5 @@
 #papers
 #paper_QAs 
-#paper 
 
 Zipf’s Law（齐夫定律）
 

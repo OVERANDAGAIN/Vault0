@@ -58,16 +58,6 @@
               "icon": "lucide-git-fork",
               "title": "关系图谱"
             }
-          },
-          {
-            "id": "b9834fcb0c313806",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "关系图谱"
-            }
           }
         ],
         "currentTab": 3
@@ -101,7 +91,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#package_problems",
+                "query": "tag:#paper",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -209,22 +199,9 @@
               "icon": "git-pull-request",
               "title": "Source Control"
             }
-          },
-          {
-            "id": "038d06cdc8381008",
-            "type": "leaf",
-            "state": {
-              "type": "all-properties",
-              "state": {
-                "sortOrder": "frequency",
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-archive",
-              "title": "添加笔记属性"
-            }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -247,7 +224,8 @@
   },
   "active": "b60240f82c2f81ac",
   "lastOpenFiles": [
-    "Papers/Concepts/MCTS/MCTS search.md",
+    "Problems/Run/no GPU.md",
+    "Templates/Papers/paper_QAs.md",
     "Papers/QAs/Proximal Learning With Opponent-Learning Awareness/Euclidean (L2) norm.md",
     "Papers/QAs/Learning to Balance Altruism and Self-interest Bas/w-o.md",
     "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/公式推导Higher Order Derivatives.md",
@@ -261,17 +239,16 @@
     "Papers/QAs/A Review of Cooperation in Multi-agent Learning/Zipf ’s law.md",
     "Papers/QAs/A Review of Cooperation in Multi-agent Learning/aligned=pure common interest.md",
     "Papers/QAs/A Review of Cooperation in Multi-agent Learning/cheap talk.md",
-    "Templates/Papers/paper_QAs.md",
-    "Templates/Papers/paper_concepts.md",
-    "Templates/Problems/package_problems.md",
-    "Templates/Problems/run_problems.md",
     "Papers/Concepts/MCTS/MCTS.md",
     "Papers/Concepts/MCTS/MCTS与MC的区别.md",
-    "Problems/Run/OOM.md",
-    "Problems/Run/HOP初运行.md",
-    "Problems/Run/no pth.md",
-    "Problems/Run/no GPU.md",
+    "Papers/Concepts/MCTS/MCTS search.md",
     "Problems/Packages/importlib.md",
+    "Problems/Run/no pth.md",
+    "Problems/Run/HOP初运行.md",
+    "Problems/Run/OOM.md",
+    "Templates/Papers/paper_concepts.md",
+    "Templates/Problems/run_problems.md",
+    "Templates/Problems/package_problems.md",
     "Templates/Papers",
     "2024-12-09.md",
     "Problems/Run/attchments/Pasted image 20241209114444.png",

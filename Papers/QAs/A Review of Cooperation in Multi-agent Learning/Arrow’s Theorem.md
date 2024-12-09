@@ -1,6 +1,5 @@
 #papers
 #paper_QAs 
-#paper 
 
 Arrow’s Theorem（阿罗不可能定理）
 

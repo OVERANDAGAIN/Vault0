@@ -1,8 +1,12 @@
 {
   "recentFiles": [
     {
-      "basename": "MCTS search",
-      "path": "Papers/Concepts/MCTS/MCTS search.md"
+      "basename": "no GPU",
+      "path": "Problems/Run/no GPU.md"
+    },
+    {
+      "basename": "paper_QAs",
+      "path": "Templates/Papers/paper_QAs.md"
     },
     {
       "basename": "Euclidean (L2) norm",
@@ -57,22 +61,6 @@
       "path": "Papers/QAs/A Review of Cooperation in Multi-agent Learning/cheap talk.md"
     },
     {
-      "basename": "paper_QAs",
-      "path": "Templates/Papers/paper_QAs.md"
-    },
-    {
-      "basename": "paper_concepts",
-      "path": "Templates/Papers/paper_concepts.md"
-    },
-    {
-      "basename": "package_problems",
-      "path": "Templates/Problems/package_problems.md"
-    },
-    {
-      "basename": "run_problems",
-      "path": "Templates/Problems/run_problems.md"
-    },
-    {
       "basename": "MCTS",
       "path": "Papers/Concepts/MCTS/MCTS.md"
     },
@@ -81,24 +69,36 @@
       "path": "Papers/Concepts/MCTS/MCTS与MC的区别.md"
     },
     {
-      "basename": "OOM",
-      "path": "Problems/Run/OOM.md"
+      "basename": "MCTS search",
+      "path": "Papers/Concepts/MCTS/MCTS search.md"
     },
     {
-      "basename": "HOP初运行",
-      "path": "Problems/Run/HOP初运行.md"
+      "basename": "importlib",
+      "path": "Problems/Packages/importlib.md"
     },
     {
       "basename": "no pth",
       "path": "Problems/Run/no pth.md"
     },
     {
-      "basename": "no GPU",
-      "path": "Problems/Run/no GPU.md"
+      "basename": "HOP初运行",
+      "path": "Problems/Run/HOP初运行.md"
     },
     {
-      "basename": "importlib",
-      "path": "Problems/Packages/importlib.md"
+      "basename": "OOM",
+      "path": "Problems/Run/OOM.md"
+    },
+    {
+      "basename": "paper_concepts",
+      "path": "Templates/Papers/paper_concepts.md"
+    },
+    {
+      "basename": "run_problems",
+      "path": "Templates/Problems/run_problems.md"
+    },
+    {
+      "basename": "package_problems",
+      "path": "Templates/Problems/package_problems.md"
     },
     {
       "basename": "未命名 5",

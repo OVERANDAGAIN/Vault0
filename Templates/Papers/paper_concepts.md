@@ -1,6 +1,5 @@
 #papers
 #paper_concepts 
-#paper
 
 # Questions
 

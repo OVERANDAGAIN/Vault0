@@ -1,6 +1,18 @@
 {
   "recentFiles": [
     {
+      "basename": "paper concepts",
+      "path": "Templates/Papers/paper concepts.md"
+    },
+    {
+      "basename": "w-o",
+      "path": "Papers/QAs/Learning to Balance Altruism and Self-interest Bas/w-o.md"
+    },
+    {
+      "basename": "公式推导Higher Order Derivatives",
+      "path": "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/公式推导Higher Order Derivatives.md"
+    },
+    {
       "basename": "Backpropagation",
       "path": "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/Backpropagation.md"
     },
@@ -73,20 +85,8 @@
       "path": "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/Surrogate loss function.md"
     },
     {
-      "basename": "w-o",
-      "path": "Papers/QAs/Learning to Balance Altruism and Self-interest Bas/w-o.md"
-    },
-    {
       "basename": "MCTS search",
       "path": "Papers/Concepts/MCTS/MCTS search.md"
-    },
-    {
-      "basename": "公式推导Higher Order Derivatives",
-      "path": "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/公式推导Higher Order Derivatives.md"
-    },
-    {
-      "basename": "paper concepts",
-      "path": "Templates/Papers/paper concepts.md"
     },
     {
       "basename": "paper QAs",

@@ -153,22 +153,3 @@ os.makedirs(config['lola_config']['save_dir'])
     
     这样，代码会从 `exp20241209_110515_4p` 文件夹中加载模型。
     
-3. **动态加载最近的文件夹**： 如果需要自动加载最新的文件夹，可以在代码中实现逻辑找到最新的实验文件夹：
-    
-    ```python
-    import os
-    
-    # 找到最新的文件夹
-    base_dir = './params'
-    latest_dir = max([os.path.join(base_dir, d) for d in os.listdir(base_dir) if d.startswith('exp')], key=os.path.getmtime)
-    config['moa_config']['load_dir'] = latest_dir
-    ```
-    
-4. **确认生成文件是否完整**：
-    
-    - 打开生成的文件夹，检查是否有文件如 `player_1_to_2.pth`。如果文件名不同，则需要在 `ToM_relative.py` 中同步修改文件名规则。
-    - 如果文件不存在，请检查训练逻辑是否正确保存了模型。
-5. **运行测试**： 修改路径后，重新运行 `train.py`，观察是否能成功加载模型文件。
-    
-
-如果以上方法仍未解决问题，可以进一步提供 `train.py` 和 `ToM_relative.py` 的关键代码片段，我会帮助你详细排查问题。

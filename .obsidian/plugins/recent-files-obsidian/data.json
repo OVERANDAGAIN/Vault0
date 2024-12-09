@@ -1,12 +1,40 @@
 {
   "recentFiles": [
     {
+      "basename": "run problems",
+      "path": "Templates/Problems/run problems.md"
+    },
+    {
+      "basename": "importlib",
+      "path": "Problems/Packages/importlib.md"
+    },
+    {
+      "basename": "OOM",
+      "path": "Problems/Run/OOM.md"
+    },
+    {
+      "basename": "HOP初运行",
+      "path": "Problems/Run/HOP初运行.md"
+    },
+    {
+      "basename": "no pth",
+      "path": "Problems/Run/no pth.md"
+    },
+    {
       "basename": "no GPU",
       "path": "Problems/Run/no GPU.md"
     },
     {
-      "basename": "paper_QAs",
-      "path": "Templates/Papers/paper_QAs.md"
+      "basename": "package problems",
+      "path": "Templates/Problems/package problems.md"
+    },
+    {
+      "basename": "paper concepts",
+      "path": "Templates/Papers/paper concepts.md"
+    },
+    {
+      "basename": "paper QAs",
+      "path": "Templates/Papers/paper QAs.md"
     },
     {
       "basename": "Euclidean (L2) norm",
@@ -71,34 +99,6 @@
     {
       "basename": "MCTS search",
       "path": "Papers/Concepts/MCTS/MCTS search.md"
-    },
-    {
-      "basename": "importlib",
-      "path": "Problems/Packages/importlib.md"
-    },
-    {
-      "basename": "no pth",
-      "path": "Problems/Run/no pth.md"
-    },
-    {
-      "basename": "HOP初运行",
-      "path": "Problems/Run/HOP初运行.md"
-    },
-    {
-      "basename": "OOM",
-      "path": "Problems/Run/OOM.md"
-    },
-    {
-      "basename": "paper_concepts",
-      "path": "Templates/Papers/paper_concepts.md"
-    },
-    {
-      "basename": "run_problems",
-      "path": "Templates/Problems/run_problems.md"
-    },
-    {
-      "basename": "package_problems",
-      "path": "Templates/Problems/package_problems.md"
     },
     {
       "basename": "未命名 5",

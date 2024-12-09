@@ -1,4 +1,3 @@
-#papers
 #paper_concepts 
 
 # Questions

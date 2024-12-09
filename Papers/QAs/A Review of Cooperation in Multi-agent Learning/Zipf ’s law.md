@@ -1,4 +1,3 @@
-#papers
 #paper_QAs 
 
 Zipf’s Law（齐夫定律）

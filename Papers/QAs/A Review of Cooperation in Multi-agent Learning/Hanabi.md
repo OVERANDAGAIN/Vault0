@@ -1,4 +1,3 @@
-#papers
 #paper_QAs 
 
 论文中经常提到的游戏 Hanabi是什么，有什么应用/

@@ -1,4 +1,3 @@
-#papers
 #paper_concepts 
 
 [https://www.moderndescartes.com/essays/deep_dive_mcts/](https://www.moderndescartes.com/essays/deep_dive_mcts/)

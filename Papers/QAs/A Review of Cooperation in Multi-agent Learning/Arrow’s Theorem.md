@@ -1,4 +1,3 @@
-#papers
 #paper_QAs 
 
 Arrow’s Theorem（阿罗不可能定理）

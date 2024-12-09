@@ -1,4 +1,3 @@
-#papers
 #paper_QAs 
 
 Cheap Talk（廉价交流）

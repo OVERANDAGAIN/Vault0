@@ -109,7 +109,7 @@ config['lola_config']={
 - `exp20241209_111213_4p`
 - `exp20241209_111602_4p`
 
-## change
+## Changes
 ```python
 config['moa_config']={  
     'moa_batch_size':512,  
@@ -141,7 +141,7 @@ config['lola_config']={
 os.makedirs(config['lola_config']['save_dir'])
 ```
 
-### GPT_解决方法
+## GPT_解决方法
 
 1. **检查生成路径与配置是否一致**： 确保训练过程中生成的模型文件路径，与加载模型时的路径一致。如果生成的文件夹名称是动态的（时间戳），你需要调整代码中 `config['moa_config']['load_dir']` 的配置。
     

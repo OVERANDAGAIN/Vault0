@@ -14,6 +14,17 @@ config['num_gpus']=1
 ```
 
 # Solutions
+## Changes
+```python
+a3c_config = {
+    # 其他配置项...
+    "num_gpus": 0,  # 设置为 0 表示不使用 GPU
+    "num_gpus_per_worker": 0,  # 每个 worker 的 GPU 数设置为 0
+    "num_workers": 1  # 设置 worker 数量为 1（根据你的需求调整）
+}
+```
+
+## GPT_解决方法
 从上述日志中可以看出，报错是由于你的机器未检测到 GPU，而当前的配置中可能要求使用 GPU（`num_gpus` 或 `num_gpus_per_worker` 配置未设置为 0）。
 ### **关键问题**
 
@@ -29,11 +40,3 @@ config['num_gpus']=1
 
 确保在 `a3c_config` 中明确指定 `num_gpus=0` 和 `num_gpus_per_worker=0`：
 
-```python
-a3c_config = {
-    # 其他配置项...
-    "num_gpus": 0,  # 设置为 0 表示不使用 GPU
-    "num_gpus_per_worker": 0,  # 每个 worker 的 GPU 数设置为 0
-    "num_workers": 1  # 设置 worker 数量为 1（根据你的需求调整）
-}
-```

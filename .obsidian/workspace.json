@@ -95,7 +95,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#errors",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -126,7 +126,8 @@
               "title": "Recent Files"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -264,7 +265,7 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "b60240f82c2f81ac",
+  "active": "f8786513a3f65c09",
   "lastOpenFiles": [
     "Papers/Concepts/MCTS/MCTS.md",
     "Problems/packages/importlib.md",

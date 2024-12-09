@@ -1,12 +1,12 @@
 {
   "recentFiles": [
     {
-      "basename": "log git",
-      "path": "Templates/Logbook/log git.md"
-    },
-    {
       "basename": "Termux Bash",
       "path": "Logbook/Git/Termux Bash.md"
+    },
+    {
+      "basename": "log git",
+      "path": "Templates/Logbook/log git.md"
     },
     {
       "basename": "importlib",

@@ -69,12 +69,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Problems/Run/未命名.md",
+                "file": "Problems/Run/HOP初运行.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "未命名"
+              "title": "HOP初运行"
             }
           }
         ],
@@ -155,35 +155,15 @@
         "type": "tabs",
         "children": [
           {
-            "id": "f77037ae7c8b53df",
-            "type": "leaf",
-            "state": {
-              "type": "calendar",
-              "state": {},
-              "icon": "calendar-with-checkmark",
-              "title": "Calendar"
-            }
-          },
-          {
-            "id": "1b4883188cadf218",
-            "type": "leaf",
-            "state": {
-              "type": "advanced-tables-toolbar",
-              "state": {},
-              "icon": "spreadsheet",
-              "title": "Advanced Tables"
-            }
-          },
-          {
             "id": "7746ac004a8a19a9",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "Problems/Packages/importlib.md"
+                "file": "Problems/Run/HOP初运行.md"
               },
               "icon": "lucide-list",
-              "title": "importlib 的大纲"
+              "title": "HOP初运行 的大纲"
             }
           },
           {
@@ -192,7 +172,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/图解释.md",
+                "file": "Problems/Run/HOP初运行.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -202,7 +182,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "图解释 的反向链接列表"
+              "title": "HOP初运行 的反向链接列表"
             }
           },
           {
@@ -211,12 +191,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/图解释.md",
+                "file": "Problems/Run/HOP初运行.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "图解释 的出链列表"
+              "title": "HOP初运行 的出链列表"
             }
           },
           {
@@ -277,10 +257,11 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "f77037ae7c8b53df",
+  "active": "b9834fcb0c313806",
   "lastOpenFiles": [
+    "2024-12-09.md",
+    "Problems/Run/HOP初运行.md",
     "Problems/Run/no pth.md",
-    "Problems/Run/未命名.md",
     "Problems/Run/attchments/Pasted image 20241209114444.png",
     "Problems/Run/attchments",
     "Problems/Run/no GPU.md",
@@ -323,7 +304,6 @@
     "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/attchments/Pasted image 20241206171636.png",
     "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/attchments/Pasted image 20241206171632.png",
     "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/attchments/Pasted image 20241206171622.png",
-    "Papers/QAs/A Review of Cooperation in Multi-agent Learning/Arrow’s Theorem.md",
     "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/attchments",
     "未命名/未命名.canvas"
   ]

@@ -117,7 +117,7 @@ config['moa_config']={
     'moa_buffer_capacity':1000,  
     'shovel_buffer_capacity':100,  
     'load_dir':None,  
-    #'load_dir':'./params/exp20230119_004042_4p',  
+    ###'load_dir':'./params/exp20230119_004042_4p',  
     'save_dir':f'./params/exp{time.strftime("%Y%m%d_%H%M%S")}_{config["env_config"]["player_num"]}p'  
 }  
 os.makedirs(config['moa_config']['save_dir'])
@@ -134,7 +134,7 @@ config['lola_config']={
     'env_creator':env_creator,  
     'env_num':25,  
     'load_dir':None,  
-    #'load_dir':'./params/lola/exp20230123_185154_4p',  
+    ###'load_dir':'./params/lola/exp20230123_185154_4p',  
     'save_dir':f'./params/lola/exp{time.strftime("%Y%m%d_%H%M%S")}_{config["env_config"]["player_num"]}p',  
     'train':False,  
 }  

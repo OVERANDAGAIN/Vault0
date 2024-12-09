@@ -1,12 +1,68 @@
 {
   "recentFiles": [
     {
-      "basename": "paper_concepts",
-      "path": "Templates/Papers/paper_concepts.md"
+      "basename": "MCTS search",
+      "path": "Papers/Concepts/MCTS/MCTS search.md"
+    },
+    {
+      "basename": "Euclidean (L2) norm",
+      "path": "Papers/QAs/Proximal Learning With Opponent-Learning Awareness/Euclidean (L2) norm.md"
+    },
+    {
+      "basename": "w-o",
+      "path": "Papers/QAs/Learning to Balance Altruism and Self-interest Bas/w-o.md"
+    },
+    {
+      "basename": "公式推导Higher Order Derivatives",
+      "path": "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/公式推导Higher Order Derivatives.md"
+    },
+    {
+      "basename": "Surrogate loss function",
+      "path": "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/Surrogate loss function.md"
+    },
+    {
+      "basename": "SCG-repara-SF",
+      "path": "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/SCG-repara-SF.md"
+    },
+    {
+      "basename": "Score Function",
+      "path": "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/Score Function.md"
+    },
+    {
+      "basename": "Backpropagation",
+      "path": "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/Backpropagation.md"
+    },
+    {
+      "basename": "图解释",
+      "path": "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/图解释.md"
+    },
+    {
+      "basename": "Arrow’s Theorem",
+      "path": "Papers/QAs/A Review of Cooperation in Multi-agent Learning/Arrow’s Theorem.md"
+    },
+    {
+      "basename": "Hanabi",
+      "path": "Papers/QAs/A Review of Cooperation in Multi-agent Learning/Hanabi.md"
+    },
+    {
+      "basename": "Zipf ’s law",
+      "path": "Papers/QAs/A Review of Cooperation in Multi-agent Learning/Zipf ’s law.md"
+    },
+    {
+      "basename": "aligned=pure common interest",
+      "path": "Papers/QAs/A Review of Cooperation in Multi-agent Learning/aligned=pure common interest.md"
+    },
+    {
+      "basename": "cheap talk",
+      "path": "Papers/QAs/A Review of Cooperation in Multi-agent Learning/cheap talk.md"
     },
     {
       "basename": "paper_QAs",
       "path": "Templates/Papers/paper_QAs.md"
+    },
+    {
+      "basename": "paper_concepts",
+      "path": "Templates/Papers/paper_concepts.md"
     },
     {
       "basename": "package_problems",
@@ -23,10 +79,6 @@
     {
       "basename": "MCTS与MC的区别",
       "path": "Papers/Concepts/MCTS/MCTS与MC的区别.md"
-    },
-    {
-      "basename": "MCTS search",
-      "path": "Papers/Concepts/MCTS/MCTS search.md"
     },
     {
       "basename": "OOM",
@@ -47,58 +99,6 @@
     {
       "basename": "importlib",
       "path": "Problems/Packages/importlib.md"
-    },
-    {
-      "basename": "aligned=pure common interest",
-      "path": "Papers/QAs/A Review of Cooperation in Multi-agent Learning/aligned=pure common interest.md"
-    },
-    {
-      "basename": "cheap talk",
-      "path": "Papers/QAs/A Review of Cooperation in Multi-agent Learning/cheap talk.md"
-    },
-    {
-      "basename": "Hanabi",
-      "path": "Papers/QAs/A Review of Cooperation in Multi-agent Learning/Hanabi.md"
-    },
-    {
-      "basename": "w-o",
-      "path": "Papers/QAs/Learning to Balance Altruism and Self-interest Bas/w-o.md"
-    },
-    {
-      "basename": "Score Function",
-      "path": "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/Score Function.md"
-    },
-    {
-      "basename": "Backpropagation",
-      "path": "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/Backpropagation.md"
-    },
-    {
-      "basename": "Surrogate loss function",
-      "path": "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/Surrogate loss function.md"
-    },
-    {
-      "basename": "图解释",
-      "path": "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/图解释.md"
-    },
-    {
-      "basename": "SCG-repara-SF",
-      "path": "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/SCG-repara-SF.md"
-    },
-    {
-      "basename": "Zipf ’s law",
-      "path": "Papers/QAs/A Review of Cooperation in Multi-agent Learning/Zipf ’s law.md"
-    },
-    {
-      "basename": "公式推导Higher Order Derivatives",
-      "path": "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/公式推导Higher Order Derivatives.md"
-    },
-    {
-      "basename": "Euclidean (L2) norm",
-      "path": "Papers/QAs/Proximal Learning With Opponent-Learning Awareness/Euclidean (L2) norm.md"
-    },
-    {
-      "basename": "Arrow’s Theorem",
-      "path": "Papers/QAs/A Review of Cooperation in Multi-agent Learning/Arrow’s Theorem.md"
     },
     {
       "basename": "未命名 5",

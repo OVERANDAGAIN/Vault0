@@ -1,28 +1,21 @@
 #papers
 #paper_QAs 
-#paper 
+#paper
 
-# Sources
-#source 
-
-# Errors
-```bash
-
-```
-
-# Codes
-
-```python
-
-```
-
-# Solutions
+# Questions
 
 
-## Changes
+# Answers
 
 
 ## GPT_Answers
 
 
 ## Other_Answers
+
+
+# Codes
+
+```python
+
+```

@@ -1,3 +1,7 @@
+#papers
+#paper_QAs 
+#paper 
+
 Arrow’s Theorem（阿罗不可能定理）
 
 阿罗不可能定理，又称为阿罗悖论（Arrow’s Paradox），是社会选择理论中的一个基本定理，由美国经济学家 Kenneth Arrow 在其 1951 年的博士论文《社会选择与个人价值》中提出。他因为这一贡献于1972年获得诺贝尔经济学奖。

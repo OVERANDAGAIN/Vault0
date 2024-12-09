@@ -53,14 +53,10 @@
             "id": "b60240f82c2f81ac",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Templates/Papers/paper_concepts.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "paper_concepts"
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "关系图谱"
             }
           },
           {
@@ -155,11 +151,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Templates/Papers/paper_concepts.md"
-              },
+              "state": {},
               "icon": "lucide-list",
-              "title": "paper_concepts 的大纲"
+              "title": "大纲"
             }
           },
           {
@@ -168,7 +162,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Templates/Papers/paper_concepts.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -178,7 +171,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "paper_concepts 的反向链接列表"
+              "title": "反向链接"
             }
           },
           {
@@ -187,12 +180,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Templates/Papers/paper_concepts.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "paper_concepts 的出链列表"
+              "title": "出链"
             }
           },
           {
@@ -255,43 +247,43 @@
   },
   "active": "b60240f82c2f81ac",
   "lastOpenFiles": [
+    "Papers/Concepts/MCTS/MCTS search.md",
+    "Papers/QAs/Proximal Learning With Opponent-Learning Awareness/Euclidean (L2) norm.md",
+    "Papers/QAs/Learning to Balance Altruism and Self-interest Bas/w-o.md",
+    "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/公式推导Higher Order Derivatives.md",
+    "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/Surrogate loss function.md",
+    "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/SCG-repara-SF.md",
+    "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/Score Function.md",
+    "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/Backpropagation.md",
+    "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/图解释.md",
+    "Papers/QAs/A Review of Cooperation in Multi-agent Learning/Arrow’s Theorem.md",
+    "Papers/QAs/A Review of Cooperation in Multi-agent Learning/Hanabi.md",
+    "Papers/QAs/A Review of Cooperation in Multi-agent Learning/Zipf ’s law.md",
+    "Papers/QAs/A Review of Cooperation in Multi-agent Learning/aligned=pure common interest.md",
+    "Papers/QAs/A Review of Cooperation in Multi-agent Learning/cheap talk.md",
     "Templates/Papers/paper_QAs.md",
+    "Templates/Papers/paper_concepts.md",
     "Templates/Problems/package_problems.md",
     "Templates/Problems/run_problems.md",
     "Papers/Concepts/MCTS/MCTS.md",
     "Papers/Concepts/MCTS/MCTS与MC的区别.md",
-    "Papers/Concepts/MCTS/MCTS search.md",
-    "Templates/Papers/paper_concepts.md",
     "Problems/Run/OOM.md",
     "Problems/Run/HOP初运行.md",
     "Problems/Run/no pth.md",
     "Problems/Run/no GPU.md",
     "Problems/Packages/importlib.md",
-    "Papers/QAs/A Review of Cooperation in Multi-agent Learning/aligned=pure common interest.md",
-    "Papers/QAs/A Review of Cooperation in Multi-agent Learning/cheap talk.md",
     "Templates/Papers",
     "2024-12-09.md",
     "Problems/Run/attchments/Pasted image 20241209114444.png",
     "Problems/Run/attchments",
     "Problems/Run",
     "Templates/Problems/Run",
-    "Papers/QAs/A Review of Cooperation in Multi-agent Learning/Hanabi.md",
-    "Problems/Packages/未命名.md",
     "Templates/Problems/Packages",
     "Templates/Problems",
     "Templates",
-    "Papers/QAs/Learning to Balance Altruism and Self-interest Bas/w-o.md",
-    "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/Score Function.md",
-    "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/Backpropagation.md",
-    "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/Surrogate loss function.md",
-    "Papers/Concepts/MCTS/未命名.md",
     "Problems/Packages",
     "Problems",
-    "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/图解释.md",
-    "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/SCG-repara-SF.md",
-    "Excalidraw/Drawing 2024-12-06 17.52.24.excalidraw.md",
     "Excalidraw",
-    "Papers/QAs/A Review of Cooperation in Multi-agent Learning/Zipf ’s law.md",
     "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/attchments/Pasted image 20241206171755.png",
     "Papers/未命名 1/DiCE-The Infinitely Differentiable Monte Carlo Es/Pasted image 20241206171218.png",
     "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/attchments/Pasted image 20241206171713.png",

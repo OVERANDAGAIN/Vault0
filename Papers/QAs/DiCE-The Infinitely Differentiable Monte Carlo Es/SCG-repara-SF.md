@@ -1,3 +1,7 @@
+#papers
+#paper_QAs 
+#paper 
+
 [https://storchastic.readthedocs.io/en/latest/intro.informal.html](https://storchastic.readthedocs.io/en/latest/intro.informal.html)
 
 ![[Pasted image 20241206171622.png]]

@@ -1,4 +1,8 @@
- Q 在google的一篇cooperation in AI.中，如何去理解这样一句话：when the agent is aligned,it is a relationship of pure common interest
+ #papers
+#paper_QAs 
+#paper 
+
+Q 在google的一篇cooperation in AI.中，如何去理解这样一句话：when the agent is aligned,it is a relationship of pure common interest
 
  A 这句话的意思是：当智能体（agent）与其他主体（比如人类或其他智能体）在目标上达到一致时，它们的关系可以被视为一种纯粹的共同利益关系。
 

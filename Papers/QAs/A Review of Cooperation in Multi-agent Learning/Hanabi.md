@@ -1,3 +1,7 @@
+#papers
+#paper_QAs 
+#paper 
+
 论文中经常提到的游戏 Hanabi是什么，有什么应用/
 
 Hanabi 游戏简介

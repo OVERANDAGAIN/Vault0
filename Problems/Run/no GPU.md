@@ -8,7 +8,7 @@ D:\anaconda\envs\HOP\python.exe E:\HOP\msg_code\train.py 2024-12-09 11:04:52,944
 ```
 
 # Codes
-E:\HOP\msg_code\train.py
+msg_code/train.py:62
 ```python
 config['num_gpus']=1
 ```

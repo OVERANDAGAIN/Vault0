@@ -1,5 +1,3 @@
-[[no pth]]
-[[no GPU]]
 
 # Sources
 HOP
@@ -11,8 +9,10 @@ HOP
 
 # Codes
 [[no pth]]
+
 [[no GPU]]
-E:\HOP\msg_code\train.py
+
+msg_code/train.py:172
 ```python
 msg_code/train.py:173
 ### a3c_config['num_workers']=8  

@@ -256,12 +256,11 @@
               "title": "添加笔记属性"
             }
           }
-        ],
-        "currentTab": 6
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 292.5
+    "width": 441.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -278,7 +277,7 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "b9834fcb0c313806",
+  "active": "f77037ae7c8b53df",
   "lastOpenFiles": [
     "Problems/Run/no pth.md",
     "Problems/Run/未命名.md",

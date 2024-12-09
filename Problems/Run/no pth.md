@@ -54,11 +54,42 @@ FileNotFoundError: [Errno 2] No such file or directory: './params/exp20230119_00
 ```
 
 # Codes
-
+E:\HOP\msg_code\policy\ToM_relative.py
 ```python
 if config['moa_config']['load_dir'] is not None:  
     for i in range(self.player_num-1):  
         self.model_list[i].load_state_dict(torch.load(config['moa_config']['load_dir']+f'/player_{self.my_id}_to_{self.model_id_list[i]+1}.pth'))
+```
+
+E:\HOP\msg_code\train.py
+```python
+config['moa_config']={  
+    'moa_batch_size':512,  
+    'moa_update_time':15,  
+    'moa_buffer_capacity':1000,  
+    'shovel_buffer_capacity':100,  
+    #'load_dir':None,  
+    'load_dir':'./params/exp20230119_004042_4p',  
+    'save_dir':f'./params/exp{time.strftime("%Y%m%d_%H%M%S")}_{config["env_config"]["player_num"]}p'  
+}
+```
+
+E:\HOP\msg_code\train.py
+```python
+config['lola_config']={  
+    'moa_batch_size':128,  
+    'moa_update_time':15,  
+    'buffer_capacity':200,  
+    'lr':2e-4,  
+    'gamma': 0.99,  
+    'id': 1,  
+    'env_creator':env_creator,  
+    'env_num':25,  
+    # 'load_dir':None,  
+    'load_dir':'./params/lola/exp20230123_185154_4p',  
+    'save_dir':f'./params/lola/exp{time.strftime("%Y%m%d_%H%M%S")}_{config["env_config"]["player_num"]}p',  
+    'train':False,  
+}
 ```
 
 # Solutions

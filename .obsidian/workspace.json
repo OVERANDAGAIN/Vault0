@@ -165,8 +165,7 @@
               "title": "Source Control"
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "horizontal",
@@ -187,7 +186,7 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "a84728f6c4cddc69",
+  "active": "7746ac004a8a19a9",
   "lastOpenFiles": [
     "Templates/Logbook/log git.md",
     "Logbook/Git/Termux Bash.md",

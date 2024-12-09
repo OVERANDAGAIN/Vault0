@@ -1,3 +1,7 @@
+#papers
+#paper_concepts 
+#HOP 
+
 [https://zhuanlan.zhihu.com/p/53948964](https://zhuanlan.zhihu.com/p/53948964)
 
 [https://aijishu.com/a/1060000000089474](https://aijishu.com/a/1060000000089474)
@@ -15,6 +19,7 @@ MCTS使用一个tree来记录搜索结果，它更新tree的方法就是模拟�
 	2. 注意：根节点是当前的游戏状态，叶节点是尚未启动模拟的任何潜在子节点。
 
 2. 扩展（Expansion）也叫expand，是指一个节点往下，产生新的子节点。
+
 
 3. 模拟（Simulation）也叫rollout，是随机模拟，即以目前的状态开始，模拟一场游戏直到结束。有时也叫播放或推出。expand和rollout区别是，如果目前节点是全新的，就进行rollout，如果节点已经被更新过，就进行expand。（这种说法可能不准确！）
 

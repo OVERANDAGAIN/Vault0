@@ -1,6 +1,34 @@
 {
   "recentFiles": [
     {
+      "basename": "paper_concepts",
+      "path": "Templates/Papers/paper_concepts.md"
+    },
+    {
+      "basename": "paper_QAs",
+      "path": "Templates/Papers/paper_QAs.md"
+    },
+    {
+      "basename": "package_problems",
+      "path": "Templates/Problems/package_problems.md"
+    },
+    {
+      "basename": "run_problems",
+      "path": "Templates/Problems/run_problems.md"
+    },
+    {
+      "basename": "MCTS",
+      "path": "Papers/Concepts/MCTS/MCTS.md"
+    },
+    {
+      "basename": "MCTS与MC的区别",
+      "path": "Papers/Concepts/MCTS/MCTS与MC的区别.md"
+    },
+    {
+      "basename": "MCTS search",
+      "path": "Papers/Concepts/MCTS/MCTS search.md"
+    },
+    {
       "basename": "OOM",
       "path": "Problems/Run/OOM.md"
     },
@@ -9,24 +37,16 @@
       "path": "Problems/Run/HOP初运行.md"
     },
     {
-      "basename": "no GPU",
-      "path": "Problems/Run/no GPU.md"
-    },
-    {
       "basename": "no pth",
       "path": "Problems/Run/no pth.md"
     },
     {
+      "basename": "no GPU",
+      "path": "Problems/Run/no GPU.md"
+    },
+    {
       "basename": "importlib",
       "path": "Problems/Packages/importlib.md"
-    },
-    {
-      "basename": "Problem Name",
-      "path": "Templates/Problems/Problem Name.md"
-    },
-    {
-      "basename": "Hanabi",
-      "path": "Papers/QAs/A Review of Cooperation in Multi-agent Learning/Hanabi.md"
     },
     {
       "basename": "aligned=pure common interest",
@@ -35,6 +55,10 @@
     {
       "basename": "cheap talk",
       "path": "Papers/QAs/A Review of Cooperation in Multi-agent Learning/cheap talk.md"
+    },
+    {
+      "basename": "Hanabi",
+      "path": "Papers/QAs/A Review of Cooperation in Multi-agent Learning/Hanabi.md"
     },
     {
       "basename": "w-o",
@@ -51,18 +75,6 @@
     {
       "basename": "Surrogate loss function",
       "path": "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/Surrogate loss function.md"
-    },
-    {
-      "basename": "MCTS",
-      "path": "Papers/Concepts/MCTS/MCTS.md"
-    },
-    {
-      "basename": "MCTS search",
-      "path": "Papers/Concepts/MCTS/MCTS search.md"
-    },
-    {
-      "basename": "MCTS与MC的区别",
-      "path": "Papers/Concepts/MCTS/MCTS与MC的区别.md"
     },
     {
       "basename": "图解释",

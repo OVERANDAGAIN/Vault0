@@ -1,3 +1,7 @@
+#papers
+#paper_concepts 
+#HOP
+
 [https://www.moderndescartes.com/essays/deep_dive_mcts/](https://www.moderndescartes.com/essays/deep_dive_mcts/)
 
 - In 2016, AlphaGo leapfrogged the best MCTS AIs by replacing some heuristics with deep learning models,

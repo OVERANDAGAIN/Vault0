@@ -2,7 +2,23 @@
   "recentFiles": [
     {
       "basename": "importlib",
-      "path": "Problems/packages/importlib.md"
+      "path": "Problems/Packages/importlib.md"
+    },
+    {
+      "basename": "Hanabi",
+      "path": "Papers/QAs/A Review of Cooperation in Multi-agent Learning/Hanabi.md"
+    },
+    {
+      "basename": "aligned=pure common interest",
+      "path": "Papers/QAs/A Review of Cooperation in Multi-agent Learning/aligned=pure common interest.md"
+    },
+    {
+      "basename": "cheap talk",
+      "path": "Papers/QAs/A Review of Cooperation in Multi-agent Learning/cheap talk.md"
+    },
+    {
+      "basename": "Packages Name",
+      "path": "Templates/Problems/Packages/Packages Name.md"
     },
     {
       "basename": "w-o",
@@ -19,10 +35,6 @@
     {
       "basename": "Surrogate loss function",
       "path": "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/Surrogate loss function.md"
-    },
-    {
-      "basename": "aligned=pure common interest",
-      "path": "Papers/QAs/A Review of Cooperation in Multi-agent Learning/aligned=pure common interest.md"
     },
     {
       "basename": "MCTS",
@@ -59,14 +71,6 @@
     {
       "basename": "Arrow’s Theorem",
       "path": "Papers/QAs/A Review of Cooperation in Multi-agent Learning/Arrow’s Theorem.md"
-    },
-    {
-      "basename": "Hanabi",
-      "path": "Papers/QAs/A Review of Cooperation in Multi-agent Learning/Hanabi.md"
-    },
-    {
-      "basename": "cheap talk",
-      "path": "Papers/QAs/A Review of Cooperation in Multi-agent Learning/cheap talk.md"
     },
     {
       "basename": "未命名 5",

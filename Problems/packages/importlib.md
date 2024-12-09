@@ -50,3 +50,8 @@ entry_point="gym.envs"):
 ```
 
 # Solutions
+1. 需要注意的是，在 Python 3.8 之前，这个模块是作为一个单独的 `importlib_metadata` 包来提供的，需要使用 `pip` 安装。但在 Python 3.8 之后，这个模块被纳入了标准库，可以直接使
+   [python3.7与importlib.metadata - CSDN文库](https://wenku.csdn.net/answer/16bce34d561246c4998cc587ced6065f)
+2.  将版本降到5.0以下，如4.13.0  `pip install importlib-metadata==4.13.0`  或  `pip install importlib-metadata<5`
+   [AttributeError: 'EntryPoints' objects has no attribute 'get'的解决办法 - Z哎呀 - 博客园](https://www.cnblogs.com/aiyablog/p/17720208.html)
+

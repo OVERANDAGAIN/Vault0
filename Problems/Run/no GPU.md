@@ -24,7 +24,7 @@ a3c_config = {
 }
 ```
 
-## GPT_解决方法
+## GPT_Answers
 从上述日志中可以看出，报错是由于你的机器未检测到 GPU，而当前的配置中可能要求使用 GPU（`num_gpus` 或 `num_gpus_per_worker` 配置未设置为 0）。
 ### **关键问题**
 
@@ -40,3 +40,4 @@ a3c_config = {
 
 确保在 `a3c_config` 中明确指定 `num_gpus=0` 和 `num_gpus_per_worker=0`：
 
+## Other_Answers

@@ -12,16 +12,21 @@ HOP
 
 [[no GPU]]
 
-msg_code/train.py:172
+msg_code/train.py:254
 ```python
-msg_code/train.py:173
-### a3c_config['num_workers']=8  
-### a3c_config['num_envs_per_worker']=5  
-a3c_config['num_workers']=6  
-a3c_config['num_envs_per_worker']=5
+a3c_trainer.restore('./checkpoint_010004/checkpoint-10004')
+```
+
+msg_code/train.py:256
+```python
+for i in range(4):  
+	a3c_trainer.get_policy(f'ToM{i+1}').set_weights(torch.load(f'./state_dict/ToM/ToM{i+1}.pth'))
 ```
 
 # Solutions
+## Changes 
+
+## GPT_Answers
 根据你的代码，我对整个运行流程进行了分析，重点是如何从零开始运行，以及如何调整代码避免依赖缺失文件和路径的错误。
 
 ---
@@ -178,8 +183,5 @@ for i in range(5001):
         print(f"Checkpoint saved at {checkpoint}")
 ```
 
----
 
-### **结论**
-
-通过上述调整，你可以从零开始运行 `train.py`，程序会自动跳过缺失的检查点和权重文件，同时确保训练过程能够正常进行。建议在首次运行时保留日志输出，便于确认所有关键步骤是否正确执行。
+## Other_Answers

@@ -62,3 +62,50 @@ if config['moa_config']['load_dir'] is not None:
 ```
 
 # Solutions
+![[Pasted image 20241209114444.png]]
+
+据你上传的图片，这些可能是训练过程中生成的实验文件夹。文件夹的命名格式如 `exp20241209_xxxxxx_4p`，可能包含训练过程中保存的模型文件等。
+
+结合之前的问题，当前 `ToM_relative.py` 的代码尝试加载的路径为：
+
+```plaintext
+./params/exp20230119_004042_4p/player_1_to_2.pth
+```
+
+但你的实际路径已经发生变化，生成的文件夹是：
+
+- `exp20241209_110515_4p`
+- `exp20241209_111213_4p`
+- `exp20241209_111602_4p`
+
+### 解决方法
+
+1. **检查生成路径与配置是否一致**： 确保训练过程中生成的模型文件路径，与加载模型时的路径一致。如果生成的文件夹名称是动态的（时间戳），你需要调整代码中 `config['moa_config']['load_dir']` 的配置。
+    
+2. **设置路径为最新的文件夹**： 修改 `ToM_relative.py` 中的加载逻辑，将路径指向最新的文件夹。例如：
+    
+    ```python
+    config['moa_config']['load_dir'] = './params/exp20241209_110515_4p'
+    ```
+    
+    这样，代码会从 `exp20241209_110515_4p` 文件夹中加载模型。
+    
+3. **动态加载最近的文件夹**： 如果需要自动加载最新的文件夹，可以在代码中实现逻辑找到最新的实验文件夹：
+    
+    ```python
+    import os
+    
+    # 找到最新的文件夹
+    base_dir = './params'
+    latest_dir = max([os.path.join(base_dir, d) for d in os.listdir(base_dir) if d.startswith('exp')], key=os.path.getmtime)
+    config['moa_config']['load_dir'] = latest_dir
+    ```
+    
+4. **确认生成文件是否完整**：
+    
+    - 打开生成的文件夹，检查是否有文件如 `player_1_to_2.pth`。如果文件名不同，则需要在 `ToM_relative.py` 中同步修改文件名规则。
+    - 如果文件不存在，请检查训练逻辑是否正确保存了模型。
+5. **运行测试**： 修改路径后，重新运行 `train.py`，观察是否能成功加载模型文件。
+    
+
+如果以上方法仍未解决问题，可以进一步提供 `train.py` 和 `ToM_relative.py` 的关键代码片段，我会帮助你详细排查问题。

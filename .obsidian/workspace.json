@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Logbook/Git/Termux Bash.md",
+                "file": "Logbook/Git/Connect Failure_to be solved.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Termux Bash"
+              "title": "Connect Failure_to be solved"
             }
           }
         ]
@@ -103,10 +103,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Logbook/Git/Termux Bash.md"
+                "file": "Logbook/Git/Connect Failure_to be solved.md"
               },
               "icon": "lucide-list",
-              "title": "Termux Bash 的大纲"
+              "title": "Connect Failure_to be solved 的大纲"
             }
           },
           {
@@ -115,7 +115,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Logbook/Git/Termux Bash.md",
+                "file": "Logbook/Git/Connect Failure_to be solved.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,7 +125,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Termux Bash 的反向链接列表"
+              "title": "Connect Failure_to be solved 的反向链接列表"
             }
           },
           {
@@ -134,12 +134,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Logbook/Git/Termux Bash.md",
+                "file": "Logbook/Git/Connect Failure_to be solved.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Termux Bash 的出链列表"
+              "title": "Connect Failure_to be solved 的出链列表"
             }
           },
           {
@@ -165,7 +165,8 @@
               "title": "Source Control"
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -186,9 +187,10 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "7746ac004a8a19a9",
+  "active": "a84728f6c4cddc69",
   "lastOpenFiles": [
     "Templates/Logbook/log git.md",
+    "Logbook/Git/Connect Failure_to be solved.md",
     "Logbook/Git/Termux Bash.md",
     "Problems/Packages/importlib.md",
     "Templates/Papers/paper QAs.md",
@@ -216,7 +218,6 @@
     "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/SCG-repara-SF.md",
     "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/Surrogate loss function.md",
     "Papers/Concepts/MCTS/MCTS search.md",
-    "Templates/Problems/package problems.md",
     "Templates/Papers",
     "Problems/Run/attchments/Pasted image 20241209114444.png",
     "Problems/Run/attchments",

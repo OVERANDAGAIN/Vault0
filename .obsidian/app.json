@@ -3,5 +3,6 @@
   "trashOption": "local",
   "showUnsupportedFiles": true,
   "attachmentFolderPath": "./attchments",
-  "newFileLocation": "current"
+  "newFileLocation": "current",
+  "readableLineLength": true
 }

@@ -29,3 +29,24 @@ Traceback (most recent call last):
 AttributeError: 'EntryPoints' object has no attribute 'get'
 ```
 
+# Codes
+```python
+import re  
+import sys  
+import copy  
+import importlib  
+import contextlib  
+  
+if sys.version_info < (3, 8):  
+    import importlib_metadata as metadata  
+else:  
+    import importlib.metadata as metadata
+```
+
+```python
+entry_point="gym.envs"):  
+    # Load third-party environments  
+    for plugin in metadata.entry_points().get(entry_point, []):
+```
+
+# Solutions

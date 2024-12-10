@@ -15,7 +15,7 @@
 1. Pareto-suboptimal Nash equilibra $\Longrightarrow$ Opponent Shaping
 2. LOLA: an opponent shaping algorithm that influences the behavior of other agents $\Longrightarrow$ by assuming they are naive learners $\Longleftrightarrow$  taking gradients with respect to simulated parameter updates
 3. Pareto-optimal strategy in the Coin Game $\Longleftrightarrow$ collect only the coins matching their color
-4. 
+4. social dilemma in the Negotiation Game $\Longrightarrow$ take as many items as possible ( low return ) $\Longrightarrow$ Pareto-optimal: take all the items that are more valuable to them
 
 
 # Problem

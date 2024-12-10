@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "b39058263102c1a7",
+        "id": "93389bbb605deb07",
         "type": "tabs",
         "children": [
           {
-            "id": "c8f9b2b7aa4a10fe",
+            "id": "1774954460709b91",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "关系图谱"
+              "type": "markdown",
+              "state": {
+                "file": "Templates/Papers/paper Details.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "paper Details"
             }
           }
         ]
@@ -207,15 +211,19 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "c8f9b2b7aa4a10fe",
+  "active": "1774954460709b91",
   "lastOpenFiles": [
+    "Templates/Papers/paper QAs.md",
+    "Templates/Papers/paper Details.md",
+    "2024-12-10.md",
+    "Papers/Advantage Alignment Algorithm/未命名.md",
+    "Papers/A Review of Cooperation in Multi-agent Learning/aligned=pure common interest.md",
     "Papers/A Review of Cooperation in Multi-agent Learning/Zipf ’s law.md",
     "Papers/Advantage Alignment Algorithm",
     "Papers/A Review of Cooperation in Multi-agent Learning/cheap talk.md",
     "Papers/MCTS/MCTS与MC的区别.md",
     "Papers/MCTS/MCTS.md",
     "Papers/MCTS/MCTS search.md",
-    "Templates/Papers/paper QAs.md",
     "Templates/Papers/paper concepts.md",
     "Papers/Proximal Learning With Opponent-Learning Awareness/Euclidean (L2) norm.md",
     "Papers/Learning to Balance Altruism and Self-interest Bas/w-o.md",
@@ -226,7 +234,6 @@
     "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/Backpropagation.md",
     "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/图解释.md",
     "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/QAs",
-    "Papers/A Review of Cooperation in Multi-agent Learning/aligned=pure common interest.md",
     "Papers/A Review of Cooperation in Multi-agent Learning/Arrow’s Theorem.md",
     "Papers/A Review of Cooperation in Multi-agent Learning/QAs",
     "Templates/Logbook/log git.md",
@@ -240,8 +247,6 @@
     "Logbook",
     "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/公式推导Higher Order Derivatives.md",
     "Problems/Run/no pth.md",
-    "Problems/Run/no GPU.md",
-    "Papers/A Review of Cooperation in Multi-agent Learning/Hanabi.md",
     "Templates/Papers",
     "Problems/Run/attchments/Pasted image 20241209114444.png",
     "Problems/Run/attchments",

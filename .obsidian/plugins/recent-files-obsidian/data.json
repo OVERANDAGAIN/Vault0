@@ -1,6 +1,22 @@
 {
   "recentFiles": [
     {
+      "basename": "未命名",
+      "path": "Templates/Papers/未命名.md"
+    },
+    {
+      "basename": "paper QAs",
+      "path": "Templates/Papers/paper QAs.md"
+    },
+    {
+      "basename": "未命名",
+      "path": "Papers/Advantage Alignment Algorithm/未命名.md"
+    },
+    {
+      "basename": "aligned=pure common interest",
+      "path": "Papers/A Review of Cooperation in Multi-agent Learning/aligned=pure common interest.md"
+    },
+    {
       "basename": "Zipf ’s law",
       "path": "Papers/A Review of Cooperation in Multi-agent Learning/Zipf ’s law.md"
     },
@@ -21,10 +37,6 @@
       "path": "Papers/MCTS/MCTS search.md"
     },
     {
-      "basename": "paper QAs",
-      "path": "Templates/Papers/paper QAs.md"
-    },
-    {
       "basename": "Euclidean (L2) norm",
       "path": "Papers/Proximal Learning With Opponent-Learning Awareness/Euclidean (L2) norm.md"
     },
@@ -43,10 +55,6 @@
     {
       "basename": "图解释",
       "path": "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/图解释.md"
-    },
-    {
-      "basename": "aligned=pure common interest",
-      "path": "Papers/A Review of Cooperation in Multi-agent Learning/aligned=pure common interest.md"
     },
     {
       "basename": "Arrow’s Theorem",

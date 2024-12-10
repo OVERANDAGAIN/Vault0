@@ -24,7 +24,7 @@
 
 
 # Evaluation
-
+IPD/Coin Game/a continuous action variant of the Negotiation Game/Melting Pot's Commons Harvest Open
 
 
 # Limitations

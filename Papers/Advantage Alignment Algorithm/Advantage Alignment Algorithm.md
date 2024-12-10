@@ -16,7 +16,7 @@
 2. LOLA: an opponent shaping algorithm that influences the behavior of other agents —— by assuming they are naive learners —— taking gradients with respect to simulated parameter updates
 3. Pareto-optimal strategy in the Coin Game d
 
-
+__ beg 
 # Problem
 
 

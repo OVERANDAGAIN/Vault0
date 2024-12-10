@@ -1,48 +1,56 @@
 {
   "recentFiles": [
     {
+      "basename": "Zipf ’s law",
+      "path": "Papers/A Review of Cooperation in Multi-agent Learning/Zipf ’s law.md"
+    },
+    {
+      "basename": "MCTS与MC的区别",
+      "path": "Papers/MCTS/MCTS与MC的区别.md"
+    },
+    {
+      "basename": "MCTS",
+      "path": "Papers/MCTS/MCTS.md"
+    },
+    {
+      "basename": "MCTS search",
+      "path": "Papers/MCTS/MCTS search.md"
+    },
+    {
       "basename": "paper QAs",
       "path": "Templates/Papers/paper QAs.md"
     },
     {
-      "basename": "paper concepts",
-      "path": "Templates/Papers/paper concepts.md"
-    },
-    {
       "basename": "Euclidean (L2) norm",
-      "path": "Papers/Proximal Learning With Opponent-Learning Awareness/QAs/Euclidean (L2) norm.md"
+      "path": "Papers/Proximal Learning With Opponent-Learning Awareness/Euclidean (L2) norm.md"
     },
     {
       "basename": "w-o",
-      "path": "Papers/Learning to Balance Altruism and Self-interest Bas/QAs/w-o.md"
+      "path": "Papers/Learning to Balance Altruism and Self-interest Bas/w-o.md"
     },
     {
       "basename": "Score Function",
-      "path": "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/QAs/Score Function.md"
+      "path": "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/Score Function.md"
     },
     {
       "basename": "Backpropagation",
-      "path": "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/QAs/Backpropagation.md"
+      "path": "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/Backpropagation.md"
     },
     {
       "basename": "图解释",
-      "path": "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/QAs/图解释.md"
-    },
-    {
-      "basename": "Zipf ’s law",
-      "path": "Papers/A Review of Cooperation in Multi-agent Learning/QAs/Zipf ’s law.md"
+      "path": "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/图解释.md"
     },
     {
       "basename": "cheap talk",
-      "path": "Papers/A Review of Cooperation in Multi-agent Learning/QAs/cheap talk.md"
+      "path": "Papers/A Review of Cooperation in Multi-agent Learning/cheap talk.md"
     },
     {
       "basename": "aligned=pure common interest",
-      "path": "Papers/A Review of Cooperation in Multi-agent Learning/QAs/aligned=pure common interest.md"
+      "path": "Papers/A Review of Cooperation in Multi-agent Learning/aligned=pure common interest.md"
     },
     {
       "basename": "Arrow’s Theorem",
-      "path": "Papers/A Review of Cooperation in Multi-agent Learning/QAs/Arrow’s Theorem.md"
+      "path": "Papers/A Review of Cooperation in Multi-agent Learning/Arrow’s Theorem.md"
     },
     {
       "basename": "Connect Failure_to be solved",
@@ -70,7 +78,7 @@
     },
     {
       "basename": "公式推导Higher Order Derivatives",
-      "path": "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/QAs/公式推导Higher Order Derivatives.md"
+      "path": "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/公式推导Higher Order Derivatives.md"
     },
     {
       "basename": "no pth",
@@ -81,28 +89,16 @@
       "path": "Problems/Run/no GPU.md"
     },
     {
-      "basename": "MCTS",
-      "path": "Papers/MCTS/MCTS.md"
-    },
-    {
       "basename": "Hanabi",
-      "path": "Papers/A Review of Cooperation in Multi-agent Learning/QAs/Hanabi.md"
-    },
-    {
-      "basename": "MCTS与MC的区别",
-      "path": "Papers/MCTS/MCTS与MC的区别.md"
+      "path": "Papers/A Review of Cooperation in Multi-agent Learning/Hanabi.md"
     },
     {
       "basename": "SCG-repara-SF",
-      "path": "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/QAs/SCG-repara-SF.md"
+      "path": "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/SCG-repara-SF.md"
     },
     {
       "basename": "Surrogate loss function",
-      "path": "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/QAs/Surrogate loss function.md"
-    },
-    {
-      "basename": "MCTS search",
-      "path": "Papers/MCTS/MCTS search.md"
+      "path": "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/Surrogate loss function.md"
     },
     {
       "basename": "package problems",

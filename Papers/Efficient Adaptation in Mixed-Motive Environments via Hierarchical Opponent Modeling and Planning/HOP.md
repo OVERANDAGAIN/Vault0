@@ -27,8 +27,8 @@ I-POMDP, opponent modeling $\Longrightarrow$ esrious computational complexity
 
 # Methodology
 two modules:
-1. an opponent modeling module $\Longrightarrow$ infer others' goals $\Longleftrightarrow$ learn corresponding goal-conditioned policies
-2. a planning module $\Longrightarrow$ MCTS $\Longrightarrow$ to avoid the growing joint action space in multi-agent environments $\Longrightarrow$ estimate policies of co-players $\Longleftrightarrow$ plan only for the fotal agents' actions 
+1. an opponent modeling module $\Longrightarrow$ infer others' goals (high level) $\Longleftrightarrow$ learn corresponding goal-conditioned policies (low level)
+2. a planning module $\Longrightarrow$ MCTS $\Longrightarrow$ to avoid the growing joint action space in multi-agent environments $\Longrightarrow$ estimate policies of co-players $\Longleftrightarrow$ plan only for the fotal agents' actions $\Longrightarrow$ maintain a policy and value network 
 
 updating beliefs about others' goals  $\Longleftrightarrow$ both across and within episodes
 information from the opponent module $\Longrightarrow$ guide planning

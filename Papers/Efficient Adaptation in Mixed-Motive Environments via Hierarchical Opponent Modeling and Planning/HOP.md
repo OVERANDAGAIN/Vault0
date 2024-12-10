@@ -18,8 +18,11 @@ ToM $\Longrightarrow$ understand others' goals/beliefs from their actions $\Long
 
 
 # Related Work
-add intrinstic rewards, consider the impact on others, maximize extrinstic rewards
+Add intrinstic rewards, consider the impact on others, maximize extrinstic rewards:
 
+ToMAGA $\Longrightarrow$ hand-crafted intrinstic rewards access to rewards of co-players
+counterfactual reasoning
+LOLA, POLA, M-FOS $\Longrightarrow$ consider the impact (rather than treating them as a static part) $\Longrightarrow$ require knowledge of co-players' netwprl parameters
 
 
 # Methodology

@@ -13,7 +13,7 @@ few-shot adaptation in mixed-motive environments (despite success in zero-sum an
 
 
 # Theory
-ToM
+ToM $\Longrightarrow$ understand others' goals/beliefs from their actions $\Longrightarrow$ between and within episodes
 
 
 # Methodology
@@ -26,6 +26,11 @@ information from the opponent module $\Longrightarrow$ guide planning
 
 
 # Evaluation
+Markov Stag-Hunt (MSH)
+Markov Snowdrift Games (MSG) 
+
+
+# Results
 superior few-shot adaptation
 excels int self-play scenarios
 emergence of social intelligence
@@ -35,4 +40,3 @@ emergence of social intelligence
 
 
 
-# Applications

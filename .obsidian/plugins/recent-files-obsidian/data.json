@@ -1,6 +1,58 @@
 {
   "recentFiles": [
     {
+      "basename": "PPO",
+      "path": "Papers/Proximal Learning With Opponent-Learning Awareness/PPO.md"
+    },
+    {
+      "basename": "Euclidean (L2) norm",
+      "path": "Papers/Proximal Learning With Opponent-Learning Awareness/Euclidean (L2) norm.md"
+    },
+    {
+      "basename": "MCTS",
+      "path": "Papers/MCTS/MCTS.md"
+    },
+    {
+      "basename": "MCTS与MC的区别",
+      "path": "Papers/MCTS/MCTS与MC的区别.md"
+    },
+    {
+      "basename": "MCTS search",
+      "path": "Papers/MCTS/MCTS search.md"
+    },
+    {
+      "basename": "LASE",
+      "path": "Papers/Learning to Balance Altruism and Self-interest Bas/LASE.md"
+    },
+    {
+      "basename": "w-o",
+      "path": "Papers/Learning to Balance Altruism and Self-interest Bas/w-o.md"
+    },
+    {
+      "basename": "HOP",
+      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/HOP.md"
+    },
+    {
+      "basename": "DiCE",
+      "path": "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/DiCE.md"
+    },
+    {
+      "basename": "公式推导Higher Order Derivatives",
+      "path": "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/公式推导Higher Order Derivatives.md"
+    },
+    {
+      "basename": "Surrogate loss function",
+      "path": "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/Surrogate loss function.md"
+    },
+    {
+      "basename": "SCG-repara-SF",
+      "path": "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/SCG-repara-SF.md"
+    },
+    {
+      "basename": "Score Function",
+      "path": "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/Score Function.md"
+    },
+    {
       "basename": "Backpropagation",
       "path": "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/Backpropagation.md"
     },
@@ -35,10 +87,6 @@
     {
       "basename": "cheap talk",
       "path": "Papers/A Review of Cooperation in Multi-agent Learning/cheap talk.md"
-    },
-    {
-      "basename": "HOP",
-      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/HOP.md"
     },
     {
       "basename": "Indicator Function",
@@ -79,54 +127,6 @@
     {
       "basename": "paper QAs",
       "path": "Templates/Papers/paper QAs.md"
-    },
-    {
-      "basename": "Euclidean (L2) norm",
-      "path": "Papers/Proximal Learning With Opponent-Learning Awareness/Euclidean (L2) norm.md"
-    },
-    {
-      "basename": "PPO",
-      "path": "Papers/Proximal Learning With Opponent-Learning Awareness/PPO.md"
-    },
-    {
-      "basename": "MCTS与MC的区别",
-      "path": "Papers/MCTS/MCTS与MC的区别.md"
-    },
-    {
-      "basename": "MCTS search",
-      "path": "Papers/MCTS/MCTS search.md"
-    },
-    {
-      "basename": "MCTS",
-      "path": "Papers/MCTS/MCTS.md"
-    },
-    {
-      "basename": "w-o",
-      "path": "Papers/Learning to Balance Altruism and Self-interest Bas/w-o.md"
-    },
-    {
-      "basename": "LASE",
-      "path": "Papers/Learning to Balance Altruism and Self-interest Bas/LASE.md"
-    },
-    {
-      "basename": "DiCE",
-      "path": "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/DiCE.md"
-    },
-    {
-      "basename": "公式推导Higher Order Derivatives",
-      "path": "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/公式推导Higher Order Derivatives.md"
-    },
-    {
-      "basename": "Surrogate loss function",
-      "path": "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/Surrogate loss function.md"
-    },
-    {
-      "basename": "SCG-repara-SF",
-      "path": "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/SCG-repara-SF.md"
-    },
-    {
-      "basename": "Score Function",
-      "path": "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/Score Function.md"
     },
     {
       "basename": "Connect Failure_to be solved",

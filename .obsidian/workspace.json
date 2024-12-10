@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/Backpropagation.md",
+                "file": "Papers/Proximal Learning With Opponent-Learning Awareness/PPO.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Backpropagation"
+              "title": "PPO"
             }
           }
         ]
@@ -178,9 +178,19 @@
               "icon": "calendar-with-checkmark",
               "title": "Calendar"
             }
+          },
+          {
+            "id": "4a0be767cbd8c2be",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 6
       }
     ],
     "direction": "horizontal",
@@ -204,6 +214,19 @@
   },
   "active": "93769646eeafac97",
   "lastOpenFiles": [
+    "Papers/Proximal Learning With Opponent-Learning Awareness/Euclidean (L2) norm.md",
+    "Papers/MCTS/MCTS.md",
+    "Papers/MCTS/MCTS与MC的区别.md",
+    "Papers/MCTS/MCTS search.md",
+    "Papers/Learning to Balance Altruism and Self-interest Bas/LASE.md",
+    "Papers/Learning to Balance Altruism and Self-interest Bas/w-o.md",
+    "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/HOP.md",
+    "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/DiCE.md",
+    "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/公式推导Higher Order Derivatives.md",
+    "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/Surrogate loss function.md",
+    "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/SCG-repara-SF.md",
+    "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/Score Function.md",
+    "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/Backpropagation.md",
     "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/图解释.md",
     "Papers/Advantage Alignment Algorithm/Advantage Alignment Algorithm.md",
     "Papers/A Review of Cooperation in Multi-agent Learning/A Review of Cooperation in Multi-agent Learning.md",
@@ -212,7 +235,6 @@
     "Papers/A Review of Cooperation in Multi-agent Learning/Arrow’s Theorem.md",
     "Papers/A Review of Cooperation in Multi-agent Learning/Hanabi.md",
     "Papers/A Review of Cooperation in Multi-agent Learning/cheap talk.md",
-    "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/HOP.md",
     "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/Indicator Function.md",
     "Meeting/Advantage Alignment Algorithm.md",
     "Templates/Meeting/Meeting Template.md",
@@ -220,19 +242,7 @@
     "Logbook/Git/Termux Bash.md",
     "Meeting",
     "Problems/Run/HOP初运行.md",
-    "Problems/Packages/importlib.md",
-    "Templates/Logbook/log git.md",
-    "Templates/Papers/paper Summary.md",
     "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning",
-    "Templates/Papers/paper QAs.md",
-    "Papers/Proximal Learning With Opponent-Learning Awareness/Euclidean (L2) norm.md",
-    "Papers/Proximal Learning With Opponent-Learning Awareness/PPO.md",
-    "Papers/MCTS/MCTS与MC的区别.md",
-    "Papers/MCTS/MCTS search.md",
-    "Papers/MCTS/MCTS.md",
-    "Papers/MCTS/MCTSs.md",
-    "Papers/Learning to Balance Altruism and Self-interest Bas/w-o.md",
-    "Papers/Learning to Balance Altruism and Self-interest Bas/LASE.md",
     "Papers/Advantage Alignment Algorithm",
     "Papers/Proximal Learning With Opponent-Learning Awareness/QAs",
     "Papers/Learning to Balance Altruism and Self-interest Bas/QAs",

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Templates/Papers/paper Summary.md",
+                "file": "Papers/Advantage Alignment Algorithm/未命名.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "paper Summary"
+              "title": "未命名"
             }
           }
         ]
@@ -52,7 +52,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#paper_QAs",
+                "query": "tag:#package_problems",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -194,7 +194,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 441.5
+    "width": 245.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -213,6 +213,8 @@
   },
   "active": "5808d9a3c6e0175e",
   "lastOpenFiles": [
+    "Papers/A Review of Cooperation in Multi-agent Learning/Hanabi.md",
+    "Templates/Papers/paper Summary.md",
     "Papers/Advantage Alignment Algorithm/未命名.md",
     "Papers/A Review of Cooperation in Multi-agent Learning/cheap talk.md",
     "Papers/A Review of Cooperation in Multi-agent Learning/Drawing 2024-12-10 13.59.55.excalidraw.md",
@@ -228,10 +230,8 @@
     "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/Backpropagation.md",
     "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/图解释.md",
     "Papers/A Review of Cooperation in Multi-agent Learning/Arrow’s Theorem.md",
-    "Papers/A Review of Cooperation in Multi-agent Learning/Hanabi.md",
     "Papers/A Review of Cooperation in Multi-agent Learning/Zipf ’s law.md",
     "Papers/A Review of Cooperation in Multi-agent Learning/aligned=pure common interest.md",
-    "Templates/Papers/paper Summary.md",
     "Templates/Papers/paper QAs.md",
     "2024-12-10.md",
     "Papers/Advantage Alignment Algorithm",

@@ -1,12 +1,16 @@
 {
   "recentFiles": [
     {
-      "basename": "paper Summary",
-      "path": "Templates/Papers/paper Summary.md"
-    },
-    {
       "basename": "未命名",
       "path": "Papers/Advantage Alignment Algorithm/未命名.md"
+    },
+    {
+      "basename": "Hanabi",
+      "path": "Papers/A Review of Cooperation in Multi-agent Learning/Hanabi.md"
+    },
+    {
+      "basename": "paper Summary",
+      "path": "Templates/Papers/paper Summary.md"
     },
     {
       "basename": "cheap talk",
@@ -59,10 +63,6 @@
     {
       "basename": "Arrow’s Theorem",
       "path": "Papers/A Review of Cooperation in Multi-agent Learning/Arrow’s Theorem.md"
-    },
-    {
-      "basename": "Hanabi",
-      "path": "Papers/A Review of Cooperation in Multi-agent Learning/Hanabi.md"
     },
     {
       "basename": "Zipf ’s law",

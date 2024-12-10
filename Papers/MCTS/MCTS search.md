@@ -1,4 +1,4 @@
-#MCTS 
+[[MCTS]]
 
 [https://www.moderndescartes.com/essays/deep_dive_mcts/](https://www.moderndescartes.com/essays/deep_dive_mcts/)
 

@@ -1,4 +1,4 @@
-#Dice  
+[[DiCE]]
 
 [https://blog.shakirm.com/2015/11/machine-learning-trick-of-the-day-5-log-derivative-trick/](https://blog.shakirm.com/2015/11/machine-learning-trick-of-the-day-5-log-derivative-trick/)
 

@@ -1,4 +1,4 @@
-#Dice  
+[[DiCE]]
 
 [https://storchastic.readthedocs.io/en/latest/intro.informal.html](https://storchastic.readthedocs.io/en/latest/intro.informal.html)
 

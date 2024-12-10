@@ -1,40 +1,52 @@
 {
   "recentFiles": [
     {
-      "basename": "未命名",
-      "path": "Papers/Advantage Alignment Algorithm/未命名.md"
+      "basename": "cheap talk",
+      "path": "Papers/A Review of Cooperation in Multi-agent Learning/cheap talk.md"
     },
     {
-      "basename": "Hanabi",
-      "path": "Papers/A Review of Cooperation in Multi-agent Learning/Hanabi.md"
+      "basename": "A Review of Cooperation in Multi-agent Learning",
+      "path": "Papers/A Review of Cooperation in Multi-agent Learning/A Review of Cooperation in Multi-agent Learning.md"
     },
     {
       "basename": "paper Summary",
       "path": "Templates/Papers/paper Summary.md"
     },
     {
-      "basename": "cheap talk",
-      "path": "Papers/A Review of Cooperation in Multi-agent Learning/cheap talk.md"
-    },
-    {
-      "basename": "MCTS与MC的区别",
-      "path": "Papers/MCTS/MCTS与MC的区别.md"
+      "basename": "paper QAs",
+      "path": "Templates/Papers/paper QAs.md"
     },
     {
       "basename": "Euclidean (L2) norm",
       "path": "Papers/Proximal Learning With Opponent-Learning Awareness/Euclidean (L2) norm.md"
     },
     {
-      "basename": "MCTS",
-      "path": "Papers/MCTS/MCTS.md"
+      "basename": "PPO",
+      "path": "Papers/Proximal Learning With Opponent-Learning Awareness/PPO.md"
+    },
+    {
+      "basename": "MCTS与MC的区别",
+      "path": "Papers/MCTS/MCTS与MC的区别.md"
     },
     {
       "basename": "MCTS search",
       "path": "Papers/MCTS/MCTS search.md"
     },
     {
+      "basename": "MCTS",
+      "path": "Papers/MCTS/MCTS.md"
+    },
+    {
       "basename": "w-o",
       "path": "Papers/Learning to Balance Altruism and Self-interest Bas/w-o.md"
+    },
+    {
+      "basename": "LASE",
+      "path": "Papers/Learning to Balance Altruism and Self-interest Bas/LASE.md"
+    },
+    {
+      "basename": "DiCE",
+      "path": "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/DiCE.md"
     },
     {
       "basename": "公式推导Higher Order Derivatives",
@@ -61,6 +73,14 @@
       "path": "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/图解释.md"
     },
     {
+      "basename": "Advantage Alignment Algorithm",
+      "path": "Papers/Advantage Alignment Algorithm/Advantage Alignment Algorithm.md"
+    },
+    {
+      "basename": "Hanabi",
+      "path": "Papers/A Review of Cooperation in Multi-agent Learning/Hanabi.md"
+    },
+    {
       "basename": "Arrow’s Theorem",
       "path": "Papers/A Review of Cooperation in Multi-agent Learning/Arrow’s Theorem.md"
     },
@@ -71,10 +91,6 @@
     {
       "basename": "aligned=pure common interest",
       "path": "Papers/A Review of Cooperation in Multi-agent Learning/aligned=pure common interest.md"
-    },
-    {
-      "basename": "paper QAs",
-      "path": "Templates/Papers/paper QAs.md"
     },
     {
       "basename": "Connect Failure_to be solved",

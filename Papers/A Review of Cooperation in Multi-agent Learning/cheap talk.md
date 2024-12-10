@@ -1,5 +1,5 @@
-#A_Review_of_Cooperation_in_Multi_agent_Learning 
 
+[[paper Summary]]
 Cheap Talk（廉价交流）
 
 Cheap Talk 是博弈论中的一个概念，指的是在博弈参与者之间进行的无成本、不具有约束力的交流。它是游戏开始前或进行中，玩家以语言或符号形式向对方传递信息的过程，但这些信息不直接影响玩家的收益或行动成本。

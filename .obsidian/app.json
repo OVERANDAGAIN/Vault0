@@ -5,5 +5,5 @@
   "attachmentFolderPath": "./attchments",
   "newFileLocation": "current",
   "readableLineLength": true,
-  "autoConvertHtml": true
+  "autoConvertHtml": false
 }

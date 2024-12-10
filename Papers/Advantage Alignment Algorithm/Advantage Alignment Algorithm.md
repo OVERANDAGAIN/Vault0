@@ -5,18 +5,18 @@
 
 
 # Innovation
-1. introduce <font color="#ff0000">Advantage Alignment</font> and PPA (Promixal Advantage Alignment)——two opponent shaping algorthms——based on policy gradient estimators
+1. introduce <font color="#ff0000">Advantage Alignment</font> and PPA (Promixal Advantage Alignment $\Longrightarrow$ two opponent shaping algorthms $\Longrightarrow$ based on policy gradient estimators
 2. prove LOLA and LOQA perform<font color="#ff0000"> Advantage Alignment</font> 
-3. extend REINFORCE-based opponent shaping to <font color="#ff0000">continuous action environments</font>——sota results
-4. apply in social dilemma——sota results
+3. extend REINFORCE-based opponent shaping to <font color="#ff0000">continuous action environments</font> $\Longrightarrow$ sota results
+4. apply in social dilemma $\Longrightarrow$ sota results
 
 
 # Background
-1. Pareto-suboptimal Nash equilibra——Opponent Shaping
-2. LOLA: an opponent shaping algorithm that influences the behavior of other agents —— by assuming they are naive learners —— taking gradients with respect to simulated parameter updates
-3. Pareto-optimal strategy in the Coin Game d
+1. Pareto-suboptimal Nash equilibra $\Longrightarrow$ Opponent Shaping
+2. LOLA: an opponent shaping algorithm that influences the behavior of other agents $\Longrightarrow$ by assuming they are naive learners $\Longrightarrow$ taking gradients with respect to simulated parameter updates
+3. Pareto-optimal strategy in the Coin Game 
 
-__ beg 
+
 # Problem
 
 

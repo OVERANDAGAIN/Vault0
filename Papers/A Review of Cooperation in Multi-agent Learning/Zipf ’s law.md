@@ -1,4 +1,4 @@
-#A_Review_of_Cooperation_in_Multi_agent_Learning  
+[[A Review of Cooperation in Multi-agent Learning]]
 
 Zipf’s Law（齐夫定律）
 

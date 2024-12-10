@@ -1,6 +1,22 @@
 {
   "recentFiles": [
     {
+      "basename": "Arrow’s Theorem",
+      "path": "Papers/A Review of Cooperation in Multi-agent Learning/Arrow’s Theorem.md"
+    },
+    {
+      "basename": "Hanabi",
+      "path": "Papers/A Review of Cooperation in Multi-agent Learning/Hanabi.md"
+    },
+    {
+      "basename": "Zipf ’s law",
+      "path": "Papers/A Review of Cooperation in Multi-agent Learning/Zipf ’s law.md"
+    },
+    {
+      "basename": "aligned=pure common interest",
+      "path": "Papers/A Review of Cooperation in Multi-agent Learning/aligned=pure common interest.md"
+    },
+    {
       "basename": "cheap talk",
       "path": "Papers/A Review of Cooperation in Multi-agent Learning/cheap talk.md"
     },
@@ -75,22 +91,6 @@
     {
       "basename": "Advantage Alignment Algorithm",
       "path": "Papers/Advantage Alignment Algorithm/Advantage Alignment Algorithm.md"
-    },
-    {
-      "basename": "Hanabi",
-      "path": "Papers/A Review of Cooperation in Multi-agent Learning/Hanabi.md"
-    },
-    {
-      "basename": "Arrow’s Theorem",
-      "path": "Papers/A Review of Cooperation in Multi-agent Learning/Arrow’s Theorem.md"
-    },
-    {
-      "basename": "Zipf ’s law",
-      "path": "Papers/A Review of Cooperation in Multi-agent Learning/Zipf ’s law.md"
-    },
-    {
-      "basename": "aligned=pure common interest",
-      "path": "Papers/A Review of Cooperation in Multi-agent Learning/aligned=pure common interest.md"
     },
     {
       "basename": "Connect Failure_to be solved",

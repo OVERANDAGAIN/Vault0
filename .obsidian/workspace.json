@@ -11,14 +11,10 @@
             "id": "5808d9a3c6e0175e",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Papers/A Review of Cooperation in Multi-agent Learning/cheap talk.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "cheap talk"
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "关系图谱"
             }
           }
         ]
@@ -213,8 +209,12 @@
   },
   "active": "5808d9a3c6e0175e",
   "lastOpenFiles": [
-    "Papers/A Review of Cooperation in Multi-agent Learning/A Review of Cooperation in Multi-agent Learning.md",
+    "Papers/A Review of Cooperation in Multi-agent Learning/Arrow’s Theorem.md",
+    "Papers/A Review of Cooperation in Multi-agent Learning/Hanabi.md",
+    "Papers/A Review of Cooperation in Multi-agent Learning/Zipf ’s law.md",
+    "Papers/A Review of Cooperation in Multi-agent Learning/aligned=pure common interest.md",
     "Papers/A Review of Cooperation in Multi-agent Learning/cheap talk.md",
+    "Papers/A Review of Cooperation in Multi-agent Learning/A Review of Cooperation in Multi-agent Learning.md",
     "Templates/Papers/paper Summary.md",
     "Templates/Papers/paper QAs.md",
     "Papers/Proximal Learning With Opponent-Learning Awareness/Euclidean (L2) norm.md",
@@ -233,11 +233,7 @@
     "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/Backpropagation.md",
     "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/图解释.md",
     "Papers/Advantage Alignment Algorithm/Advantage Alignment Algorithm.md",
-    "Papers/A Review of Cooperation in Multi-agent Learning/Hanabi.md",
     "Papers/A Review of Cooperation in Multi-agent Learning/Drawing 2024-12-10 13.59.55.excalidraw.md",
-    "Papers/A Review of Cooperation in Multi-agent Learning/Arrow’s Theorem.md",
-    "Papers/A Review of Cooperation in Multi-agent Learning/Zipf ’s law.md",
-    "Papers/A Review of Cooperation in Multi-agent Learning/aligned=pure common interest.md",
     "2024-12-10.md",
     "Papers/Advantage Alignment Algorithm",
     "Papers/Proximal Learning With Opponent-Learning Awareness/QAs",

@@ -1,4 +1,4 @@
-#paper_QAs 
+#Dice  
 
 In general, the loss function that we care about cannot be optimized efficiently. For example, the 0-1 loss function is discontinuous. So, we consider another loss function that will make our life easier, which we call the surrogate loss function.
 

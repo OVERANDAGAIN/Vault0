@@ -1,4 +1,4 @@
-#paper_QAs 
+#A_Review_of_Cooperation_in_Multi_agent_Learning  
 
 Q 在google的一篇cooperation in AI.中，如何去理解这样一句话：when the agent is aligned,it is a relationship of pure common interest
 

@@ -12,5 +12,13 @@
       ],
       "key": "Delete"
     }
+  ],
+  "transfer-latex-from-gpt:convert-latex-to-mathjax": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "M"
+    }
   ]
 }

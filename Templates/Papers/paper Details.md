@@ -1,3 +1,0 @@
-#paper_details 
-
-# 

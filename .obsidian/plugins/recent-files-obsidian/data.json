@@ -1,12 +1,16 @@
 {
   "recentFiles": [
     {
-      "basename": "未命名",
-      "path": "Templates/Papers/未命名.md"
-    },
-    {
       "basename": "paper QAs",
       "path": "Templates/Papers/paper QAs.md"
+    },
+    {
+      "basename": "cheap talk",
+      "path": "Papers/A Review of Cooperation in Multi-agent Learning/cheap talk.md"
+    },
+    {
+      "basename": "paper Summary",
+      "path": "Templates/Papers/paper Summary.md"
     },
     {
       "basename": "未命名",
@@ -19,10 +23,6 @@
     {
       "basename": "Zipf ’s law",
       "path": "Papers/A Review of Cooperation in Multi-agent Learning/Zipf ’s law.md"
-    },
-    {
-      "basename": "cheap talk",
-      "path": "Papers/A Review of Cooperation in Multi-agent Learning/cheap talk.md"
     },
     {
       "basename": "MCTS与MC的区别",

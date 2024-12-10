@@ -5,6 +5,10 @@
       "path": "Papers/A Review of Cooperation in Multi-agent Learning/Zipf ’s law.md"
     },
     {
+      "basename": "cheap talk",
+      "path": "Papers/A Review of Cooperation in Multi-agent Learning/cheap talk.md"
+    },
+    {
       "basename": "MCTS与MC的区别",
       "path": "Papers/MCTS/MCTS与MC的区别.md"
     },
@@ -39,10 +43,6 @@
     {
       "basename": "图解释",
       "path": "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/图解释.md"
-    },
-    {
-      "basename": "cheap talk",
-      "path": "Papers/A Review of Cooperation in Multi-agent Learning/cheap talk.md"
     },
     {
       "basename": "aligned=pure common interest",

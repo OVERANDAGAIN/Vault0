@@ -5,32 +5,60 @@
   "showAttachments": false,
   "hideUnresolved": false,
   "showOrphans": true,
-  "collapse-color-groups": true,
+  "collapse-color-groups": false,
   "colorGroups": [
-    {
-      "query": "path:Papers  ",
-      "color": {
-        "a": 1,
-        "rgb": 14048348
-      }
-    },
     {
       "query": "path:Problems  ",
       "color": {
         "a": 1,
         "rgb": 8871126
       }
+    },
+    {
+      "query": "path:\"Papers/A Review of Cooperation in Multi-agent Learning\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 11392604
+      }
+    },
+    {
+      "query": "path:\"Papers/DiCE-The Infinitely Differentiable Monte Carlo Es\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 6084188
+      }
+    },
+    {
+      "query": "path:\"Papers/Proximal Learning With Opponent-Learning Awareness\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 6084269
+      }
+    },
+    {
+      "query": "path:Papers/MCTS  ",
+      "color": {
+        "a": 1,
+        "rgb": 6073814
+      }
+    },
+    {
+      "query": "path:\"Papers/Proximal Learning With Opponent-Learning Awareness\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 6053078
+      }
     }
   ],
-  "collapse-display": true,
+  "collapse-display": false,
   "showArrow": false,
   "textFadeMultiplier": 0,
   "nodeSizeMultiplier": 1,
   "lineSizeMultiplier": 1,
-  "collapse-forces": true,
-  "centerStrength": 0.518713248970312,
-  "repelStrength": 10,
-  "linkStrength": 1,
+  "collapse-forces": false,
+  "centerStrength": 0.511168384879725,
+  "repelStrength": 9.74226804123711,
+  "linkStrength": 0,
   "linkDistance": 250,
   "scale": 1.0000000000000042,
   "close": false

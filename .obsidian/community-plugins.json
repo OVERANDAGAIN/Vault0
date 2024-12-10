@@ -15,5 +15,7 @@
   "obsidian-excalidraw-plugin",
   "dataview",
   "editing-toolbar",
-  "calendar"
+  "calendar",
+  "obsidian-auto-link-title",
+  "table-editor-obsidian"
 ]

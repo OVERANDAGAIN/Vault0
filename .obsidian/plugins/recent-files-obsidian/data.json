@@ -1,12 +1,28 @@
 {
   "recentFiles": [
     {
+      "basename": "HOP",
+      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/HOP.md"
+    },
+    {
       "basename": "未命名",
       "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/未命名.md"
     },
     {
-      "basename": "HOP",
-      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/HOP.md"
+      "basename": "Zipf ’s law",
+      "path": "Papers/A Review of Cooperation in Multi-agent Learning/Zipf ’s law.md"
+    },
+    {
+      "basename": "HOP初运行",
+      "path": "Problems/Run/HOP初运行.md"
+    },
+    {
+      "basename": "importlib",
+      "path": "Problems/Packages/importlib.md"
+    },
+    {
+      "basename": "log git",
+      "path": "Templates/Logbook/log git.md"
     },
     {
       "basename": "paper Summary",
@@ -27,10 +43,6 @@
     {
       "basename": "Hanabi",
       "path": "Papers/A Review of Cooperation in Multi-agent Learning/Hanabi.md"
-    },
-    {
-      "basename": "Zipf ’s law",
-      "path": "Papers/A Review of Cooperation in Multi-agent Learning/Zipf ’s law.md"
     },
     {
       "basename": "aligned=pure common interest",
@@ -105,24 +117,12 @@
       "path": "Logbook/Git/Connect Failure_to be solved.md"
     },
     {
-      "basename": "log git",
-      "path": "Templates/Logbook/log git.md"
-    },
-    {
       "basename": "Termux Bash",
       "path": "Logbook/Git/Termux Bash.md"
     },
     {
-      "basename": "importlib",
-      "path": "Problems/Packages/importlib.md"
-    },
-    {
       "basename": "OOM",
       "path": "Problems/Run/OOM.md"
-    },
-    {
-      "basename": "HOP初运行",
-      "path": "Problems/Run/HOP初运行.md"
     },
     {
       "basename": "no pth",

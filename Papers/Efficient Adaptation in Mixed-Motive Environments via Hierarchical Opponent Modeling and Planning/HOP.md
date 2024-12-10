@@ -33,7 +33,8 @@ two modules:
 updating beliefs about others' goals  $\Longleftrightarrow$ both across and within episodes
 information from the opponent module $\Longrightarrow$ guide planning
 
-
+## Oponent Modeling with Efficient Adaptation
+Chanllenge of co-players' goals changing within episodes $\Longrightarrow$ two procedures based on ToM: intra-OM (infer immediate goals within a single episode) and inter-OM (summarize co-players'goals based on their historical episodes)
 # Evaluation
 Markov Stag-Hunt (MSH)
 Markov Snowdrift Games (MSG) 

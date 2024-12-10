@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "Advantage Alignment Algorithm",
+      "path": "Papers/Advantage Alignment Algorithm/Advantage Alignment Algorithm.md"
+    },
+    {
       "basename": "paper Summary",
       "path": "Templates/Papers/paper Summary.md"
     },
@@ -87,10 +91,6 @@
     {
       "basename": "图解释",
       "path": "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/图解释.md"
-    },
-    {
-      "basename": "Advantage Alignment Algorithm",
-      "path": "Papers/Advantage Alignment Algorithm/Advantage Alignment Algorithm.md"
     },
     {
       "basename": "Connect Failure_to be solved",

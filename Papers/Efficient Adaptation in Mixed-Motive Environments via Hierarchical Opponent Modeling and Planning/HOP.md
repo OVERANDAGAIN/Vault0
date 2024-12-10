@@ -28,8 +28,10 @@ information from the opponent module $\Longrightarrow$ guide planning
 # Evaluation
 Markov Stag-Hunt (MSH)
 Markov Snowdrift Games (MSG) 
+self-play
+social intelligence 
 
-
+LOLA, A3C, PR2, direct-OM
 # Results
 superior few-shot adaptation
 excels int self-play scenarios

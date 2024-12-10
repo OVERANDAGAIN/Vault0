@@ -1,6 +1,46 @@
 {
   "recentFiles": [
     {
+      "basename": "Backpropagation",
+      "path": "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/Backpropagation.md"
+    },
+    {
+      "basename": "图解释",
+      "path": "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/图解释.md"
+    },
+    {
+      "basename": "Advantage Alignment Algorithm",
+      "path": "Papers/Advantage Alignment Algorithm/Advantage Alignment Algorithm.md"
+    },
+    {
+      "basename": "A Review of Cooperation in Multi-agent Learning",
+      "path": "Papers/A Review of Cooperation in Multi-agent Learning/A Review of Cooperation in Multi-agent Learning.md"
+    },
+    {
+      "basename": "Zipf ’s law",
+      "path": "Papers/A Review of Cooperation in Multi-agent Learning/Zipf ’s law.md"
+    },
+    {
+      "basename": "aligned=pure common interest",
+      "path": "Papers/A Review of Cooperation in Multi-agent Learning/aligned=pure common interest.md"
+    },
+    {
+      "basename": "Arrow’s Theorem",
+      "path": "Papers/A Review of Cooperation in Multi-agent Learning/Arrow’s Theorem.md"
+    },
+    {
+      "basename": "Hanabi",
+      "path": "Papers/A Review of Cooperation in Multi-agent Learning/Hanabi.md"
+    },
+    {
+      "basename": "cheap talk",
+      "path": "Papers/A Review of Cooperation in Multi-agent Learning/cheap talk.md"
+    },
+    {
+      "basename": "HOP",
+      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/HOP.md"
+    },
+    {
       "basename": "Indicator Function",
       "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/Indicator Function.md"
     },
@@ -21,14 +61,6 @@
       "path": "Logbook/Git/Termux Bash.md"
     },
     {
-      "basename": "HOP",
-      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/HOP.md"
-    },
-    {
-      "basename": "Zipf ’s law",
-      "path": "Papers/A Review of Cooperation in Multi-agent Learning/Zipf ’s law.md"
-    },
-    {
       "basename": "HOP初运行",
       "path": "Problems/Run/HOP初运行.md"
     },
@@ -45,32 +77,8 @@
       "path": "Templates/Papers/paper Summary.md"
     },
     {
-      "basename": "Advantage Alignment Algorithm",
-      "path": "Papers/Advantage Alignment Algorithm/Advantage Alignment Algorithm.md"
-    },
-    {
       "basename": "paper QAs",
       "path": "Templates/Papers/paper QAs.md"
-    },
-    {
-      "basename": "Arrow’s Theorem",
-      "path": "Papers/A Review of Cooperation in Multi-agent Learning/Arrow’s Theorem.md"
-    },
-    {
-      "basename": "Hanabi",
-      "path": "Papers/A Review of Cooperation in Multi-agent Learning/Hanabi.md"
-    },
-    {
-      "basename": "aligned=pure common interest",
-      "path": "Papers/A Review of Cooperation in Multi-agent Learning/aligned=pure common interest.md"
-    },
-    {
-      "basename": "cheap talk",
-      "path": "Papers/A Review of Cooperation in Multi-agent Learning/cheap talk.md"
-    },
-    {
-      "basename": "A Review of Cooperation in Multi-agent Learning",
-      "path": "Papers/A Review of Cooperation in Multi-agent Learning/A Review of Cooperation in Multi-agent Learning.md"
     },
     {
       "basename": "Euclidean (L2) norm",
@@ -119,14 +127,6 @@
     {
       "basename": "Score Function",
       "path": "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/Score Function.md"
-    },
-    {
-      "basename": "Backpropagation",
-      "path": "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/Backpropagation.md"
-    },
-    {
-      "basename": "图解释",
-      "path": "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/图解释.md"
     },
     {
       "basename": "Connect Failure_to be solved",

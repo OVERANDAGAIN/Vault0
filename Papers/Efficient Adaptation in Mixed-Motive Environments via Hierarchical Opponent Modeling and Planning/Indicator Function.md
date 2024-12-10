@@ -7,7 +7,7 @@
 
 
 ## GPT_Answers
-**Indicator Function** (指示函数)用于表示条件是否成立，定义如下：
+**Indicator Function**（指示函数）用来表示条件是否成立，其定义如下：
 
 $$I_A(x) =
 \begin{cases} 
@@ -26,28 +26,26 @@ def indicator_function(x, A):
 
 ```python
 A = {1, 2, 3}
-print(indicator_function(2, A))  # 输出: 1
-print(indicator_function(4, A))  # 输出: 0
+print(indicator_function(2, A))  # 输出 1
+print(indicator_function(4, A))  # 输出 0
 ```
 
-### 常见用途
+### 应用示例
 
-1. **条件约束**:
-   $$f(x) = I_{[a, b]}(x) \cdot g(x)$$
-   限制 $x$ 在区间 $[a, b]$。
-
-2. **积分区域控制**:
+**积分中使用：**
 
 ```python
-from scipy.integrate import quad
+import numpy as np
 
-f = lambda x: x**2 * indicator_function(x, range(1, 4))
-result, _ = quad(f, 0, 5)  # 实际积分在 [1, 3]
-print(result)
+def f(x):
+    return x**2
+
+a, b = 0, 2
+integral = np.sum([f(x) * indicator_function(x, range(a, b+1)) for x in np.linspace(-1, 3, 100)])
+print(integral)
 ```
 
-简单高效，用于数学建模、分类等场景。
-
+指示函数用于条件约束和事件判断，具有广泛应用于数学、统计和机器学习中。
 
 ## Other_Answers
 

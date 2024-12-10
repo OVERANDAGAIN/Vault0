@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/Indicator Function.md",
+                "file": "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/Backpropagation.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Indicator Function"
+              "title": "Backpropagation"
             }
           }
         ]
@@ -198,31 +198,33 @@
       "obsidian-kanban:创建新看板": false,
       "obsidian-git:Open Git source control": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "templater-obsidian:Templater": false
+      "templater-obsidian:Templater": false,
+      "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
   "active": "93769646eeafac97",
   "lastOpenFiles": [
+    "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/图解释.md",
+    "Papers/Advantage Alignment Algorithm/Advantage Alignment Algorithm.md",
+    "Papers/A Review of Cooperation in Multi-agent Learning/A Review of Cooperation in Multi-agent Learning.md",
+    "Papers/A Review of Cooperation in Multi-agent Learning/Zipf ’s law.md",
+    "Papers/A Review of Cooperation in Multi-agent Learning/aligned=pure common interest.md",
+    "Papers/A Review of Cooperation in Multi-agent Learning/Arrow’s Theorem.md",
+    "Papers/A Review of Cooperation in Multi-agent Learning/Hanabi.md",
+    "Papers/A Review of Cooperation in Multi-agent Learning/cheap talk.md",
+    "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/HOP.md",
+    "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/Indicator Function.md",
     "Meeting/Advantage Alignment Algorithm.md",
     "Templates/Meeting/Meeting Template.md",
     "Templates/Meeting",
     "Logbook/Git/Termux Bash.md",
     "Meeting",
-    "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/Indicator Function.md",
-    "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/HOP.md",
-    "Papers/A Review of Cooperation in Multi-agent Learning/Zipf ’s law.md",
     "Problems/Run/HOP初运行.md",
     "Problems/Packages/importlib.md",
     "Templates/Logbook/log git.md",
     "Templates/Papers/paper Summary.md",
-    "Papers/Advantage Alignment Algorithm/Advantage Alignment Algorithm.md",
     "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning",
     "Templates/Papers/paper QAs.md",
-    "Papers/A Review of Cooperation in Multi-agent Learning/Arrow’s Theorem.md",
-    "Papers/A Review of Cooperation in Multi-agent Learning/Hanabi.md",
-    "Papers/A Review of Cooperation in Multi-agent Learning/aligned=pure common interest.md",
-    "Papers/A Review of Cooperation in Multi-agent Learning/cheap talk.md",
-    "Papers/A Review of Cooperation in Multi-agent Learning/A Review of Cooperation in Multi-agent Learning.md",
     "Papers/Proximal Learning With Opponent-Learning Awareness/Euclidean (L2) norm.md",
     "Papers/Proximal Learning With Opponent-Learning Awareness/PPO.md",
     "Papers/MCTS/MCTS与MC的区别.md",
@@ -231,7 +233,6 @@
     "Papers/MCTS/MCTSs.md",
     "Papers/Learning to Balance Altruism and Self-interest Bas/w-o.md",
     "Papers/Learning to Balance Altruism and Self-interest Bas/LASE.md",
-    "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/DiCE.md",
     "Papers/Advantage Alignment Algorithm",
     "Papers/Proximal Learning With Opponent-Learning Awareness/QAs",
     "Papers/Learning to Balance Altruism and Self-interest Bas/QAs",

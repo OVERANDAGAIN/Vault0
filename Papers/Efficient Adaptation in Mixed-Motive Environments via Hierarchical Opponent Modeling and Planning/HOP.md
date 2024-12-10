@@ -35,6 +35,8 @@ information from the opponent module $\Longrightarrow$ guide planning
 
 ## Oponent Modeling with Efficient Adaptation
 Chanllenge of co-players' goals changing within episodes $\Longrightarrow$ two procedures based on ToM: intra-OM (infer immediate goals within a single episode) and inter-OM (summarize co-players'goals based on their historical episodes)
+
+intra-OM: inaccuracy of the prior when past trajectories not long enough for updates $\Longrightarrow$ inter-OM: $\alpha$ control the importance of the history
 # Evaluation
 Markov Stag-Hunt (MSH)
 Markov Snowdrift Games (MSG) 

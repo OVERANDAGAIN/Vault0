@@ -1,6 +1,26 @@
 {
   "recentFiles": [
     {
+      "basename": "paper concepts",
+      "path": "Templates/Papers/paper concepts.md"
+    },
+    {
+      "basename": "Zipf ’s law",
+      "path": "Papers/QAs/A Review of Cooperation in Multi-agent Learning/QAs/Zipf ’s law.md"
+    },
+    {
+      "basename": "cheap talk",
+      "path": "Papers/QAs/A Review of Cooperation in Multi-agent Learning/QAs/cheap talk.md"
+    },
+    {
+      "basename": "aligned=pure common interest",
+      "path": "Papers/QAs/A Review of Cooperation in Multi-agent Learning/QAs/aligned=pure common interest.md"
+    },
+    {
+      "basename": "Arrow’s Theorem",
+      "path": "Papers/QAs/A Review of Cooperation in Multi-agent Learning/QAs/Arrow’s Theorem.md"
+    },
+    {
       "basename": "Connect Failure_to be solved",
       "path": "Logbook/Git/Connect Failure_to be solved.md"
     },
@@ -27,10 +47,6 @@
     {
       "basename": "HOP初运行",
       "path": "Problems/Run/HOP初运行.md"
-    },
-    {
-      "basename": "paper concepts",
-      "path": "Templates/Papers/paper concepts.md"
     },
     {
       "basename": "w-o",
@@ -61,22 +77,6 @@
       "path": "Papers/QAs/DiCE-The Infinitely Differentiable Monte Carlo Es/Score Function.md"
     },
     {
-      "basename": "Zipf ’s law",
-      "path": "Papers/QAs/A Review of Cooperation in Multi-agent Learning/Zipf ’s law.md"
-    },
-    {
-      "basename": "aligned=pure common interest",
-      "path": "Papers/QAs/A Review of Cooperation in Multi-agent Learning/aligned=pure common interest.md"
-    },
-    {
-      "basename": "Arrow’s Theorem",
-      "path": "Papers/QAs/A Review of Cooperation in Multi-agent Learning/Arrow’s Theorem.md"
-    },
-    {
-      "basename": "cheap talk",
-      "path": "Papers/QAs/A Review of Cooperation in Multi-agent Learning/cheap talk.md"
-    },
-    {
       "basename": "Euclidean (L2) norm",
       "path": "Papers/QAs/Proximal Learning With Opponent-Learning Awareness/Euclidean (L2) norm.md"
     },
@@ -86,7 +86,7 @@
     },
     {
       "basename": "Hanabi",
-      "path": "Papers/QAs/A Review of Cooperation in Multi-agent Learning/Hanabi.md"
+      "path": "Papers/QAs/A Review of Cooperation in Multi-agent Learning/QAs/Hanabi.md"
     },
     {
       "basename": "MCTS与MC的区别",

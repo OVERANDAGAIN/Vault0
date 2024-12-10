@@ -16,6 +16,12 @@ few-shot adaptation in mixed-motive environments (despite success in zero-sum an
 ToM $\Longrightarrow$ understand others' goals/beliefs from their actions $\Longrightarrow$ between and within episodes
 
 
+
+# Related Work
+add intrinstic rewards, consider the impact on others, maximize extrinstic rewards
+
+
+
 # Methodology
 two modules:
 1. an opponent modeling module $\Longrightarrow$ infer others' goals $\Longleftrightarrow$ learn corresponding goal-conditioned policies

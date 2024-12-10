@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "61ddbcfbc4b80845",
+        "id": "7a8197115f5f999f",
         "type": "tabs",
         "children": [
           {
-            "id": "5808d9a3c6e0175e",
+            "id": "93769646eeafac97",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "关系图谱"
+              "type": "markdown",
+              "state": {
+                "file": "Templates/Papers/paper Summary.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "paper Summary"
             }
           }
         ]
@@ -207,16 +211,16 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "5808d9a3c6e0175e",
+  "active": "93769646eeafac97",
   "lastOpenFiles": [
+    "Templates/Papers/paper QAs.md",
+    "Templates/Papers/paper Summary.md",
     "Papers/A Review of Cooperation in Multi-agent Learning/Arrow’s Theorem.md",
     "Papers/A Review of Cooperation in Multi-agent Learning/Hanabi.md",
     "Papers/A Review of Cooperation in Multi-agent Learning/Zipf ’s law.md",
     "Papers/A Review of Cooperation in Multi-agent Learning/aligned=pure common interest.md",
     "Papers/A Review of Cooperation in Multi-agent Learning/cheap talk.md",
     "Papers/A Review of Cooperation in Multi-agent Learning/A Review of Cooperation in Multi-agent Learning.md",
-    "Templates/Papers/paper Summary.md",
-    "Templates/Papers/paper QAs.md",
     "Papers/Proximal Learning With Opponent-Learning Awareness/Euclidean (L2) norm.md",
     "Papers/Proximal Learning With Opponent-Learning Awareness/PPO.md",
     "Papers/MCTS/MCTS与MC的区别.md",

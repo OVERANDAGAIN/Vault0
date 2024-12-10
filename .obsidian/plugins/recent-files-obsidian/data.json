@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "paper Summary",
+      "path": "Templates/Papers/paper Summary.md"
+    },
+    {
+      "basename": "paper QAs",
+      "path": "Templates/Papers/paper QAs.md"
+    },
+    {
       "basename": "Arrow’s Theorem",
       "path": "Papers/A Review of Cooperation in Multi-agent Learning/Arrow’s Theorem.md"
     },
@@ -23,14 +31,6 @@
     {
       "basename": "A Review of Cooperation in Multi-agent Learning",
       "path": "Papers/A Review of Cooperation in Multi-agent Learning/A Review of Cooperation in Multi-agent Learning.md"
-    },
-    {
-      "basename": "paper Summary",
-      "path": "Templates/Papers/paper Summary.md"
-    },
-    {
-      "basename": "paper QAs",
-      "path": "Templates/Papers/paper QAs.md"
     },
     {
       "basename": "Euclidean (L2) norm",

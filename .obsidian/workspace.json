@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/未命名.md",
+                "file": "Logbook/Git/Termux Bash.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "未命名"
+              "title": "Termux Bash"
             }
           }
         ]
@@ -203,8 +203,9 @@
   },
   "active": "76680d06691bde68",
   "lastOpenFiles": [
-    "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/HOP.md",
+    "未命名",
     "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/未命名.md",
+    "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/HOP.md",
     "Papers/A Review of Cooperation in Multi-agent Learning/Zipf ’s law.md",
     "Problems/Run/HOP初运行.md",
     "Problems/Packages/importlib.md",
@@ -229,7 +230,6 @@
     "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/DiCE.md",
     "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/公式推导Higher Order Derivatives.md",
     "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/Surrogate loss function.md",
-    "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/SCG-repara-SF.md",
     "Papers/Advantage Alignment Algorithm",
     "Papers/Proximal Learning With Opponent-Learning Awareness/QAs",
     "Papers/Learning to Balance Altruism and Self-interest Bas/QAs",

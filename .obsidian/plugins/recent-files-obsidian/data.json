@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "Termux Bash",
+      "path": "Logbook/Git/Termux Bash.md"
+    },
+    {
       "basename": "未命名",
       "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/未命名.md"
     },
@@ -115,10 +119,6 @@
     {
       "basename": "Connect Failure_to be solved",
       "path": "Logbook/Git/Connect Failure_to be solved.md"
-    },
-    {
-      "basename": "Termux Bash",
-      "path": "Logbook/Git/Termux Bash.md"
     },
     {
       "basename": "OOM",

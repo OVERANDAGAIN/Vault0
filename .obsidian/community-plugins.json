@@ -1,21 +1,19 @@
 [
-  "obsidian-excalidraw-plugin",
-  "table-editor-obsidian",
-  "calendar",
-  "obsidian-auto-link-title",
   "templater-obsidian",
-  "obsidian-style-settings",
   "obsidian-tasks-plugin",
+  "tag-wrangler",
+  "obsidian-style-settings",
   "remember-cursor-position",
   "recent-files-obsidian",
+  "quickadd",
   "mousewheel-image-zoom",
   "obsidian-minimal-settings",
-  "obsidian-kanban",
+  "obsidian-latex-suite",
   "obsidian-icon-folder",
   "obsidian-git",
+  "obsidian-kanban",
+  "obsidian-excalidraw-plugin",
   "dataview",
   "editing-toolbar",
-  "quickadd",
-  "tag-wrangler",
-  "obsidian-latex-suite"
+  "calendar"
 ]

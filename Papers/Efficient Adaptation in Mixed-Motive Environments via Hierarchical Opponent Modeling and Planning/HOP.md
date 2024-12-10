@@ -14,7 +14,7 @@ few-shot adaptation in mixed-motive environments (despite success in zero-sum an
 
 # Theory
 ToM $\Longrightarrow$ understand others' goals/beliefs from their actions $\Longrightarrow$ between and within episodes
-
+opponent modeling
 
 
 # Related Work
@@ -23,7 +23,7 @@ Add intrinstic rewards, consider the impact on others, maximize extrinstic rewar
 ToMAGA $\Longrightarrow$ hand-crafted intrinstic rewards access to rewards of co-players
 counterfactual reasoning
 LOLA, POLA, M-FOS $\Longrightarrow$ consider the impact (rather than treating them as a static part) $\Longrightarrow$ require knowledge of co-players' netwprl parameters
-
+I-POMDP, opponent modeling $\Longrightarrow$ esrious computational complexity
 
 # Methodology
 two modules:

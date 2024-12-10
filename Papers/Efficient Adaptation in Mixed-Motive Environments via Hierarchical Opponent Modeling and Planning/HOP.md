@@ -12,8 +12,8 @@ few-shot adaptation in mixed-motive environments (despite success in zero-sum an
 1. efficiently adapting to co-players in mixed-motive environments $\Longrightarrow$ hierarchically model co-players' behavior based on inferring their characteristics $\Longrightarrow$ difficulties int efficient reasoning and utilization of inferred information
 
 
-# Problem
-
+# Theory
+ToM
 
 
 # Methodology

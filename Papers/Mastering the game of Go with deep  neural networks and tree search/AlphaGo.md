@@ -18,8 +18,8 @@ All games of perfect information have an optimal value function, $v^{*}(s)$, whi
 
 # Theroy
 Effective search space can be reduced by:
-1. depth of search $\Longrightarrow$ position evaluation; replacing the subtree below $s$   by an approximate value function $v(s) ≈ v^{*}(s)$ 
-2. breadth of the search $\Longrightarrow$  sampling actions from a policy $p(a|s)$ that is a probability distribution over possible moves $a$ in position $s$.
+1. depth of search $\Longrightarrow$ position evaluation; replacing the subtree below $s$  by an <font color="#ff0000">approximate value function</font> $v(s) ≈ v^{*}(s)$ 
+2. breadth of the search $\Longrightarrow$  <font color="#ff0000">sampling actions</font> from a policy $p(a|s)$ that is a probability distribution over possible moves $a$ in position $s$.
 
 
 # Methodology

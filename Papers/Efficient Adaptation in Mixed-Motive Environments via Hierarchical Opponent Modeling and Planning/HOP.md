@@ -50,7 +50,8 @@ run MCTS for $N_{s}$ rounds:
 			co-players' actions $\tilde{a}_{-i}$ :  $s\enspace{\sim}\enspace \pi_{\omega}(\cdot|\tilde{s}^{k},g_{j})$  $\Longrightarrow$ from goal-conditioned policy
 			MCTS: estimated action value of current state $Q(s^{K,t},a,g_{-i})=V(\tilde{s}'(a))\ (a\in A_{i})$
 				$\tilde{s}'$ is next state after taking $\tilde{a}^{0}_{-i}\cup a$ form $\tilde{s}^{0}=s^{K,t}$ 
-			average the estimated action value $Q_{\langle d \rangle s}$
+			average the estimated action value $Q_{avg}(s^{K,t},a)=$
+			agent $i$ 's policy follows Boltzmann rationality model
 # Evaluation
 Markov Stag-Hunt (MSH)
 Markov Snowdrift Games (MSG) 

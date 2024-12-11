@@ -47,7 +47,7 @@ run MCTS for $N_{s}$ rounds:
 	time **t** at episode **K** :
 		sample goal combination $g_{-i}={\{g_{j}\ {\sim}\ b_{ij}^{K,t}(\cdot),j\neq i}$ 
 		at state $s^{ {\sim}k}$ in the MCTS tree: 
-			co=players' actions $\tilde{a}_{-i}$ :  $s\enspace{\sim}\enspace \pi_{}$
+			co=players' actions $\tilde{a}_{-i}$ :  $s\enspace{\sim}\enspace \pi_{\omega}(\cdot|\tilde{s}^{k},g_{j})$  $\Longrightarrow$ from goal-conditioned policy
 # Evaluation
 Markov Stag-Hunt (MSH)
 Markov Snowdrift Games (MSG) 

@@ -123,7 +123,7 @@ $$Q(s, a) = \frac{1}{N(s, a)} \sum_{i=1}^n 1(s, a, i)V(s_L^i)$$
     $$N_r(s_t, a_t) \gets N_r(s_t, a_t) - n_{vl} + 1$$
     $$N(s_t, a_t) \gets N(s_t, a_t) + 1$$
   - **累计价值**（rollout 和主线程）：
-    $$W_r(s_t, a_t) \gets W_r(s_t, a_t) - n_{vl} + z_t$$
+    $$W_r(s_t, a_t) \gets W_r(s_t, a_t) + n_{vl} + z_t$$
     $$W(s_t, a_t) \gets W(s_t, a_t) + v_\theta(s_L)$$
   - $z_t$ 是通过 rollout 策略计算的最终折扣回报。
   - $v_\theta(s_L)$ 是值网络对叶子节点状态的评估值。

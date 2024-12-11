@@ -39,7 +39,7 @@ Chanllenge of co-players' goals changing within episodes $\Longrightarrow$ two p
 intra-OM: inaccuracy of the prior when past trajectories not long enough for updates $\Longrightarrow$ inter-OM: $\alpha$ control the importance of the history
 
 ## Planning under Uncertain Co-player Models
-Obstacle to applying MCTS: co-player policies estimated by the opponent module contain uncertainty over co-plaers' goals. $\Longrightarrow$ 
+Obstacle to applying MCTS: co-player policies estimated by the opponent module contain uncertainty over co-plaers' goals. $\Longrightarrow$ sample co-players' goal combinations according to the belief maintained by the opponent modeling module $\Longrightarrow$ estimate action value by MCTS based on the samples 
 # Evaluation
 Markov Stag-Hunt (MSH)
 Markov Snowdrift Games (MSG) 

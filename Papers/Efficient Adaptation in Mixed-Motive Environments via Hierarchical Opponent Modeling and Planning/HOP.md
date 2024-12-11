@@ -53,6 +53,9 @@ run MCTS for $N_{s}$ rounds:
 			average the estimated action value $Q_{avg}(s^{K,t},a)=\sum_{l=1}^{N_{s}}Q_{l}(s^{K,t},a,g_{-i}^{l})$
 			agent $i$ 's policy follows Boltzmann rationality model $\pi_{MCTS}(a|s^{K,t})=\frac{\exp(\beta Q_{avg}(s^{K,t},a))}{\sum_{a'\in A_{i}}\exp(\beta Q_{avg}(s^{K,t},a')}$
 				$\beta$ is rationality coefficient $\Longrightarrow$ $\beta$ increases $\Longleftrightarrow$ policy more rational
+
+
+a neural network $\theta$ to predict policy and value functions 
 # Evaluation
 Markov Stag-Hunt (MSH)
 Markov Snowdrift Games (MSG) 

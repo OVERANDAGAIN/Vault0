@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "Indicator Function",
+      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/Indicator Function.md"
+    },
+    {
+      "basename": "HOP",
+      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/HOP.md"
+    },
+    {
       "basename": "PPO",
       "path": "Papers/Proximal Learning With Opponent-Learning Awareness/PPO.md"
     },
@@ -27,10 +35,6 @@
     {
       "basename": "w-o",
       "path": "Papers/Learning to Balance Altruism and Self-interest Bas/w-o.md"
-    },
-    {
-      "basename": "HOP",
-      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/HOP.md"
     },
     {
       "basename": "DiCE",
@@ -87,10 +91,6 @@
     {
       "basename": "cheap talk",
       "path": "Papers/A Review of Cooperation in Multi-agent Learning/cheap talk.md"
-    },
-    {
-      "basename": "Indicator Function",
-      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/Indicator Function.md"
     },
     {
       "basename": "未命名",

@@ -189,6 +189,39 @@ $$N_r(s, a) > n_{thr}$$
 - **阈值 $n_{thr}$**：扩展阈值动态调整，以确保节点扩展的速率与 GPU 的计算能力匹配。
 - **小批量评估**：对扩展的节点 $s'$ 进行策略网络和值网络的评估，采用 mini-batch 的大小为 1，优化端到端评估时间。
 
+这段描述详细说明了 **rollout policy**（回合模拟策略）的设计与作用。以下是其核心内容和分析：
+
+---
+
+### **1. Rollout Policy 的定义**
+- **$p_\pi(a | s)$** 是基于局部模式的线性 softmax 策略：
+  - 它快速、增量计算，主要利用**局部特征**来评估候选动作 $a$ 在状态 $s$ 下的优先级。
+  - 特征分为两类：
+    - **响应模式（response patterns）**：与前一步导致当前状态的动作有关的局部模式。
+    - **非响应模式（non-response patterns）**：围绕当前候选动作 $a$ 的局部模式。
+
+---
+
+### **2. 特征设计**
+#### **(1) 非响应模式**
+- **局部 3×3 格子模式**：
+  - 以候选动作 $a$ 为中心的 3×3 棋盘格子，特征包括：
+    - 颜色：黑色、白色或空。
+    - **Liberty count**（气的数量）：1、2 或 ≥3。
+
+#### **(2) 响应模式**
+- **12 点菱形模式**：
+  - 基于上一步动作的颜色和气的数量，匹配一个特定的 12 点菱形区域特征。
+  - 用二元特征表示是否满足特定模式。
+
+#### **(3) 手工规则**
+- 添加了一些通用围棋规则的手工特征，例如：
+  - 合法性检查。
+  - 常识性策略（如围空、逃跑）。
+
+
+
+
 # Evaluation
 Even without rollouts AlphaGo exceeded the performance of all other Go programs, demonstrating that value networks provide a viable alternative to Monte Carlo evaluation in Go.
 

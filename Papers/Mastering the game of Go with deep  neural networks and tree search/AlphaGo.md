@@ -159,7 +159,7 @@ Randomizing from a pool of opponents in this way stabilizes training by preventi
 ## Reinforcement learning of value networks
 This neural network has a similar architecture to the policy network, but outputs a single prediction instead of a probability distribution.
 ## Searching with policy and value networks
-(s, a) of the search tree stores an action value Q(s, a), visit count N(s, a), and prior probability P(s, a).
+$(s, a)$ of the search tree stores an action value $Q(s, a)$, visit count $N(s, a)$, and prior probability $P(s, a)$.
 
 
 ### **1. 树中存储的信息**

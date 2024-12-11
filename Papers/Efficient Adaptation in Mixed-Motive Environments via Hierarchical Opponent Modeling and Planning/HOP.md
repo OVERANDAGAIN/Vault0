@@ -44,7 +44,8 @@ Obstacle to applying MCTS: co-player policies estimated by the opponent module c
 
 run MCTS for $N_{s}$ rounds:
 	sample co-players' goals on $b_{ij}(g_{j})$ 
-	time 
+	time **t** at episode **K** :
+		sample goal combination $g_{-i}={g_{j}~b_{ij}^K}$ 
 # Evaluation
 Markov Stag-Hunt (MSH)
 Markov Snowdrift Games (MSG) 

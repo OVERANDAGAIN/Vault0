@@ -137,7 +137,7 @@ $$Q(s, a) = (1 - \lambda) \frac{W_{v}(s, a)}{N_{v}(s, a)} + \lambda \frac{W_r(s,
 - **第二部分**：由 rollout 累计价值和访问次数计算，权重为 $\lambda$。
 
 这种加权方式融合了值网络的全局评估和 rollout 的模拟结果，从而提供更准确的估计。
-
+![[Pasted image 20241211171349.png]]
 
 
 # Evaluation

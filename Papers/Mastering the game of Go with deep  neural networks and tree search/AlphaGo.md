@@ -34,9 +34,22 @@ $\Longleftrightarrow$
 - a value network $v_{\theta}$ that predicts the winner of games played by the RL policy network against itself.
 
 ## Supervised learning of policy networks
-The SL policy network pσ(a| )salternates between convolutional layers with weights σ, and rectifier nonlinearities.
+The SL policy network alternates between convolutional layers with weights σ, and rectifier nonlinearities.
 
 A final softmax layer outputs a probability distribution over all legal moves a.
+
+sampled state-action pairs (s, a), using stochastic gradient ascent to maximize the likelihood of the human move a selected in state s
+
+a faster but less accurate rollout policy pπ(a|s), using a linear softmax of small pattern features (see Extended Data Table 4) with weights π;
+
+## Reinforcement learning of policy networks
+The RL policy network pρ is identical in structure to the SL policy network,
+its weights ρ are initialized to the same values, ρ = σ.
+Randomizing from a pool of opponents in this way stabilizes training by preventing overfitting to the current policy.
+## Reinforcement learning of value networks
+This neural network has a similar architecture to the policy network, but outputs a single prediction instead of a probability distribution.
+## Searching with policy and value networks
+(s, a) of the search tree stores an action value Q(s, a), visit count N(s, a), and prior probability P(s, a).
 
 
 

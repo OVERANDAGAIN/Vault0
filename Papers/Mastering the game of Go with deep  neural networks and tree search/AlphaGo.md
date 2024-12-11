@@ -148,13 +148,13 @@ The SL policy network alternates between convolutional layers with weights σ, a
 
 A final softmax layer outputs a probability distribution over all legal moves a.
 
-sampled state-action pairs (s, a), using stochastic gradient ascent to maximize the likelihood of the human move a selected in state s
+sampled state-action pairs (s, a), using stochastic gradient ascent to maximize the likelihood of the human move $a$ selected in state $s$
 
-a faster but less accurate rollout policy pπ(a|s), using a linear softmax of small pattern features (see Extended Data Table 4) with weights π;
+a faster but less accurate rollout policy $p_π(a|s)$, using a linear softmax of small pattern features (see Extended Data Table 4) with weights $π$
 
 ## Reinforcement learning of policy networks
-The RL policy network pρ is identical in structure to the SL policy network,
-its weights ρ are initialized to the same values, ρ = σ.
+The RL policy network $p_ρ$ is identical in structure to the SL policy network,
+its weights $ρ$ are initialized to the same values, $ρ = σ$.
 Randomizing from a pool of opponents in this way stabilizes training by preventing overfitting to the current policy.
 ## Reinforcement learning of value networks
 This neural network has a similar architecture to the policy network, but outputs a single prediction instead of a probability distribution.

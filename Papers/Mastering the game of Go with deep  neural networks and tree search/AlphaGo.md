@@ -138,22 +138,8 @@ $$Q(s, a) = (1 - \lambda) \frac{W(s, a)}{N(s, a)} + \lambda \frac{W_r(s, a)}{N_r
 
 这种加权方式融合了值网络的全局评估和 rollout 的模拟结果，从而提供更准确的估计。
 
----
 
-### **4. 参数关系总结**
-- $N(s, a)$ 和 $N_r(s, a)$：分别记录主线程和 rollout 的访问次数。
-- $W(s, a)$ 和 $W_r(s, a)$：分别记录主线程和 rollout 的累计价值。
-- $Q(s, a)$：结合两者的加权平均，反映状态-动作对的总体评估。
-- $\lambda$：控制值网络和 rollout 模拟的权重，决定了两种评估结果的相对影响力。
 
----
-
-### **5. 关键意义**
-- 虚拟损失避免线程间竞争。
-- 分离 $W$ 和 $W_r$ 统计值，使得主线程和 rollout 的价值统计可以独立，并通过权重参数 $\lambda$ 灵活融合两者结果。
-- 最终的动作值 $Q(s, a)$ 能更准确地指导搜索和策略优化，是 MCTS 与深度学习结合的关键机制之一。
-
-希望这些解释能够帮助你理解公式中各参数的关系和回传操作的机制！
 # Evaluation
 Even without rollouts AlphaGo exceeded the performance of all other Go programs, demonstrating that value networks provide a viable alternative to Monte Carlo evaluation in Go.
 

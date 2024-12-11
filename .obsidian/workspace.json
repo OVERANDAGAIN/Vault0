@@ -144,6 +144,18 @@
             }
           },
           {
+            "id": "754879504499e87e",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Papers/Mastering the game of Go with deep  neural networks and tree search/AlphaGo.md"
+              },
+              "icon": "lucide-list",
+              "title": "AlphaGo 的大纲"
+            }
+          },
+          {
             "id": "92c1eebfcb0431d1",
             "type": "leaf",
             "state": {
@@ -178,7 +190,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -200,7 +212,7 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "93769646eeafac97",
+  "active": "4a0be767cbd8c2be",
   "lastOpenFiles": [
     "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/Indicator Function.md",
     "Papers/Mastering the game of Go with deep  neural networks and tree search/AlphaGo.md",

@@ -121,10 +121,10 @@ $$Q(s, a) = \frac{1}{N(s, a)} \sum_{i=1}^n 1(s, a, i)V(s_L^i)$$
 - 模拟结束后，从叶子节点返回实际的奖励 $z_t$，回传更新以下统计值：
   - **访问次数**（rollout 和主线程）：
     $$N_r(s_t, a_t) \gets N_r(s_t, a_t) - n_{vl} + 1$$
-    $$N(s_t, a_t) \gets N(s_t, a_t) + 1$$
+    $$N_{v}(s_t, a_t) \gets N_{v}(s_t, a_t) + 1$$
   - **累计价值**（rollout 和主线程）：
     $$W_r(s_t, a_t) \gets W_r(s_t, a_t) + n_{vl} + z_t$$
-    $$W(s_t, a_t) \gets W(s_t, a_t) + v_\theta(s_L)$$
+    $$W_{v}(s_t, a_t) \gets W_{v}(s_t, a_t) + v_\theta(s_L)$$
   - $z_t$ 是通过 rollout 策略计算的最终折扣回报。
   - $v_\theta(s_L)$ 是值网络对叶子节点状态的评估值。
 
@@ -132,7 +132,7 @@ $$Q(s, a) = \frac{1}{N(s, a)} \sum_{i=1}^n 1(s, a, i)V(s_L^i)$$
 
 ### **3. 动作价值更新**
 最终，每个状态-动作对的动作值 $Q(s, a)$ 是基于主线程和 rollout 的统计值，按权重参数 $\lambda$ 的加权平均：
-$$Q(s, a) = (1 - \lambda) \frac{W(s, a)}{N(s, a)} + \lambda \frac{W_r(s, a)}{N_r(s, a)}$$
+$$Q(s, a) = (1 - \lambda) \frac{W_{v}(s, a)}{N_{v}(s, a)} + \lambda \frac{W_r(s, a)}{N_r(s, a)}$$
 - **第一部分**：由主线程的累计价值和访问次数计算，权重为 $1 - \lambda$。
 - **第二部分**：由 rollout 累计价值和访问次数计算，权重为 $\lambda$。
 

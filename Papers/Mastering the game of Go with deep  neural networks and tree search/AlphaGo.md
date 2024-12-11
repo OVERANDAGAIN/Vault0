@@ -189,20 +189,6 @@ $$N_r(s, a) > n_{thr}$$
 - **阈值 $n_{thr}$**：扩展阈值动态调整，以确保节点扩展的速率与 GPU 的计算能力匹配。
 - **小批量评估**：对扩展的节点 $s'$ 进行策略网络和值网络的评估，采用 mini-batch 的大小为 1，优化端到端评估时间。
 
----
-
-#### **5. 参数的关系**
-#### (1) $N_r(s, a)$ 和 $n_{thr}$
-- $N_r(s, a)$ 是动作 $a$ 的访问次数，表示探索的深度。
-- $n_{thr}$ 控制扩展触发条件，较高的 $n_{thr}$ 可以延迟扩展，减少计算开销。
-
-#### (2) $P(s', a)$ 和 $p_\tau(a | s')$、$p_\sigma^\beta(a | s')$
-- $P(s', a)$ 是动作 $a$ 的先验概率。
-- 初始由树策略 $p_\tau(a | s')$ 提供占位符值，后续由策略网络 $p_\sigma^\beta(a | s')$ 提供更精确的值。
-
-#### (3) $W(s', a)$ 和 $N(s', a)$
-- $W(s', a)$ 和 $N(s', a)$ 分别记录新节点的累计价值和访问次数，均在扩展时初始化为 0。
-
 # Evaluation
 Even without rollouts AlphaGo exceeded the performance of all other Go programs, demonstrating that value networks provide a viable alternative to Monte Carlo evaluation in Go.
 

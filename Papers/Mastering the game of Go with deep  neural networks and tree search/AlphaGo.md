@@ -23,8 +23,12 @@ Effective search space can be reduced by:
 
 
 # Methodology
+use convolutional layers to construct a representation of the position. We use these neural networks to reduce the effective depth and breadth of the search tree: evaluating positions using a value network, and sampling actions using a policy network
 
-
+1. (SL) policy network $p_{\sigma}$ directly from expert human moves
+2. fast policy $p_{\pi}$that can rapidly sample actions during rollouts
+3. (RL) policy network $p_{@}$ that improves the SL policy network by optimizing the final outcome of games of selfplay.
+4. a value network vθ that predicts the winner of games played by the RL policy network against itself.
 
 # Evaluation
 

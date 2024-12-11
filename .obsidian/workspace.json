@@ -98,18 +98,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "7746ac004a8a19a9",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "Logbook/Git/Connect Failure_to be solved.md"
-              },
-              "icon": "lucide-list",
-              "title": "Connect Failure_to be solved 的大纲"
-            }
-          },
-          {
             "id": "9f39ad243124278a",
             "type": "leaf",
             "state": {
@@ -190,11 +178,11 @@
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 245.5
+    "width": 504.5
   },
   "left-ribbon": {
     "hiddenItems": {

@@ -40,6 +40,11 @@ intra-OM: inaccuracy of the prior when past trajectories not long enough for upd
 
 ## Planning under Uncertain Co-player Models
 Obstacle to applying MCTS: co-player policies estimated by the opponent module contain uncertainty over co-plaers' goals. $\Longrightarrow$ sample co-players' goal combinations according to the belief maintained by the opponent modeling module $\Longrightarrow$ estimate action value by MCTS based on the samples 
+
+
+run MCTS for $N_{s}$ rounds:
+	sample co-players' goals on $b_{ij}(g_{j})$ 
+	time 
 # Evaluation
 Markov Stag-Hunt (MSH)
 Markov Snowdrift Games (MSG) 

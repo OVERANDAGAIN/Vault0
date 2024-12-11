@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/Indicator Function.md",
+                "file": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/HOP.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Indicator Function"
+              "title": "HOP"
             }
           }
         ]
@@ -214,6 +214,7 @@
   },
   "active": "93769646eeafac97",
   "lastOpenFiles": [
+    "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/Indicator Function.md",
     "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/HOP.md",
     "Papers/Proximal Learning With Opponent-Learning Awareness/PPO.md",
     "Papers/Proximal Learning With Opponent-Learning Awareness/Euclidean (L2) norm.md",
@@ -236,7 +237,6 @@
     "Papers/A Review of Cooperation in Multi-agent Learning/Arrow’s Theorem.md",
     "Papers/A Review of Cooperation in Multi-agent Learning/Hanabi.md",
     "Papers/A Review of Cooperation in Multi-agent Learning/cheap talk.md",
-    "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/Indicator Function.md",
     "Meeting/Advantage Alignment Algorithm.md",
     "Templates/Meeting/Meeting Template.md",
     "Templates/Meeting",

@@ -50,9 +50,7 @@ Randomizing from a pool of opponents in this way stabilizes training by preventi
 This neural network has a similar architecture to the policy network, but outputs a single prediction instead of a probability distribution.
 ## Searching with policy and value networks
 (s, a) of the search tree stores an action value Q(s, a), visit count N(s, a), and prior probability P(s, a).
-这段内容描述了蒙特卡洛树搜索（MCTS）算法的关键公式和参数间的关系。以下是对公式和参数关系的详细梳理：
 
----
 
 ### **1. 树中存储的信息**
 在每个状态-动作对 $(s, a)$ 中，MCTS 存储了以下信息：

@@ -1,4 +1,5 @@
 [[DiCE]]
+#REINFORCE
 
 [What is Storchastic? — Storchastic 0.3.5 documentation](https://storchastic.readthedocs.io/en/latest/intro.informal.html)
 

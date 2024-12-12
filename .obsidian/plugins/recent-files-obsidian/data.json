@@ -1,12 +1,12 @@
 {
   "recentFiles": [
     {
-      "basename": "RL vs SL",
-      "path": "Papers/Mastering the game of Go with deep  neural networks and tree search/RL vs SL.md"
-    },
-    {
       "basename": "AlphaGo",
       "path": "Papers/Mastering the game of Go with deep  neural networks and tree search/AlphaGo.md"
+    },
+    {
+      "basename": "RL vs SL",
+      "path": "Papers/Mastering the game of Go with deep  neural networks and tree search/RL vs SL.md"
     },
     {
       "basename": "ASGD",

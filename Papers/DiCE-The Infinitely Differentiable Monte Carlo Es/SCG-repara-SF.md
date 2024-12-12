@@ -1,6 +1,6 @@
 [[DiCE]]
 
-[https://storchastic.readthedocs.io/en/latest/intro.informal.html](https://storchastic.readthedocs.io/en/latest/intro.informal.html)
+[What is Storchastic? — Storchastic 0.3.5 documentation](https://storchastic.readthedocs.io/en/latest/intro.informal.html)
 
 ![[Pasted image 20241206171622.png]]
 ![[Pasted image 20241206171632.png]]![[Pasted image 20241206171636.png]]![[Pasted image 20241206171640.png]]![[Pasted image 20241206171643.png]]The pathwise derivative/reparameterization![[Pasted image 20241206171653.png]]

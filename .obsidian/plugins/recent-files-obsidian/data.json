@@ -1,12 +1,16 @@
 {
   "recentFiles": [
     {
-      "basename": "AlphaGo",
-      "path": "Papers/Mastering the game of Go with deep  neural networks and tree search/AlphaGo.md"
-    },
-    {
       "basename": "SCG-repara-SF",
       "path": "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/SCG-repara-SF.md"
+    },
+    {
+      "basename": "Score Function",
+      "path": "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/Score Function.md"
+    },
+    {
+      "basename": "AlphaGo",
+      "path": "Papers/Mastering the game of Go with deep  neural networks and tree search/AlphaGo.md"
     },
     {
       "basename": "Surrogate loss function",
@@ -15,10 +19,6 @@
     {
       "basename": "Backpropagation",
       "path": "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/Backpropagation.md"
-    },
-    {
-      "basename": "Score Function",
-      "path": "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/Score Function.md"
     },
     {
       "basename": "公式推导Higher Order Derivatives",

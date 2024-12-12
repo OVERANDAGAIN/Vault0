@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Papers/Mastering the game of Go with deep  neural networks and tree search/AlphaGo.md",
+                "file": "Papers/Mastering the game of Go with deep  neural networks and tree search/RL vs SL.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "AlphaGo"
+              "title": "RL vs SL"
             }
           }
         ]
@@ -149,10 +149,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Papers/Mastering the game of Go with deep  neural networks and tree search/AlphaGo.md"
+                "file": "Papers/Mastering the game of Go with deep  neural networks and tree search/RL vs SL.md"
               },
               "icon": "lucide-list",
-              "title": "AlphaGo 的大纲"
+              "title": "RL vs SL 的大纲"
             }
           },
           {
@@ -216,6 +216,7 @@
   "active": "93769646eeafac97",
   "lastOpenFiles": [
     "Papers/Mastering the game of Go with deep  neural networks and tree search/ASGD.md",
+    "Papers/Mastering the game of Go with deep  neural networks and tree search/RL vs SL.md",
     "Papers/Mastering the game of Go with deep  neural networks and tree search/AlphaGo.md",
     "2024-12-12.md",
     "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/SCG-repara-SF.md",
@@ -246,7 +247,6 @@
     "Papers/A Review of Cooperation in Multi-agent Learning/aligned=pure common interest.md",
     "Papers/A Review of Cooperation in Multi-agent Learning/Arrow’s Theorem.md",
     "Papers/A Review of Cooperation in Multi-agent Learning/Hanabi.md",
-    "Papers/A Review of Cooperation in Multi-agent Learning/cheap talk.md",
     "Templates/Meeting",
     "Meeting",
     "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning",

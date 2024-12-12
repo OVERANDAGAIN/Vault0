@@ -47,23 +47,6 @@
             }
           },
           {
-            "id": "f8786513a3f65c09",
-            "type": "leaf",
-            "state": {
-              "type": "search",
-              "state": {
-                "query": "tag:#package_problems",
-                "matchingCase": false,
-                "explainSearch": false,
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical"
-              },
-              "icon": "lucide-search",
-              "title": "搜索"
-            }
-          },
-          {
             "id": "442309a961dceb29",
             "type": "leaf",
             "state": {
@@ -199,20 +182,21 @@
   "left-ribbon": {
     "hiddenItems": {
       "omnisearch:Omnisearch": false,
-      "transfer-latex-from-gpt:Convert LaTeX to MathJax": false,
-      "switcher:打开快速切换": false,
-      "graph:查看关系图谱": false,
-      "canvas:新建白板": false,
-      "daily-notes:打开/创建今天的日记": false,
-      "templates:插入模板": false,
-      "command-palette:打开命令面板": false,
-      "obsidian-kanban:创建新看板": false,
       "obsidian-git:Open Git source control": false,
+      "templates:插入模板": false,
+      "graph:查看关系图谱": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "templater-obsidian:Templater": false
+      "canvas:新建白板": false,
+      "command-palette:打开命令面板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "obsidian-kanban:创建新看板": false,
+      "switcher:打开快速切换": false,
+      "obsidian-excalidraw-plugin:新建绘图文件": false,
+      "templater-obsidian:Templater": false,
+      "transfer-latex-from-gpt:Convert LaTeX to MathJax": false
     }
   },
-  "active": "754879504499e87e",
+  "active": "93769646eeafac97",
   "lastOpenFiles": [
     "Papers/Mastering the game of Go with deep  neural networks and tree search/attchments/Pasted image 20241211165021.png",
     "Papers/Mastering the game of Go with deep  neural networks and tree search/AlphaGo.md",

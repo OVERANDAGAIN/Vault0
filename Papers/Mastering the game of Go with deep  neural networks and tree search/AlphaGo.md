@@ -299,7 +299,8 @@ $$N_r(s, a) > n_{thr}$$
 ![[Pasted image 20241212141514.png]]
 
 
-
+> [!NOTE] Changes
+> - Expansion已被AlphaGo Zero抛弃
 
 
 ### **6.rollout policy（回合模拟策略）的设计与作用**
@@ -311,8 +312,6 @@ $$N_r(s, a) > n_{thr}$$
   - 特征分为两类：
     - **响应模式（response patterns）**：与前一步导致当前状态的动作有关的局部模式。
     - **非响应模式（non-response patterns）**：围绕当前候选动作 $a$ 的局部模式。
-
-
 #### **B. 特征设计**
 ##### **(1) 非响应模式**
 - **局部 3×3 格子模式**：

@@ -209,11 +209,13 @@
       "obsidian-kanban:创建新看板": false,
       "switcher:打开快速切换": false,
       "templater-obsidian:Templater": false,
-      "transfer-latex-from-gpt:Convert LaTeX to MathJax": false
+      "transfer-latex-from-gpt:Convert LaTeX to MathJax": false,
+      "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
   "active": "93769646eeafac97",
   "lastOpenFiles": [
+    "Papers/Mastering the game of Go with deep  neural networks and tree search/attchments/Pasted image 20241212141514.png",
     "Papers/Mastering the game of Go with deep  neural networks and tree search/attchments/Pasted image 20241211165021.png",
     "Papers/Mastering the game of Go with deep  neural networks and tree search/AlphaGo.md",
     "Papers/Mastering the game of Go with deep  neural networks and tree search/attchments/Pasted image 20241211171349.png",

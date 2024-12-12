@@ -65,6 +65,23 @@
               "icon": "clock",
               "title": "Recent Files"
             }
+          },
+          {
+            "id": "16585d9d457df940",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
           }
         ]
       }
@@ -191,7 +208,6 @@
       "daily-notes:打开/创建今天的日记": false,
       "obsidian-kanban:创建新看板": false,
       "switcher:打开快速切换": false,
-      "obsidian-excalidraw-plugin:新建绘图文件": false,
       "templater-obsidian:Templater": false,
       "transfer-latex-from-gpt:Convert LaTeX to MathJax": false
     }

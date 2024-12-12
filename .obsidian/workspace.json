@@ -198,6 +198,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "omnisearch:Omnisearch": false,
       "transfer-latex-from-gpt:Convert LaTeX to MathJax": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
@@ -208,8 +209,7 @@
       "obsidian-kanban:创建新看板": false,
       "obsidian-git:Open Git source control": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "templater-obsidian:Templater": false,
-      "obsidian-excalidraw-plugin:新建绘图文件": false
+      "templater-obsidian:Templater": false
     }
   },
   "active": "754879504499e87e",

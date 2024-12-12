@@ -349,6 +349,7 @@ $$\bar{p}_\theta(a|s) = \frac{1}{8} \sum_{j=1}^8 d_j^{-1} \big(p_\theta(\cdot|d_
      - $\alpha$：学习率，初始值为 0.003，每 80 百万次训练步骤减半。
      - 优化目标是最大化动作的对数似然。
     
+
 > [!tip] Difference between SL and RL 
 > Contents
 

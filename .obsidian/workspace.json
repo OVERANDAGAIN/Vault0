@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2024-12-12.md",
+                "file": "Papers/Mastering the game of Go with deep  neural networks and tree search/AlphaGo.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2024-12-12"
+              "title": "AlphaGo"
             }
           }
         ]
@@ -149,10 +149,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2024-12-12.md"
+                "file": "Papers/Mastering the game of Go with deep  neural networks and tree search/AlphaGo.md"
               },
               "icon": "lucide-list",
-              "title": "2024-12-12 的大纲"
+              "title": "AlphaGo 的大纲"
             }
           },
           {
@@ -215,8 +215,8 @@
   },
   "active": "93769646eeafac97",
   "lastOpenFiles": [
-    "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/SCG-repara-SF.md",
     "2024-12-12.md",
+    "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/SCG-repara-SF.md",
     "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/Score Function.md",
     "Papers/Mastering the game of Go with deep  neural networks and tree search/AlphaGo.md",
     "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/Surrogate loss function.md",

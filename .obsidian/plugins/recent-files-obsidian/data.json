@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "AlphaGo",
+      "path": "Papers/Mastering the game of Go with deep  neural networks and tree search/AlphaGo.md"
+    },
+    {
       "basename": "2024-12-12",
       "path": "2024-12-12.md"
     },
@@ -11,10 +15,6 @@
     {
       "basename": "Score Function",
       "path": "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/Score Function.md"
-    },
-    {
-      "basename": "AlphaGo",
-      "path": "Papers/Mastering the game of Go with deep  neural networks and tree search/AlphaGo.md"
     },
     {
       "basename": "Surrogate loss function",

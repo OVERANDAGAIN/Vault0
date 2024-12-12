@@ -350,9 +350,6 @@ $$\bar{p}_\theta(a|s) = \frac{1}{8} \sum_{j=1}^8 d_j^{-1} \big(p_\theta(\cdot|d_
      - 优化目标是最大化动作的对数似然。
     
 
-> [!tip] Difference between SL and RL 
-> Contents
-
 1. **训练设置**
    - 梯度丢弃：如果梯度小于 100 次更新，则丢弃。
    - 分布式训练：

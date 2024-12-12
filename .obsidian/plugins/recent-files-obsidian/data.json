@@ -5,6 +5,10 @@
       "path": "Papers/Mastering the game of Go with deep  neural networks and tree search/AlphaGo.md"
     },
     {
+      "basename": "ASGD",
+      "path": "Papers/Mastering the game of Go with deep  neural networks and tree search/ASGD.md"
+    },
+    {
       "basename": "2024-12-12",
       "path": "2024-12-12.md"
     },

@@ -238,7 +238,7 @@ $$Q(s, a) = \frac{1}{N(s, a)} \sum_{i=1}^n 1(s, a, i)V(s_L^i)$$
   - $z_t$ 是通过 rollout 策略计算的最终折扣回报。
   - $v_\theta(s_L)$ 是值网络对叶子节点状态的评估值。
 
-> [!NOTE] 虚拟损失更新与最终结果更新relationship：
+> [!tip] 虚拟损失更新与最终结果更新relationship：
 > 从最终结果的值来看：
 > 	$N_{v}$ 与 $W_{v}$ : 前者+1 ； 后者+$V_{\theta}$
 > 	$N_{r}$ 与 $W_{r}$ : 前者+1 ； 后者+$Z_{t}$ 

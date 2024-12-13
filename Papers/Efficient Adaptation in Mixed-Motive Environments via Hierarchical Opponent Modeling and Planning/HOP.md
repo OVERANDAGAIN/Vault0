@@ -49,7 +49,7 @@ run MCTS for $N_{s}$ rounds:
 		at state $s^{ {\sim}k}$ in the MCTS tree: 
 			co-players' actions $\tilde{a}_{-i}$ :  $s\enspace{\sim}\enspace \pi_{\omega}(\cdot|\tilde{s}^{k},g_{j})$  $\Longrightarrow$ from goal-conditioned policy
 			MCTS: estimated action value of current state $Q(s^{K,t},a,g_{-i})=V(\tilde{s}'(a))\ (a\in A_{i})$
-				$\tilde{s}'$ is next state after taking $\tilde{a}^{0}_{-i}\cup a$ form $\tilde{s}^{0}=s^{K,t}$ 
+				$\tilde{s}'(a)$ is next state after taking $\tilde{a}^{0}_{-i}\cup a$ form $\tilde{s}^{0}=s^{K,t}$ 
 			average the estimated action value $Q_{avg}(s^{K,t},a)=\sum_{l=1}^{N_{s}}Q_{l}(s^{K,t},a,g_{-i}^{l})$
 			agent $i$ 's policy follows Boltzmann rationality model $\pi_{MCTS}(a|s^{K,t})=\frac{\exp(\beta Q_{avg}(s^{K,t},a))}{\sum_{a'\in A_{i}}\exp(\beta Q_{avg}(s^{K,t},a')}$
 				$\beta$ is rationality coefficient $\Longrightarrow$ $\beta$ increases $\Longleftrightarrow$ policy more rational

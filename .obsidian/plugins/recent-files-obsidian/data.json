@@ -1,6 +1,22 @@
 {
   "recentFiles": [
     {
+      "basename": "未命名",
+      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/未命名.md"
+    },
+    {
+      "basename": "paper codes",
+      "path": "Templates/Papers/paper codes.md"
+    },
+    {
+      "basename": "paper QAs",
+      "path": "Templates/Papers/paper QAs.md"
+    },
+    {
+      "basename": "paper Summary",
+      "path": "Templates/Papers/paper Summary.md"
+    },
+    {
       "basename": "HOP",
       "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/HOP.md"
     },
@@ -147,14 +163,6 @@
     {
       "basename": "log git",
       "path": "Templates/Logbook/log git.md"
-    },
-    {
-      "basename": "paper Summary",
-      "path": "Templates/Papers/paper Summary.md"
-    },
-    {
-      "basename": "paper QAs",
-      "path": "Templates/Papers/paper QAs.md"
     },
     {
       "basename": "Connect Failure_to be solved",

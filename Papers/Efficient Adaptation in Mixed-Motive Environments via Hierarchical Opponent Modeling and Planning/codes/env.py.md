@@ -32,6 +32,101 @@
    - 通过传入的 `config` 初始化环境参数，包括玩家数（`player_num`）、地图大小（`world_height`、`world_width`）、奖励和惩罚设置等。
    - 初始化了 `self.state`（环境状态矩阵）、`self.player_pos`（玩家位置）、`self.observation_space` 和 `self.action_space`。
 
+```
+### 为什么这么定义 `observation_space` 和 `action_space`
+
+在强化学习环境中，`observation_space` 和 `action_space` 是环境与智能体交互的核心接口，它们定义了：
+- **`observation_space`**：智能体可以观察到的环境状态。
+- **`action_space`**：智能体可以执行的动作集合。
+
+在这个 `SnowDriftEnv` 环境中，定义的 `observation_space` 和 `action_space` 是专门为多智能体协作和竞争环境设计的，具体如下：
+
+---
+
+### **1. `observation_space` 的结构**
+定义为一个 `gym.spaces.Dict`，包含两个部分：
+- **`observation`**：一个 `Box` 空间，用于存储玩家的状态矩阵。
+- **`action_mask`**：另一个 `Box` 空间，用于存储每个动作的合法性。
+
+#### **1.1 `observation`**
+```python
+Box(low=0, high=1, shape=(self.player_num+2, self.height, self.width), dtype=np.int8)
+```
+
+**含义：**
+- `low=0, high=1`：表示状态矩阵中的值只能在 `[0, 1]` 范围内。
+- `shape=(self.player_num+2, self.height, self.width)`：
+  - **第 1 维**：层的数量，具体为：
+    1. 玩家层（`player_num` 个）：表示每个玩家的位置。
+    2. 障碍层：地图上的障碍物位置。
+    3. 猎物层：地图上猎物（或目标）的分布。
+  - **第 2、3 维**：环境的网格大小（`height x width`），即二维地图的网格化表示。
+- `dtype=np.int8`：状态矩阵中的值是整数，表示该网格是否被占据。
+
+**设计原因：**
+- **多层表示法**：
+  - 每个玩家有单独的一层，方便独立表示位置（在一个网格上最多只有一个玩家）。
+  - 障碍和猎物分开存储，方便计算可行的动作和奖励。
+- **网格化的空间表示**：
+  - 将二维地图分割为离散的网格（类似于棋盘），每个网格单独编码，便于计算和可视化。
+
+---
+
+#### **1.2 `action_mask`**
+```python
+Box(low=0, high=1, shape=(6,), dtype=np.int8)
+```
+
+**含义：**
+- `low=0, high=1`：动作的合法性以二值（`0` 或 `1`）表示：
+  - `1` 表示动作不可用。
+  - `0` 表示动作可用。
+- `shape=(6,)`：一共定义了 6 个动作，分别是：
+  - `UP`：向上移动。
+  - `DOWN`：向下移动。
+  - `LEFT`：向左移动。
+  - `RIGHT`：向右移动。
+  - `STAY`：保持原地不动。
+  - `LINK`：执行捕猎动作。
+
+**设计原因：**
+- **动作合法性检查**：在某些情况下（例如边界或障碍物阻挡），某些动作可能无效。`action_mask` 用于屏蔽这些非法动作，避免智能体做出无意义的决策。
+- **提升训练效率**：通过屏蔽无效动作，可以减少智能体探索无效策略的时间。
+
+---
+
+### **2. `action_space` 的结构**
+定义为：
+```python
+self.action_space = Discrete(6)
+```
+
+**含义：**
+- 表示动作空间是一个离散空间，有 6 个动作选项。
+- 索引值 `0~5` 分别对应 `UP`、`DOWN`、`LEFT`、`RIGHT`、`STAY`、`LINK`。
+
+---
+
+### **3. 观察空间和动作空间的关系**
+智能体的决策流程如下：
+1. **观测环境（`observation_space`）：**
+   - 智能体接收由 `__obs__` 方法生成的观测值，包括 `observation` 和 `action_mask`。
+   - 通过 `observation` 判断自己和目标（猎物、障碍物、其他玩家）的相对位置。
+   - 通过 `action_mask` 了解哪些动作是合法的。
+2. **选择动作（`action_space`）：**
+   - 智能体根据策略，在 6 个动作中选择一个。
+   - 如果选择的动作是非法的（`action_mask` 对应为 `1`），会自动转为 `STAY`（留在原地）。
+
+```markdown
+
+
+
+
+
+
+
+
+
 **调用关系：**
 - `SnowDriftEnv` 被注册为 `ray` 的环境后，在训练过程中会调用它的 `reset` 和 `step` 方法。
 

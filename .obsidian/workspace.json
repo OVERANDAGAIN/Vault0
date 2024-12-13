@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Templates/Meeting/Meeting Template.md",
+                "file": "Meeting/未命名.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Meeting Template"
+              "title": "未命名"
             }
           }
         ]
@@ -72,7 +72,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#meeting",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -214,12 +214,15 @@
   },
   "active": "a415af7e6fbc176c",
   "lastOpenFiles": [
-    "Templates/Meeting/Meeting Template.md",
+    "Meeting/Advantage Alignment Algorithm.md",
+    "Meeting/未命名.md",
+    "Meeting/attchments/未命名.md",
+    "Meeting/12_13GPU集群最佳实践.md",
     "Meeting/科研心路历程与坚持长期主义科研.md",
+    "Templates/Meeting/Meeting Template.md",
     "Meeting/attchments/12.jpg",
     "Meeting/attchments/11.jpg",
     "Meeting/attchments",
-    "Meeting/12_13GPU集群最佳实践.md",
     "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/config and moa.md",
     "Templates/Papers/paper codes.md",
     "Templates/Papers/paper QAs.md",
@@ -247,8 +250,6 @@
     "Papers/Mastering the game of Go with deep  neural networks and tree search/attchments",
     "Papers/Mastering the game of Go with deep  neural networks and tree search",
     "Papers/Proximal Learning With Opponent-Learning Awareness/PPO.md",
-    "Papers/Proximal Learning With Opponent-Learning Awareness/Euclidean (L2) norm.md",
-    "Papers/Learning to Balance Altruism and Self-interest Bas/LASE.md",
     "Templates/Meeting",
     "Meeting",
     "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning",

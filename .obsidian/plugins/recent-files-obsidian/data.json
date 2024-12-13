@@ -1,24 +1,40 @@
 {
   "recentFiles": [
     {
+      "basename": "Meeting Template",
+      "path": "Templates/Meeting/Meeting Template.md"
+    },
+    {
+      "basename": "paper QAs",
+      "path": "Templates/Papers/paper QAs.md"
+    },
+    {
+      "basename": "paper Summary",
+      "path": "Templates/Papers/paper Summary.md"
+    },
+    {
+      "basename": "paper codes",
+      "path": "Templates/Papers/paper codes.md"
+    },
+    {
+      "basename": "package problems",
+      "path": "Templates/Problems/package problems.md"
+    },
+    {
+      "basename": "run problems",
+      "path": "Templates/Problems/run problems.md"
+    },
+    {
+      "basename": "GPU集群最佳实践",
+      "path": "Meeting/GPU集群最佳实践.md"
+    },
+    {
       "basename": "科研心路历程与坚持长期主义科研",
       "path": "Meeting/科研心路历程与坚持长期主义科研.md"
     },
     {
-      "basename": "12_13GPU集群最佳实践",
-      "path": "Meeting/12_13GPU集群最佳实践.md"
-    },
-    {
-      "basename": "未命名",
-      "path": "Meeting/未命名.md"
-    },
-    {
       "basename": "Advantage Alignment Algorithm",
       "path": "Meeting/Advantage Alignment Algorithm.md"
-    },
-    {
-      "basename": "Meeting Template",
-      "path": "Templates/Meeting/Meeting Template.md"
     },
     {
       "basename": "@today   Meeting Template",
@@ -31,18 +47,6 @@
     {
       "basename": "未命名",
       "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/未命名.md"
-    },
-    {
-      "basename": "paper codes",
-      "path": "Templates/Papers/paper codes.md"
-    },
-    {
-      "basename": "paper QAs",
-      "path": "Templates/Papers/paper QAs.md"
-    },
-    {
-      "basename": "paper Summary",
-      "path": "Templates/Papers/paper Summary.md"
     },
     {
       "basename": "HOP",
@@ -191,14 +195,6 @@
     {
       "basename": "no GPU",
       "path": "Problems/Run/no GPU.md"
-    },
-    {
-      "basename": "package problems",
-      "path": "Templates/Problems/package problems.md"
-    },
-    {
-      "basename": "run problems",
-      "path": "Templates/Problems/run problems.md"
     }
   ],
   "omittedPaths": [],

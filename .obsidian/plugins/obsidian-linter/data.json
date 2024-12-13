@@ -65,7 +65,7 @@
       "date-modified": true,
       "date-modified-key": "修改时间",
       "date-modified-source-of-truth": "file system",
-      "format": "YYYY - MMMM - Do - dddd , h:mm:ss a",
+      "format": "YYYY-MMMM-Do  dddd, h:mm:ss a",
       "convert-to-utc": false,
       "update-on-file-contents-updated": "never"
     },
@@ -276,7 +276,9 @@
   "lintOnFileChange": false,
   "displayLintOnFileChangeNotice": false,
   "settingsConvertedToConfigKeyValues": true,
-  "foldersToIgnore": [],
+  "foldersToIgnore": [
+    "Templates"
+  ],
   "filesToIgnore": [],
   "linterLocale": "system-default",
   "logLevel": "ERROR",

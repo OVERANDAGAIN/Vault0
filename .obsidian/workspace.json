@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "7a8197115f5f999f",
+        "id": "d2199e540561784e",
         "type": "tabs",
         "children": [
           {
-            "id": "93769646eeafac97",
+            "id": "a415af7e6fbc176c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/config and moa.md",
+                "file": "Meeting/GPU集群最佳实践.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "config and moa"
+              "title": "GPU集群最佳实践"
             }
           }
         ]
@@ -209,13 +209,15 @@
       "obsidian-kanban:创建新看板": false,
       "switcher:打开快速切换": false,
       "templater-obsidian:Templater": false,
-      "transfer-latex-from-gpt:Convert LaTeX to MathJax": false
+      "transfer-latex-from-gpt:Convert LaTeX to MathJax": false,
+      "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "93769646eeafac97",
+  "active": "a415af7e6fbc176c",
   "lastOpenFiles": [
-    "Templates/Papers/paper codes.md",
+    "Meeting/GPU集群最佳实践.md",
     "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/config and moa.md",
+    "Templates/Papers/paper codes.md",
     "Templates/Papers/paper QAs.md",
     "Templates/Papers/paper Summary.md",
     "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/HOP.md",
@@ -246,7 +248,6 @@
     "Papers/Learning to Balance Altruism and Self-interest Bas/LASE.md",
     "Papers/Learning to Balance Altruism and Self-interest Bas/w-o.md",
     "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/图解释.md",
-    "Papers/Advantage Alignment Algorithm/Advantage Alignment Algorithm.md",
     "Templates/Meeting",
     "Meeting",
     "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning",

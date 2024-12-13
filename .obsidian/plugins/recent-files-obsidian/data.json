@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "未命名",
+      "path": "Meeting/未命名.md"
+    },
+    {
       "basename": "config and moa",
       "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/config and moa.md"
     },
@@ -31,10 +35,6 @@
     {
       "basename": "科研心路历程与坚持长期主义科研",
       "path": "Meeting/科研心路历程与坚持长期主义科研.md"
-    },
-    {
-      "basename": "未命名",
-      "path": "Meeting/未命名.md"
     },
     {
       "basename": "RL vs SL",

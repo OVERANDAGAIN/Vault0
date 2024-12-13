@@ -1,6 +1,18 @@
 {
   "recentFiles": [
     {
+      "basename": "AlphaGo",
+      "path": "Papers/Mastering the game of Go with deep  neural networks and tree search/AlphaGo.md"
+    },
+    {
+      "basename": "RL vs SL",
+      "path": "Papers/Mastering the game of Go with deep  neural networks and tree search/RL vs SL.md"
+    },
+    {
+      "basename": "log git",
+      "path": "Templates/Logbook/log git.md"
+    },
+    {
       "basename": "Meeting Template",
       "path": "Templates/Meeting/Meeting Template.md"
     },
@@ -51,14 +63,6 @@
     {
       "basename": "HOP",
       "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/HOP.md"
-    },
-    {
-      "basename": "AlphaGo",
-      "path": "Papers/Mastering the game of Go with deep  neural networks and tree search/AlphaGo.md"
-    },
-    {
-      "basename": "RL vs SL",
-      "path": "Papers/Mastering the game of Go with deep  neural networks and tree search/RL vs SL.md"
     },
     {
       "basename": "ASGD",
@@ -175,10 +179,6 @@
     {
       "basename": "importlib",
       "path": "Problems/Packages/importlib.md"
-    },
-    {
-      "basename": "log git",
-      "path": "Templates/Logbook/log git.md"
     },
     {
       "basename": "Connect Failure_to be solved",

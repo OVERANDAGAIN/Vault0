@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Templates/Meeting/Meeting Template.md",
+                "file": "Papers/Mastering the game of Go with deep  neural networks and tree search/AlphaGo.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Meeting Template"
+              "title": "AlphaGo"
             }
           }
         ]
@@ -215,12 +215,14 @@
   },
   "active": "a415af7e6fbc176c",
   "lastOpenFiles": [
+    "Papers/Mastering the game of Go with deep  neural networks and tree search/RL vs SL.md",
+    "Templates/Logbook/log git.md",
+    "Templates/Meeting/Meeting Template.md",
     "Templates/Papers/paper QAs.md",
     "Templates/Papers/paper Summary.md",
     "Templates/Papers/paper codes.md",
     "Templates/Problems/package problems.md",
     "Templates/Problems/run problems.md",
-    "Templates/Meeting/Meeting Template.md",
     "Meeting/GPU集群最佳实践.md",
     "Meeting/科研心路历程与坚持长期主义科研.md",
     "Meeting/Advantage Alignment Algorithm.md",
@@ -233,7 +235,6 @@
     "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/HOP.md",
     "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes",
     "Papers/Mastering the game of Go with deep  neural networks and tree search/AlphaGo.md",
-    "Papers/Mastering the game of Go with deep  neural networks and tree search/RL vs SL.md",
     "Papers/Mastering the game of Go with deep  neural networks and tree search/ASGD.md",
     "2024-12-12.md",
     "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/SCG-repara-SF.md",
@@ -244,7 +245,6 @@
     "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/DiCE.md",
     "Papers/MCTS/MCTS.md",
     "Papers/MCTS/MCTS与MC的区别.md",
-    "Papers/MCTS/MCTS search.md",
     "Papers/Mastering the game of Go with deep  neural networks and tree search/attchments/Pasted image 20241212141514.png",
     "Papers/Mastering the game of Go with deep  neural networks and tree search/attchments/Pasted image 20241211165021.png",
     "Papers/Mastering the game of Go with deep  neural networks and tree search/attchments/Pasted image 20241211171349.png",

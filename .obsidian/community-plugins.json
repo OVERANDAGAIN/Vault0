@@ -21,5 +21,6 @@
   "transfer-latex-from-gpt",
   "omnisearch",
   "text-extractor",
-  "nldates-obsidian"
+  "nldates-obsidian",
+  "obsidian-linter"
 ]

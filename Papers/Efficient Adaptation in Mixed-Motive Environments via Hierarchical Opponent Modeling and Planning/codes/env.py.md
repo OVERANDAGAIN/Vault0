@@ -32,7 +32,7 @@
    - 通过传入的 `config` 初始化环境参数，包括玩家数（`player_num`）、地图大小（`world_height`、`world_width`）、奖励和惩罚设置等。
    - 初始化了 `self.state`（环境状态矩阵）、`self.player_pos`（玩家位置）、`self.observation_space` 和 `self.action_space`。
 
-
+  
 ````ad-tip
 ### `self.player_num + 2` 的意义
 

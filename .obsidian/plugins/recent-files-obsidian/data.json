@@ -1,8 +1,16 @@
 {
   "recentFiles": [
     {
-      "basename": "未命名",
-      "path": "Meeting/未命名.md"
+      "basename": "GPU集群最佳实践",
+      "path": "Meeting/GPU集群最佳实践.md"
+    },
+    {
+      "basename": "Meeting Template",
+      "path": "Templates/Meeting/Meeting Template.md"
+    },
+    {
+      "basename": "科研心路历程与坚持长期主义科研",
+      "path": "Meeting/科研心路历程与坚持长期主义科研.md"
     },
     {
       "basename": "config and moa",
@@ -31,10 +39,6 @@
     {
       "basename": "AlphaGo",
       "path": "Papers/Mastering the game of Go with deep  neural networks and tree search/AlphaGo.md"
-    },
-    {
-      "basename": "科研心路历程与坚持长期主义科研",
-      "path": "Meeting/科研心路历程与坚持长期主义科研.md"
     },
     {
       "basename": "RL vs SL",
@@ -147,10 +151,6 @@
     {
       "basename": "Advantage Alignment Algorithm",
       "path": "Meeting/Advantage Alignment Algorithm.md"
-    },
-    {
-      "basename": "Meeting Template",
-      "path": "Templates/Meeting/Meeting Template.md"
     },
     {
       "basename": "Termux Bash",

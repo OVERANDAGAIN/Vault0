@@ -209,12 +209,13 @@
       "obsidian-kanban:创建新看板": false,
       "switcher:打开快速切换": false,
       "templater-obsidian:Templater": false,
-      "transfer-latex-from-gpt:Convert LaTeX to MathJax": false,
-      "obsidian-excalidraw-plugin:新建绘图文件": false
+      "transfer-latex-from-gpt:Convert LaTeX to MathJax": false
     }
   },
   "active": "a415af7e6fbc176c",
   "lastOpenFiles": [
+    "Templates/Meeting/Meeting Template.md",
+    "Meeting/科研心路历程与坚持长期主义科研.md",
     "Meeting/GPU集群最佳实践.md",
     "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/config and moa.md",
     "Templates/Papers/paper codes.md",
@@ -223,7 +224,6 @@
     "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/HOP.md",
     "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes",
     "Papers/Mastering the game of Go with deep  neural networks and tree search/AlphaGo.md",
-    "Meeting/科研心路历程与坚持长期主义科研.md",
     "Papers/Mastering the game of Go with deep  neural networks and tree search/RL vs SL.md",
     "Papers/Mastering the game of Go with deep  neural networks and tree search/ASGD.md",
     "2024-12-12.md",
@@ -247,7 +247,6 @@
     "Papers/Proximal Learning With Opponent-Learning Awareness/Euclidean (L2) norm.md",
     "Papers/Learning to Balance Altruism and Self-interest Bas/LASE.md",
     "Papers/Learning to Balance Altruism and Self-interest Bas/w-o.md",
-    "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/图解释.md",
     "Templates/Meeting",
     "Meeting",
     "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning",

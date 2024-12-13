@@ -209,14 +209,15 @@
       "obsidian-kanban:创建新看板": false,
       "switcher:打开快速切换": false,
       "templater-obsidian:Templater": false,
-      "transfer-latex-from-gpt:Convert LaTeX to MathJax": false
+      "transfer-latex-from-gpt:Convert LaTeX to MathJax": false,
+      "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
   "active": "a415af7e6fbc176c",
   "lastOpenFiles": [
     "Templates/Meeting/Meeting Template.md",
-    "Meeting/科研心路历程与坚持长期主义科研.md",
     "Meeting/GPU集群最佳实践.md",
+    "Meeting/科研心路历程与坚持长期主义科研.md",
     "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/config and moa.md",
     "Templates/Papers/paper codes.md",
     "Templates/Papers/paper QAs.md",

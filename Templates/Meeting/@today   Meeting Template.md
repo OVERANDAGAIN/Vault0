@@ -5,7 +5,6 @@
 
 # Context
 
-
 # Innovation
 
 

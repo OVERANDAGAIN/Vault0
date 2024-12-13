@@ -22,5 +22,6 @@
   "omnisearch",
   "text-extractor",
   "nldates-obsidian",
-  "obsidian-linter"
+  "obsidian-linter",
+  "obsidian-admonition"
 ]

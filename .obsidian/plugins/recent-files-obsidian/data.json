@@ -5,6 +5,14 @@
       "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/Overall.md"
     },
     {
+      "basename": "HOP",
+      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/HOP.md"
+    },
+    {
+      "basename": "Indicator Function",
+      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/Indicator Function.md"
+    },
+    {
       "basename": "config and moa",
       "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/config and moa.md"
     },
@@ -61,10 +69,6 @@
       "path": "Templates/Meeting/@today   Meeting Template.md"
     },
     {
-      "basename": "HOP",
-      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/HOP.md"
-    },
-    {
       "basename": "ASGD",
       "path": "Papers/Mastering the game of Go with deep  neural networks and tree search/ASGD.md"
     },
@@ -107,10 +111,6 @@
     {
       "basename": "MCTS search",
       "path": "Papers/MCTS/MCTS search.md"
-    },
-    {
-      "basename": "Indicator Function",
-      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/Indicator Function.md"
     },
     {
       "basename": "Pasted image 20241211165021",

@@ -43,7 +43,7 @@ Obstacle to applying MCTS: co-player policies estimated by the opponent module c
 
 
 run MCTS for $N_{s}$ rounds:
-	sample co-players' goals on $b_{ij}(g_{j})$ 
+	sample co-players' goals on $b_{ij}(g_{j})$ : Specifically
 	time **t** at episode **K** :
 		sample goal combination $g_{-i}={\{g_{j}\ {\sim}\ b_{ij}^{K,t}(\cdot),j\neq i}$ 
 		at state $s^{ {\sim}k}$ in the MCTS tree: 

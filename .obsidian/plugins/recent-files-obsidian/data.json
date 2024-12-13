@@ -1,16 +1,20 @@
 {
   "recentFiles": [
     {
+      "basename": "HOP",
+      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/HOP.md"
+    },
+    {
+      "basename": "AlphaGo",
+      "path": "Papers/Mastering the game of Go with deep  neural networks and tree search/AlphaGo.md"
+    },
+    {
       "basename": "科研心路历程与坚持长期主义科研",
       "path": "Meeting/科研心路历程与坚持长期主义科研.md"
     },
     {
       "basename": "未命名",
       "path": "Meeting/未命名.md"
-    },
-    {
-      "basename": "AlphaGo",
-      "path": "Papers/Mastering the game of Go with deep  neural networks and tree search/AlphaGo.md"
     },
     {
       "basename": "RL vs SL",
@@ -67,10 +71,6 @@
     {
       "basename": "Pasted image 20241211165021",
       "path": "Papers/Mastering the game of Go with deep  neural networks and tree search/attchments/Pasted image 20241211165021.png"
-    },
-    {
-      "basename": "HOP",
-      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/HOP.md"
     },
     {
       "basename": "PPO",

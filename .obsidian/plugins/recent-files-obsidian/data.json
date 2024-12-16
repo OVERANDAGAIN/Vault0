@@ -1,12 +1,24 @@
 {
   "recentFiles": [
     {
-      "basename": "when Gaussian or uniform_to_be_solved",
-      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/when Gaussian or uniform_to_be_solved.md"
+      "basename": "Score Function",
+      "path": "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/Score Function.md"
+    },
+    {
+      "basename": "2024-12-16_to_be_solved",
+      "path": "2024-12-16_to_be_solved.md"
+    },
+    {
+      "basename": "SCG-repara-SF",
+      "path": "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/SCG-repara-SF.md"
     },
     {
       "basename": "Surrogate loss function",
       "path": "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/Surrogate loss function.md"
+    },
+    {
+      "basename": "when Gaussian or uniform_to_be_solved",
+      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/when Gaussian or uniform_to_be_solved.md"
     },
     {
       "basename": "公式推导Higher Order Derivatives",
@@ -113,14 +125,6 @@
       "path": "Templates/Meeting/@today   Meeting Template.md"
     },
     {
-      "basename": "SCG-repara-SF",
-      "path": "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/SCG-repara-SF.md"
-    },
-    {
-      "basename": "Score Function",
-      "path": "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/Score Function.md"
-    },
-    {
       "basename": "Backpropagation",
       "path": "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/Backpropagation.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "importlib",
       "path": "Problems/Packages/importlib.md"
-    },
-    {
-      "basename": "OOM",
-      "path": "Problems/Run/OOM.md"
     }
   ],
   "omittedPaths": [],

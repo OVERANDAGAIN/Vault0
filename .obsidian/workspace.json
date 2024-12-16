@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/when Gaussian or uniform_to_be_solved.md",
+                "file": "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/Score Function.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "when Gaussian or uniform_to_be_solved"
+              "title": "Score Function"
             }
           }
         ]
@@ -149,10 +149,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/when Gaussian or uniform_to_be_solved.md"
+                "file": "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/Score Function.md"
               },
               "icon": "lucide-list",
-              "title": "when Gaussian or uniform_to_be_solved 的大纲"
+              "title": "Score Function 的大纲"
             }
           },
           {
@@ -215,10 +215,15 @@
   },
   "active": "a415af7e6fbc176c",
   "lastOpenFiles": [
+    "2024-12-16_to_be_solved.md",
+    "From Zotero/duqueAdvantageAlignmentAlgorithms2024.md",
+    "From Zotero/zhangWeightInitializationMethods2024.md",
+    "From Zotero",
+    "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/SCG-repara-SF.md",
     "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/Surrogate loss function.md",
+    "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/when Gaussian or uniform_to_be_solved.md",
     "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/公式推导Higher Order Derivatives.md",
     "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/DiCE.md",
-    "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/when Gaussian or uniform_to_be_solved.md",
     "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/KaiMing Normalization.md",
     "Logbook/Git/Connect Failure_to be solved.md",
     "2024-12-12.md",
@@ -239,10 +244,6 @@
     "Papers/Mastering the game of Go with deep  neural networks and tree search/AlphaGo.md",
     "Papers/Mastering the game of Go with deep  neural networks and tree search/RL vs SL.md",
     "Templates/Meeting/Meeting Template.md",
-    "Templates/Papers/paper QAs.md",
-    "Templates/Papers/paper Summary.md",
-    "Templates/Papers/paper codes.md",
-    "Templates/Problems/package problems.md",
     "Meeting/attchments/12.jpg",
     "Meeting/attchments/11.jpg",
     "Meeting/attchments",
@@ -257,7 +258,6 @@
     "Meeting",
     "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning",
     "Papers/Advantage Alignment Algorithm",
-    "Papers/Proximal Learning With Opponent-Learning Awareness/QAs",
     "Problems/Run/attchments/Pasted image 20241209114444.png",
     "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/attchments/Pasted image 20241206171755.png",
     "Papers/未命名 1/DiCE-The Infinitely Differentiable Monte Carlo Es/Pasted image 20241206171218.png",

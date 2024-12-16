@@ -23,5 +23,6 @@
   "text-extractor",
   "nldates-obsidian",
   "obsidian-linter",
-  "obsidian-admonition"
+  "obsidian-admonition",
+  "obsidian-zotero-desktop-connector"
 ]

@@ -1,12 +1,20 @@
 {
   "recentFiles": [
     {
-      "basename": "env.py",
-      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/env.py.md"
+      "basename": "Indicator Function",
+      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/Indicator Function.md"
+    },
+    {
+      "basename": "ASGD",
+      "path": "Papers/Mastering the game of Go with deep  neural networks and tree search/ASGD.md"
     },
     {
       "basename": "HOP_Overall",
       "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/HOP_Overall.md"
+    },
+    {
+      "basename": "env.py",
+      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/env.py.md"
     },
     {
       "basename": "config and moa",
@@ -15,10 +23,6 @@
     {
       "basename": "HOP",
       "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/HOP.md"
-    },
-    {
-      "basename": "Indicator Function",
-      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/Indicator Function.md"
     },
     {
       "basename": "科研心路历程与坚持长期主义科研",
@@ -71,10 +75,6 @@
     {
       "basename": "@today   Meeting Template",
       "path": "Templates/Meeting/@today   Meeting Template.md"
-    },
-    {
-      "basename": "ASGD",
-      "path": "Papers/Mastering the game of Go with deep  neural networks and tree search/ASGD.md"
     },
     {
       "basename": "2024-12-12",

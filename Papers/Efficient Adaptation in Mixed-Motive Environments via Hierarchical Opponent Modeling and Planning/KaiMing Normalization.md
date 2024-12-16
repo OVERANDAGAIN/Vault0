@@ -8,7 +8,7 @@
 ## GPT_Answers
 ### **KaiMing Normalization（He Initialization）简介**
 
-**KaiMing Normalization**，又称**He Initialization**，是深度学习中常用的一种权重初始化方法，由何凯明等人于2015年提出。其设计目的是解决深层神经网络在训练时出现的梯度消失或梯度爆炸问题，从而加速训练并提高模型性能。
+**KaiMing Normalization**，又称**He Initialization**，是深度学习中常用的一种权重初始化方法，由何凯明等人于2015年提出。其设计目的是==解决深层神经网络在训练时出现的梯度消失或梯度爆炸问题==，从而加速训练并提高模型性能。
 
 ---
 
@@ -79,8 +79,130 @@
 ### **参考**
 - **论文**: "Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification" (Kaiming He et al., 2015).
 
-## Other_Answers
+## Code_Answers
+在实验中，**He Initialization（KaiMing Normalization）** 的使用方法非常简单，通常是结合深度学习框架的权重初始化函数来实现，下面具体介绍如何在常见的框架中应用这种方法。
 
+---
+
+### **1. 使用框架内置的 He Initialization**
+
+#### **1.1 PyTorch**
+在 PyTorch 中，可以直接使用 `torch.nn.init.kaiming_normal_` 或 `torch.nn.init.kaiming_uniform_`，分别对应正态分布和均匀分布的 He 初始化。
+
+##### **代码示例**
+```python
+import torch
+import torch.nn as nn
+
+# 定义一个简单的网络
+class SimpleNN(nn.Module):
+    def __init__(self):
+        super(SimpleNN, self).__init__()
+        self.fc1 = nn.Linear(128, 64)
+        self.fc2 = nn.Linear(64, 32)
+    
+    def forward(self, x):
+        x = torch.relu(self.fc1(x))
+        x = self.fc2(x)
+        return x
+
+# 实例化网络
+model = SimpleNN()
+
+# 使用 He 初始化
+def init_weights(m):
+    if isinstance(m, nn.Linear):
+        # He 正态初始化
+        nn.init.kaiming_normal_(m.weight, mode='fan_in', nonlinearity='relu')
+        # 偏置初始化为 0
+        if m.bias is not None:
+            nn.init.zeros_(m.bias)
+
+model.apply(init_weights)
+```
+
+##### **说明**
+- `mode='fan_in'`：保持前向传播的方差一致。
+- `nonlinearity='relu'`：指定激活函数为 ReLU，框架会根据此参数调整初始化的方差。
+
+---
+
+#### **1.2 TensorFlow/Keras**
+在 TensorFlow/Keras 中，`tf.keras.initializers.HeNormal` 和 `tf.keras.initializers.HeUniform` 提供了相应的初始化方法。
+
+##### **代码示例**
+```python
+from tensorflow.keras import layers, models
+from tensorflow.keras.initializers import HeNormal, HeUniform
+
+# 构建简单的模型
+model = models.Sequential([
+    layers.Dense(64, activation='relu', kernel_initializer=HeNormal(), input_shape=(128,)),
+    layers.Dense(32, activation='relu', kernel_initializer=HeUniform())
+])
+
+# 编译模型
+model.compile(optimizer='adam', loss='mse')
+```
+
+##### **说明**
+- `kernel_initializer=HeNormal()`：指定权重使用 He 正态分布初始化。
+- 直接在定义层时通过 `kernel_initializer` 参数使用。
+
+---
+
+### **2. 实验设置建议**
+1. **选择合适的激活函数**：
+   - He 初始化通常和 **ReLU** 或 **Leaky ReLU** 激活函数搭配使用，确保梯度传播过程中方差保持稳定。
+
+2. **观察训练效果**：
+   - 在实验过程中，监控损失曲线和训练收敛速度，观察 He 初始化是否加速了网络的收敛。
+
+3. **与其他初始化方法对比**：
+   - 试验不同初始化方法（如 Xavier Initialization 或随机初始化），通过对比训练时间和性能指标（如准确率、损失值），验证 He Initialization 的优越性。
+
+---
+
+### **3. 自定义实现 He Initialization**
+如果需要手动实现 He Initialization，可以使用以下代码：
+
+#### **正态分布初始化**
+$$W \sim \mathcal{N}(0, \sqrt{\frac{2}{n_{in}}})$$
+
+```python
+import torch
+
+def he_normal(tensor, fan_in):
+    std = (2.0 / fan_in) ** 0.5
+    with torch.no_grad():
+        return tensor.normal_(0, std)
+
+# 应用到权重张量
+weights = torch.empty(64, 128)  # 假设输入为 128，输出为 64
+he_normal(weights, fan_in=128)
+```
+
+#### **均匀分布初始化**
+$$W \sim U\left[-\sqrt{\frac{6}{n_{in}}}, \sqrt{\frac{6}{n_{in}}}\right]$$
+
+```python
+def he_uniform(tensor, fan_in):
+    limit = (6.0 / fan_in) ** 0.5
+    with torch.no_grad():
+        return tensor.uniform_(-limit, limit)
+
+weights = torch.empty(64, 128)
+he_uniform(weights, fan_in=128)
+```
+
+---
+
+### **总结**
+在实验中，直接使用框架内置的 He Initialization 方法最为高效，例如：
+- **PyTorch**：`nn.init.kaiming_normal_` 或 `nn.init.kaiming_uniform_`。
+- **TensorFlow/Keras**：`HeNormal` 或 `HeUniform`。
+
+手动实现也非常简单，关键是确保初始化方差符合公式 $\frac{2}{n_{in}}$。
 
 # Codes
 

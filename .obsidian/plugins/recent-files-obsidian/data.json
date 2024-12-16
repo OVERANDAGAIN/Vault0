@@ -1,8 +1,8 @@
 {
   "recentFiles": [
     {
-      "basename": "model.py",
-      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/model.py.md"
+      "basename": "KaiMing Normalization",
+      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/KaiMing Normalization.md"
     },
     {
       "basename": "when Gaussian or uniform_to_be_solved",
@@ -11,6 +11,10 @@
     {
       "basename": "2024-12-16",
       "path": "2024-12-16.md"
+    },
+    {
+      "basename": "model.py",
+      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/model.py.md"
     },
     {
       "basename": "2024-12-12",
@@ -43,10 +47,6 @@
     {
       "basename": "DiCE",
       "path": "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/DiCE.md"
-    },
-    {
-      "basename": "KaiMing Normalization",
-      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/KaiMing Normalization.md"
     },
     {
       "basename": "Connect Failure_to be solved",

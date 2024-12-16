@@ -1,12 +1,16 @@
 {
   "recentFiles": [
     {
-      "basename": "2024-12-16",
-      "path": "2024-12-16.md"
+      "basename": "model.py",
+      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/model.py.md"
     },
     {
       "basename": "when Gaussian or uniform_to_be_solved",
       "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/when Gaussian or uniform_to_be_solved.md"
+    },
+    {
+      "basename": "2024-12-16",
+      "path": "2024-12-16.md"
     },
     {
       "basename": "2024-12-12",
@@ -51,10 +55,6 @@
     {
       "basename": "Advantage Alignment Algorithm",
       "path": "Papers/Advantage Alignment Algorithm/Advantage Alignment Algorithm.md"
-    },
-    {
-      "basename": "model.py",
-      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/model.py.md"
     },
     {
       "basename": "Indicator Function",

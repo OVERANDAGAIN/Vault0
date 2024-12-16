@@ -206,6 +206,7 @@ logits = self.actor_layers(x)
 inf_mask = torch.clamp(torch.log(action_mask), FLOAT_MIN, FLOAT_MAX)
 ```
 log_mask处理[^3]
+logits-actor_layers[^4]
 - 使用 `actor_layers` 计算 logits，表示每个动作的概率。
 - 计算动作掩码的对数，并使用 `clamp` 限制值的范围，避免数值溢出。
 
@@ -213,6 +214,8 @@ log_mask处理[^3]
 self._value_out = self.critic_layers(x)
 ```
 - 使用 `critic_layers` 计算值函数的输出，存储在 `_value_out` 中。
+critic_layers[^5]
+
 
 ```python
 return (logits + inf_mask).cpu(), []
@@ -229,7 +232,7 @@ def value_function(self):
     return self._value_out.cpu()
 ```
 - 返回值函数的输出，将其移动到 CPU 上。
-
+value_function[^6]
 ### `compute_priors_and_value` 方法：
 ```python
 def compute_priors_and_value(self, obs, time):
@@ -244,6 +247,18 @@ def compute_priors_and_value(self, obs, time):
         value = value.cpu().numpy()
 
         return priors, value
+```
+```ad-note
+ 融合 Prior 和 Critic 信息
+主要逻辑：
+
+    使用 forward 方法计算 logits 和值函数。
+    对 logits 应用 softmax，得到动作概率分布。
+    返回动作概率和值函数。
+
+应用场景：
+
+    在 MCTS（蒙特卡洛树搜索）中使用动作概率（prior）指导搜索。
 ```
 - 计算给定观察值和时间步长下的先验概率和价值。
 - 通过 `forward` 方法计算 logits 和值函数输出。
@@ -275,3 +290,6 @@ def compute_priors_and_value(self, obs, time):
 [^1]: [[KaiMing Normalization]]
 [^3]: log_mask
 [^2]: forward数据流
+[^4]: actor-layers
+[^5]: critic_layers处理，``self._value_out`` 在``value_function``中返回缓存值
+[^6]: 同 5

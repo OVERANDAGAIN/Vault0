@@ -5,6 +5,46 @@
       "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/model.py.md"
     },
     {
+      "basename": "MCTS与MC的区别",
+      "path": "Papers/MCTS/MCTS与MC的区别.md"
+    },
+    {
+      "basename": "MCTS",
+      "path": "Papers/MCTS/MCTS.md"
+    },
+    {
+      "basename": "package problems",
+      "path": "Templates/Problems/package problems.md"
+    },
+    {
+      "basename": "log git",
+      "path": "Templates/Logbook/log git.md"
+    },
+    {
+      "basename": "2024-12-12",
+      "path": "2024-12-12.md"
+    },
+    {
+      "basename": "run problems",
+      "path": "Templates/Problems/run problems.md"
+    },
+    {
+      "basename": "paper codes",
+      "path": "Templates/Papers/paper codes.md"
+    },
+    {
+      "basename": "paper Summary",
+      "path": "Templates/Papers/paper Summary.md"
+    },
+    {
+      "basename": "paper QAs",
+      "path": "Templates/Papers/paper QAs.md"
+    },
+    {
+      "basename": "Meeting Template",
+      "path": "Templates/Meeting/Meeting Template.md"
+    },
+    {
       "basename": "KaiMing Normalization",
       "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/KaiMing Normalization.md"
     },
@@ -17,16 +57,8 @@
       "path": "2024-12-16.md"
     },
     {
-      "basename": "2024-12-12",
-      "path": "2024-12-12.md"
-    },
-    {
       "basename": "Euclidean (L2) norm",
       "path": "Papers/Proximal Learning With Opponent-Learning Awareness/Euclidean (L2) norm.md"
-    },
-    {
-      "basename": "run problems",
-      "path": "Templates/Problems/run problems.md"
     },
     {
       "basename": "Score Function",
@@ -93,10 +125,6 @@
       "path": "Meeting/GPU集群最佳实践.md"
     },
     {
-      "basename": "log git",
-      "path": "Templates/Logbook/log git.md"
-    },
-    {
       "basename": "AlphaGo",
       "path": "Papers/Mastering the game of Go with deep  neural networks and tree search/AlphaGo.md"
     },
@@ -105,40 +133,12 @@
       "path": "Papers/Mastering the game of Go with deep  neural networks and tree search/RL vs SL.md"
     },
     {
-      "basename": "Meeting Template",
-      "path": "Templates/Meeting/Meeting Template.md"
-    },
-    {
-      "basename": "paper QAs",
-      "path": "Templates/Papers/paper QAs.md"
-    },
-    {
-      "basename": "paper Summary",
-      "path": "Templates/Papers/paper Summary.md"
-    },
-    {
-      "basename": "paper codes",
-      "path": "Templates/Papers/paper codes.md"
-    },
-    {
-      "basename": "package problems",
-      "path": "Templates/Problems/package problems.md"
-    },
-    {
       "basename": "@today   Meeting Template",
       "path": "Templates/Meeting/@today   Meeting Template.md"
     },
     {
       "basename": "Backpropagation",
       "path": "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/Backpropagation.md"
-    },
-    {
-      "basename": "MCTS",
-      "path": "Papers/MCTS/MCTS.md"
-    },
-    {
-      "basename": "MCTS与MC的区别",
-      "path": "Papers/MCTS/MCTS与MC的区别.md"
     },
     {
       "basename": "MCTS search",
@@ -191,10 +191,6 @@
     {
       "basename": "Termux Bash",
       "path": "Logbook/Git/Termux Bash.md"
-    },
-    {
-      "basename": "HOP初运行",
-      "path": "Problems/Run/HOP初运行.md"
     }
   ],
   "omittedPaths": [],

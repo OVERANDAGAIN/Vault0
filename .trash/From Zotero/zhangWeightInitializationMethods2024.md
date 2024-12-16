@@ -1,3 +1,7 @@
+---
+创建时间: 2024-十二月-16日  星期一, 4:37:51 下午
+修改时间: 2024-十二月-16日  星期一, 6:14:17 晚上
+---
 # (2024-10-10) Weight Initialization Methods in Convolutional Neural Networks and Their Impact on Training Efficiency
 
 |   |

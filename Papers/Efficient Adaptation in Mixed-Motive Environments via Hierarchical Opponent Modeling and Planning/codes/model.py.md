@@ -1,6 +1,6 @@
 ---
 创建时间: 2024-十二月-16日  星期一, 11:46:05 中午
-修改时间: 2024-十二月-16日  星期一, 5:10:01 下午
+修改时间: 2024-十二月-16日  星期一, 6:13:00 晚上
 ---
 [[HOP_Overall]]
 
@@ -265,12 +265,13 @@ def compute_priors_and_value(self, obs, time):
 
 # FootNotes
 
-[^1]: [[KaiMing Normalization]]
-[^2]: forward数据流
 1. `observation` 和 `action_mask` 被转换为 PyTorch 张量。
 2. `observation` 经卷积层处理，提取空间特征，展平后与时间步拼接。
 3. 拼接结果通过全连接层进一步处理，生成特征表示。
 4. Actor 网络根据特征生成动作 logits，并结合掩码调整输出。
 5. Critic 网络生成状态价值，辅助策略评估。
 6. 最终返回动作 logits 和状态价值。
+
+[^1]: [[KaiMing Normalization]]
 [^3]: log_mask
+[^2]: forward数据流

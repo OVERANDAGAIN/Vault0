@@ -143,7 +143,7 @@ for m in self.modules():
 
 
 
-- [!] note[^1]
+- [!] <span style="background:#d2cbff">note</span> [^1]
 
 ### `forward` 方法：
 ```python

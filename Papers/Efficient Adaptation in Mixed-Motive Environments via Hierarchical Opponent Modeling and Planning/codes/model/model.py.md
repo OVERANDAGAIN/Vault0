@@ -282,7 +282,14 @@ def compute_priors_and_value(self, obs, time):
 #### `__init__` 方法：
 ```python
 class RLModel(RecurrentNetwork, nn.Module):
-def __init__(self, obs_space, action_space, num_outputs, model_config, name):
+    def __init__(self, obs_space, action_space, num_outputs, model_config, name):
+        nn.Module.__init__(self)
+        super().__init__(obs_space, action_space, num_outputs, model_config, name)
+        self.lstm_state_size=model_config['custom_model_config']['lstm_state_size']
+        self.input_channels=model_config['custom_model_config']['input_channels']
+        self.player_num=model_config['custom_model_config']['input_channels']-8
+        self.world_height=model_config['custom_model_config']['world_height']
+        self.world_width=model_config['custom_model_config']['world_width']class RLModel(RecurrentNetwork, nn.Module):
 ```
 
 1. **继承与初始化**：

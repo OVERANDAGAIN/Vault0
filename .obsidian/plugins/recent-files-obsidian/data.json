@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "HOP_Overall",
+      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/HOP_Overall.md"
+    },
+    {
       "basename": "env.py",
       "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/env.py.md"
     },
@@ -11,10 +15,6 @@
     {
       "basename": "ASGD",
       "path": "Papers/Mastering the game of Go with deep  neural networks and tree search/ASGD.md"
-    },
-    {
-      "basename": "HOP_Overall",
-      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/HOP_Overall.md"
     },
     {
       "basename": "config and moa",

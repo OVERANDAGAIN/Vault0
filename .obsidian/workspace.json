@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/model.py.md",
+                "file": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/model/model.py.md",
                 "mode": "source",
                 "source": false
               },
@@ -146,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/model.py.md"
+                "file": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/model/model.py.md"
               },
               "icon": "lucide-list",
               "title": "model.py 的大纲"
@@ -205,6 +205,11 @@
   },
   "active": "e8728afac7d21c46",
   "lastOpenFiles": [
+    "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/env.py.md",
+    "Templates/Papers/paper codes.md",
+    "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/model/model.py.md",
+    "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/config and moa.md",
+    "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/model",
     "From Zotero/duqueAdvantageAlignmentAlgorithms2024.md",
     "From Zotero/zhangWeightInitializationMethods2024.md",
     "Papers/MCTS/MCTS与MC的区别.md",
@@ -213,11 +218,9 @@
     "Templates/Logbook/log git.md",
     "2024-12-12.md",
     "Templates/Problems/run problems.md",
-    "Templates/Papers/paper codes.md",
     "Templates/Papers/paper Summary.md",
     "Templates/Papers/paper QAs.md",
     "Templates/Meeting/Meeting Template.md",
-    "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/model.py.md",
     "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/KaiMing Normalization.md",
     "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/when Gaussian or uniform_to_be_solved.md",
     "2024-12-16.md",
@@ -230,8 +233,6 @@
     "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/公式推导Higher Order Derivatives.md",
     "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/DiCE.md",
     "Logbook/Git/Connect Failure_to be solved.md",
-    "Papers/Advantage Alignment Algorithm/Advantage Alignment Algorithm.md",
-    "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/Indicator Function.md",
     "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/attchments/Pasted image 20241213155801.png",
     "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/attchments",
     "Meeting/attchments/12.jpg",
@@ -247,7 +248,6 @@
     "Templates/Meeting",
     "Meeting",
     "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning",
-    "Papers/Advantage Alignment Algorithm",
     "Problems/Run/attchments/Pasted image 20241209114444.png",
     "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/attchments/Pasted image 20241206171755.png",
     "Papers/未命名 1/DiCE-The Infinitely Differentiable Monte Carlo Es/Pasted image 20241206171218.png",

@@ -2,7 +2,19 @@
   "recentFiles": [
     {
       "basename": "model.py",
-      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/model.py.md"
+      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/model/model.py.md"
+    },
+    {
+      "basename": "env.py",
+      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/env.py.md"
+    },
+    {
+      "basename": "paper codes",
+      "path": "Templates/Papers/paper codes.md"
+    },
+    {
+      "basename": "config and moa",
+      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/config and moa.md"
     },
     {
       "basename": "MCTS与MC的区别",
@@ -27,10 +39,6 @@
     {
       "basename": "run problems",
       "path": "Templates/Problems/run problems.md"
-    },
-    {
-      "basename": "paper codes",
-      "path": "Templates/Papers/paper codes.md"
     },
     {
       "basename": "paper Summary",
@@ -93,20 +101,12 @@
       "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/Indicator Function.md"
     },
     {
-      "basename": "env.py",
-      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/env.py.md"
-    },
-    {
       "basename": "HOP_Overall",
       "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/HOP_Overall.md"
     },
     {
       "basename": "ASGD",
       "path": "Papers/Mastering the game of Go with deep  neural networks and tree search/ASGD.md"
-    },
-    {
-      "basename": "config and moa",
-      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/config and moa.md"
     },
     {
       "basename": "HOP",

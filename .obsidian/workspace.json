@@ -151,6 +151,33 @@
               "icon": "lucide-list",
               "title": "model.py 的大纲"
             }
+          },
+          {
+            "id": "80f2a89f33cc711a",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "69e85a90bf053c05",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "添加笔记属性"
+            }
           }
         ],
         "currentTab": 3
@@ -172,8 +199,7 @@
       "obsidian-kanban:创建新看板": false,
       "switcher:打开快速切换": false,
       "templater-obsidian:Templater": false,
-      "transfer-latex-from-gpt:Convert LaTeX to MathJax": false,
-      "obsidian-excalidraw-plugin:新建绘图文件": false
+      "transfer-latex-from-gpt:Convert LaTeX to MathJax": false
     }
   },
   "active": "e8728afac7d21c46",

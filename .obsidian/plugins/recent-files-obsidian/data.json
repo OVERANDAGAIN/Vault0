@@ -1,8 +1,36 @@
 {
   "recentFiles": [
     {
-      "basename": "未命名",
-      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/未命名.md"
+      "basename": "when Gaussian or uniform_to_be_solved",
+      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/when Gaussian or uniform_to_be_solved.md"
+    },
+    {
+      "basename": "Surrogate loss function",
+      "path": "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/Surrogate loss function.md"
+    },
+    {
+      "basename": "公式推导Higher Order Derivatives",
+      "path": "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/公式推导Higher Order Derivatives.md"
+    },
+    {
+      "basename": "DiCE",
+      "path": "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/DiCE.md"
+    },
+    {
+      "basename": "KaiMing Normalization",
+      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/KaiMing Normalization.md"
+    },
+    {
+      "basename": "Connect Failure_to be solved",
+      "path": "Logbook/Git/Connect Failure_to be solved.md"
+    },
+    {
+      "basename": "2024-12-12",
+      "path": "2024-12-12.md"
+    },
+    {
+      "basename": "Advantage Alignment Algorithm",
+      "path": "Papers/Advantage Alignment Algorithm/Advantage Alignment Algorithm.md"
     },
     {
       "basename": "model.py",
@@ -85,10 +113,6 @@
       "path": "Templates/Meeting/@today   Meeting Template.md"
     },
     {
-      "basename": "2024-12-12",
-      "path": "2024-12-12.md"
-    },
-    {
       "basename": "SCG-repara-SF",
       "path": "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/SCG-repara-SF.md"
     },
@@ -97,20 +121,8 @@
       "path": "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/Score Function.md"
     },
     {
-      "basename": "Surrogate loss function",
-      "path": "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/Surrogate loss function.md"
-    },
-    {
       "basename": "Backpropagation",
       "path": "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/Backpropagation.md"
-    },
-    {
-      "basename": "公式推导Higher Order Derivatives",
-      "path": "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/公式推导Higher Order Derivatives.md"
-    },
-    {
-      "basename": "DiCE",
-      "path": "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/DiCE.md"
     },
     {
       "basename": "MCTS",
@@ -149,10 +161,6 @@
       "path": "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/图解释.md"
     },
     {
-      "basename": "Advantage Alignment Algorithm",
-      "path": "Papers/Advantage Alignment Algorithm/Advantage Alignment Algorithm.md"
-    },
-    {
       "basename": "A Review of Cooperation in Multi-agent Learning",
       "path": "Papers/A Review of Cooperation in Multi-agent Learning/A Review of Cooperation in Multi-agent Learning.md"
     },
@@ -189,16 +197,8 @@
       "path": "Problems/Packages/importlib.md"
     },
     {
-      "basename": "Connect Failure_to be solved",
-      "path": "Logbook/Git/Connect Failure_to be solved.md"
-    },
-    {
       "basename": "OOM",
       "path": "Problems/Run/OOM.md"
-    },
-    {
-      "basename": "no pth",
-      "path": "Problems/Run/no pth.md"
     }
   ],
   "omittedPaths": [],

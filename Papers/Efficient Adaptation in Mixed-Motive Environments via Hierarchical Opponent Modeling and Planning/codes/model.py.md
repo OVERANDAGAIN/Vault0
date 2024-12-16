@@ -143,7 +143,7 @@ for m in self.modules():
 
 
 
-- [!] <span style="background:#d2cbff">note</span> [^1]
+- [!] <span style="background:#d2cbff">note</span> [^1] 
 
 ### `forward` 方法：
 ```python
@@ -205,6 +205,7 @@ x = self.flatten_layers(x)
 logits = self.actor_layers(x)
 inf_mask = torch.clamp(torch.log(action_mask), FLOAT_MIN, FLOAT_MAX)
 ```
+log_mask处理[^3]
 - 使用 `actor_layers` 计算 logits，表示每个动作的概率。
 - 计算动作掩码的对数，并使用 `clamp` 限制值的范围，避免数值溢出。
 
@@ -217,13 +218,10 @@ self._value_out = self.critic_layers(x)
 return (logits + inf_mask).cpu(), []
 ```
 - 返回计算的 logits（加上动作掩码的影响）和一个空的列表。此方法通常返回的是动作的 logits 和状态信息。
-#### Forward数据流：
-1. `observation` 和 `action_mask` 被转换为 PyTorch 张量。
-2. `observation` 经卷积层处理，提取空间特征，展平后与时间步拼接。
-3. 拼接结果通过全连接层进一步处理，生成特征表示。
-4. Actor 网络根据特征生成动作 logits，并结合掩码调整输出。
-5. Critic 网络生成状态价值，辅助策略评估。
-6. 最终返回动作 logits 和状态价值。
+
+
+#### Forward数据流：[^2]
+
 
 ### `value_function` 方法：
 ```python
@@ -268,3 +266,11 @@ def compute_priors_and_value(self, obs, time):
 # FootNotes
 
 [^1]: [[KaiMing Normalization]]
+[^2]: forward数据流
+1. `observation` 和 `action_mask` 被转换为 PyTorch 张量。
+2. `observation` 经卷积层处理，提取空间特征，展平后与时间步拼接。
+3. 拼接结果通过全连接层进一步处理，生成特征表示。
+4. Actor 网络根据特征生成动作 logits，并结合掩码调整输出。
+5. Critic 网络生成状态价值，辅助策略评估。
+6. 最终返回动作 logits 和状态价值。
+[^3]: log_mask

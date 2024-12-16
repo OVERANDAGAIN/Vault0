@@ -176,6 +176,18 @@ else:
 - 如果 `observation` 键存在，直接提取观察值和动作掩码。
 - 将其转换为 PyTorch 张量并移动到设备上，然后增加一个额外的维度（批量大小维度）。
 
+- **分支处理**：检查 `input_dict` 是否包含键 `'observation'`。
+  - 如果没有 `'observation'`，数据被认为是展平后的形式（`obs_flat`）。
+    - 动作掩码是展平数据的前 6 列。
+    - 剩余部分是输入特征，需要重新塑形为 `(batch_size, input_channels, height, width)` 的三维数据。
+  - 如果有 `'observation'`，直接使用它作为特征数据，同时提取动作掩码。
+- **数据转换**：
+  - 调用 `convert_to_tensor` 将 NumPy 数组转为 PyTorch 张量。
+  - 确保数据类型是浮点数，并且数据被放到指定设备（`CPU` 或 `GPU`）。
+- **维度处理**：
+  - 添加批次维度 (`unsqueeze`) 是为了确保输入数据符合后续层（例如卷积层）的要求。
+
+
 ```python
 time = time.to(self.device)
 ```
@@ -206,6 +218,13 @@ self._value_out = self.critic_layers(x)
 return (logits + inf_mask).cpu(), []
 ```
 - 返回计算的 logits（加上动作掩码的影响）和一个空的列表。此方法通常返回的是动作的 logits 和状态信息。
+#### Forward数据流：
+1. `observation` 和 `action_mask` 被转换为 PyTorch 张量。
+2. `observation` 经卷积层处理，提取空间特征，展平后与时间步拼接。
+3. 拼接结果通过全连接层进一步处理，生成特征表示。
+4. Actor 网络根据特征生成动作 logits，并结合掩码调整输出。
+5. Critic 网络生成状态价值，辅助策略评估。
+6. 最终返回动作 logits 和状态价值。
 
 ### `value_function` 方法：
 ```python
@@ -233,6 +252,14 @@ def compute_priors_and_value(self, obs, time):
 - 通过 `forward` 方法计算 logits 和值函数输出。
 - 使用 Softmax 函数对 logits 进行归一化，以得到每个动作的先验概率。
 - 将结果转回 CPU 并转换为 NumPy 数组，返回先验概率和价值。
+
+
+
+---
+
+
+
+
 
 
 ## RLModel_Answers

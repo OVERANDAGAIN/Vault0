@@ -141,11 +141,9 @@ for m in self.modules():
 ```
 - 对模型中的每个卷积层和全连接层进行 He 初始化，以提高模型的训练效率。
 
-```ad-caution
-```
-[[KaiMing Normalization]]
 
 
+- [!] note[^1]
 
 ### `forward` 方法：
 ```python
@@ -260,7 +258,13 @@ def compute_priors_and_value(self, obs, time):
 
 
 
-
-
-
 ## RLModel_Answers
+
+
+
+
+
+
+# FootNotes
+
+[^1]: [[KaiMing Normalization]]

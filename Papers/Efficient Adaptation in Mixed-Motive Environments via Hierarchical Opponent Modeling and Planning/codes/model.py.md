@@ -144,7 +144,8 @@ for m in self.modules():
 ```ad-caution
 ```
 [[KaiMing Normalization]]
-d^[1]da 
+
+
 
 ### `forward` 方法：
 ```python
@@ -263,5 +264,3 @@ def compute_priors_and_value(self, obs, time):
 
 
 ## RLModel_Answers
-
-^[1]:241

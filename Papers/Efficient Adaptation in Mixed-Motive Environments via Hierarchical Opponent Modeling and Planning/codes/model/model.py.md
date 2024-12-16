@@ -281,6 +281,7 @@ def compute_priors_and_value(self, obs, time):
 ### **初始化方法**
 #### `__init__` 方法：
 ```python
+class RLModel(RecurrentNetwork, nn.Module):
 def __init__(self, obs_space, action_space, num_outputs, model_config, name):
 ```
 

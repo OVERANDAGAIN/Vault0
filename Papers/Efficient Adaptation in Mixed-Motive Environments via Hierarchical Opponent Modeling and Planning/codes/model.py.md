@@ -1,6 +1,6 @@
 ---
 创建时间: 2024-十二月-16日  星期一, 11:46:05 中午
-修改时间: 2024-十二月-16日  星期一, 5:08:36 下午
+修改时间: 2024-十二月-16日  星期一, 5:10:01 下午
 ---
 [[HOP_Overall]]
 
@@ -141,9 +141,10 @@ for m in self.modules():
 ```
 - 对模型中的每个卷积层和全连接层进行 He 初始化，以提高模型的训练效率。
 
-```ad-question
-[[KaiMing Normalization]]
+```ad-caution
 ```
+[[KaiMing Normalization]]
+
 
 ### `forward` 方法：
 ```python

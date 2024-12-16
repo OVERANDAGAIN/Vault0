@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/KaiMing Normalization.md",
+                "file": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/model.py.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "KaiMing Normalization"
+              "title": "model.py"
             }
           }
         ]
@@ -103,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/KaiMing Normalization.md",
+                "file": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/model.py.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +113,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "KaiMing Normalization 的反向链接列表"
+              "title": "model.py 的反向链接列表"
             }
           },
           {
@@ -132,12 +132,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/KaiMing Normalization.md",
+                "file": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/model.py.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "KaiMing Normalization 的出链列表"
+              "title": "model.py 的出链列表"
             }
           },
           {
@@ -146,47 +146,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/KaiMing Normalization.md"
+                "file": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/model.py.md"
               },
               "icon": "lucide-list",
-              "title": "KaiMing Normalization 的大纲"
-            }
-          },
-          {
-            "id": "4a0be767cbd8c2be",
-            "type": "leaf",
-            "state": {
-              "type": "git-view",
-              "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
-            }
-          },
-          {
-            "id": "99a7cbf70550f533",
-            "type": "leaf",
-            "state": {
-              "type": "tag",
-              "state": {
-                "sortOrder": "frequency",
-                "useHierarchy": true
-              },
-              "icon": "lucide-tags",
-              "title": "标签"
-            }
-          },
-          {
-            "id": "92c1eebfcb0431d1",
-            "type": "leaf",
-            "state": {
-              "type": "all-properties",
-              "state": {
-                "sortOrder": "frequency",
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-archive",
-              "title": "添加笔记属性"
+              "title": "model.py 的大纲"
             }
           }
         ]
@@ -212,12 +175,12 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "9f39ad243124278a",
+  "active": "e8728afac7d21c46",
   "lastOpenFiles": [
-    "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/when Gaussian or uniform_to_be_solved.md",
-    "2024-12-16.md",
     "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/KaiMing Normalization.md",
+    "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/when Gaussian or uniform_to_be_solved.md",
     "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/model.py.md",
+    "2024-12-16.md",
     "未命名看板.md",
     "2024-12-12.md",
     "Papers/Proximal Learning With Opponent-Learning Awareness/Euclidean (L2) norm.md",

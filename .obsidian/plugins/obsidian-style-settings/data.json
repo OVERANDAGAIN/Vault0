@@ -1,3 +1,13 @@
 {
-  "blue-topaz-theme@@file-line-width": 47
+  "blue-topaz-theme@@file-line-width": 49,
+  "Blue-Topaz-Codebox-Highlight@@code-line-number": true,
+  "blue-topaz-theme@@bt-status-on": false,
+  "blue-topaz-theme@@scrollbar-style-option": "default-scrollbar",
+  "blue-topaz-theme@@layout-style-options": "layout-style-options-default",
+  "blue-topaz-theme@@toggle-left-aligned-content": false,
+  "blue-topaz-theme@@title-justify-start": false,
+  "blue-topaz-theme@@highlight-style": "all-rounded-corners-highlight",
+  "blue-topaz-theme@@popover-width-factor": 1.5,
+  "blue-topaz-theme@@full-width-callout": false,
+  "Blue-Topaz-Codebox-Highlight@@blur-codebox-frosted-glass": 8
 }

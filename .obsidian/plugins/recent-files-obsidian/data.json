@@ -1,12 +1,28 @@
 {
   "recentFiles": [
     {
-      "basename": "Score Function",
-      "path": "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/Score Function.md"
+      "basename": "2024-12-16",
+      "path": "2024-12-16.md"
     },
     {
-      "basename": "2024-12-16_to_be_solved",
-      "path": "2024-12-16_to_be_solved.md"
+      "basename": "when Gaussian or uniform_to_be_solved",
+      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/when Gaussian or uniform_to_be_solved.md"
+    },
+    {
+      "basename": "2024-12-12",
+      "path": "2024-12-12.md"
+    },
+    {
+      "basename": "Euclidean (L2) norm",
+      "path": "Papers/Proximal Learning With Opponent-Learning Awareness/Euclidean (L2) norm.md"
+    },
+    {
+      "basename": "run problems",
+      "path": "Templates/Problems/run problems.md"
+    },
+    {
+      "basename": "Score Function",
+      "path": "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/Score Function.md"
     },
     {
       "basename": "SCG-repara-SF",
@@ -15,10 +31,6 @@
     {
       "basename": "Surrogate loss function",
       "path": "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/Surrogate loss function.md"
-    },
-    {
-      "basename": "when Gaussian or uniform_to_be_solved",
-      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/when Gaussian or uniform_to_be_solved.md"
     },
     {
       "basename": "公式推导Higher Order Derivatives",
@@ -35,10 +47,6 @@
     {
       "basename": "Connect Failure_to be solved",
       "path": "Logbook/Git/Connect Failure_to be solved.md"
-    },
-    {
-      "basename": "2024-12-12",
-      "path": "2024-12-12.md"
     },
     {
       "basename": "Advantage Alignment Algorithm",
@@ -117,10 +125,6 @@
       "path": "Templates/Problems/package problems.md"
     },
     {
-      "basename": "run problems",
-      "path": "Templates/Problems/run problems.md"
-    },
-    {
       "basename": "@today   Meeting Template",
       "path": "Templates/Meeting/@today   Meeting Template.md"
     },
@@ -147,10 +151,6 @@
     {
       "basename": "PPO",
       "path": "Papers/Proximal Learning With Opponent-Learning Awareness/PPO.md"
-    },
-    {
-      "basename": "Euclidean (L2) norm",
-      "path": "Papers/Proximal Learning With Opponent-Learning Awareness/Euclidean (L2) norm.md"
     },
     {
       "basename": "LASE",

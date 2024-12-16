@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/Score Function.md",
+                "file": "2024-12-16.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Score Function"
+              "title": "2024-12-16"
             }
           }
         ]
@@ -98,6 +98,16 @@
         "type": "tabs",
         "children": [
           {
+            "id": "ea1259bb80db6406",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
+            }
+          },
+          {
             "id": "9f39ad243124278a",
             "type": "leaf",
             "state": {
@@ -131,6 +141,18 @@
             }
           },
           {
+            "id": "754879504499e87e",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "2024-12-16.md"
+              },
+              "icon": "lucide-list",
+              "title": "2024-12-16 的大纲"
+            }
+          },
+          {
             "id": "99a7cbf70550f533",
             "type": "leaf",
             "state": {
@@ -141,18 +163,6 @@
               },
               "icon": "lucide-tags",
               "title": "标签"
-            }
-          },
-          {
-            "id": "754879504499e87e",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/Score Function.md"
-              },
-              "icon": "lucide-list",
-              "title": "Score Function 的大纲"
             }
           },
           {
@@ -170,16 +180,6 @@
             }
           },
           {
-            "id": "ea1259bb80db6406",
-            "type": "leaf",
-            "state": {
-              "type": "calendar",
-              "state": {},
-              "icon": "calendar-with-checkmark",
-              "title": "Calendar"
-            }
-          },
-          {
             "id": "4a0be767cbd8c2be",
             "type": "leaf",
             "state": {
@@ -190,11 +190,11 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 292.5
+    "width": 375.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -213,20 +213,23 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "a415af7e6fbc176c",
+  "active": "99a7cbf70550f533",
   "lastOpenFiles": [
-    "2024-12-16_to_be_solved.md",
+    "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/when Gaussian or uniform_to_be_solved.md",
+    "2024-12-12.md",
+    "Papers/Proximal Learning With Opponent-Learning Awareness/Euclidean (L2) norm.md",
+    "2024-12-16.md",
+    "Templates/Problems/run problems.md",
+    "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/Score Function.md",
     "From Zotero/duqueAdvantageAlignmentAlgorithms2024.md",
     "From Zotero/zhangWeightInitializationMethods2024.md",
     "From Zotero",
     "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/SCG-repara-SF.md",
     "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/Surrogate loss function.md",
-    "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/when Gaussian or uniform_to_be_solved.md",
     "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/公式推导Higher Order Derivatives.md",
     "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/DiCE.md",
     "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/KaiMing Normalization.md",
     "Logbook/Git/Connect Failure_to be solved.md",
-    "2024-12-12.md",
     "Papers/Advantage Alignment Algorithm/Advantage Alignment Algorithm.md",
     "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/model.py.md",
     "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/Indicator Function.md",
@@ -241,9 +244,6 @@
     "Meeting/Advantage Alignment Algorithm.md",
     "Meeting/GPU集群最佳实践.md",
     "Templates/Logbook/log git.md",
-    "Papers/Mastering the game of Go with deep  neural networks and tree search/AlphaGo.md",
-    "Papers/Mastering the game of Go with deep  neural networks and tree search/RL vs SL.md",
-    "Templates/Meeting/Meeting Template.md",
     "Meeting/attchments/12.jpg",
     "Meeting/attchments/11.jpg",
     "Meeting/attchments",

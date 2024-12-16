@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "env.py",
+      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/env.py.md"
+    },
+    {
       "basename": "Indicator Function",
       "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/Indicator Function.md"
     },
@@ -11,10 +15,6 @@
     {
       "basename": "HOP_Overall",
       "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/HOP_Overall.md"
-    },
-    {
-      "basename": "env.py",
-      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/env.py.md"
     },
     {
       "basename": "config and moa",

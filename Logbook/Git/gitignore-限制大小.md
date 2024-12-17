@@ -5,7 +5,7 @@
  - 记录鼠标位置
  - recent files
 Linter中的yaml每次退出文件格式化修改时间信息
-插件，猜想可能会导致频繁的==commit鼠标位置和时间这==些对笔记内容无意义的信息。
+插件，猜想可能会导致频繁的==commit鼠标位置和时间这==些对笔记==内容无意义的==信息。
 
 因此准备卸载 $\Longrightarrow$ 解决部分
 然而，还有plugins/workspaces.json 下的这些内容也会随着每次push而改变

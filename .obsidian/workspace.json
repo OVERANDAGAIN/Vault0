@@ -82,8 +82,7 @@
               "title": "插件不再活动"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
@@ -172,11 +171,10 @@
       "obsidian-kanban:创建新看板": false,
       "switcher:打开快速切换": false,
       "templater-obsidian:Templater": false,
-      "transfer-latex-from-gpt:Convert LaTeX to MathJax": false,
-      "obsidian-excalidraw-plugin:新建绘图文件": false
+      "transfer-latex-from-gpt:Convert LaTeX to MathJax": false
     }
   },
-  "active": "429d3a7439afb0cd",
+  "active": "76680d06691bde68",
   "lastOpenFiles": [
     "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/KaiMing Normalization.md",
     "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/HOP_Overall.md",

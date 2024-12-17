@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/model/model.py.md",
+                "file": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/model/moa_model_relative.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "model.py"
+              "title": "moa_model_relative"
             }
           }
         ]
@@ -209,14 +209,17 @@
       "obsidian-kanban:创建新看板": false,
       "switcher:打开快速切换": false,
       "templater-obsidian:Templater": false,
-      "transfer-latex-from-gpt:Convert LaTeX to MathJax": false
+      "transfer-latex-from-gpt:Convert LaTeX to MathJax": false,
+      "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
   "active": "e8728afac7d21c46",
   "lastOpenFiles": [
+    "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/HOP_Overall.md",
+    "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/model/moa_model_relative.md",
     "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/env.py.md",
-    "Templates/Papers/paper codes.md",
     "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/model/model.py.md",
+    "Templates/Papers/paper codes.md",
     "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/config and moa.md",
     "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/model",
     "From Zotero/duqueAdvantageAlignmentAlgorithms2024.md",
@@ -240,8 +243,6 @@
     "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/SCG-repara-SF.md",
     "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/Surrogate loss function.md",
     "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/公式推导Higher Order Derivatives.md",
-    "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/DiCE.md",
-    "Logbook/Git/Connect Failure_to be solved.md",
     "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/attchments/Pasted image 20241213155801.png",
     "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/attchments",
     "Meeting/attchments/12.jpg",

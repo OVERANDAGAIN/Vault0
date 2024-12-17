@@ -43,7 +43,8 @@ cond_action = F.one_hot(cond_action, self.action_num + 1)
 
 例如：
 - 假设 `self.action_num = 5`，动作索引为 `2`，对应的 One-Hot 编码是 `[0, 0, 1, 0, 0, 0]`（长度 `6 = action_num + 1`）。
-
+```ad-check
+```
 ---
 
 ### **为什么要使用 One-Hot 编码？**

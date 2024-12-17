@@ -48,16 +48,6 @@
             }
           },
           {
-            "id": "c3877aeb7d2eff81",
-            "type": "leaf",
-            "state": {
-              "type": "recent-files",
-              "state": {},
-              "icon": "clock",
-              "title": "Recent Files"
-            }
-          },
-          {
             "id": "f74cd063820911a2",
             "type": "leaf",
             "state": {
@@ -92,7 +82,8 @@
               "title": "插件不再活动"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -181,10 +172,11 @@
       "obsidian-kanban:创建新看板": false,
       "switcher:打开快速切换": false,
       "templater-obsidian:Templater": false,
-      "transfer-latex-from-gpt:Convert LaTeX to MathJax": false
+      "transfer-latex-from-gpt:Convert LaTeX to MathJax": false,
+      "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "ead69d9e3b879d74",
+  "active": "429d3a7439afb0cd",
   "lastOpenFiles": [
     "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/KaiMing Normalization.md",
     "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/HOP_Overall.md",

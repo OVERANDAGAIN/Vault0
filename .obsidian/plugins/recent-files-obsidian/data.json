@@ -5,6 +5,10 @@
       "path": "Papers/Social Influence as Intrinsic Motivation for Multi-Agent Deep Reinforcement Learning/未命名.md"
     },
     {
+      "basename": "paper Summary",
+      "path": "Templates/Papers/paper Summary.md"
+    },
+    {
       "basename": "when Gaussian or uniform_to_be_solved",
       "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/when Gaussian or uniform_to_be_solved.md"
     },
@@ -75,10 +79,6 @@
     {
       "basename": "run problems",
       "path": "Templates/Problems/run problems.md"
-    },
-    {
-      "basename": "paper Summary",
-      "path": "Templates/Papers/paper Summary.md"
     },
     {
       "basename": "paper QAs",

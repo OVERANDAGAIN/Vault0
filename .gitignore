@@ -1,0 +1,3 @@
+# 忽略 .obsidian 目录下的 workspace 和 workspaces 状态文件
+.obsidian/workspace.json
+.obsidian/workspaces.json

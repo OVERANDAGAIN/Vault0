@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "未命名",
+      "path": "Papers/Social Influence as Intrinsic Motivation for Multi-Agent Deep Reinforcement Learning/未命名.md"
+    },
+    {
+      "basename": "when Gaussian or uniform_to_be_solved",
+      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/when Gaussian or uniform_to_be_solved.md"
+    },
+    {
       "basename": "social_inf_model",
       "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/model/social_inf_model.md"
     },
@@ -79,10 +87,6 @@
     {
       "basename": "Meeting Template",
       "path": "Templates/Meeting/Meeting Template.md"
-    },
-    {
-      "basename": "when Gaussian or uniform_to_be_solved",
-      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/when Gaussian or uniform_to_be_solved.md"
     },
     {
       "basename": "Euclidean (L2) norm",
@@ -195,10 +199,6 @@
     {
       "basename": "Arrow’s Theorem",
       "path": "Papers/A Review of Cooperation in Multi-agent Learning/Arrow’s Theorem.md"
-    },
-    {
-      "basename": "Hanabi",
-      "path": "Papers/A Review of Cooperation in Multi-agent Learning/Hanabi.md"
     }
   ],
   "omittedPaths": [],

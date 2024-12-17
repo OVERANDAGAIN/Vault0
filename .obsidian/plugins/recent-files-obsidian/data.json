@@ -1,6 +1,30 @@
 {
   "recentFiles": [
     {
+      "basename": "moa_model_relative",
+      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/model/moa_model_relative.md"
+    },
+    {
+      "basename": "social_inf_model",
+      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/model/social_inf_model.md"
+    },
+    {
+      "basename": "env.py",
+      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/env.py.md"
+    },
+    {
+      "basename": "model.py",
+      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/model/model.py.md"
+    },
+    {
+      "basename": "HOP_Overall",
+      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/HOP_Overall.md"
+    },
+    {
+      "basename": "KaiMing Normalization",
+      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/KaiMing Normalization.md"
+    },
+    {
       "basename": "未命名",
       "path": "Papers/Social Influence as Intrinsic Motivation for Multi-Agent Deep Reinforcement Learning/未命名.md"
     },
@@ -11,10 +35,6 @@
     {
       "basename": "when Gaussian or uniform_to_be_solved",
       "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/when Gaussian or uniform_to_be_solved.md"
-    },
-    {
-      "basename": "social_inf_model",
-      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/model/social_inf_model.md"
     },
     {
       "basename": "one-hot",
@@ -29,28 +49,8 @@
       "path": "2024-12-16.md"
     },
     {
-      "basename": "KaiMing Normalization",
-      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/KaiMing Normalization.md"
-    },
-    {
-      "basename": "moa_model_relative",
-      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/model/moa_model_relative.md"
-    },
-    {
-      "basename": "HOP_Overall",
-      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/HOP_Overall.md"
-    },
-    {
-      "basename": "model.py",
-      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/model/model.py.md"
-    },
-    {
       "basename": "2024-12-17",
       "path": "2024-12-17.md"
-    },
-    {
-      "basename": "env.py",
-      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/env.py.md"
     },
     {
       "basename": "paper codes",

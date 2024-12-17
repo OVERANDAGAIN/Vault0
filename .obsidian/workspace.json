@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Papers/Social Influence as Intrinsic Motivation for Multi-Agent Deep Reinforcement Learning/未命名.md",
+                "file": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/model/moa_model_relative.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "未命名"
+              "title": "moa_model_relative"
             }
           }
         ]
@@ -122,12 +122,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Papers/Social Influence as Intrinsic Motivation for Multi-Agent Deep Reinforcement Learning/未命名.md",
+                "file": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/model/moa_model_relative.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "未命名 的出链列表"
+              "title": "moa_model_relative 的出链列表"
             }
           },
           {
@@ -136,10 +136,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Papers/Social Influence as Intrinsic Motivation for Multi-Agent Deep Reinforcement Learning/未命名.md"
+                "file": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/model/moa_model_relative.md"
               },
               "icon": "lucide-list",
-              "title": "未命名 的大纲"
+              "title": "moa_model_relative 的大纲"
             }
           },
           {
@@ -148,7 +148,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Papers/Social Influence as Intrinsic Motivation for Multi-Agent Deep Reinforcement Learning/未命名.md",
+                "file": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/model/moa_model_relative.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -158,7 +158,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "未命名 的反向链接列表"
+              "title": "moa_model_relative 的反向链接列表"
             }
           }
         ],
@@ -188,20 +188,20 @@
   },
   "active": "ead69d9e3b879d74",
   "lastOpenFiles": [
-    "Templates/Papers/paper Summary.md",
-    "Papers/Social Influence as Intrinsic Motivation for Multi-Agent Deep Reinforcement Learning/未命名.md",
-    "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/when Gaussian or uniform_to_be_solved.md",
     "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/model/social_inf_model.md",
+    "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/env.py.md",
+    "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/model/moa_model_relative.md",
+    "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/model/model.py.md",
+    "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/HOP_Overall.md",
+    "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/KaiMing Normalization.md",
+    "Papers/Social Influence as Intrinsic Motivation for Multi-Agent Deep Reinforcement Learning/未命名.md",
+    "Templates/Papers/paper Summary.md",
+    "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/when Gaussian or uniform_to_be_solved.md",
     "Papers/Social Influence as Intrinsic Motivation for Multi-Agent Deep Reinforcement Learning",
     "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/one-hot.md",
     "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/config and moa.md",
     "2024-12-16.md",
-    "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/KaiMing Normalization.md",
-    "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/model/moa_model_relative.md",
-    "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/HOP_Overall.md",
-    "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/model/model.py.md",
     "2024-12-17.md",
-    "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/env.py.md",
     "Templates/Papers/paper codes.md",
     "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/model",
     "From Zotero/duqueAdvantageAlignmentAlgorithms2024.md",

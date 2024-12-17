@@ -124,7 +124,7 @@ for _ in range(self.player_num - 1):
         ).to(self.device)
     )
 ```
-- **功能**：为每个其他智能体单独建模，预测其动作分布。
+- **功能**：<span style="background:#d2cbff">为每个其他智能体单独建模</span>，预测其动作分布。
 - **结构**：
    - 输入：卷积特征和其他智能体动作的 one-hot 编码。
    - 输出：其他智能体的动作概率分布。

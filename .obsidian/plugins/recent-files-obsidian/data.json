@@ -1,12 +1,12 @@
 {
   "recentFiles": [
     {
-      "basename": "social_inf_model",
-      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/model/social_inf_model.md"
-    },
-    {
       "basename": "one-hot",
       "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/one-hot.md"
+    },
+    {
+      "basename": "social_inf_model",
+      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/model/social_inf_model.md"
     },
     {
       "basename": "config and moa",

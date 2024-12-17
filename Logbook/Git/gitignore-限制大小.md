@@ -1,3 +1,6 @@
+---
+创建时间: 2024-十二月-17日  星期二, 6:20:23 晚上
+---
 #log_git 
 
 # Questions
@@ -12,7 +15,7 @@ Linter中的yaml每次退出文件格式化修改时间信息
 然而，还有plugins/workspaces.json 下的这些内容也会随着每次push而改变
 
 # Answers
-使用.gitignore 忽略 workspace.jso
+==使用.gitignore 忽略 workspace.json等文件==。
 
 .obsidian配置文件说明[^1]
 

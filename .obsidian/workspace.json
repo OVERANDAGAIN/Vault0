@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/one-hot.md",
+                "file": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/model/social_inf_model.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "one-hot"
+              "title": "social_inf_model"
             }
           }
         ]
@@ -123,10 +123,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/one-hot.md"
+                "file": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/model/social_inf_model.md"
               },
               "icon": "lucide-list",
-              "title": "one-hot 的大纲"
+              "title": "social_inf_model 的大纲"
             }
           },
           {
@@ -135,7 +135,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/one-hot.md",
+                "file": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/model/social_inf_model.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -145,7 +145,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "one-hot 的反向链接列表"
+              "title": "social_inf_model 的反向链接列表"
             }
           }
         ],
@@ -175,8 +175,8 @@
   },
   "active": "e8728afac7d21c46",
   "lastOpenFiles": [
-    "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/model/social_inf_model.md",
     "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/one-hot.md",
+    "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/model/social_inf_model.md",
     "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/config and moa.md",
     "2024-12-16.md",
     "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/KaiMing Normalization.md",

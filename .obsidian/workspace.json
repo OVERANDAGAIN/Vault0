@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Papers/Social Influence as Intrinsic Motivation for Multi-Agent Deep Reinforcement Learning/未命名.md",
+                "file": "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/SCG-repara-SF.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "未命名"
+              "title": "SCG-repara-SF"
             }
           }
         ]
@@ -126,10 +126,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Papers/Social Influence as Intrinsic Motivation for Multi-Agent Deep Reinforcement Learning/未命名.md"
+                "file": "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/SCG-repara-SF.md"
               },
               "icon": "lucide-list",
-              "title": "未命名 的大纲"
+              "title": "SCG-repara-SF 的大纲"
             }
           },
           {
@@ -174,15 +174,18 @@
       "transfer-latex-from-gpt:Convert LaTeX to MathJax": false
     }
   },
-  "active": "76680d06691bde68",
+  "active": "ead69d9e3b879d74",
   "lastOpenFiles": [
+    "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/Surrogate loss function.md",
+    "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/公式推导Higher Order Derivatives.md",
+    "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/Score Function.md",
+    "Papers/Social Influence as Intrinsic Motivation for Multi-Agent Deep Reinforcement Learning/未命名.md",
     "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/KaiMing Normalization.md",
     "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/HOP_Overall.md",
     "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/model/model.py.md",
     "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/model/moa_model_relative.md",
     "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/model/social_inf_model.md",
     "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/env.py.md",
-    "Papers/Social Influence as Intrinsic Motivation for Multi-Agent Deep Reinforcement Learning/未命名.md",
     "Templates/Papers/paper Summary.md",
     "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/when Gaussian or uniform_to_be_solved.md",
     "Papers/Social Influence as Intrinsic Motivation for Multi-Agent Deep Reinforcement Learning",
@@ -201,9 +204,6 @@
     "2024-12-12.md",
     "Templates/Problems/run problems.md",
     "Templates/Papers/paper QAs.md",
-    "Templates/Meeting/Meeting Template.md",
-    "未命名看板.md",
-    "Papers/Proximal Learning With Opponent-Learning Awareness/Euclidean (L2) norm.md",
     "From Zotero",
     "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/attchments/Pasted image 20241213155801.png",
     "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/attchments",

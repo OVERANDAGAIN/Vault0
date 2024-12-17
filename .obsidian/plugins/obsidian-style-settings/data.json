@@ -10,7 +10,9 @@
   "blue-topaz-theme@@popover-width-factor": 1.5,
   "blue-topaz-theme@@full-width-callout": false,
   "Blue-Topaz-Codebox-Highlight@@blur-codebox-frosted-glass": 8,
-  "blue-topaz-theme@@text-highlight@@light": "#1224C3",
+  "blue-topaz-theme@@text-highlight@@light": "#0825A7",
   "blue-topaz-theme@@text-highlight@@dark": "#6676DA",
-  "blue-topaz-theme@@text-highlight-bg-h-light": 305
+  "blue-topaz-theme@@text-highlight-bg-h-light": 360,
+  "blue-topaz-theme@@text-highlight-bg-a-light": 0.85,
+  "blue-topaz-theme@@text-highlight-bg-l-light": 90
 }

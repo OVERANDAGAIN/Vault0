@@ -1,6 +1,22 @@
 {
   "recentFiles": [
     {
+      "basename": "未命名",
+      "path": "Papers/Social Influence as Intrinsic Motivation for Multi-Agent Deep Reinforcement Learning/未命名.md"
+    },
+    {
+      "basename": "KaiMing Normalization",
+      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/KaiMing Normalization.md"
+    },
+    {
+      "basename": "HOP_Overall",
+      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/HOP_Overall.md"
+    },
+    {
+      "basename": "model.py",
+      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/model/model.py.md"
+    },
+    {
       "basename": "moa_model_relative",
       "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/model/moa_model_relative.md"
     },
@@ -11,22 +27,6 @@
     {
       "basename": "env.py",
       "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/env.py.md"
-    },
-    {
-      "basename": "model.py",
-      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/model/model.py.md"
-    },
-    {
-      "basename": "HOP_Overall",
-      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/HOP_Overall.md"
-    },
-    {
-      "basename": "KaiMing Normalization",
-      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/KaiMing Normalization.md"
-    },
-    {
-      "basename": "未命名",
-      "path": "Papers/Social Influence as Intrinsic Motivation for Multi-Agent Deep Reinforcement Learning/未命名.md"
     },
     {
       "basename": "paper Summary",

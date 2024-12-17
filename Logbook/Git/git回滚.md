@@ -1,7 +1,15 @@
 #log_git 
 
 # Questions
+想要显示更多种类的无序列表时：
+
 [PKMer\_Obsidian 样式：标题&列表&图片美化 CSS](https://pkmer.cn/Pkmer-Docs/10-obsidian/obsidian%E5%A4%96%E8%A7%82/css-%E7%89%87%E6%AE%B5/obsidian%E6%A0%B7%E5%BC%8F-%E6%A0%87%E9%A2%98-%E5%88%97%E8%A1%A8-%E5%9B%BE%E7%89%87%E7%BE%8E%E5%8C%96/)
+
+```ad-danger
+该CSS对引用、脚注内容产生影响：包括顺序错乱、内容缺失等。
+```
+
+
 ```css
 /* 对引用进行设计 */
 blockquote {
@@ -20,103 +28,24 @@ blockquote {
      border-radius: 2px; /* 可选：为背景添加圆角 */
  }
  
-/* 标题1设计，左侧边，居中，红色背景*/
- h1 {
-  color: black!important;
-   margin-bottom: 2em;
-   margin-right: 5px;
-   padding: 8px 15px;
-   letter-spacing: 2px;
-    /* 保持文字颜色为纯白色 */
-   border-left: 10px solid rgba(240,19,19,0.5); /* 可以根据需要调整边框颜色 */
-   background:rgba(240,19,19, 0.25);
-   border-radius: 5px;
-   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* 文字阴影，增强对比 */
-   box-shadow: 1px 1px 2px rgba(51, 51, 51, 0.5); /* 盒子阴影，可根据需要调整 */
-   text-align: center;
- }
- 
-/* 标题2设计，左侧边，居中，绿色背景*/
- h2 {
-  color: black!important;
-   margin-bottom: 2em;
-   margin-right: 5px;
-   padding: 8px 15px;
-   letter-spacing: 2px;
-    /* 保持文字颜色为纯白色 */
-   border-left: 10px solid rgba(102, 204, 153,0.5); /* 可以根据需要调整边框颜色 */
-    background:rgba(102, 204, 153, 0.25);
-   border-radius: 5px;
-   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* 文字阴影，增强对比 */
-   box-shadow: 1px 1px 2px rgba(51, 51, 51, 0.5); /* 盒子阴影，可根据需要调整 */
-   text-align: center;
- }
- 
-  /* 图片设计，左侧边，居中，绿色背景*/
-img{
-  max-width:400px !important;
-  width: auto; /* 对于其他图片保持原始宽度 */
-  height: auto; /* 保持图片的高宽比 */
-  border: 3px solid #a8d08d; /* 边框颜色和宽度 */
-  padding: 0px; /* 边框内的填充 */
-  background-color: white; /* 边框内部的背景颜色 */
-  display: block;
-  margin: 16px auto; /* 图片上下的间距，并在页面中居中显示 */
-  box-shadow: 0px 0px 8px rgba(0,0,0,0.2); /* 阴影效果 */
-  border-radius: 15px; /* 边框圆角 */
-}
 
-  /* 总体的边框设计，有序和无序的样式*/  
-ol {
-  list-style-type: decimal;
-  border-left: 5px solid #a8d08d; /* 设置边框，这里使用浅绿色 */
-  border-radius: 10px; /* 圆角边框 */
-  text-indent: -5px;
-}
-ul {
-  border-radius: 10px; /* 圆角边框 */
-  border-left: 5px solid #a8d08d; /* 设置边框，这里使用浅绿色 */
-}
-/* 去除第二级有序列表项的底部边框 */
-ul > li >ul > li ,
-ol > li >ol > li,
-ul > li >ul > li li,
-ol > li >ul > li li
-{
-border-bottom: none;
-border-left: none;
-padding-bottom: 0px;
-margin-left: 0px;
-}
-/* 先加上所有的分割线*/
-ol > li:not(:last-child):not(li ol > li) {
-border-bottom: 3px solid #ccc;
-padding-bottom: 10px;
-margin-bottom: 5px;
-padding-top: 10px;
-}
-/*先加上所有的分割线 */
-ul > li:not(:last-child):not(li ul > li) {
-border-bottom: 3px solid #ccc;
-padding-bottom: 20px;
-margin-bottom: 5px;
-margin-top: 5px;
-padding-top: 10px;
-}
-/*为第二级及以下的列表项去除边框 */
-ul li ul, ol li ol, 
-ul li ol, ol li ul ,
-ul li ul li ul,ul ul ul ul ul,
-ol ol ol,ol ol ol ol{
-border: none;
-padding-left: 0;
-margin-left: 0;
-font-size: 17px;
-}
 ```
 
 
 # Answers
+
+使用：[^1]
+```bash
+git reset --hard commit号
+```
+
+
+没有使用：
+```bash
+git revert -n (版本号)
+```
+因为，这里可能会出现冲突，那么需要手动修改冲突的文件。
+to_be_solved:如何处理冲突。
 
 
 ## GPT_Answers
@@ -134,3 +63,5 @@ font-size: 17px;
 
 
 # FootNotes
+
+[^1]: [GIT回退到指定版本的两种方法（reset/revert） - 何苦-\> - 博客园](https://www.cnblogs.com/fuqian/p/17187457.html)

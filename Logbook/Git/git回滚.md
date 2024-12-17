@@ -34,19 +34,30 @@ blockquote {
 
 # Answers
 
-使用：[^1]
+1. 使用：[^1]
 ```bash
 git reset --hard commit号
 ```
 
+```ad-note
+此时再推到远程仓库用git push 会报错，需要用git push -f强推上去才可以。
+```
+reset 会覆盖中间的所有commit记录
 
-没有使用：
+2. 没有使用：
 ```bash
 git revert -n (版本号)
 ```
-因为，这里可能会出现冲突，那么需要手动修改冲突的文件。
-to_be_solved:如何处理冲突。
 
+```ad-note
+因为，这里可能会出现冲突，那么需要手动修改冲突的文件。
+```
+to_be_solved:==如何处理冲突==。[^2]
+
+revert不会覆盖中间的记录，但是需要解决冲突。
+
+3. 查看版本号
+   使用``git log`` 出现最近几次的commit记录，再按``enter`` 即可展示更久之前的记录。
 
 ## GPT_Answers
 
@@ -65,3 +76,4 @@ to_be_solved:如何处理冲突。
 # FootNotes
 
 [^1]: [GIT回退到指定版本的两种方法（reset/revert） - 何苦-\> - 博客园](https://www.cnblogs.com/fuqian/p/17187457.html)
+[^2]: #to_be_solved 

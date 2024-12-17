@@ -62,7 +62,7 @@
       "date-created": true,
       "date-created-key": "创建时间",
       "date-created-source-of-truth": "file system",
-      "date-modified": true,
+      "date-modified": false,
       "date-modified-key": "修改时间",
       "date-modified-source-of-truth": "file system",
       "format": "YYYY-MMMM-Do  dddd, h:mm:ss a",
@@ -273,7 +273,7 @@
   "lintOnSave": true,
   "recordLintOnSaveLogs": false,
   "displayChanged": true,
-  "lintOnFileChange": true,
+  "lintOnFileChange": false,
   "displayLintOnFileChangeNotice": true,
   "settingsConvertedToConfigKeyValues": true,
   "foldersToIgnore": [

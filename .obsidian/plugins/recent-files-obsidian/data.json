@@ -1,6 +1,26 @@
 {
   "recentFiles": [
     {
+      "basename": "social_inf_model",
+      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/model/social_inf_model.md"
+    },
+    {
+      "basename": "config and moa",
+      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/config and moa.md"
+    },
+    {
+      "basename": "2024-12-16",
+      "path": "2024-12-16.md"
+    },
+    {
+      "basename": "KaiMing Normalization",
+      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/KaiMing Normalization.md"
+    },
+    {
+      "basename": "moa_model_relative",
+      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/model/moa_model_relative.md"
+    },
+    {
       "basename": "HOP_Overall",
       "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/HOP_Overall.md"
     },
@@ -13,24 +33,12 @@
       "path": "2024-12-17.md"
     },
     {
-      "basename": "social_inf_model",
-      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/model/social_inf_model.md"
-    },
-    {
-      "basename": "moa_model_relative",
-      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/model/moa_model_relative.md"
-    },
-    {
       "basename": "env.py",
       "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/env.py.md"
     },
     {
       "basename": "paper codes",
       "path": "Templates/Papers/paper codes.md"
-    },
-    {
-      "basename": "config and moa",
-      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/config and moa.md"
     },
     {
       "basename": "MCTS与MC的区别",
@@ -69,16 +77,8 @@
       "path": "Templates/Meeting/Meeting Template.md"
     },
     {
-      "basename": "KaiMing Normalization",
-      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/KaiMing Normalization.md"
-    },
-    {
       "basename": "when Gaussian or uniform_to_be_solved",
       "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/when Gaussian or uniform_to_be_solved.md"
-    },
-    {
-      "basename": "2024-12-16",
-      "path": "2024-12-16.md"
     },
     {
       "basename": "Euclidean (L2) norm",

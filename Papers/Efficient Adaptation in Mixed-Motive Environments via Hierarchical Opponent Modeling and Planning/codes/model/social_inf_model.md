@@ -1,6 +1,6 @@
 ---
 创建时间: 2024-十二月-17日  星期二, 10:14:56 上午
-修改时间: 2024-十二月-17日  星期二, 11:07:30 上午
+修改时间: 2024-十二月-17日  星期二, 11:14:18 上午
 ---
 [[HOP_Overall]]
 
@@ -154,17 +154,176 @@ return action_logits + inf_mask, [torch.squeeze(h, 0), torch.squeeze(c, 0)]
 
 ---
 
-#### **`compute_intrinsic_reward` 方法**
-- **功能**：计算内在奖励，基于 KL 散度评估自身行为对其他智能体行为的影响。
-- **过程**：
-   1. 计算 **边际概率**：基于自身可能的所有动作，预测其他智能体的动作概率。
-   2. 计算 **真实条件概率**：基于真实动作，计算其他智能体的动作概率。
-   3. 使用 KL 散度衡量两者差异，作为内在奖励。
+#### `compute_cond_prob` 方法
+
+##### **函数定义**
+```python
+def compute_cond_prob(self, conv_processed, cond_action, i):
+```
+- **功能**：计算给定条件动作（`cond_action`）和预处理后的观测数据（`conv_processed`），当前智能体 `i` 预测其他智能体动作的概率分布。
+- **参数**：
+   - `conv_processed`：预处理后的观测数据，通过卷积网络 `_preprocess` 得到。
+   - `cond_action`：条件动作，是一个离散值向量。
+   - `i`：智能体索引，用于选择对应的 `moa_action_branch`。
 
 ---
 
-#### **`compute_cond_prob` 方法**
-- **功能**：基于当前观测和条件动作，预测其他智能体的动作概率分布。
+##### **逐行分析**
+```python
+cond_action = cond_action.to(self.device).to(torch.int64)
+cond_action = F.one_hot(cond_action, self.action_num + 1)
+cond_action = cond_action.reshape(conv_processed.shape[0], (self.action_num + 1) * self.player_num).float()
+```
+- **功能**：
+   - 将 `cond_action` 转移到计算设备（GPU/CPU）。
+   - **one-hot 编码**：将离散动作编码为 one-hot 向量。
+      - `self.action_num + 1`：动作数 + 1，表示可能的空闲或未选择状态。
+   - 将 one-hot 向量 reshape 成形状 `[batch_size, (action_num+1)*player_num]`。
+     - 每个 batch 包含当前所有玩家的动作信息。
+
+```python
+x = torch.cat((conv_processed, cond_action), dim=1)
+x = self.moa_action_branch[i](x)
+x = nn.Softmax(dim=-1)(x)
+```
+- **功能**：
+   - 将卷积提取的特征 `conv_processed` 与条件动作 `cond_action` 拼接在一起。
+   - 输入到 MOA 分支网络 `self.moa_action_branch[i]`。
+      - 每个智能体对应一个独立的 MOA 网络分支。
+   - 通过 `Softmax` 计算动作的概率分布。
+
+```python
+return x
+```
+- **返回**：给定条件动作下，智能体 `i` 的预测动作概率分布。
+
+---
+
+####  `compute_intrinsic_reward` 方法
+
+##### **函数定义**
+```python
+def compute_intrinsic_reward(self, inputs, all_action, my_action, alive_time):
+```
+- **功能**：计算智能体的内在奖励。
+   - 通过 **KL 散度** 衡量当前智能体的行为如何影响其他智能体的行为。
+   - 激励智能体采取能影响他人决策的动作。
+- **参数**：
+   - `inputs`：输入数据，包含观测和动作掩码。
+   - `all_action`：所有智能体的动作。
+   - `my_action`：当前智能体的动作。
+   - `alive_time`：存活时间（未在当前代码中使用）。
+
+---
+
+##### **逐行分析**
+
+**1. 输入观测与动作掩码预处理**
+```python
+obs = torch.tensor(inputs[:, self.action_num:], device=self.device).float()
+action_mask = torch.tensor(inputs[:, :self.action_num], device=self.device).float()
+obs = obs.reshape(inputs.shape[0], self.input_channels, self.world_height, self.world_width)
+all_action = torch.tensor(all_action).to(self.device)
+```
+- **功能**：
+   - 将输入 `inputs` 分解为观测（`obs`）和动作掩码（`action_mask`）。
+   - **reshape**：将观测数据转换为 `[batch_size, channels, height, width]`。
+   - 将所有智能体的动作转换为张量。
+
+**2. 卷积特征提取**
+```python
+obs_preprocess = self._preprocess(obs)
+obs_preprocess_time = obs_preprocess.unsqueeze(0)
+action_mask_time = action_mask.unsqueeze(0)
+```
+- **功能**：
+   - 使用 `_preprocess` 卷积网络提取观测特征。
+   - 为时间维度扩展特征 `obs_preprocess` 和动作掩码 `action_mask`。
+
+**3. 计算自身动作概率**
+```python
+state_batch = self.get_initial_state()
+for i in range(2):
+    state_batch[i] = state_batch[i].unsqueeze(0)
+my_action_prob, _ = self.cal_my_action_prob(obs_preprocess_time, action_mask_time, state_batch)
+my_action_prob = my_action_prob.squeeze(0)
+```
+- **功能**：
+   - 初始化 LSTM 隐状态。
+   - 使用 `cal_my_action_prob` 方法计算当前智能体在观测数据下的动作概率分布。
+
+---
+
+**4. 计算条件概率列表**
+```python
+cond_prob_list = [[] for _ in range(self.player_num - 1)]
+
+for i in range(self.action_num):
+    all_action_one_hot = all_action.to(dtype=torch.int64)
+    all_action_one_hot[:, -1] = i
+    all_action_one_hot = F.one_hot(all_action_one_hot, self.action_num + 1)
+    all_action_one_hot = all_action_one_hot.reshape(obs.shape[0], (self.action_num + 1) * self.player_num).float()
+    x = torch.cat((obs_preprocess, all_action_one_hot), dim=1).float()
+```
+- **功能**：
+   - 遍历所有可能的动作 `i`，将 `all_action` 的最后一列替换为 `i`。
+   - 将 `all_action` 转换为 one-hot 编码并 reshape。
+   - 将 `obs_preprocess` 和 one-hot 动作拼接作为 MOA 输入。
+
+```python
+    for j in range(self.player_num - 1):
+        y = self.moa_action_branch[j](x)
+        y = nn.Softmax(dim=-1)(y)
+        cond_prob_list[j].append(y)
+```
+- **功能**：
+   - 遍历其他智能体，为每个智能体的 MOA 分支计算给定条件动作下的动作概率分布。
+
+---
+
+**5. 计算边际概率与真实条件概率**
+```python
+marginal_prob_list = []
+for j in range(self.player_num - 1):
+    marginal_prob = torch.zeros(obs_preprocess.shape[0], self.action_num)
+    for i in range(self.action_num):
+        marginal_prob += (cond_prob_list[j][i] * (my_action_prob[:, i].unsqueeze(1)))
+    marginal_prob_list.append(marginal_prob)
+```
+- **功能**：
+   - 计算边际概率：对所有可能动作的概率分布加权平均，得到每个智能体的边际动作概率。
+
+```python
+true_conditional_prob_list = []
+for j in range(self.player_num - 1):
+    true_conditional_prob = torch.zeros(obs_preprocess.shape[0], self.action_num)
+    for id, ac in enumerate(my_action):
+        true_conditional_prob[id] = cond_prob_list[j][ac][id]
+    true_conditional_prob_list.append(true_conditional_prob)
+```
+- **功能**：
+   - 计算真实条件概率：基于真实动作 `my_action` 提取其他智能体的动作概率分布。
+
+---
+
+**6. 计算内在奖励**
+```python
+intrinsic_reward = torch.zeros(obs_preprocess.shape[0])
+for j in range(self.player_num - 1):
+    intrinsic_reward += torch.mean(F.kl_div(
+        torch.log(marginal_prob_list[j] + 1e-30),
+        true_conditional_prob_list[j],
+        reduction='none'
+    ), dim=1)
+```
+- **功能**：
+   - 计算边际概率与真实条件概率之间的 KL 散度。
+   - 将 KL 散度作为内在奖励。
+
+```python
+return intrinsic_reward.numpy()
+```
+- **返回**：内在奖励的 numpy 数组。
 
 ---
 

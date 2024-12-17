@@ -1,7 +1,7 @@
 {
   "collapse-filter": false,
   "search": "",
-  "showTags": false,
+  "showTags": true,
   "showAttachments": false,
   "hideUnresolved": false,
   "showOrphans": true,
@@ -55,13 +55,6 @@
         "a": 1,
         "rgb": 14048348
       }
-    },
-    {
-      "query": "tag:#to_be_solved  ",
-      "color": {
-        "a": 1,
-        "rgb": 11361494
-      }
     }
   ],
   "collapse-display": true,
@@ -74,6 +67,6 @@
   "repelStrength": 10.085910652921,
   "linkStrength": 1,
   "linkDistance": 30,
-  "scale": 0.7132754626224452,
+  "scale": 0.18462326225858283,
   "close": false
 }

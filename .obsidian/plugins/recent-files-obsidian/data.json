@@ -1,24 +1,28 @@
 {
   "recentFiles": [
     {
-      "basename": "未命名",
-      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/model/未命名.md"
+      "basename": "HOP_Overall",
+      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/HOP_Overall.md"
+    },
+    {
+      "basename": "model.py",
+      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/model/model.py.md"
+    },
+    {
+      "basename": "2024-12-17",
+      "path": "2024-12-17.md"
+    },
+    {
+      "basename": "social_inf_model",
+      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/model/social_inf_model.md"
     },
     {
       "basename": "moa_model_relative",
       "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/model/moa_model_relative.md"
     },
     {
-      "basename": "HOP_Overall",
-      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/HOP_Overall.md"
-    },
-    {
       "basename": "env.py",
       "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/env.py.md"
-    },
-    {
-      "basename": "model.py",
-      "path": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/model/model.py.md"
     },
     {
       "basename": "paper codes",
@@ -195,10 +199,6 @@
     {
       "basename": "cheap talk",
       "path": "Papers/A Review of Cooperation in Multi-agent Learning/cheap talk.md"
-    },
-    {
-      "basename": "Termux Bash",
-      "path": "Logbook/Git/Termux Bash.md"
     }
   ],
   "omittedPaths": [],

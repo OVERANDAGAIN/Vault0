@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/model/social_inf_model.md",
+                "file": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/HOP_Overall.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "social_inf_model"
+              "title": "HOP_Overall"
             }
           }
         ]
@@ -47,16 +47,6 @@
             }
           },
           {
-            "id": "442309a961dceb29",
-            "type": "leaf",
-            "state": {
-              "type": "bookmarks",
-              "state": {},
-              "icon": "lucide-bookmark",
-              "title": "书签"
-            }
-          },
-          {
             "id": "c3877aeb7d2eff81",
             "type": "leaf",
             "state": {
@@ -64,23 +54,6 @@
               "state": {},
               "icon": "clock",
               "title": "Recent Files"
-            }
-          },
-          {
-            "id": "16585d9d457df940",
-            "type": "leaf",
-            "state": {
-              "type": "search",
-              "state": {
-                "query": "tag:#meeting",
-                "matchingCase": false,
-                "explainSearch": false,
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical"
-              },
-              "icon": "lucide-search",
-              "title": "搜索"
             }
           }
         ]
@@ -103,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/model.py.md",
+                "file": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/HOP_Overall.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +86,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "model.py 的反向链接列表"
+              "title": "HOP_Overall 的反向链接列表"
             }
           },
           {
@@ -146,10 +119,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/model/social_inf_model.md"
+                "file": "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/HOP_Overall.md"
               },
               "icon": "lucide-list",
-              "title": "social_inf_model 的大纲"
+              "title": "HOP_Overall 的大纲"
             }
           },
           {
@@ -174,27 +147,12 @@
               "icon": "lucide-tags",
               "title": "标签"
             }
-          },
-          {
-            "id": "0bcb6d3ed6011573",
-            "type": "leaf",
-            "state": {
-              "type": "all-properties",
-              "state": {
-                "sortOrder": "frequency",
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-archive",
-              "title": "添加笔记属性"
-            }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 297.5
+    "width": 305.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -213,13 +171,14 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "754879504499e87e",
+  "active": "9f39ad243124278a",
   "lastOpenFiles": [
-    "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/model/moa_model_relative.md",
+    "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/model/model.py.md",
+    "2024-12-17.md",
     "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/model/social_inf_model.md",
+    "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/model/moa_model_relative.md",
     "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/HOP_Overall.md",
     "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/env.py.md",
-    "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/model/model.py.md",
     "Templates/Papers/paper codes.md",
     "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/config and moa.md",
     "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/model",
@@ -242,7 +201,6 @@
     "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/Score Function.md",
     "From Zotero",
     "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/SCG-repara-SF.md",
-    "Papers/DiCE-The Infinitely Differentiable Monte Carlo Es/Surrogate loss function.md",
     "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/attchments/Pasted image 20241213155801.png",
     "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/attchments",
     "Meeting/attchments/12.jpg",

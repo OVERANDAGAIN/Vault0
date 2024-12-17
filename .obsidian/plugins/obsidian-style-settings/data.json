@@ -9,5 +9,6 @@
   "blue-topaz-theme@@highlight-style": "all-rounded-corners-highlight",
   "blue-topaz-theme@@popover-width-factor": 1.5,
   "blue-topaz-theme@@full-width-callout": false,
-  "Blue-Topaz-Codebox-Highlight@@blur-codebox-frosted-glass": 8
+  "Blue-Topaz-Codebox-Highlight@@blur-codebox-frosted-glass": 8,
+  "blue-topaz-theme@@text-highlight@@light": "#DC8CD5"
 }

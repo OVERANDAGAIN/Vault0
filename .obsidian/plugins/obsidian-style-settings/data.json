@@ -14,5 +14,6 @@
   "blue-topaz-theme@@text-highlight@@dark": "#6676DA",
   "blue-topaz-theme@@text-highlight-bg-h-light": 360,
   "blue-topaz-theme@@text-highlight-bg-a-light": 0.85,
-  "blue-topaz-theme@@text-highlight-bg-l-light": 90
+  "blue-topaz-theme@@text-highlight-bg-l-light": 90,
+  "blue-topaz-theme@@colorful-unordered-list": true
 }

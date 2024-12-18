@@ -1,5 +1,8 @@
 {
   "cssTheme": "Blue Topaz",
   "theme": "moonstone",
-  "accentColor": ""
+  "accentColor": "",
+  "enabledCssSnippets": [
+    "image"
+  ]
 }

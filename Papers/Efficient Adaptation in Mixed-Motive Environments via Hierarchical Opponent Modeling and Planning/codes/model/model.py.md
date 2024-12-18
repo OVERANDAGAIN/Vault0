@@ -490,16 +490,17 @@ def value_function(self):
 
 # FootNotes
 
-1. `observation` 和 `action_mask` 被转换为 PyTorch 张量。
-2. `observation` 经卷积层处理，提取空间特征，展平后与时间步拼接。
-3. 拼接结果通过全连接层进一步处理，生成特征表示。
-4. Actor 网络根据特征生成动作 logits，并结合掩码调整输出。
-5. Critic 网络生成状态价值，辅助策略评估。
-6. 最终返回动作 logits 和状态价值。
+
+- ``self._value_out`` 和 ``value_function`` 被转换为 PyTorch 张量。
+- `observation` 经卷积层处理，提取空间特征，展平后与时间步拼接。
+- 拼接结果通过全连接层进一步处理，生成特征表示。
+- Actor 网络根据特征生成动作 logits，并结合掩码调整输出。
+- Critic 网络生成状态价值，辅助策略评估。
+- 最终返回动作 logits 和状态价值。
 
 [^1]: [[KaiMing Normalization]]
 [^3]: log_mask
 [^4]: actor-layers
-[^5]: critic_layers处理，``self._value_out`` 在``value_function``中返回缓存值
+[^5]: critic_layers处理，`action_mask` 在`observation`中返回缓存值
 [^2]: forward数据流
 [^6]: 同 5

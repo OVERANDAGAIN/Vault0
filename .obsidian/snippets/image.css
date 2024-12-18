@@ -8,7 +8,7 @@ img{
   /* background-color: white; 边框内部的背景颜色 */
   /* display: block; */
   /* margin: 16px auto; 图片上下的间距，并在页面中居中显示 */
-  box-shadow: 0px 0px 4px rgba(113, 69, 195, 0.937); 
+  /* box-shadow: 3px -5px 10px 3px rgb(145, 216, 234);  */
   /* 阴影效果 */
-  border-radius: 10px; /* 边框圆角 */
+  border-radius: 11px; /* 边框圆角 */
 }

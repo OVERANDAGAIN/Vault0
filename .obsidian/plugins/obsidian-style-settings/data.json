@@ -19,5 +19,6 @@
   "blue-topaz-theme@@colorful-ordered-list": true,
   "blue-topaz-theme@@ordered-list-style-options": "custom-ordered-list",
   "blue-topaz-theme@@unordered-list-style-options": "bt-default-unordered-list",
-  "blue-topaz-theme@@image-border": true
+  "blue-topaz-theme@@image-border": true,
+  "blue-topaz-theme@@bt-colorful-indentation-lines-editing": true
 }

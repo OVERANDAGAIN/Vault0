@@ -53,5 +53,14 @@
       ],
       "key": "-"
     }
+  ],
+  "editing-toolbar:change-background-color": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": "B"
+    }
   ]
 }

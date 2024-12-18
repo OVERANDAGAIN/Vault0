@@ -3,7 +3,6 @@
   "theme": "moonstone",
   "accentColor": "",
   "enabledCssSnippets": [
-    "image",
-    "list"
+    "image"
   ]
 }

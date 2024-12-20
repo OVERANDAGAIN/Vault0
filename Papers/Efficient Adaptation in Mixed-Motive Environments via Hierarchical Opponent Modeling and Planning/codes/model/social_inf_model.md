@@ -218,7 +218,7 @@ def get_initial_state(self):
 - `inputs`：包含观测数据和动作掩码，形状为 $(batch, seq\_len, obs\_dim)$，其中：
   - `inputs[:, :, :self.action_num]` 是动作掩码，表示可用的动作。
   - `inputs[:, :, self.action_num:]` 是观测数据。
-- `state`：LSTM 的隐藏状态和细胞状态，包含两个张量，形状为 $(batch, lstm_state_size)$。
+- `state`：LSTM 的隐藏状态和细胞状态，包含两个张量，形状为 $(batch, lstm\_state\_size)$。
 - `seq_lens`：序列长度，用于支持变长序列的批量处理（未在此函数中使用）。
 
 #### **输出：**

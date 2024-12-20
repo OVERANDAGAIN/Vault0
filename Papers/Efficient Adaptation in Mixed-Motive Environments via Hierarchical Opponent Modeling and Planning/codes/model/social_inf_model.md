@@ -350,7 +350,7 @@ def get_initial_state(self):
 
 ### **函数逻辑：**
 
-#### **1. 动作的 One-Hot 编码**
+#### **1. 动作的 One-Hot 编码**[^1]
 ```python
 cond_action = cond_action.to(self.device).to(torch.int64)
 cond_action = F.one_hot(cond_action, self.action_num + 1)

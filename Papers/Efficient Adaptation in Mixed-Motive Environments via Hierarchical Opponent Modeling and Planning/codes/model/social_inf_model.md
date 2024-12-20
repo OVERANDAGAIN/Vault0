@@ -295,7 +295,7 @@ def get_initial_state(self):
 对输入观测进行卷积预处理，提取网格状特征的空间信息。
 
 #### **输入：**
-- `inputs`：包含动作掩码和观测数据，形状为 $(batch, obs_dim)$。
+- `inputs`：包含动作掩码和观测数据，形状为 $(batch, obs\_dim)$。
 
 #### **输出：**
 - 观测特征张量，形状为 $(batch, \text{flattened feature dim})$。

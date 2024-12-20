@@ -12,7 +12,11 @@
 
 
 # How
-
+ - Config
+	 - PPOconfig()
+	 - environment()
+	 - env_runners()
+	config.bu
 
 
 # Theroy

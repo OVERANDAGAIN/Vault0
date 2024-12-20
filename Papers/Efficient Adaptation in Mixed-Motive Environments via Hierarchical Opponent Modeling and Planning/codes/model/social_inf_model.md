@@ -37,7 +37,9 @@
      - **`compute_cond_prob`**：计算其他智能体的条件概率。
      - KL 散度用于度量自己的动作对其他智能体的影响。
    - 输出：内在奖励（用于强化学习的奖励信号）。
-
+````ad-note
+![[Pasted image 20241220102316.png]]
+````
 4. **`compute_cond_prob(conv_processed, cond_action, i)`**：计算其他智能体 $i$ 的动作的条件概率。
    - 依赖于：**卷积特征（`conv_processed`）** 和 **MOA 模型分支（`moa_action_branch`）**。
    - 输出：智能体 $i$ 动作的概率分布。

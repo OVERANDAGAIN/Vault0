@@ -316,6 +316,9 @@ def get_initial_state(self):
 
 ### **4. `compute_cond_prob(conv_processed, cond_action, i)`**
 
+
+
+
 #### **作用：**
 计算条件概率 $p(a^j | a^k, z)$，即第 $i$ 个其他智能体的动作分布。
 

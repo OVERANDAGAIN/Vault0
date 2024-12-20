@@ -320,8 +320,8 @@ def get_initial_state(self):
 计算条件概率 $p(a^j | a^k, z)$，即第 $i$ 个其他智能体的动作分布。
 
 #### **输入：**
-- `conv_processed`：卷积预处理后的观测特征，形状为 $(batch, feature_dim)$。
-- `cond_action`：其他智能体的动作，形状为 $(batch, player_num - 1)$。
+- `conv_processed`：卷积预处理后的观测特征，形状为 $(batch, feature\_dim)$。
+- `cond_action`：其他智能体的动作，形状为 $(batch, player\_num - 1)$。
 - `i`：第 $i$ 个智能体的索引。
 
 #### **输出：**

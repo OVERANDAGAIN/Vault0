@@ -56,7 +56,7 @@ and so on...
 ## 配置 RLlib 算法
 你可以通过使用所谓的 AlgorithmConfig 对象以模块化的方式配置 RLlib 算法
 
-
+![[Pasted image 20241220172716.png]]
 
 
 

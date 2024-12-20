@@ -69,7 +69,10 @@ and so on...
 
 # 关键概念
 在本页中，我们将介绍关键概念，以帮助您理解RLlib的工作原理以及如何使用它。在RLlib中，您使用 Algorithm 来学习如何解决 environments 问题。算法使用 policies 来选择动作。给定一个策略， environment 中的 rollouts 会产生经验的 sample batches （或 trajectories ）。您还可以自定义RL实验的 training_step 。
+![[Pasted image 20241220173408.png]]
 
+
+==动作 -> 奖励 -> 下一状态 -> 训练 -> 重复，直到结束状态，这被称为一个 回合 ，或者在 RLlib 中，称为一个 回滚 。==定义环境的最常见 API 是 Farama-Foundation Gymnasium API，这也是我们在大多数示例中使用的 API。
 
 # Background
 

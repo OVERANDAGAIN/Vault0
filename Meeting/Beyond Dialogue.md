@@ -8,6 +8,13 @@
 
 # Context
 Role-playing Dialogue
+![[Pasted image 20241220143746.png]]
+设定：左
+语料：右（简单、少）
+
+![[Pasted image 20241220143940.png]]
+
+==人物设定与语料的对齐==
 
 
 # Innovation

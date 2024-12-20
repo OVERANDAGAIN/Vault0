@@ -104,7 +104,72 @@
 这种设计将 MCTS 和策略/价值网络结合，适用于复杂的多智能体环境中的学习任务。
 
 ## 1_Answers
+这段代码定义了一个 `AlphaZeroDefaultCallbacks` 类，并扩展了 `DefaultCallbacks`，主要用于在每个回合开始时执行一些自定义操作。以下是逐行分析及功能说明：
 
+---
+
+### **逐行分析**
+
+#### **1. 类定义**
+```python
+class AlphaZeroDefaultCallbacks(DefaultCallbacks):
+    """AlphaZero callbacks.
+    If you use custom callbacks, you must extend this class and call super()
+    for on_episode_start.
+    """
+```
+- **继承自 `DefaultCallbacks`**：
+  - `DefaultCallbacks` 是 Ray RLlib 提供的基类，用于自定义训练过程中的回调行为（如在回合开始、结束或采样阶段执行特定操作）。
+- **文档说明**：
+  - 如果需要自定义回调，必须扩展此类，并在实现自定义方法时调用父类的对应方法（如 `super()`）。
+
+---
+
+#### **2. `on_episode_start` 方法**
+```python
+def on_episode_start(self, worker, base_env, policies, episode, **kwargs):
+```
+- **方法触发时机**：
+  - 在每个新回合（episode）开始时被调用。
+- **参数**：
+  - `worker`：当前的 Rollout Worker，负责与环境交互。
+  - `base_env`：基础环境实例，用于访问环境的具体方法。
+  - `policies`：当前使用的策略。
+  - `episode`：与当前回合相关的上下文数据，允许存储和检索回合相关信息。
+  - `kwargs`：额外参数，可扩展。
+
+---
+
+#### **3. 环境状态保存**
+```python
+env = base_env.get_sub_environments()[0]
+state = env.get_state()
+episode.user_data["initial_state"] = state
+```
+- **`base_env.get_sub_environments()`**：
+  - 获取基础环境的所有子环境（可能是并行的多环境）。
+  - `[0]` 表示获取第一个子环境。
+- **`env.get_state()`**：
+  - 调用自定义环境的 `get_state()` 方法，获取当前环境的完整状态（如地图布局、玩家位置等）。
+  - 假设环境实现了一个方法用于返回当前的内部状态。
+- **`episode.user_data["initial_state"]`**：
+  - 在 `episode` 的 `user_data` 字典中存储初始环境状态。
+  - 方便后续步骤（如回合评估、复现环境状态等）使用。
+
+---
+
+### **功能总结**
+
+1. **主要功能**：
+   - 在每个回合开始时，记录环境的初始状态并存储到 `episode.user_data` 中。
+   - 这是一个扩展点，用于支持 AlphaZero 中的环境状态重现或分析。
+
+2. **典型用途**：
+   - 保存回合的起始环境状态，便于回合结束后进行统计、分析或策略调整。
+   - 支持多智能体环境中跟踪全局状态。
+
+3. **扩展性**：
+   - 如果需要更多自定义操作（如记录额外的元信息或初始化策略），可以在 `on_episode_start` 方法中添加对应的逻辑。
 
 ## 2_Answers
 

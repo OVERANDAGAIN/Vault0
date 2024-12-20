@@ -172,7 +172,165 @@ episode.user_data["initial_state"] = state
    - 如果需要更多自定义操作（如记录额外的元信息或初始化策略），可以在 `on_episode_start` 方法中添加对应的逻辑。
 
 ## 2_Answers
+以下是对代码的逐行分析及其逻辑解释：
 
+---
+
+### **1. `alpha_zero_loss` 函数**
+#### **功能**
+计算 AlphaZero 的损失函数，包含策略损失（policy loss）和价值函数损失（value loss）。
+
+#### **代码逐行分析**
+
+```python
+def alpha_zero_loss(policy, model, dist_class, train_batch):
+    # get inputs unflattened inputs
+    input_dict={}
+    input_dict['obs_flat']=train_batch["obs"]
+```
+- **作用**：
+  - 从 `train_batch` 中提取观察值数据 `obs`。
+  - 初始化 `input_dict`，其中存储了扁平化的观测输入 `obs_flat`。
+  - `train_batch` 是 Ray RLlib 的数据结构，包含训练样本和元信息。
+
+---
+
+```python
+    # forward pass in model
+    model_out = model.forward(input_dict, None, [1], train_batch['t'].unsqueeze(1))
+    logits, _ = model_out
+    values = model.value_function()
+```
+- **作用**：
+  - 执行模型的前向传播：
+    - `model.forward()` 接收输入，输出动作的 `logits`（策略分布）和隐藏状态（未使用）。
+    - `model.value_function()` 提取对应的价值估计值（value）。
+  - `logits`：动作策略的原始未归一化概率。
+  - `values`：模型预测的状态价值。
+
+---
+
+```python
+    logits, values = torch.squeeze(logits), torch.squeeze(values)
+    priors = nn.Softmax(dim=-1)(logits)
+```
+- **作用**：
+  - 使用 `torch.squeeze` 移除多余的维度，简化张量形状。
+  - 通过 `Softmax` 将 `logits` 转化为动作概率分布 `priors`。
+
+---
+
+```python
+    # compute actor and critic losses
+    policy_loss = torch.mean(
+        -torch.sum(train_batch["mcts_policies"] * torch.log(priors+1e-30), dim=-1)
+    )
+```
+- **作用**：
+  - **策略损失 (policy loss)**：
+    - 使用来自 MCTS 的目标策略分布 `mcts_policies` 与模型预测的动作概率 `priors` 计算交叉熵损失。
+    - 防止 `log` 操作出现数值问题，加入小值 `1e-30`。
+
+---
+
+```python
+    value_loss = torch.mean(torch.pow(values - train_batch["value_label"], 2))
+```
+- **作用**：
+  - **价值损失 (value loss)**：
+    - 使用均方误差 (MSE) 计算模型预测的价值 `values` 和目标价值标签 `value_label` 之间的差异。
+
+---
+
+```python
+    # compute total loss
+    total_loss = (policy_loss + value_loss) / 2
+    return total_loss, policy_loss, value_loss
+```
+- **作用**：
+  - **总损失 (total loss)**：
+    - 将策略损失和价值损失相加并平均。
+  - 返回总损失以及各部分损失的值。
+
+---
+
+### **2. `AlphaZeroPolicyWrapperClass` 类**
+#### **功能**
+为 AlphaZero 的策略包装类，集成自定义模型和损失函数。
+
+#### **代码逐行分析**
+
+```python
+class AlphaZeroPolicyWrapperClass(AlphaZeroPolicy):
+    def __init__(self, obs_space, action_space, config):
+        model = ModelCatalog.get_model_v2(
+            obs_space, action_space, action_space.n, config["model"], "torch"
+        )
+```
+- **作用**：
+  - 从 `ModelCatalog` 获取模型，基于配置中的模型定义和 `obs_space`、`action_space` 初始化模型实例。
+  - `get_model_v2` 是 Ray RLlib 提供的方法，用于获取注册的自定义模型。
+
+---
+
+```python
+        env_creator = _global_registry.get(ENV_CREATOR, config["env"])
+```
+- **作用**：
+  - 从全局注册表中获取环境生成器，用于创建对应的自定义环境。
+
+---
+
+```python
+        '''
+        if config["ranked_rewards"]["enable"]:
+            # if r2 is enabled, the env is wrapped to include a rewards buffer
+            # used to normalize rewards
+            env_cls = get_r2_env_wrapper(env_creator, config["ranked_rewards"])
+        '''
+```
+- **注释说明**：
+  - 提供了一个可选模块，用于对奖励进行排名归一化（ranked rewards）。
+  - 如果启用了 `ranked_rewards`，会包装环境以支持基于奖励分布的奖励归一化。
+
+---
+
+```python
+        super().__init__(
+            obs_space,
+            action_space,
+            config,
+            model,
+            alpha_zero_loss,
+            TorchCategorical,
+        )
+```
+- **作用**：
+  - 调用父类 `AlphaZeroPolicy` 的构造方法，并传入以下参数：
+    - `obs_space` 和 `action_space`：定义输入和输出空间。
+    - `config`：策略的配置信息。
+    - `model`：使用的自定义模型。
+    - `alpha_zero_loss`：自定义的损失函数。
+    - `TorchCategorical`：用于动作分布的类别分布实现。
+
+---
+
+### **功能总结**
+
+1. **`alpha_zero_loss` 的输入与输出**：
+   - 输入：
+     - `policy`: 策略实例。
+     - `model`: 策略使用的模型。
+     - `train_batch`: 训练样本批次。
+   - 输出：
+     - 总损失、策略损失和价值损失。
+
+2. **`AlphaZeroPolicyWrapperClass` 的作用**：
+   - 包装 `AlphaZeroPolicy`，集成自定义的模型和损失函数。
+   - 支持与环境交互的策略定义。
+
+3. **联系**：
+   - `alpha_zero_loss` 在 `AlphaZeroPolicyWrapperClass` 中被注册为策略的损失函数，用于优化策略和价值网络。
 
 ## 3_Answers
 

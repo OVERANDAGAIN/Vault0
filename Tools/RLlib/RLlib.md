@@ -11,7 +11,7 @@
 
 
 
-# How
+# 开始使用RLlib
 ## 基本用法例子
  - Config
 	 - PPOconfig()
@@ -67,8 +67,8 @@ and so on...
 
 
 
-# Theroy
-
+# 关键概念
+在本页中，我们将介绍关键概念，以帮助您理解RLlib的工作原理以及如何使用它。在RLlib中，您使用 Algorithm 来学习如何解决 environments 问题。算法使用 policies 来选择动作。给定一个策略， environment 中的 rollouts 会产生经验的 sample batches （或 trajectories ）。您还可以自定义RL实验的 training_step 。
 
 
 # Background

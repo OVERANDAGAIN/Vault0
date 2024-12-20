@@ -2,7 +2,7 @@
 创建时间: 2024-十二月-17日  星期二, 11:03:38 上午
 ---
 
-[[social_inf_model]]
+
 # Questions
 独热编码 one-hot 
 

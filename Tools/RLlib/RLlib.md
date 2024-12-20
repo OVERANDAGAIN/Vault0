@@ -12,6 +12,7 @@
 
 
 # How
+## 基本用法例子
  - Config
 	 - PPOconfig()
 	 - environment()
@@ -42,6 +43,12 @@ for i in range(10):
     if i % 5 == 0:
         checkpoint_dir = algo.save_to_path()
         print(f"Checkpoint saved in directory {checkpoint_dir}")
+```
+
+## 检查点
+```python
+from ray.rllib.algorithms.algorithm import Algorithm
+algo = Algorithm.from_checkpoint(checkpoint_path)
 ```
 
 # Theroy

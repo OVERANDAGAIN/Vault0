@@ -3,7 +3,7 @@
 # Questions
 这种端到端一般指的是什么意思？比如下面某论文中的部分：
 
-	ToS [37] models the optimization problem of gifting (sharing) weights with the zero-sum setting as a bi-level problem and uses an end-to-end approach to train weights and policies jointly
+> ToS [37] models the optimization problem of gifting (sharing) weights with the zero-sum setting as ==a bi-level problem== and uses ==an end-to-end approach to train weights and policies jointly==
 
 # Answers
 

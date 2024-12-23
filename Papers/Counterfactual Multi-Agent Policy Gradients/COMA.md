@@ -1,7 +1,10 @@
+---
+创建时间: 2024-十二月-23日  星期一, 9:08:55 晚上
+---
 #paper_summary 
 
-[Site Unreachable](https://zhuanlan.zhihu.com/p/361648110)[^1]
-
+知乎：[Site Unreachable](https://zhuanlan.zhihu.com/p/361648110)[^1]
+[【COMA】一种将团队回报拆分为独立回报的多智能体算法\_coma算法-CSDN博客](https://blog.csdn.net/qq_38638132/article/details/114396018)[^2]
 # Inspiration
 
 
@@ -49,3 +52,4 @@
 # FootNotes
 
 [^1]: 知乎相关的COMA论文解析
+[^2]: csdn关于COMA论文解析

@@ -34,6 +34,80 @@ $$\log p(\mathbf{x})
 $$\log p(\mathbf{x}) 
 \geq \int q_{\phi}(\mathbf{z}\mid \mathbf{x}) \log \frac{p(\mathbf{x}, \mathbf{z})}{q_{\phi}(\mathbf{z}\mid \mathbf{x})} \, d\mathbf{z}.$$
 
+Jensen不等式[^1]
+````ad-help
+**Jensen 不等式（Jensen's Inequality）**是凸分析中非常重要的一条不等式，主要用于凸函数（convex function）或凹函数（concave function）与随机变量的期望之间的关系。它在概率论、统计学、信息论以及优化领域都有着广泛应用。
+
+---
+
+## 1. 凸函数与凹函数
+- **凸函数**：  
+  若函数 $f$ 在定义域 $D$ 上可微，且对于任意 $x, y \in D$ 和 $\lambda \in [0, 1]$，满足
+  $$f\bigl(\lambda x + (1-\lambda)y\bigr) 
+    \;\le\; 
+    \lambda f(x) + (1-\lambda) f(y),$$
+  则称 $f$ 是凸函数 (Convex function)。  
+- **凹函数**：  
+  如果将上述不等号的方向反转，则称 $f$ 是凹函数 (Concave function)。  
+  $$f\bigl(\lambda x + (1-\lambda)y\bigr) 
+    \;\ge\; 
+    \lambda f(x) + (1-\lambda) f(y).$$
+
+---
+
+## 2. Jensen 不等式的形式
+
+### 2.1 针对凸函数
+令 $X$ 是一个随机变量，$f$ 是一个**凸函数**，那么 **Jensen 不等式**表明：  
+$$f\bigl(\mathbb{E}[X]\bigr) 
+  \;\le\; 
+  \mathbb{E}\bigl[f(X)\bigr].$$
+
+### 2.2 针对凹函数
+如果 $f$ 是**凹函数**，则不等式方向反转：  
+$$f\bigl(\mathbb{E}[X]\bigr) 
+  \;\ge\; 
+  \mathbb{E}\bigl[f(X)\bigr].$$
+
+**简而言之**，对于凸函数，“把期望放到函数外面”的值不大于“先算函数再取期望”的值；对于凹函数则相反。
+
+---
+
+## 3. 直观理解
+- 设想你有一堆数：$X_1, X_2, \dots$。把它们平均起来（即 $\mathbb{E}[X]$），然后再带入一个凸函数 $f$ 里，**得到的值通常**要比“先对每个 $X_i$ 求 $f(X_i)$ 再取平均”更小或相等。  
+- 如果 $f$ 是凹函数，则结论相反。
+
+一个常见的通俗比喻是：  
+> “把面团先揉成团（相当于先平均再函数），再放进烤箱和调料里（相当于做函数变换），**与** 把每份面团分别烤好再混合，出来的结果不一样。对于凸或凹的加工过程，哪一种方式更大（或更小）由 Jensen 不等式告诉我们。”
+
+---
+
+## 4. 常见应用
+
+1. **概率论与期望**  
+   - 常用于在最大(或最小)化期望时的上下界推断。例如：  
+     $$\log \mathbb{E}[X] 
+       \;\ge\; 
+       \mathbb{E}[\log X] \quad (\text{因为 $\log$ 是凹函数})$$  
+     这就是常用的对数凹性质在 Jensen 不等式中的体现。
+
+2. **信息论**  
+   - 香农熵（Shannon Entropy）以及相对熵（KL 散度）等也要用到凸函数的性质来证明一些不等式。
+
+3. **变分推断 / 机器学习**  
+   - VAE (Variational Autoencoder) 的 ELBO 推导里也会用到 Jensen 不等式，将 $\log \int p(\cdot)$ 转换成期望形式并得到一个下界。
+
+4. **凸优化**  
+   - 在研究凸损失、梯度下降时，经常要用到 Jensen 不等式去界定学习过程的收敛速度或误差上界。
+
+---
+
+## 5. 小结
+- Jensen 不等式是凸分析中最重要的基础工具之一；  
+- 其核心信息是：**凸函数外面的期望 $\le$ 期望内的凸函数**（若换成凹函数则不等号反向）；  
+- 在实际应用中，它为很多“不易直接计算的式子”提供了上下界估计，为概率论、统计学、信息论与优化理论奠定了重要基础。
+````
+
 定义该不等式右边为 **ELBO**（Evidence Lower BOund）：
 
 $$\mathcal{L}(\phi, \theta; \mathbf{x}) 
@@ -102,3 +176,5 @@ $$\log p(\mathbf{x}) \;\;\geq\;\; \mathcal{L}(\phi,\theta; \mathbf{x}).$$
 
 
 # FootNotes
+
+[^1]: 什么是Jensen不等式？

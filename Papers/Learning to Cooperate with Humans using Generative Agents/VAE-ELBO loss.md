@@ -36,7 +36,73 @@ $$\log p(\mathbf{x})
 ==Why==?
 $$\log \mathbb{E}[X] 
        \;\ge\; 
-       \mathbb{E}[\log X] \quad (\text{因为 $\log$ 是凹函数})$$  
+       \mathbb{E}[\log X] \quad (\text{因为 $\log$ 是凹函数})$$ 
+
+````ad-help
+我们先把主要推导步骤捋清楚，然后再解释为何会用到 Jensen 不等式并且得到那个“$\ge$”号。
+
+---
+
+## 1. 将 $\log p(\mathbf{x})$ 改写成对数期望
+
+从  
+$$p(\mathbf{x}) \;=\; \int p(\mathbf{x},\mathbf{z})\,d\mathbf{z},$$  
+我们做一项“乘除同一个分布 $q_{\phi}(\mathbf{z}\mid \mathbf{x})$”的操作：
+
+$$\begin{aligned}
+\log p(\mathbf{x})
+&= \log \int p(\mathbf{x}, \mathbf{z}) \, d\mathbf{z}\\
+&= \log \int q_{\phi}(\mathbf{z}\mid \mathbf{x}) \,\frac{p(\mathbf{x}, \mathbf{z})}{q_{\phi}(\mathbf{z}\mid \mathbf{x})}\,d\mathbf{z}.
+\end{aligned}$$
+
+如果把  
+$$q_{\phi}(\mathbf{z}\mid \mathbf{x}) 
+\quad\text{视作一个对}\ \mathbf{z}\ \text{的概率分布}$$  
+(假设 $\mathbf{z}\in \Omega$ 且 $\int q_{\phi}(\mathbf{z}\mid \mathbf{x})\,d\mathbf{z} = 1$)，那么上式可以写成：
+
+$$\log p(\mathbf{x})
+= \log\,\mathbb{E}_{q_{\phi}(\mathbf{z}\mid \mathbf{x})}\!\Bigl[\frac{p(\mathbf{x},\mathbf{z})}{q_{\phi}(\mathbf{z}\mid \mathbf{x})}\Bigr].$$
+
+这里 $\mathbb{E}_{q}[X]$ 表示对 $X(\mathbf{z})$ 取 $q(\mathbf{z})$ 分布下的期望。
+
+---
+
+## 2. 为什么可以用 Jensen 不等式
+
+Jensen 不等式的核心形式是：
+$$\log \mathbb{E}[X]
+\;\;\ge\;\;
+\mathbb{E}[\log X],
+\quad
+\text{当 } X \ge 0.$$
+
+在这里，令
+$$X(\mathbf{z}) 
+\;=\;
+\frac{p(\mathbf{x},\mathbf{z})}{q_{\phi}(\mathbf{z}\mid \mathbf{x})}.$$
+因为 $p(\mathbf{x},\mathbf{z}) \ge 0$ 且 $q_{\phi}(\mathbf{z}\mid \mathbf{x}) > 0$（只要分布点上取值是正的），$X(\mathbf{z})$ 就非负。于是可以直接把上面那一坨视作 **Jensen 不等式**中的 $X$。   
+
+因此
+
+$$\log \Bigl(\underbrace{\mathbb{E}_{q_{\phi}}[X(\mathbf{z})]}_{\displaystyle \int q_{\phi}(\mathbf{z}\mid \mathbf{x})\,\frac{p(\mathbf{x},\mathbf{z})}{q_{\phi}(\mathbf{z}\mid \mathbf{x})}\,d\mathbf{z}}\Bigr)
+\;\;\ge\;\;
+\mathbb{E}_{q_{\phi}}\bigl[\log X(\mathbf{z})\bigr].$$
+
+这就得到
+
+$$\log \int p(\mathbf{x},\mathbf{z})\,d\mathbf{z}
+\;=\;
+\log p(\mathbf{x})
+\;=\;
+\log \mathbb{E}_{q_{\phi}(\mathbf{z}\mid \mathbf{x})}\!\Bigl[\frac{p(\mathbf{x},\mathbf{z})}{q_{\phi}(\mathbf{z}\mid \mathbf{x})}\Bigr]
+\;\;\ge\;\;
+\int q_{\phi}(\mathbf{z}\mid \mathbf{x})\,\log \frac{p(\mathbf{x}, \mathbf{z})}{q_{\phi}(\mathbf{z}\mid \mathbf{x})}\,d\mathbf{z}.$$
+
+
+````
+
+       
+    
      这就是常用的对数凹性质在 Jensen 不等式中的体现。
 Jensen不等式[^1]
 ````ad-help

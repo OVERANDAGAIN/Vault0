@@ -32,9 +32,9 @@
 
 
 # Methodology
+![[Pasted image 20241223213958.png]]
 
-
-
+![[Pasted image 20241223214011.png]]
 # Evaluation
 
 

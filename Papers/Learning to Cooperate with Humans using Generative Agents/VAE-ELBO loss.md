@@ -33,7 +33,11 @@ $$\log p(\mathbf{x})
 
 $$\log p(\mathbf{x}) 
 \geq \int q_{\phi}(\mathbf{z}\mid \mathbf{x}) \log \frac{p(\mathbf{x}, \mathbf{z})}{q_{\phi}(\mathbf{z}\mid \mathbf{x})} \, d\mathbf{z}.$$
-
+==Why==?
+$$\log \mathbb{E}[X] 
+       \;\ge\; 
+       \mathbb{E}[\log X] \quad (\text{因为 $\log$ 是凹函数})$$  
+     这就是常用的对数凹性质在 Jensen 不等式中的体现。
 Jensen不等式[^1]
 ````ad-help
 **Jensen 不等式（Jensen's Inequality）**是凸分析中非常重要的一条不等式，主要用于凸函数（convex function）或凹函数（concave function）与随机变量的期望之间的关系。它在概率论、统计学、信息论以及优化领域都有着广泛应用。

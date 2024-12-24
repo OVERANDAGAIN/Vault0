@@ -7,12 +7,9 @@ Generative Agent Modeling for Multi-agent Adaptation (GAMMA)
 —
 ### Take-away Message （关键信息）
 
-1. Generative model(VAE) for diverse strategy modeling -robust  zero-shot coordination
+1. Generative model(VAE) for diverse strategy modeling —— robust  zero-shot coordination
 
-2. Combining simulated and human data - data scarcity and distribution shift
-融合模拟数据与人类数据
-The combination of simulated data with limited human data in a controlled latent space resolves the challenges of data scarcity and distribution shift.
-将模拟数据与有限的人类数据结合，并通过潜在空间的控制解决数据稀缺与分布偏移问题。
+2. Combining simulated and human data —— solve data scarcity and distribution shift
 
 3. Human-adaptive sampling as a practical tool
 人类适配采样的实用性

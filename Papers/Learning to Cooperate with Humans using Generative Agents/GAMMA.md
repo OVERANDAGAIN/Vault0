@@ -7,25 +7,22 @@ Generative Agent Modeling for Multi-agent Adaptation (GAMMA)
 
 ### Take-away Message （关键信息）
 
-1. **Generative models for diverse strategy modeling**  
-   生成模型助力策略多样性建模  
-   - By leveraging generative models like VAE, GAMMA effectively captures diverse partner strategies, enabling robust zero-shot coordination with unseen human partners.  
-   - GAMMA 通过利用生成模型（如VAE）有效捕捉多样化的合作策略，从而实现与未知人类伙伴的鲁棒零样本协调能力。
+1. Generative model(VAE) for diverse strategy modeling -robust  zero-shot coordination
 
-2. **Combining simulated and human data**  
-   融合模拟数据与人类数据  
-   - The combination of simulated data with limited human data in a controlled latent space resolves the challenges of data scarcity and distribution shift.  
-   - 将模拟数据与有限的人类数据结合，并通过潜在空间的控制解决数据稀缺与分布偏移问题。
+2. Combining simulated and human data - data scarcity and distribution shift
+融合模拟数据与人类数据
+The combination of simulated data with limited human data in a controlled latent space resolves the challenges of data scarcity and distribution shift.
+将模拟数据与有限的人类数据结合，并通过潜在空间的控制解决数据稀缺与分布偏移问题。
 
-3. **Human-adaptive sampling as a practical tool**  
-   人类适配采样的实用性  
-   - Introducing human-adaptive sampling ensures the generated strategies align closely with real-world human behaviors, even when human data is sparse.  
-   - 引入人类适配采样确保生成的策略更贴近现实中的人类行为，即使人类数据稀缺也能实现高效合作。
+3. Human-adaptive sampling as a practical tool
+人类适配采样的实用性
+Introducing human-adaptive sampling ensures the generated strategies align closely with real-world human behaviors, even when human data is sparse.
+引入人类适配采样确保生成的策略更贴近现实中的人类行为，即使人类数据稀缺也能实现高效合作。
 
-4. **Empirical success in Overcooked**  
-   在Overcooked任务中的实证成功  
-   - GAMMA consistently outperforms state-of-the-art methods in both objective performance and subjective human evaluation, especially in complex environments.  
-   - GAMMA 在客观性能和主观人类评价中均优于现有方法，尤其在复杂环境中表现尤为显著。
+4. Empirical success in Overcooked
+在Overcooked任务中的实证成功
+GAMMA consistently outperforms state-of-the-art methods in both objective performance and subjective human evaluation, especially in complex environments.
+GAMMA 在客观性能和主观人类评价中均优于现有方法，尤其在复杂环境中表现尤为显著。
 
 ---
 

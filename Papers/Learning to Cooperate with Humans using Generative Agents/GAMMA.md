@@ -32,7 +32,7 @@ the dual problems
 
 
 # Methodology
-
+![[Pasted image 20241224103322.png]]
 
 
 # Evaluation

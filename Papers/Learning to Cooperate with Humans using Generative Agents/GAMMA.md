@@ -47,6 +47,7 @@ while simulated behavior may not cover the space by itself, the generative model
 ![[Pasted image 20241224105209.png]]
 
 3. Targeted GAMMA using Human-Adaptive Sampling and Fine-tuning
+>it is useful to target model adaptation to be human-specific rather than to span the entire space of potentially irrelevant synthetic strategies (as shown in Figure 1).
 
 
 # Evaluation

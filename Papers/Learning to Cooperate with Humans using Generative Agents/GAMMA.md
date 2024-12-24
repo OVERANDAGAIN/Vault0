@@ -44,9 +44,9 @@ while simulated behavior may not cover the space by itself, the generative model
 ```
 
 2.  Training a Cooperator with Generative Coordination Models
+![[Pasted image 20241224105209.png]]
 
-
-
+3. Targeted GAMMA using Human-Adaptive Sampling and Fine-tuning
 
 
 # Evaluation

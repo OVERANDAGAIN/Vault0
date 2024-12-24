@@ -6,15 +6,14 @@ Generative Agent Modeling for Multi-agent Adaptation (GAMMA)
 
 1. Generative model(VAE) for diverse strategy modeling —— robust  zero-shot coordination
 2. Combining simulated and human data —— solve data scarcity and distribution shift
-3. Human-adaptive sampling —— let generated strategies align closely with real-world human behaviors
-4. limitations —— relies heavily on the quality and diversity of the training data
-5. Human-adaptive sampling ——  reduces reliance on expensive human data
+3. Human-adaptive sampling —— let generated strategies align closely with real-world human behaviors ——  reduce reliance on expensive human data
+4. limitations —— rely heavily on the quality and diversity of the training data
 
 
 
 ## Inspiration for Us （启发点）
 
-1. Emphasizing strategy diversity in training can significantly improve coordination performance and robustness to novel agents or humans.
+1. Emphasizing strategy diversity in training —— improve coordination performance and robustness to novel agents or humans.
 2. Efficient use of limited human data（Methods like human-adaptive sampling)
 3. Generative modeling as a tool
 

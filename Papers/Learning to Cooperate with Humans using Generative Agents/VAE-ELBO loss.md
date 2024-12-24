@@ -193,7 +193,7 @@ $$\mathcal{L}(\phi, \theta; \mathbf{x})
 
 $$\log p(\mathbf{x}) \;\;\geq\;\; \mathcal{L}(\phi,\theta; \mathbf{x}).$$
 
-因此，通过最大化 $\mathcal{L}$，就能逼近最大化 $\log p(\mathbf{x})$。也可以理解为最小化其负值（即 **ELBO Loss**）。对于 **VAE** 来说，这个损失函数也称作 **重构误差 + KL 散度**。
+因此，通过最大化 $\mathcal{L}$，就能逼近最大化 $\log p(\mathbf{x})$。也可以理解为==最小化其负值（即 **ELBO Loss**）==。对于 **VAE** 来说，这个损失函数也称作 **重构误差 + KL 散度**。
 
 ---
 

@@ -32,8 +32,15 @@ the dual problems
 
 
 # Methodology
+
+1. Learning Generative Models of Partner Behavior
 ![[Pasted image 20241224103322.png]]
 
+![[Pasted image 20241224103526.png]]
+
+```ad-question
+
+```
 
 # Evaluation
 

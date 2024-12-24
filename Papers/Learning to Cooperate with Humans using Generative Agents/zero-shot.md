@@ -1,3 +1,6 @@
+---
+创建时间: 2024-十二月-24日  星期二, 9:32:13 上午
+---
 [[GAMMA]]
 
 # Questions
@@ -11,7 +14,7 @@ Training agents that can coordinate ==zero-shot== with humans is a key mission i
 # Answers
 
 ## GPT_Answers
-在这里，**zero-shot coordination（零样本协作）**问题指的是：**训练一个智能体，使其能够在从未见过的合作伙伴（比如人类玩家）情况下，实现有效协作**。这是多智能体强化学习（MARL）中的一个重要任务，尤其是在人机交互场景中。
+在这里，**zero-shot coordination（零样本协作）** 问题指的是：训练一个智能体，使其能够==在从未见过的合作伙伴（比如人类玩家）情况下，实现有效协作==。这是多智能体强化学习（MARL）中的一个重要任务，尤其是在人机交互场景中。
 
 ---
 
@@ -54,18 +57,6 @@ Training agents that can coordinate ==zero-shot== with humans is a key mission i
 2. 通过从潜在空间采样不同的“合作伙伴”，训练协作智能体（Cooperator）。  
    - 生成模型的潜在空间能够捕捉人类行为的多样性；  
    - 通过训练智能体与这些多样化的“合作伙伴”进行交互，可以使其适应不同的合作策略，提升其 **zero-shot coordination** 能力。
-
----
-
-## 4. 总结
-
-- **zero-shot coordination** 问题：训练一个智能体，使其能与从未见过的合作伙伴（特别是人类玩家）实现高效协作。  
-- **难点**：真实世界中的合作伙伴（尤其是人类）的行为策略复杂且多样，传统的 MARL 或行为克隆方法难以覆盖这些策略，导致智能体在新场景下表现不佳。  
-- **解决方案**：  
-  - 使用生成模型学习人类行为的潜在表示，捕捉策略、意图、风格等特征；  
-  - 用生成的多样化“模拟合作伙伴”训练智能体，提升其对未见合作伙伴的适应性。
-
-这种方法为解决 **zero-shot coordination** 问题提供了一种高效且灵活的思路，在例如 Overcooked 这样的任务中具有很大潜力。
 
 ## Other_Answers
 

@@ -11,15 +11,9 @@ Generative Agent Modeling for Multi-agent Adaptation (GAMMA)
 
 2. Combining simulated and human data —— solve data scarcity and distribution shift
 
-3. Human-adaptive sampling as a practical tool
-人类适配采样的实用性
-Introducing human-adaptive sampling ensures the generated strategies align closely with real-world human behaviors, even when human data is sparse.
-引入人类适配采样确保生成的策略更贴近现实中的人类行为，即使人类数据稀缺也能实现高效合作。
+3. Human-adaptive sampling —— let generated strategies align closely with real-world human behaviors
 
-4. Empirical success in Overcooked
-在Overcooked任务中的实证成功
-GAMMA consistently outperforms state-of-the-art methods in both objective performance and subjective human evaluation, especially in complex environments.
-GAMMA 在客观性能和主观人类评价中均优于现有方法，尤其在复杂环境中表现尤为显著。
+
 
 ---
 

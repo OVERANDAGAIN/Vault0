@@ -4,7 +4,7 @@ Generative Agent Modeling for Multi-agent Adaptation (GAMMA)
 以下是更具启发性的 **Take-away Message** 和 **Inspiration for us**，并附有中英文对照：
 
 ---
-
+—
 ### Take-away Message （关键信息）
 
 1. Generative model(VAE) for diverse strategy modeling -robust  zero-shot coordination

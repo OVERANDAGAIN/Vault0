@@ -38,9 +38,16 @@ the dual problems
 
 ![[Pasted image 20241224103526.png]]
 
-```ad-question
+```ad-success
+while simulated behavior may not cover the space by itself, the generative model has significantly greater coverage over the strategy space.
 
 ```
+
+2.  Training a Cooperator with Generative Coordination Models
+
+
+
+
 
 # Evaluation
 

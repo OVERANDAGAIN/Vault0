@@ -73,6 +73,12 @@ while simulated behavior may not cover the space by itself, the generative model
 
 
 # Limitations
+关于实验设计的问题
 
+    实验评价的客观性
+        人类主观评价结果表明GAMMA生成的智能体更符合人类期望。然而主观评价是否可能存在偏差，例如用户偏好某种特定行为？是否需要更多样化的人群样本以验证主观评价的广泛适用性？
+
+    复杂任务场景的适应性
+        在Multi-Strategy Counter布局中，论文提到由于CoMeDi生成的数据不足以覆盖复杂的策略空间，导致GAMMA表现不佳。如果任务的复杂性进一步提升，例如需要多步骤的协同决策（如分配角色+协调行为），是否会放大这种缺陷？
 
 # FootNotes

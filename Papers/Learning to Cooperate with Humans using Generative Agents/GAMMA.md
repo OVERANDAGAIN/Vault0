@@ -1,48 +1,23 @@
 #paper_summary 
 Generative Agent Modeling for Multi-agent Adaptation (GAMMA)
 # Inspiration
-以下是更具启发性的 **Take-away Message** 和 **Inspiration for us**，并附有中英文对照：
 
----
-—
 ### Take-away Message （关键信息）
 
 1. Generative model(VAE) for diverse strategy modeling —— robust  zero-shot coordination
-
 2. Combining simulated and human data —— solve data scarcity and distribution shift
-
 3. Human-adaptive sampling —— let generated strategies align closely with real-world human behaviors
+4. limitations —— relies heavily on the quality and diversity of the training data
+5. Human-adaptive sampling ——  reduces reliance on expensive human data
 
 
 
----
+## Inspiration for Us （启发点）
 
-### Inspiration for Us （启发点）
+1. Emphasizing strategy diversity in training can significantly improve coordination performance and robustness to novel agents or humans.
+2. Efficient use of limited human data（Methods like human-adaptive sampling)
+3. Generative modeling as a tool
 
-1. **Prioritizing diversity in MARL**  
-   重视多智能体强化学习中的多样性  
-   - Emphasizing strategy diversity in training can significantly improve coordination performance and robustness to novel agents or humans.  
-   - 在训练中强调策略多样性能够显著提升协调性能，并增强对新型智能体或人类的适应能力。
-
-2. **Efficient use of limited human data**  
-   有效利用有限的人类数据  
-   - Methods like human-adaptive sampling demonstrate how a small amount of human data can be amplified through generative models, reducing reliance on costly data collection.  
-   - 像人类适配采样这样的方法展示了如何通过生成模型放大少量的人类数据，从而减少对昂贵数据采集的依赖。
-
-3. **Generative modeling as a core tool**  
-   将生成模型视为核心工具  
-   - Incorporating generative modeling into MARL tasks enables better coverage of behavior spaces and facilitates solving complex coordination problems.  
-   - 在多智能体强化学习任务中引入生成模型，有助于更全面地覆盖行为空间，并推动复杂协调问题的解决。
-
-4. **Real-world applicability of GAMMA**  
-   GAMMA 的现实应用潜力  
-   - The GAMMA framework inspires applications beyond games, such as multi-robot systems, human-agent collaboration in industrial settings, or personalized virtual assistants.  
-   - GAMMA 框架启发了游戏以外的应用，例如多机器人系统、工业场景中的人机协作或个性化虚拟助手。
-
-5. **Towards human-centric AI systems**  
-   迈向以人为中心的人工智能系统  
-   - Building agents that adapt to and align with human behaviors opens new possibilities for more intuitive and efficient human-AI collaborations.  
-   - 构建能够适应并契合人类行为的智能体，为更直观高效的人机协作开辟了新可能。
 
 # Focus
 the dual problems 

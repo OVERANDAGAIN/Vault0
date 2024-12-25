@@ -5,6 +5,47 @@
 
 # Inspiration
 
+## Take-away Message（关键信息）
+few-shot; ToM and opponent modeling
+1. Few-shot adaptation in mixed-motive environments —— by leveraging hierarchical opponent modeling and planning.
+2. Hierarchical opponent modeling —— high-level goal inference and low-level goal-conditioned policy learning, continuously updating beliefs both within and across episodes.
+3. Planning with MCTS —— integrating Monte Carlo Tree Search (MCTS) with belief updates
+4. Emergence of social intelligence —— self-organized cooperation and the formation of disadvantaged alliances
+
+
+
+## Inspiration for Us（启发点）
+
+Goal inference as a foundation for planning
+基于目标推断的规划基础
+HOP highlights the potential of goal inference in improving the adaptability and efficiency of decision-making in uncertain environments.
+HOP 强调了目标推断在提升不确定环境中决策适应性与效率的潜力。
+
+2. Scalable solutions for multi-agent environments
+多智能体环境的可扩展解决方案
+The hierarchical design avoids the computational explosion of joint action spaces, offering a scalable approach for large-scale multi-agent cooperation.
+分层设计避免了联合动作空间的计算爆炸，为大规模多智能体合作提供了可扩展的方法。
+
+3. Few-shot learning in dynamic systems
+动态系统中的少样本学习
+Few-shot adaptation in mixed-motive games inspires research on dynamic and adaptive strategies in real-world applications like robotics and human-computer interaction.
+混合动机游戏中的少样本适应能力启发我们研究动态且自适应的策略，可应用于机器人和人机交互等实际场景。
+
+4. Social dynamics and emergent behavior
+社会动态与涌现行为
+The observed emergence of alliances and cooperation suggests opportunities to explore social intelligence in AI, especially for multi-agent coordination.
+涌现的联盟与合作现象提示我们可以进一步探索 AI 中的社会智能，尤其在多智能体协调领域。
+
+5. Human-centric applications
+以人为中心的应用
+HOP’s ability to infer and respond to opponents’ goals offers insights for designing AI systems that align with human values and preferences in collaborative settings.
+HOP 推断并响应对手目标的能力，为设计与人类价值观和偏好一致的协作 AI 系统提供了启发。
+
+6. Future exploration of hierarchical reasoning
+层次化推理的未来探索
+The potential extension to higher-order Theory of Mind (ToM) and autonomous goal abstraction opens new avenues for improving decision-making algorithms.
+拓展至更高阶“心智理论”（ToM）及自主目标抽象的可能性，为改进决策算法开辟了新方向。
+
 
 
 # Innovation

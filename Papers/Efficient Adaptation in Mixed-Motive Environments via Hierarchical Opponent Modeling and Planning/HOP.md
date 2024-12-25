@@ -25,8 +25,8 @@ Add intrinstic rewards, consider the impact on others, maximize extrinstic rewar
 
 ToMAGA $\Longrightarrow$ hand-crafted intrinstic rewards access to rewards of co-players
 counterfactual reasoning
-LOLA, POLA, M-FOS $\Longrightarrow$ consider the impact (rather than treating them as a static part) $\Longrightarrow$ require knowledge of co-players' netwprl parameters
-I-POMDP, opponent modeling $\Longrightarrow$ esrious computational complexity
+LOLA, POLA, M-FOS $\Longrightarrow$ consider the impact (rather than treating them as a static part) $\Longrightarrow$ require knowledge of co-players' network parameters
+I-POMDP, opponent modeling $\Longrightarrow$ serious computational complexity
 
 # Methodology
 two modules:

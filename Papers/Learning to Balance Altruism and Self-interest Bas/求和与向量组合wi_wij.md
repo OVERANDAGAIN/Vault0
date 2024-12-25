@@ -11,8 +11,8 @@
 
 # Answers
 ```ad-important
-这里的$\\textbf{w_i}$是用粗体表示的，表示向量；
-下面的$\\textbf{r_i}$应该是同样的道理
+这里的$\mathbf{w_i}$是用粗体表示的，表示向量；
+下面的$\mathbf{r_i}$应该是同样的道理
 ```
 
 ## GPT_Answers

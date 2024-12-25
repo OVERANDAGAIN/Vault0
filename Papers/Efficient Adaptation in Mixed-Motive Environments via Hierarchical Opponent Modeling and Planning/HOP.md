@@ -31,15 +31,6 @@ The hierarchical design avoids the computational explosion of joint action space
 Few-shot adaptation in mixed-motive games inspires research on dynamic and adaptive strategies in real-world applications like robotics and human-computer interaction.
 混合动机游戏中的少样本适应能力启发我们研究动态且自适应的策略，可应用于机器人和人机交互等实际场景。
 
-4. Social dynamics and emergent behavior
-社会动态与涌现行为
-The observed emergence of alliances and cooperation suggests opportunities to explore social intelligence in AI, especially for multi-agent coordination.
-涌现的联盟与合作现象提示我们可以进一步探索 AI 中的社会智能，尤其在多智能体协调领域。
-
-5. Human-centric applications
-以人为中心的应用
-HOP’s ability to infer and respond to opponents’ goals offers insights for designing AI systems that align with human values and preferences in collaborative settings.
-HOP 推断并响应对手目标的能力，为设计与人类价值观和偏好一致的协作 AI 系统提供了启发。
 
 6. Future exploration of hierarchical reasoning
 层次化推理的未来探索

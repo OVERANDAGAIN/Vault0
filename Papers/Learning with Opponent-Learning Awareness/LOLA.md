@@ -2,7 +2,32 @@
 
 # Inspiration
 
+## Take-away Message
 
+1. LOLA explicitly incorporates the opponent's learning process into its own strategy update
+2. LOLA fosters cooperative behavior by shaping opponent updates, unlike independent learners that often lead to defection
+3. LOLA agents can exploit naive learners, but higher-order exploits yield diminishing returns
+
+
+
+## Inspiration for Us
+
+1. Modeling and influencing opponent updates allows for more sophisticated strategies in multi-agent environments.
+2. LOLA highlights how cooperation can emerge from strategic interactions, inspiring the design of self-organizing multi-agent systems
+3. LOLA’s gradient-based approach to influencing opponents —— whether LOLA can be exploited by adversarial agents using global search methods.
+
+
+- LOLA (Exact Gradient + Hessian):  core idea of explicitly considering the opponent's gradient updates
+- LOLA (Policy Gradient-Based): Adapts to deep reinforcement learning environments, eliminating the need for exact Hessians but still requiring access to opponent parameters.
+- LOLA (Opponent modeling): Relaxes the assumption by inferring opponent parameters through modeling or interaction, without direct access.
+- Higher-Order LOLA: Extends LOLA by considering that the opponent is also using LOLA and reasoning over higher-order game dynamics.
+
+
+-  Naive Learner (对照组)，只用自己的梯度，不关心对手的反应。
+- LOLA（精确梯度 + Hessian） 提出核心思想，显式考虑对手在学习时会改变梯度。
+- LOLA（基于策略梯度） 适配深度强化学习环境，不再需要精确 Hessian，但仍要求知道对手的参数。
+- LOLA（对象建模） 放宽假设，不需要直接访问对手参数，而是通过建模/交互来推断。
+- Higher Order LOLA 进一步考虑对手也在LOLA考虑自己的更新，进行高阶博弈推理。
 
 # Focus
 1. Instead, LOLA considers general sum games.
@@ -15,7 +40,7 @@ LOLA is the first method that aims to shape the learning of other agents in a mu
 2. LOLA（精确梯度 + Hessian） 提出核心思想，显式考虑对手在学习时会改变梯度。
 3. LOLA（基于策略梯度） 适配深度强化学习环境，不再需要精确 Hessian，但仍要求知道对手的参数。
 4. LOLA（对手建模） 放宽假设，不需要直接访问对手参数，而是通过建模/交互来推断。
-5. Higher Order LOLA 进一步考虑对手也在考虑自己的更新，进行高阶博弈推理。
+5. Higher Order LOLA 进一步考虑对手也在LOLA考虑自己的更新，进行高阶博弈推理。
 
 为什么需要 Hessian？ —— 因为要显式计算“对手的更新如何依赖我的参数”，这是 LOLA 最核心的“对手学习意识”。
 为什么改用 PG？ —— 因为在大型或复杂环境里无法显式拿到 Hessian，必须用抽样近似。

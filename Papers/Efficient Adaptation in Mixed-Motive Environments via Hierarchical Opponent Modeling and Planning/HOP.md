@@ -5,7 +5,7 @@
 
 # Inspiration
 
-## Take-away Message（关键信息）
+## Take-away Message
 few-shot; ToM and opponent modeling
 1. Few-shot adaptation in mixed-motive environments —— by leveraging hierarchical opponent modeling and planning.
 2. Hierarchical opponent modeling —— high-level goal inference and low-level goal-conditioned policy learning, continuously updating beliefs both within and across episodes.
@@ -14,7 +14,7 @@ few-shot; ToM and opponent modeling
 
 
 
-## Inspiration for Us（启发点）
+## Inspiration for Us
 
 1.  hierarchical approaches for solving complex tasks where goals and strategies are intertwined
 2. The belief update component of HOP demonstrates the importance of modeling uncertainty about opponents’ goals.  

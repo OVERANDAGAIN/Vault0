@@ -3,6 +3,16 @@
 # Inspiration
 
 
+## Take-away Message
+
+
+
+
+## Inspiration for Us
+
+
+
+
 
 # Focus
 

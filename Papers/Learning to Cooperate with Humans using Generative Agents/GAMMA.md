@@ -5,7 +5,7 @@
 Generative Agent Modeling for Multi-agent Adaptation (GAMMA)
 # Inspiration
 
-### Take-away Message （关键信息）
+## Take-away Message
 
 1. Generative model(VAE) for diverse strategy modeling —— robust  zero-shot coordination
 2. Combining simulated and human data —— solve data scarcity and distribution shift
@@ -14,7 +14,7 @@ Generative Agent Modeling for Multi-agent Adaptation (GAMMA)
 
 
 
-## Inspiration for Us （启发点）
+## Inspiration for Us
 
 1. Emphasizing strategy diversity in training —— improve coordination performance and robustness to novel agents or humans.
 2. Efficient use of limited human data（Methods like human-adaptive sampling)

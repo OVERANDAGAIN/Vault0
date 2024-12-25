@@ -17,11 +17,9 @@ few-shot; ToM and opponent modeling
 ## Inspiration for Us（启发点）
 
 1.  hierarchical approaches for solving complex tasks where goals and strategies are intertwined
-2. Belief Update Mechanisms
-   - The belief update component of HOP demonstrates the importance of modeling uncertainty about opponents’ goals. Future research could focus on enhancing belief updates using probabilistic models, Bayesian frameworks, or neural network-based approaches.  
+2. The belief update component of HOP demonstrates the importance of modeling uncertainty about opponents’ goals.  
 3. clear definition of goals is needed in HOP —— require a technique that can autonomously abstract goal sets in various scenarios
 4. higher-order ToM
-5. 
 
 # Innovation
 few-shot adaptation in mixed-motive environments (despite success in zero-sum and pure-cooperative environments)

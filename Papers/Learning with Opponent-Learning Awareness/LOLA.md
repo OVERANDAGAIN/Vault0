@@ -5,10 +5,11 @@
 
 
 # Focus
-Instead, LOLA considers general sum games.
-LOLA assumes learning agents, which effectively correspond to unbounded memory policies.
+1. Instead, LOLA considers general sum games.
+2. LOLA assumes learning agents, which effectively correspond to unbounded memory policies.
+3. LOLA agent directly shapes the policy updates of all opponents in order to maximise its own reward.
 
-
+LOLA is the first method that aims to shape the learning of other agents in a multi-agent RL setting.
 # Innovation
 
 

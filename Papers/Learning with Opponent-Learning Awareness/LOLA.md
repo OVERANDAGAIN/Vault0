@@ -9,6 +9,18 @@
 3. LOLA agents can exploit naive learners, but higher-order exploits yield diminishing returns
 
 
+- LOLA (Exact Gradient + Hessian):  core idea of explicitly considering the opponent's gradient updates
+- LOLA (Policy Gradient-Based): Adapts to deep reinforcement learning environments, eliminating the need for exact Hessians but still requiring access to opponent parameters.
+- LOLA (Opponent modeling): Relaxes the assumption by inferring opponent parameters through modeling or interaction, without direct access.
+- Higher-Order LOLA: Extends LOLA by considering that the opponent is also using LOLA and reasoning over higher-order game dynamics.
+```ad-seealso
+
+-  Naive Learner (对照组)，只用自己的梯度，不关心对手的反应。
+- LOLA（精确梯度 + Hessian） 提出核心思想，显式考虑对手在学习时会改变梯度。
+- LOLA（基于策略梯度） 适配深度强化学习环境，不再需要精确 Hessian，但仍要求知道对手的参数。
+- LOLA（对象建模） 放宽假设，不需要直接访问对手参数，而是通过建模/交互来推断。
+- Higher Order LOLA 进一步考虑对手也在LOLA考虑自己的更新，进行高阶博弈推理。
+```
 
 ## Inspiration for Us
 
@@ -17,17 +29,7 @@
 3. LOLA’s gradient-based approach to influencing opponents —— whether LOLA can be exploited by adversarial agents using global search methods.
 
 
-- LOLA (Exact Gradient + Hessian):  core idea of explicitly considering the opponent's gradient updates
-- LOLA (Policy Gradient-Based): Adapts to deep reinforcement learning environments, eliminating the need for exact Hessians but still requiring access to opponent parameters.
-- LOLA (Opponent modeling): Relaxes the assumption by inferring opponent parameters through modeling or interaction, without direct access.
-- Higher-Order LOLA: Extends LOLA by considering that the opponent is also using LOLA and reasoning over higher-order game dynamics.
 
-
--  Naive Learner (对照组)，只用自己的梯度，不关心对手的反应。
-- LOLA（精确梯度 + Hessian） 提出核心思想，显式考虑对手在学习时会改变梯度。
-- LOLA（基于策略梯度） 适配深度强化学习环境，不再需要精确 Hessian，但仍要求知道对手的参数。
-- LOLA（对象建模） 放宽假设，不需要直接访问对手参数，而是通过建模/交互来推断。
-- Higher Order LOLA 进一步考虑对手也在LOLA考虑自己的更新，进行高阶博弈推理。
 
 # Focus
 1. Instead, LOLA considers general sum games.

@@ -1,3 +1,6 @@
+---
+创建时间: 2024-十二月-18日  星期三, 8:35:22 晚上
+---
 #paper_summary 
 
 # Inspiration
@@ -5,7 +8,7 @@
 
 
 # Innovation
-few-shot adaptation in mixed-motive environments (despite success in zero-sum and pire-cooperative environments)
+few-shot adaptation in mixed-motive environments (despite success in zero-sum and pure-cooperative environments)
 
 
 # Background

@@ -28,7 +28,7 @@
 
 
 # Methodology
-
+We also present a version of LOLA adopted to the deep RL setting using **likelihood ratio policy gradients**, making LOLA scalable to settings with high dimensional input and parameter spaces.
 
 
 # Evaluation

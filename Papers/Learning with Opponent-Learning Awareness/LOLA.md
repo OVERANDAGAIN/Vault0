@@ -19,7 +19,7 @@
 # Background
 1. Considering future applications of multi-agent RL, such as self-driving cars, it is obvious that many of these will be only partially cooperative and contain elements of competition and conflict.
 2. Considering future applications of multi-agent RL, such as self-driving cars, it is obvious that many of these will be only partially cooperative and contain elements of competition and conflict.
-3. One well-known shortcoming is that they fail to consider the learning process of the other agents and simply treat the other agent as a static part of the environment
+3. One well-known shortcoming is that they fail to consider the learning process of the other agents and simply treat the other agent as a static part of the environmento
 
 
 # Related Work

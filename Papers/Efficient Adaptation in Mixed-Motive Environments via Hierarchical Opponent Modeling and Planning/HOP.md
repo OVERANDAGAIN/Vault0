@@ -31,44 +31,10 @@ few-shot; ToM and opponent modeling
    - HOP’s success in few-shot learning highlights the potential of combining structure-aware opponent modeling with meta-learning techniques, providing a new avenue for improving adaptability in MARL.  
    - HOP 在少样本学习中的成功凸显了结合结构化对手建模与元学习技术的潜力，为提升 MARL 中的适应性提供了新方向。
 
-4. **Exploring Mixed-Motive Environments**  
-   **混合动机环境的探索**  
-   - The mixed-motive setting in HOP encourages MARL researchers to shift beyond fully cooperative or competitive environments, focusing instead on nuanced interactions where agents have partially aligned interests.  
-   - HOP 的混合动机环境促使研究者超越完全合作或竞争的传统环境，转向研究智能体部分利益一致的细微交互场景。
-
-5. **Scalable Multi-Agent Planning**  
-   **可扩展的多智能体规划**  
-   - By integrating Monte Carlo Tree Search (MCTS) with opponent modeling, HOP addresses the scalability challenge in large joint action spaces. Researchers can further explore planning techniques that balance computational feasibility and decision-making quality.  
-   - 通过将蒙特卡洛树搜索（MCTS）与对手建模结合，HOP 解决了联合动作空间扩展中的可扩展性问题。研究者可以进一步探索平衡计算可行性与决策质量的规划技术。
-
-6. **Social Intelligence as a Byproduct of Learning**  
-   **社会智能作为学习的副产品**  
-   - The emergence of self-organized cooperation and alliances among HOP agents suggests that MARL algorithms can be designed to encourage emergent social behavior, even without explicitly encoding cooperation rules.  
-   - HOP 智能体间自组织合作与联盟的涌现表明，即使不显式编码合作规则，MARL 算法也可以设计为鼓励社会行为的涌现。
-
-7. **Evaluation Beyond Performance Metrics**  
-   **超越性能指标的评估方式**  
-   - HOP illustrates the importance of evaluating models on emergent behaviors and adaptability to unseen opponents. This encourages researchers to design benchmarks that assess broader aspects of intelligence, such as reasoning and flexibility.  
-   - HOP 强调了在涌现行为和对未知对手适应性方面评估模型的重要性，这启发研究者设计能够评估智能更广泛维度（如推理能力与灵活性）的基准。
-
 8. **Higher-Order Reasoning in Multi-Agent Systems**  
    **多智能体系统中的高阶推理**  
    - HOP's hierarchical approach opens the door for exploring higher-order Theory of Mind (ToM), where agents reason not only about their opponents’ goals but also about their reasoning processes.  
    - HOP 的层次化方法为探索更高阶“心智理论”（ToM）奠定了基础，使智能体不仅能够推断对手的目标，还能推断对手的推理过程。
-
-9. **Unified Frameworks for Mixed-Motive MARL**  
-   **混合动机 MARL 的统一框架**  
-   - HOP integrates reasoning, belief updates, and planning seamlessly. Future MARL research can aim to develop more unified frameworks that incorporate these elements for mixed-motive environments.  
-   - HOP 无缝整合了推理、信念更新与规划，未来 MARL 研究可以致力于开发将这些元素融合的混合动机环境统一框架。
-
-10. **Understanding and Modeling Emergent Phenomena**  
-    **涌现现象的理解与建模**  
-    - The spontaneous formation of alliances in HOP highlights the importance of studying emergent phenomena in MARL. Researchers can investigate how agent-level rules lead to system-level behaviors.  
-    - HOP 中联盟的自发形成凸显了研究 MARL 涌现现象的重要性，研究者可以探索智能体层面的规则如何导致系统层面的行为。
-
----
-
-这些启发基于研究者角度展开，旨在引导对 MARL 核心问题的深入思考和创新方向。如果需要更具体的扩展，请随时告诉我！
 
 # Innovation
 few-shot adaptation in mixed-motive environments (despite success in zero-sum and pure-cooperative environments)

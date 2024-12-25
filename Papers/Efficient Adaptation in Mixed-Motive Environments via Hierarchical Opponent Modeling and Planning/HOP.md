@@ -16,17 +16,12 @@ few-shot; ToM and opponent modeling
 
 ## Inspiration for Us（启发点）
 
-1. **Hierarchical Opponent Modeling as a Design Paradigm**  
-   **分层对手建模作为设计范式**  
-   - The HOP framework showcases the value of combining high-level reasoning (goal inference) with low-level policy learning. This inspires MARL researchers to explore more hierarchical approaches for solving complex tasks where goals and strategies are intertwined.  
-   - HOP 框架展示了高层推理（目标推断）与低层策略学习结合的价值，这启发研究者在解决目标与策略交织的复杂任务时，探索更多分层方法。
-
-2. **Belief Update Mechanisms**  
-   **信念更新机制**  
+1.  hierarchical approaches for solving complex tasks where goals and strategies are intertwined
+2. Belief Update Mechanisms
    - The belief update component of HOP demonstrates the importance of modeling uncertainty about opponents’ goals. Future research could focus on enhancing belief updates using probabilistic models, Bayesian frameworks, or neural network-based approaches.  
-   - HOP 的信念更新部分展示了对手目标不确定性建模的重要性，未来研究可以通过概率模型、贝叶斯框架或基于神经网络的方法来增强信念更新能力。
 3. clear definition of goals is needed in HOP —— require a technique that can autonomously abstract goal sets in various scenarios
-
+4. higher-order ToM
+5. 
 
 # Innovation
 few-shot adaptation in mixed-motive environments (despite success in zero-sum and pure-cooperative environments)

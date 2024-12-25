@@ -11,11 +11,11 @@
 
 LOLA is the first method that aims to shape the learning of other agents in a multi-agent RL setting.
 
-Naive Learner (对照组)，只用自己的梯度，不关心对手的反应。
-LOLA（精确梯度 + Hessian） 提出核心思想，显式考虑对手在学习时会改变梯度。
-LOLA（基于策略梯度） 适配深度强化学习环境，不再需要精确 Hessian，但仍要求知道对手的参数。
-LOLA（对手建模） 放宽假设，不需要直接访问对手参数，而是通过建模/交互来推断。
-Higher Order LOLA 进一步考虑对手也在考虑自己的更新，进行高阶博弈推理。
+1. Naive Learner (对照组)，只用自己的梯度，不关心对手的反应。
+2. LOLA（精确梯度 + Hessian） 提出核心思想，显式考虑对手在学习时会改变梯度。
+3. LOLA（基于策略梯度） 适配深度强化学习环境，不再需要精确 Hessian，但仍要求知道对手的参数。
+4. LOLA（对手建模） 放宽假设，不需要直接访问对手参数，而是通过建模/交互来推断。
+5. Higher Order LOLA 进一步考虑对手也在考虑自己的更新，进行高阶博弈推理。
 
 为什么需要 Hessian？ —— 因为要显式计算“对手的更新如何依赖我的参数”，这是 LOLA 最核心的“对手学习意识”。
 为什么改用 PG？ —— 因为在大型或复杂环境里无法显式拿到 Hessian，必须用抽样近似。

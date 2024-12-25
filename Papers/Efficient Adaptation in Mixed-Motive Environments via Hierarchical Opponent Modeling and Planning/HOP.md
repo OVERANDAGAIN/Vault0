@@ -25,16 +25,8 @@ few-shot; ToM and opponent modeling
    **信念更新机制**  
    - The belief update component of HOP demonstrates the importance of modeling uncertainty about opponents’ goals. Future research could focus on enhancing belief updates using probabilistic models, Bayesian frameworks, or neural network-based approaches.  
    - HOP 的信念更新部分展示了对手目标不确定性建模的重要性，未来研究可以通过概率模型、贝叶斯框架或基于神经网络的方法来增强信念更新能力。
+3. clear definition of goals is needed in HOP —— require a technique that can autonomously abstract goal sets in various scenarios
 
-3. **Few-shot Adaptation in Dynamic Systems**  
-   **动态系统中的少样本适应性**  
-   - HOP’s success in few-shot learning highlights the potential of combining structure-aware opponent modeling with meta-learning techniques, providing a new avenue for improving adaptability in MARL.  
-   - HOP 在少样本学习中的成功凸显了结合结构化对手建模与元学习技术的潜力，为提升 MARL 中的适应性提供了新方向。
-
-8. **Higher-Order Reasoning in Multi-Agent Systems**  
-   **多智能体系统中的高阶推理**  
-   - HOP's hierarchical approach opens the door for exploring higher-order Theory of Mind (ToM), where agents reason not only about their opponents’ goals but also about their reasoning processes.  
-   - HOP 的层次化方法为探索更高阶“心智理论”（ToM）奠定了基础，使智能体不仅能够推断对手的目标，还能推断对手的推理过程。
 
 # Innovation
 few-shot adaptation in mixed-motive environments (despite success in zero-sum and pure-cooperative environments)

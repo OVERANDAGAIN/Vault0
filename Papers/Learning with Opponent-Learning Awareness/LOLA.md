@@ -24,8 +24,8 @@
 
 ## Inspiration for Us
 
-1. Modeling and influencing opponent updates allows for more sophisticated strategies in multi-agent environments.
-2. LOLA highlights how cooperation can emerge from strategic interactions, inspiring the design of self-organizing multi-agent systems
+1. Modeling and influencing opponent updates allows for more sophisticated strategies in MAS
+2. LOLA highlights how cooperation can emerge from strategic interactions, inspiring the design of self-organizing MAS
 3. LOLA’s gradient-based approach to influencing opponents —— whether LOLA can be exploited by adversarial agents using global search methods.
 
 

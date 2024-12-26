@@ -6,11 +6,12 @@ GuoHao Li
 
 
 # Context
-agents in 1986: join mindless agents $\Longrightarrow$ intelligence —— The Society of Mind. 
+1. agents in 1986: join mindless agents $\Longrightarrow$ intelligence —— The Society of Mind. 
 
-Language models as agents $\Longrightarrow$ WebGPT(web browsing )
+2. Language models as agents $\Longrightarrow$ WebGPT(web browsing )
 
-
+3. How to scaling Muti-agent systems?
+	1. Number of parameters/agents $\Longrightarrow$ CAMEL
 
 # Innovation
 

@@ -1,7 +1,12 @@
 [[LASE]]
 
 # Questions
-$$V_i^\pi(s_0) = \mathbb{E}_{a_t \sim \pi, s_{t+1} \sim P(s_t, a_t)} \left[ \sum_{t=0}^\infty \gamma^t R^i(s_t, a_t) \right](1)$$
+N -player partially observable Markov game (POMG):(page 3)
+$$V_i^\pi(s_0) = \mathbb{E}_{a_t \sim \pi, s_{t+1} \sim P(s_t, a_t)} \left[ \sum_{t=0}^\infty \gamma^t R^i(s_t, a_t) \right]\hspace{5em}(1)$$
+
+
+The value function for each agent is defined by:(page 13)
+$$V^i(\theta^1, \theta^2) = \sum_{t=0}^\infty \gamma^t p^T r^{i, \text{tot}}\hspace{5em}(14)$$
 
 # Answers
 

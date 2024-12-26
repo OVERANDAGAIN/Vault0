@@ -16,8 +16,8 @@ GuoHao Li
 		1. $\Longrightarrow$ CAMEL
 			1. better than one agent 
 			2. stem generate more data
-		2. OASIS 1million agents simulate social media
-			1. 
+		2. OASIS 1 million agents simulate social media
+			1. Herd Effect in "Reddit"
 
 # Innovation
 

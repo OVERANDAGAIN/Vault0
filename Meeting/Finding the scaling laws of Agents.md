@@ -28,6 +28,7 @@ CAMEL AI
 	3. Training evolution of agents 
 		1. fireact , 
 		2. MemGPT
+		3. GraphRAG
 
 # Innovation
 

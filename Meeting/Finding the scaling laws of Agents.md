@@ -12,6 +12,9 @@ GuoHao Li
 
 3. How to scaling Muti-agent systems?
 	1. Number of parameters/agents $\Longrightarrow$ CAMEL
+		1. better than one agent 
+		2. stem generate more data
+		3. OASIS 1million agents simulate social media
 
 # Innovation
 

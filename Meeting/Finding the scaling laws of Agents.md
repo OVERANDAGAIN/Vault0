@@ -1,6 +1,7 @@
 #meeting 
 GuoHao Li
 @Eigent Ai
+CAMEL AI
 ![[Pasted image 20241226160548.png]]
 # Inspiration
 
@@ -24,7 +25,9 @@ GuoHao Li
 			- Cross-environment; 
 			- benchmark; 
 			- fine-grained graph evaluator 
-			
+	3. Training evolution of agents 
+		1. fireact , 
+		2. MemGPT
 
 # Innovation
 

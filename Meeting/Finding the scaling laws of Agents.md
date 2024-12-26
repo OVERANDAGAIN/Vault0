@@ -6,6 +6,9 @@ GuoHao Li
 
 
 # Context
+agents in 1986: join mindless agents $\Longrightarrow$ intelligence —— The Society of Mind. 
+
+
 
 
 

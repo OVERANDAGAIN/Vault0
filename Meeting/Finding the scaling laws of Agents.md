@@ -20,6 +20,11 @@ GuoHao Li
 			1. Herd Effect in "Reddit"
 			2. information propogation in "X"
 	2. Data $\Longrightarrow$ environment of agents
+		1. Crab $\Longleftrightarrow$ 
+			- Cross-environment; 
+			- benchmark; 
+			- fine-grained graph evaluator 
+			
 
 # Innovation
 

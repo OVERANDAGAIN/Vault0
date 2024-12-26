@@ -1,3 +1,6 @@
+---
+创建时间: 2024-十二月-26日  星期四, 3:59:27 下午
+---
 #meeting 
 GuoHao Li
 @Eigent Ai
@@ -25,8 +28,8 @@ CAMEL AI
 			- Cross-environment; 
 			- benchmark; 
 			- fine-grained graph evaluator 
-	3. Training evolution of agents 
-		1. fireact , 
+	3. Training $\Longrightarrow$ evolution of agents 
+		1. fireact？ , trajectory
 		2. MemGPT
 		3. GraphRAG
 

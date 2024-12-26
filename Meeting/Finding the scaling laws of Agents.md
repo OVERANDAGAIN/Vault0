@@ -19,6 +19,7 @@ GuoHao Li
 		2. OASIS 1 million agents simulate social media
 			1. Herd Effect in "Reddit"
 			2. information propogation in "X"
+	2. Data $\Longrightarrow$ environment of agents
 
 # Innovation
 

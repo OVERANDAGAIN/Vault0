@@ -1,7 +1,7 @@
 #meeting 
 GuoHao Li
 @Eigent Ai
-
+![[Pasted image 20241226160548.png]]
 # Inspiration
 
 

@@ -8,7 +8,7 @@ GuoHao Li
 # Context
 agents in 1986: join mindless agents $\Longrightarrow$ intelligence —— The Society of Mind. 
 
-
+Language models as agents $\Longrightarrow$ WebGPT(web browsing )
 
 
 

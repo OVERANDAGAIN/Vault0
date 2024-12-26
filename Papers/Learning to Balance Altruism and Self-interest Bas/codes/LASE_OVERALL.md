@@ -4,7 +4,56 @@
 
 # Codes/Questions
 
-```python
+```makefile
+F:\project
+│
+├── lio                     # LASE 的核心模块实现
+│   ├── lio
+│   │   ├── lio             # 可能包含 LASE 的核心实现
+│   │   ├── lio.egg-info    # 项目依赖和打包信息
+│   │   ├── .gitignore      # Git 忽略文件配置
+│   │   ├── LICENSE         # 许可证
+│   │   ├── README.md       # 项目简介和使用说明
+│   │   └── setup.py        # 项目依赖安装脚本
+│   └── ...
+│
+├── lio_baseline            # 包含基线算法和比较实验
+│
+├── Social-Influence-as-Intrinsic-Motivation-for-Multi-Agent-Deep-Reinforcement
+│   ├── AC_rnn.py           # 使用 Actor-Critic 方法（带 RNN）的实现
+│   ├── dec_eco.py          # 决策经济学相关实现
+│   ├── empathy_vs_rule.py  # 同情与规则驱动行为的对比实现
+│   ├── env.py              # 定义核心实验环境
+│   ├── env_comp_obs.py     # 处理复杂观测的环境逻辑
+│   ├── gift_vs_A2C_cleanup.py # 在 Cleanup 环境中对比 Gift 和 A2C
+│   ├── gift_vs_A2C_coingame.py # 在 Coingame 中对比 Gift 和 A2C
+│   ├── given_other_policy.py # 模拟其他智能体行为的策略
+│   ├── IPD.py              # 在囚徒困境 (IPD) 中的实验实现
+│   ├── IPD_empathy.py      # IPD 环境中考虑同情行为的扩展
+│   ├── known_reward.py     # 处理已知奖励的环境逻辑
+│   ├── LOLAPolicy.py       # LOLA 策略的实现（论文对比基线之一）
+│   ├── matrix_game_theory.py # 矩阵博弈的理论推导实现
+│   ├── model_sd.py         # 模型保存和加载逻辑
+│   ├── no_imagine.py       # 禁用推测机制的实验逻辑
+│   ├── partial_img.py      # 部分可观测环境的处理
+│   ├── prosocial.py        # 亲社会行为策略的实现
+│   ├── prosocial_A2C.py    # 亲社会行为与 A2C 策略的对比
+│   ├── rebuttal_*          # 论文补充实验
+│   │   ├── rebuttal_dueling.py
+│   │   ├── rebuttal_dueling_stag.py
+│   │   ├── rebuttal_staghunt.py
+│   │   └── rebuttal_wo_cf_baseline.py
+│   ├── replay.py           # 经验回放机制的实现
+│   ├── replay_rnn.py       # 带 RNN 的经验回放逻辑
+│   ├── rule_cleanup.py     # Cleanup 规则实验的实现
+│   ├── self_play_train.py  # 自我对弈训练逻辑
+│   ├── self_play_train_parallel.py # 并行自我对弈的实现
+│   ├── train_rnn.py        # 使用 RNN 的训练流程
+│   ├── train_staghunt.py   # 在 Sequential Stag Hunt 中的训练逻辑
+│   └── ...
+│
+└── ...
+
 
 ```
 

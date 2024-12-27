@@ -7,7 +7,55 @@
 
 # Codes/Questions
 
-```makefile
+```text
+project/
+├── lio/
+├── io_baseline/
+├── Social-Influence-as-Intrinsic-Motivation-for-Multi-Agent-Deep-Reinforcement-Learning/
+│   ├── social_dilemmas/
+│   │   ├── envs/
+│   │   │   ├── __init__.py
+│   │   │   ├── maps.py
+│   │   ├── a2c_conv.py
+│   │   ├── a2c_simple.py
+│   │   ├── main_influence.py
+│   │   ├── run_apple_learning.py
+│   │   ├── run_cartpole.py
+│   │   ├── run_trapped_box.py
+│   │   ├── run_trapped_box_causal.py
+│   │   ├── utility_funcs.py
+│   ├── README.md
+│   ├── requirements.txt
+├── AC_rnn.py
+├── dec_eco.py
+├── empathy_vs_rule.py
+├── env.py
+├── env_comp_obs.py
+├── gift_vs_A2C_cleanup.py
+├── gift_vs_A2C_coingame.py
+├── given_other_policy.py
+├── IPD.py
+├── IPD_empathy.py
+├── known_reward.py
+├── LOLAPolicy.py
+├── matrix_game_theory.py
+├── model_sd.py
+├── no_imagine.py
+├── partial_img.py
+├── prosocial.py
+├── prosocial_A2C.py
+├── prosocial_vs_A2C.py
+├── rebuttal_dueling.py
+├── rebuttal_dueling_stag.py
+├── rebuttal_staghunt.py
+├── rebuttal_wo_cf_baseline.py
+├── replay.py
+├── replay_rnn.py
+├── rule_cleanup.py
+├── self_play_train.py
+├── self_play_train_parallel.py
+├── train_rnn.py
+├── train_staghunt.py
 
 
 ```
@@ -16,117 +64,9 @@
 # Answers
 
 ## Overall_Answers
-### **综合分析和结构化理解**
 
-通过分析项目中的文件结构和内容，特别是 LASE 算法和 “Social Influence as Intrinsic Motivation” 的目标与实现方式，我们可以重新组织这些文件的功能和逻辑，形成清晰的层次结构。以下是综合分析的结论：
 
----
 
-### **1. 核心算法部分**
-**主要文件**：
-- `a2c_conv.py` 和 `a2c_simple.py`：
-  - **功能**：实现基于 A2C（Advantage Actor-Critic）的核心强化学习算法。
-  - **角色**：
-    - A2C 是强化学习中常用的算法，可能是项目中用于多智能体学习的基线算法。
-    - 文件中可能包含针对 LASE 和对比实验的改动（如同情权重计算或内在动机奖励）。
-
-- `main_influence.py`：
-  - **功能**：实现多智能体的影响力机制。
-  - **角色**：
-    - 核心文件，可能包含社会影响力奖励的计算以及其对主策略的反馈。
-    - 实现了与 LASE 类似的机制，强调通过社会交互引导智能体学习。
-
----
-
-### **2. 环境与仿真部分**
-**主要文件**：
-- 文件夹 `envs/`：
-  - 包含环境相关的实现，可能是为多智能体学习提供仿真环境的核心代码。
-
-- `maps.py`：
-  - **功能**：定义或生成仿真环境中的地图（如苹果采集或卡车驾驶）。
-  - **角色**：
-    - 可能是与 LASE 对比实验中清理、采集等任务相关。
-
-- `run_cartpole.py` 和 `run_apple_learning.py`：
-  - **功能**：定义特定任务（如 Cartpole、苹果采集）的运行逻辑。
-  - **角色**：
-    - 每个文件可能对应不同的实验任务。
-    - Cartpole 可能是一个单智能体的经典基线环境，而苹果采集涉及多智能体交互。
-
-- `run_trapped_box.py` 和 `run_trapped_box_causal.py`：
-  - **功能**：模拟复杂的社会困境或因果关系测试。
-  - **角色**：
-    - 提供更复杂的环境，用于检验社会影响力机制在博弈中的效果。
-
----
-
-### **3. 实验对比与结果分析部分**
-**主要文件**：
-- `main_influence.py`：
-  - 除核心算法外，可能包含实验配置与不同方法的对比。
-
-- `utility_funcs.py`：
-  - **功能**：包含辅助功能，例如记录训练过程、评估奖励分布或生成可视化图表。
-  - **角色**：
-    - 支持实验结果的记录与分析。
-    - 可能是对 LASE 社会机制和对比实验的效果展示。
-
-- `README.md` 和 `requirements.txt`：
-  - 描述项目目标、依赖项和实验复现步骤，但可能未充分说明文件间的组织逻辑。
-
----
-
-### **4. 未充分组织的问题**
-从项目的组织上来看，存在以下问题：
-1. **文件结构缺乏模块化**：
-   - 核心算法、实验任务和对比基线的实现混杂在一起，导致文件间依赖不清晰。
-   - 例如，`a2c_conv.py` 和 `a2c_simple.py` 的功能可能可以合并到一个模块中，而不是单独分开。
-
-2. **实验脚本与核心代码耦合**：
-   - 任务脚本（如 `run_cartpole.py`）包含了任务环境和训练逻辑，但这些逻辑本应抽象为统一接口。
-   - 实验脚本可能重复实现了类似的设置，导致维护困难。
-
-3. **对比实验逻辑分散**：
-   - 对比实验的实现可能分散在多个文件中，如 `main_influence.py` 和 `rebuttal_*` 系列文件。
-   - 缺乏明确的基线组织和实验设计。
-
----
-
-### **建议的改进与重新组织**
-为了提高项目的可读性和复现性，可以按以下结构重组：
-
-#### **(1) 核心算法模块**
-将所有与算法实现相关的内容集中在一个目录下，比如 `algorithms/`：
-- `algorithms/a2c.py`：包含所有 A2C 算法相关的逻辑。
-- `algorithms/lase.py`：实现 LASE 特定的奖励赠予机制。
-- `algorithms/social_influence.py`：实现社会影响力奖励。
-
-#### **(2) 环境模块**
-将所有环境相关代码移到单独的目录 `envs/`：
-- `envs/maps.py`：地图或任务定义。
-- `envs/apple_gathering.py`：苹果采集任务的环境。
-- `envs/trapped_box.py`：困境测试任务的环境。
-
-#### **(3) 实验与运行脚本模块**
-创建一个 `experiments/` 目录，集中存放运行脚本和实验配置：
-- `experiments/run_cartpole.py`：单智能体基线实验。
-- `experiments/run_social_dilemmas.py`：社会困境实验。
-- `experiments/run_comparison.py`：对比不同算法的实验脚本。
-
-#### **(4) 工具模块**
-创建一个 `utils/` 目录，放置辅助功能代码：
-- `utils/visualization.py`：可视化工具。
-- `utils/logging.py`：训练日志和结果记录。
-
-#### **(5) 文档和复现说明**
-- 补充 README 文件，明确文件和模块的功能。
-- 在 `requirements.txt` 中清晰列出依赖项，确保实验可以复现。
-
----
-
-### **最终理解**
-当前项目虽然包含了丰富的实验和算法实现，但缺乏清晰的模块化设计，导致文件分散且逻辑耦合较高。通过重新组织结构，可以更好地区分核心算法、实验任务和工具模块，使项目更加易于理解和扩展。
 ## 1_Answers
 
 

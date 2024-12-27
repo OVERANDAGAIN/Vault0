@@ -1,3 +1,6 @@
+---
+创建时间: 2024-十二月-27日  星期五, 3:04:45 下午
+---
 [[
 
 
@@ -236,7 +239,105 @@ for i in range(env.action_space-1):
 other_action[cur_try_action_pos[:, 0], cur_try_action_pos[:, 1]] = 1  # try another action
 ```
 - **含义**：
-  - 将 `other_action` 中对应 `cur_try_action_pos` 的位置置为 1，表示假设其他智能体选择了第 `i` 个未选择动作。
+  - 将 `other_action` 中对应 `cur_try_action_pos` 的位置置为 1，表示假设其他智能体选择了第 `i` 个未选择动作。[^1]
+
+````ad-info
+这行代码的关键作用是 **模拟一个假设动作**，具体操作是将 `other_action` 中对应于某一假设动作的位置设置为 `1`，表示当前智能体在这一假设情况下选择了该动作。
+
+---
+
+### **详细拆解和解释**
+
+#### **2. `other_action[cur_try_action_pos[:, 0], cur_try_action_pos[:, 1]]` 的含义**
+- 通过双索引操作，对 `other_action` 的特定位置进行定位和修改：
+  - `cur_try_action_pos[:, 0]`：选取所有样本的样本编号（行号）。
+  - `cur_try_action_pos[:, 1]`：选取当前动作编号（列号）。
+
+- **作用**：
+  - 通过行列索引精确定位到 `other_action` 中需要修改的动作位置。
+
+#### **3. `= 1` 表示什么？**
+- 将 `other_action` 中索引位置的值设置为 `1`，表示这个动作在当前假设下被选择。
+
+- **含义**：
+  - 当前假设中，`other_action` 的这一位置被设置为有效动作（选择了该动作）。
+
+---
+
+````
+
+
+````ad-tip
+如果有更多样本（即批量大小 $\text{batch\_size} > 1$），那么这段代码会针对每个样本分别操作，以下是具体情况的扩展解释和示例。
+
+---
+
+### **假设多个样本的情况**
+
+#### **输入情况**
+1. **动作空间维度**：
+   - 每个样本的动作空间为 $6$。
+   - 可能的动作索引范围为 $[0, 5]$。
+
+2. **批量大小**：
+   - 假设 $\text{batch\_size} = 3$（3 个样本）。
+   - 初始 `other_action` 为：
+     ```python
+     other_action = tensor([
+         [0, 0, 0, 0, 0, 0],  # 样本 1
+         [0, 0, 0, 0, 0, 0],  # 样本 2
+         [0, 0, 0, 0, 0, 0],  # 样本 3
+     ])
+     ```
+
+3. **当前假设未选择的动作位置**：
+   - `cur_try_action_pos` 为：
+     ```python
+     cur_try_action_pos = tensor([
+         [0, 3],  # 样本 1，动作索引为 3
+         [1, 2],  # 样本 2，动作索引为 2
+         [2, 5],  # 样本 3，动作索引为 5
+     ])
+     ```
+
+#### **执行代码**
+```python
+other_action[cur_try_action_pos[:, 0], cur_try_action_pos[:, 1]] = 1
+```
+
+---
+
+#### **操作逻辑**
+
+1. **`cur_try_action_pos[:, 0]`**:
+   - 提取样本索引：
+     ```python
+     tensor([0, 1, 2])  # 分别对应样本 1、样本 2、样本 3
+     ```
+
+2. **`cur_try_action_pos[:, 1]`**:
+   - 提取动作索引：
+     ```python
+     tensor([3, 2, 5])  # 样本 1 的动作索引为 3，样本 2 的为 2，样本 3 的为 5
+     ```
+
+3. **修改 `other_action`**：
+   - 对于每个样本的 `other_action`，将指定动作位置设置为 `1`。
+
+---
+
+#### **操作后的结果**
+```python
+other_action = tensor([
+    [0, 0, 0, 1, 0, 0],  # 样本 1 选择了动作索引 3
+    [0, 0, 1, 0, 0, 0],  # 样本 2 选择了动作索引 2
+    [0, 0, 0, 0, 0, 1],  # 样本 3 选择了动作索引 5
+])
+```
+
+````
+
+
 
 - **示例**：
   -  `other_action` 初始为：
@@ -370,3 +471,5 @@ cf_result = torch.transpose(torch.stack(counterfactual_result), 0, 1)
 
 
 # FootNotes
+
+[^1]: python代码选择行列

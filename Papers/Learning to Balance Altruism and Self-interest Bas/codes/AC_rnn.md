@@ -239,7 +239,7 @@ other_action[cur_try_action_pos[:, 0], cur_try_action_pos[:, 1]] = 1  # try anot
   - 将 `other_action` 中对应 `cur_try_action_pos` 的位置置为 1，表示假设其他智能体选择了第 `i` 个未选择动作。
 
 - **示例**：
-  - 假设 `other_action` 初始为：
+  -  `other_action` 初始为：
     ```python
     other_action = tensor([[0, 0, 0, 0, 0, 0]])
     ```

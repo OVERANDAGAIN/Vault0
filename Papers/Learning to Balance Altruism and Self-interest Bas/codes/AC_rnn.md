@@ -403,6 +403,32 @@ with torch.no_grad():
     # Result: tensor([[0.8], [0.9]])
     ```
 
+cf_value计算[^2]
+````ad-info
+
+#### **例子**
+假设：
+- $\text{cf\_q\_value} = \text{tensor([[0.5, 0.6, 0.4, 0.7, 0.2, 0.8]])}$
+- $\text{my\_action} = \text{tensor([[3]])}$
+
+执行 `gather` 后：
+```python
+cf_q_value = tensor([[0.7]])  # 提取动作索引 3 的 Q-value
+```
+
+---
+
+### **总结**
+这两步的逻辑可以概括为：
+1. **模型预测**：
+   - 在反事实假设的联合动作下，预测智能体的所有动作的 Q-value。
+   - 使用禁用梯度计算（`torch.no_grad()`）提高效率。
+2. **提取对应动作的 Q-value**：
+   - 使用 `gather` 从预测的 Q-value 中提取当前智能体选择的实际动作的 Q-value，作为假设下的价值评估。
+
+最终，这一步为反事实因子的计算提供了所需的假设 Q-value。
+````
+
 ---
 
 #### **5. 存储反事实结果并重置 `other_action`**
@@ -426,7 +452,10 @@ other_action.fill_(0)
     ```python
     other_action = tensor([[0, 0, 0, 0, 0, 0]])
     ```
-
+    why?[^3]
+````ad-help
+为什么这里counterfactual_result 两项大小不一样？？
+````
 ---
 
 #### **6. 转置反事实结果矩阵**
@@ -473,3 +502,5 @@ cf_result = torch.transpose(torch.stack(counterfactual_result), 0, 1)
 # FootNotes
 
 [^1]: python代码选择行列
+[^2]: 计算了vf_value
+[^3]: #to_be_solved 

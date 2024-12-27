@@ -7,7 +7,7 @@
 
 # Codes/Questions
 
-- [?] 下面比较replay.py和reply_rnn.py（也即同样的问题，为什么要使用不同的两py）
+- [x] 下面比较replay.py和reply_rnn.py（也即同样的问题，为什么要使用不同的两py） ✅ 2024-12-27
 
 ```python
 

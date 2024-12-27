@@ -495,7 +495,107 @@ cf_result = torch.transpose(torch.stack(counterfactual_result), 0, 1)
 - 通过这种方式，可以分析不同动作对当前智能体的影响，为反事实因子的计算提供基础。
 
 ## 3_Answers
+### **逐行解析最后一段代码**
 
+#### **背景**
+这段代码的目标是计算 **反事实因子（factor）**，即衡量当前动作 $\text{real\_q\_value}$ 在所有可能假设动作中的相对位置，并通过归一化的方式转换为一个 $[-1, 1]$ 范围的量化值。
+
+---
+
+### **代码解析**
+
+#### **1. 找到最小值和最大值**
+```python
+min_value, _ = cf_result.min(dim=1)
+max_value, _ = cf_result.max(dim=1)
+```
+- **`cf_result`**:
+  - 是一个二维张量，形状为 $(\text{batch\_size}, \text{num\_hypotheses})$。
+  - 每行表示一个样本中真实 Q-value 及所有假设动作的 Q-value。
+
+- **操作**：
+  - `cf_result.min(dim=1)`：沿着假设动作的维度（第 1 维）找到每个样本的最小 Q-value。
+  - `cf_result.max(dim=1)`：同理，找到每个样本的最大 Q-value。
+
+- **返回**：
+  - `min_value` 和 `max_value` 是形状为 $(\text{batch\_size},)$ 的向量，分别存储每个样本的最小和最大 Q-value。
+
+- **示例**：
+  假设 $\text{cf\_result}$ 为：
+  ```python
+  cf_result = tensor([
+      [0.8, 0.6, 0.7],  # 样本 1
+      [0.5, 0.9, 0.4],  # 样本 2
+      [0.7, 0.8, 0.9]   # 样本 3
+  ])
+  ```
+  则：
+  ```python
+  min_value = tensor([0.6, 0.4, 0.7])  # 每行的最小值
+  max_value = tensor([0.8, 0.9, 0.9])  # 每行的最大值
+  ```
+
+---
+
+#### **2. 计算反事实因子（归一化）**
+```python
+factor = 2 * (real_q_value - min_value) / (max_value - min_value) - 1
+```
+- **公式来源**：
+  - 将 $\text{real\_q\_value}$ 归一化到 $[0, 1]$ 的范围：
+    $$\text{normalized\_value} = \frac{\text{real\_q\_value} - \text{min\_value}}{\text{max\_value} - \text{min\_value}}$$
+  - 映射到 $[-1, 1]$：
+    $$\text{factor} = 2 \cdot \text{normalized\_value} - 1$$
+
+- **作用**：
+  - `factor` 表示当前动作 Q-value 在所有假设动作范围内的位置。
+    - $-1$：接近最小值。
+    - $1$：接近最大值。
+    - $0$：接近中间值。
+
+- **示例**：
+  假设：
+  - $\text{real\_q\_value} = tensor([0.7, 0.6, 0.8])$。
+  - $\text{min\_value} = tensor([0.6, 0.4, 0.7])$。
+  - $\text{max\_value} = tensor([0.8, 0.9, 0.9])$。
+  则：
+  $$\text{normalized\_value} = \frac{\text{real\_q\_value} - \text{min\_value}}{\text{max\_value} - \text{min\_value}} = tensor([0.5, 0.4, 0.5])$$
+  $$\text{factor} = 2 \cdot \text{normalized\_value} - 1 = tensor([0.0, -0.2, 0.0])$$
+
+---
+
+#### **3. 加权因子与 `observable`**
+```python
+return factor.view(-1, 1).to(device).detach() * torch.tensor(observable).to(device).view(-1, 1)
+```
+- **作用**：
+  - 将计算出的 `factor` 乘以 `observable`，进一步调整结果。
+  - `observable` 是一个向量，表示当前样本中其他智能体是否在视野范围内（或其他观测条件）。
+    - $1$：可以观测到。
+    - $0$：无法观测到。
+
+- **逻辑**：
+  - 如果 `observable` 为 $0$，则将对应样本的因子置为 $0$，表明当前智能体对其他智能体的动作没有可观测影响。
+
+- **示例**：
+  假设：
+  - $\text{factor} = tensor([0.0, -0.2, 0.0])$。
+  - $\text{observable} = tensor([1, 0, 1])$。
+  则：
+  $$\text{result} = \text{factor} \cdot \text{observable} = tensor([0.0, -0.0, 0.0])$$
+
+---
+
+### **总结**
+这段代码的功能是：
+1. **归一化 Q-value**：
+   - 将 `real_q_value` 映射到所有假设动作的 Q-value 范围内，量化其相对位置。
+2. **映射到 $[-1, 1]$**：
+   - 转换为一个可比较的因子，表示当前动作的好坏程度。
+3. **结合观测条件**：
+   - 使用 `observable` 调整因子值，仅在相关情况下赋予因子权重。
+
+结果是一个矩阵，表示每个样本的反事实因子，用于后续的策略调整或奖励分配。
 
 
 

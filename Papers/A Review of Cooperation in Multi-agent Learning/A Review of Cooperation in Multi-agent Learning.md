@@ -20,6 +20,13 @@
 # Focus
 ![[Pasted image 20241230145523.png]]
 
+Various multi-agent learning settings:[^1]
+1. Cooperative Setting $\Longrightarrow$ recognised as ==multi-agent MDPs==
+2. Comprtitive Setting $\Longrightarrow$ ==zero-sum== Markov games
+3. Mixed Setting $\Longrightarrow$ ==general-sum== game framework 
+
+
+
 
 # Innovation
 
@@ -54,3 +61,5 @@
 
 
 # FootNotes
+
+[^1]: MAL settings

@@ -1,4 +1,4 @@
-[[A Review of Cooperation in Multi-agent Learning]]
+[[Open Problems in Cooperative AI]]
 
 Arrow’s Theorem（阿罗不可能定理）
 

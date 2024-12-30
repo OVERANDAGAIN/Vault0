@@ -1,4 +1,4 @@
-[[A Review of Cooperation in Multi-agent Learning]]
+[[Open Problems in Cooperative AI]]
 
 Q 在google的一篇cooperation in AI.中，如何去理解这样一句话：when the agent is aligned,it is a relationship of pure common interest
 

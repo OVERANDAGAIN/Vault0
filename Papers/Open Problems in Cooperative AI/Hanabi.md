@@ -1,4 +1,4 @@
-[[A Review of Cooperation in Multi-agent Learning]]
+[[Open Problems in Cooperative AI]]
 
 论文中经常提到的游戏 Hanabi是什么，有什么应用/
 

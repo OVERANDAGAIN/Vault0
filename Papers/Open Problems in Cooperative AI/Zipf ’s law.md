@@ -1,4 +1,4 @@
-[[A Review of Cooperation in Multi-agent Learning]]
+[[Open Problems in Cooperative AI]]
 
 **Zipf's Law** 是一种在语言学、统计学以及其他自然和社会现象中观察到的经验法则。它描述了某些数据集中的频率分布，主要特征是某些数据点（如单词、城市人口等）频率分布的幂律规律。以下是其核心内容和应用背景：
 

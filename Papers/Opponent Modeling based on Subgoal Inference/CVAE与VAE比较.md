@@ -10,7 +10,9 @@
 
 
 # Answers
+$$L^V = -D_{KL}(q(z|x) \| p(z)) + \beta \cdot \mathbb{E}_{q(z|x)}(\log(p(x|z))).$$
 
+$$L^V = -D_{KL}(q(z|x,y) \| p(z|y)) + \mathbb{E}_{q(z|x,y)} (\log p(x|z, y))$$
 
 
 知乎分析VAE:[^2]

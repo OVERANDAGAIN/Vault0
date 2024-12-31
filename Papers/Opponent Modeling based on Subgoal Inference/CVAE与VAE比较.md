@@ -10,14 +10,16 @@
 
 
 # Answers
-
-VAE:
+## Overall_Answers
+### VAE:
 $$L^V = -D_{KL}(q(z|x) \| p(z)) + \beta \cdot \mathbb{E}_{q(z|x)}(\log(p(x|z))).$$
+隐空间z中采样，生成x $\Longrightarrow$ 参数为 $\theta$
 z:单位高斯分布
-q:把x和z对应
+q:把x和z对应 x $\Longrightarrow$ z     参数为$\phi$
 
 
-CVAE:
+### CVAE:
+不是从z采样了，从z|y中采样
 $$L^V = -D_{KL}(q(z|x,y) \| p(z|y)) + \mathbb{E}_{q(z|x,y)} (\log p(x|z, y))$$
 
 

@@ -1,11 +1,18 @@
+---
+创建时间: 2024-十二月-31日  星期二, 3:10:39 下午
+---
 [[Opponent Modeling based on Subgoal Inference]]
 
 # Questions
 
 - [?] What does Oracle mean?
 
-下面是一篇关于使用subgoal（opponent modeling ）代替 一般的infer actions 的论文的一部分论述。其中的oracle是什么意思？
->Learned Q-values using tabular Q-learning in an 11 × 11 gridworld. The agent and the  opponent start from the S1 and S2, respectively. The two rewarding grids are D1 and D2, and the  reward will only be given to the agent who arrives first. The opponent executes one of policies π1−i  and π2−i, which target D1 and D2, respectively. ==The g and a−i are obtained from an oracle.==
+
+下面是一篇关于使用 **subgoal（opponent modeling）** 代替一般的 **infer actions** 的论文的一部分论述。其中的 **oracle** 是什么意思？
+
+> **Learned Q-values using tabular Q-learning in an $11 \times 11$ gridworld.**  
+> The agent and the opponent start from $S_1$ and $S_2$, respectively. The two rewarding grids are $D_1$ and $D_2$, and the reward will only be given to the agent who arrives first. The opponent executes one of policies $\pi_{1-i}$ and $\pi_{2-i}$, which target $D_1$ and $D_2$, respectively. ==The $g$ and $a_{-i}$ are obtained from an oracle.==
+
 
 
 # Answers

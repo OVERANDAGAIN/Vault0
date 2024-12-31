@@ -11,6 +11,13 @@
 
 # Answers
 
+
+
+知乎分析VAE:[^2]
+[Site Unreachable](https://zhuanlan.zhihu.com/p/344546057)
+
+
+
 ## GPT_Answers
 
 
@@ -27,3 +34,4 @@
 # FootNotes
 
 [^1]: 不一样的证明方式_Jensen不等式与直接展开
+[^2]: 知乎分析VAE链接

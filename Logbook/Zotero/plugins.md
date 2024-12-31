@@ -3,14 +3,14 @@
 ---
 #log_zotero 
 
-untill 
+Untill [[2024-12-31]]  : About 10 plugins 
 # Questions
 
-- [?] 
+- [?] Plugins in Zotero
 
 
 # Answers
-
+![[Pasted image 20241231115141.png]]
 
 ## GPT_Answers
 

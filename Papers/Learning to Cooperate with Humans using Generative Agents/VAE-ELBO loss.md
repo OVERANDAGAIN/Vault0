@@ -178,7 +178,7 @@ $$f\bigl(\mathbb{E}[X]\bigr)
 - 在实际应用中，它为很多“不易直接计算的式子”提供了上下界估计，为概率论、统计学、信息论与优化理论奠定了重要基础。
 ````
 
-定义该不等式右边为 **ELBO**（Evidence Lower BOund）：
+定义该不等式右边为 **ELBO**（Evidence Lower Bound）：
 
 $$\mathcal{L}(\phi, \theta; \mathbf{x}) 
 = \mathbb{E}_{q_{\phi}(\mathbf{z}\mid \mathbf{x})}\bigl[ \log p_{\theta}(\mathbf{x}, \mathbf{z}) - \log q_{\phi}(\mathbf{z}\mid \mathbf{x}) \bigr].$$

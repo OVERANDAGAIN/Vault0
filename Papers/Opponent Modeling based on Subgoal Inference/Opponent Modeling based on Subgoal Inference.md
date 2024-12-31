@@ -30,7 +30,7 @@
 
 
 # Background
-
+1. Opponent modeling plays a crucial role in enhancing the robustness and stability of reinforcement learning
 
 
 # Related Work

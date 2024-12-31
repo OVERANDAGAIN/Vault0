@@ -4,6 +4,9 @@
 #log_zotero 
 
 # Questions
+- Zotero的free版本仅有300MB存储
+- Onedrive教育版有100G,但有回收风险
+- Onedrive个人版有5G，近几年使用尚可。
 
 - [?] Zotfile仅能在Zotero6中使用。Zotero7使用Attanger进行同步。
 

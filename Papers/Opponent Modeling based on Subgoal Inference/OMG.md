@@ -78,14 +78,18 @@ $$\langle \hat{\theta}, \hat{\phi} \rangle = \arg\max_{\theta, \phi} \mathbb{E}_
 	
 two distinct manners for the subgoal selection:
 
-cooperative games:
+- cooperative games:
 $$\bar{g}_t = \arg \max_{s_i \in \mathcal{N}_t^H} \mathbb{E}_{g \sim p_\psi(\cdot | s_i)} V(s_t, g)$$
-general-sum games:
+- general-sum games:
 $$\bar{g}_t = \arg \min_{s_i \in \mathcal{N}_t^H} \mathbb{E}_{g \sim p_\psi(\cdot | s_i)} V(s_t, g)$$
 
- choice of $H$ gives a trade-off between ==generalization to diverse opponents== and  ==learning difficulty==
+ - choice of $H$ gives a trade-off between ==generalization to diverse opponents== and  ==learning difficulty==
 	   
-	   
+ - combination of the prior subgoal $\bar{g}$ and the inferred subgoal $\hat{g}$ as the input of Q-network,
+
+$$g_t = \hat{g}_t \mathbb{I}(\eta > \epsilon) + \bar{g}_t \mathbb{I}(\eta \leq \epsilon), \quad \eta \sim U[0,1],$$
+
+where $\epsilon$ is a hyperparameter that decreases to zero over training. 
 
 # Evaluation
 1. In this paper, we consider the most common setting where ==opponents have unseen, diverse, but fixed policies== during test.

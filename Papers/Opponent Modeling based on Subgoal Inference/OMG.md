@@ -96,7 +96,14 @@ where $\epsilon$ is a hyperparameter that decreases to zero over training.
 2. The historical trajectory is ==available==
 3. For convenience, the learning agent treats all other agents as ==a joint opponen==t with the joint action and reward.
 4. ==Subgoals== represent feature ==embeddings of future states== that the opponent aims to achieve
-5. 
+
+
+two environments (discrete and continuous  state spaces) and then test its generalization to opponents with unseen policies in a more complex  environment.
+	three multi-agent environments:
+1. Foraging
+2. Predator-Prey
+3. SMAC
+
 
 # Results
 

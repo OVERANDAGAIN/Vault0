@@ -117,7 +117,7 @@ OMG-supervised $\Longrightarrow$ the inference model uses an MLP instead of a CV
 
 In the OMG, the subgoal is selected by choosing the state within the future H steps that either maximizes or minimizes the value function V (s, g). OMG-random, OMG-1s, OMG-3s
 
-subgoal selection 
+subgoal selection from  $\bar{g}$ to $\hat{g}$  , which should help avoid instability during the training of the subgoal inference model.
 
 
 

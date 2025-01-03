@@ -60,8 +60,10 @@ $$Q(s_t, g_t, a_t) = \mathbb{E}_{P(s_{t+1} | s_t, a_{-i}, a)} \left[ r + \gamma 
 ````
  
 2. Opponent modeling based on subgoal inference
-	1. subgoal inference model
-````ad-note
+   
+	==subgoal inference model:==
+--- 
+```ad-note
 Employ ==(CVAE)== as the subgoal inference model. 
 
 ==Subgoal posterior probability== as $q_\phi(\hat{g}_t|\tau_t, s_t)$ and the ==likelihood estimate== as $p_\theta(s_t|\hat{g}_t, \tau_t)$ with $\phi$ and $\theta$ respectively
@@ -69,9 +71,11 @@ Employ ==(CVAE)== as the subgoal inference model.
 The ==subgoal prior model==, denoted as $p_\psi(\hat{g}_t|s_t^g)$, is a pre-trained variational autoencoder (VAE)
 	
 $$\langle \hat{\theta}, \hat{\phi} \rangle = \arg\max_{\theta, \phi} \mathbb{E}_{q_\phi(\hat{g}_t|\tau_t, s_t)} \left[ \log p_\theta(s_t|\hat{g}_t, \tau_t) \right] - \text{KL} \left( q_\phi(\hat{g}_t|\tau_t, s_t) \parallel p_\psi(\hat{g}_t|s_t^g) \right).$$
-````
 
-	1. subgoal selector
+```
+---
+	==subgoal selector==
+	
 	   
 	   
 

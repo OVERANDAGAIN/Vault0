@@ -113,7 +113,7 @@ D3QN&PPO&IQL
 # Results
 
 ## Ablation Study
-OMG-supervised
+OMG-supervised $\Longrightarrow$ the inference model uses an MLP instead of a CVAE
 
 # Limitations
 

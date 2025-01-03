@@ -61,6 +61,11 @@ $$Q(s_t, g_t, a_t) = \mathbb{E}_{P(s_{t+1} | s_t, a_{-i}, a)} \left[ r + \gamma 
  
 2. Opponent modeling based on subgoal inference
 	1. subgoal inference model
+	
+	
+	
+	2. subgoal selector
+	   
 	   
 
 # Evaluation

@@ -112,7 +112,8 @@ D3QN&PPO&IQL
 
 # Results
 
-
+## Ablation Study
+OMG-supervised
 
 # Limitations
 

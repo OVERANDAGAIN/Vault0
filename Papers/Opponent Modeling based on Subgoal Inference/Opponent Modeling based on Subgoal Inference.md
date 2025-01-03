@@ -18,7 +18,8 @@
 
 
 # Focus
-
+1. we propose opponent modeling based on subgoal inference, which infers the opponent’s subgoals through historical trajectories
+2. design two  subgoal selection modes for cooperative games and general-sum games respectively.
 
 
 # Innovation
@@ -26,7 +27,7 @@
 
 
 # Theroy
-
+As subgoals are likely to be shared by different opponent policies, predicting subgoals can yield better generalization to unknown opponents.
 
 
 # Background

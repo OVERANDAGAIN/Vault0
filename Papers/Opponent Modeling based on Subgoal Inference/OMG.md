@@ -75,6 +75,12 @@ $$\langle \hat{\theta}, \hat{\phi} \rangle = \arg\max_{\theta, \phi} \mathbb{E}_
 ```
 ---
 	==subgoal selector==
+	
+two distinct manners for the subgoal selection:
+
+$$\bar{g}_t = \arg \max_{s_i \in \mathcal{N}_t^H} \mathbb{E}_{g \sim p_\psi(\cdot | s_i)} V(s_t, g)$$
+
+$$\bar{g}_t = \arg \min_{s_i \in \mathcal{N}_t^H} \mathbb{E}_{g \sim p_\psi(\cdot | s_i)} V(s_t, g)$$
 
 
 	   

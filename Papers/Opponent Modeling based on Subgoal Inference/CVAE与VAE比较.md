@@ -1,7 +1,7 @@
 ---
 创建时间: 2024-十二月-31日  星期二, 4:04:57 下午
 ---
-[[Opponent Modeling based on Subgoal Inference]]
+[[OMG]]
 [[VAE-ELBO loss]][^1]
 
 # Questions

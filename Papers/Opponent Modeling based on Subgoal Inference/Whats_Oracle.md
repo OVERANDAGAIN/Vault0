@@ -1,7 +1,7 @@
 ---
 创建时间: 2024-十二月-31日  星期二, 3:10:39 下午
 ---
-[[Opponent Modeling based on Subgoal Inference]]
+[[OMG]]
 
 # Questions
 

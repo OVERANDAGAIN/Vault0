@@ -18,7 +18,7 @@
 
 
 # Focus
-1. we propose ==opponent modeling== based on ==subgoal inference==, which infers the opponent’s subgoals through historical trajectories
+1. we propose ==opponent modeling== based on ==subgoal inference== using ==variational inference==, which infers the opponent’s subgoals through historical trajectories
 2. design ==two  subgoal selection modes== for ==cooperative== games and ==general-sum== games respectively.
 
 
@@ -35,16 +35,19 @@ As subgoals are likely to be shared by different opponent policies, predicting s
 
 
 # Related Work
-
+1. Variational auto-encoders can also be used to model the opponent’s policy
+2. 
 
 
 
 # Methodology
-
+![[Pasted image 20250103145958.png]]
 
 
 # Evaluation
-
+1. In this paper, we consider the most common setting where ==opponents have unseen, diverse, but fixed policies== during test.
+2. The historical trajectory is available
+3. For convenience, the learning agent treats all other agents as a joint opponent with the joint action and reward.
 
 
 # Results

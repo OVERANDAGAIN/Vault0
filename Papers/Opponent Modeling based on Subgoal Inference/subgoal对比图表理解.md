@@ -1,4 +1,4 @@
-[[Opponent Modeling based on Subgoal Inference]]
+[[OMG]]
 
 # Questions
 

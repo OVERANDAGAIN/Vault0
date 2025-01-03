@@ -46,9 +46,10 @@ As subgoals are likely to be shared by different opponent policies, predicting s
 
 # Evaluation
 1. In this paper, we consider the most common setting where ==opponents have unseen, diverse, but fixed policies== during test.
-2. The historical trajectory is available
-3. For convenience, the learning agent treats all other agents as a joint opponent with the joint action and reward.
-
+2. The historical trajectory is ==available==
+3. For convenience, the learning agent treats all other agents as ==a joint opponen==t with the joint action and reward.
+4. ==Subgoals== represent feature ==embeddings of future states== that the opponent aims to achieve
+5. 
 
 # Results
 

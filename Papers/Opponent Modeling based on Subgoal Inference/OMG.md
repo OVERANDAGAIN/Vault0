@@ -61,8 +61,8 @@ $$Q(s_t, g_t, a_t) = \mathbb{E}_{P(s_{t+1} | s_t, a_{-i}, a)} \left[ r + \gamma 
  
 2. Opponent modeling based on subgoal inference
 	1. subgoal inference model
-	
-	
+	 employ a conditional variational auto-encoder (CVAE) as the subgoal inference model. 
+	subgoal posterior probability as $q_\phi(\hat{g}_t|\tau_t, s_t)$ and the likelihood estimate as $p_\theta(s_t|\hat{g}_t, \tau_t)$ with $\phi$ and $\theta$ respectively
 	
 	2. subgoal selector
 	   

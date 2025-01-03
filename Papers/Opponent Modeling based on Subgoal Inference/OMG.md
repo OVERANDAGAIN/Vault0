@@ -124,6 +124,6 @@ we plot the ratio of that an opponent’s future trajectory passes through the o
 
 
 # Limitations
-
+The limitation of OMG is it cannot handle open multi-agent systems where agents may enter and leave during the interaction
 
 # FootNotes

@@ -61,7 +61,7 @@ $$Q(s_t, g_t, a_t) = \mathbb{E}_{P(s_{t+1} | s_t, a_{-i}, a)} \left[ r + \gamma 
  
 2. Opponent modeling based on subgoal inference
    
-	==subgoal inference model:==
+	<span style="background:#affad1">subgoal inference model:</span>
 --- 
 ```ad-note
 Employ ==(CVAE)== as the subgoal inference model. 
@@ -74,15 +74,16 @@ $$\langle \hat{\theta}, \hat{\phi} \rangle = \arg\max_{\theta, \phi} \mathbb{E}_
 
 ```
 ---
-	==subgoal selector==
+	<span style="background:#affad1">subgoal selector</span>
 	
 two distinct manners for the subgoal selection:
 
+cooperative games:
 $$\bar{g}_t = \arg \max_{s_i \in \mathcal{N}_t^H} \mathbb{E}_{g \sim p_\psi(\cdot | s_i)} V(s_t, g)$$
-
+general-sum games:
 $$\bar{g}_t = \arg \min_{s_i \in \mathcal{N}_t^H} \mathbb{E}_{g \sim p_\psi(\cdot | s_i)} V(s_t, g)$$
 
-
+ choice of $H$ gives a trade-off between ==generalization to diverse opponents== and  ==learning difficulty==
 	   
 	   
 

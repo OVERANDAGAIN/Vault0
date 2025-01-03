@@ -29,6 +29,9 @@
 # Theroy
 As subgoals are likely to be shared by different opponent policies, predicting subgoals can yield better generalization to unknown opponents.
 
+**"Formally, we transform the original stochastic game $\mathcal{M}$ into a ==state-augmented MDP==, defined by $\mathcal{M}_G = (S, G, A^i, P, R^i, \gamma)$, where $G$ is the subgoal space. $G$ is a representation of future states the opponent may go, $|G| \leq |S|.$"**
+
+
 
 # Background
 1. Opponent modeling plays a crucial role in enhancing the robustness and stability of reinforcement learning

@@ -29,8 +29,6 @@
 # Theroy
 As subgoals are likely to be shared by different opponent policies, predicting subgoals can yield better generalization to unknown opponents.
 
-**"Formally, we transform the original stochastic game $\mathcal{M}$ into a ==state-augmented MDP==, defined by $\mathcal{M}_G = (S, G, A^i, P, R^i, \gamma)$, where $G$ is the subgoal space. $G$ is a ==representation of future states the opponent may go==, $|G| \leq |S|.$"**
-
 
 
 # Background
@@ -45,6 +43,25 @@ As subgoals are likely to be shared by different opponent policies, predicting s
 
 # Methodology
 ![[Pasted image 20250103145958.png]]
+
+
+
+**"Formally, we transform the original stochastic game $\mathcal{M}$ into a ==state-augmented MDP==, defined by $\mathcal{M}_G = (S, G, A^i, P, R^i, \gamma)$, where $G$ is the subgoal space. $G$ is a ==representation of future states the opponent may go==, $|G| \leq |S|.$"**
+
+1. Policy Learning with Opponent’s Subgoals
+   
+**"Therefore, the agent’s Q-function based on the opponent’s subgoal is updated as:**
+
+\[
+Q(s_t, g_t, a_t) = \mathbb{E}_{P(s_{t+1} | s_t, a_{-i}, a)} \left[ r + \gamma \max_a Q(s_{t+1}, g_t, a) \right].
+\]
+
+**Here the pair \((s_{t+1}, g_t)\) is used instead of \((s_{t+1}, g_{t+1})\), as we assume that the next state of \((s_t, g_t)\) follows the same goal. In the framework of OMG, \(g_t\) and \(g_{t+1}\) will reach the same state at the end of the subgoal."**
+
+---
+
+如果需要进一步解释公式或相关概念，请告诉我！
+
 
 
 # Evaluation

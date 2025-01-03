@@ -75,7 +75,8 @@ $$\langle \hat{\theta}, \hat{\phi} \rangle = \arg\max_{\theta, \phi} \mathbb{E}_
 ```
 ---
 	==subgoal selector==
-	
+
+
 	   
 	   
 

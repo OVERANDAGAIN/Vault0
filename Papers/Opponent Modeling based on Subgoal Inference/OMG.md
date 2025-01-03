@@ -119,7 +119,8 @@ In the OMG, the subgoal is selected by choosing the state within the future H st
 
 subgoal selection from  $\bar{g}$ to $\hat{g}$  , which should help avoid instability during the training of the subgoal inference model.
 
-
+## inferred subgoal analysis
+we plot the ratio of that an opponent’s future trajectory passes through the opponent’s subgoal state, termed subgoal hit ratio
 
 
 # Limitations

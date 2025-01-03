@@ -104,6 +104,11 @@ two environments (discrete and continuous  state spaces) and then test its gener
 2. Predator-Prey
 3. SMAC
 
+OMG, OMG-optimistic and OMG-conservative;
+Naive OM
+LIAM
+D3QN&PPO&IQL
+
 
 # Results
 

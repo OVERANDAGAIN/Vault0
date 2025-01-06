@@ -119,9 +119,13 @@ several baselines:
 4. Steve-1
     builds an instruction-following agent in Minecraft. It first trains a goal-conditioned policy $\pi(a_t|o_{0:t}, g)$ on the contractor dataset, which is the same as the low-level policy in PTGM. Then, Steve-1 adopts a language-labeled dataset to map instructions to goals
 
+ABLATION STUDY
 
 # Results
 Both PTGM and SPiRL outperform BC-finetune a lot, indicating that training RL with temporal abstraction provided by the pre-trained models improves sample efficiency significantly.
+1. clustering in the goal space, 
+2. the KL reward provided with the goal prior model, 
+3. the temporal abstraction for RL
 
 
 # Limitations

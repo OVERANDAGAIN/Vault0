@@ -80,8 +80,8 @@ Approach:
 
 3. Uncertainty Modeling:  
    The prompt selection step is modeled as a multi-armed bandit (MAB) problem due to the uncertainty in observed returns. Two solutions are implemented:
-   - Upper-Confidence Bound (UCB): Selects the prompt with the highest UCB of expected return.
-   - Bayesian Posterior Estimation (BPE): Selects the prompt most likely to yield a return higher than $R^*$, based on the posterior of its return distribution.
+   - Upper-Confidence Bound (UCB): Selects the prompt with the ==highest UCB of expected return.==
+   - Bayesian Posterior Estimation (BPE): ==Selects the prompt most likely to yield a return higher than $R^*$==, based on the posterior of its return distribution.
 
 
 # Evaluation
@@ -93,8 +93,8 @@ Approach:
 
 
 # Limitations
-Like many offline RL approaches, the performance of MGPO is influenced by the quality of the dataset used during pre-training.
+Like many offline RL approaches, the performance of MGPO is influenced by the ==quality of the dataset== used during pre-training.
 
-The prompt-based policy in MGPO, similar to language models, can exhibit unpredictable behavior when encountering out-of-distribution prompts
+The prompt-based policy in MGPO, similar to language models, can exhibit unpredictable behavior when encountering ==out-of-distribution prompts==
 
 # FootNotes

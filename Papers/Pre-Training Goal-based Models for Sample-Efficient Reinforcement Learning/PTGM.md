@@ -130,8 +130,9 @@ Both PTGM and SPiRL outperform BC-finetune a lot, indicating that training RL wi
 
 
 # Limitations
-the goal space in PTGM is inherently determined by the offline dataset, rendering the acquired skills susceptible to data bias. $\Longrightarrow$ In the future, we plan to use larger Internetscale datasets to enhance the capabilities of PTGM
-the efficacy of goal clustering relies on a good state representation that can compactly represent goals, $\Longrightarrow$ We leave better goal representation learning for PTGM to future work.
+the goal space in PTGM is inherently determined by the offline dataset, rendering the acquired skills susceptible to data bias. $\Longrightarrow$ use larger Internetscale datasets to enhance the capabilities of PTGM
+
+the efficacy of goal clustering relies on a good state representation that can compactly represent goals, $\Longrightarrow$ better goal representation learning for PTGM 
 
 
 

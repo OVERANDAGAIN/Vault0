@@ -16,6 +16,7 @@
 
 
 
+POMDP or MDP
 
 # Focus
 1. we propose ==opponent modeling== based on ==subgoal inference== using ==variational inference==, which infers the opponent’s subgoals through historical trajectories

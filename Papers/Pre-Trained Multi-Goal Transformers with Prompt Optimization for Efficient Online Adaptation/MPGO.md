@@ -25,8 +25,8 @@ takes a goal sequence as a prompt and predicts actions in the following sequence
 we only optimize for the sequence of goals in the prompt
 
 # Innovation
-
-
+pre-training multi-goal Transformer
+novel methods for optimizing goal sequences
 
 # Theroy
 
@@ -42,7 +42,7 @@ we only optimize for the sequence of goals in the prompt
 
 
 # Methodology
-
+![[Pasted image 20250106182701.png]]
 
 
 # Evaluation

@@ -15,7 +15,7 @@
 
 
 # Focus
-
+PTGM involves ==pre-training a low-level, goal-conditioned policy== and ==training a high-level policy to generate goals== for subsequent RL tasks.
 
 
 # Innovation
@@ -27,7 +27,7 @@
 
 
 # Background
-Efficiently solving unseen tasks remains a challenge in reinforcement learning (RL), especially for long-horizon tasks composed of multiple subtasks. Pre-training policies from task-agnostic datasets has emerged as a promising approach, yet existing methods still necessitate substantial interactions via RL to learn new tasks.
+==Pre-training on task-agnostic large datasets== is a promising approach for enhancing the ==sample efficiency== of reinforcement learning (RL) in solving complex tasks
 
 
 # Related Work

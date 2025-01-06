@@ -17,6 +17,11 @@ DeepSeek: not as good as GPT-4o-mini in experience $\Longrightarrow$ best perfor
 
 MoE vs Dense
 Dataset more important, other than model/algorithm？？？
+
+---
+
+ physics of language models Part 1  —— Allen-Zhu
+
 # Innovation
 
 

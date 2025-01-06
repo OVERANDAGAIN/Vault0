@@ -11,7 +11,7 @@ reporter:张弛
 
 
 Chain of thought ; Rationale
-
+MCTS
 
 
 # Innovation

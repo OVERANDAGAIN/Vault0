@@ -20,13 +20,13 @@
 # Focus
 Multi-Goal Transformers with Prompt Optimization
 
-takes a goal sequence as a prompt and predicts actions in the following sequence of environment observations
+==takes a goal sequence as a prompt== and ==predicts actions in the following sequence of environment observations==
 
-we only optimize for the sequence of goals in the prompt
+we only ==optimize for the sequence of goals in the prompt==
 
 # Innovation
-pre-training multi-goal Transformer
-novel methods for optimizing goal sequences
+- pre-training multi-goal Transformer
+- novel methods for optimizing goal sequences
 
 By integrating the strengths of Transformer architectures and goal-conditioned policies during pre-training, MGPO enables an efficient prompt optimization process in the online adaptation phase
 

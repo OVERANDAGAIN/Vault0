@@ -106,11 +106,16 @@ $$J(\theta) = \mathbb{E}_{\pi_{\theta}} \left[ \sum_{t=0}^{\infty} \gamma^t \lef
 on the following two challenging benchmarks with long-horizon tasks:
 1. Kitchen
 2. Minecraft
+
+
+
 several baselines:
 1. SPiRL
    Pre-trains a sequential VAE to generate continuous skill latent variables $z$, with the high-level policy selecting skills $z$ and the low-level decoder executing $k$-step actions based on those skills.
 2. TACO
+   Uses offline RL to pre-train a low-level policy conditioned on skill latent variables $z$, regularized by KL divergence to a learned skill prior, enabling the high-level policy to be trained for online RL.
 3. VPT-finetune
+   Trains a foundation model on a large-scale behavior cloning dataset and fine-tunes the full model or transformer adapters to adapt to downstream tasks.
 
 
 # Results

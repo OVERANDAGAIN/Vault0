@@ -72,8 +72,10 @@ Hierarchical RL
 
 $$\mathcal{L}(\phi) = \mathbb{E}_{\mathcal{D}} \big[ -\log P_{\phi}(a_i | s_i, s^g) \big].$$
 2. To enhance the sample efficiency and stability of RL, we propose a goal clustering method and a pre-trained goal prior model
-	1. 
- 3. In RL, we train a high-level policy $\pi_{\theta}(s^g|s_t)$ which outputs a goal state to guide the low-level goal-conditioned policy $P_{\phi}$ to act in the environment for $k$ steps
+	1. cluster the states in the dataset to discretize the goal space
+	2.  sample a large set of states from $D$, apply t-SNE (Maaten & Hinton, 2008) to reduce the dimension of states
+	3. apply a clustering algorithm such as K-Means (Lloyd, 1982) to group similar goal states together and output $N$ clusters.
+ 1. In RL, we train a high-level policy $\pi_{\theta}(s^g|s_t)$ which outputs a goal state to guide the low-level goal-conditioned policy $P_{\phi}$ to act in the environment for $k$ steps
  
 
 

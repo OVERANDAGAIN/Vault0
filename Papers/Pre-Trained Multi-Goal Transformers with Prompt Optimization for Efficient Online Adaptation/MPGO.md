@@ -18,8 +18,11 @@
 
 
 # Focus
+Multi-Goal Transformers with Prompt Optimization
 
+takes a goal sequence as a prompt and predicts actions in the following sequence of environment observations
 
+we only optimize for the sequence of goals in the prompt
 
 # Innovation
 

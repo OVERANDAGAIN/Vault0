@@ -53,7 +53,7 @@ By integrating the strengths of Transformer architectures and goal-conditioned p
 To abstract the long-term behavior of the agent, the paper uses a sequence of goals $g = (g_1, \dots, g_H)$ to describe key states in the trajectory. Specifically:
 1. For a trajectory $\tau = (o_1, \dots, o_H)$, a ==goal sequence $g$ of the same length $H$ is constructed==.
 2. A sub-sequence $p = (g_{i_1}, \dots, g_{i_k}, g_H)$ is uniformly ==sampled== from the goal sequence, ensuring that the final goal $g_H$ is always included at the end of the prompt.
-3. The process of sampling a prompt is denoted as $p \sim P(p|\tau)$, allowing the prompt to describe behavior with varying granularities and lengths.
+3. The process of ==sampling a prompt is denoted as== $p \sim P(p|\tau)$, allowing the prompt to describe behavior with varying granularities and lengths.
 
 **Policy** Model Design  
 Inspired by Decision Transformers, a causal Transformer model $\pi_\theta(a_t|p, h_{t-1}, o_t)$ is adopted. The ==input is a concatenated sequence of the prompt and the trajectory== $(p, \tau) = (g_{i_1}, \dots, g_{i_k}, g_H, o_1, a_1, \dots, o_H, a_H)$. At each time step $t$, the policy observes only the sub-sequence $g_{i_1} \dots o_t$ through the causal attention mask and predicts the action distribution.

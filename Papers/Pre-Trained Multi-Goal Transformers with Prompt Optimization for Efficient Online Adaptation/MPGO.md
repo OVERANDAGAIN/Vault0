@@ -68,7 +68,9 @@ This approach encourages the policy to utilize the information provided in the p
 
 Objective:  
 For an unseen task with a task goal $g^M$, the algorithm aims to ==find an optimal prompt $p^*$ with a maximal length $K$ that maximizes the expected return.== This involves evaluating prompts over $N$ episodes to optimize the prompt.
-
+```ad-note
+propose a novel method that samples prompts from online collected trajectories, aligning more closely with the training distribution of prompts
+```
 Approach:  
 1. Buffer Maintenance:  
    A buffer $B$ is maintained to ==store sampled== prompts, their return history, and the trajectory $\tau^*$ with the highest return $R^*$.

@@ -108,6 +108,7 @@ on the following two challenging benchmarks with long-horizon tasks:
 2. Minecraft
 several baselines:
 1. SPiRL
+   Pre-trains a sequential VAE to generate continuous skill latent variables $z$, with the high-level policy selecting skills $z$ and the low-level decoder executing $k$-step actions based on those skills.
 2. TACO
 3. VPT-finetune
 

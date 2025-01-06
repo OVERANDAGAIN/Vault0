@@ -33,7 +33,8 @@ A goal refers to the final state of a sub-trajectory in the dataset
 ```
 ````
 
-
+- employing a combination of the temporal abstraction provided with the pre-trained goal-conditioned policy, clustering in the goal space, and behavior regularization with the goal prior model,
+- notably in the challenging benchmark of Minecraft
 
 
 
@@ -129,6 +130,9 @@ Both PTGM and SPiRL outperform BC-finetune a lot, indicating that training RL wi
 
 
 # Limitations
+the goal space in PTGM is inherently determined by the offline dataset, rendering the acquired skills susceptible to data bias. $\Longrightarrow$ In the future, we plan to use larger Internetscale datasets to enhance the capabilities of PTGM
+the efficacy of goal clustering relies on a good state representation that can compactly represent goals, $\Longrightarrow$ We leave better goal representation learning for PTGM to future work.
+
 
 
 # FootNotes

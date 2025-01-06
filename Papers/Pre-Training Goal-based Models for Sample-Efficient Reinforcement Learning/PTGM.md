@@ -72,17 +72,17 @@ Hierarchical RL
 
 
  1. pre-trained (low-level) goal-conditioned policy $P_{\phi}(a_t|s_t, s^g)$ to provide temporal abstractions for RL in downstream tasks
-	 1. For a $k$-step subsequence $\tau = (s_t, a_t, \cdots, s_{t+k}, a_{t+k})$ in an episode, we label each sample $(s_i, a_i), t \leq i \leq t+k$ with the goal state $s^g = s_{t+k}$. We train $P_{\phi}$ with behavior cloning, minimizing the negative log-likelihood of action prediction:
+	 1. For a $k$-step subsequence $\tau = (s_t, a_t, \cdots, s_{t+k}, a_{t+k})$ in an episode, we ==label each sample== $(s_i, a_i), t \leq i \leq t+k$ with the goal state $s^g = s_{t+k}$. We train $P_{\phi}$ with ==behavior cloning, minimizing the negative log-likelihood== of action prediction:
 
 $$\mathcal{L}(\phi) = \mathbb{E}_{\mathcal{D}} \big[ -\log P_{\phi}(a_i | s_i, s^g) \big].$$
-2. To enhance the sample efficiency and stability of RL, we propose a goal clustering method and a pre-trained goal prior model
+2. To enhance the sample efficiency and stability of RL, we propose a ==goal clustering== method and a ==pre-trained goal prior model==
 	1. Clustering in the Goal Space
 		1. cluster the states in the dataset to discretize the goal space
 		2.  sample a large set of states from $D$, apply t-SNE  to reduce the dimension of states
 		3. apply a clustering algorithm such as K-Means (Lloyd, 1982) to group similar goal states together and output $N$ clusters.
 			1. The discretized goal space is represented with $G = \{i : s^g_i\}_{i=1}^N$, where $s^g_i$ is the goal state of the $i$-th cluster center
 	2.  Pre-Training the Goal Prior Model
-		1. the high-level policy lacks prior knowledge to provide reasonable goals
+		1. the high-level policy ==lacks prior knowledge to provide reasonable goals==
 		2. The goal prior model $\pi_{\psi}^p(a^h|s)$ has the same structure as the high-level policy, where $a^h \in A^h$ is the index of the goal cluster centers.
 		3. In the discretized goal space $G$, we match the goal that is closest to $s^g$ based on cosine similarity:
 

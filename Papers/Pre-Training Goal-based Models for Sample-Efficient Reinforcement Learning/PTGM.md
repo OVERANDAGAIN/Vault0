@@ -1,3 +1,6 @@
+---
+创建时间: 2025-一月-2日  星期四, 10:33:39 上午
+---
 #paper_summary 
 
 # Inspiration
@@ -67,16 +70,28 @@ Hierarchical RL
 ![[Pasted image 20250106100935.png]]
 
 
- 1. pre-trained goal-conditioned policy $P_{\phi}(a_t|s_t, s^g)$ to provide temporal abstractions for RL in downstream tasks
+ 1. pre-trained (low-level) goal-conditioned policy $P_{\phi}(a_t|s_t, s^g)$ to provide temporal abstractions for RL in downstream tasks
 	 1. For a $k$-step subsequence $\tau = (s_t, a_t, \cdots, s_{t+k}, a_{t+k})$ in an episode, we label each sample $(s_i, a_i), t \leq i \leq t+k$ with the goal state $s^g = s_{t+k}$. We train $P_{\phi}$ with behavior cloning, minimizing the negative log-likelihood of action prediction:
 
 $$\mathcal{L}(\phi) = \mathbb{E}_{\mathcal{D}} \big[ -\log P_{\phi}(a_i | s_i, s^g) \big].$$
 2. To enhance the sample efficiency and stability of RL, we propose a goal clustering method and a pre-trained goal prior model
-	1. cluster the states in the dataset to discretize the goal space
-	2.  sample a large set of states from $D$, apply t-SNE (Maaten & Hinton, 2008) to reduce the dimension of states
-	3. apply a clustering algorithm such as K-Means (Lloyd, 1982) to group similar goal states together and output $N$ clusters.
-		1. The discretized goal space is represented with $G = \{i : s^g_i\}_{i=1}^N$, where $s^g_i$ is the goal state of the $i$-th cluster center
- 1. In RL, we train a high-level policy $\pi_{\theta}(s^g|s_t)$ which outputs a goal state to guide the low-level goal-conditioned policy $P_{\phi}$ to act in the environment for $k$ steps
+	1. Clustering in the Goal Space
+		1. cluster the states in the dataset to discretize the goal space
+		2.  sample a large set of states from $D$, apply t-SNE  to reduce the dimension of states
+		3. apply a clustering algorithm such as K-Means (Lloyd, 1982) to group similar goal states together and output $N$ clusters.
+			1. The discretized goal space is represented with $G = \{i : s^g_i\}_{i=1}^N$, where $s^g_i$ is the goal state of the $i$-th cluster center
+	2.  Pre-Training the Goal Prior Model
+		1. the high-level policy lacks prior knowledge to provide reasonable goals
+		2. The goal prior model $\pi_{\psi}^p(a^h|s)$ has the same structure as the high-level policy, where $a^h \in A^h$ is the index of the goal cluster centers.
+		3. In the discretized goal space $G$, we match the goal that is closest to $s^g$ based on cosine similarity:
+
+$$a^h = \arg\max_{i \in [N]} \left( \frac{s_i^g \cdot s^g}{\|s_i^g\| \cdot \|s^g\|} \right).$$
+			
+		4. The training objective for the goal prior model is to minimize the negative log-likelihood of goal prediction:(a regularizer for the high-level policy, providing intrinsic rewards)
+
+$$\mathcal{L}(\psi) = \mathbb{E}_{\mathcal{D}} \big[ -\log \pi_{\psi}^p(a^h|s_t) \big].$$
+
+3. In RL, we train a high-level policy $\pi_{\theta}(s^g|s_t)$ which outputs a goal state to guide the low-level goal-conditioned policy $P_{\phi}$ to act in the environment for $k$ steps
  
 
 

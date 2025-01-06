@@ -92,6 +92,7 @@ $$a^h = \arg\max_{i \in [N]} \left( \frac{s_i^g \cdot s^g}{\|s_i^g\| \cdot \|s^g
 $$\mathcal{L}(\psi) = \mathbb{E}_{\mathcal{D}} \big[ -\log \pi_{\psi}^p(a^h|s_t) \big].$$
 
 3. In RL, we train a high-level policy $\pi_{\theta}(s^g|s_t)$ which outputs a goal state to guide the low-level goal-conditioned policy $P_{\phi}$ to act in the environment for $k$ steps
+	1. 
  
 
 

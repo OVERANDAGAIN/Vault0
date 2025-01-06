@@ -14,8 +14,8 @@
 ## Inspiration for Us
 
 
-
-
+hindsight机制
+subgoal obtain: 分别的还是整体的
 POMDP or MDP
 
 # Focus

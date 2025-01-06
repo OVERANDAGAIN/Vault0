@@ -28,6 +28,8 @@ we only optimize for the sequence of goals in the prompt
 pre-training multi-goal Transformer
 novel methods for optimizing goal sequences
 
+By integrating the strengths of Transformer architectures and goal-conditioned policies during pre-training, MGPO enables an efficient prompt optimization process in the online adaptation phase
+
 # Theroy
 
 
@@ -91,6 +93,8 @@ Approach:
 
 
 # Limitations
+Like many offline RL approaches, the performance of MGPO is influenced by the quality of the dataset used during pre-training.
 
+The prompt-based policy in MGPO, similar to language models, can exhibit unpredictable behavior when encountering out-of-distribution prompts
 
 # FootNotes

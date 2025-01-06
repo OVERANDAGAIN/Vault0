@@ -37,7 +37,6 @@ As subgoals are likely to be shared by different opponent policies, predicting s
 
 # Related Work
 1. Variational auto-encoders can also be used to model the opponent’s policy
-2. 
 
 
 

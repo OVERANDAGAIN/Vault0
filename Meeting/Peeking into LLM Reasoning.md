@@ -13,7 +13,7 @@ reporter:张弛
 Chain of thought ; Rationale
 MCTS
 MoE
-
+DeepSeek: not as good as GPT-4o-mini in experience $\Longrightarrow$ best performing in benchmark
 # Innovation
 
 

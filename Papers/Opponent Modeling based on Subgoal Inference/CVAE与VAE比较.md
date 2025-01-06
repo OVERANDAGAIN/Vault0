@@ -26,7 +26,7 @@ $$L^V = -D_{KL}(q(z|x,y) \| p(z|y)) + \mathbb{E}_{q(z|x,y)} (\log p(x|z, y))$$
 知乎分析VAE:[^2]
 [Site Unreachable](https://zhuanlan.zhihu.com/p/344546057)
 
-以下是图片中的文字转写：
+
 
 ---
 

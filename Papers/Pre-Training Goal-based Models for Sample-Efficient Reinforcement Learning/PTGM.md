@@ -68,7 +68,10 @@ Hierarchical RL
 
 
  1. pre-trained goal-conditioned policy $P_{\phi}(a_t|s_t, s^g)$ to provide temporal abstractions for RL in downstream tasks
-	 1. 
+	 1. For a $k$-step subsequence $\tau = (s_t, a_t, \cdots, s_{t+k}, a_{t+k})$ in an episode, we label each sample $(s_i, a_i), t \leq i \leq t+k$ with the goal state $s^g = s_{t+k}$. We train $P_{\phi}$ with behavior cloning, minimizing the negative log-likelihood of action prediction:
+
+$$\mathcal{L}(\phi) = \mathbb{E}_{\mathcal{D}} \big[ -\log P_{\phi}(a_i | s_i, s^g) \big].$$
+
  2. In RL, we train a high-level policy $\pi_{\theta}(s^g|s_t)$ which outputs a goal state to guide the low-level goal-conditioned policy $P_{\phi}$ to act in the environment for $k$ steps
  3. To enhance the sample efficiency and stability of RL, we propose a goal clustering method and a pre-trained goal prior model
 

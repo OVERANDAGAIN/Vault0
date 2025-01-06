@@ -9,7 +9,7 @@ reporter:张弛
 
 # Context
 
-
+encoder(less)- decoder (main)
 Chain of thought ; Rationale
 MCTS
 MoE

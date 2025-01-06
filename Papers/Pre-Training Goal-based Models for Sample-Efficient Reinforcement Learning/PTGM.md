@@ -67,9 +67,10 @@ Hierarchical RL
 ![[Pasted image 20250106100935.png]]
 
 
- pre-trained goal-conditioned policy $P_{\phi}(a_t|s_t, s^g)$ to provide temporal abstractions for RL in downstream tasks
- In RL, we train a high-level policy $\pi_{\theta}(s^g|s_t)$ which outputs a goal state to guide the low-level goal-conditioned policy $P_{\phi}$ to act in the environment for $k$ steps
- To enhance the sample efficiency and stability of RL, we propose a goal clustering method and a pre-trained goal prior model
+ 1. pre-trained goal-conditioned policy $P_{\phi}(a_t|s_t, s^g)$ to provide temporal abstractions for RL in downstream tasks
+	 1. 
+ 2. In RL, we train a high-level policy $\pi_{\theta}(s^g|s_t)$ which outputs a goal state to guide the low-level goal-conditioned policy $P_{\phi}$ to act in the environment for $k$ steps
+ 3. To enhance the sample efficiency and stability of RL, we propose a goal clustering method and a pre-trained goal prior model
 
 
 # Evaluation

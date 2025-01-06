@@ -16,7 +16,7 @@ MoE
 DeepSeek: not as good as GPT-4o-mini in experience $\Longrightarrow$ best performing in benchmark
 
 MoE vs Dense
-
+Dataset more important, other than model/algorithm？？？
 # Innovation
 
 

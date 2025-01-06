@@ -10,7 +10,8 @@ reporter:张弛
 # Context
 
 
-Chain of thought 
+Chain of thought ; Rationale
+
 
 
 # Innovation

@@ -115,11 +115,13 @@ several baselines:
 2. TACO
    Uses offline RL to pre-train a low-level policy conditioned on skill latent variables $z$, regularized by KL divergence to a learned skill prior, enabling the high-level policy to be trained for online RL.
 3. VPT-finetune
-   Trains a foundation model on a large-scale behavior cloning dataset and fine-tunes the full model or transformer adapters to adapt to downstream tasks.
+   Trains a foundation model on a large-scale behavior cloning dataset and fine-tunes the full model or transformer adapters to adapt to downstream tasks
+4. Steve-1
+    builds an instruction-following agent in Minecraft. It first trains a goal-conditioned policy $\pi(a_t|o_{0:t}, g)$ on the contractor dataset, which is the same as the low-level policy in PTGM. Then, Steve-1 adopts a language-labeled dataset to map instructions to goals
 
 
 # Results
-
+Both PTGM and SPiRL outperform BC-finetune a lot, indicating that training RL with temporal abstraction provided by the pre-trained models improves sample efficiency significantly.
 
 
 # Limitations

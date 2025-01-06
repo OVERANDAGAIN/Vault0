@@ -103,7 +103,13 @@ $$J(\theta) = \mathbb{E}_{\pi_{\theta}} \left[ \sum_{t=0}^{\infty} \gamma^t \lef
 
 
 # Evaluation
-
+on the following two challenging benchmarks with long-horizon tasks:
+1. Kitchen
+2. Minecraft
+several baselines:
+1. SPiRL
+2. TACO
+3. VPT-finetune
 
 
 # Results

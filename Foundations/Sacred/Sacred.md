@@ -46,8 +46,9 @@
 
 5. 观察器==observer==
    Sacred 提供了非常丰富的观察器用于记录实验数据, 包括 MongoDB, ==FileStorage==, TinyDB, SQL, S3, Slack, Telegram, Neptune等
+6. ==Command-Line== Interface (命令行接口): 你可以获得一个非常强大的命令行接口用于修改参数和运行实验的变体
 
-6. 自己需要写的映射函数
+7. 自己需要写的映射函数
    Sacred 的 `_config` 默认返回的是一个字典, 调用参数时需要大量的` [""] `符号, 因此我实现了一个映射的功能, 把字典的键值对映射为了成员变量, 可以直接通过 . 来调用. 这个映射支持字典的嵌套映射.
 ```python
 class Map(ReadOnlyDict):

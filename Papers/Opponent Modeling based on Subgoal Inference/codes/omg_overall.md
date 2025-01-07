@@ -95,6 +95,10 @@ OMG/
 ### main.py
 [[Sacred]][^1]
 
+#### **调用关系**
+1. 在 `main.py` 中，Sacred 的 `ex.run_commandline(params)` 会自动调用 `@ex.main` 装饰器注册的函数，即 `my_main`。
+2. `my_main` 是整个实验的逻辑起点，负责加载配置和调用具体的训练流程。
+
 ## 1_Answers
 
 

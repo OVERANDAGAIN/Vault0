@@ -108,6 +108,28 @@ OMG/
 
 3. **如何调用**：
    - Sacred 的 `ex.run_commandline(params)` 会接收解析后的参数并启动实验流程，最终调用 `my_main`。
+### run.py
+
+以训练模式为例，`run.py` 的调用逻辑如下：
+
+1. **主入口**：
+   - 在 `main.py` 中，`my_main` 调用 `run(_run, _config, _log)`，启动训练流程。
+
+2. **参数检查**：
+   - 调用 `args_sanity_check`，确保配置参数合理性。
+
+3. **初始化**：
+   - 初始化 Runner、控制器（MAC）、Replay Buffer 和 Learner。
+
+4. **训练循环**：
+   - **与环境交互**：Runner 通过控制器与环境交互，生成 `episode_batch`。
+   - **存储经验**：将 `episode_batch` 存储到 Replay Buffer。
+   - **模型更新**：从 Replay Buffer 中采样，调用 Learner 的 `train()` 更新模型参数。
+   - **定期测试**：调用 Runner 的 `run()`，在测试模式下评估模型。
+   - **定期保存**：调用 Learner 的 `save_models()` 保存模型参数。
+
+5. **结束训练**：
+   - 关闭环境，清理资源。
 
 
 ## 1_Answers

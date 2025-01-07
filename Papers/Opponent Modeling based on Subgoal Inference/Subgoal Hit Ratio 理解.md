@@ -7,7 +7,7 @@
 ![[Pasted image 20250107101644.png]]
 # Answers
 
-即agent预测的$$
+即agent预测的$\hat{\tau}$
 
 ## GPT_Answers
 

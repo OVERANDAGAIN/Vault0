@@ -68,7 +68,21 @@ class Map(ReadOnlyDict):
         super(Map, self).__init__(new_dict, **kwargs)
 ```
 
+particularly，in OMG ：
+```python
 
+def recursive_dict_update(d, u):
+    for k, v in u.items():
+        if isinstance(v, collections.Mapping):
+            d[k] = recursive_dict_update(d.get(k, {}), v)
+        else:
+            d[k] = v
+    return d
+
+    config_dict = recursive_dict_update(config_dict, env_config)
+    config_dict = recursive_dict_update(config_dict, alg_config)
+    config_dict = recursive_dict_update(config_dict, other_arg_config)
+```
 
 # Why
 

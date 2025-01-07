@@ -99,6 +99,17 @@ OMG/
 1. 在 `main.py` 中，Sacred 的 `ex.run_commandline(params)` 会自动调用 `@ex.main` 装饰器注册的函数，即 `my_main`。
 2. `my_main` 是整个实验的逻辑起点，负责加载配置和调用具体的训练流程。
 
+1. **`params` 的来源**：
+   - 来自命令行输入，通过 `sys.argv` 捕获。
+
+2. **如何解析具体配置**：
+   - 使用 `_get_config()` 解析 `--env-config` 和 `--config`，选择对应的 YAML 文件。
+   - 使用 `_get_other_config()` 提取其他动态参数。
+
+3. **如何调用**：
+   - Sacred 的 `ex.run_commandline(params)` 会接收解析后的参数并启动实验流程，最终调用 `my_main`。
+
+
 ## 1_Answers
 
 

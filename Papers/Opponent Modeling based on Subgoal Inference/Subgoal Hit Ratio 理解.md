@@ -1,3 +1,6 @@
+---
+创建时间: 2025-一月-7日  星期二, 10:15:54 上午
+---
 [[OMG]]
 
 # Questions
@@ -7,7 +10,7 @@
 ![[Pasted image 20250107101644.png]]
 # Answers
 
-即agent预测的
+即 agent 预测的 $\hat{\mathcal{T}}$ 中的第 $t$ 项在真实的 trajectory 序列里面是否出现。
 
 ## GPT_Answers
 

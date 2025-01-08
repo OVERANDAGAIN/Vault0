@@ -183,6 +183,7 @@ OMG 与pymarl相比：
 
 ### controllers/om_controller
 
+`def _build_multi_mudule_config(self):`函数：
 1. **输入**：
    - `self.args.name`：算法组合名称，如 `4iql1iql_omg`。
    - `self.args.train_alg`：主算法名称。

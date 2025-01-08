@@ -106,7 +106,7 @@ OMG 与之相比：
 	module 下多了一整个 am 文件夹，其中包括 __init__.py, base_am.py, none_am.py, omg_am.py 这四个文件
 	utils 下多了 MY_EXP_PATH.py 
 	main.py 内多了 _get_other_config() 这个函数
-	run.py 的 run_sequential() 内添加了关于 MY_EXP_PATH.py 的相关逻辑, 以及及其他若干处修改添加
+	run.py 的 run_sequential() 内添加了关于 MY_EXP_PATH.py 的相关逻辑, 以及及其他若干处修改
 ## Overall_Answers
 ### main.py
 [[Sacred]][^1]

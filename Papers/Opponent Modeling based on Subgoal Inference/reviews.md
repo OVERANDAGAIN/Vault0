@@ -1,5 +1,12 @@
 [[OMG]]
+
+ICLR(Reject)
 [Opponent Modeling based on Sub-Goal Inference \| OpenReview](https://openreview.net/forum?id=l3s3HwJYDm)
+
+NeurIPS(Accept)
+[Opponent Modeling based on Subgoal Inference \| OpenReview](https://openreview.net/forum?id=Lt6wO0oZ8k)
+
+
 # Questions
 
 - [?] 

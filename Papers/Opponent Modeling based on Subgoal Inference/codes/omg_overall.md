@@ -88,7 +88,8 @@ OMG/
 └── run.py
 ```
 
-
+问题1：关于am[^2]
+问题2：关于om[^3]
 # Answers
 
 OMG代码是在pymarl(SMAC环境)基础上实现的。
@@ -200,3 +201,5 @@ OMG 与pymarl相比：
 # FootNotes
 
 [^1]: 使用了sacred库来管理
+[^2]: am指的是什么
+[^3]: om指的是什么

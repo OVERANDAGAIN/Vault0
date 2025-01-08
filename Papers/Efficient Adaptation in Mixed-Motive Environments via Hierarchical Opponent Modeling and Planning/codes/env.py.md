@@ -7,8 +7,7 @@
 
 # Codes/Questions
 
-```python:main.py
-fs 
+```python
 
 ```
 

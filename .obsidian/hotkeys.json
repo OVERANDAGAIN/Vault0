@@ -63,5 +63,13 @@
       "key": "B"
     }
   ],
-  "Enhanced-editing:add-Line0": []
+  "Enhanced-editing:add-Line0": [],
+  "editor:toggle-code": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "`"
+    }
+  ]
 }

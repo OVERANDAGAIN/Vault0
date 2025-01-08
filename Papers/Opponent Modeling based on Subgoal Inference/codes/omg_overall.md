@@ -100,6 +100,7 @@ pymarl结构：
 
 OMG 与之相比： 
 	config/algs 下多了: iql_am.yaml, iql_idv.yaml, iql_omg.yaml这三个文件
+	controllers 下多了: om_controller.py
 ## Overall_Answers
 ### main.py
 [[Sacred]][^1]

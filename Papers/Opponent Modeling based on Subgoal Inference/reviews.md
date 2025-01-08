@@ -5,6 +5,7 @@
 - [?] 
 Predicting an opponent's short-term actions tends to provide limited information compared to understanding their long-term strategies.
 
+ad-hoc teamwork
 # Answers
 The ==subgoal's prior model==  is a VAE that learns from a set of states that are ==collected while training opponents.==
 

@@ -12,7 +12,7 @@ There is ==no subgoal selection process during execution phase== because the sta
 
 During training, only the OMG agent's policy is trained, and the policies of the opponents are fixed. 
 
-
+Subgoal predictions $\hat{g}$ are made to assist OMG decision making and are made at every timestep.
 ## GPT_Answers
 
 

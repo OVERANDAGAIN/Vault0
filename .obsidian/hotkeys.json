@@ -71,5 +71,26 @@
       ],
       "key": "`"
     }
-  ]
+  ],
+  "editor:toggle-bullet-list": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "U"
+    }
+  ],
+  "editor:toggle-numbered-list": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "O"
+    }
+  ],
+  "Enhanced-editing:mouse-start": [],
+  "Enhanced-editing:mouse-end": [],
+  "editor:save-file": [],
+  "Enhanced-editing:biaoti0-text": [],
+  "Enhanced-editing:paste-text": []
 }

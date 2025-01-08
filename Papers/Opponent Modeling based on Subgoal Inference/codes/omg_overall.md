@@ -88,7 +88,8 @@ OMG/
 └── run.py
 ```
 
-
+问题1：关于am[^2]
+问题2：关于om[^3]
 # Answers
 
 OMG代码是在pymarl(SMAC环境)基础上实现的。
@@ -98,15 +99,21 @@ pymarl结构：
 
 
 
-OMG 与之相比： 
-- `config/algs` 下多了: `iql_am.yaml, iql_idv.yaml, iql_omg.yaml`这三个文件
-- `controllers` 下多了: `om_controller.py`
-- `learners` 下多了: `am_learner.py, omg_learner.py, q_learner_4am.py` 这三个文件
-- `module/agents` 下多了: i`dv_rnn_agent.py`
-- `module` 下多了一整个 am 文件夹，其中包括 `__init__.py, base_am.py, none_am.py, omg_am.py` 这四个文件
-- `utils` 下多了 `MY_EXP_PATH.py` 
-- `main.py` 内多了 `_get_other_config()` 这个函数
-- `run.py` 的 `run_sequential()` 内添加了关于 `MY_EXP_PATH.py` 的相关逻辑, 以及及其他若干处修改
+OMG 与pymarl相比： 
+1. `config/algs` 下多了: `iql_am.yaml, iql_idv.yaml, iql_omg.yaml`这三个文件
+2. `controllers` 下多了: `om_controller.py`
+3. `learners` 下多了: `am_learner.py, omg_learner.py, q_learner_4am.py` 这三个文件
+   
+4. `module/agents` 下多了: i`dv_rnn_agent.py`
+5. `module` 下多了一整个 am 文件夹，其中包括 `__init__.py, base_am.py, none_am.py, omg_am.py` 这四个文件
+   
+6. `utils` 下多了 `MY_EXP_PATH.py` 
+7. `main.py` 内多了 `_get_other_config()` 这个函数
+8. `run.py` 的 `run_sequential()` 内添加了关于 `MY_EXP_PATH.py` 的相关逻辑, 以及及其他若干处修改
+
+
+
+
 ## Overall_Answers
 ### main.py
 [[Sacred]][^1]
@@ -147,6 +154,69 @@ OMG 与之相比：
 5. **结束训练**：
    - 关闭环境，清理资源。
 
+### config/algs
+
+三个配置文件之间的主要差异：
+
+| 配置项              | **iql_am** | **iql_idv** | **iql_omg** |
+| ---------------- | ---------- | ----------- | ----------- |
+| **policy_model** | `rnn`      | `idv_rnn`   | `rnn`       |
+| **am_model**     | `base_am`  | `none_am`   | `omg_am`    |
+| **name**         | `"iql_am"` | `"iql_idv"` | `"iql_omg"` |
+
+1. **`policy_model`（策略模型）**：
+   - `rnn`：普通循环神经网络模型，适合 OMG 的主逻辑。
+   - `idv_rnn`：可能是专门用于个体智能体的 RNN 模型，用于无对手建模的实验。
+   - **差异影响**：不同策略模型适用于不同的实验设置。
+
+2. **`am_model`（对手建模模块）**：
+   - `base_am`：使用基础对手建模模块。
+   - `none_am`：没有对手建模模块。
+   - `omg_am`：使用 OMG 的核心对手建模模块，可能实现了 CVAE。
+   - **差异影响**：直接决定是否进行对手建模以及子目标推理。
+
+3. **`name`**：
+   - 仅用于标识不同的配置文件。
+
+
+
+
+### controllers/om_controller
+
+在 OMG 算法运行时，`Multi_Module_MAC` 的调用逻辑如下：
+1. **初始化阶段**：
+   - 创建所有智能体和对手建模模块。
+   - 动态解析算法组合配置。
+
+2. **环境交互阶段**：
+   - 每个时间步调用 `select_actions` 选择智能体的动作。
+   - 动作选择依赖于智能体的输出（由 AM 提供子目标推理结果）。
+
+3. **模型训练阶段**：
+   - 调用 `main_alg_forward` 获取主算法智能体的输出。
+   - AM 模块通过输入数据更新子目标推理模型。
+
+4. **模型保存和加载**：
+   - 定期保存或加载智能体和对手建模模块的参数。
+
+5. **子目标嵌入**：
+   - AM 的推理结果直接作为智能体输入的一部分，影响动作选择和模型更新。
+
+`def _build_multi_mudule_config(self):`函数：（init)
+1. **输入**：
+   - `self.args.name`：算法组合名称，如 `4iql1iql_omg`。
+   - `self.args.train_alg`：主算法名称。
+
+2. **输出**：
+   - `self.algs`：算法名称列表。
+   - `self.agent_algs`：每个智能体对应的算法。
+   - `self.algs_args`：每种算法的参数配置。
+   - 主算法相关信息（`self.main_alg`、`self.main_alg_idx`、`self.main_alg_args`）。
+
+
+
+
+
 
 ## 1_Answers
 
@@ -162,3 +232,5 @@ OMG 与之相比：
 # FootNotes
 
 [^1]: 使用了sacred库来管理
+[^2]: am指的是什么
+[^3]: om指的是什么

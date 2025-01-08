@@ -101,6 +101,10 @@ pymarl结构：
 OMG 与之相比： 
 	config/algs 下多了: iql_am.yaml, iql_idv.yaml, iql_omg.yaml这三个文件
 	controllers 下多了: om_controller.py
+	learners 下多了: am_learner.py, omg_learner.py, q_learner_4am.py 这三个文件
+	module/agents 下多了: idv_rnn_agent.py
+	module 下多了一整个 am 文件夹，其中包括 __init__.py, base_am.py, none_am.py, omg_am.py 这四个文件
+	utils 下多了 MY_EXP_PATH.py 
 ## Overall_Answers
 ### main.py
 [[Sacred]][^1]

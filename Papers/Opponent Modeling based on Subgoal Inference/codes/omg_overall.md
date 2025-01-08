@@ -93,7 +93,12 @@ OMG/
 
 OMG代码是在pymarl(SMAC环境)基础上实现的。
 
+pymarl结构：
+![[Pasted image 20250108110345.png|250]]
 
+
+
+OMG 与之相比： 
 ## Overall_Answers
 ### main.py
 [[Sacred]][^1]

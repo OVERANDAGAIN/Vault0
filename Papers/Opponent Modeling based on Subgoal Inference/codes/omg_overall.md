@@ -153,6 +153,16 @@ OMG 与pymarl相比：
 5. **结束训练**：
    - 关闭环境，清理资源。
 
+### config/algs
+
+三个配置文件之间的主要差异：
+
+| 配置项              | **iql_am** | **iql_idv** | **iql_omg** |
+| ---------------- | ---------- | ----------- | ----------- |
+| **policy_model** | `rnn`      | `idv_rnn`   | `rnn`       |
+| **am_model**     | `base_am`  | `none_am`   | `omg_am`    |
+| **name**         | `"iql_am"` | `"iql_idv"` | `"iql_omg"` |
+
 
 ## 1_Answers
 

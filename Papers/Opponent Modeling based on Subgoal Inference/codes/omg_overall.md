@@ -181,7 +181,18 @@ OMG 与pymarl相比：
 
 
 
-### controllers
+### controllers/om_controller
+
+1. **输入**：
+   - `self.args.name`：算法组合名称，如 `4iql1iql_omg`。
+   - `self.args.train_alg`：主算法名称。
+
+2. **输出**：
+   - `self.algs`：算法名称列表。
+   - `self.agent_algs`：每个智能体对应的算法。
+   - `self.algs_args`：每种算法的参数配置。
+   - 主算法相关信息（`self.main_alg`、`self.main_alg_idx`、`self.main_alg_args`）。
+
 
 
 

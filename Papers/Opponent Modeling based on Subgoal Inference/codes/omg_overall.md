@@ -183,7 +183,26 @@ OMG 与pymarl相比：
 
 ### controllers/om_controller
 
-`def _build_multi_mudule_config(self):`函数：
+在 OMG 算法运行时，`Multi_Module_MAC` 的调用逻辑如下：
+1. **初始化阶段**：
+   - 创建所有智能体和对手建模模块。
+   - 动态解析算法组合配置。
+
+2. **环境交互阶段**：
+   - 每个时间步调用 `select_actions` 选择智能体的动作。
+   - 动作选择依赖于智能体的输出（由 AM 提供子目标推理结果）。
+
+3. **模型训练阶段**：
+   - 调用 `main_alg_forward` 获取主算法智能体的输出。
+   - AM 模块通过输入数据更新子目标推理模型。
+
+4. **模型保存和加载**：
+   - 定期保存或加载智能体和对手建模模块的参数。
+
+5. **子目标嵌入**：
+   - AM 的推理结果直接作为智能体输入的一部分，影响动作选择和模型更新。
+
+`def _build_multi_mudule_config(self):`函数：（init)
 1. **输入**：
    - `self.args.name`：算法组合名称，如 `4iql1iql_omg`。
    - `self.args.train_alg`：主算法名称。

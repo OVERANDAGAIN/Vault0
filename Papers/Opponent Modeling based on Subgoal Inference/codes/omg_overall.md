@@ -98,7 +98,7 @@ pymarl结构：
 
 
 
-OMG 与之相比： 
+OMG 与pymarl相比： 
 - `config/algs` 下多了: `iql_am.yaml, iql_idv.yaml, iql_omg.yaml`这三个文件
 - `controllers` 下多了: `om_controller.py`
 - `learners` 下多了: `am_learner.py, omg_learner.py, q_learner_4am.py` 这三个文件

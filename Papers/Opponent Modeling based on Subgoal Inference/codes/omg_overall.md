@@ -99,14 +99,20 @@ pymarl结构：
 
 
 OMG 与pymarl相比： 
-- `config/algs` 下多了: `iql_am.yaml, iql_idv.yaml, iql_omg.yaml`这三个文件
-- `controllers` 下多了: `om_controller.py`
-- `learners` 下多了: `am_learner.py, omg_learner.py, q_learner_4am.py` 这三个文件
-- `module/agents` 下多了: i`dv_rnn_agent.py`
-- `module` 下多了一整个 am 文件夹，其中包括 `__init__.py, base_am.py, none_am.py, omg_am.py` 这四个文件
-- `utils` 下多了 `MY_EXP_PATH.py` 
-- `main.py` 内多了 `_get_other_config()` 这个函数
-- `run.py` 的 `run_sequential()` 内添加了关于 `MY_EXP_PATH.py` 的相关逻辑, 以及及其他若干处修改
+1. `config/algs` 下多了: `iql_am.yaml, iql_idv.yaml, iql_omg.yaml`这三个文件
+2. `controllers` 下多了: `om_controller.py`
+3. `learners` 下多了: `am_learner.py, omg_learner.py, q_learner_4am.py` 这三个文件
+   
+4. `module/agents` 下多了: i`dv_rnn_agent.py`
+5. `module` 下多了一整个 am 文件夹，其中包括 `__init__.py, base_am.py, none_am.py, omg_am.py` 这四个文件
+   
+6. `utils` 下多了 `MY_EXP_PATH.py` 
+7. `main.py` 内多了 `_get_other_config()` 这个函数
+8. `run.py` 的 `run_sequential()` 内添加了关于 `MY_EXP_PATH.py` 的相关逻辑, 以及及其他若干处修改
+
+
+
+
 ## Overall_Answers
 ### main.py
 [[Sacred]][^1]

@@ -1,6 +1,6 @@
 #meeting 
 
-**Reporter**
+**Reporter:**  
 
 # Inspiration
 

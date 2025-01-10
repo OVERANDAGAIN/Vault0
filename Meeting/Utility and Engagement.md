@@ -11,7 +11,7 @@ why is it important to understand what users want?
 # Context
 Curation
 
-smart pantry $\Longrightarrow$ 
+smart pantry
 
 # Innovation
 

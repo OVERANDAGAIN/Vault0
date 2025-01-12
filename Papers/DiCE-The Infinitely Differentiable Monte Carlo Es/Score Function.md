@@ -1,7 +1,7 @@
 ---
 创建时间: 2024-十二月-6日  星期五, 3:36:25 下午
 ---
-[[DiCE]]
+[[[[DiCE]]
 
 [https://blog.shakirm.com/2015/11/machine-learning-trick-of-the-day-5-log-derivative-trick/](https://blog.shakirm.com/2015/11/machine-learning-trick-of-the-day-5-log-derivative-trick/)
 

@@ -6,7 +6,7 @@
 # Sources
 
 - [?] 下面是运行HOP代码时遇到的问题（windows环境）
-==cuda环境配置未成功==
+==cuda环境配置未成功==，首先需要完成 `conda` 相关环境的配置，见： [[anaconda_python_torch_pycharm配置]][^2]
 
 # Errors
 ```bash
@@ -93,7 +93,8 @@ C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\libnvvp
 ![[Pasted image 20250113203710.png]]
 
 ## Changes
-## 代码 `tst` 测试
+## 代码 `tst` 测试（在配置完 `conda` 环境后，否则仍然检测不到GPU）（环境版本为随便配置的，并非HOP的依赖环境）
+1. 测试1
 ```python
 import ray
 ray.init()
@@ -109,7 +110,7 @@ D:\anaconda\envs\HOP\python.exe F:\HOP\msg_code\tst.py
 
 ```
 
-
+2. 测试2
 ```python
 import torch
 
@@ -121,10 +122,15 @@ if torch.cuda.is_available():
 ```
 
 ```bash
+D:\anaconda\envs\pytorchtst\python.exe F:\HOP\msg_code\tst.py 
+PyTorch CUDA available: True
+GPU Name: NVIDIA GeForce RTX 4090
+CUDA Version: 12.4
+PyTorch Version: 2.5.1
 
 ```
 
-
+3. 测试3
 ```python
 import torch
 
@@ -133,7 +139,13 @@ for i in range(torch.cuda.device_count()):
     print(f"GPU {i}: {torch.cuda.get_device_name(i)}")
 ```
 
+```bash
+D:\anaconda\envs\pytorchtst\python.exe F:\HOP\msg_code\tst.py 
+PyTorch detected GPU count: 1
+GPU 0: NVIDIA GeForce RTX 4090
 
+进程已结束，退出代码为 0
+```
 
 
 ## GPT_Answers
@@ -144,4 +156,5 @@ for i in range(torch.cuda.device_count()):
 
 # FootNotes
 
+[^2]: 安装conda相关环境
 [^1]: 参考b站的cuda环境配置视频

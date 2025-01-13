@@ -40,6 +40,7 @@
 ![[Pasted image 20250113222958.png]]
 
 然而，在anaconda prompt中直接conda create 时，创建的环境是在C盘下的。而不是在 D:\anaconda\envs\HOP 下的，因此 这里是一个问题
+![[Pasted image 20250113223535.png]]
 ````
 
 如何创建虚拟环境使其在指定位置 $\Longrightarrow$ 如D:\anaconda\envs\HOP 中，而不是C盘中的 .conda? 因为使用anaconda prompt会出现这种问题。[^1]

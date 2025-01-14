@@ -65,6 +65,9 @@ To change the config for an RLlib Trainer instance: Modify the python dict
 1. 安装cuda-tookit
    网址： [CUDA Toolkit - Free Tools and Training \| NVIDIA Developer](https://developer.nvidia.com/cuda-toolkit)
    安装的这个12.6（4090）
+```ad-caution
+后续由于cuda torch python 三者版本匹配的问题重新卸载安装了
+```
    
  ```ad-help
 期间可能出现visual studio相关报错提示：

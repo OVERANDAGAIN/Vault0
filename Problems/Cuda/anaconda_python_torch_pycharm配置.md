@@ -79,6 +79,11 @@
    >（而且通过下载的pytorch的大小也可用看出，翻到前面用官网那条指令下载pytorch之后输出的结果，里面有写pytorch大小，200M多点的就是cpu版本，1G多的才是gpu版本，且conda list后显示应该是有带cuda字眼的）
 ```
 
+### Solution
+maybe: `python` 和 `torch` 版本之间有依赖关系。`torch` 与 `cuda` 版本之间也有依赖关系。
+ref: [torch 与 torchvision 版本选择](https://www.aleshu.com/richcontent-detail/?postAlias=6e3b4f25bd5eaf89026876ddc01a1875&groupAlias=cd4504785c88097900ce5d45aa5d1369)
+
+
 
 
 

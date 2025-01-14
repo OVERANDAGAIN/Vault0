@@ -25,7 +25,7 @@
 # Background
 **Counterfactual Thinking** developed $\Longrightarrow$ COMA
 howeverm, ==episodic future thinking== remains **unexplored**
-
+leverage inverse rational control **(IRC)**
 
 # Related Work
 

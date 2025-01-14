@@ -99,6 +99,43 @@ ref: [torch 与 torchvision 版本选择](https://www.aleshu.com/richcontent-det
 cuda10.2
 
 
+安装torch 1.12.1时，官网的命令
+```bash
+# CUDA 10.2
+conda install pytorch==1.12.1 torchvision==0.13.1 torchaudio==0.12.1 cudatoolkit=10.2 -c pytorch
+# CUDA 11.3
+conda install pytorch==1.12.1 torchvision==0.13.1 torchaudio==0.12.1 cudatoolkit=11.3 -c pytorch
+# CUDA 11.6
+conda install pytorch==1.12.1 torchvision==0.13.1 torchaudio==0.12.1 cudatoolkit=11.6 -c pytorch -c conda-forge
+# CPU Only
+conda install pytorch==1.12.1 torchvision==0.13.1 torchaudio==0.12.1 cpuonly -c pytorch
+```
+
+仍然是cpu的版本：
+```bash
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    cudatoolkit-10.2.89        |       h74a9793_1       317.2 MB
+    pytorch-1.12.1             |      py3.7_cpu_0       133.7 MB  pytorch
+    torchaudio-0.12.1          |         py37_cpu         3.5 MB  pytorch
+    torchvision-0.13.1         |         py37_cpu         6.0 MB  pytorch
+    ------------------------------------------------------------
+                                           Total:       460.4 MB
+```
+
+
+
+
+
+
+
+
+
+
+
 # FootNotes
 
 [^1]: to be solved 关于anaconda创建虚拟环境的位置问题

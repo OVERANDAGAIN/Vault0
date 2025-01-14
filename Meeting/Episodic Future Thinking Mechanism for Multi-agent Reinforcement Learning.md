@@ -32,7 +32,9 @@ howeverm, ==episodic future thinking== remains **unexplored**
 leverage inverse rational control **(IRC)**
 
 # Related Work
-
+EFT
+model-based RL
+ToM
 
 
 # Theroy

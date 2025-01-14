@@ -96,7 +96,7 @@ C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\libnvvp
 ![[Pasted image 20250113203744.png]]
 ![[Pasted image 20250113203710.png]]
 
-## Changes
+# TESTS
 ## 代码 `tst` 测试（在配置完 `conda` 环境后，否则仍然检测不到GPU）（环境版本为随便配置的，并非HOP的依赖环境）
 1. 测试1
 ```python

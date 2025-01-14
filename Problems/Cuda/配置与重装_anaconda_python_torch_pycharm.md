@@ -136,6 +136,7 @@ pip包安装地址[download.pytorch.org/whl/torch\_stable.html](https://download
 
 下载了 `torch-1.10.1+cu102-cp37-cp37m-win_amd64.whl`
 
+
 ````ad-abstract
 
 又在网上找了好一段时间，才发现pip可以安装本地的包，也就是说可以先把包下载到本地，然后用`pip install xxxx`来安装，`xxxx`是本地包的存放路径。后来在一个博客里找到了官网的下载库地址.

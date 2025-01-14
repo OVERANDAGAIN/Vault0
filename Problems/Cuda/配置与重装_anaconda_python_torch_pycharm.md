@@ -97,7 +97,7 @@ ref: [torch 与 torchvision 版本选择](https://www.aleshu.com/richcontent-det
 
 2. 重新安装对应的cuda版本
 cuda10.2
-
+重新安装参考视频： [Windows 下 CUDA, cudnn, Pytoch 卸载、更新、安装\_哔哩哔哩\_bilibili](https://www.bilibili.com/video/BV1Xb4y1c7E1/?spm_id_from=333.788.top_right_bar_window_history.content.click&vd_source=6c33cf6826337aad387874b66413aa72)[^4]
 ````ad-caution
 
 安装torch 1.12.1时，官网的命令
@@ -130,7 +130,7 @@ The following packages will be downloaded:
 
 #### 解决官网下载仍然是cpu版本的问题
 
-
+ref: 
 
 
 
@@ -142,3 +142,4 @@ The following packages will be downloaded:
 [^1]: to be solved 关于anaconda创建虚拟环境的位置问题
 [^2]: 原因解析
 [^3]: 网页说明三者版本之间的对应关系
+[^4]: b站关于重新安装cuda的视频（即卸载）

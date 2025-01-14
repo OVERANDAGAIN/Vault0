@@ -80,7 +80,7 @@
 ```
 
 ### Solution
-1. maybe: `python` 和 `torch` 版本之间有依赖关系。`torch` 与 `cuda` 版本之间也有依赖关系。（使用后面提到的pip手动安装时还需要把 `torch` 和 `torchvision` 对应
+1. maybe: `python` 和 `torch` 版本之间有依赖关系。`torch` 与 `cuda` 版本之间也有依赖关系。（使用后面提到的pip手动安装时还需要把 `torch` 和 `torchvision` 对应）（事实上，显卡也需要与CUDA对应）[[4090与CUDA不匹配]]
 
 ref: [torch 与 torchvision 版本选择](https://www.aleshu.com/richcontent-detail/?postAlias=6e3b4f25bd5eaf89026876ddc01a1875&groupAlias=cd4504785c88097900ce5d45aa5d1369)[^3]（torchvision对应可能有误）
 正确的ref:(2024/4/29):[PyTorch碎片：PyToch和Torchvision对应版本\_pytorch和torchvision版本对应-CSDN博客](https://blog.csdn.net/jorg_zhao/article/details/106883420)[^7]

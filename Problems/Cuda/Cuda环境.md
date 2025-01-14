@@ -6,7 +6,7 @@
 # Sources
 
 - [?] 下面是运行HOP代码时遇到的问题（windows环境）
-==cuda环境配置未成功==，首先需要完成 `conda` 相关环境的配置，见： [[anaconda_python_torch_pycharm配置]][^2]
+==cuda环境配置未成功==，首先需要完成 `conda` 相关环境的配置，见： [[配置与重装_anaconda_python_torch_pycharm]][^2]
 
 # Errors
 ```bash

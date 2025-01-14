@@ -17,7 +17,8 @@
 
 
 # Background
-
+**Counterfactual Thinking** developed $\Longrightarrow$ COMA
+howeverm, ==episodic future thinking== remains **unexplored**
 
 
 # Related Work

@@ -98,6 +98,7 @@ ref: [torch 与 torchvision 版本选择](https://www.aleshu.com/richcontent-det
 2. 重新安装对应的cuda版本
 cuda10.2
 
+````ad-caution
 
 安装torch 1.12.1时，官网的命令
 ```bash
@@ -125,9 +126,9 @@ The following packages will be downloaded:
     ------------------------------------------------------------
                                            Total:       460.4 MB
 ```
+````
 
-
-
+#### 解决官网下载仍然是cpu版本的问题
 
 
 

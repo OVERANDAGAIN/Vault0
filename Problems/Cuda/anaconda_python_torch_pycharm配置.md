@@ -96,7 +96,7 @@ ref: [torch 与 torchvision 版本选择](https://www.aleshu.com/richcontent-det
 
 
 2. 重新安装对应的cuda版本
-
+cuda10.2
 
 
 # FootNotes

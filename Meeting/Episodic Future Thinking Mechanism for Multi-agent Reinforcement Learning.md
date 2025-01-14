@@ -35,7 +35,7 @@ leverage inverse rational control **(IRC)**
 EFT
 model-based RL
 ToM
-
+False Consensus Effect(FCE)
 
 # Theroy
 

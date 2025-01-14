@@ -82,7 +82,8 @@
 ### Solution
 1. maybe: `python` 和 `torch` 版本之间有依赖关系。`torch` 与 `cuda` 版本之间也有依赖关系。（使用后面提到的pip手动安装时还需要把 `torch` 和 `torchvision` 对应
 
-ref: [torch 与 torchvision 版本选择](https://www.aleshu.com/richcontent-detail/?postAlias=6e3b4f25bd5eaf89026876ddc01a1875&groupAlias=cd4504785c88097900ce5d45aa5d1369)[^3]
+ref: [torch 与 torchvision 版本选择](https://www.aleshu.com/richcontent-detail/?postAlias=6e3b4f25bd5eaf89026876ddc01a1875&groupAlias=cd4504785c88097900ce5d45aa5d1369)[^3]（torchvision对应可能有误）
+正确的ref:(2024/4/29):[PyTorch碎片：PyToch和Torchvision对应版本\_pytorch和torchvision版本对应-CSDN博客](https://blog.csdn.net/jorg_zhao/article/details/106883420)[^7]
 
 | pytorch  | torchvision | python              | cuda                           |
 | -------- | ----------- | ------------------- | ------------------------------ |
@@ -152,7 +153,7 @@ The following packages will be downloaded:
 
 知乎ref: [记录一下安装Pytorch和cuda的踩坑经历](https://zhuanlan.zhihu.com/p/424837529) [^5]
 
-pip包安装地址[download.pytorch.org/whl/torch\_stable.html](https://download.pytorch.org/whl/torch_stable.html)
+pip包安装地址[download.pytorch.org/whl/torch\_stable.html](https://download.pytorch.org/whl/torch_stable.html)[^8]
 
 下载了 `torch-1.10.1+cu102-cp37-cp37m-win_amd64.whl`
 - [?] `torchvision-0.11.1+cu102-cp37-cp37m-win_amd64.whl` 与之冲突，使用下面的版本
@@ -214,8 +215,10 @@ True
 # FootNotes
 
 [^1]: to be solved 关于anaconda创建虚拟环境的位置问题
-[^2]: 原因解析
+[^2]: 返回false原因解析
 [^3]: 网页说明三者版本之间的对应关系
+[^7]: 正确的对应关系
 [^4]: b站关于重新安装cuda的视频（即卸载）
 [^5]: 知乎关于安装torch的gpu版本的避坑说明
+[^8]: pip手动安装torch+torchvision的地址
 [^6]: 待解决的问题，如5所示 —— 已解决

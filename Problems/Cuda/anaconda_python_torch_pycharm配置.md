@@ -8,6 +8,8 @@
 
 - [?] anaconda_python_torch_pycharm配置
 
+- [?] 安装了torch之后显示仍然 `torch.is_available() = false ` （安装的是cpu版本的pytorch，只有200MB左右， GPU版的才有1G左右）
+![[Pasted image 20250114100814.png]]
 
 # Errors
 ```bash
@@ -22,6 +24,8 @@
 
 # Solutions
 
+## 1_Answers
+
 视频方法：
 
 [2024最新cuda、cudnn、anaconda、pycharm安装教程——深度学习环境配置【附：安装包】\_哔哩哔哩\_bilibili](https://www.bilibili.com/video/BV1WYvKeMELZ/?spm_id_from=333.788.videopod.sections&vd_source=6c33cf6826337aad387874b66413aa72)
@@ -32,7 +36,7 @@
 
 ![[Pasted image 20250113211833.png]]
 
-## Changes
+### 具体操作
 
 管理员下的命令提示符（不是powershell) 或者是 anaconda Prompt
 ````ad-caution
@@ -60,12 +64,26 @@
 ![[Pasted image 20250113215624.png]]
 
 
-## GPT_Answers
+
+## 2_Answers
+
+输入 `conda list` 后，发现pytorch是以 cpu 结尾的。说明安装的不是GPU版本的。
+
+原因ref: [2024.12.1最新解决torch.cuda.is\_available()返回false方法建议\_cuda is available命令-CSDN博客](https://blog.csdn.net/weixin_55010329/article/details/144176801?spm=1001.2014.3001.5506)[^2]
+```ad-seealso
+会出现false，实际有俩个问题：
+
+1. 官网下载的win版pytorch，选择是cuda11.8，12.1，12.4，这三个版本指的是pytorch它要运行的最低的cuda版本。实际在安装完nvidia某版本驱动后，就已经指定了你cuda的版本，cmd打开控制台使用NVIDIA-smi查看。然而，能看到cuda版本，不是说你已经安装了cuda，怎么安装看后文链接。
+
+2. 官网用conda下载pytorch完成后，它（官网）让你觉得你下载的就是gpu对应的pytorch，实际跟着土堆之前的视频安装的大多是**cpu对应的pytorch**。这时候你打开anaconda prompt，输入conda activate pytorch进入pytorch环境，然后再输入conda list，看pytorch后的build channel 是不是**py3.6_cpu（带有这个cpu字眼的**）。如果是，那你安装的就是cpu对应的pytorch。怎么**安装gpu对应的pytorch**，看后文链接。
+   >（而且通过下载的pytorch的大小也可用看出，翻到前面用官网那条指令下载pytorch之后输出的结果，里面有写pytorch大小，200M多点的就是cpu版本，1G多的才是gpu版本，且conda list后显示应该是有带cuda字眼的）
+```
 
 
-## Other_Answers
+
 
 
 # FootNotes
 
 [^1]: to be solved 关于anaconda创建虚拟环境的位置问题
+[^2]: 原因解析

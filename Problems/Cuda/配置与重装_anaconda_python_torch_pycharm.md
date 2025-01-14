@@ -130,10 +130,30 @@ The following packages will be downloaded:
 
 #### 解决官网下载仍然是cpu版本的问题
 
-ref: 
+知乎ref: [记录一下安装Pytorch和cuda的踩坑经历](https://zhuanlan.zhihu.com/p/424837529) [^5]
 
+pip包安装地址[download.pytorch.org/whl/torch\_stable.html](https://download.pytorch.org/whl/torch_stable.html)
 
+下载了
 
+````ad-abstract
+
+又在网上找了好一段时间，才发现pip可以安装本地的包，也就是说可以先把包下载到本地，然后用`pip install xxxx`来安装，`xxxx`是本地包的存放路径。后来在一个博客里找到了官网的下载库地址.
+
+打开后里面都是一堆链接，如下图所示，我们需要在这里面中找到自己需要的包。
+![[Pasted image 20250114143715.png]]
+
+1. 最前面的`cu113`指的是支持11.3版本的cuda，同理`cu101`就是支持10.3版本的cuda。看到的最低的cuda版本是10.0，低于10.0版本cuda对应的pytorch安装包可能存放在其他地方，或者不提供支持了。如果是`cpu`则说明是cpu版本的包，不适配gpu。
+2. cuda版本号后的`/`和`%`之间的是包的内容和版本，比如torch-1.10.0就是1.10.0版本的torch，这个很容易理解。
+3. 再往后的`2B`没猜出来是什么意思，可能是to B？
+4. 紧接着的`cu113`和前面是一个意思，表示支持的cuda版本，`cp3x`则表示支持的Python版本是3.x，如果是由于我安装的是Python 3.9.5，因此我选择的是cp39的包。
+5. 最后面的`Linux_x86_64`和`win_amd64`就很简单了，Linux版本就选前一个，Windows版本就选后一个，MacOS的就不知道了，可能也是后一个（不负责任的瞎猜）。
+
+>将torch和torchvision都下载下来后就可以用pip进行安装了，指令就是`pip install D:\DownloadData\MyDownload\torch-1.10.0+cu113-cp39-cp39-win_amd64.whl`，后面的路径换成你下载到的文件夹即可，记得要先装torch再装torchvision，否则pip会自己再下一个torch给你装上去。
+````
+
+待解决的问题：为什么官网下载不了GPU版本的torch（事实上之前试的12.6下载成功了，但这个版本却失败了）
+#to_be_solved [^6]
 
 
 
@@ -143,3 +163,5 @@ ref:
 [^2]: 原因解析
 [^3]: 网页说明三者版本之间的对应关系
 [^4]: b站关于重新安装cuda的视频（即卸载）
+[^5]: 知乎关于安装torch的gpu版本的避坑说明
+[^6]: 待解决的问题，如5所示

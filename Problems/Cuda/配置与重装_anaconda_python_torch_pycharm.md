@@ -134,7 +134,7 @@ The following packages will be downloaded:
 
 pip包安装地址[download.pytorch.org/whl/torch\_stable.html](https://download.pytorch.org/whl/torch_stable.html)
 
-下载了
+下载了 `torch-1.10.1+cu102-cp37-cp37m-win_amd64.whl`
 
 ````ad-abstract
 

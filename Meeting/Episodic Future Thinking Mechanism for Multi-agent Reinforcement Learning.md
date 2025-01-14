@@ -11,6 +11,9 @@
 # Probelms or Thinkings 
 1. what is model-based RL?
    >Human beings strive to anticipate future situations to prevent costly mistakes.One naive approach to incorporate this ability into AI is through future trajectory prediction using **model-based RL**
+   
+   Model-based RL incorporates an explicit module **representing system dynamics,** contrasting with model-free RL.
+2. 
 
 
 
@@ -19,7 +22,7 @@
 
 
 # Innovation
-
+predict future observations based on the current state and predicted actions of surrounding agents
 
 
 # Background

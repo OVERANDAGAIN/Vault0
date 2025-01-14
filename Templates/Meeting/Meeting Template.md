@@ -5,6 +5,10 @@
 # Inspiration
 
 
+# Probelms or Thinkings 
+
+
+
 # Context
 
 

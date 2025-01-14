@@ -80,11 +80,22 @@
 ```
 
 ### Solution
-maybe: `python` 和 `torch` 版本之间有依赖关系。`torch` 与 `cuda` 版本之间也有依赖关系。
-ref: [torch 与 torchvision 版本选择](https://www.aleshu.com/richcontent-detail/?postAlias=6e3b4f25bd5eaf89026876ddc01a1875&groupAlias=cd4504785c88097900ce5d45aa5d1369)
+1. maybe: `python` 和 `torch` 版本之间有依赖关系。`torch` 与 `cuda` 版本之间也有依赖关系。
+
+ref: [torch 与 torchvision 版本选择](https://www.aleshu.com/richcontent-detail/?postAlias=6e3b4f25bd5eaf89026876ddc01a1875&groupAlias=cd4504785c88097900ce5d45aa5d1369)[^3]
+
+![[Pasted image 20250114105733.png]]
+
+![[Pasted image 20250114105807.png]]
+
+
+对于 `python 3.7.11` 安装 1.13.1 以下的 `torch` ，以及与 `torch` 对应的 `cuda` 版本。
+
+>        若输出结果为False的话，就代表引起报错的原因是torch与CUDA的版本不兼容。
 
 
 
+2. 重新安装对应的cuda版本
 
 
 
@@ -92,3 +103,4 @@ ref: [torch 与 torchvision 版本选择](https://www.aleshu.com/richcontent-det
 
 [^1]: to be solved 关于anaconda创建虚拟环境的位置问题
 [^2]: 原因解析
+[^3]: 网页说明三者版本之间的对应关系

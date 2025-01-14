@@ -84,10 +84,10 @@
 
 ref: [torch 与 torchvision 版本选择](https://www.aleshu.com/richcontent-detail/?postAlias=6e3b4f25bd5eaf89026876ddc01a1875&groupAlias=cd4504785c88097900ce5d45aa5d1369)[^3]
 
-![[Pasted image 20250114105733.png]]
+![[Pasted image 20250114110416.png]]
 
-![[Pasted image 20250114105807.png]]
 
+![[Pasted image 20250114110432.png]]
 
 对于 `python 3.7.11` 安装 1.13.1 以下的 `torch` ，以及与 `torch` 对应的 `cuda` 版本。
 

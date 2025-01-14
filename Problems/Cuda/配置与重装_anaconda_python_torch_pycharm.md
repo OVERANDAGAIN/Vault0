@@ -182,7 +182,34 @@ pip包安装地址[download.pytorch.org/whl/torch\_stable.html](https://download
 
 #solved [^6]: torch 1.12.0 不支持windows平台，如上表对应关系所示。[[配置与重装_anaconda_python_torch_pycharm#Solution]]
 
+#### 最终成功解决
+```powershell
+Microsoft Windows [版本 10.0.22631.4602]
+(c) Microsoft Corporation。保留所有权利。
 
+C:\Windows\System32>conda create -n HOP_tst python=3.7.11
+
+C:\Windows\System32>conda env list
+
+C:\Windows\System32>conda activate HOP_tst
+
+(HOP_tst) C:\Windows\System32>pip install C:\Users\admin\Desktop\torch-1.10.1+cu102-cp37-cp37m-win_amd64.whl
+
+(HOP_tst) C:\Windows\System32>pip install C:\Users\admin\Desktop\torchvision-0.11.2+cu102-cp37-cp37m-win_amd64.whl
+
+(HOP_tst) C:\Windows\System32>python -V
+Python 3.7.11
+
+(HOP_tst) C:\Windows\System32>python
+Python 3.7.11 (default, Jul 27 2021, 09:42:29) [MSC v.1916 64 bit (AMD64)] :: Anaconda, Inc. on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import torch
+>>> torch.__version__
+'1.10.1+cu102'
+>>> torch.cuda.is_available()
+True
+>>>
+```
 
 # FootNotes
 

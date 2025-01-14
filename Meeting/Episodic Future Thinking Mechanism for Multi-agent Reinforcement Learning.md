@@ -15,7 +15,7 @@
 
 
 # Context
-
+**EFT** mechanism $\Longrightarrow$ a social decision-making approach 
 
 
 # Innovation

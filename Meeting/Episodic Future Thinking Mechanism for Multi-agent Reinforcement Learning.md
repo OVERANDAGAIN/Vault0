@@ -14,7 +14,6 @@ the anonymous driving environment may can be used in the HOP.
    
    Model-based RL incorporates an explicit module **representing system dynamics,** contrasting with model-free RL.
    examples : **Dreamer** and Model-based Policy Optimizaiton(**MBPO**) 
-2. 
 
 
 

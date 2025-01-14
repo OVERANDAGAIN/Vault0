@@ -80,7 +80,7 @@
 ```
 
 ### Solution
-1. maybe: `python` 和 `torch` 版本之间有依赖关系。`torch` 与 `cuda` 版本之间也有依赖关系。
+1. maybe: `python` 和 `torch` 版本之间有依赖关系。`torch` 与 `cuda` 版本之间也有依赖关系。（使用后面提到的pip手动安装时还需要把 `torch` 和 `torchvision` 对应
 
 ref: [torch 与 torchvision 版本选择](https://www.aleshu.com/richcontent-detail/?postAlias=6e3b4f25bd5eaf89026876ddc01a1875&groupAlias=cd4504785c88097900ce5d45aa5d1369)[^3]
 
@@ -135,7 +135,8 @@ The following packages will be downloaded:
 pip包安装地址[download.pytorch.org/whl/torch\_stable.html](https://download.pytorch.org/whl/torch_stable.html)
 
 下载了 `torch-1.10.1+cu102-cp37-cp37m-win_amd64.whl`
-
+`torchvision-0.11.1+cu102-cp37-cp37m-win_amd64.whl`
+（与上面的图对应）
 
 ````ad-abstract
 

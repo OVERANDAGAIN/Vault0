@@ -155,7 +155,11 @@ The following packages will be downloaded:
 pip包安装地址[download.pytorch.org/whl/torch\_stable.html](https://download.pytorch.org/whl/torch_stable.html)
 
 下载了 `torch-1.10.1+cu102-cp37-cp37m-win_amd64.whl`
-`torchvision-0.11.1+cu102-cp37-cp37m-win_amd64.whl`
+- [?] `torchvision-0.11.1+cu102-cp37-cp37m-win_amd64.whl` 与之冲突，使用下面的版本
+`torchvision-0.11.2+cu102-cp37-cp37m-win_amd64.whl`
+
+![[Pasted image 20250114152537.png]]
+![[Pasted image 20250114152513.png]]
 （与上面的图对应）
 
 ````ad-abstract

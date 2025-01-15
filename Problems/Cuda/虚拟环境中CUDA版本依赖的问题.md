@@ -16,10 +16,10 @@
 # Solutions
 1. 首先，CUDA版本与Python 3.7.11 对应 [[配置与重装_anaconda_python_torch_pycharm#Solution]]
    ~~因此选择下载CUDA11.8以适配4090 与 3.7.11。~~
-   因此选择下载CUDA12.1以适配4090 与 3.7.11。（11.8也不适配，根据官网的指令自动下载了cpu的版本torch1.13.1。也许是由于显卡与python版本的问题）
+   ~~因此选择下载CUDA12.1以适配4090 与 3.7.11。（11.8也不适配，根据官网的指令自动下载了cpu的版本torch1.13.1。也许是由于显卡与python版本的问题）~~
+	并非不适配，python版本问题可能性最大
 
-
-`conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia`
+~~~~`conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia`
 
 
 ```ad-tip

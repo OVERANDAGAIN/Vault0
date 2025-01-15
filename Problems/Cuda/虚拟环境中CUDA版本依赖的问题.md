@@ -24,9 +24,12 @@
 
 ```ad-tip
 ~~在这里，不再使用本机配置CUDA与cudnn，conda虚拟环境配置torch和torchvision的方法。~~
->而是直接在conda虚拟环境（选择好python版本）中直接安装torch和torchtoolkit(我猜想这个就包含了cuda和cudnn)，因此只需一条指令即可 
+在这里，不再使用本机配置CUDA与cudnn，conda虚拟环境配置torch和torchvision的方法。
+>~~而是直接在conda虚拟环境（选择好python版本）中直接安装torch和torchtoolkit(我猜想这个就包含了cuda和cudnn)，因此只需一条指令即可(11.8+)~~ 
+>而是直接在conda虚拟环境（选择好python版本）中直接安装torch和torchtoolkit(我猜想这个就包含了cuda和cudnn)，因此只需一条指令即可(Only 11.7)
 >~~`conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia`~~
-`conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia`
+~~`conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia`~~
+`conda install pytorch torchvision torchaudio pytorch-cuda=11.7 -c pytorch -c nvidia`
 >
 ```
 
@@ -42,6 +45,8 @@
 ```ad-failure
 以上使用官网指令无一例外都下载的是cpu版本，很大可能是因为python版本的问题。
 >如果一定使用python3.7.11，还是使用手动pip的方式。
+>更正：可以使用官方指令，但是官方指令与python版本强相关，cp37最高直到CUDA11.7
+>也就是pip和官方指令类似效果。无论执行哪个，都要先去网站上查看是否有对应python版本的torch包
 ```
 
 

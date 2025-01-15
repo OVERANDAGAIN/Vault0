@@ -13,19 +13,11 @@
 
 预解决方案： GPT回答(在虚拟环境中安装CUDA)（大大减少操作复杂度，方便创建不同环境的工程） 或者 重新安装本机CUDA
 
-# Errors
-```bash
-
-```
-
-# Codes
-
-```python
-
-```
-
 # Solutions
-首先，CUDA版本与Python 3.7.11 对应
+1. 首先，CUDA版本与Python 3.7.11 对应 [[配置与重装_anaconda_python_torch_pycharm#Solution]]
+   因此选择下载CUDA11.8以适配4090 与 3.7.11 
+
+
 
 ## Changes
 

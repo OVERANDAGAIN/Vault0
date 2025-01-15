@@ -23,7 +23,7 @@
 
 
 ```ad-tip
-在这里，不再使用本机配置CUDA与cudnn，conda虚拟环境配置torch和torchvision的方法。
+~~在这里，不再使用本机配置CUDA与cudnn，conda虚拟环境配置torch和torchvision的方法。~~
 >而是直接在conda虚拟环境（选择好python版本）中直接安装torch和torchtoolkit(我猜想这个就包含了cuda和cudnn)，因此只需一条指令即可 
 >~~`conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia`~~
 `conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia`
@@ -37,6 +37,21 @@
 ```
 
 #to_be_solved 关于base环境包的安装-未进入虚拟环境就安装包的后果[^1]
+
+
+```ad-failure
+以上使用官网指令无一例外都下载的是cpu版本，很大可能是因为python版本的问题。
+>如果一定使用python3.7.11，还是使用手动pip的方式。
+```
+
+
+
+
+
+
+
+
+
 
 ## Changes
 

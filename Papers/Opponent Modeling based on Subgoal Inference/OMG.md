@@ -140,6 +140,11 @@ D3QN&PPO&IQL
 
 # Results
 
+## $a^{-i}$ 和 $g$ 的比较
+即： 基于动作和goal的学习的区别：
+the method using (s, g, a) naturally holds the advantage of ==faster learning== than the method.
+
+
 ## Ablation Study
 OMG-supervised $\Longrightarrow$ the inference model uses an MLP instead of a CVAE
 

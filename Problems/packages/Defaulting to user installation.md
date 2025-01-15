@@ -6,8 +6,8 @@
 
 # Sources
 
-- [?] 我在pycharm终端里面输入的下面的pip指令会把包安装到哪里？
-出现了Defaulting to user installation错误，而且虚拟环境包里看不到
+- [?] ==windows环境下（未考虑虚拟机下==）：我在pycharm终端里面输入的下面的pip指令会把包安装到哪里？
+出现了==Defaulting to user installation==错误，而且虚拟环境包里看不到
 
 # Errors
 ```bash
@@ -30,7 +30,7 @@ Successfully installed gif-3.0.0
 ```
 
 # Solutions
-
+网页回答：[解决pip安装库失败报错Defaulting to user installation because normal site-packages is not writeable Requirement](https://cloud.baidu.com/article/2798133)
 
 ## Changes
 
@@ -93,6 +93,11 @@ Location: C:\Users\<username>\AppData\Roaming\Python\Python37\site-packages
 
 ## Other_Answers
 
-
+1. 用管理员模式运行pycharm
+2. 把Anaconda\lib下Users权限都设为全部
+3. 在虚拟环境中安装(就和安装torch时一样) $\Longrightarrow$ 命令提示符
+#to_be_solved [^1]
 
 # FootNotes
+
+[^1]: 如何解决pip虚拟环境安装权限的问题

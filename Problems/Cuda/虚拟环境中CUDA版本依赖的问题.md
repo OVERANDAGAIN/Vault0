@@ -46,16 +46,17 @@
 以上使用官网指令无一例外都下载的是cpu版本，很大可能是因为python版本的问题。
 >如果一定使用python3.7.11，还是使用手动pip的方式。
 >更正：可以使用官方指令，但是官方指令与python版本强相关，cp37最高直到CUDA11.7
->也就是pip和官方指令类似效果。无论执行哪个，都要先去网站上查看是否有对应python版本的torch包
+>也就是pip和官方指令类似效果。无论执行哪个，都要先去网站上查看是否有对应python版本的torch包。如果没有对应python的包，两种方法都没有用。
 ```
 
+[[配置与重装_anaconda_python_torch_pycharm#解决官网下载仍然是cpu版本的问题]]
 
 
+最终需要保证python版本与cuda匹配，torch版本自动会匹配上的。
 
+`conda create -n HOP_tst python=3.7.11`
 
-
-
-
+`conda install pytorch torchvision torchaudio pytorch-cuda=11.7 -c pytorch -c nvidia`
 
 
 ## Changes

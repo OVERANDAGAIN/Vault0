@@ -17,7 +17,8 @@
 3. 安装anaconda,pycharm,python等。
 4. 管理员下的命令提示符在 `conda init cmd.exe` 之后可进行虚拟环境创建，使用把torch和torchvision包下载到本地再pip安装的过程。
    
-   ==1.10.1的torch== + ==0.11.2的torchvision== + ==10.2的CUDA== + ==3.7.11的python==
+   ~~1.10.1的torch + 0.11.2的torchvision + 10.2的CUDA + 3.7.11的python~~
+   ==1.10.1的torch== + ==0.11.2的torchvision== + ==11.8的CUDA== + ==3.7.11的python==
 
 >具体在安装项目环境时，是否可以直接一步代码到位？？？无需再本地下载CUDA，再在虚拟环境中安装torch
 

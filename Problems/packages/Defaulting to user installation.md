@@ -7,6 +7,7 @@
 # Sources
 
 - [?] 我在pycharm终端里面输入的下面的pip指令会把包安装到哪里？
+出现了Defaulting to user installation错误，而且虚拟环境包里看不到
 
 # Errors
 ```bash

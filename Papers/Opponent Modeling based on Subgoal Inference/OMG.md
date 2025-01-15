@@ -35,6 +35,10 @@ As subgoals are likely to be shared by different opponent policies, predicting s
 # Background
 1. Opponent modeling plays a crucial role in enhancing the robustness and stability of reinforcement learning
 
+- 关于self-interested agent 和 opponent modelinig 的联系：
+  >When the objectives of a self-interested agent align with  those of the team, this scenario falls under ad-hoc teamwork [21, 8, 39]; however, in more general  cases, these interactions are framed as noncooperative games [34, 23, 45]. A key technique for  self-interested agents in such settings is opponent modeling[24, 3], which enables them to analyze  and predict the actions, goals, and beliefs of other agents
+  
+  
 
 # Related Work
 1. Variational auto-encoders can also be used to model the opponent’s policy

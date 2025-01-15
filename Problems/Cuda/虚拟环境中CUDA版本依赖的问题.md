@@ -25,7 +25,7 @@
 ```
 
 # Solutions
-
+首先，CUDA版本与Python 3.7.11 对应
 
 ## Changes
 

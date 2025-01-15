@@ -17,11 +17,13 @@
    
 1. 安装CUDA 11.7 ( python3.7.11 )（可以在应用-程序里卸载旧的cuda相关程序)，以及 `C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA` 可以卸载后在手动删除残余文件夹
    `nvcc --version` 查看CUDA版本
-2. 安装**cudnn 8.9.7 for CUDA 11.X**,解压后把文件拷贝到cuda目录(可直接改名为cudnn以简化)
+2. 安装**cudnn 8.9.7 for CUDA 11.X**,解压后把文件拷贝到cuda目录(可直接改名为cudnn以简化)[^1]
 ```ad-summary
 只要包里面有python与CUDA对应版本的包，就可以使用官方指令下载
->包地址：
+>包地址：pip包安装地址[download.pytorch.org/whl/torch\_stable.html](https://download.pytorch.org/whl/torch_stable.html)
+>
 >`conda install pytorch torchvision torchaudio pytorch-cuda=11.7 -c pytorch -c nvidia`
+>
 >不一定必须用手动pip的方法
 ```
 3. 安装anaconda,pycharm,python等。
@@ -36,7 +38,11 @@
 `conda install pytorch torchvision torchaudio pytorch-cuda=11.7 -c pytorch -c nvidia`
 
 
->具体在安装项目环境时，是否可以直接一步代码到位？？？无需再本地下载CUDA，再在虚拟环境中安装torch
+>Q: 具体在安装项目环境时，是否可以直接一步代码到位？？？无需再本地下载CUDA，再在虚拟环境中安装torch
+
+```ad-success
+可以的，每个虚拟环境CUDA版本相互独立，与本机CUDA版本也独立
+```
 
 ## Changes
 
@@ -48,3 +54,5 @@
 
 
 # FootNotes
+
+[^1]: pip包地址

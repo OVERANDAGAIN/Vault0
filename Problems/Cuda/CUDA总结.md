@@ -17,7 +17,7 @@
    
 1. 安装CUDA 11.7 ( python3.7.11 )（可以在应用-程序里卸载旧的cuda相关程序)，以及 `C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA` 可以卸载后在手动删除残余文件夹
    `nvcc --version` 查看CUDA版本
-2. 安装**cudnn 8.9.7 for CUDA 11.X**,解压后把文件拷贝到cuda目录(可直接改名为cudnn以简化)[^1]
+2. 安装**cudnn 8.9.7 for CUDA 11.X**,解压后把文件拷贝到cuda目录(可直接改名为cudnn以简化)[^2]
 ```ad-summary
 只要包里面有python与CUDA对应版本的包，就可以使用官方指令下载
 >包地址：pip包安装地址[download.pytorch.org/whl/torch\_stable.html](https://download.pytorch.org/whl/torch_stable.html)
@@ -55,4 +55,4 @@
 
 # FootNotes
 
-[^1]: pip包地址
+[^2]: pip包地址

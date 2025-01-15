@@ -8,7 +8,7 @@
 - [?] 虚拟环境中CUDA版本依赖的问题
 
 关联：[[4090与CUDA不匹配]]
-[[多版本CUDA_to_be_solved]]
+
 
 
 预解决方案： GPT回答(在虚拟环境中安装CUDA)（大大减少操作复杂度，方便创建不同环境的工程） 或者 重新安装本机CUDA
@@ -26,7 +26,7 @@
 ~~在这里，不再使用本机配置CUDA与cudnn，conda虚拟环境配置torch和torchvision的方法。~~
 在这里，不再使用本机配置CUDA与cudnn，conda虚拟环境配置torch和torchvision的方法。
 >~~而是直接在conda虚拟环境（选择好python版本）中直接安装torch和torchtoolkit(我猜想这个就包含了cuda和cudnn)，因此只需一条指令即可(11.8+)~~ 
->而是直接在conda虚拟环境（选择好python版本）中直接安装torch和torchtoolkit(我猜想这个就包含了cuda和cudnn)，因此只需一条指令即可(Only 11.7)
+>而是直接在conda虚拟环境（选择好python版本）中直接安装torch和torchtoolkit(我猜想这个就包含了cuda和cudnn)，因此只需一条指令即可(==Only 11.7==)
 >~~`conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia`~~
 ~~`conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia`~~
 `conda install pytorch torchvision torchaudio pytorch-cuda=11.7 -c pytorch -c nvidia`
@@ -52,13 +52,20 @@
 [[配置与重装_anaconda_python_torch_pycharm#解决官网下载仍然是cpu版本的问题]]
 
 
-最终需要保证python版本与cuda匹配，torch版本自动会匹配上的。
+---
+
+## 最终需要保证python版本与cuda匹配，torch版本自动会匹配上的。
 
 `conda create -n HOP_tst python=3.7.11`
 
 `conda install pytorch torchvision torchaudio pytorch-cuda=11.7 -c pytorch -c nvidia`
 
 
+
+---
+
+### 最终成功结果：
+![[Pasted image 20250115122559.png]]
 ## Changes
 
 

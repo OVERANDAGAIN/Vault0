@@ -119,6 +119,11 @@ $$g_t = \hat{g}_t \mathbb{I}(\eta > \epsilon) + \bar{g}_t \mathbb{I}(\eta \leq \
 
 where $\epsilon$ is a hyperparameter that decreases to zero over training. 
 
+
+
+
+
+
 # Evaluation
 1. In this paper, we consider the most common setting where ==opponents have unseen, diverse, but fixed policies== during test.
 2. The historical trajectory is ==available==

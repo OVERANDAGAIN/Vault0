@@ -12,10 +12,113 @@
 
 A: 观测状态（全局或非全局）、动作独热编码、智能体标识独热编码、model的隐藏维度,最终按最后一个维度拼接。
 
+关于拼接[^1]
 
+````ad-note
+在 `build_inputs` 方法中，**按最后一个维度拼接**（`torch.cat(dim=-1)`）的维度数量直接对应于每个输入特征的大小，这些大小是通过方法中的具体逻辑动态构建的。为了完成拼接，有些维度（除了最后一个维度）确实必须相等。以下是具体分析：
+
+---
+
+### **输入张量的拼接逻辑**
+在 `build_inputs` 中，最终拼接的维度数量来源于多个输入张量的特征大小累加：
+
+#### **1. 来自观测值（`obs` 或 `state`）**
 ```python
-
+obs_inputs.append(batch["obs"][:, t])  # 如果 args.obs_is_state 为 False
 ```
+- **形状**：`[batch_size, n_agents, obs_dim]`
+- 最后一个维度是 `obs_dim`，表示每个智能体的观测值特征数量。
+
+如果 `args.obs_is_state` 为 True，则使用全局状态：
+```python
+obs_inputs.append(state[:, t])
+```
+- **形状**：`[batch_size, n_agents, state_dim]`
+- 最后一个维度变为 `state_dim`。
+
+#### **2. 来自上一步动作（`actions_onehot`）**
+```python
+if self.args.obs_last_action:
+    obs_inputs.append(batch["actions_onehot"][:, t - 1])
+```
+- **形状**：`[batch_size, n_agents, n_actions]`
+- 最后一个维度是 `n_actions`，表示每个智能体的动作维度。
+
+#### **3. 来自智能体标识（`agent_id`）**
+```python
+if self.args.obs_agent_id:
+    obs_inputs.append(th.eye(self.n_agents, device=batch.device).unsqueeze(0).expand(batch_size, -1, -1))
+```
+- **形状**：`[batch_size, n_agents, n_agents]`
+- 最后一个维度是 `n_agents`，即每个智能体对应一个独热向量，表示其唯一标识。
+
+#### **4. 来自 AM 模型（子目标特征）**
+```python
+temp.append(model.forward(batch, t).squeeze(0).detach())
+```
+- 每个 AM 模型的输出（如 CVAE 或 VAE 推断子目标）：
+  - **形状**：`[batch_size, n_agents, am_dim]`
+  - 最后一个维度是 `am_dim`，表示子目标特征的维度。
+
+---
+
+### **拼接逻辑的维度关系**
+最终，这些张量会按最后一个维度拼接：
+```python
+temp = th.cat([x.reshape(batch_size, n_agents, -1) for x in obs_inputs + [am_output]], dim=-1)
+```
+- 拼接后的张量形状为：
+  ```
+  [batch_size, n_agents, obs_dim + n_actions + n_agents + am_dim]
+  ```
+- 最后一个维度的大小（`input_dim`）等于所有输入特征维度的总和。
+
+---
+
+### **对维度相等的要求**
+在拼接前，除了最后一个维度，其他维度（`batch_size` 和 `n_agents`）必须完全相等：
+
+1. **`batch_size`**：
+   - 批量大小必须一致，因为所有输入数据属于同一个批量。
+
+2. **`n_agents`**：
+   - 智能体数量必须一致，每个智能体都有相应的观测值、动作、标识和子目标特征。
+
+3. **最后一个维度**：
+   - 不要求相等，可以不同，因为按最后一个维度拼接时只会累加特征数量。
+
+如果 `batch_size` 或 `n_agents` 不一致，拼接将失败。
+
+---
+
+### **实际意义**
+在 `build_inputs` 方法中，拼接后的输入维度反映了每个智能体的完整输入信息，包括：
+1. **观测特征**（环境信息）。
+2. **历史动作信息**（行为上下文）。
+3. **智能体唯一标识**（区分每个智能体）。
+4. **子目标特征**（AM 模型输出，辅助策略决策）。
+
+这种拼接方式确保了智能体能够在其策略中利用所有关键信息，同时保持输入结构的一致性。
+
+---
+
+### **形象化理解**
+假设：
+- `obs_dim = 4`，`n_actions = 3`，`n_agents = 2`，`am_dim = 2`。
+
+拼接过程：
+1. **观测值**：`[batch_size, n_agents, 4]`
+2. **历史动作**：`[batch_size, n_agents, 3]`
+3. **智能体标识**：`[batch_size, n_agents, 2]`
+4. **AM 输出**：`[batch_size, n_agents, 2]`
+
+拼接后：
+```python
+[batch_size, n_agents, 4 + 3 + 2 + 2] = [batch_size, n_agents, 11]
+```
+
+**关键点**：`batch_size` 和 `n_agents` 必须一致，最后一个维度是累加的总和。
+````
 
 
 # Answers
@@ -321,3 +424,5 @@ A: 观测状态（全局或非全局）、动作独热编码、智能体标识�
 
 
 # FootNotes
+
+[^1]: 关于拼接操作

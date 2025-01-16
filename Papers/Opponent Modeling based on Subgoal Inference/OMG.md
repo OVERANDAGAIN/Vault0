@@ -119,6 +119,12 @@ $$g_t = \hat{g}_t \mathbb{I}(\eta > \epsilon) + \bar{g}_t \mathbb{I}(\eta \leq \
 
 where $\epsilon$ is a hyperparameter that decreases to zero over training. 
 
+<span style="background:#affad1">Pre-train the subgoal’s prior model. </span>
+The subgoal’s prior model $p_{\psi}(g | s^g)$ is a VAE that learns from a set of states that are collected while training opponents. The optimization objective of VAE is :
+
+$$\langle \hat{\omega}, \hat{\psi} \rangle = \arg \max_{\omega, \psi} \mathbb{E}_{g \sim q_{\psi}(g | s)} \left[ \log p_{\omega}(s | g) \right] - KL \left( q_{\psi}(g | s) \| \mathcal{N}(0, 1) \right).$$
+
+The decoder $p_{\omega}(s | g)$ is also used to reconstruct the subgoal state, as discussed in Section 5.5.
 
 
 

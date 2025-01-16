@@ -2,30 +2,10 @@
 
 
 # Objectives
-
-
-
 # Results
-
-
-
-
 # Insights
-
-
-
-
 # Setup
-
-
-
-
 # Methodology
-
-
-
-
-
 # Issues & Debugging
 
 ## Problem1
@@ -49,13 +29,5 @@
 
 
 # Limitations
-
-
-
-
 # Future Work
-
-
-
-
 # FootNotes

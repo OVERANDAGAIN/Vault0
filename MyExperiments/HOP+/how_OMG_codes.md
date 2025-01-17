@@ -7,6 +7,6 @@ mindmap-plugin: basic
 # OMG
 
 ## 运行
-- main.py
-    - run.py
+- my_main(): main.py
+    - run(): run.py
         -

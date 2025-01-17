@@ -9,4 +9,4 @@ mindmap-plugin: basic
 ## 运行
 - main.py
     - run.py
-        - 新节点
+        -

@@ -1,7 +1,7 @@
 ---
 创建时间: 2024-十二月-31日  星期二, 11:51:52 中午
 ---
-
+[[Zotero]]
 # Questions
 - Zotero的free版本仅有300MB存储
 - Onedrive教育版有100G,但有回收风险

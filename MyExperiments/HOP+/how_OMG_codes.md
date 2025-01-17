@@ -8,5 +8,6 @@ mindmap-plugin: basic
 
 ## 运行
 - my_main(): main.py
-    - run(): run.py
+    - run(_run, _config, _log): run.py
         -
+            - run\_sequential(args, logger)

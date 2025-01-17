@@ -1,7 +1,6 @@
 ---
 创建时间: 2024-十二月-31日  星期二, 11:51:52 中午
 ---
-#log_zotero 
 
 # Questions
 - Zotero的free版本仅有300MB存储

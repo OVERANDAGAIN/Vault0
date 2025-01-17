@@ -1,4 +1,4 @@
-#log_git 
+[[Git]]
 
 # Questions
 想要显示更多种类的无序列表时：

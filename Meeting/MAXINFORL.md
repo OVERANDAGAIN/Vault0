@@ -10,6 +10,8 @@
 # Inspiration
 # Probelms or Thinkings 
 # Context
+内外奖励最大化+熵最大化
+
 Extended Exploration
 信息增益理论 H
 # Innovation

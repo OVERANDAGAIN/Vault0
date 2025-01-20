@@ -22,7 +22,8 @@ mindmap-plugin: basic
                 - actions = self.mac.select_actions()
                     - agent_outputs = self.forward()
                         - agent_inputs = self._build_inputs(ep_batch, t)
-                        - 新节点
+                        - agent_outs[i], self.hidden_states[i] = agent(agent_inputs[i], self.hidden_states[i])
+                    - chosen_actions = self.action_selector.select_action()
                 - reward, terminated, env_info = self.env.step(actions[0])
                 - self.batch.update()
             - buffer.insert_episode_batch(episode_batch)

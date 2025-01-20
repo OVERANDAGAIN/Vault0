@@ -14,7 +14,7 @@ mindmap-plugin: basic
                 - self.env = env_REGISTRY[self.args.env]: episode_runner.py
             - buffer = ReplayBuffer()
             - init controller/mac_REGISTRY[args.mac]
-                - _build_multi_mudule_config()
+                - _build_multi_mudule_config()——algs_args
                 - _build_agents()
             - init learner/le_REGISTRY[args.learner]
             - learner.load_models(path)

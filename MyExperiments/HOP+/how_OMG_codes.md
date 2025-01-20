@@ -25,3 +25,10 @@ mindmap-plugin: basic
             - buffer.insert_episode_batch(episode_batch)
             - episode_sample = buffer.sample(args.batch_size)
             - learner.train(episode_sample, runner.t_env, episode)
+	            - Calculate OMG loss
+	                - omg_am = self.mac.agents_model[self.mac.main_alg_idx]
+	                - eval_net = self.mac.agents[self.mac.main_alg_idx]
+	                - omg_loss = omg_am.omg_loss_func(batch, eval_net, self.args.subgoal_mode)
+				- Calculate estimated Q-Values
+					- agent_outs = self.mac.main_alg_forward(batch, t=t)
+

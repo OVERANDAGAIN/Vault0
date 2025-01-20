@@ -19,7 +19,9 @@ mindmap-plugin: basic
             - **Start training**/runner.run()
                 - self.reset(): episode_runner.py
                     - self.env.reset()
-                - 新节点
+                - actions = self.mac.select_actions()
+                - reward, terminated, env_info = self.env.step(actions[0])
+                - self.batch.update()
             - buffer.insert_episode_batch(episode_batch)
             - episode_sample = buffer.sample(args.batch_size)
             - learner.train(episode_sample, runner.t_env, episode)

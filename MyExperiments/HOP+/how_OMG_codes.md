@@ -20,6 +20,9 @@ mindmap-plugin: basic
                 - self.reset(): episode_runner.py
                     - self.env.reset()
                 - actions = self.mac.select_actions()
+                    - agent_outputs = self.forward()
+                        - agent_inputs = self._build_inputs(ep_batch, t)
+                        - 新节点
                 - reward, terminated, env_info = self.env.step(actions[0])
                 - self.batch.update()
             - buffer.insert_episode_batch(episode_batch)

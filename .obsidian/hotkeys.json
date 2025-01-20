@@ -100,5 +100,13 @@
       ],
       "key": "M"
     }
+  ],
+  "omnisearch:show-modal-infile": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "F"
+    }
   ]
 }

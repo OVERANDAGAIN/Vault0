@@ -24,7 +24,7 @@ mindmap-plugin: basic
                 - self.batch.update()
             - buffer.insert_episode_batch(episode_batch)
             - episode_sample = buffer.sample(args.batch_size)
-            - learner.train(episode_sample, runner.t_env, episode)
+            - learner.train(episode_sample, runner.t_env, episode): omg_learner.py
                 - Calculate OMG loss
                     - omg_am = self.mac.agents_model[self.mac.main_alg_idx]
                     - eval_net = self.mac.agents[self.mac.main_alg_idx]

@@ -14,6 +14,8 @@ mindmap-plugin: basic
                 - self.env = env_REGISTRY[self.args.env]: episode_runner.py
             - buffer = ReplayBuffer()
             - init controller/mac_REGISTRY[args.mac]
+                - _build_multi_mudule_config()
+                - _build_agents()
             - init learner/le_REGISTRY[args.learner]
             - learner.load_models(path)
             - **Start training**/runner.run()
@@ -36,7 +38,7 @@ mindmap-plugin: basic
                         - train CVAE/
                         - recons_loss = F.mse_loss(cvae_output, cvae_input, reduction='none').mean(dim=-1)
                         - recons_loss = recons_loss * mask
-                        - Calculate VAE subgoal & mu & log_var/        subgoal, vae_mu, vae_log_var = self._cal_subgoal(batch, eval_net, subgoal_mode, agent_mask)
+                        - Calculate VAE subgoal & mu & log_var/        subgoal, vae_mu, vae_log_var = self._cal_subgoal(batch, eval_net, subgoal_mode, agent_mask)
                             - Calculate subgoal & mu & log_var by VAE
                             - Prepare eval_net inputs
                             - Calculate value by eval_net

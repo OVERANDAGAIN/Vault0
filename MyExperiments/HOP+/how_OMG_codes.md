@@ -12,4 +12,5 @@ mindmap-plugin: basic
         - run_sequential(args, logger)
             - init runnner/r_REGISTRY[args.runner]
             - init controller/mac_REGISTRY[args.mac]
+            - init learner/le_REGISTRY[args.learner]
             - 新节点

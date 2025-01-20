@@ -36,6 +36,7 @@ mindmap-plugin: basic
                         - train CVAE/
                         - recons_loss = F.mse_loss(cvae_output, cvae_input, reduction='none').mean(dim=-1)
                         - recons_loss = recons_loss * mask
+                        - Calculate VAE subgoal & mu & log_var
                 - Calculate estimated Q-Values
                     - agent_outs = self.mac.main_alg_forward(batch, t=t)
                     - mac_out.append(agent_outs)

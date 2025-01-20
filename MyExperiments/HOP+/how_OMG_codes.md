@@ -32,3 +32,19 @@ mindmap-plugin: basic
                 - Calculate estimated Q-Values
                     - agent_outs = self.mac.main_alg_forward(batch, t=t)
                     - mac_out.append(agent_outs)
+                - Calculate the Q-Values necessary for the target
+                    - target_agent_outs = self.target_mac.main_alg_forward(batch, t=t)
+                    - target_mac_out.append(target_agent_outs)
+                - Max over target Q-Values
+                    - target_max_qvals = target_mac_out.max(dim=3)[0]
+                - Calculate 1-step Q-Learning targets
+                    - targets = rewards + self.args.gamma * (1 - terminated) * target_max_qvals
+                - Td-error
+                    - td_error = (chosen_action_qvals - targets.detach())
+                - 0-out the targets that came from padded data
+                    - masked_td_error = td_error * mask
+                - Normal L2 loss, take mean over actual data
+                - Optimise
+                    - self.optimiser.zero_grad()
+                    - loss.backward()
+                    - self.optimiser.step()

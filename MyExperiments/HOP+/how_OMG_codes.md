@@ -33,7 +33,9 @@ mindmap-plugin: basic
                     - omg_am = self.mac.agents_model[self.mac.main_alg_idx]
                     - eval_net = self.mac.agents[self.mac.main_alg_idx]
                     - omg_loss = omg_am.omg_loss_func(batch, eval_net, self.args.subgoal_mode)
-                        - 新节点
+                        - train CVAE/
+                        - recons_loss = F.mse_loss(cvae_output, cvae_input, reduction='none').mean(dim=-1)
+                        - recons_loss = recons_loss * mask
                 - Calculate estimated Q-Values
                     - agent_outs = self.mac.main_alg_forward(batch, t=t)
                     - mac_out.append(agent_outs)

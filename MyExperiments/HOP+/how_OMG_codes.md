@@ -36,7 +36,13 @@ mindmap-plugin: basic
                         - train CVAE/
                         - recons_loss = F.mse_loss(cvae_output, cvae_input, reduction='none').mean(dim=-1)
                         - recons_loss = recons_loss * mask
-                        - Calculate VAE subgoal & mu & log_var
+                        - Calculate VAE subgoal & mu & log_var/        subgoal, vae_mu, vae_log_var = self._cal_subgoal(batch, eval_net, subgoal_mode, agent_mask)
+                            - Calculate subgoal & mu & log_var by VAE
+                            - Prepare eval_net inputs
+                            - Calculate value by eval_net
+                            - obtain k by argmax/argmin V(o_t, subgoal_{t+k})
+                            - Get results
+                        - loss = recons_loss.mean() + self.args.omg_cvae_alpha * omg_loss.mean()
                 - Calculate estimated Q-Values
                     - agent_outs = self.mac.main_alg_forward(batch, t=t)
                     - mac_out.append(agent_outs)

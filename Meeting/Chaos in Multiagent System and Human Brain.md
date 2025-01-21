@@ -27,6 +27,7 @@ Congestion Game
 
 
 # Innovation
+prove : slide 43  turing machines
 # Background
 # Related Work
 # Theroy

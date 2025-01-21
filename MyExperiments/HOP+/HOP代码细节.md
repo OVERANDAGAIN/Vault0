@@ -56,8 +56,8 @@ $6*500=3000$
 ## Problem2
 - [?] 如何训练HOP的代码
 
-### 1_Answers
-把下面的 `train1-4` 改为 ``
+### Answers
+1. 把下面的 `train1-4` 改为 `TOMX`
 ```python
     def policy_mapping(agent_id, episode, worker, **kwargs):
         if agent_id=='player_1':
@@ -68,6 +68,45 @@ $6*500=3000$
             return 'train3'
         else:
             return 'train4'
+```
+
+```python
+policies={  ... 
+		  'ToM1':PolicySpec(AlphaZeroPolicyWrapperClass,
+        observation_space=observation_space,
+        action_space=action_space,
+        config=config_list[0]),
+        'ToM2':PolicySpec(AlphaZeroPolicyWrapperClass,
+        observation_space=observation_space,
+        action_space=action_space,
+        config=config_list[1]),
+        'ToM3':PolicySpec(AlphaZeroPolicyWrapperClass,
+        observation_space=observation_space,
+        action_space=action_space,
+        config=config_list[2]),
+        'ToM4':PolicySpec(AlphaZeroPolicyWrapperClass,
+        observation_space=observation_space,
+        action_space=action_space,
+        config=config_list[3]),
+   }
+```
+
+2. 使用 `tom_trainer`
+   ```python
+   
+    tom_trainer=AlphaZeroTrainer(config)
+    #direct_tom_trainer = AlphaZeroTrainer(config)
+    # a3c_trainer=a3c.A3CTrainer(a3c_config)
+```
+
+3. `save()` 也设置为 `tom`
+
+```python
+        if i%1000==0:
+            checkpoint=tom_trainer.save()
+            #checkpoint_a3c=a3c_trainer.save()
+            print("checkpoint saved at", checkpoint)
+
 ```
 
 ### 2_Answers

@@ -111,6 +111,12 @@ policies={  ...
 
 ### 2_Answers
 
+## Problem3
+- [?] 如何训练HOP的代码
+
+### Answers
+`postprocess_trajectory()` 是在policy(?)之后进行的
+
 
 
 # Limitations

@@ -16,7 +16,8 @@ Macro and micro phenomena can often be described using similar mathematical lang
 # Context
 Diistance example
 
-circuit example
+brain/circuit example : the question of interest to us is how the behavior of the trajectories of u1 changes as A varies.
+
 
 
 # Innovation

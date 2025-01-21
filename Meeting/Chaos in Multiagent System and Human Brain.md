@@ -16,6 +16,9 @@ Macro and micro phenomena can often be described using similar mathematical lang
 # Context
 Diistance example
 
+circuit example
+
+
 # Innovation
 # Background
 # Related Work

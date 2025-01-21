@@ -15,7 +15,7 @@ mindmap-plugin: basic
             - buffer = ReplayBuffer()
             - init controller/mac_REGISTRY[args.mac]
                 - _build_multi_mudule_config()——algs_args
-                - _build_agents()
+                - _build_agents()——agents and agent_models
             - init learner/le_REGISTRY[args.learner]
             - learner.load_models(path)
             - **Start training**/runner.run()

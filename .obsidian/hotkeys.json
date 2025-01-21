@@ -92,15 +92,6 @@
   "Enhanced-editing:mouse-end": [],
   "Enhanced-editing:biaoti0-text": [],
   "Enhanced-editing:paste-text": [],
-  "obsidian-markmind:Toggle to markdown or mindmap": [
-    {
-      "modifiers": [
-        "Alt",
-        "Mod"
-      ],
-      "key": "M"
-    }
-  ],
   "omnisearch:show-modal-infile": [
     {
       "modifiers": [

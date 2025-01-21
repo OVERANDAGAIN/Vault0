@@ -1,3 +1,6 @@
+---
+创建时间: 2025-一月-21日  星期二, 5:46:55 下午
+---
 [[HOP+]]
 
 
@@ -47,14 +50,25 @@ $6*500=3000$
         'evaluation':False}
 ```
 
-`tree_num` 设置为 $5$ 
+`tree_num` 设置为 $5$ ，与 `num_workers` $6$ 乘积 $30$ 表示了并行的个数。看情况减少
 
 
 ## Problem2
-- [?] 
+- [?] 如何训练HOP的代码
 
 ### 1_Answers
-
+把下面的 `train1-4` 改为 ``
+```python
+    def policy_mapping(agent_id, episode, worker, **kwargs):
+        if agent_id=='player_1':
+            return 'train1'
+        elif agent_id=='player_2':
+            return 'train2'
+        elif agent_id=='player_3':
+            return 'train3'
+        else:
+            return 'train4'
+```
 
 ### 2_Answers
 

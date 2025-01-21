@@ -7,7 +7,7 @@
 
 # Codes/Questions
 
-- [?] 你说4iql3qmix1iql_omg表示的是： 4 个 iql 智能体、3 个 qmix 智能体 和 1 个 iql_omg 智能体,如图中yaml配置所示。
+- [?] 4iql3qmix1iql_omg表示的是： 4 个 iql 智能体、3 个 qmix 智能体 和 1 个 iql_omg 智能体,如图中yaml配置所示。
 
 
 ```python

@@ -39,6 +39,7 @@ $6*500=3000$
 
 
 ### 2_Answers
+train.py:
 
 ```python
   ToM_config={
@@ -51,6 +52,54 @@ $6*500=3000$
 ```
 
 `tree_num` 设置为 $5$ ，与 `num_workers` $6$ 乘积 $30$ 表示了并行的个数。看情况减少
+### 3_Answers
+train.py:
+
+```python
+
+    config['mcts_config']={
+        "puct_coefficient":1,
+        "num_simulations": 200,
+        "temperature":1.5,
+        "dirichlet_epsilon": 0.25,
+        "dirichlet_noise": 0.03,
+        "argmax_tree_policy": False,
+        "add_dirichlet_noise": False
+        }
+```
+
+`num_simulations` 可以根据上面的`tree_num` 和 `num_workers` 按乘积比例相应减少
+
+
+### 4_Answers
+train.py:
+
+`player_num` `world_height`  `world_width` 也可相应减少。
+
+```python
+ config['env_config']={
+        "player_num":4,
+        "stag_num":1,
+        "hare_num":4,
+        "world_height":8,
+        "world_width":8,
+        "time_reward":0,
+        "stag_reward":10,
+        "hare_reward":1,
+        'dynamic_final_time':False,
+        'final_time_after_first_hunt':5,
+        "final_time":35,
+        'render':False,
+        'max_block_comp':5,
+        'prosocial':False,
+        'player_strength':(1,1,1,1)
+    }
+```
+
+
+
+
+
 
 
 ## Problem2

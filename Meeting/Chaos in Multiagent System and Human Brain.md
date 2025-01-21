@@ -14,6 +14,8 @@ Macro and micro phenomena can often be described using similar mathematical lang
 # Inspiration
 # Probelms or Thinkings 
 # Context
+
+
 # Innovation
 # Background
 # Related Work

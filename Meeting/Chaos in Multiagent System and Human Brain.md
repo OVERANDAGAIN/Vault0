@@ -24,7 +24,7 @@ Congestion Game
 
 3 ways to find chaos
 
-
+between chaos and emergence : interaction
 
 # Innovation
 prove : slide 43  turing machines

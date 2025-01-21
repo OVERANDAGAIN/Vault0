@@ -21,6 +21,11 @@ brain/circuit example : the question of interest to us is how the behavior of th
 discrete and continuous : chaos?
 
 Congestion Game
+
+3 ways to find chaos
+
+
+
 # Innovation
 # Background
 # Related Work

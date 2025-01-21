@@ -18,7 +18,7 @@ Diistance example
 
 brain/circuit example : the question of interest to us is how the behavior of the trajectories of u1 changes as A varies.
 
-
+discrete and continuous : chaos?
 
 # Innovation
 # Background

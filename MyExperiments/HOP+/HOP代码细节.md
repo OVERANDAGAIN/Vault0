@@ -109,13 +109,33 @@ policies={  ...
 
 ```
 
-### 2_Answers
 
 ## Problem3
-- [?] 如何训练HOP的代码
+- [?] 其他细节
 
 ### Answers
-`postprocess_trajectory()` 是在policy(?)之后进行的
+#### 1. `postprocess_trajectory()` 是在policy(?)之后进行的
+#### 2. 关于 `goal` : 即 `target_pos` 更改其相关代码即可
+   ```python
+   
+    def get_action(self, obs, time, target_pos):
+        with torch.no_grad():
+            x=torch.from_numpy(obs['observation']).to(self.device).float().unsqueeze(0)
+            action_mask=torch.from_numpy(obs['action_mask']).to(self.device).float().unsqueeze(0)
+            time=torch.tensor([[time]]).to(self.device).float()
+            target_layer=torch.from_numpy(target_pos).to(self.device).float().unsqueeze(0)
+
+            x = self.shared_layers(x)
+            x = torch.cat((x, time, target_layer),dim=1)
+            x = self.flatten_layers(x)
+            # actor outputs
+            logits = self.actor_layers(x)
+            inf_mask = torch.clamp(torch.log(action_mask),FLOAT_MIN,FLOAT_MAX)
+            priors = nn.Softmax(dim=-1)(logits+inf_mask)
+
+        return priors.squeeze().cpu().numpy()
+
+```
 
 
 

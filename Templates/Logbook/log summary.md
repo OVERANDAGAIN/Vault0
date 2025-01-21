@@ -1,4 +1,4 @@
-#log_uml 
+#log 
 
 # Questions
 
@@ -6,7 +6,6 @@
 
 
 # Answers
-
 
 ## GPT_Answers
 

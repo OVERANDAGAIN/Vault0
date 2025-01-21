@@ -1,12 +1,11 @@
-#log_zotero 
+#encounters 
 
-# Questions
+# Why Encounters?
 
 - [?] 
 
 
 # Answers
-
 
 ## GPT_Answers
 

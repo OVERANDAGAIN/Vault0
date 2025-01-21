@@ -1,8 +1,7 @@
 ---
 创建时间: 2024-十二月-31日  星期二, 11:45:39 中午
 ---
-#log_zotero 
-
+[[Zotero]]
 Untill [[2024-12-31]]  : About 10 plugins 
 # Questions
 

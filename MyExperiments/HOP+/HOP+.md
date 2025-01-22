@@ -5,7 +5,15 @@
 
 
 # Objectives
-
+***2025-01-21***
+1. *Train HOP*
+2. *MCTS、RLlib 与 OMG 的  controller 关系*
+3. 整合Goal inference 到belif over goal 前
+4. ~~先基于猎鹿的代码~~
+5. ~~EFT替代MCTS的可行方法——发邮件 2025-1-21-17:45~~
+6. HOP迭代更新
+7. 最终可能的要训练的有三个模块
+8. 等邮件结果
 
 
 # Results

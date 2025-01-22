@@ -13,7 +13,7 @@ mindmap-plugin: basic
             - init runnner/r_REGISTRY[args.runner]
                 - self.env = env_REGISTRY[self.args.env]: episode_runner.py
             - buffer = ReplayBuffer()
-            - init controller/mac_REGISTRY[args.mac]
+            - init controller/**mac**_REGISTRY[args.**mac**]
                 - _build_multi_mudule_config()——algs_args
                 - _build_agents()——agents and agent_models
             - init learner/le_REGISTRY[args.learner]
@@ -21,7 +21,7 @@ mindmap-plugin: basic
             - **Start training**/runner.run()
                 - self.reset(): episode_runner.py
                     - self.env.reset()
-                - actions = self.mac.select_actions()
+                - actions = self.**mac**.select_actions()
                     - agent_outputs = self.forward()
                         - agent_inputs = self._build_inputs(ep_batch, t)
                             - obs_is_state = False
@@ -36,8 +36,8 @@ mindmap-plugin: basic
             - episode_sample = buffer.sample(args.batch_size)
             - learner.train(episode_sample, runner.t_env, episode): omg_learner.py
                 - Calculate OMG loss
-                    - omg_am = self.mac.agents_model[self.mac.main_alg_idx]
-                    - eval_net = self.mac.agents[self.mac.main_alg_idx]
+                    - omg_am = self.**mac**.agents_model[self.**mac**.main_alg_idx]
+                    - eval_net = self.**mac**.agents[self.**mac**.main_alg_idx]
                     - omg_loss = omg_am.omg_loss_func(batch, eval_net, self.args.subgoal_mode)
                         - train CVAE/
                         - recons_loss = F.mse_loss(cvae_output, cvae_input, reduction='none').mean(dim=-1)
@@ -50,13 +50,13 @@ mindmap-plugin: basic
                             - Get results
                         - loss = recons_loss.mean() + self.args.omg_cvae_alpha * omg_loss.mean()
                 - Calculate estimated Q-Values
-                    - agent_outs = self.mac.main_alg_forward(batch, t=t)
-                    - mac_out.append(agent_outs)
+                    - agent_outs = self.**mac**.main_alg_forward(batch, t=t)
+                    - **mac**_out.append(agent_outs)
                 - Calculate the Q-Values necessary for the target
-                    - target_agent_outs = self.target_mac.main_alg_forward(batch, t=t)
-                    - target_mac_out.append(target_agent_outs)
+                    - target_agent_outs = self.target_**mac**.main_alg_forward(batch, t=t)
+                    - target_**mac**_out.append(target_agent_outs)
                 - Max over target Q-Values
-                    - target_max_qvals = target_mac_out.max(dim=3)[0]
+                    - target_max_qvals = target_**mac**_out.max(dim=3)[0]
                 - Calculate 1-step Q-Learning targets
                     - targets = rewards + self.args.gamma * (1 - terminated) * target_max_qvals
                 - Td-error

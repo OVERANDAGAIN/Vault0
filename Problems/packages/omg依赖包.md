@@ -9,8 +9,22 @@
 
 # Errors
 ```bash
+(base) dingyi@dingyi-virtual-machine:~/Desktop/OMG$ conda config --append channels conda-forge
+Warning: 'conda-forge' already in 'channels' list, moving to the bottom
+(base) dingyi@dingyi-virtual-machine:~/Desktop/OMG$ conda create --name omg --file requirements.txt
+Channels:
+ - defaults
+ - conda-forge
+Platform: linux-64
+Collecting package metadata (repodata.json): done
+Solving environment: failed
 
+PackagesNotFoundError: The following packages are not available from current channels:
 ```
+
+无比较好的解决办法[^1]
+#to_be_solved 
+
 
 # Codes
 
@@ -136,3 +150,5 @@ zlib=1.2.13=h5eee18b_0
 
 
 # FootNotes
+
+[^1]: 怎么解决conda安装不了依赖包的问题_Channels

@@ -30,5 +30,6 @@
   "blue-topaz-theme@@background-image-settings-command-palette-same-as-workplace": false,
   "blue-topaz-theme@@toggle-calendar-shadow": true,
   "blue-topaz-theme@@toggle-calendar-transparent": true,
-  "blue-topaz-theme@@style-options-for-calendar-plugin": "style-options-for-calendar-plugin-style-one"
+  "blue-topaz-theme@@style-options-for-calendar-plugin": "style-options-for-calendar-plugin-style-one",
+  "blue-topaz-theme@@text-indentation-two-em": false
 }

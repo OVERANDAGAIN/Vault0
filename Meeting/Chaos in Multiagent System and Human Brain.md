@@ -22,7 +22,10 @@ discrete and continuous : chaos?
 
 Congestion Game
 
-3 ways to find chaos
+3 ways to find chaos:
+- period 1 
+- period 3
+- 
 
 between chaos and emergence : interaction
 

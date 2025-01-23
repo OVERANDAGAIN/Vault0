@@ -102,22 +102,25 @@ pip install git+https://github.com/oxwhirl/smac.git
 
 在Ubuntu中，用命令行添加SC2PATH变量，首先用vim打开bashrc：
 
-vim ~/.bashrc
+`vim ~/.bashrc`
 
 在最后一行添加环境变量，键和值同样分别是SC2PATH和StarCraft II在Ubuntu系统中用户名文件夹下的位置
 
-export SC2PATH=~/StarCraftII/
-
-（P.S 打开bashrc之后，先按i键进入insert模式，然后在最后一行输入上面的代码，随后按Esc键退出，之后按Shift+：，然后输入wq加回车退出，会用Ubuntu的忽略哈哈）
+`export SC2PATH=~/StarCraftII/`
+```ad-note
+这里就已经隐含了 /home/admin 的位置
+```
+（P.S 打开bashrc之后，先按i键进入insert模式，然后在最后一行输入上面的代码，随后按Esc键退出，之后按Shift+：，然后输入wq加回车退出）
 
 添加完环境变量后更新环境
 
- source ~/.bashrc
+ `source ~/.bashrc`
 
-然后将安装的ScarcraftII文件夹复制到src的3dparty文件夹下。
+然后将安装的ScarcraftII游戏文件夹复制到src的3dparty文件夹下。
+
 ### 五、添加地图
 
-    Windows
+1. Windows
 
 先下载下面的SMAC_MAPS压缩包，然后解压到StarCraft II下的Maps文件夹中（没有就自己建立）。
 https://github.com/oxwhirl/smac/releases/download/v0.1-beta1/SMAC_Maps.zip​

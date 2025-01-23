@@ -45,64 +45,54 @@ Required-by:
 知乎配置pymarl教程： [Pymarl虚拟环境安装步骤（Windows/Ubuntu）](https://zhuanlan.zhihu.com/p/542727892)
 
 ## GPT_Answers
-一、安装StarCraft II
+### 一、安装StarCraft II
 
-1.Windows
+1. Windows
 
 直接在官网下载安装最新版就好
-《星际争霸II》官方网站_暴雪出品，史诗级竞技大作 (blizzard.cn)​
 sc2.blizzard.cn/landing
 
 2. Ubuntu
 
-在Ubuntu系统下，安装SC2.4.6.2.69232版本的SC2环境。具体步骤是先安装下面的压缩包，然后解压到用户名
-
-文件夹中。
-https://blzdistsc2-a.akamaihd.net/Linux/SC2.4.6.2.69232.zip​
+在Ubuntu系统下，安装SC2.4.6.2.69232版本的SC2环境。具体步骤是先安装下面的压缩包，然后解压到用户名文件夹中。`home/admin`
 blzdistsc2-a.akamaihd.net/Linux/SC2.4.6.2.69232.zip
 
-这个安装包有3G，我在实验室用流量怎么都下载不下来，所以直接找学长要了安装包上传在百度云里，有需要的同学可以私聊我~
+### 二、创建pymarl虚拟环境
 
-二、创建pymarl虚拟环境
+1. 创建虚拟环境
 
-具体的Anaconda虚拟环境是什么以及怎么安装可以看一下下面这篇文章
-宁萌时光：Anaconda 中使用 conda 配置虚拟环境与管理安装包216 赞同 · 36 评论文章
+2. 安装pytorch
+   直接在pytorch官网上根据电脑情况找相应的安装语句
 
-    创建虚拟环境
+3. 安装下面这些pymarl运行所依赖的包
 
-conda create -n pymarl python=3.7 -y
-conda activate pymarl   
 
-2.安装pytorch
-
-直接在pytorch官网上根据电脑情况找相应的安装语句
-
-# CUDA 10.2
-conda install pytorch==1.10.0 torchvision==0.11.0 torchaudio==0.10.0 cudatoolkit=10.2 -c pytorch
-
-3.安装下面这些pymarl运行所依赖的包
-
+```
 pip install sacred numpy scipy matplotlib seaborn pyyaml pygame pytest probscale imageio snakeviz tensorboard-logger
+```
 
-如果报错the read operation timed out，就说明超时了，可以把命令改成：
-
- pip --default-timeout=100 install sacred numpy scipy matplotlib seaborn pyyaml pygame pytest probscale imageio snakeviz tensorboard-logger
 
 这一堆包安装完之后会有两个包需要改成低版本，一个是pyyaml，还有一个是protobuf
+
+```
 
 pip uninstall pyyaml
 pip install pyyaml==3.13
 pip uninstall protobuf
-
-
 pip install protobuf==3.19.1
+```
 
-（可能每个人遇到的情况不同，根据报错的情况随机应变就好！）
-三、安装SMAC
 
+### 三、安装SMAC
+
+
+```
 pip install git+https://github.com/oxwhirl/smac.git
+```
 
-四、添加环境变量
+最终的路径在： ``
+
+### 四、添加环境变量
 
     Windows
 
@@ -125,7 +115,7 @@ export SC2PATH=~/StarCraftII/
  source ~/.bashrc
 
 然后将安装的ScarcraftII文件夹复制到src的3dparty文件夹下。
-五、添加地图
+### 五、添加地图
 
     Windows
 
@@ -136,14 +126,14 @@ github.com/oxwhirl/smac/releases/download/v0.1-beta1/SMAC_Maps.zip
 2. Ubuntu
 
 Ubuntu在下载SC2环境时就自带了地图，所以不需要额外操作。
-六、测试SMAC环境
+### 六、测试SMAC环境
 
 python -m smac.examples.random_agents
 
 此时命令行
 会出现以下信息，windows还会弹出游戏界面
 
-七、测试Pymarl代码
+### 七、测试Pymarl代码
 
 Windows下把main函数第16行的SETTINGS['CAPTURE_MODE'] = "fd"改成SETTINGS['CAPTURE_MODE'] = "sys"，否则会报错。
 

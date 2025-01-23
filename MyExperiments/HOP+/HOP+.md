@@ -14,6 +14,7 @@
 6. HOP迭代更新
 7. 最终可能的要训练的有三个模块
 8. ~~等邮件结果——2025-1-23-14:51~~ $\Longrightarrow$ at least 5 Feb 2025
+9. OMG的Buffer, episode_batch相关与HOP适配
 
 
 

@@ -123,28 +123,19 @@ pip install git+https://github.com/oxwhirl/smac.git
 1. Windows
 
 先下载下面的SMAC_MAPS压缩包，然后解压到StarCraft II下的Maps文件夹中（没有就自己建立）。
-https://github.com/oxwhirl/smac/releases/download/v0.1-beta1/SMAC_Maps.zip​
 github.com/oxwhirl/smac/releases/download/v0.1-beta1/SMAC_Maps.zip
 
 2. Ubuntu
 
-Ubuntu在下载SC2环境时就自带了地图，所以不需要额外操作。
+也要下载地图。~~Ubuntu在下载SC2环境时就自带了地图，所以不需要额外操作。~~
+[GitHub - oxwhirl/smac: SMAC: The StarCraft Multi-Agent Challenge](https://github.com/oxwhirl/smac)[^1]
+[GitHub - oxwhirl/pymarl: Python Multi-Agent Reinforcement Learning framework](https://github.com/oxwhirl/pymarl)[^2]
+
 ### 六、测试SMAC环境
 
-python -m smac.examples.random_agents
+`python -m smac.examples.random_agents`
 
-此时命令行
-会出现以下信息，windows还会弹出游戏界面
-
-### 七、测试Pymarl代码
-
-Windows下把main函数第16行的SETTINGS['CAPTURE_MODE'] = "fd"改成SETTINGS['CAPTURE_MODE'] = "sys"，否则会报错。
-
-命令行进入pymarl-master文件夹，运行src/main.py文件
-
-python src/main.py --config=qmix --env-config=sc2 with env_args.map_name=2s3z
-
-此时终端会出现训练信息
+此时命令行会出现以下信息，windows还会弹出游戏界面
 
 ## Other_Answers
 
@@ -157,3 +148,6 @@ python src/main.py --config=qmix --env-config=sc2 with env_args.map_name=2s3z
 
 
 # FootNotes
+
+[^1]: SMAC地址
+[^2]: PYMARL地址

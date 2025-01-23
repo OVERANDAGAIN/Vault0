@@ -70,8 +70,8 @@ msh_code
   └── mcts_moa.py
   ├── ToM_Alpha_MOA.py
   ├── Alpha_Zero_MOA.py
-  ├── train.py
   ├── env.py
+  ├── train.py
 
 # Methodology
 # Issues & Debugging

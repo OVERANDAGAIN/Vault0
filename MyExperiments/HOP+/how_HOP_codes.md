@@ -19,6 +19,12 @@ mindmap-plugin: basic
             - 创建WorkerSet
             - 注册多策略配置
     - trainer.train(): Alpha_Zero_MOA.py
+	     - Alpha_Zero_MOA.py  # 调用训练逻辑
+            - execution_plan()  # 定义训练流程
+                - rollouts.combine()  # 组合回合数据
+                - ConcatBatches()  # 合并批次数据
+                - TrainOneStep()  # 执行单步训练
+            - 执行训练步骤  # 调用 TrainOneStep 更新策略和模型
         - WorkerSet.sample(): RLlib内部
             - RolloutWorker.sample(): RLlib内部
                 - self.input_dict = obs_batch

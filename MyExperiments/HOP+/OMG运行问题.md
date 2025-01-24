@@ -17,7 +17,7 @@
 # Methodology
 # Issues & Debugging
 
-## Problem1
+## Problem1: 关于holdup_data
 - [?] 
 ```bash
 dingyi@dingyi-virtual-machine:~/Desktop/OMG$ python main.py --config=iql --env-config=sc2 with env_args.map_name=8m 
@@ -153,11 +153,9 @@ self.batch.update(last_data, ts=self.t)  # 删除 update_holdup 以避免重复
 
 
 
-### 2_Answers
 
 
-
-## Problem2
+## Problem2: 预训练与训练
 - [?] 
 
 ### 1_Answers
@@ -166,6 +164,15 @@ self.batch.update(last_data, ts=self.t)  # 删除 update_holdup 以避免重复
 ### 2_Answers
 
 
+
+
+## Problem3
+- [?] 
+
+### 1_Answers
+
+
+### 2_Answers
 
 # Limitations
 # Future Work

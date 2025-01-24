@@ -172,17 +172,20 @@ self.batch.update(last_data, ts=self.t)  # 删除 update_holdup 以避免重复
 
 ## Problem3: 关于obs和state（全局/部分）
 - [?] 
+- [x] state表示全局的
+    obs表示部分的（当前智能体的）
 
 ### 1_Answers
+下面展示逐层调用的逻辑：
 
-omg_am.py
-```
+`omg_am.py`
+```python
 
 fc_input, cond_input, vae_input = self._get_input_shape(scheme, groups)
 
 ```
 
-```
+```python
     def _get_input_shape(self, scheme, groups):
         if self.args.obs_is_state:
             obs_shape = scheme["state"]["vshape"]
@@ -192,8 +195,8 @@ fc_input, cond_input, vae_input = self._get_input_shape(scheme, groups)
         fc_input = obs_shape
 ```
 
-run.py
-```
+`run.py`
+```python
     # Default/Base scheme
     scheme = {
         "state": {"vshape": env_info["state_shape"]},
@@ -206,7 +209,7 @@ run.py
     }
 ```
 
-```
+```python
     # Set up schemes and groups here
     env_info = runner.get_env_info()
     args.n_agents = env_info["n_agents"]
@@ -215,16 +218,16 @@ run.py
 
 ```
 
-episode_runner.py
-```
+`episode_runner.py`
+```python
     def get_env_info(self):
         return self.env.get_env_info()
 
 ```
 
 
-multiagentenv.py
-```
+`multiagentenv.py`
+```python
     def get_env_info(self):
         env_info = {"state_shape": self.get_state_size(),
                     "obs_shape": self.get_obs_size(),
@@ -234,6 +237,32 @@ multiagentenv.py
         return env_info
 
 ```
+
+`__init__.py`
+```python
+from smac.env import MultiAgentEnv, StarCraft2Env
+import sys
+import os
+
+def env_fn(env, **kwargs) -> MultiAgentEnv:
+    return env(**kwargs)
+
+REGISTRY = {}
+REGISTRY["sc2"] = partial(env_fn, env=StarCraft2Env)
+
+```
+
+
+smac源码
+`smac/env/starcraft2/starcraft2.py`
+```python
+    def get_obs_size(self):
+        """Returns the size of the observation."""
+
+    def get_state_size(self):
+        """Returns the size of the global state."""
+```
+
 
 
 

@@ -13,7 +13,7 @@ mindmap-plugin: basic
     - register_env("StagHunt", ...): train.py
     - ModelCatalog.register_custom_model(): train.py
         - MyModel: mcts_model
-        - 新节点
+        - RLmodel: gpu_deeper_mode
     - trainer = AlphaZeroTrainer(config): train.py
         - __init__(): Alpha_Zero_MOA.py
             - 创建WorkerSet

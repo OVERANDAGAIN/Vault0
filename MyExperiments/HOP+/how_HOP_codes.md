@@ -14,12 +14,15 @@ mindmap-plugin: basic
     - ModelCatalog.register_custom_model(): train.py
         - MyModel: mcts_model
         - RLmodel: gpu_deeper_mode
+    - policy_mapping/ToM
+        - 'ToM1':PolicySpec(AlphaZeroPolicyWrapperClass,
+            - AlphaZeroPolicyWrapperClass(AlphaZeroPolicy):
     - trainer = AlphaZeroTrainer(config): train.py
         - __init__(): Alpha_Zero_MOA.py
             - 创建WorkerSet
             - 注册多策略配置
     - trainer.train(): Alpha_Zero_MOA.py
-	     - Alpha_Zero_MOA.py  # 调用训练逻辑
+        - Alpha_Zero_MOA.py  # 调用训练逻辑
             - execution_plan()  # 定义训练流程
                 - rollouts.combine()  # 组合回合数据
                 - ConcatBatches()  # 合并批次数据

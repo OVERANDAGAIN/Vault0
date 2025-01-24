@@ -257,7 +257,7 @@ policies={  ...
 ## Problem4： 关于Alpha_Zero_MOA的逻辑（重写Trainer部分函数)
 
 ### Answers
-在执行 `tom_trainer = AlphaZeroTrainer(config)` 之后，`AlphaZeroTrainer` 类的初始化过程主要依赖于 RLlib 框架中的训练器（Trainer）机制。虽然 `AlphaZeroTrainer` 是继承自 `Trainer` 类的一个自定义类，但它遵循 RLlib 的结构和约定，因此初始化过程会涉及以下几个关键步骤：
+在执行 `tom_trainer = AlphaZeroTrainer(config)` 之后，`AlphaZeroTrainer` 类的初始化过程主要依赖于 RLlib 框架中的训练器（Trainer）机制。
 
 1. **初始化父类构造函数**：
    `AlphaZeroTrainer` 继承自 `Trainer` 类，在执行 `tom_trainer = AlphaZeroTrainer(config)` 时，实际上是调用了 `Trainer` 类的构造函数（如果有的话）。`Trainer` 类的构造函数会处理传入的 `config` 参数，并初始化与训练相关的其他内容。
@@ -290,6 +290,10 @@ policies={  ...
    - 接下来，根据 `simple_optimizer` 的值，定义了不同的训练流程：
      - 如果 `simple_optimizer` 为 `True`，则使用 `TrainOneStep` 对每个训练步进行梯度更新。
      - 否则，使用 `Replay` 和 `StoreToReplayBuffer` 组件来处理回放缓冲区，进行更复杂的训练流程。
+```ad-tip
+`simple_optimizer=TRUE`
+>使用 `TrainOneStep` 对每个训练步进行梯度更新
+```
    - 最后，`StandardMetricsReporting(train_op, workers, config)` 负责在训练过程中报告标准的评估指标。
 
    通过 `execution_plan`，可以看到这个训练器是如何在多个 worker（即多个环境实例）中并行处理回合，并通过不同的方式（基于回放缓冲区或简单的优化器）进行训练。

@@ -170,10 +170,72 @@ self.batch.update(last_data, ts=self.t)  # 删除 update_holdup 以避免重复
 
 
 
-## Problem3
+## Problem3: 关于obs和state（全局/部分）
 - [?] 
 
 ### 1_Answers
+
+omg_am.py
+```
+
+fc_input, cond_input, vae_input = self._get_input_shape(scheme, groups)
+
+```
+
+```
+    def _get_input_shape(self, scheme, groups):
+        if self.args.obs_is_state:
+            obs_shape = scheme["state"]["vshape"]
+        else:
+            obs_shape = scheme["obs"]["vshape"]
+
+        fc_input = obs_shape
+```
+
+run.py
+```
+    # Default/Base scheme
+    scheme = {
+        "state": {"vshape": env_info["state_shape"]},
+        "obs": {"vshape": env_info["obs_shape"], "group": "agents"},
+        "actions": {"vshape": (1,), "group": "agents", "dtype": th.long},
+        "avail_actions": {"vshape": (env_info["n_actions"],), "group": "agents", "dtype": th.int},
+        "reward": {"vshape": (1,)},
+        "terminated": {"vshape": (1,), "dtype": th.uint8},
+        "agent_idx": {"vshape": (1,), "dtype": th.int, "episode_const": True},
+    }
+```
+
+```
+    # Set up schemes and groups here
+    env_info = runner.get_env_info()
+    args.n_agents = env_info["n_agents"]
+    args.n_actions = env_info["n_actions"]
+    args.state_shape = env_info["state_shape"]
+
+```
+
+episode_runner.py
+```
+    def get_env_info(self):
+        return self.env.get_env_info()
+
+```
+
+
+multiagentenv.py
+```
+    def get_env_info(self):
+        env_info = {"state_shape": self.get_state_size(),
+                    "obs_shape": self.get_obs_size(),
+                    "n_actions": self.get_total_actions(),
+                    "n_agents": self.n_agents,
+                    "episode_limit": self.episode_limit}
+        return env_info
+
+```
+
+
 
 
 ### 2_Answers

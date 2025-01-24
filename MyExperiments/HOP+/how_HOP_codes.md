@@ -2,29 +2,36 @@
 
 mindmap-plugin: basic
 
+创建时间: 2025-一月-23日  星期四, 5:05:09 下午
 ---
 
-# HOP
 
-## 运行
-- main(): train.py
-    - AlphaZeroTrainer(config): Alpha_Zero_MOA.py
-        - train()
-            - ParallelRollouts(workers, mode="bulk_sync")
-                - compute_actions_from_input_dict(): ToM_Alpha_MOA.py
-                    - MCTS.compute_action(): mcts_moa.py
-                        - Node.select()
-                        - Node.expand()
-                        - Node.backup()
-                    - MOAModel.get_action(): moa_model.py
-                        - forward()
-            - env.step(): env.py
-                - __obs__()  # 获取观察
-                - __actionmask__()  # 计算可用动作
-            - StoreToReplayBuffer()  # 存储样本
-            - TrainOneStep(workers, num_sgd_iter=config["num_sgd_iter"])
-                - AlphaZeroPolicyWrapperClass.learn_on_batch()
-                    - alpha_zero_loss()
-                        - MyModel.forward(): mcts_model.py
-                        - MyModel.value_function()
-            - save()  # 模型检查点存储
+## HOP1
+- 运行
+    - main(): train.py
+        - ray.init()
+        - register_env("StagHunt", ...): train.py
+        - ModelCatalog.register_custom_model(): train.py
+        - trainer = AlphaZeroTrainer(config): train.py
+            - __init__(): Alpha_Zero_MOA.py
+                - 创建WorkerSet
+                - 注册多策略配置
+        - trainer.train(): Alpha_Zero_MOA.py
+            - WorkerSet.sample(): RLlib内部
+                - RolloutWorker.sample(): RLlib内部
+                    - self.input_dict = obs_batch
+                    - compute_actions_from_input_dict(): ToM_Alpha_MOA.py
+                        - self.env.set_state(): env.py
+                        - self.mcts.compute_action(): mcts_moa.py
+                            - Node.select() → expand() → backup(): mcts_moa.py
+                                - self.model.compute_priors_and_value(): mcts_model.py
+                                - self.env.step(): env.py
+            - learn_on_batch(): ToM_Alpha_MOA.py
+                - self._loss(): ToM_Alpha_MOA.py
+                    - model.forward(): mcts_model.py
+                    - value_function(): mcts_model.py
+            - postprocess_trajectory(): ToM_Alpha_MOA.py
+                - moa_update(): ToM_Alpha_MOA.py
+                    - model.forward(): moa_model.py
+                    - optimizer.step(): ToM_Alpha_MOA.py
+        - trainer.save(): Alpha_Zero_MOA.py

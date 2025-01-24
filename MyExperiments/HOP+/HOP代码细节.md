@@ -76,7 +76,7 @@ msh_code
 # Methodology
 # Issues & Debugging
 
-## Problem1
+## Problem1: 在训练时的 `config
 - [?] 在训练时的 `config`
 
 ### 1_Answers
@@ -167,7 +167,7 @@ train.py:
 
 
 
-## Problem2
+## Problem2: 如何训练HOP的代码
 - [?] 如何训练HOP的代码
 
 ### Answers
@@ -224,7 +224,7 @@ policies={  ...
 ```
 
 
-## Problem3
+## Problem3: 其他细节
 - [?] 其他细节
 
 ### Answers
@@ -250,6 +250,66 @@ policies={  ...
         return priors.squeeze().cpu().numpy()
 
 ```
+
+
+
+
+## Problem4： 关于Alpha_Zero_MOA的逻辑（重写Trainer部分函数)
+
+### Answers
+在执行 `tom_trainer = AlphaZeroTrainer(config)` 之后，`AlphaZeroTrainer` 类的初始化过程主要依赖于 RLlib 框架中的训练器（Trainer）机制。虽然 `AlphaZeroTrainer` 是继承自 `Trainer` 类的一个自定义类，但它遵循 RLlib 的结构和约定，因此初始化过程会涉及以下几个关键步骤：
+
+1. **初始化父类构造函数**：
+   `AlphaZeroTrainer` 继承自 `Trainer` 类，在执行 `tom_trainer = AlphaZeroTrainer(config)` 时，实际上是调用了 `Trainer` 类的构造函数（如果有的话）。`Trainer` 类的构造函数会处理传入的 `config` 参数，并初始化与训练相关的其他内容。
+
+2. **调用 `get_default_config` 方法**：
+   `AlphaZeroTrainer` 重写了 `get_default_config` 类方法，返回了 `DEFAULT_CONFIG` 配置。这意味着，如果你没有传入配置（`config`），则会使用 `DEFAULT_CONFIG` 中定义的默认配置。
+
+   ```python
+   @classmethod
+   @override(Trainer)
+   def get_default_config(cls) -> TrainerConfigDict:
+       return DEFAULT_CONFIG
+   ```
+
+   这部分代码确保了 `AlphaZeroTrainer` 有一个默认配置，这对于训练过程至关重要。
+
+3. **获取默认策略类**：
+   `AlphaZeroTrainer` 重写了 `get_default_policy_class` 方法，指定了训练中将使用的默认策略类。这里它返回的是 `AlphaZeroPolicyWrapperClass`，这意味着在训练过程中，会使用 `AlphaZeroPolicyWrapperClass` 作为策略（Policy）。
+
+   ```python
+   @override(Trainer)
+   def get_default_policy_class(self, config: TrainerConfigDict) -> Type[Policy]:
+       return AlphaZeroPolicyWrapperClass
+   ```
+
+4. **定义执行计划（`execution_plan`）**：
+   `AlphaZeroTrainer` 还重写了 `execution_plan` 方法。这个方法负责定义如何执行训练过程，包括数据采集、训练和评估等步骤。
+
+   - `rollouts = ParallelRollouts(workers, mode="bulk_sync")`：初始化并启动并行的回合采集器，表示会并行进行多个环境的滚动。
+   - 接下来，根据 `simple_optimizer` 的值，定义了不同的训练流程：
+     - 如果 `simple_optimizer` 为 `True`，则使用 `TrainOneStep` 对每个训练步进行梯度更新。
+     - 否则，使用 `Replay` 和 `StoreToReplayBuffer` 组件来处理回放缓冲区，进行更复杂的训练流程。
+   - 最后，`StandardMetricsReporting(train_op, workers, config)` 负责在训练过程中报告标准的评估指标。
+
+   通过 `execution_plan`，可以看到这个训练器是如何在多个 worker（即多个环境实例）中并行处理回合，并通过不同的方式（基于回放缓冲区或简单的优化器）进行训练。
+
+   ```python
+   @staticmethod
+   @override(Trainer)
+   def execution_plan(workers: WorkerSet, config: TrainerConfigDict, **kwargs) -> LocalIterator[dict]:
+       # Rollout and training logic...
+   ```
+
+5. **配置管理与训练**：
+   在 `AlphaZeroTrainer` 初始化过程中，配置参数（例如 `train_batch_size`、`learning_starts` 等）会影响执行计划的具体行为。`config` 参数可能包含诸如训练批次大小、优化器设置、回放缓冲区大小等信息，这些都会在训练过程中被使用。
+
+总结一下，`tom_trainer = AlphaZeroTrainer(config)` 的初始化过程大致包括以下步骤：
+- 通过继承 RLlib 的 `Trainer` 类，初始化了配置、策略类和执行计划。
+- 根据配置选择不同的训练模式（简单优化器或回放缓冲区）。
+- 设置回合采集、训练步骤以及训练过程中的度量报告。
+
+这类结构化的初始化流程使得训练过程可以在 RLlib 框架中统一管理，并且能够灵活地配置和扩展不同的算法和策略。
 
 
 

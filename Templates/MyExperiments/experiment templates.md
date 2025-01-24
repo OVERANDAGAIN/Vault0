@@ -8,7 +8,7 @@
 # Methodology
 # Issues & Debugging
 
-## Problem1
+## Problem1: 
 - [?] 
 
 ### 1_Answers
@@ -18,7 +18,7 @@
 
 
 
-## Problem2
+## Problem2: 
 - [?] 
 
 ### 1_Answers

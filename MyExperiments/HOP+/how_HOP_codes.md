@@ -15,8 +15,9 @@ mindmap-plugin: basic
         - MyModel: mcts_model
         - RLmodel: gpu_deeper_mode
     - policy_mapping/ToM
-        - 'ToM1':PolicySpec(AlphaZeroPolicyWrapperClass,
-            - AlphaZeroPolicyWrapperClass(AlphaZeroPolicy):
+        - 'ToM1':PolicySpec(AlphaZeroPolicyWrapperClass,...)
+            - class AlphaZeroPolicyWrapperClass(AlphaZeroPolicy):
+                - class AlphaZeroPolicy(TorchPolicy):
     - trainer = AlphaZeroTrainer(config): train.py
         - __init__(): Alpha_Zero_MOA.py
             - 创建WorkerSet

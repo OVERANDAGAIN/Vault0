@@ -24,6 +24,9 @@ mindmap-plugin: basic
             - 创建WorkerSet
             - 注册多策略配置
     - trainer.train(): Alpha_Zero_MOA.py
+        - train(): trainable.py
+            - step(): trainer.py
+                - step_attempt(): trainer.py
         - Alpha_Zero_MOA.py  # 调用训练逻辑
             - execution_plan()  # 定义训练流程
                 - rollouts.combine()  # 组合回合数据

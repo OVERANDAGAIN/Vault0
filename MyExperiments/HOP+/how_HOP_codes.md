@@ -11,6 +11,7 @@ mindmap-plugin: basic
 - main(): train.py
     - ray.init()
     - register_env("StagHunt", ...): train.py
+        - class StagHunt() : env.py
     - ModelCatalog.register_custom_model(): train.py
         - MyModel: mcts_model
         - RLmodel: gpu_deeper_mode

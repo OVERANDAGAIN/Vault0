@@ -42,6 +42,8 @@ mindmap-plugin: basic
                         - Node.select() → expand() → backup(): mcts_moa.py
                             - self.model.compute_priors_and_value(): mcts_model.py
                             - self.env.step(): env.py
+        - init():AlphaZeroPolicy(TorchPolicy): ToM_Alpha_MOA.py
+            - 新节点
         - learn_on_batch(): ToM_Alpha_MOA.py
             - self._loss(): ToM_Alpha_MOA.py
                 - model.forward(): mcts_model.py

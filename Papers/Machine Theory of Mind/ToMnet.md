@@ -8,7 +8,7 @@
 ## Inspiration for Us
 # Focus
 Theory of mind (ToM) broadly refers to humans’ ability to represent the mental states of others, including their desires, beliefs, and intentions. 
-We design a Theory of Mind neural network a ToMnet – which uses meta-learning to build such models of the agents it encounters.
+We design a Theory of Mind neural network a ToMnet – which uses ==meta-learning== to build such models of the agents it encounters.
 
 # Innovation
 # Theroy

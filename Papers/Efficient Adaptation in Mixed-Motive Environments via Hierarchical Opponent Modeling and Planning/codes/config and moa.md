@@ -20,7 +20,7 @@
 
 在你的代码中，`config` 的内容可以大致分为以下几个部分：
 
-1. **环境配置 (`env_config`)：**
+#### 1. **环境配置 (`env_config`)：**
    ```python
    config['env_config'] = {
        "player_num": 4,                # 玩家数量
@@ -37,7 +37,7 @@
    ```
    - **作用：** 这些参数定义了 `Snowdrift` 环境的具体设置，例如地图大小、玩家数和游戏目标等。
 
-2. **模型配置 (`model`)：**
+#### 2. **模型配置 (`model`)：**
    ```python
    config['model'] = {
        'custom_model': 'MyModel',      # 自定义模型名称

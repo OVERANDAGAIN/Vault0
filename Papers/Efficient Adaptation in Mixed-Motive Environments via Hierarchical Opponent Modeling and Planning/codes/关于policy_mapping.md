@@ -25,6 +25,11 @@
 
 
 # Answers
+回答来源： [Policy mapping for computing actions in multi agent env - RLlib - Ray](https://discuss.ray.io/t/policy-mapping-for-computing-actions-in-multi-agent-env/4489/6)[^1]
+
+其他可能相关的回答： [I'm confused about how policy mapping works in configuration - RLlib - Ray](https://discuss.ray.io/t/im-confused-about-how-policy-mapping-works-in-configuration/7001/3)[^2]
+
+
 >Here’s a loop that I ripped out from rollout that I use for post-processing the policies. I believe this loops mimics train’s internal logic.
 
 
@@ -65,3 +70,6 @@ for episode in range(100):
 
 
 # FootNotes
+
+[^1]: 网上的问答
+[^2]: 可参考的其他问答

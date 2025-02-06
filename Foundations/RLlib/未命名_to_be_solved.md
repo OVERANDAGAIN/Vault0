@@ -56,4 +56,4 @@ RLlib：提供强化学习的抽象
 
 # FootNotes
 
-[^1]: b站介绍Ray_Tunr_RLlib
+[^1]: b站介绍Ray_Tune_RLlib

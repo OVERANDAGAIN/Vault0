@@ -22,6 +22,12 @@ We formulate a task for an observer, who, in each episode, gets access to a set 
 
 # Related Work
 # Methodology
+**general** theory of mind – the learned weights of the network, which encapsulate predictions about the ==common behaviour== of all agents in the training set
+**agent-specific theory of mind** – the “agent embedding” formed from observations about a single agent at test time, which encapsulates what makes this agent’s ==character and mental state distinct from others==’. 
+These correspond to **a prior and posterior** over agent behaviour.
+
+
+
 # Evaluation
 # Results
 # Limitations

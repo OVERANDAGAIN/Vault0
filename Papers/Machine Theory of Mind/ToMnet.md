@@ -12,6 +12,9 @@ We design a Theory of Mind neural network a ToMnet – which uses meta-learning 
 
 # Innovation
 # Theroy
+1. A prominent argument from cognitive psychology is that our social reasoning instead relies on high-level models of other agents —— such as their desires and beliefs. $\Longrightarrow$ This ability is typically described as our Theory of Mind
+2. our ultimate human understanding of other agents is not measured by a correspondence between our models and the mechanistic ground truth, but instead by how much they enable prediction and planning.
+3. 
 # Perspective
 # Background
 # Related Work

@@ -17,6 +17,9 @@ We design a Theory of Mind neural network a ToMnet – which uses ==meta-learnin
 3. 
 # Perspective
 # Background
+## About meta-learning
+We formulate a task for an observer, who, in each episode, gets access to a set of behavioural traces of a novel agent, and must make predictions about the agent’s future behaviour. Over training, the observer should get better at rapidly forming predictions about new agents from limited data. This “learning to learn” about new agents is what we mean by meta-learning.
+
 # Related Work
 # Methodology
 # Evaluation

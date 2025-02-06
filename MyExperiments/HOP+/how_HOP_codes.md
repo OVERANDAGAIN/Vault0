@@ -43,7 +43,7 @@ mindmap-plugin: basic
                             - self.model.compute_priors_and_value(): mcts_model.py
                             - self.env.step(): env.py
         - init():AlphaZeroPolicy(TorchPolicy): ToM_Alpha_MOA.py
-            - 初始化mcts : planning\mcts_moa()
+            - 初始化mcts : **planning\mcts_moa()**
         - learn_on_batch(): ToM_Alpha_MOA.py
             - self._loss(): ToM_Alpha_MOA.py
                 - model.forward(): mcts_model.py

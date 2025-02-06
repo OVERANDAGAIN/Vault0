@@ -46,7 +46,7 @@
    ```
    - **作用：** 指定要使用的自定义模型（如 `MyModel`），并通过 `config_dict` 传递模型的输入参数（如输入通道数、世界高度和宽度等）。
 
-3. **多智能体配置 (`multiagent`)：**
+#### 3. **多智能体配置 (`multiagent`)：**
    ```python
    config['multiagent'] = {
        'policies_to_train': ['ToM1', 'ToM2', 'ToM3', 'ToM4', 'lola1', 'lola2', 'lola3', 'lola4'],
@@ -59,7 +59,7 @@
      - `policy_mapping_fn` 是一个函数，用于将不同的玩家映射到对应的策略。
      - `policies` 定义了所有可用的策略及其相关配置。
 
-4. **训练参数配置：**
+#### 4. **训练参数配置：**
    ```python
    config['train_batch_size'] = 200  # 训练批量大小
    config['sgd_minibatch_size'] = 128  # SGD 小批量大小
@@ -69,7 +69,7 @@
    ```
    - **作用：** 这些参数控制训练过程的超参数，例如学习率、批量大小和折扣因子。
 
-5. **保存和加载路径 (`moa_config` 和 `lola_config`)：**
+#### 5. **保存和加载路径 (`moa_config` 和 `lola_config`)：**
    ```python
    config['moa_config'] = {
        'moa_batch_size': 512,

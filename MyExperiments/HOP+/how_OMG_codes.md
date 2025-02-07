@@ -27,7 +27,7 @@ mindmap-plugin: basic
                             - obs_is_state = False
                             - obs_last_action
                             - obs_agent_id
-                            - agent_model(CVAE)
+                            - agent_model(CVAE)/forward
                         - agent_outs[i], self.hidden_states[i] = agent(agent_inputs[i], self.hidden_states[i])
                     - chosen_actions = self.action_selector.select_action()
                 - reward, terminated, env_info = self.env.step(actions[0])

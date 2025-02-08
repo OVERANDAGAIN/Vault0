@@ -31,5 +31,6 @@
   "blue-topaz-theme@@toggle-calendar-shadow": true,
   "blue-topaz-theme@@toggle-calendar-transparent": true,
   "blue-topaz-theme@@style-options-for-calendar-plugin": "style-options-for-calendar-plugin-style-one",
-  "blue-topaz-theme@@text-indentation-two-em": false
+  "blue-topaz-theme@@text-indentation-two-em": false,
+  "blue-topaz-theme@@tab-head-style": "underline-tab-style"
 }

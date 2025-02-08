@@ -115,6 +115,27 @@ OMG 与pymarl相比：
 
 
 ## Overall_Answers
+
+
+
+|                  | save_models()                                                                   | 备注                  |
+| ---------------- | ------------------------------------------------------------------------------- | ------------------- |
+| basic_controller | agent.th                                                                        |                     |
+| om_controller    | agent.th<br>am.save_model()                                                     |                     |
+| am_learner       | am_model.save_models()                                                          |                     |
+| omg_learner      | mac.save_models()<br>mac.agents_model[main_alg_idx].omg_save_models()<br>opt.th |                     |
+| q_learner        | mac.save_models()<br>mixer.th<br>opt.th                                         |                     |
+| q_learner_4am    | mac.save_models()<br>mixer.th<br>opt.th                                         |                     |
+| base_am          | base_am.th                                                                      |                     |
+| none_am          | pass                                                                            |                     |
+| omg_am           | vae.th                                                                          |                     |
+| omg_am           | cvae.th<br>cond_rnn.th<br>fc.th                                                 | omg_save_models()方法 |
+
+
+
+
+
+
 ### main.py
 [[Sacred]][^1]
 
@@ -242,6 +263,6 @@ idv_rnn_agent 与 rnn_agent
 
 # FootNotes
 
-[^1]: 使用了sacred库来管理
 [^2]: am指的是什么
 [^3]: om指的是什么
+[^1]: 使用了sacred库来管理

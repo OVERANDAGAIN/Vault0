@@ -134,7 +134,14 @@ OMG 与pymarl相比：
 | omg_am           | cvae.th<br>cond_rnn.th<br>fc.th                                                 | omg_save_models()方法 |
 
 
-
+```python 
+    def _build_agents(self, scheme, groups, input_shape):
+        self.agents = []
+        self.agents_model = []
+        for i, alg_args in enumerate(self.algs_args):
+            self.agents.append(agent_REGISTRY[alg_args.policy_model](input_shape[i][0]+input_shape[i][1][1], self.algs_args[i]))###iql, qmix  and so on
+            self.agents_model.append(am_REGISTRY[alg_args.am_model](scheme, groups, self.algs_args[i]))###omg_am, none_am and so on
+```
 
 
 

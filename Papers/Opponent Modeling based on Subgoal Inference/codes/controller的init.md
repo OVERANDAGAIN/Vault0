@@ -76,7 +76,7 @@ for i, alg in enumerate(self.algs):
    - 如果当前的策略算法是训练算法（即用于训练的主算法），则将其标记为 `self.main_alg`，并记录下它在 `self.algs` 中的索引（`self.main_alg_idx`）。
    - 此时，我们将主算法的配置（`temp_args`）存储到 `self.main_alg_args`，确保后续可以使用主算法的配置进行训练。
 
-### 2. **`self.agents.append` 和 `self.agents_model.append`**
+### 2. **`self.agents.append` 和 `self.agents_model.append`**( `build_agents()` 方法)
 ```python
 self.agents.append(
     agent_REGISTRY[alg_args.policy_model](input_shape[i][0] + input_shape[i][1][1], self.algs_args[i]))

@@ -122,10 +122,12 @@ OMG 与pymarl相比：
 | ---------------- | ------------------------------------------------------------------------------- | ------------------- |
 | basic_controller | agent.th                                                                        |                     |
 | om_controller    | agent.th<br>am.save_model()                                                     |                     |
+|                  |                                                                                 |                     |
 | am_learner       | am_model.save_models()                                                          |                     |
 | omg_learner      | mac.save_models()<br>mac.agents_model[main_alg_idx].omg_save_models()<br>opt.th |                     |
 | q_learner        | mac.save_models()<br>mixer.th<br>opt.th                                         |                     |
 | q_learner_4am    | mac.save_models()<br>mixer.th<br>opt.th                                         |                     |
+|                  |                                                                                 |                     |
 | base_am          | base_am.th                                                                      |                     |
 | none_am          | pass                                                                            |                     |
 | omg_am           | vae.th                                                                          |                     |

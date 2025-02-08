@@ -121,7 +121,7 @@ OMG 与pymarl相比：
 |                  | save_models()                                                                   | 备注                  |
 | ---------------- | ------------------------------------------------------------------------------- | ------------------- |
 | basic_controller | agent.th                                                                        |                     |
-| om_controller    | agent.th<br>am.save_model()                                                     |                     |
+| om_controller    | agent.th<br>am.save_model()/agents_model.save_models()                          |                     |
 |                  |                                                                                 |                     |
 | am_learner       | am_model.save_models()                                                          |                     |
 | omg_learner      | mac.save_models()<br>mac.agents_model[main_alg_idx].omg_save_models()<br>opt.th |                     |

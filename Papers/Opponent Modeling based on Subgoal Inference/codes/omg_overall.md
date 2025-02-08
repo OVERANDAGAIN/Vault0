@@ -118,20 +118,20 @@ OMG 与pymarl相比：
 
 
 
-|                  | save_models()                                                                   | 备注                  |
-| ---------------- | ------------------------------------------------------------------------------- | ------------------- |
-| basic_controller | agent.th                                                                        |                     |
-| om_controller    | agent.th<br>am.save_model()/agents_model.save_models()                          |                     |
-|                  |                                                                                 |                     |
-| am_learner       | am_model.save_models()                                                          |                     |
-| omg_learner      | mac.save_models()<br>mac.agents_model[main_alg_idx].omg_save_models()<br>opt.th |                     |
-| q_learner        | mac.save_models()<br>mixer.th<br>opt.th                                         |                     |
-| q_learner_4am    | mac.save_models()<br>mixer.th<br>opt.th                                         |                     |
-|                  |                                                                                 |                     |
-| base_am          | base_am.th                                                                      |                     |
-| none_am          | pass                                                                            |                     |
-| omg_am           | vae.th                                                                          |                     |
-| omg_am           | cvae.th<br>cond_rnn.th<br>fc.th                                                 | omg_save_models()方法 |
+|                  | save_models()                                                                   | 备注                                                           |
+| ---------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------ |
+| basic_controller | agent.th                                                                        |                                                              |
+| om_controller    | agent.th<br>am.save_model()/agents_model.save_models()                          |                                                              |
+|                  |                                                                                 |                                                              |
+| am_learner       | am_model.save_models()                                                          | args.am_model                                                |
+| omg_learner      | mac.save_models()<br>mac.agents_model[main_alg_idx].omg_save_models()<br>opt.th | 使用的是om_controller <br>$\Longrightarrow$ 因为使用了 `main_alg_idx` |
+| q_learner        | mac.save_models()<br>mixer.th<br>opt.th                                         |                                                              |
+| q_learner_4am    | mac.save_models()<br>mixer.th<br>opt.th                                         |                                                              |
+|                  |                                                                                 |                                                              |
+| base_am          | base_am.th                                                                      |                                                              |
+| none_am          | pass                                                                            |                                                              |
+| omg_am           | vae.th                                                                          |                                                              |
+| omg_am           | cvae.th<br>cond_rnn.th<br>fc.th                                                 | omg_save_models()方法                                          |
 
 
 ```python 

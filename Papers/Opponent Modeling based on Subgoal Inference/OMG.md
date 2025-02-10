@@ -126,7 +126,12 @@ $$\langle \hat{\omega}, \hat{\psi} \rangle = \arg \max_{\omega, \psi} \mathbb{E}
 
 The decoder $p_{\omega}(s | g)$ is also used to reconstruct the subgoal state, as discussed in Section 5.5.
 
+# Ablation Study
+**from: OMG_slides** 
+Poster 地址: [NeurIPS Poster Opponent Modeling based on Subgoal Inference](https://neurips.cc/virtual/2024/poster/95566)[^1]
+![[Pasted image 20250210174749.png]]
 
+![[Pasted image 20250210174759.png]]
 
 
 
@@ -171,3 +176,5 @@ we plot the ratio of that an opponent’s future trajectory passes through the o
 The limitation of OMG is it cannot handle open multi-agent systems where agents may enter and leave during the interaction
 
 # FootNotes
+
+[^1]: OMG的poster地址NeurIPS

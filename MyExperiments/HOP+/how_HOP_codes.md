@@ -57,6 +57,7 @@ mindmap-plugin: basic
                     - **构建 `new_state`**
                         - 更新玩家位置和猎物位置
                         - 更新 `stag_prob`, `hare_prob`
+                    - `self.state_dict=self.set_env_states(obs,new_state,time)`
                     - **计算最优动作**
                         - 无猎物
                             - 随机选择动作

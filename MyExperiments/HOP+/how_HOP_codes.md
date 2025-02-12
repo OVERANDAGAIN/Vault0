@@ -36,22 +36,22 @@ mindmap-plugin: basic
         - WorkerSet.sample(): RLlib内部
             - RolloutWorker.sample(): RLlib内部
                 - self.input_dict = obs_batch
-                - compute_actions_from_input_dict(): ToM_Alpha_MOA.py
+                - compute_actions_from_input_dict(): **ToM_Alpha_MOA**.py
                     - self.env.set_state(): env.py
                     - self.mcts.compute_action(): mcts_moa.py
                         - Node.select() → expand() → backup(): mcts_moa.py
                             - self.model.compute_priors_and_value(): mcts_model.py
                             - self.env.step(): env.py
-        - init():AlphaZeroPolicy(TorchPolicy): ToM_Alpha_MOA.py
+        - init():AlphaZeroPolicy(TorchPolicy): **ToM_Alpha_MOA**.py
             - 初始化mcts : **planning\mcts_moa()**
             - 创建model_list : MOAModel: model\moa_model.py
             - env_creator=config['ToM_config']['env_creator']
             - self.env.reset()
-        - learn_on_batch(): ToM_Alpha_MOA.py
+        - learn_on_batch(): **ToM_Alpha_MOA**.py
             - self._loss(): ToM_Alpha_MOA.py
                 - model.forward(): mcts_model.py
                 - value_function(): mcts_model.py
-        - postprocess_trajectory(): ToM_Alpha_MOA.py
+        - postprocess_trajectory(): **ToM_Alpha_MOA**.py
             - moa_update(): ToM_Alpha_MOA.py
                 - model.forward(): moa_model.py
                 - optimizer.step(): ToM_Alpha_MOA.py

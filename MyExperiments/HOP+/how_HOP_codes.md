@@ -47,31 +47,31 @@ mindmap-plugin: basic
             - 创建model_list : MOAModel: model\moa_model.py
             - env_creator=config['ToM_config']['env_creator']
             - self.env.reset()
-		- - **compute_actions_from_input_dict()**: `your_file.py`
-		  - **初始化数据**  
-		    - 提取 `obs_batch`, `state_batches`, `episodes`
-		    - 判断 `time == 0`  
-		      - 调用 `get_initial_state()`
-		    - 否则  
-		      - 更新 `new_state`, `stag_prob`, `hare_prob`
-		  - **构建 `new_state`**
-		    - 更新玩家位置和猎物位置
-		    - 更新 `stag_prob`, `hare_prob`
-		  - **计算最优动作**
-		    - 无猎物  
-		      - 随机选择动作
-		    - 有猎物  
-		      - 调用 `self.env.set_state(self.state_dict)`
-		      - 初始化 MCTS 搜索树
-		      - 并行 MCTS 计算: `self.mcts.compute_action()`
-		      - 计算 `Q_value_total`，从中采样动作
-		  - **存储数据**  
-		    - `new_state_batch.append(new_state)`
-		    - `episodes[n].user_data[f"mcts_policies{self.my_id}"].append(mcts_policy)`
-		    - `episodes[n].user_data[f"recurrent_state{self.my_id}"].append(new_state)`
-		    - `action_batch.append(action)`
-		  - **返回**  
-		    - `action_batch, np.array(new_state_batch).T, {}`
+        -
+            - **compute_actions_from_input_dict()**:
+                - **初始化数据**
+                    - 提取 `obs_batch`, `state_batches`, `episodes`
+                    - `time == 0`
+                        - 调用 `get_initial_state()`
+                        - 更新 `new_state`, `stag_prob`, `hare_prob`
+                    - **构建 `new_state`**
+                        - 更新玩家位置和猎物位置
+                        - 更新 `stag_prob`, `hare_prob`
+                    - **计算最优动作**
+                        - 无猎物
+                            - 随机选择动作
+                        - 有猎物
+                            - 调用 `self.env.set_state(self.state_dict)`
+                            - 初始化 MCTS 搜索树
+                            - 并行 MCTS 计算: `self.mcts.compute_action()`
+                            - 计算 `Q_value_total`，从中采样动作
+                    - **存储数据**
+                        - `new_state_batch.append(new_state)`
+                        - `(mcts_policy)`
+                        - `(new_state)`
+                        - `action_batch.append(action)`
+                    - **返回**
+                        - `action_batch, np.array(new_state_batch).T, {}`
         - learn_on_batch(): **ToM_Alpha_MOA**.py
             - self._loss(): ToM_Alpha_MOA.py
                 - model.forward(): mcts_model.py

@@ -73,6 +73,45 @@ mindmap-plugin: basic
                         - `action_batch.append(action)`
                     - **返回**
                         - `action_batch, np.array(new_state_batch).T, {}`
+		- **Start processing the trajectory**
+		    - **Loop through players** (excluding `self.my_id`)
+		        - **Get the model ID** for each player (`model_id = self.model_id_list[i]`)
+		        - **Determine the place ID** based on the model's relative position to `self.my_id`:
+		            - `place_id = (model_id + 1 - self.my_id) % self.player_num`
+		        - **Check if the last reward for the player is positive**:
+		            - `if episode._agent_reward_history[f'player_{model_id+1}'][-1] > 0:`
+		                - **Add observation, actions, and time indices** to the model buffer
+		                    - `self.model_buffer[i][0].append(...)` (obs)
+		                    - `self.model_buffer[i][1].append(...)` (actions)
+		                    - `self.model_buffer[i][2].append(...)` (time indices)
+		                - **Update the action type (stag or hare)** based on the player's last action:
+		                    - **If last action was 'stag' (5)**: Update `self.discounted_stag_times`
+		                    - **If last action was 'hare' (6)**: Update `self.discounted_hare_times`
+		                - **Reset model buffer if it exceeds capacity**:
+		                    - If buffer exceeds `moa_buffer_capacity`, call `self.moa_update(i)`
+		            - **Add MCTS policies to the sample batch** (`sample_batch["mcts_policies"]`)
+		            - **Calculate final reward** and adjust using reward normalization (`r2_buffer.add_reward(final_reward)`)
+		            - **Assign value labels** for each transition in the trajectory (`value_label = final_reward * np.ones_like(sample_batch["t"])`)
+		        - **End of trajectory processing**
+		- **Start learning from the batch**
+		    - **Increment learning count** (`self.learn_count`)
+		    - **Skip learning if `my_id > 1` and `learn_count > 75`**:
+		        - If conditions met, return early: `return {LEARNER_STATS_KEY: {}}`
+		    - **Create a tensor dict for the batch**:
+		        - `train_batch = self._lazy_tensor_dict(postprocessed_batch)`
+		    - **Compute the loss**:
+		        - `loss_out, policy_loss, value_loss = self._loss(...)`
+		    - **Zero out gradients** before backpropagation:
+		        - `self._optimizers[0].zero_grad()`
+		    - **Backpropagate the loss**:
+		        - `loss_out.backward()`
+		    - **Process gradients** and update the optimizer:
+		        - `grad_process_info = self.extra_grad_process(self._optimizers[0], loss_out)`
+		        - `self._optimizers[0].step()`
+		    - **Track and return gradient information**:
+		        - `grad_info = self.extra_grad_info(train_batch)`
+		        - Update `grad_info` with additional stats (`grad_process_info`, total loss, etc.)
+		    - **End of learning batch processing**
         - learn_on_batch(): **ToM_Alpha_MOA**.py
             - self._loss(): ToM_Alpha_MOA.py
                 - model.forward(): mcts_model.py

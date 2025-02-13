@@ -1,3 +1,7 @@
+---
+created: 2024-12-18T20:35
+updated: 2024-12-30T14:54
+---
 [[Open Problems in Cooperative AI]]
 
 Arrow’s Theorem（阿罗不可能定理）

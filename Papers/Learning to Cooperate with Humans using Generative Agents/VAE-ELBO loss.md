@@ -1,3 +1,7 @@
+---
+created: 2024-12-23T16:29
+updated: 2024-12-31T16:04
+---
 [[GAMMA]]
 
 # Questions

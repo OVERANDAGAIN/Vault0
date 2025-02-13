@@ -1,3 +1,7 @@
+---
+created: 2024-12-18T20:35
+updated: 2024-12-30T14:54
+---
 [[Open Problems in Cooperative AI]]
 
 论文中经常提到的游戏 Hanabi是什么，有什么应用/

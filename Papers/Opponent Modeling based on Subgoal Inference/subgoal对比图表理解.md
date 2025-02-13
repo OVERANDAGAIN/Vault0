@@ -1,3 +1,7 @@
+---
+created: 2024-12-31T15:26
+updated: 2025-01-03T14:59
+---
 [[OMG]]
 
 # Questions

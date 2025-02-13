@@ -1,3 +1,7 @@
+---
+created: 2024-12-18T20:35
+updated: 2024-12-18T20:35
+---
 [[MCTS]]
 
 [https://www.moderndescartes.com/essays/deep_dive_mcts/](https://www.moderndescartes.com/essays/deep_dive_mcts/)

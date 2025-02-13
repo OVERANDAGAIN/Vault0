@@ -1,3 +1,7 @@
+---
+created: 2024-12-23T19:29
+updated: 2024-12-23T19:47
+---
 [[LASE]]
 
 # Questions

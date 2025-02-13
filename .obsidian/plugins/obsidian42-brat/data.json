@@ -1,5 +1,6 @@
 {
   "pluginList": [
+    "Shanshuimei/obsidian-generate-timeline",
     "obsidian-canzi/Enhanced-editing"
   ],
   "pluginSubListFrozenVersion": [],

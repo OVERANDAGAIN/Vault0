@@ -1,0 +1,12 @@
+{
+  "lineWidth": 2,
+  "lineColor": "#8684f5",
+  "nodeSize": 16,
+  "nodeColor": "var(--interactive-accent)",
+  "itemSpacing": 30,
+  "cardBackground": "var(--background-primary-alt)",
+  "animationDuration": 200,
+  "dateAttribute": "created",
+  "fileNamePrefix": "",
+  "fileNameSuffix": ""
+}

@@ -2,7 +2,7 @@
   "lineWidth": 2,
   "lineColor": "#8684f5",
   "nodeSize": 16,
-  "nodeColor": "var(--interactive-accent)",
+  "nodeColor": "#9feab5",
   "itemSpacing": 30,
   "cardBackground": "var(--background-primary-alt)",
   "animationDuration": 200,

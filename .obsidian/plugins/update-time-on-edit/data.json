@@ -1,13 +1,19 @@
 {
-  "dateFormat": "yyyy-MM-dd'T'HH:mm",
+  "dateFormat": "yyyy-MM-dd'T'HH",
   "enableCreateTime": true,
   "headerUpdated": "updated",
   "headerCreated": "created",
-  "minMinutesBetweenSaves": 1,
+  "minMinutesBetweenSaves": 10,
   "ignoreGlobalFolder": [],
   "ignoreCreatedFolder": [],
   "enableExperimentalHash": false,
   "fileHashMap": {
-    "MyExperiments/HOP+/OMG运行问题.md": "a3d2e392673d2068e6374f5ebd1ac5100422ae5bc06ef1068f65a536c0bea2ba"
+    "MyExperiments/HOP+/OMG运行问题.md": "a3d2e392673d2068e6374f5ebd1ac5100422ae5bc06ef1068f65a536c0bea2ba",
+    "2025/02/2025-02-13.md": "046f5ce6d81dc639a00efa731df4f4ca3ec5db0901604c78cff754ad42bfd8b5",
+    "Foundations/安装双系统/双系统.md": "6b27b23eaa7f376ff0a56afe9851d1e726a702cc2143dc1fa50cdeb944e50781",
+    "Foundations/安装双系统/预前迁移准备.md": "378cb9018a72dfc17b6dbd5e857aefe1e69d80bd76fbdbc473fbacb0b9e2fce3",
+    "MyExperiments/HOP+/HOP代码细节.md": "68e76d44e66c535e883fe0951dd7194a21811e28e2f8f10b49ac5f0934829af5",
+    "MyExperiments/HOP+/逻辑梳理.md": "91bdfde8fede02df50807e0383296736d672ba83fabe5dd3786b8b9c61ca8ea1",
+    "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/config and moa.md": "e82880997dd7f4181f135141e40c19c347e0c606e322af0671da5f138e8646ba"
   }
 }

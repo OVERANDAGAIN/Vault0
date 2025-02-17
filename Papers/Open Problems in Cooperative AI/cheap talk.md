@@ -1,6 +1,6 @@
 ---
 created: 2024-12-18T20:35
-updated: 2024-12-30-14.
+updated: 2025-02-13-13.
 ---
 
 [[Open Problems in Cooperative AI]]

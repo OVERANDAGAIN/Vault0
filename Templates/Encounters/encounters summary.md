@@ -1,3 +1,7 @@
+---
+created: 2025-01-17T17
+updated: 2025-02-12T22
+---
 #encounters 
 
 # Why Encounters?

@@ -1,7 +1,7 @@
 ---
 mindmap-plugin: basic
 created: 2025-01-17T15:34
-updated: 2025-02-08T16:52
+updated: 2025-02-08T16
 ---
 
 # OMG

@@ -1,6 +1,6 @@
 ---
 created: 2024-12-23T20:35
-updated: 2025-02-17-22.
+updated: ...
 ---
 [[Social Influence as Intrinstic Motivation]]
 

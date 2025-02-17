@@ -1,7 +1,7 @@
 ---
 创建时间: 2024-十二月-23日  星期一, 11:12:13 上午
 created: 2024-12-23T11:12
-updated: 2025-02-13-13.
+updated: ...
 ---
 #paper_summary 
 Generative Agent Modeling for Multi-agent Adaptation (GAMMA)

@@ -33,5 +33,6 @@
   "Enhanced-editing",
   "obsidian-markmind",
   "obsidian-timeline",
-  "generate-timeline"
+  "generate-timeline",
+  "update-time-on-edit"
 ]

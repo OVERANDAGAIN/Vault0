@@ -4,7 +4,19 @@
   "headerUpdated": "updated",
   "headerCreated": "created",
   "minMinutesBetweenSaves": 10,
-  "ignoreGlobalFolder": [],
+  "ignoreGlobalFolder": [
+    "2024",
+    "2025",
+    "/",
+    "Encounters",
+    "Foundations",
+    "Logbook",
+    "Meeting",
+    "MyExperiments",
+    "Papers",
+    "Templates",
+    "Problems"
+  ],
   "ignoreCreatedFolder": [],
   "enableExperimentalHash": false,
   "fileHashMap": {

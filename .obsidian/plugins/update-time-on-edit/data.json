@@ -3,7 +3,7 @@
   "enableCreateTime": true,
   "headerUpdated": "updated",
   "headerCreated": "created",
-  "minMinutesBetweenSaves": 10,
+  "minMinutesBetweenSaves": 30,
   "ignoreGlobalFolder": [],
   "ignoreCreatedFolder": [],
   "enableExperimentalHash": false,

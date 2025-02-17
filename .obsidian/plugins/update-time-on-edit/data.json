@@ -5,7 +5,17 @@
   "headerCreated": "created",
   "minMinutesBetweenSaves": 1,
   "ignoreGlobalFolder": [
-    "/"
+    "/",
+    "2024",
+    "2025",
+    "Encounters",
+    "Foundations",
+    "Logbook",
+    "Papers",
+    "Meeting",
+    "MyExperiments",
+    "Problems",
+    "Templates"
   ],
   "ignoreCreatedFolder": [],
   "enableExperimentalHash": false,

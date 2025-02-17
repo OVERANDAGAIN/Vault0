@@ -10,6 +10,7 @@
   "ignoreCreatedFolder": [],
   "enableExperimentalHash": false,
   "fileHashMap": {
+<<<<<<< HEAD
     "2024/Test/test_timeline.md": "c913c7456d32252c7ace2ad6cb2bde434ee7e45d2b86c1ec3e9c9014f71f0f8a",
     "2024/Test/timeline_1.md": "a48ea9c79362f7e1fcc97158f0b16228df407e13585c53ed53a578c5f128bfb3",
     "Problems/Windows/注册表无法删除.md": "57bda1ca7ec44e8ee149bfd362decd039f4af5165ee6bc68130eb96a2cfb65f3",
@@ -203,5 +204,15 @@
     "Foundations/Python/关于vshape的1，.md": "91c38f64f2b0e2fe8076984f8752a3d8c2ed9eed259cc226dc9553908082891e",
     "Foundations/安装双系统/双系统.md": "e848a186cdfd583221dd52231b4f8840a62af96e206272669c75eca615d04fe2",
     "Foundations/安装双系统/预前迁移准备.md": "bd30781d680ad68c4f2a82de52c9d95b52ddd630391b7eef07d491adf9e80e71"
+=======
+    "2025/02/2025-02-13.md": "fef844217fc70fa51fa61dc3808ad6ae472b005911de86ec972e89c034b5188e",
+    "Foundations/安装双系统/双系统.md": "91f1cca939b8290fa05387c696d590421bedec9b51a095b8108d126a999d25db",
+    "MyExperiments/HOP+/HOP代码细节.md": "81aacf1617ba73cb0ca15b11612b85a281d5d1b2a36bc7cfdfa3cd5cc68b59c9",
+    "MyExperiments/HOP+/逻辑梳理.md": "15ee8521396ad4599f9a77c921e179c346f263ef86d106932828aac28f627289",
+    "Papers/Efficient Adaptation in Mixed-Motive Environments via Hierarchical Opponent Modeling and Planning/codes/config and moa.md": "e785f73c1e3769104897b9c9edfc726779acee5328148b2182074df5328ac578",
+    "MyExperiments/HOP+/OMG运行问题.md": "af811b8b5c5760e96bdf2e65222319228599c340ee7f3e195d3409276e84b2c0",
+    "Foundations/安装双系统/预前迁移准备.md": "c8491e03119016ebd04087f671feccae2c6b94b2b973ae47d33606e0f0da92cb",
+    "Foundations/安装双系统/安装过程.md": "2bea47a8f7fe7bb999d58b8b7cd1b02200673f59a452c358d83783f2ffc64f7c"
+>>>>>>> origin/main
   }
 }

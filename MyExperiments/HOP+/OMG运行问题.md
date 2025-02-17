@@ -1,7 +1,7 @@
 ---
 创建时间: 2025-一月-23日  星期四, 3:15:41 下午
 created: 2025-01-23T15:15
-updated: 2025-01-24T11:26
+updated: 2025-02-17T15:44
 ---
 [[HOP+]]
 
@@ -21,6 +21,7 @@ updated: 2025-01-24T11:26
 
 ## Problem1: 关于holdup_data
 - [?] 
+- [x] 问题的解决： [[OMG运行问题#Problem 1-2 关于 `update_holdup` 的错误]]
 ```bash
 dingyi@dingyi-virtual-machine:~/Desktop/OMG$ python main.py --config=iql --env-config=sc2 with env_args.map_name=8m 
 ......
@@ -155,6 +156,45 @@ self.batch.update(last_data, ts=self.t)  # 删除 update_holdup 以避免重复
 
 
 
+## Problem 1-2 关于 `update_holdup` 的错误
+
+### 关于Problem 1 的修正
+`update_holdup` 仍然是需要的，不用注释该行代码。
+对于以下几种情况：
+#### - 使用到 `update_holdup  
+即在 `omg_am` 中把 `infer_mu` `infer_log_var` 保存在batch中时才会使用到
+#### - 不使用 `update_holdup
+即没用到 `omg` 相关的模块 `omg_am` 时 ,下面的函数不会被调用，导致 `self.holdup_date` 没被初始化，从而在 `update_holdup` 阶段（在runner中环境交互过程会被执行）会报错找不到该字段
+```
+    def holdup(self, data):
+        self.holdup_data = data
+```
+
+==因此，需要修改代码解决这部分不一致的错误==
+#to_be_solved [^1]
+
+### 修改源代码的 `ts` `bs` 的赋值错误
+这段代码存在参数传递错误的问题，可能导致意外的行为或bug。具体分析如下：
+
+**问题原因：**
+在`update_holdup`方法中调用`self.update(self.holdup_data, ts)`时，第二个参数`ts`被错误地传递给了`update`方法的第二个形参`bs`，而非预期的`ts`参数。此时：
+- `bs`会被赋值为`update_holdup`中传入的`ts`值。
+- `update`的`ts`参数始终使用默认值`slice(None)`。
+
+**影响：**
+- 切片解析`_parse_slices((bs, ts))`中的`bs`和`ts`值与预期不符。
+- 数据更新时可能作用于错误的切片范围，导致数据错乱或逻辑错误。
+
+**修复方法：**
+明确使用关键字参数传递`ts`，避免位置混淆：
+```python
+def update_holdup(self, ts=slice(None)):
+    self.update(data=self.holdup_data, ts=ts)
+```
+
+**总结：**
+参数位置错误导致`bs`和`ts`的值被交换，必须通过关键字参数显式指定`ts`参数以确保正确性。
+
 
 
 ## Problem2: 预训练与训练
@@ -274,3 +314,5 @@ smac源码
 # Limitations
 # Future Work
 # FootNotes
+
+[^1]: 解决holdup_data的相关错误

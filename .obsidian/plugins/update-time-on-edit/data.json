@@ -28,17 +28,13 @@
     "Problems/Cuda/CUDA总结.md": "451abb48e20225a2dd55452f5f4b9245cf2e27ce1418760498b546971533f95b",
     "Problems/Cuda/conda常用指令.md": "62c8f5578e855fcf36ac3c4d0a3206fe977885f92c5638a95299235d8d67748a",
     "Problems/Cuda/4090与CUDA不匹配.md": "b0842da01bbe96fdac75d73048eb6f8af62699ce92bbc51e24ea4f508574a617",
-    "MyExperiments/HOP+/逻辑梳理.md": "6fc6c2be234e386ed909a97332a83fcbe16c3257adffc37b58dabb52551392fd",
+    "MyExperiments/HOP+/逻辑梳理.md": "758cfdc8b92a1551fc5ab6a4d9949e70aa1ff77f42ca6be8262a12515be17548",
     "MyExperiments/HOP+/未命名思维导图.md": "0cf766166d8dccb825d57676a5f4b7a8ea257c8419011f0c7660472a06819727",
-<<<<<<< HEAD
-    "MyExperiments/HOP+/OMG运行问题.md": "b67a31bf291aa056a3966407eb071196f1806f977fc46ad15e767e7ce7985991",
-=======
     "MyExperiments/HOP+/OMG运行问题.md": "2dbef769f4a70e1b689786b8f51f198489fb31aef7ed1d61ddf3918e0ffcb7c8",
->>>>>>> origin/main
     "MyExperiments/HOP+/how_OMG_codes.md": "917abc5d40850ee753f2e5e87352d14fc8b2dfd6210824d67090d2fe2efa1c5f",
     "MyExperiments/HOP+/how_HOP_codes.md": "4ff7be773b2dd89aaaedb42767e92e45427ca524aeb0bf47ce554acd7c5adde4",
     "MyExperiments/HOP+/HOP修改.md": "253ab89f912f263d4fa20972deaa1d6088f5488ede68b7c911e63b8443307302",
-    "MyExperiments/HOP+/HOP代码细节.md": "7ef08dfd0c9962bdd1af06ef8ff9a21439218644f08dc5a0ef4d55b759de43d8",
+    "MyExperiments/HOP+/HOP代码细节.md": "c36b3b934ffad3aae075bc190367f1be262b190f1b20edd410e1b31f27f77ad3",
     "MyExperiments/HOP+/HOP+.md": "aeeabe1d3203dfea05a6bf3247024d9d8f8fadba7968e5a339e97bfd6d961669",
     "MyExperiments/HOP+/checkpoint_to_be _solved.md": "be3c7a3cb294c14027bf2137f9258d9e99f29b7448009c4b683ecddbc15c9480",
     "Papers/Social Influence as Intrinsic Motivation for Multi-Agent Deep Reinforcement Learning/求和的等价.md": "9c48edba325ee08a358ea78fe273ee21f4521cb0999c82ad11471e9d78352552",
@@ -201,17 +197,11 @@
     "2024/12/2024-12-17.md": "a12917e82b533f42fbededfa45585f2a48d8569b0ca35a54d44f6dae11559a0d",
     "2024/12/2024-12-16.md": "919305e7eb96a80a7f867c5ce6ada175368cc7d2ee18228e4adda87c5151dc9c",
     "2024/12/2024-12-12.md": "77b80c5a5013ea863b22064aa5ef94a57d74cbe198bb956dcf7a24630cb653e6",
-<<<<<<< HEAD
-    "2025/02/2025-02-13.md": "bb7e47df2fe4750627adc7bcc8eea00fa6f3f5a8ab78ba687f237ff9acb89f03",
-    "Foundations/安装双系统/预前迁移准备.md": "67052291d52d1dd11aeeb71157da792069b1362f01d46f36b484b17029d2d07e",
-    "Foundations/安装双系统/双系统.md": "ebf021f2dcde5c44aeb5d691314c382759b557fa24a40e324f3f478e5537ede0"
-=======
-    "2025/02/2025-02-13.md": "49f01ea500b5e6e996ed0a0d47dc6e940eb82ce4c5f9fdba3f16323005f0cf83",
+    "2025/02/2025-02-13.md": "e613a5354c3d9c60c1a867d9eff8deaa22335655dc631b15dd18f70f98b04c0b",
     "2025/02/2025-02-17.md": "6702462a6a2f1f0254e1fadb98271a49dbed8109b18ce61fad10f4eb3f8dfb3f",
     "MyExperiments/HOP+/OMG代码错误修改.md": "4636a000f2fcfdf9ab8c1cbd71e7fcb78cc37d19e7f1e8dc09b15de34a9efbb8",
     "Foundations/Python/关于vshape的1，.md": "91c38f64f2b0e2fe8076984f8752a3d8c2ed9eed259cc226dc9553908082891e",
-    "Foundations/安装双系统/双系统.md": "60bbd6bf0f2c9b0cef8ee1e2ede5423a8d698bd75947832f64c5c089748169de",
+    "Foundations/安装双系统/双系统.md": "1969e370cf70c7f497fcfc59351fee5a9bd163550a1924a2f4c37e0957998ddd",
     "Foundations/安装双系统/预前迁移准备.md": "77c92803fe81df6d8432b4562d8fc02425bba978531f0f138f7fe93ff7279d20"
->>>>>>> origin/main
   }
 }

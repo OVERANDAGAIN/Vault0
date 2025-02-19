@@ -318,7 +318,7 @@ pip install -r requirements_pypi.txt
 在 Ubuntu 上运行以下命令：
 ```bash
 sudo apt-get update
-sudo apt-get install -y libfreetype6-dev libpng-dev pkg-config libjpeg-dev libpq-dev python3-dev
+sudo apt-get install -y g++ libfreetype6-dev libpng-dev pkg-config libjpeg-dev libpq-dev python3-dev
 ```
 
 ````

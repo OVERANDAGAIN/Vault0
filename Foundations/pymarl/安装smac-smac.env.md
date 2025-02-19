@@ -104,11 +104,15 @@ pip install git+https://github.com/oxwhirl/smac.git
 
 在Ubuntu中，用命令行添加SC2PATH变量，首先用vim打开bashrc：
 
-`vim ~/.bashrc`
+
+```bash
+vim ~/.bashrc
+```
+
 
 在最后一行添加环境变量，键和值同样分别是SC2PATH和StarCraft II在Ubuntu系统中用户名文件夹下的位置
 
-`export SC2PATH=~/StarCraftII/`
+`export SC2PATH=~/StarCraftII/
 ```ad-note
 这里就已经隐含了 /home/admin 的位置
 ```

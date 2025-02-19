@@ -112,7 +112,11 @@ vim ~/.bashrc
 
 在最后一行添加环境变量，键和值同样分别是SC2PATH和StarCraft II在Ubuntu系统中用户名文件夹下的位置
 
-`export SC2PATH=~/StarCraftII/
+
+```bash 
+export SC2PATH=~/StarCraftII/
+```
+
 ```ad-note
 这里就已经隐含了 /home/admin 的位置
 ```
@@ -120,7 +124,11 @@ vim ~/.bashrc
 
 添加完环境变量后更新环境
 
- `source ~/.bashrc`
+
+```bash
+ source ~/.bashrc
+```
+
 
 然后将安装的ScarcraftII游戏文件夹复制到src的3dparty文件夹下。
 

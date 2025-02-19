@@ -15,7 +15,10 @@ updated: ...
 
 # Answers
 B站视频教程地址： [制作Ubuntu安装盘\_哔哩哔哩\_bilibili](https://www.bilibili.com/video/BV1554y1n7zv?spm_id_from=333.788.videopod.episodes&vd_source=6c33cf6826337aad387874b66413aa72&p=4)[^2]
-
+```ad-danger
+不能使用 win32diskimager
+>应该使用rufus
+```
 ## 制作U盘时，写保护无法格式化
 win32diskimage会给U盘加上写保护，最终导致无法格式化
 ### 使用Rufus重新制作

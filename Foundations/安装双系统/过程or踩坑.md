@@ -51,6 +51,17 @@ Ubuntu下载地址：[其他Ubuntu系统下载 \| Ubuntu](https://cn.ubuntu.com/
 
 
 ## 用U盘制作Ubuntu安装盘
+```ad-danger
+不能使用 win32diskimager
+>应该使用rufus
+```
+
+正确方法的地址：[重装系统之----Rufus创建UEFI启动盘\_rufus制作u盘启动盘-CSDN博客](https://blog.csdn.net/CSDN_Admin0/article/details/135101936?spm=1001.2014.3001.5506)[^3]
+- 无法格式化的，解决方法见： [[U盘写保存无法格式化]]
+
+## 双硬盘双系统分区方法
+
+参考方法知乎地址： [单、双硬盘装Windows和Ubuntu双系统——准备篇\_单硬盘双系统-CSDN博客](https://blog.csdn.net/beyourself_he/article/details/140281314?spm=1001.2014.3001.5506)[^4]
 
 
 
@@ -74,3 +85,5 @@ Ubuntu下载地址：[其他Ubuntu系统下载 \| Ubuntu](https://cn.ubuntu.com/
 
 [^1]: B站全程（有一些坑）参考视频
 [^2]: Ubuntu镜像下载地址
+[^3]: 使用Rufus制作安装盘
+[^4]: 硬盘分区方法

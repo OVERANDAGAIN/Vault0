@@ -8,16 +8,16 @@ updated: ...
 # Questions
 
 - [?] 无法在Lecoo显示屏中显示主板信息logo,进入BIOS，选择GRUB等操作，而是直接进入了桌面
-- [ ] 并且在识图以上操作时，黑屏
+- [ ] 并且在试图以上操作时，黑屏。
 
 ```python
 
 ```
 
 # Answers
-参考：
+B站类似问题视频（评论区的答案，打开CSM）：[显示器进不了bios界面\_哔哩哔哩\_bilibili](https://www.bilibili.com/video/BV1ie4y167Bj/?spm_id_from=333.999.0.0&vd_source=6c33cf6826337aad387874b66413aa72)[^1]
 
-
+打开CSM模式教程： [csm兼容性支持模块关闭还是开启\_打开csm兼容性模式详细教程-CSDN博客](https://blog.csdn.net/qq_40171230/article/details/140925325?spm=1001.2014.3001.5506)[^2]
 
 ```timeline
 [line-3, body-3]
@@ -56,3 +56,6 @@ updated: ...
 
 
 # FootNotes
+
+[^1]: B站类似问题视频提问与评论解决
+[^2]: 打开CSM模式教程

@@ -22,7 +22,14 @@ git@github.com:OVERANDAGAIN/Vault0.git
 ## 一些问题
 ### push时需要输入名字和密码
 stackoverflow参考： [github - Git push requires username and password - Stack Overflow](https://stackoverflow.com/questions/6565357/git-push-requires-username-and-password)[^2]
->不要使用html地址，使用ssh仓库地址
+>不要使用html地址，==使用ssh仓库地址==
+
+```ad-danger
+需要使用ssh地址，不能使用html的，不然还可能以下报错
+
+remote: Support for password authentication was removed on August 13, 2021. remote: Please see https://docs.github.com/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+```
+
 
 ### 由于fingerprint等原因导致无法push
 github的discuss解答： [Cannot push files because key fingerprint doesn't match my saved SSH key · community · Discussion #48086 · GitHub](https://github.com/orgs/community/discussions/48086)[^3]

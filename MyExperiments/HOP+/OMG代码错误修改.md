@@ -107,10 +107,11 @@ RuntimeError: Error(s) in loading state_dict for VanillaVAE:
         size mismatch for decoder_output.weight: copying a param with shape torch.Size([168, 128]) from checkpoint, the shape in current model is torch.Size([80, 128]).
         size mismatch for decoder_output.bias: copying a param with shape torch.Size([168]) from checkpoint, the shape in current model is torch.Size([80]).
 ```
-### 1_Answers
+
+具体如下 168 与 80  的差异
+![[Pasted image 20250220175653.png]]
 
 
-### 2_Answers
 
 
 

@@ -16,6 +16,10 @@ updated: ...
 - 字典中定义
 - `update_holdup` 函数修改
 
+```python
+
+```
+
 ## 2_Answers 预训练时size不匹配
 ```bash
 Traceback (most recent calls WITHOUT Sacred internals):
@@ -37,7 +41,7 @@ RuntimeError: The size of tensor a (2112) must match the size of tensor b (16896
 
 ```
 
-修改 `build_vae_inputs` 时 `obs_is_state == True`  时 `obs` 没有 `n_agents` 维度，因此会与 `mask` 不一致。修改如下：
+修改 `build_vae_inputs` 时 `obs_is_state == True`  时 `obs` 没有 `n_agents` 维度，因此会与 `mask` 不一致。==修改如下==：
 
 ```python
     ### solve the n_agents problem

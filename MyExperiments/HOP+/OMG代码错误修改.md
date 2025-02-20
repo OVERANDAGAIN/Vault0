@@ -11,12 +11,12 @@ updated: ...
 ## Problem1: 
 - [?] 
 
-### 1_Answers 训练时infer_mu
+## 1_Answers 训练时infer_mu
 `episode_buffer` 中关于 `infer_mu` 和 `infer_log_var` 的两处：
 - 字典中定义
 - `update_holdup` 函数修改
 
-### 2_Answers 预训练时size不匹配
+## 2_Answers 预训练时size不匹配
 ```bash
 Traceback (most recent calls WITHOUT Sacred internals):
   File "main.py", line 40, in my_main
@@ -78,9 +78,35 @@ RuntimeError: The size of tensor a (2112) must match the size of tensor b (16896
 ```
 
 
-## Problem2: 
+## Problem2: obs_is_state 引发的 obs 与 state 维度不匹配
 - [?] 
+```bash
+根据我刚才发给你的代码，你认为下面的80，168不匹配的问题最有可能出现在哪里？？？？其中，input_shape=80   ;a        self._hidden_dim = 128
+        self._subgoal_dim = 64
+        self.output_type = "embedding"
 
+        # Set up network layers
+        self.fc = nn.Linear(fc_input, self._hidden_dim // 4)
+        self.cond_rnn = RNN(cond_input, self._hidden_dim // 4 * 3).....Traceback (most recent calls WITHOUT Sacred internals):
+  File "main.py", line 40, in my_main
+    run(_run, config, _log)
+  File "/home/dy/Desktop/OMG/run.py", line 49, in run
+    run_sequential(args=args, logger=logger)
+  File "/home/dy/Desktop/OMG/run.py", line 135, in run_sequential
+    learner.load_models(init_param_path)
+  File "/home/dy/Desktop/OMG/learners/omg_learner.py", line 147, in load_models
+    self.mac.load_models(path)
+  File "/home/dy/Desktop/OMG/controllers/om_controller.py", line 92, in load_models
+    am.load_models(os.path.join(path, alg))
+  File "/home/dy/Desktop/OMG/modules/am/omg_am.py", line 466, in load_models
+    self.vae.load_state_dict(th.load("{}/vae.th".format(path), map_location=lambda storage, loc: storage))
+  File "/home/dy/anaconda3/envs/myenv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 2041, in load_state_dict
+    raise RuntimeError('Error(s) in loading state_dict for {}:\n\t{}'.format(
+RuntimeError: Error(s) in loading state_dict for VanillaVAE:
+        size mismatch for encoder.0.0.weight: copying a param with shape torch.Size([128, 168]) from checkpoint, the shape in current model is torch.Size([128, 80]).
+        size mismatch for decoder_output.weight: copying a param with shape torch.Size([168, 128]) from checkpoint, the shape in current model is torch.Size([80, 128]).
+        size mismatch for decoder_output.bias: copying a param with shape torch.Size([168]) from checkpoint, the shape in current model is torch.Size([80]).
+```
 ### 1_Answers
 
 

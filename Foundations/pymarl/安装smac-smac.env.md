@@ -59,6 +59,10 @@ sc2.blizzard.cn/landing
 在Ubuntu系统下，安装SC2.4.6.2.69232版本的SC2环境。具体步骤是先安装下面的压缩包，然后解压到用户名文件夹中。`home/admin`
 blzdistsc2-a.akamaihd.net/Linux/SC2.4.6.2.69232.zip
 
+解压密码：
+```text
+iagreetotheeula
+```
 ### 二、创建pymarl虚拟环境
 
 1. 创建虚拟环境

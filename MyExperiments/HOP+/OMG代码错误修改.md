@@ -33,7 +33,43 @@ updated: ...
 ````
 
 
+````ad-warning
+(80,64)
+infer_log_var 比 cvae_log_var 多一个80维度
+```bash
+Traceback (most recent calls WITHOUT Sacred internals):
+  File "main.py", line 40, in my_main
+    run(_run, config, _log)
+  File "/home/dy/Desktop/OMG/run.py", line 49, in run
+    run_sequential(args=args, logger=logger)
+  File "/home/dy/Desktop/OMG/run.py", line 212, in run_sequential
+    learner.train(episode_sample, runner.t_env, episode)
+  File "/home/dy/Desktop/OMG/learners/omg_learner.py", line 45, in train
+    omg_loss = omg_am.omg_loss_func(batch, eval_net, self.args.subgoal_mode)
+  File "/home/dy/Desktop/OMG/modules/am/omg_am.py", line 313, in omg_loss_func
+    omg_loss = -0.5 * th.sum(1 + cvae_log_var - infer_log_var.detach() - ((infer_mu.detach()-cvae_mu) ** 2 + cvae_log_var.exp())/infer_log_var.detach().exp(), dim=-1)
+RuntimeError: The size of tensor a (8) must match the size of tensor b (80) at non-singleton dimension 3
+```
 
+
+(8,84)
+infer_log_var 比 cvae_log_var 多一个8维度
+```bash
+Traceback (most recent calls WITHOUT Sacred internals):
+  File "main.py", line 40, in my_main
+    run(_run, config, _log)
+  File "/home/dy/Desktop/OMG/run.py", line 49, in run
+    run_sequential(args=args, logger=logger)
+  File "/home/dy/Desktop/OMG/run.py", line 212, in run_sequential
+    learner.train(episode_sample, runner.t_env, episode)
+  File "/home/dy/Desktop/OMG/learners/omg_learner.py", line 45, in train
+    omg_loss = omg_am.omg_loss_func(batch, eval_net, self.args.subgoal_mode)
+  File "/home/dy/Desktop/OMG/modules/am/omg_am.py", line 313, in omg_loss_func
+    omg_loss = -0.5 * th.sum(1 + cvae_log_var - infer_log_var.detach() - ((infer_mu.detach()-cvae_mu) ** 2 + cvae_log_var.exp())/infer_log_var.detach().exp(), dim=-1)
+RuntimeError: The size of tensor a (120) must match the size of tensor b (8) at non-singleton dimension 2
+
+```
+````
 
 ## 2_Answers 预训练时size不匹配
 ```bash

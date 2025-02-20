@@ -37,7 +37,7 @@ updated: ...
 (32,95,8,64)
 
 (80,64)
-infer_log_var 比 cvae_log_var 多一个80维度
+infer_log_var 比 cvae_log_var 多一个80维度 (32,95,8,80，64)
 ```bash
 Traceback (most recent calls WITHOUT Sacred internals):
   File "main.py", line 40, in my_main
@@ -55,7 +55,7 @@ RuntimeError: The size of tensor a (8) must match the size of tensor b (80) at n
 
 
 (8,84)
-infer_log_var 比 cvae_log_var 多一个8维度
+infer_log_var 比 cvae_log_var 多一个8维度 (32,95,8,8，64)
 ```bash
 Traceback (most recent calls WITHOUT Sacred internals):
   File "main.py", line 40, in my_main
@@ -74,7 +74,7 @@ RuntimeError: The size of tensor a (120) must match the size of tensor b (8) at 
 
 
 (1,)
-infer_log_var 比 cvae_log_var 少一个64维度
+infer_log_var 比 cvae_log_var 少一个64维度 (32,95,8)
 ```bash
 Traceback (most recent calls WITHOUT Sacred internals):
   File "main.py", line 40, in my_main

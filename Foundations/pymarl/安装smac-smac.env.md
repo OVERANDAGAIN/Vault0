@@ -155,7 +155,9 @@ export SC2PATH=~/StarCraftII/
 
 ### 六、测试SMAC环境
 
-`python -m smac.examples.random_agents`
+```bash
+python -m smac.examples.random_agents
+```
 
 此时命令行会出现以下信息，windows还会弹出游戏界面
 

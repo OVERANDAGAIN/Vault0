@@ -30,6 +30,15 @@ updated: ...
         self.update(self.holdup_data, ts=ts)
 
 ```
+
+关于buffer的Vshape初始化： 
+```python
+       scheme.update({
+            "filled": {"vshape": (1,), "dtype": th.long},
+        "infer_mu": {"vshape": (64,), "dtype": th.float32},  # Add infer_mu
+        "infer_log_var": {"vshape": (64,), "dtype": th.float32}  # Add infer_log_var
+        })
+```
 ````
 
 

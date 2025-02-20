@@ -145,7 +145,7 @@ export SC2PATH=~/StarCraftII/
 1. Windows
 
 先下载下面的SMAC_MAPS压缩包，然后解压到StarCraft II下的Maps文件夹中（没有就自己建立）。
-github.com/oxwhirl/smac/releases/download/v0.1-beta1/SMAC_Maps.zip
+地图地址： github.com/oxwhirl/smac/releases/download/v0.1-beta1/SMAC_Maps.zip [^3]
 
 2. Ubuntu
 
@@ -171,5 +171,6 @@ github.com/oxwhirl/smac/releases/download/v0.1-beta1/SMAC_Maps.zip
 
 # FootNotes
 
+[^3]: 地图下载地址
 [^1]: SMAC地址
 [^2]: PYMARL地址

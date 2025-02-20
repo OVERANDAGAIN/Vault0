@@ -198,7 +198,7 @@ def update_holdup(self, ts=slice(None)):
 
 
 ## Problem2: 预训练与训练
-- [?] 
+- [?] 参考“逻辑梳理”或者“2-7日~2-13日”这一记录中的方法，下面的是最初始的想法
 `python main.py --config=iql --env-config=sc2 with env_args.map_name=8m --obs_is_state=True
 `
 

@@ -112,7 +112,8 @@ RuntimeError: Error(s) in loading state_dict for VanillaVAE:
 ![[Pasted image 20250220175653.png]]
 
 
-
+- 当obs_is_state=true时，state的形状是32，89，168
+- 而当obs_is_state=false时，他是32，89，8，80（其中的8表示8个agent）
 
 
 # Limitations

@@ -16,9 +16,29 @@ updated: ...
 - 字典中定义
 - `update_holdup` 函数修改
 
+==这里的 80 表示 部分观测 情况下的==
+==全观测情况下： 应该设置为 168== 
+
+````ad-tip
+关于 buffer 的创建
+```python
+       scheme.update({
+            "filled": {"vshape": (1,), "dtype": th.long},
+        "infer_mu": {"vshape": (80,64), "dtype": th.float32},  # Add infer_mu
+        "infer_log_var": {"vshape": (80,64), "dtype": th.float32}  # Add infer_log_var
+        })
+```
+
+关于 `holdup_data` 函数
 ```python
 
+    def update_holdup(self, ts=slice(None)):
+        # self.update(self.holdup_data, ts)
+        # 明确指定批次维度的默认值，并正确传递 ts
+        self.update(self.holdup_data, ts=ts)
+
 ```
+````
 
 ## 2_Answers 预训练时size不匹配
 ```bash

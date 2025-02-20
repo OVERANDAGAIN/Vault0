@@ -20,14 +20,6 @@ updated: ...
 ==全观测情况下： 应该设置为 168== 
 
 ````ad-tip
-关于 buffer 的创建
-```python
-       scheme.update({
-            "filled": {"vshape": (1,), "dtype": th.long},
-        "infer_mu": {"vshape": (80,64), "dtype": th.float32},  # Add infer_mu
-        "infer_log_var": {"vshape": (80,64), "dtype": th.float32}  # Add infer_log_var
-        })
-```
 
 关于 `holdup_data` 函数
 ```python
@@ -39,6 +31,9 @@ updated: ...
 
 ```
 ````
+
+
+
 
 ## 2_Answers 预训练时size不匹配
 ```bash

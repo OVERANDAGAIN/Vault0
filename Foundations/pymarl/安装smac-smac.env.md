@@ -135,6 +135,10 @@ export SC2PATH=~/StarCraftII/
 
 
 然后将安装的ScarcraftII游戏文件夹复制到src的3dparty文件夹下。
+```ad-tip
+比如，在OMG中，就是在项目文件夹下新建一个 3dparty 文件夹， 再把 StarCraft2 复制进去
+
+```
 
 ### 五、添加地图
 

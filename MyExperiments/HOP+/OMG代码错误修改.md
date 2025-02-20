@@ -37,7 +37,45 @@ RuntimeError: The size of tensor a (2112) must match the size of tensor b (16896
 
 ```
 
+修改 `build_vae_inputs` 时 `obs_is_state == True`  时 `obs` 没有 `n_agents` 维度，因此会与 `mask` 不一致。修改如下：
 
+```python
+    ### solve the n_agents problem
+    def _build_vae_inputs(self, batch):
+        if self.args.obs_is_state:
+            obs = batch["state"][:, :-1]
+        else:
+            obs = batch["obs"][:, :-1]
+
+        # print(f"[DEBUG] Raw obs shape: {obs.shape}")
+
+        # 扩展 obs 为 [batch_size, max_t, n_agents, state_dim]，保持与 n_agents 一致
+        if self.args.obs_is_state:
+            if len(obs.shape) == 3:  # 形状为 [batch_size, max_t, state_dim]
+                obs = obs.unsqueeze(2).repeat(1, 1, self.n_agents, 1)  # 扩展为 [batch_size, max_t, n_agents, state_dim]
+        # print(f"[DEBUG] Expanded obs shape (if needed): {obs.shape}")
+
+        # 处理 mask
+        terminated = batch["terminated"][:, :-1].float()
+        mask = batch["filled"][:, :-1].float()
+        mask[:, 1:] = mask[:, 1:] * (1 - terminated[:, :-1])
+
+        # 扩展 mask 为 [batch_size, max_t, n_agents, 1]
+        mask = mask.unsqueeze(2).repeat(1, 1, self.n_agents, 1)
+        # mask = mask.unsqueeze(2).repeat(1, 1, 1)
+
+        # print(f"[DEBUG] Mask shape after expansion: {mask.shape}")
+
+        # 重新展平 obs 和 mask
+        reshaped_obs = obs.reshape(-1, obs.shape[-1])  # [batch_size * max_t * n_agents, state_dim]
+        reshaped_mask = mask.reshape(-1, 1)  # [batch_size * max_t * n_agents, 1]
+
+        # print(f"[DEBUG] Reshaped obs shape: {reshaped_obs.shape}")
+        # print(f"[DEBUG] Reshaped mask shape: {reshaped_mask.shape}")
+
+        return reshaped_obs, reshaped_mask
+
+```
 
 
 ## Problem2: 

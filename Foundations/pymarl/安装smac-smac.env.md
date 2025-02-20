@@ -96,7 +96,19 @@ pip install protobuf==3.19.1
 pip install git+https://github.com/oxwhirl/smac.git
 ```
 
-最终的路径在： ``
+最终的路径在： `envs/myenv/lib/python3.8/site-packages`
+
+```ad-important
+当安装的内容不对时，卸载重装即可
+```
+
+```bash
+pip uninstall smac
+pip show smac
+
+```
+
+
 
 ### 四、添加环境变量
 

@@ -311,7 +311,107 @@ A: 观测状态（全局或非全局）、动作独热编码、智能体标识�
 
 ## 1_Answers
 
+这个函数 `_build_inputs(self, batch, t)` 主要是用来**构造神经网络的输入 `inputs`**，不同的 `obs_is_state` 取值会导致不同的 `inputs` 结构。
 
+**核心逻辑**
+1. **当 `obs_is_state=True`**，输入的是**全局状态（state）**，每个智能体共享相同的状态。
+2. **当 `obs_is_state=False`**，输入的是**每个智能体的局部观测（obs）**，不同智能体的输入不同。
+3. **额外输入**（如 `obs_last_action`、`obs_agent_id`）可能被添加到输入中。
+
+---
+
+# **情况 1：`obs_is_state=True`（使用全局状态）**
+```python
+if self.args.obs_is_state:
+    state = batch["state"]
+    if len(state.shape) == 3:
+        state = state.unsqueeze(2).repeat(1, 1, self.n_agents, 1)
+    elif len(state.shape) == 4:
+        pass
+    else:
+        raise IndexError
+```
+### **构造 `state`**
+- `batch["state"]` 形状：
+  - `len(state.shape) == 3`：说明 `state` 的形状是 `[batch_size, max_t, state_dim]`。
+  - `unsqueeze(2).repeat(1, 1, self.n_agents, 1)` 使其变成 `[batch_size, max_t, n_agents, state_dim]`，即所有智能体共享相同的全局状态。
+  - 如果 `state` 形状已经是 `[batch_size, max_t, n_agents, state_dim]`，则不需要变换（`len(state.shape) == 4`）。
+
+### **构造 `obs_inputs`**
+```python
+if self.args.obs_is_state:
+    obs_inputs.append(state[:, t])
+```
+- **直接使用 `state[:, t]` 作为输入**，形状是 `[batch_size, n_agents, state_dim]`，所有智能体共享相同的状态。
+
+### **最终 `inputs`**
+```python
+temp = [t.clone() for t in obs_inputs]
+temp.append(model.forward(batch, t).squeeze(0).detach())
+temp = th.cat([x.reshape(bs, self.n_agents, -1) for x in temp], dim=-1)
+```
+- **最终 `inputs` 结构**
+  - `[batch_size, n_agents, state_dim]`
+  - `model.forward(batch, t).squeeze(0).detach()` 可能是模型的一个额外特征（如潜在表示 `z`）。
+  - `inputs` 形状最终变为 `[batch_size * n_agents, feature_dim]`。
+
+---
+
+# **情况 2：`obs_is_state=False`（使用局部观测）**
+```python
+obs_inputs.append(batch["obs"][:, t])  # b1av
+```
+- **使用 `batch["obs"][:, t]` 作为输入**，形状是 `[batch_size, n_agents, obs_dim]`。
+- 每个智能体的 `obs` 不同。
+
+### **如果 `obs_last_action=True`，加入上一时刻的动作**
+```python
+if self.args.obs_last_action:
+    if t == 0:
+        obs_inputs.append(th.zeros_like(batch["actions_onehot"][:, t]))
+    else:
+        obs_inputs.append(batch["actions_onehot"][:, t-1])
+```
+- **如果 `t=0`**（第一步），那么上一个动作不存在，补零。
+- **否则，使用 `t-1` 时刻的 one-hot 动作**（`batch["actions_onehot"][:, t-1]`）。
+
+### **如果 `obs_agent_id=True`，加入 one-hot 编码的智能体 ID**
+```python
+if self.args.obs_agent_id:
+    obs_inputs.append(th.eye(self.n_agents, device=batch.device).unsqueeze(0).expand(bs, -1, -1))
+```
+- `th.eye(self.n_agents)` 生成 **`n_agents × n_agents`** 的单位矩阵，每一行是一个智能体的 one-hot ID。
+- `expand(bs, -1, -1)` 复制 `batch_size` 份，使形状变为 `[batch_size, n_agents, n_agents]`。
+
+### **最终 `inputs`**
+```python
+temp = [t.clone() for t in obs_inputs]
+temp.append(model.forward(batch, t).squeeze(0).detach())
+temp = th.cat([x.reshape(bs, self.n_agents, -1) for x in temp], dim=-1)
+```
+- **最终 `inputs` 结构**
+  - `[batch_size, n_agents, obs_dim]`
+  - 可能包括：
+    - **当前观察 `obs`**
+    - **上一个动作（如果 `obs_last_action=True`）**
+    - **智能体 ID（如果 `obs_agent_id=True`）**
+    - **模型额外特征 `model.forward(batch, t)`**
+  - `inputs` 最终形状变为 `[batch_size * n_agents, feature_dim]`。
+
+---
+
+# **最终总结**
+| `obs_is_state` | `inputs` 组成 | 形状（每个智能体） |
+|--------------|------------|------------|
+| **True** | `state[t]` | `[state_dim]` |
+| **False** | `obs[t]`, `last_action[t-1]`, `agent_id` | `[obs_dim + action_dim + agent_id_dim]` |
+
+- **如果 `obs_is_state=True`**
+  - `inputs` 直接使用 `state[t]`，全局状态共享。
+- **如果 `obs_is_state=False`**
+  - `inputs` 使用 `obs[t]`，加上可能的 **上一个动作（`obs_last_action`）** 和 **one-hot 智能体 ID（`obs_agent_id`）**。
+
+这样 `_build_inputs` 就构造出了用于智能体决策的 `inputs`，供神经网络进行训练或推理。
 ## 2_Answers
 
 

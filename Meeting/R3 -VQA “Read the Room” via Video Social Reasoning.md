@@ -15,6 +15,12 @@ updated: ...
 # Probelms or Thinkings 
 
 BID E
+
+
+![[Pasted image 20250225204154.png]]
+
+
+从QAs到 生成式的测评
 # Context
 # Innovation
 # Background

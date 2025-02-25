@@ -13,4 +13,6 @@ Future work: 把高维分布转换为 ==1-dimensional desnity==
 
 ## 2.  Important Sampling
 
+1. FM
+
    

@@ -13,6 +13,13 @@ Future work: 把高维分布转换为 ==1-dimensional desnity==
 
 ## 2.  Important Sampling
 
-1. FM
+
+
+1. Draw from $\pi(x)$
+
+2. Draw from Uniform DIstribution
+
+3. Draw from $g(x)$ ,which is an approximation of $\pi(x)$
+
 
    

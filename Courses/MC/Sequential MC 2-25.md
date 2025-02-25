@@ -42,7 +42,10 @@ $$
 
 ## 分层采样
 SMC
+识别的公式可能存在一些错误，以下是正确的LaTeX代码，方便你直接使用：
+$$\omega(\mathbf{x}) = \frac{g(\mathbf{x}) = g_1(x_1) \cdot g_2(x_2|x_1) \cdots g_n(x_n|x_1, \dots, x_{n-1})}{\pi(\mathbf{x}) = \pi_1(x_1) \cdot \pi_2(x_2|x_1) \cdots \pi_n(x_n|x_1, \dots, x_{n-1})}$$
 
+这个公式表达的是权重 $\omega(\mathbf{x})$ 作为两个概率密度的比值，其中 $g(\mathbf{x})$ 和 $\pi(\mathbf{x})$ 以条件概率的形式展开。
 
 ### EX1：SAW
 trial proba

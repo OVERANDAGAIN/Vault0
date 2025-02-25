@@ -21,6 +21,9 @@ BID E
 
 
 从QAs到 生成式的测评
+
+
+latent variable and CoT?UV?
 # Context
 # Innovation
 # Background

@@ -12,6 +12,7 @@ Sequential MC  范围： 小于等于 6 维
 Future work: 把高维分布转换为 ==1-dimensional desnity== 
 
 ## 2.  Important Sampling
+Fair and Diversity
 
 权重: 
 $$

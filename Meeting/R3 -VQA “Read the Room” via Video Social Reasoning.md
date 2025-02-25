@@ -14,7 +14,7 @@ updated: ...
 # Inspiration
 # Probelms or Thinkings 
 
-BID
+BID E
 # Context
 # Innovation
 # Background

@@ -63,7 +63,7 @@ RuntimeError: The size of tensor a (8) must match the size of tensor b (80) at n
 ```
 
 
-(8,84)
+(8,64)
 infer_log_var 比 cvae_log_var 多一个8维度 (32,95,8,8，64)
 ```bash
 Traceback (most recent calls WITHOUT Sacred internals):

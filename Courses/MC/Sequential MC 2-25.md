@@ -29,7 +29,7 @@ $$
 目标: $g(x)$ 比 $\pi(x)$ 更： simpler, broader
 
 ```ad-hint
-
+类比： 
 ```
 
 

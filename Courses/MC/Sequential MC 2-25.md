@@ -29,7 +29,7 @@ $$
 目标: $g(x)$ 比 $\pi(x)$ 更： simpler, broader
 
 ```ad-hint
-类比： 
+类比： dominate情况、 贫富差距过大；权重分配，diversity 与 represent
 ```
 
 
@@ -38,3 +38,7 @@ of the "weights".
 $$
 ESS(m)=\frac{m}{1+var[w(x)]}
 $$
+
+
+## 分层采样
+SMC

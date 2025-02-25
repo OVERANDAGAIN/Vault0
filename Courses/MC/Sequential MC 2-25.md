@@ -46,3 +46,4 @@ SMC
 
 ### EX1：SAW
 trial proba
+### EX2: Curve Tracking

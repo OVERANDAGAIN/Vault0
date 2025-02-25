@@ -31,3 +31,10 @@ $$
 ```ad-hint
 
 ```
+
+
+ESS:  measuring the effectiveness of samples from $g(x)$ is to measure the variance
+of the "weights".
+$$
+ESS(m)=\frac{m}{1+var[w(x)]}
+$$

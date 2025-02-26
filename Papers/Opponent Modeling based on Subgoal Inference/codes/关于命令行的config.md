@@ -18,7 +18,21 @@ updated: ...
 
 
 # Answers
+预训练命令：
 
+```bash
+python main.py --config=iql  --env-config=sc2 with env_args.map_name=8m 
+--mac=basic_mac 
+--am_model=omg_am --learner=am_learner 
+--obs_is_state=True --init_param_path=SMAC/sacred/op_model
+```
+
+```bash
+python main.py --config=4iql4qmix  --env-config=sc2 with env_args.map_name=8m 
+--multi_algs --mac=multi_module_mac 
+--am_model=omg_am --learner=am_learner 
+--obs_is_state=True --init_param_path=SMAC/sacred/op_model
+```
 
 
 ## Overall_Answers

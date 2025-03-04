@@ -40,6 +40,15 @@ https://arxiv.org/pdf/1809.09401
 
 ## GIN
 
+
+## HyperGraph  in  MARL
+![[Pasted image 20250304204935.png]]
+表征意义上：
+- abc 共享某些参数
+- cd 共享某些参数
+关于奖励，loss上：
+- 如何分配？
+
 # Context
 # Innovation
 # Background

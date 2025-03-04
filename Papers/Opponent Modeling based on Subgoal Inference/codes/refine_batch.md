@@ -29,7 +29,15 @@ updated: ...
 
 - ==`agent_idx` 在`refine_batch()` 中不做处理==
 
+ 
+`infer_mu` `infer_log_var` 的初始化： 
+```python
+scheme.update({
+    "infer_mu": {"vshape": (8, 64), "dtype": th.float32, "group": "agents"},
+    "infer_log_var": {"vshape": (8, 64), "dtype": th.float32, "group": "agents"}
+})
 
+```
 
 # Answers
 

@@ -41,7 +41,6 @@ updated: ...
         })
 ```
 ==见 `refine_batch()` 对是否含有 `group` 字段的处理==
-[[refine_batch]][^1]
 
 
 ```python
@@ -53,6 +52,7 @@ updated: ...
 
 ```
 ````
+[[refine_batch]][^1]
 
 
 ````ad-warning

@@ -32,12 +32,25 @@ updated: ...
 ```
 
 关于buffer的Vshape初始化： 
-```python
+```ad-danger
+错误修改：：：
        scheme.update({
             "filled": {"vshape": (1,), "dtype": th.long},
         "infer_mu": {"vshape": (64,), "dtype": th.float32},  # Add infer_mu
         "infer_log_var": {"vshape": (64,), "dtype": th.float32}  # Add infer_log_var
         })
+```
+==见 `refine_batch()` 对是否含有 `group` 字段的处理==
+[[refine_batch]][^1]
+
+
+```python
+        scheme.update({
+            "filled": {"vshape": (1,), "dtype": th.long},
+        "infer_mu": {"vshape": (64,), "dtype": th.float32 ,"group": "agents"},  # Add infer_mu
+        "infer_log_var": {"vshape": (64,), "dtype": th.float32, "group": "agents"}  # Add infer_log_var
+        })
+
 ```
 ````
 
@@ -102,6 +115,13 @@ RuntimeError: The size of tensor a (64) must match the size of tensor b (8) at n
 
 
 ````
+
+
+
+
+
+
+
 
 ## 2_Answers 预训练时size不匹配
 ```bash
@@ -458,3 +478,5 @@ obs_for_vae = obs_for_vae.reshape(-1, obs_for_vae.shape[-1])
 # Limitations
 # Future Work
 # FootNotes
+
+[^1]: 关于 `refine_batch()` 的处理，调整 `infer_mu` 等的初始化 

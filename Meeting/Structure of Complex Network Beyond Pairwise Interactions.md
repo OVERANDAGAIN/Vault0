@@ -38,6 +38,7 @@ https://arxiv.org/pdf/1809.09401
 ## Directed hypergraph NN
 [\[2008.03626\] Directed hypergraph neural network](https://arxiv.org/abs/2008.03626)
 
+## GIN
 
 # Context
 # Innovation

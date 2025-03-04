@@ -24,8 +24,13 @@ https://arxiv.org/pdf/1809.09401
 大家感兴趣的也可以看看 ↑ ~
 # Inspiration
 # Probelms or Thinkings 
+应用： 多层级的聚类
 
-
+## GNN 两个问题
+[\[2303.10993\] A Survey on Oversmoothing in Graph Neural Networks](https://arxiv.org/abs/2303.10993)
+1. 过度压缩
+2. 过度平滑
+---
 
 # Context
 # Innovation

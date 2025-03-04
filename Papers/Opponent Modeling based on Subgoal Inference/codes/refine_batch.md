@@ -23,9 +23,14 @@ updated: ...
 
 
 
-无 group: `state` `reward` `terminated` `filled`
-有 group: `obs` `actions` `avail_actions` `actions_onehot` 
+无 group: `state` `reward` `terminated`                   `filled`
+有 group: `obs` `actions` `avail_actions`             `actions_onehot` 
 `infer_mu` `infer_log_var` 
+
+- ==`agent_idx` 在`refine_batch()` 中不做处理==
+
+
+
 # Answers
 
 ## Overall_Answers

@@ -35,6 +35,9 @@ https://arxiv.org/pdf/1809.09401
 1. 过度压缩
 2. 过度平滑
 ---
+## Directed hypergraph NN
+[\[2008.03626\] Directed hypergraph neural network](https://arxiv.org/abs/2008.03626)
+
 
 # Context
 # Innovation

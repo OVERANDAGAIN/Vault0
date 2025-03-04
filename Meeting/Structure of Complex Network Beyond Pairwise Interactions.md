@@ -28,6 +28,10 @@ https://arxiv.org/pdf/1809.09401
 
 ## GNN 两个问题
 [\[2303.10993\] A Survey on Oversmoothing in Graph Neural Networks](https://arxiv.org/abs/2303.10993)
+[Over smoothing issue in graph neural network \| Towards Data Science](https://towardsdatascience.com/over-smoothing-issue-in-graph-neural-network-bddc8fbc2472/)
+[\[2111.14522\] Understanding over-squashing and bottlenecks on graphs via curvature](https://arxiv.org/abs/2111.14522) [^1]
+----from LiuHao
+
 1. 过度压缩
 2. 过度平滑
 ---
@@ -42,3 +46,5 @@ https://arxiv.org/pdf/1809.09401
 # Results
 # Limitations
 # FootNotes
+
+[^1]: 过度压缩，过度平滑

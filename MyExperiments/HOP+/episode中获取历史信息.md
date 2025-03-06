@@ -10,14 +10,24 @@ updated: ...
 `compute_action()` 计算 `subgoal` 时，需要获取 ：
 - 自己的上一步动作 `prev_action`
 - 自己的上一步状态 `prev_obs`
-- 对手的上一步动作 `prev_action`
+- 对手们的上一步动作 `prev_action`
 
 ![[Pasted image 20250306203304.png]]
 
 
 # Results
 
+- 自己的上一步动作 `prev_action`
+
+
+- 自己的上一步状态 `prev_obs`
+
 ![[Pasted image 20250306203713.png]]
+
+
+- 对手们的上一步动作 `prev_action`
+
+
 
 # Insights
 # Setup

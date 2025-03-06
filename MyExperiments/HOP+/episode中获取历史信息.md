@@ -47,7 +47,9 @@ updated: ...
 
 ## - 对手们的上一步动作 `prev_action`
 ````ad-attention
-RLlib 中的 设置 `_agent_to_prev_action` 和 `_agent_to_last_action` 需要使用 `_set_last_action()` 但不清楚如何调用这个函数。因为 `compute_action（）` 返回的
+RLlib 中的 设置 `_agent_to_prev_action` 和 `_agent_to_last_action` 需要使用 `_set_last_action()` 但不清楚如何调用这个函数。因为 `compute_action（）` 返回的 `action_batch` 不能直接作为 `self_to_last_action`
+>动作可能无效，会强制 “STAY” (4)
+>可能不执行动作，prev_action 可能没有（==但是这种情况下prev_action不能使用了，因为无时效性 —— 无意义==）
 ```python
     def _set_last_action(self, agent_id, action):
         if agent_id in self._agent_to_last_action:

@@ -15,10 +15,25 @@ updated: ...
 ![[Pasted image 20250306203304.png]]
 
 
+
+`compute_actions_from_input_dict()` 的输入： 
+```python
+
+    @override(Policy)
+    def compute_actions_from_input_dict(
+        self, input_dict, explore=None, timestep=None, episodes=None, state_batches=None, **kwargs
+    ):
+```
+
 # Results
 
 ## - 自己的上一步动作 `prev_action`
-
+### 第一种：直接使用 prev_action_batch
+```python
+	print(prev_action_batch)
+```
+### 第二种：使用 对手们的上一步动作 `prev_action`
+见下。
 
 ## - 自己的上一步状态 `prev_obs`
 ![[Pasted image 20250306204249.png]]
@@ -31,6 +46,19 @@ updated: ...
 
 
 ## - 对手们的上一步动作 `prev_action`
+````ad-attention
+RLlib 中的 设置 `_agent_to_prev_action` 和 `_agent_to_last_action` 需要使用 `_set_last_action()` 但不清楚如何调用这个函数。因为 `compute_action（）` 返回的
+```python
+    def _set_last_action(self, agent_id, action):
+        if agent_id in self._agent_to_last_action:
+            self._agent_to_prev_action[agent_id] = \
+                self._agent_to_last_action[agent_id]
+        self._agent_to_last_action[agent_id] = action
+```
+
+````
+
+### 修改环境的 `step()` 使 `observation` 包含动作信息。
 
 
 

@@ -11,6 +11,23 @@ updated: ...
 `
 # Results
 
+## `def postprocess_trajectory(self, sample_batch, other_agent_batches=None, episode=None):` 中 **print** 的信息：
+```python
+        sample_batch[f'subgoal_self------------'] = sample_batch['state_out_0'].copy()
+
+                print(other_agent_batches[name][1]['state_out_0'])
+
+```
+
+
+## `def learn_on_batch(self, samples):` 中获得的 `subgoal` :
+
+![[Pasted image 20250306110046.png]]
+
+
+
+
+
 # Insights
 # Setup
 # Methodology

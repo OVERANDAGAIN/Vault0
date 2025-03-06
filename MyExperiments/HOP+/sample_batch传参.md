@@ -4,7 +4,8 @@ updated: ...
 创建时间: 2025-三月-6日  星期四, 10:55:18 上午
 ---
 [[HOP+]]
-
+参考：[RLlib概念和自定义算法](https://zhuanlan.zhihu.com/p/80204897) （但是不完全起作用，可能后两种信息 recurrent_state 和 extro_info 保存在episode里面，还未搞懂） [^1] 
+#to_be_solved 
 
 # Objectives
 - 基于 `RLlib`  的项目，在一系列 `compute_action()` `compute_action_from_dict()` `postprocess_trajectory()`  ` learn_on_batch()` 中传递 `Sample_batch` 的自定义的字段
@@ -141,3 +142,5 @@ updated: ...
 # Limitations
 # Future Work
 # FootNotes
+
+[^1]: 参考知乎网址sample_batch

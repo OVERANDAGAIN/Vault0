@@ -17,15 +17,20 @@ updated: ...
 
 # Results
 
-- 自己的上一步动作 `prev_action`
+## - 自己的上一步动作 `prev_action`
 
 
-- 自己的上一步状态 `prev_obs`
+## - 自己的上一步状态 `prev_obs`
+![[Pasted image 20250306204249.png]]
+
+同种颜色验证为： 
+- time-1 时刻的 obs
+-  `hist_obs[time-1]`   time 时刻的 prev_obs
 
 ![[Pasted image 20250306203713.png]]
 
 
-- 对手们的上一步动作 `prev_action`
+## - 对手们的上一步动作 `prev_action`
 
 
 

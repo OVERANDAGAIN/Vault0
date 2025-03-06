@@ -113,6 +113,9 @@ updated: ...
 
 ## 3.  `learn_on_batch()` 中收到更新后的 `Sample_batch`
 
+![[Pasted image 20250306112535.png]]
+
+
 # Issues & Debugging
 
 ## Problem1: 

@@ -27,15 +27,23 @@ updated: ...
 
 # Results
 
-## - 自己的上一步动作 `prev_action`
+## 1. 自己的上一步动作 `prev_action`
 ### 第一种：直接使用 prev_action_batch
 ```python
 	print(prev_action_batch)
 ```
 ### 第二种：使用 对手们的上一步动作 `prev_action`
-见下。
+见 **3** 。
 
-## - 自己的上一步状态 `prev_obs`
+
+
+
+
+## 2. 自己的上一步状态 `prev_obs`
+
+### 
+
+
 ![[Pasted image 20250306204249.png]]
 
 同种颜色验证为： 
@@ -45,7 +53,7 @@ updated: ...
 ![[Pasted image 20250306203713.png]]
 
 
-## - 对手们的上一步动作 `prev_action`
+## 3. 对手们的上一步动作 `prev_action`
 ````ad-attention
 RLlib 中的 设置 `_agent_to_prev_action` 和 `_agent_to_last_action` 需要使用 `_set_last_action()` 但不清楚如何调用这个函数。因为 `compute_action（）` 返回的 `action_batch` 不能直接作为 `self_to_last_action`
 >动作可能无效，会强制 “STAY” (4)

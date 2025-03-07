@@ -33,7 +33,7 @@ updated: ...
 	print(prev_action_batch)
 ```
 ### 第二种方法：使用 对手们的上一步动作 `prev_action`
-见 **3** 。
+见 **3** 。把actions 存在obs里面
 
 
 
@@ -51,7 +51,7 @@ updated: ...
 ```
 
 #### 获取
-t=0 无上一个 obs
+time=0 时无上一个 obs
 ```python
 	time=episodes[n].length
 	if time>0:
@@ -69,10 +69,11 @@ t=0 无上一个 obs
 
 
 ## 3. 对手们的上一步动作 `prev_action`
+### 预分析
 ````ad-attention
-RLlib 中的 设置 `_agent_to_prev_action` 和 `_agent_to_last_action` 需要使用 `_set_last_action()` 但不清楚如何调用这个函数。因为 `compute_action（）` 返回的 `action_batch` 不能直接作为 `self_to_last_action`
+RLlib 中的 设置 `_agent_to_prev_action` 和 `_agent_to_last_action` 需要使用 `_set_last_action()` 但不清楚如何调用这个函数。并且因为 `compute_action（）` 返回的 `action_batch` 不能直接作为 `self_to_last_action`
 >动作可能无效，会强制 “STAY” (4)
->可能不执行动作，prev_action 可能没有（==但是这种情况下prev_action不能使用了，因为无时效性 —— 无意义==）
+>狩猎之后，猎人猎物退出，可能不执行动作，prev_action 可能没有（==但是这种情况下prev_action无时效性，始终为6 ==）
 ```python
     def _set_last_action(self, agent_id, action):
         if agent_id in self._agent_to_last_action:
@@ -83,9 +84,9 @@ RLlib 中的 设置 `_agent_to_prev_action` 和 `_agent_to_last_action` 需要�
 
 ````
 
-### 修改环境的 `step()` 使 `observation` 包含动作信息。
+### 方法：修改环境的 `step()` 使 `observation` 包含动作信息。
 
-#### env.py 中的 init 
+#### env.py 中的 `init() `
 ```python
         self.prev_actions = {}  # 新增：存储所有 Agent 的上一步动作
 
@@ -99,7 +100,7 @@ RLlib 中的 设置 `_agent_to_prev_action` 和 `_agent_to_last_action` 需要�
 ```
 
 
-#### env.py 中的 reset
+#### env.py 中的 `reset()`
 ```python
 self.prev_actions = {player: 4 for player in self.players}  # 初始动作为 STAY (4)
 
@@ -107,7 +108,7 @@ self.prev_actions = {player: 4 for player in self.players}  # 初始动作为 ST
 
 
 
-#### env.py 中的 step
+#### env.py 中的 `step()`
 ```python
 # 保存当前动作到 prev_actions（修正后的动作）
 for player in avail_players:
@@ -115,7 +116,7 @@ for player in avail_players:
 
 ```
 
-#### env.py 中的 `__obs__`
+#### env.py 中的 `__obs__()`
 ```python
     def __obs__(self,playerids):
 
@@ -127,7 +128,7 @@ for player in avail_players:
 
 ```
 
-#### env.py 中的 `__action__`
+#### env.py 中的 `__action__()`
 ```python
 
     def __actions__(self,id):
@@ -150,12 +151,27 @@ for player in avail_players:
                                 ))
 ```
 
-####  修改相关的`obs_flatten` 
+####  修改相关的`obs_flatten` 处理 （因为多了 n_agents 个数据）
 ```python
 
 ```
 
+![[Pasted image 20250307110527.png]]
 
+### 获取
+[7:9] 因为这里定义的是两个agent
+```python
+ def compute_actions_from_input_dict(
+        self, input_dict, explore=None, timestep=None, episodes=None, state_batches=None, **kwargs
+    ):
+        with torch.no_grad():
+            obs_batch=input_dict['obs']
+            for n in range(len(obs_batch)):
+                obs_flatten=obs_batch[n]
+                actions=obs_flatten[7:9]
+                if self.my_id== 2 or 1:
+                    print("actions",actions)
+```
 
 ### 结果分析
 - `actions` 表示所有玩家上一步的动作

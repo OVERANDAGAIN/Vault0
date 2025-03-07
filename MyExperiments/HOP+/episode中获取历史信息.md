@@ -150,7 +150,7 @@ for player in avail_players:
                                 ))
 ```
 
-#### env.py 中的 init
+####  修改相关的`obs_flatten` 
 ```python
 
 ```

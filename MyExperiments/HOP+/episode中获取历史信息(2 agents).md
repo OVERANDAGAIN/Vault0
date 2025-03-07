@@ -61,6 +61,8 @@ time=0 时无上一个 obs
 ### 分析
 ![[Pasted image 20250306204249.png]]
 
+图片来源： [Episodes — Ray 2.37.0](https://www.aidoczh.com/ray/rllib/single-agent-episode.html)[^1]
+
 同种颜色验证为： 
 - time-1 时刻的 obs
 -  `hist_obs[time-1]`   time 时刻的 prev_obs
@@ -213,3 +215,5 @@ time=0 时， actions : [4,4,] 但是应该用不到，time=0时动作选择 不
 # Limitations
 # Future Work
 # FootNotes
+
+[^1]: 图片来源 SingleAgentEpisode

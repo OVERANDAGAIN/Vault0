@@ -28,11 +28,11 @@ updated: ...
 # Results
 
 ## 1. 自己的上一步动作 `prev_action`
-### 第一种：直接使用 prev_action_batch
+### 第一种方法：直接使用 prev_action_batch
 ```python
 	print(prev_action_batch)
 ```
-### 第二种：使用 对手们的上一步动作 `prev_action`
+### 第二种方法：使用 对手们的上一步动作 `prev_action`
 见 **3** 。
 
 
@@ -41,7 +41,7 @@ updated: ...
 
 ## 2. 自己的上一步状态 `prev_obs`
 
-### 在 `episodes[n].user_data` 中添加 `hist_obs` 字段
+### 方法：在 `episodes[n].user_data` 中添加 `hist_obs` 字段
 #### 存储
 ```python
    if time == 0:
@@ -58,6 +58,7 @@ t=0 无上一个 obs
 		print( episodes[n].user_data[f"hist_obs{self.my_id}"][time-1])
 ```
 
+### 分析
 ![[Pasted image 20250306204249.png]]
 
 同种颜色验证为： 

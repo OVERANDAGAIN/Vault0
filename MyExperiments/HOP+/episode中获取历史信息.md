@@ -87,6 +87,16 @@ RLlib 中的 设置 `_agent_to_prev_action` 和 `_agent_to_last_action` 需要�
 
 
 
+### 结果分析
+`action 6` 表示捕猎到猎物，该玩家和该猎物退出环境 ，`prev_action == 6 `
+
+```ad-warning
+time=0 时， actions
+```
+
+![[Pasted image 20250307104404.png]]
+
+
 # Insights
 # Setup
 # Methodology

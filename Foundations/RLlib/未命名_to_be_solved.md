@@ -10,6 +10,8 @@ updated: ...
 - [?] 
 [0065.强化学习框架RLlib介绍 - 随笔分类 - 黎明程序员 - 博客园](https://www.cnblogs.com/itmorn/category/1857609.html)
 [Ray客2代\_Augenstern-YaoYao的博客-CSDN博客](https://blog.csdn.net/wenquantongxin/category_12276185.html)
+
+知乎上比较好的总结： [RLlib - 知乎](https://www.zhihu.com/column/c_1149284104754323456)[^2]
 # Answers
 
 视频链接： [【学术向】超强的强化学习系统怎么实现？Ray是啥？tune和rllib又是什么？\_哔哩哔哩\_bilibili](https://www.bilibili.com/video/BV1VE411w73P/?spm_id_from=333.337.search-card.all.click&vd_source=6c33cf6826337aad387874b66413aa72)[^1]
@@ -95,4 +97,5 @@ RLlib 提供了一系列**重放缓冲区**，可用于存储和采样经验。
 
 # FootNotes
 
+[^2]: Rllib接单介绍知乎
 [^1]: b站介绍Ray_Tune_RLlib

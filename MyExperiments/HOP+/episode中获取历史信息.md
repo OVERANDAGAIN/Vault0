@@ -42,7 +42,7 @@ updated: ...
 ## 2. 自己的上一步状态 `prev_obs`
 
 ### 方法：在 `episodes[n].user_data` 中添加 `hist_obs` 字段
-#### 存储
+####  在 `compute_acitons_from_inputs_dict()` 中存储
 ```python
    if time == 0:
 		episodes[n].user_data[f"hist_obs{self.my_id}"]=[obs_flatten]
@@ -85,13 +85,84 @@ RLlib 中的 设置 `_agent_to_prev_action` 和 `_agent_to_last_action` 需要�
 
 ### 修改环境的 `step()` 使 `observation` 包含动作信息。
 
+#### env.py 中的 init 
+```python
+        self.prev_actions = {}  # 新增：存储所有 Agent 的上一步动作
+
+
+
+		self.observation_space=Dict(dict(observation=Box(low=0,high=1,shape=(self.height,self.width,self.player_num+3),dtype=np.int8),
+		action_mask=Box(low=0,high=1,shape=(7,),dtype=np.int8), #{UP,DOWN,LEFT,RIGHT,STAY,STAG,HARE}
+
+		actions=Box(low=0,high=6,shape=(self.player_num,),dtype=np.int8)#### add actions
+						))
+```
+
+
+#### env.py 中的 reset
+```python
+self.prev_actions = {player: 4 for player in self.players}  # 初始动作为 STAY (4)
+
+```
+
+
+
+#### env.py 中的 step
+```python
+# 保存当前动作到 prev_actions（修正后的动作）
+for player in avail_players:
+	self.prev_actions[player] = avail_players[player]
+
+```
+
+#### env.py 中的 `__obs__`
+```python
+    def __obs__(self,playerids):
+
+        return {self.players[id]:{
+            'observation':self.__obs_state__(id),
+            'action_mask':self.__actionmask__(id),
+            'actions': self.__actions__(id)
+        }for id in playerids}
+
+```
+
+#### env.py 中的 `__action__`
+```python
+
+    def __actions__(self,id):
+        player = self.players[id]
+        # 获取其他 Agent 的上一步动作
+        other_actions = [
+            self.prev_actions[other_player]
+            for other_player in self.players
+            # if other_player != player
+        ]
+        return np.array(other_actions, dtype=np.int8)
+```
+
+#### train.py 中的 修改
+```python
+    observation_space=Dict(dict(observation=Box(low=0,high=1,shape=(config['env_config']["world_height"],config['env_config']["world_width"],config['env_config']["player_num"]+3),dtype=np.int8),
+                            action_mask=Box(low=0,high=1,shape=(7,),dtype=np.int8), #{UP,DOWN,LEFT,RIGHT,STAY,STAG,HARE}
+                                actions=Box(low=0, high=6, shape=(config['env_config']["player_num"],), dtype=np.int8)  #### add actions
+
+                                ))
+```
+
+#### env.py 中的 init
+```python
+
+```
+
 
 
 ### 结果分析
-`action 6` 表示捕猎到猎物，该玩家和该猎物退出环境 ，`prev_action == 6 `
+- `actions` 表示所有玩家上一步的动作
+- `action： 6` 表示捕猎到猎物，该玩家和该猎物退出环境 ，`prev_action 始终 6 ` （如紫色所示）
 
 ```ad-warning
-time=0 时， actions
+time=0 时， actions : [4,4,] 可能需要处理，使其变为 0 
 ```
 
 ![[Pasted image 20250307104404.png]]

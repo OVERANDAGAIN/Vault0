@@ -41,8 +41,22 @@ updated: ...
 
 ## 2. 自己的上一步状态 `prev_obs`
 
-### 
+### 在 `episodes[n].user_data` 中添加 `hist_obs` 字段
+#### 存储
+```python
+   if time == 0:
+		episodes[n].user_data[f"hist_obs{self.my_id}"]=[obs_flatten]
+	else:
+		episodes[n].user_data[f"hist_obs{self.my_id}"].append(obs_flatten)
+```
 
+#### 获取
+t=0 无上一个 obs
+```python
+	time=episodes[n].length
+	if time>0:
+		print( episodes[n].user_data[f"hist_obs{self.my_id}"][time-1])
+```
 
 ![[Pasted image 20250306204249.png]]
 

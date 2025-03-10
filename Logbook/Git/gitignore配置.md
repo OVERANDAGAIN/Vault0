@@ -21,6 +21,20 @@ msh_code/params/*
 msg_code/params/*
 
 ```
+
+- [x]  根本原因： 添加 `.gitignore` 之后需要删除之前已经被跟踪的文件，不然只有==新增的==、符合gitignore 的文件会==不被上传==；而 ==旧有的==、尽管符合 gitignore的文件==仍然会被上传==
+
+### 使用下面的命令删除 旧有的 跟踪文件 
+```
+git rm -r --cached **/__pycache__
+git rm -r --cached *.pyc
+git rm -r --cached *.pyo
+git rm -r --cached .idea
+git rm -r --cached msh_code/params/
+```
+
+### 保证上面的 `.gitignore` 正确
+
 # Answers
 
 ## 查看哪些文件已经被添加到暂存区
@@ -55,22 +69,58 @@ git ls-files --stage
 ```
 它会列出所有被 Git 追踪的文件及其状态。
 
-如果你发现有文件不应该被添加，你可以使用以下命令撤销暂存：
-```sh
-git reset <file>
+## 删除旧有的跟踪文件
+你的 `.gitignore` 可能没有正确忽略 `__pycache__` 目录，或者这些 `.pyc` 文件已经被 Git 追踪过（即它们曾经被 `git add` 过）。这是因为 `.gitignore` 只会忽略**未被 Git 追踪的文件**，而如果 `.pyc` 文件之前被 Git 追踪过，`.gitignore` 也不会生效。
+
+---
+
+
+### **1. 确保 `.gitignore` 文件中正确忽略 `__pycache__`**
+在 `.gitignore` 文件中添加以下内容（如果尚未添加）：
+```gitignore
+# 忽略所有 __pycache__ 目录
+**/__pycache__/
+*.pyc
+*.pyo
 ```
-或者撤销所有暂存：
+然后**确保 `.gitignore` 文件已保存**。
+
+### 2. 移除所有 `.pyc` 文件和 `__pycache__` 目录
+在 Git Bash 或终端中运行以下命令：
+
 ```sh
-git reset
+git rm -r --cached **/__pycache__
+git rm -r --cached *.pyc
+git rm -r --cached *.pyo
+git rm -r --cached .idea
+git rm -r --cached msh_code/params/
+
 ```
 
-这些方法可以帮助你在提交前检查哪些文件已经被 Git 记录！ 🚀
+**解释：**
+- `git rm -r --cached **/__pycache__` → 移除所有被 Git 追踪的 `__pycache__` 目录。
+- `git rm -r --cached *.pyc` → 移除所有 `.pyc` 文件（即使它们不在 `__pycache__` 中）。
+- `git rm -r --cached *.pyo` → 也移除 `.pyo`（Python 编译缓存文件）。
 
-## DS_Answers
+但文件仍然会保留在本地。
 
+---
 
-## Other_Answers
+### **3. 再次检查 `git status`**
+运行：
+```sh
+git status
+```
+如果 `__pycache__` 及 `.pyc` 文件已经被移除，并且没有出现在 `Changes not staged for commit` 列表中，那就说明 `.gitignore` 现在生效了。
 
+是的，你可以**手动移除所有 `.pyc` 文件**以及 `__pycache__` 目录，然后提交更改，使 `.gitignore` 生效。
+
+---
+
+## 结果：clean !
+无 `idea` `__pycache__` `params`
+![[Pasted image 20250310211143.png]]
+![[Pasted image 20250310211155.png]]
 
 # Codes
 

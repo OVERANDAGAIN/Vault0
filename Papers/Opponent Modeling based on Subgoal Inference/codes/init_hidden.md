@@ -121,7 +121,9 @@ def forward(self, inputs, hidden_state):
   - 计算后恢复为 `(batch_size, n_agents, 96)`
 - 这确保了 `GRU` 计算能够在时间步之间正确传递信息。
 
-## 1_Answers
+# weight_hh 的new()操作
+
+
 
 
 ## 2_Answers

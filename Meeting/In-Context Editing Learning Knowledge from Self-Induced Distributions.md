@@ -16,6 +16,8 @@ In scenarios where language models must incorporate new information efficiently 
 # Probelms or Thinkings 
 Knowledge Editing
 # Context
+1. content overload 
+2.  parameter update
 # Innovation
 # Background
 # Related Work

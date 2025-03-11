@@ -18,6 +18,10 @@ Knowledge Editing
 # Context
 1. content overload 
 2.  parameter update
+
+
+## Vanilla FT
+![[Pasted image 20250311194123.png]]
 # Innovation
 # Background
 # Related Work

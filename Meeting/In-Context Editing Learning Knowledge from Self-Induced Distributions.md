@@ -22,7 +22,22 @@ Knowledge Editing
 
 ## Vanilla FT
 ![[Pasted image 20250311194123.png]]
+
+## FT with Sampling 
+![[Pasted image 20250311194337.png]]
+
+
+$$
+L_{ft}^{*}=L_{ft}
+$$
+I
+![[Pasted image 20250311194516.png]]
+
+
+## ICE Theroy
+
 # Innovation
+
 # Background
 # Related Work
 # Theroy

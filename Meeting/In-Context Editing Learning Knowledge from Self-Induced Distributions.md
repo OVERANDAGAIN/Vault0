@@ -37,7 +37,7 @@ $$
 ## ICE Theroy
 ![[Pasted image 20250311194718.png]]
 ![[Pasted image 20250311194828.png]]
-
+![[Pasted image 20250311202221.png]]
 $L_{FT}$ 提升 success 。 target 部分 
 第二项： 类似teacher的作用 target 之后的约束
 

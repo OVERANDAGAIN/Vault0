@@ -12,7 +12,7 @@ updated: ...
 - [?] 在 OMG 代码中，`runner.run()` 和 `learner.train()`  的 `batch_size` 是不一样的：
 	前者为 `batch_size` 
 
-## run_sequential（）中的初始化batch_size 32\*8 = 256 
+## run_sequential（）中的初始化batch_size 32\*8 = ==256== 
 ```python
 def run_sequential(args, logger):
     # My_TASK customized setting
@@ -21,7 +21,7 @@ def run_sequential(args, logger):
         args.batch_size *= args.n_agents
 ```
 
-## runner 里面的 init 为 batch_size_rnn = 1 (并行数量)
+## runner 里面的 init 为 batch_size_rnn = ==1== (并行数量)
 ```python
 
 class EpisodeRunner:
@@ -55,9 +55,11 @@ omg_learner:
 
 ```
 
+
+
 # run_sequential 流程中的变化 while runner.t_env <= args.t_max: 
 
-## run() 8 次 batch_runs ,  buffer 中 insert 8 次
+## run.py 8 次 batch_runs( `runner.run()` ) ,  buffer 中 insert 8 次
 ```python
   # Run for a whole episode at a time
         if args.learner in ["q_learner_4am", "omg_learner"]:
@@ -87,10 +89,34 @@ omg_learner:
             learner.train(episode_sample, runner.t_env, episode)
 ```
 
-### 
+### learner.train() 为 32\*8/8 =32 
 
+omg_learner: 
+```python
+    def train(self, batch: EpisodeBatch, t_env: int, episode_num: int):
+        # Get the relevant quantities
+        batch_size = batch.batch_size // self.args.n_agents
+        max_t = batch.max_seq_length
+        batch = self._refine_batch(batch)
 
+```
 
+#### omg_loss_func() 传入32 大小的
+```python
+        # Calculate OMG loss
+        omg_am = self.mac.agents_model[self.mac.main_alg_idx]
+        eval_net = self.mac.agents[self.mac.main_alg_idx]
+        omg_loss = omg_am.omg_loss_func(batch, eval_net, self.args.subgoal_mode)
+
+```
+
+#### 计算q-values 时 init_hidden
+
+```python
+ # Calculate estimated Q-Values
+        mac_out = []
+        self.mac.init_hidden(batch.batch_size)
+```
 
 ## 1_Answers
 

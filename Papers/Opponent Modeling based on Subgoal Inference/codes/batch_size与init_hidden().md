@@ -72,7 +72,18 @@ omg_learner:
                 episode_batch.update({"agent_idx": [args.agent_shift]}, ts = 0)
             buffer.insert_episode_batch(episode_batch)
 ```
+### runner.run()中 init_hidden
+```python
+    def run(self, test_mode=False):
+        self.reset()
 
+        terminated = False
+        episode_return = 0
+        self.mac.init_hidden(batch_size=self.batch_size)
+
+        while not terminated:
+
+```
 ## can_sample() 时 ，即 > 256 
 
 ```python

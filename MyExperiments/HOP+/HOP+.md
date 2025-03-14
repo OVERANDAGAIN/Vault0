@@ -22,7 +22,7 @@ updated: ...
 
 ***2025-3-14***
 1. nearset-stag 和 nearest-hare 上测试 goal inference 的效果
-2. HOP 的 state 是 二维
+2. HOP 的 state 是 二维地图 （4\*4\*5） 的 0-1 分布 。所以 vae 的loss 计算应该用 ==bce== 而非 mse?
 
 
 # Results

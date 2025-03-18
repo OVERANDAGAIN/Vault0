@@ -14,6 +14,11 @@ updated: ...
 摘要：The Koopman operator allows for handling nonlinear systems through a globally linear representation. This linear representation of nonlinear dynamics has tremendous potential to enable the prediction, estimation, and control of nonlinear systems with standard textbook methods developed for linear systems. However, in general, the operator is infinite-dimensional for which there is no overarching framework. Obtaining finite-dimensional coordinate systems and embeddings in which the dynamics appear approximately linear remains a central open challenge. In this presentation, we will briefly introduce the Koopman operator and the computational methods for its finite-dimensional representation. We will also leverage a simple example of two-robot trajectory guidance problem to demonstrate the application of the Koopman operator in multi-agent systems.
 # Inspiration
 # Probelms or Thinkings 
+
+
+
+
+
 # Context
 ![[Pasted image 20250318193330.png]]
 # Innovation

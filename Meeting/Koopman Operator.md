@@ -17,7 +17,7 @@ updated: ...
 
 
 
-
+![[Pasted image 20250318203351.png]]
 
 # Context
 ![[Pasted image 20250318193330.png]]

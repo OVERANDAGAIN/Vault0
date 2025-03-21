@@ -5,7 +5,7 @@ updated: ...
  #meeting 
 
 **Reporter:**  
-
+[\[2502.19148\] Amulet: ReAlignment During Test Time for Personalized Preference Adaptation of LLMs](https://arxiv.org/abs/2502.19148)
 # Inspiration
 # Probelms or Thinkings 
 # Context

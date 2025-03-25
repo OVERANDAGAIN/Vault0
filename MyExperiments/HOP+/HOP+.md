@@ -36,10 +36,10 @@ updated: ...
 ### 一堆控制变量，变量： 
 
 1.  `omg_buffer` 相关
-	1. 定期清除 `buffer`  内的历史轨迹，更新
+	1. ~~定期清除 `buffer`  内的历史轨迹，更新~~
 	2. 写为和 `moa_buffer` 类似的处理 $\Longrightarrow$ ==合并==
 2.  `horizon` 相关
-	1. 数值变化  $15$ $\Longrightarrow$ $10$
+	1. ~~数值变化  $15$ $\Longrightarrow$ $10$~~
 	2.  `MCTS` 中==是否==每步需要更新 `goal` ，还是一段时间更新一次？
 3. 重建损失 `recon_loss`  的优化： 相较于 `MSE` ，能否使模型更关注 `goal` 的信息？
 	1. 目标维度变化 $64$ $\Longrightarrow$ $16$ $\Longrightarrow$ $4$ $\Longrightarrow$ $2$ ，使得训练 `loss` 没那么 低 且 不明显

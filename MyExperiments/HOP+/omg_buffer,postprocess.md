@@ -7,6 +7,9 @@ updated: ...
 
 
 
+
+
+
 ## Sample_batch 和 other_agent_batches 时间长短不一
 ### 代码:
 ```python
@@ -192,7 +195,14 @@ self.state[zero_stag_pos[0], zero_stag_pos[1], -2] = 0
 
 ## episode 的结构
 
-
+```bash
+pid=24884) --- Episode Debug ---
+ pid=24884) Type: <class 'ray.rllib.evaluation.episode.Episode'>
+ pid=24884) Dir: ['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_add_agent_rewards', '_agent_index', '_agent_reward_history', '_agent_to_index', '_agent_to_last_action', '_agent_to_last_done', '_agent_to_last_extra_action_outs', '_agent_to_last_info', '_agent_to_last_obs', '_agent_to_last_raw_obs', '_agent_to_policy', '_agent_to_prev_action', '_agent_to_rnn_state', '_next_agent_index', '_policies', '_policy_mapping_fn', '_set_last_action', '_set_last_done', '_set_last_extra_action_outs', '_set_last_info', '_set_last_observation', '_set_last_raw_obs', '_set_rnn_state', 'add_extra_batch', 'agent_rewards', 'batch_builder', 'custom_metrics', 'env_id', 'episode_id', 'get_agents', 'hist_data', 'last_action_for', 'last_done_for', 'last_extra_action_outs_for', 'last_info_for', 'last_observation_for', 'last_pi_info_for', 'last_raw_obs_for', 'last_reward_for', 'length', 'media', 'new_batch_builder', 'policy_for', 'policy_map', 'policy_mapping_fn', 'prev_action_for', 'prev_reward_for', 'rnn_state_for', 'soft_reset', 'total_reward', 'user_data', 'worker']
+ pid=24884) User data keys: ['initial_state', 'mcts_policies1', 'recurrent_state1', 'subgoal1', 'hist_obs1']
+ pid=24884) Reward history keys: dict_keys(['player_1', 'player_2'])
+ pid=24884) Last actions: {'player_1': 6, 'player_2': 4}
+```
 
 
 

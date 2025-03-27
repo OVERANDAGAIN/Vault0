@@ -5,11 +5,100 @@ updated: ...
 ---
 [[HOP+]]
 
+# 总结
+当然可以！下面我将从**字段（keys）视角**出发，系统总结 `sample_batch`、`other_agent_batches` 和 `episode` 三者的结构和主要用途，帮助你彻底理清它们之间的区别与联系。
+
+---
+
+## ✅ 总览表：三者结构对比（字段为主）
+
+| **维度** | **sample_batch（本 agent）** | **other_agent_batches（他人）** | **episode（全局对象）** |
+|----------|-----------------------------|-----------------------------|----------------------------|
+| 类型 | `dict` 或 `SampleBatch` | `Dict[str, Tuple[Policy, SampleBatch]]` | `Episode` 对象 |
+| 数据粒度 | 当前 agent 的时间序列 | 每个他人 agent 的时间序列 | 当前 episode 全部交互过程 |
+| 来源 | 本 agent rollout | 他人 agent rollout | 环境交互完整信息 |
+| 常用字段（核心） | ✅ `obs`<br>✅ `actions`<br>✅ `rewards`<br>✅ `dones`<br>✅ `new_obs`<br>✅ `prev_actions`<br>✅ `subgoal` | ✅ `obs`<br>✅ `actions`<br>✅ `rewards`<br>（结构与 sample_batch 相同） | ✅ `user_data`（自定义字段）<br>✅ `_agent_reward_history`<br>✅ `_agent_to_last_action`<br>✅ `.length()`<br>✅ `.last_observation_for()` |
+| 子目标位置 | `sample_batch["subgoal"]` | `batch["subgoal"]`（每个 agent） | `episode.user_data[f"subgoal{self.my_id}"]`（list） |
+| 访问方式 | 直接字典访问 | `other_agent_batches[f'player_{id}'][1]['obs']` | 通过属性，如 `episode.user_data[...]` |
+| 是否含多 agent | ❌（单 agent） | ✅（按 agent 分开） | ✅（多 agent 全局） |
+
+---
+
+## 🧩 各自字段详细说明
+
+---
+
+### 📦 1. `sample_batch`（当前 agent 的 rollout 数据）
+
+```python
+sample_batch.keys()
+```
+
+典型字段（单 agent）：
+
+| 字段 | 含义 | 示例 shape |
+|------|------|------------|
+| `obs` | 当前观察 | `(T, obs_dim)` |
+| `new_obs` | 下一个观察 | `(T, obs_dim)` |
+| `actions` | 执行动作（离散/连续） | `(T,)` |
+| `prev_actions` | 上一步动作 | `(T,)` |
+| `rewards` | 每步奖励 | `(T,)` |
+| `dones` | 每步是否 episode 终止 | `(T,)` |
+| `subgoal` ✅ | 子目标（自定义添加） | `(T, subgoal_dim)` |
+| `agent_index`, `t`, `eps_id`, `unroll_id` | 元信息 | `(T,)` |
+
+---
+
+### 📦 2. `other_agent_batches`（他人 agent 的 rollout 数据）
+
+结构如下：
+
+```python
+{
+  "player_1": (PolicyObj, SampleBatch),
+  "player_2": (PolicyObj, SampleBatch),
+  ...
+}
+```
+
+字段与 `sample_batch` 相同，内容表示他人的轨迹数据。
+
+你可这样获取：
+
+```python
+other_agent_batches[f"player_{id}"][1]["obs"]
+```
+
+字段与上表一致，如 `obs`、`actions`、`subgoal` 等。
+
+---
+
+### 🧠 3. `episode`（Episode 对象，全局状态记录）
+
+这是最复杂、也最灵活的结构。
+
+```python
+type(episode) == <class 'ray.rllib.evaluation.episode.Episode'>
+```
+
+---
+
+#### 🔑 重要字段
+
+| 字段 | 类型 | 说明 |
+|------|------|------|
+| `user_data` ✅ | `dict` | 自定义记录结构，支持存 subgoal、obs、策略等序列（如 `subgoal1`） |
+| `_agent_reward_history` ✅ | `dict[str -> List[float]]` | 每个 agent 的奖励轨迹 |
+| `_agent_to_last_action` ✅ | `dict[str -> int]` | 每个 agent 最后一次动作 |
+| `.length` | `int` | 当前 episode 长度 |
+| `.last_observation_for(agent_id)` | 方法 | 获取某 agent 的最后观察 |
+| `.get_agents()` | 方法 | 获取所有 agent id |
+| `.add_extra_batch()` | 方法 | 添加额外 batch 信息 |
+
+---
 
 
-
-
-
+# 分析
 ## Sample_batch 和 other_agent_batches 时间长短不一
 ### 代码:
 ```python

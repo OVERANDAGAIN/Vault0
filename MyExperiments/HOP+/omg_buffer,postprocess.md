@@ -317,9 +317,24 @@ pid=24884) --- Episode Debug ---
  pid=5900) infer_log_var: shape = torch.Size([1, 36, 2, 16]), type = <class 'torch.Tensor'>
 ```
 
+## 具体数据 filled terminated infer_mu
+```bash
+ pid=23400) Filled: [1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0]
+ pid=23400) Terminated: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0]
+ pid=23400) Time steps where infer_mu is all zero: 34
+```
 
+```python
+        filled = episode_batch.data.transition_data["filled"].squeeze().cpu().numpy()  # shape: (36,)
+        terminated = episode_batch.data.transition_data["terminated"].squeeze().cpu().numpy()  # shape: (36,)
 
+        print("Filled:", filled)
+        print("Terminated:", terminated)
 
+        infer_mu = episode_batch.data.transition_data["infer_mu"].squeeze()  # shape: (36, 2, 16)
+        zero_mask = ~ (infer_mu == 0).all(dim=-1).all(dim=-1)  # shape: (36,), 每个时间步是否全为0
+        print("Time steps where infer_mu is all zero:", torch.nonzero(zero_mask).squeeze().tolist())
+```
 
 
 

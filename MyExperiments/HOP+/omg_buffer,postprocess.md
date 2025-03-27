@@ -98,7 +98,7 @@ type(episode) == <class 'ray.rllib.evaluation.episode.Episode'>
 ---
 
 
-# 分析
+# HOP batch 分析
 ## Sample_batch 和 other_agent_batches 时间长短不一
 ### 代码:
 ```python
@@ -298,6 +298,7 @@ pid=24884) --- Episode Debug ---
 
 
 
+# OMG episode_batch 分析
 
 
 

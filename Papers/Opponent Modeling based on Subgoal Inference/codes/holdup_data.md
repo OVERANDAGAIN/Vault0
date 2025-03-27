@@ -31,8 +31,8 @@ updated: ...
 
 
 
-
-
+### (1,121,8,64)
+![[Pasted image 20250327124945.png]]
 
 
 ## Overall_Answers

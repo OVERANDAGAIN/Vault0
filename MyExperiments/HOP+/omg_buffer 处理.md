@@ -167,6 +167,26 @@ self.state[zero_stag_pos[0], zero_stag_pos[1], -2] = 0
 
 
 
+## `other_agent_batches` 的结构
+
+### 结果：
+```bash
+ pid=30752) <class 'tuple'>
+ pid=30752) 2
+ pid=30752) Policy object type: <class 'policy.fixed_policy.NearestStagPolicy'>
+ pid=30752) Sample batch type: <class 'ray.rllib.policy.sample_batch.SampleBatch'>
+```
+
+
+### 代码： 
+```python
+        print(type(other_agent_batches['player_2']))  # 应该是 <class 'tuple'>
+        print(len(other_agent_batches['player_2']))  # 应该是 2
+        policy_obj, sample_batch = other_agent_batches['player_2']
+        print("Policy object type:", type(policy_obj))
+        print("Sample batch type:", type(sample_batch))
+```
+
 ## Problem1: 
 - [?] 
 

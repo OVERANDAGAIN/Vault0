@@ -300,9 +300,22 @@ pid=24884) --- Episode Debug ---
 
 # OMG episode_batch 分析
 
+## 结果: 时长都是固定36（ `max_t` +1 ) ，与 HOP 的多变不同
 
-
-
+```python
+ pid=5900) EpisodeBatch keys: dict_keys(['state', 'obs', 'actions', 'avail_actions', 'reward', 'time', 'terminated', 'actions_onehot', 'filled', 'infer_mu', 'infer_log_var'])
+ pid=5900) state: shape = torch.Size([1, 36, 4, 4, 5]), type = <class 'torch.Tensor'>
+ pid=5900) obs: shape = torch.Size([1, 36, 2, 4, 4, 5]), type = <class 'torch.Tensor'>
+ pid=5900) actions: shape = torch.Size([1, 36, 2, 1]), type = <class 'torch.Tensor'>
+ pid=5900) avail_actions: shape = torch.Size([1, 36, 2, 7]), type = <class 'torch.Tensor'>
+ pid=5900) reward: shape = torch.Size([1, 36, 1]), type = <class 'torch.Tensor'>
+ pid=5900) time: shape = torch.Size([1, 36, 1]), type = <class 'torch.Tensor'>
+ pid=5900) terminated: shape = torch.Size([1, 36, 1]), type = <class 'torch.Tensor'>
+ pid=5900) actions_onehot: shape = torch.Size([1, 36, 2, 7]), type = <class 'torch.Tensor'>
+ pid=5900) filled: shape = torch.Size([1, 36, 1]), type = <class 'torch.Tensor'>
+ pid=5900) infer_mu: shape = torch.Size([1, 36, 2, 16]), type = <class 'torch.Tensor'>
+ pid=5900) infer_log_var: shape = torch.Size([1, 36, 2, 16]), type = <class 'torch.Tensor'>
+```
 
 
 

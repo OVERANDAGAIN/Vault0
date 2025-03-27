@@ -187,6 +187,16 @@ self.state[zero_stag_pos[0], zero_stag_pos[1], -2] = 0
         print("Sample batch1 type:", type(sample_batch1))
 ```
 
+
+
+
+## episode 的结构
+
+
+
+
+
+
 ## Problem1: 
 - [?] 
 

@@ -104,6 +104,9 @@ def compute_actions_from_input_dict(
 
 # MCTS 中计算 自己的动作选择（NN) 使用的 goal 
 
+8个 goal ? 
+
+
 
 ## Problem1: 
 - [?] 

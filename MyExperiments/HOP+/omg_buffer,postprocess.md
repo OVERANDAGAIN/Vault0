@@ -337,9 +337,23 @@ pid=24884) --- Episode Debug ---
 ```
 
 
+## OMG SMAC 环境： terminated（26） 的 为 filled（27） 的减一 
 
+### DEBUG 模式下查看 Tensor 具体数据： 
+```python
+# 取出 bs=0 的数据，并从 shape [ts, 8, 1] 中选第一个 agent（dim=1），变成 [ts, 1]
+debug_tensor = data.transition_data['state'][0][:, 0, :]  # shape: [ts, 1]
 
+# 转成 numpy 方便查看
+debug_array = debug_tensor.cpu().numpy()
 
+# 打印所有索引和值
+for i, val in enumerate(debug_array):
+    print(f"timestep {i}: {val}")
 
+```
 
+（最大时间是120）![[Pasted image 20250328113022.png]]
+
+![[Pasted image 20250328113133.png]]
 # FootNotes

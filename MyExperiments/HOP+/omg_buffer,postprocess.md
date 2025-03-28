@@ -337,7 +337,7 @@ pid=24884) --- Episode Debug ---
 ```
 
 
-## OMG SMAC 环境： terminated（26） 的 为 filled（27） 的减一 
+## OMG SMAC 环境： terminated（26） 的 为 filled（27） 的减一 （与HOP中的一致）
 
 ### DEBUG 模式下查看 Tensor 具体数据： 
 ```python

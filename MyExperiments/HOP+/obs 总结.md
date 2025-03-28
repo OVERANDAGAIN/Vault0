@@ -89,10 +89,17 @@ def compute_actions_from_input_dict(
 ```
 
 
-# `subgoal selector` 中 ： 
-value 
+# `subgoal selector` 中 ： 选择对手的 obs 
+`value heuristics` 选择 `ground_truth` 作为 $\bar{g}$
 
+## 选择对手的 obs 输入到 selector 的原因分析： 
+`inference model` 中 `cvae` 生成的 `goal` 为 `future state` 的 `embedding` 。 即：
 
+>对手的将来状态，这里用对手的 obs 表示对手的将来状态。原因有四：
+>1. 在 猎鹿博弈 中，一方捕到猎物之后，猎物和猎人会 退出游戏 。体现在 `sample_batch` 的长度只有 $t_{1}$, 而对手可能还在行动，他完成的时间是 $t_{2} \quad (max_{t}>t_{2}>t_{1}>0)$  。如果只用自己的轨迹，那么看不到游戏后续的情况，对 `cvae` 的训练效果可能不好。
+>2. HOP 的 `moa_model` 和 `NN` 都是采用所分析对象的 `obs` 。 $\Longrightarrow$ 全观测，可访问环境转换方法
+>3. 每个玩家的主视角变换，假如说  $t_{1}$ 时刻前使用 `player_1` 的 `obs` ,之后 使用 `player_2` 的 `obs` ，显然会出现格式不一致问题。
+>4. 从理论上来说，更合理
 
 
 

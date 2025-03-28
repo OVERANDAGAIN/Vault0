@@ -102,7 +102,7 @@ def compute_actions_from_input_dict(
 >4. 从理论上来说，更合理
 
 
-
+# MCTS 中计算 自己的动作选择（NN) 使用的 goal 
 
 
 ## Problem1: 

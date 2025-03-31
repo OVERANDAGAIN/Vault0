@@ -151,6 +151,35 @@ pid=23440) obs shape: (35, 89)
  pid=23440) OMG_AM buffer not ready to sample
 ```
 
+
+```python
+ pid=36360) Sample batch keys: dict_keys(['obs', 'new_obs', 'actions', 'prev_actions', 'rewards', 'prev_rewards', 'dones', 'infos', 'eps_id', 'unroll_id', 'agent_index', 't'])
+ pid=36360) obs shape: (4, 89)
+ pid=36360) new_obs shape: (4, 89)
+ pid=36360) actions shape: (4,)
+ pid=36360) actions shape: [3 2 0 6]
+ pid=36360) prev_actions shape: (4,)
+ pid=36360) prev_actions shape: [0 3 2 0]
+ pid=36360) rewards shape: (4,)
+ pid=36360) rewards shape: [0. 0. 0. 1.]
+ pid=36360) prev_rewards shape: (4,)
+ pid=36360) prev_rewards shape: [0. 0. 0. 0.]
+ pid=36360) dones shape: (4,)
+ pid=36360) dones shape: [0. 0. 0. 1.]
+ pid=36360) infos shape: (4,)
+ pid=36360) infos shape: [{} {} {} {}]
+ pid=36360) eps_id shape: (4,)
+ pid=36360) eps_id shape: [1223974587 1223974587 1223974587 1223974587]
+ pid=36360) unroll_id shape: (4,)
+ pid=36360) unroll_id shape: [0 0 0 0]
+ pid=36360) agent_index shape: (4,)
+ pid=36360) agent_index shape: [0 0 0 0]
+ pid=36360) t shape: (4,)
+ pid=36360) t shape: [0 1 2 3]
+```
+
+
+
 ### 原因： 捕到猎之后移出地图，不执行 `compute_action()`
 ````ad-tip
 

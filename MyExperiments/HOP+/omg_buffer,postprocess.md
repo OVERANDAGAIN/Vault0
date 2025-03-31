@@ -385,4 +385,56 @@ for i, val in enumerate(debug_array):
 （最大时间是120）![[Pasted image 20250328113022.png]]
 
 ![[Pasted image 20250328113133.png]]
+
+# 调试代码
+
+```python
+
+        # print("Sample batch keys:", sample_batch.keys())
+        # for k in sample_batch.keys():
+        #     print(f"{k} shape:", sample_batch[k].shape)
+        #     print(f"{k} shape:", sample_batch[k])
+        #
+        # print("other_agent_batches keys:", other_agent_batches.keys())
+        # print(f"{'obs'} shape:", other_agent_batches[f'player_{1 + 1}'][1]['obs'].shape)
+        # print(type(other_agent_batches['player_2']))  # 应该是 <class 'tuple'>
+        # print(len(other_agent_batches['player_2']))  # 应该是 2
+        # policy_obj, sample_batch1 = other_agent_batches['player_2']
+        # print("Policy object type:", type(policy_obj))
+        # print("Sample batch1 type:", type(sample_batch1))
+
+
+        # print("\n--- Episode Debug ---")
+        # print("Type:", type(episode))
+        # print("Dir:", dir(episode))
+        # print("User data keys:", list(episode.user_data.keys()))
+        # print("Reward history keys:", episode._agent_reward_history.keys())
+        # print("Last actions:", episode._agent_to_last_action)
+
+        subgoal_list_cpu = [tensor.to("cpu") for tensor in episode.user_data[f"subgoal{self.my_id}"]]
+        subgoal_tensor = torch.stack(subgoal_list_cpu)
+        sample_batch["subgoal"] = subgoal_tensor.numpy()
+
+
+        episode_batch = self.runner.run(test_mode=False)
+        #
+        # print("EpisodeBatch keys:", episode_batch.data.transition_data.keys())
+        #
+        # for key, value in episode_batch.data.transition_data.items():
+        #     if hasattr(value, 'shape'):
+        #         print(f"{key}: shape = {value.shape}, type = {type(value)}")
+        #     else:
+        #         print(f"{key}: type = {type(value)}, value = {value}")
+        # filled = episode_batch.data.transition_data["filled"].squeeze().cpu().numpy()  # shape: (36,)
+        # terminated = episode_batch.data.transition_data["terminated"].squeeze().cpu().numpy()  # shape: (36,)
+        #
+        # print("Filled:", filled)
+        # print("Terminated:", terminated)
+        #
+        # infer_mu = episode_batch.data.transition_data["infer_mu"].squeeze()  # shape: (36, 2, 16)
+        # zero_mask = ~ (infer_mu == 0).all(dim=-1).all(dim=-1)  # shape: (36,), 每个时间步是否全为0
+        # print("Time steps where infer_mu is all zero:", torch.nonzero(zero_mask).squeeze().tolist())
+
+```
+
 # FootNotes

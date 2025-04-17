@@ -16,7 +16,10 @@ updated: ...
 
 ## observation
 
-
+$$
+o_{t,i} = \begin{bmatrix} v_{t,i},\ \Delta \mathbf{v}_{t,i},\ \Delta \mathbf{p}_{t,i},\ k_{t,i} \end{bmatrix}^{T}
+$$
+其中的 $$
 
 | o1  | o2      | o3  |
 | --- | ------- | --- |

@@ -8,6 +8,7 @@ updated: ...
 # Inspiration
 ## Take-away Message
 ## Inspiration for Us
+1. 奖励函数的四个复合部分，其中包括 $r_{fail}$ 表示对无效动作的惩罚，其目的是为了在自动驾驶环境中==对 安全 的考虑==
 # Focus
 # Innovation
 # Theroy
@@ -30,7 +31,11 @@ $$
 连续动作空间：acceleration control
 离散动作空间：lane change
 ## Reward
+$$
+R_{t,i} = c_{1} \mathcal{R}_{1} + c_{2} \mathcal{R}_{2} + c_{3} \mathcal{R}_{3} + r_{\text{fail}},
 
+$$
+$r_{fail}$ means a penalty for the unfeasible actions (i.e., trial to move a non-existence lane and a lane where other vehicles are located
 
 
 # Background

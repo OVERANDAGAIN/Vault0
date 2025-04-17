@@ -29,6 +29,9 @@ $$
 ## Action (混合动作空间)
 连续动作空间：acceleration control
 离散动作空间：lane change
+## Reward
+
+
 
 # Background
 # Related Work

@@ -165,5 +165,14 @@
       ],
       "key": "6"
     }
+  ],
+  "Enhanced-editing:gaoliang-format": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": "H"
+    }
   ]
 }

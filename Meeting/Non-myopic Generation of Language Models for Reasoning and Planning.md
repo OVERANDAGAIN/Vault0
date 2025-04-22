@@ -15,6 +15,7 @@ updated: ...
 # Inspiration
 # Probelms or Thinkings 
 # Context
+通过预测解码(Predictive-Decoding)，将模型预测控制(MPC)**的长期规划能力嵌入LLM的自回归推理过程，解决其因短视性**导致的规划缺陷。
 # Innovation
 # Background
 # Related Work

@@ -7,6 +7,7 @@ updated: ...
 # Inspiration
 ## Take-away Message
 ## Inspiration for Us
+博弈设置是否有具体现实应用
 # Focus
 # Innovation
 # Theroy

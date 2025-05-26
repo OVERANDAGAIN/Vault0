@@ -3,7 +3,7 @@ created: 2024-12-20T16
 updated: ...
 创建时间: 2025-三月-27日  星期四, 12:35:40 下午
 ---
-[[Python]]
+[[pycharm]]
 
 # Questions
 

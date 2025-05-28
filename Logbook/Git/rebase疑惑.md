@@ -6,9 +6,9 @@ updated: ...
 [[Git]]
 
 
-联系 [[Git Commit本质]] 可能还是混淆了 **每次commit所包含的内容** 与 **git内容增量存储之间的关系**
->这里的箭头关系可能代表的是diff关系，所以rebase之后，diff也会改变。
->这里的diff就是child相对于parent的存储上的变化，因为Git高效存储的必要，重复的内容直接引用parent的内容，只保存child更新的内容
+联系 [[Git Commit本质]] 可能还是混淆了 **提交所代表的完整项目状态** 与 **Git 底层高效存储所使用的内容复用机制**
+>虽然每次 commit 表示的是整个项目的快照，但 Git 底层并不会复制所有文件，而是通过指向 parent 中相同内容的对象来节省空间。
+>Rebase 改变了 parent-child 的结构，因此也改变了 child 相对于 parent 的 diff 表现，虽然文件内容可能没变，commit hash 和结构已经不同。
 
 # Questions
 

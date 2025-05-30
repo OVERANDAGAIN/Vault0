@@ -16,9 +16,9 @@ updated: ...
 ```bash
 git commit 
 git branch A
-git checkout A
+git checkout A / git switch（maybe new!)
 git checkout -b A
-git merge A
+git merge A (HEAD处于H,最终是新节点A+H)
 git 
 ```
 

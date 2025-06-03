@@ -165,5 +165,14 @@
       ],
       "key": "6"
     }
+  ],
+  "editing-toolbar:toggle-highlight": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": "H"
+    }
   ]
 }

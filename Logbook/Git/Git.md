@@ -10,8 +10,17 @@ updated: ...
 - [?] 关于Git操作中的问题记录
 
 
-# Answers
+# 指令们
+[Learn Git Branching](https://learngitbranching.js.org/?demo=&locale=zh_CN)
 
+```bash
+git commit 
+git branch A
+git checkout A / git switch（maybe new!)
+git checkout -b A
+git merge A 
+git rebase
+```
 
 ## GPT_Answers
 

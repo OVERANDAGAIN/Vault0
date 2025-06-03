@@ -8,4 +8,4 @@ compare with people
 
 comformity and model confident  and reputation
 
-$CR^{C}$ and $CR^{C}$ 虽然数值不同，但是所包含的问题种类或者难度不同。
+$C\!R^{C}$ and $CR^{C}$ 虽然数值不同，但是所包含的问题种类或者难度不同。

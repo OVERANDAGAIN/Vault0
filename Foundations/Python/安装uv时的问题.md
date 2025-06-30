@@ -158,7 +158,7 @@ Location: d:\anaconda\lib\site-packages
 
 直接下载官方 `uv.exe`，复制到你的项目目录即可用，**不需要环境变量，不需要 pip 安装，不依赖 Python 版本冲突**。
 
-### 结果图
+## 结果
 ![[Pasted image 20250630200355.png]]
 
 ```ad-tip
@@ -168,7 +168,25 @@ Location: d:\anaconda\lib\site-packages
 
 ![[Pasted image 20250630200302.png]]
 
+## 运行uv指令注意点 `.\uv.exe`
+```ad-warning
+即不能直接使用 `uv` ,可能因此不是个包
+>使用 `.\uv.exe add tongsim`
+```
 
+```bash
+PS E:\TongSimPythonSDK> uv add tongsim
+uv : 无法将“uv”项识别为 cmdlet、函数、脚本文件或可运行程序的名称。请检查名称的拼写，如果包括路径，请确保路径正确，然
+后再试一次。
+所在位置 行:1 字符: 1
++ uv add tongsim
++ ~~
+    + CategoryInfo          : ObjectNotFound: (uv:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+
+Suggestion [3,General]: 找不到命令 uv，但它确实存在于当前位置。默认情况下，Windows PowerShell 不会从当前位置加载命令。如果信任此命令，请改为键入“.\uv”。有关详细信息，请参阅 "get-help about_Command_Precedence"。
+```
 
 
 ```ad-tip

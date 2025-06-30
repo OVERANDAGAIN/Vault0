@@ -137,7 +137,7 @@ Location: d:\anaconda\lib\site-packages
 
 1. 访问官网 Releases 页面：
    [https://github.com/astral-sh/uv/releases](https://github.com/astral-sh/uv/releases)
-
+[Releases · astral-sh/uv](https://github.com/astral-sh/uv/releases)[^2]
 2. 找到这个文件下载：
 
    ```
@@ -279,4 +279,5 @@ url = "https://nexus.mybigai.ac.cn/repository/pypi/simple"
 
 # FootNotes
 
+[^2]: uv.exe下载地址
 [^1]: 如何使用命令行安装uv，而非简单地使用手动安装再拷贝的方法？

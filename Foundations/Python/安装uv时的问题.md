@@ -2,7 +2,7 @@
 created: 2024-12-20T16
 updated: ...
 ---
-[[TongSim]]
+[[Python]]
 
 # Questions
 
@@ -11,13 +11,6 @@ updated: ...
 ```python
 
 ```
-
-相关教程：[Welcome to TongSim - TongSim](http://tongsim.pages.mybigai.ac.cn/tongsim-python/)
-安装了`Windows`下的版本
-
-## 安装uv的问题
-
-
 
 # Answers
 

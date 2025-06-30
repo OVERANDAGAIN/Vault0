@@ -233,7 +233,7 @@ url = "https://nexus.mybigai.ac.cn/repository/pypi/simple"
 👉 你可以在 `E:\TongSimPythonSDK` 目录下新建或编辑 `pyproject.toml` 文件，粘贴上述内容保存即可。
 
 
-## 🚀 然后重新运行：
+### 🚀 然后重新运行：
 
 ```powershell
 .\uv.exe add tongsim
@@ -247,6 +247,9 @@ url = "https://nexus.mybigai.ac.cn/repository/pypi/simple"
 * 自动创建 `.venv` 环境
 
 
+
+### 成果示例图
+![[Pasted image 20250630201520.png]]
 
 
 ---

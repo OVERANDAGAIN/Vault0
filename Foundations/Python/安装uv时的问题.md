@@ -188,11 +188,76 @@ uv : 无法将“uv”项识别为 cmdlet、函数、脚本文件或可运行程
 Suggestion [3,General]: 找不到命令 uv，但它确实存在于当前位置。默认情况下，Windows PowerShell 不会从当前位置加载命令。如果信任此命令，请改为键入“.\uv”。有关详细信息，请参阅 "get-help about_Command_Precedence"。
 ```
 
+---
+---
+
+
+## uv 的toml文件需要 `project` 字段
+✅ 非常棒，你现在已经**成功运行了正确的 `uv.exe` 命令行工具**（通过 `.\uv.exe add tongsim`），但现在提示：
+
+```
+error: No `project` table found in: `E:\TongSimPythonSDK\pyproject.toml`
+```
+
+---
+
+## ✅ 当前状态总结
+
+* 你已经能正确执行 `uv` 命令 ✅
+* `uv` 工具在执行 `add tongsim` 时会尝试修改项目根目录下的 `pyproject.toml` 文件 ✅
+* 但你当前目录下的 `pyproject.toml` 文件**缺少 `[project]` 段** ❌
+
+---
+
+## 🔧 解决方案：创建或修复 `pyproject.toml` 文件
+
+你只需要手动添加一个基本的 `[project]` 段，`uv` 就能继续正常运行。
+
+### ✅ 示例 pyproject.toml 内容（适用于你现在项目）
+
+```toml
+[project]
+name = "tongsim-sdk"
+version = "0.1.0"
+description = "TongSim Python SDK"
+
+[tool.uv.sources]
+tongsim = { index = "bigai" }
+tongsim-api-protocol = { index = "bigai" }
+
+[[tool.uv.index]]
+name = "bigai"
+url = "https://nexus.mybigai.ac.cn/repository/pypi/simple"
+```
+
+👉 你可以在 `E:\TongSimPythonSDK` 目录下新建或编辑 `pyproject.toml` 文件，粘贴上述内容保存即可。
+
+
+## 🚀 然后重新运行：
+
+```powershell
+.\uv.exe add tongsim
+```
+
+这时就会成功：
+
+* 下载 `tongsim` 包（从你配置的 `bigai` 镜像）
+* 自动写入 `pyproject.toml` 的 `[project.dependencies]`
+* 自动生成 `uv.lock` 文件
+* 自动创建 `.venv` 环境
+
+
+
+
+---
+## 另外的安装方法
 
 ```ad-tip
 另外，除了手动从官网上下载并拖到项目中使用外，还有使用 `pipx` 方法重新使用命令行安装的方法，不过
 >由于时间关系，暂未尝试
 ```
+
+
 
 #to_be_solved [^1]
 

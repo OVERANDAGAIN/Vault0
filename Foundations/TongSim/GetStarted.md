@@ -1,24 +1,21 @@
 ---
 created: 2024-12-20T16
 updated: ...
-创建时间: 2025-六月-27日  星期五, 11:13:12 上午
 ---
-[[yaya]]
+[[TongSim]]
 
 # Questions
 
 - [?] 
 
-git clone 失败
-
 ```python
 
 ```
 
+相关教程：[Welcome to TongSim - TongSim](http://tongsim.pages.mybigai.ac.cn/tongsim-python/)
+安装了`Windows`下的版本
+
 # Answers
-
-可能使用 `TongSim` 是一样的？
-
 
 ## GPT_Answers
 

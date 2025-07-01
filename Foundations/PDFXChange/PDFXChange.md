@@ -1,0 +1,42 @@
+---
+created: 2024-12-20T16
+updated: ...
+---
+#tool_summary 
+
+# What
+```bash
+D:\IDMdownload\PDF-XChange+Editor+Plus+9.0.350.0+Multilingual
+```
+# Why
+某些PDF稿子会有行号，导致翻译软件翻译时会把数字翻译进去。
+
+![[Pasted image 20250701105300.png]]
+
+
+
+# How
+知乎中提供的一种解决方案[删除pdf(论文)的行号](https://zhuanlan.zhihu.com/p/469248606)[^1]
+同上：上面的知乎回答引用的B站方法：[85.Word中添加行号及pdf文件中行号的去除\_哔哩哔哩\_bilibili](https://www.bilibili.com/video/BV12y4y1W7j3/?vd_source=6c33cf6826337aad387874b66413aa72)
+以上提到的下载链接：[百度网盘 请输入提取码](https://pan.baidu.com/s/1cP8N8AAkfLIexEAmZXrJjg)(已保存至网盘-300+MB)
+提取码： rq6o
+
+
+```ad-tip
+网上搜索到的方法一般就是几个步骤：裁剪掉行号-仍有隐藏行号-覆盖行号或想办法删除裁剪掉的东西
+```
+# Theroy
+# Background
+# Related Work
+# Methodology
+安装及破解方法：[PDF-XChange\_Editor\_Plus\_9.0.350.0 · 语雀](https://www.yuque.com/yuzhuyi/ggw37n/yihbrx#)
+
+使用方法： 使用工具中的裁剪，并勾选删除裁剪的内容
+
+
+
+# Results
+# Limitations
+# FootNotes
+
+[^1]: 知乎解决此的连接

@@ -1,0 +1,38 @@
+---
+创建时间: 2025-七月-1日  星期二, 5:38:45 下午
+---
+#ManuscriptReviews 
+
+# Basic Info
+
+
+# Summary
+
+
+# Main Evaluation
+
+## Strengths
+
+
+## Weaknesses
+
+
+## Suggestions
+
+
+# Process Notes
+
+## Timeline & Milestones
+
+
+## Internal Notes
+
+
+# Related Material
+
+
+# Final Output
+
+
+# FootNotes
+

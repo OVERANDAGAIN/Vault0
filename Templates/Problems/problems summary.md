@@ -1,7 +1,3 @@
----
-created: 2024-12-18T20
-updated: ...
----
 #problems 
 
 # Sources

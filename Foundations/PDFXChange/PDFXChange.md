@@ -58,7 +58,18 @@ D:\IDMdownload\PDF-XChange+Editor+Plus+9.0.350.0+Multilingual
 ```
 
 ## 结果展示
+### 无行号的PDF
 ![[Pasted image 20250701114150.png]]
+
+### 前后大小差距不大 0.04MB
+![[Pasted image 20250701114311.png]]
+
+![[Pasted image 20250701114322.png]]
+
+
+### 书签未丢失，且能正常框选
+![[Pasted image 20250701114500.png]]
+
 # FootNotes
 
 [^1]: 知乎解决此的链接

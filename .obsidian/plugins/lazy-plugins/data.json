@@ -110,6 +110,9 @@
       },
       "obsidian-zotero-desktop-connector": {
         "startupType": "instant"
+      },
+      "oz-clear-unused-images": {
+        "startupType": "instant"
       }
     }
   }

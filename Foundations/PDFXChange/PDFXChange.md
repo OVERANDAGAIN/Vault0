@@ -43,7 +43,22 @@ D:\IDMdownload\PDF-XChange+Editor+Plus+9.0.350.0+Multilingual
 ![[Pasted image 20250701112903.png]]
 
 # Results
-# Limitations
+# 裁剪后的尺寸问题
+![[Pasted image 20250701113708.png]]
+
+如图，裁剪后，页面直接变得少了一块。
+为了解决此：
+```ad-important
+直接在裁剪时，右边也设置和左边一样的裁剪长度，这里是36.2mm
+>记住原来的大小 143.5+36.2*2=215.9mm
+
+再使用“调整大小”调整回原来的大小（由于是左右都补一点，因此上面的步骤中我们两边都裁剪了。
+
+![[Pasted image 20250701114029.png]]
+```
+
+## 结果展示
+![[Pasted image 20250701114150.png]]
 # FootNotes
 
 [^1]: 知乎解决此的链接

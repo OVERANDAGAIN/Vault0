@@ -1,6 +1,7 @@
 ---
 created: 2024-12-20T16
 updated: ...
+创建时间: 2025-七月-1日  星期二, 10:50:32 上午
 ---
 #tool_summary 
 
@@ -33,10 +34,16 @@ D:\IDMdownload\PDF-XChange+Editor+Plus+9.0.350.0+Multilingual
 
 使用方法： 使用工具中的裁剪，并勾选删除裁剪的内容
 
+```ad-note
+组织-裁剪
+拖动裁剪线
+勾选“删除裁剪框区域以外的内容”
+```
 
+![[Pasted image 20250701112903.png]]
 
 # Results
 # Limitations
 # FootNotes
 
-[^1]: 知乎解决此的连接
+[^1]: 知乎解决此的链接

@@ -71,8 +71,10 @@ Have the authors adequately addressed the limitations and potential negative soc
 3. Could the authors clarify the setup in the “Adaptation to Switching Opponents” experiment, specifically what is meant by “tag failure” and how it triggers a switch?
 
 # Related Material
+关于下面几个问题可能需要重新组织一下语言，同样地，注意，我的这些问题是我的疑问，如果你chatgpt认为论文中已经写明清楚了告知我，以免是我未真正理解文章而提出的：
+1. How are the unseen opponent policies constructed in the generalization experiments, and how different are they from the training set? 我想知道的是，之前文章中有说明对手策略是从固定策略集中选择的吗？这里的策略集是怎么训练的？好像是PORG什么的，那么
 
-How are the unseen opponent policies constructed in the generalization experiments, and how different are they from the training set?
+What is the goal of the ablation study on quantization methods (e.g., VQ vs. Gumbel vs. k-means), and how does it relate to the core claims of the paper?
 # Final Output
 
 我还有几个问题，但是表述可能不太严谨，你帮我组织一下，以下基本都是原文某段文字加上我的问题，你的表述可以概括之后直接阐述问题（如果你不太理解，可以要求我再解释一下）1.“在在线交互或模拟过程中，我们用一个信念分布 bt(k) 来表示对手为第 k 个类型的概率。它是定义在 K 个潜在类型上的一个类别分布（categorical distribution）。”我有类似下面的疑问：How consistent are predictions over time? Do they tend to remain stable over 2-3 timesteps?另外对于k类型很多样时，这个会很好地区分出来哪几个更合适吗？ 2. “对手历史轨迹 h−ih−i​ 在 rollout 中由环境模拟器 GG 递推重建（对手私有观测不可得，只能推理）。”这里mcts需要环境的转移函数，以及对手的观测，那个这里的观测和环境函数是怎么得到的？（主要是obs怎么推理的，转移函数可能是已知的？） 3. “对手在未能成功标记（tag）智能体之后会切换其策略。这一设定模拟了**分段平稳（piecewise-stationary”在 实验部分的“”

@@ -18,7 +18,7 @@ This paper presents a new framework called **Quantized Opponent Models (QOM)**, 
 
 The agent constructs a **belief-weighted soft best-response policy**, referred to as the meta-policy, and integrates it into a **Monte Carlo Tree Search (MCTS)** planner. The idea is to integrate opponent modeling directly into the planning loop.
 
-The paper provides a theoretical result showing posterior concentration under quantization error bounds, and evaluates the method across several multi-agent tasks, including adversarial and partially observable settings. Empirically, the method is shown to be more sample-efficient than particle filtering-based baselines, particularly when computation budgets are limited. The results show that QOM consistently outperforms baselines, especially under limited computational budgets, and exhibits robustness to strategy switching and generalization to unseen opponents.
+The paper provides a theoretical result showing posterior concentration under quantization error bounds, and evaluates the method across several multi-agent tasks, including adversarial and partially observable settings. Empirically, The results show that QOM consistently outperforms baselines, especially under limited computational budgets, and exhibits robustness to strategy switching and generalization to unseen opponents.
 
 ```
 # Main Evaluation

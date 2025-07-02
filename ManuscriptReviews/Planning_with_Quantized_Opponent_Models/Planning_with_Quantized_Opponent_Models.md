@@ -69,6 +69,9 @@ Have the authors adequately addressed the limitations and potential negative soc
 1. How stable is the belief distribution bt​(k) over short time horizons? Additionally, when K is large and types are closely spaced, how well can the model consistently distinguish among them?
 2. How is the opponent’s observation o−io−i​ inferred during MCTS rollouts, given that it is not directly observable to the agent?
 3. Could the authors clarify the setup in the “Adaptation to Switching Opponents” experiment, specifically what is meant by “tag failure” and how it triggers a switch?
+4. How are the unseen opponent policies constructed for the generalization experiments, and if the training library already spans diverse PSRO checkpoints, what ensures that these test-time opponents are behaviorally novel and outside the type support?
+5. The ablation on quantization methods compares several discrete encoding schemes (VQ-VAE, Gumbel-softmax, k-means), but the performance gaps are small—what exactly is the goal of this experiment, and how does it relate to the paper’s main claims?
+6. Why is the evaluation focused almost entirely on performance vs. search time, without including more concrete measures like wall-clock time, model calls, or tree size that would more directly reflect computational efficiency?
 
 # Related Material
 关于下面几个问题可能需要重新组织一下语言，同样地，注意，我的这些问题是我的疑问，如果你chatgpt认为论文中已经写明清楚了告知我，以免是我未真正理解文章而提出的：

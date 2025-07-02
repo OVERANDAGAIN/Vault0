@@ -15,7 +15,7 @@ This is also not the place to paste the abstract-please provide the summary in y
 
 This paper presents a new framework called Quantized Opponent Models (QOM), which aims to address the challenge of planning in multi-agent environments where the opponent’s policy is unknown and potentially non-stationary. Instead of maintaining a high-dimensional belief over continuous policy spaces, the authors discretize the opponent policy space using a quantized autoencoder(VQ-VAE). Each opponent policy is mapped to a discrete latent type, and the agent maintains a Bayesian belief over these types during interaction. The agent then constructs a belief-weighted soft best-response policy, referred to as the meta-policy, and incorporates it into a Monte Carlo Tree Search (MCTS) planner. This enables opponent modeling to be embedded directly into the planning process.
 
-The paper includes a theoretical result establishing posterior concentration under bounded quantization error, and evaluates the method on several multi-agent tasks, including adversarial and partially observable settings. Empirically, QOM is shown to consistently outperform baseline methods—particularly under limited computational budgets—and demonstrates robustness to both opponent switching and generalization to unseen strategies.
+The paper includes a theoretical result establishing posterior concentration under bounded quantization error, and evaluates the method on several multi-agent tasks, including adversarial and partially observable settings. Empirically, QOM is shown to consistently outperform baseline methods—particularly under limited computational budgets—and maintains stable performance when facing switching opponents or policies not seen during training.
 
 ```
 # Main Evaluation

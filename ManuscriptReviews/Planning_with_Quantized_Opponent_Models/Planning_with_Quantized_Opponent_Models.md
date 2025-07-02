@@ -56,6 +56,13 @@ Have the authors adequately addressed the limitations and potential negative soc
 
 
 对手历史轨迹 h−ih−i​ 在 rollout 中由环境模拟器 GG 递推重建（对手私有观测不可得，只能推理）。
+
+对手在未能成功标记（tag）智能体之后会切换其策略。这一设定模拟了**分段平稳（piecewise-stationary
+
+
+在测试阶段，我们部署了一个不在策略库 Π−iΠ−i​ 中的对手策略。
+在面对未知策略时，QOM 会自动将其映射至最接近的已知类型，并以此更新信念和策略选择；
+
 ## Internal Notes
 
 

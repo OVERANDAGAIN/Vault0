@@ -32,7 +32,17 @@ The empirical evaluation covers a reasonably diverse set of environments and inc
 ```
 
 ## Weaknesses
+好的，以下是与前面风格保持一致、克制且专业的 **Weaknesses** 部分初稿，重点指出方法设计、实验设置和适用性的潜在问题，同时避免情绪化或过度苛责：
 
+---
+
+### **Weaknesses**
+
+* The approach relies heavily on a fixed offline opponent strategy library, which may limit its applicability in settings where the opponent pool is open-ended or evolving. The method does not support online discovery or adaptation to novel strategies beyond the pre-trained latent types.
+
+* There is limited discussion of the computational cost introduced by belief updates, latent inference, and payoff matrix construction. While QOM is claimed to be more efficient than particle-based baselines, no runtime comparisons or profiling are provided.
+
+* The method is evaluated only with pre-defined agents and policies. It is unclear how it would perform in more dynamic, co-adaptive environments where both agents and opponents are learning simultaneously.
 
 ## Suggestions
 Limitations*

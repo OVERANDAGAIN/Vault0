@@ -63,6 +63,8 @@ Have the authors adequately addressed the limitations and potential negative soc
 在测试阶段，我们部署了一个不在策略库 Π−iΠ−i​ 中的对手策略。
 在面对未知策略时，QOM 会自动将其映射至最接近的已知类型，并以此更新信念和策略选择；
 
+ 不同量化方法的比较（Quantization Method）
+ 
 ## Internal Notes
 
 

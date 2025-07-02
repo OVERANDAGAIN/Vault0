@@ -21,6 +21,15 @@ The authors provide both **theoretical analysis**—showing posterior concentrat
 
 In sum, the paper contributes a compact, interpretable, and tractable opponent modeling method that unifies learning, inference, and planning in a principled way.
 
+---
+
+
+This paper proposes a planning framework for multi-agent settings where the opponent’s policy is unknown and potentially non-stationary. Instead of maintaining a high-dimensional belief over continuous policy spaces, the authors discretize the opponent policy space using a vector-quantized autoencoder trained on trajectory data. Each opponent policy is mapped to a discrete latent type, and the agent maintains a Bayesian belief over these types during interaction.
+
+To plan under this structured uncertainty, the agent computes a belief-weighted mixture over soft best-responses to the possible types, which it uses as a prior in MCTS. The idea is to integrate opponent modeling directly into the planning loop, rather than treating it as a separate prediction module.
+
+The paper provides a theoretical result showing posterior concentration under quantization error bounds, and evaluates the method across several multi-agent tasks, including adversarial and partially observable settings. Empirically, the method is shown to be more sample-efficient than particle filtering-based baselines, particularly when computation budgets are limited.
+
 ```
 # Main Evaluation
 

@@ -54,6 +54,8 @@ Have the authors adequately addressed the limitations and potential negative soc
 ## Timeline & Milestones
 在在线交互或模拟过程中，我们用一个信念分布 bt(k)bt​(k) 来表示对手为第 kk 个类型的概率。它是定义在 KK 个潜在类型上的一个类别分布（categorical distribution）。
 
+
+对手历史轨迹 h−ih−i​ 在 rollout 中由环境模拟器 GG 递推重建（对手私有观测不可得，只能推理）。
 ## Internal Notes
 
 

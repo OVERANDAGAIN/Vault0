@@ -13,7 +13,8 @@ This is also not the place to paste the abstract-please provide the summary in y
 
 ```ad-todo
 
-This paper presents a novel framework called **Quantized Opponent Models (QOM)**, which aims to address the challenge of planning in multi-agent environments where the opponent’s policy is unknown and potentially non-stationary. The key idea is to discretize the space of opponent strategies into a finite set of latent types using a vector-quantized autoencoder (VQ-VAE), and then maintain a Bayesian posterior over these types during online interaction.
+This paper presents a novel framework called **Quantized Opponent Models (QOM)**, which aims to address the challenge of planning in multi-agent environments where the opponent’s policy is unknown and potentially non-stationary.Instead of maintaining a high-dimensional belief over continuous policy spaces, the authors discretize the opponent policy space using a vector-quantized autoencoder trained on trajectory data. Each opponent policy is mapped to a discrete latent type, and the agent maintains a Bayesian belief over these types during interaction.
+The key idea is to discretize the space of opponent strategies into a finite set of latent types using a vector-quantized autoencoder (VQ-VAE), and then maintain a Bayesian posterior over these types during online interaction.
 
 The agent constructs a **belief-weighted soft best-response policy**, referred to as the meta-policy, and integrates it into a **Monte Carlo Tree Search (MCTS)** planner. This approach enables efficient planning under structured uncertainty about opponents, while also offering interpretability through the discrete latent types.
 
@@ -24,7 +25,7 @@ In sum, the paper contributes a compact, interpretable, and tractable opponent m
 ---
 
 
-This paper proposes a planning framework for multi-agent settings where the opponent’s policy is unknown and potentially non-stationary. Instead of maintaining a high-dimensional belief over continuous policy spaces, the authors discretize the opponent policy space using a vector-quantized autoencoder trained on trajectory data. Each opponent policy is mapped to a discrete latent type, and the agent maintains a Bayesian belief over these types during interaction.
+This paper proposes a planning framework for multi-agent settings where the opponent’s policy is unknown and potentially non-stationary. 
 
 To plan under this structured uncertainty, the agent computes a belief-weighted mixture over soft best-responses to the possible types, which it uses as a prior in MCTS. The idea is to integrate opponent modeling directly into the planning loop, rather than treating it as a separate prediction module.
 

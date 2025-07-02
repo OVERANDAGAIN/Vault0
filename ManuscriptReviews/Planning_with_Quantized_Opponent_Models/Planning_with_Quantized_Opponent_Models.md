@@ -23,7 +23,13 @@ The paper includes a theoretical result establishing posterior concentration und
 Strengths And Weaknesses*
 Please provide a thorough assessment of the strengths and weaknesses of the paper, A good mental framing for strengths and weaknesses is to think of reasons you might accept or reiect the paper, Please touch on the folowing dimensions: Quaty, charily, siqnificance,and originalty, For more informationplease see the Neurips 2025 Revilewer Guideines ( htps:/neurips.ccconferences!2025/RevlewerGuideines , You can incorporate Markdown and LaTeX intoyour review, See https://openreview.netfag.
 ## Strengths
+```
+The proposed method of discretizing the opponent policy space using a quantized autoencoder is conceptually simple, avoids the need for handcrafted type definitions.
 
+The integration of opponent modeling into the planning loop via a belief-weighted policy prior in MCTS is clean and practically motivated.
+
+The empirical evaluation covers a reasonably diverse set of environments and includes ablations that help isolate the effect of key design choices.
+```
 
 ## Weaknesses
 

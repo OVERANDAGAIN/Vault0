@@ -20,9 +20,10 @@
 如果你需要安装例如 `pettingzoo` 所需的所有包，执行：
 
 ```bash
-poetry install --with pettingzoo
+poetry install --extras "pettingzoo"
 ```
 
+![[Pasted image 20250703211426.png]]
 ---
 
 
@@ -71,7 +72,7 @@ ModuleNotFoundError: No module named 'supersuit'
 如果你需要安装例如 `pettingzoo` 所需的所有包，执行：
 
 ```bash
-poetry install --with pettingzoo
+poetry install --extras "pettingzoo"
 ```
 
 安装内容包括：
@@ -92,7 +93,7 @@ pettingzoo = ["PettingZoo", "SuperSuit", "multi-agent-ale-py"]
 ### ✅ 方法 2：一次安装多个 extras 分组（比如 mujoco + jax）
 
 ```bash
-poetry install --with mujoco,jax
+poetry install --extras "pettingzoo,jax,mujoco"
 ```
 
 ---
@@ -105,12 +106,7 @@ poetry install --all-extras
 
 ---
 
-### ✅ 方法 4（可选）：把 optional 包转为主依赖（设置为optionsal坑你是为了和下面的extras相适配，这里相当于是提前声明有这个包，在extras中可以一键安装多个包）
-
-```bash
-poetry add SuperSuit --optional=false
-```
-
+### ✅ 说明 4
 这样未来运行 `poetry install` 就会默认安装它，无需额外参数。
 
 ```
@@ -173,18 +169,6 @@ cloud = ["boto3", "awscli"]
 dm_control = ["shimmy", "mujoco", "dm-control", "h5py"]
 
 ```
-
----
-
-## ✅ 总结推荐策略
-
-| 使用目的              | 推荐命令                                          |
-| ----------------- | --------------------------------------------- |
-| 装基础依赖（最小环境）       | `poetry install`                              |
-| 装 pettingzoo 模块   | `poetry install --with pettingzoo`            |
-| 一次装多个算法需要         | `poetry install --with jax,mujoco,dm_control` |
-| 安装所有 optional 模块  | `poetry install --all-extras`                 |
-| 永久安装某个 optional 包 | `poetry add 包名 --optional=false`              |
 
 ---
 

@@ -39,7 +39,7 @@
 | Conda 环境      | `cleanrl-tst`（Python 3.8.13）        |
 | Poetry 虚拟环境行为 | 使用 Conda，不创建 `.venv`                |
 | IDE           | PyCharm，解释器类型为 Conda，绑定 cleanrl-tst |
-| 系统            | Windows                             |
+| 系统            | Windows ; poetry 2.1.3              |
 
 ---
 

@@ -26,6 +26,11 @@ poetry install --extras "pettingzoo"
 ![[Pasted image 20250703211426.png]]
 ---
 
+```ad-tip
+经过一系列cmake ，zlib等配置，安装完成（询问gpt即可）
+```
+
+![[Pasted image 20250703214237.png]]
 
 # ✅ Poetry optional 依赖未安装的原因与解决方案
 

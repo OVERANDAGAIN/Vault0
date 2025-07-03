@@ -10,6 +10,7 @@ UE5引擎
 
 TongSim资产： Mesh ,Mesh fbx ,Meta data
 TongSim物体：Object Logic
+原子动作集组合 LLM生成等
 # Innovation
 # Background
 # Related Work

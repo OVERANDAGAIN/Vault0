@@ -2,7 +2,7 @@
 
 # Musings
 
-![[SN.jpg]]
+
 
 # What
 - [?] 

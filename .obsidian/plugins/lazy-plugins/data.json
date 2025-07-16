@@ -113,6 +113,9 @@
       },
       "oz-clear-unused-images": {
         "startupType": "instant"
+      },
+      "homepage": {
+        "startupType": "instant"
       }
     }
   }

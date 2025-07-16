@@ -23,7 +23,7 @@ linux搜狗安装包： [搜狗输入法linux-首页](https://shurufa.sogou.com/
 >但是转为中文之后，相关系统文件名也会变成中文，可能需要多次重启才能恢复正常
 
 
-
+, 使用快捷键[Ctrl + 空格] 或 [Shift] 切换到搜狗输入法
 ## GPT_Answers
 
 

@@ -2,8 +2,8 @@
 创建时间: 2025-七月-1日  星期二, 7:57:57 晚上
 ---
 #meeting 
-[[
-**Reporter:**  
+[[Evolving general cooperation with a Bayesian theory of mind]]
+**Reporter:**  陈子昂
 
 # Inspiration
 # Probelms or Thinkings 

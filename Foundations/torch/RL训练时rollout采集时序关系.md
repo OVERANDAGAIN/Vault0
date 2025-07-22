@@ -9,7 +9,7 @@
 ```
 
 # Answers
-
+obs,act,rew
 
 
 ![[Pasted image 20250306204249.png]]

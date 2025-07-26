@@ -7,6 +7,9 @@
 ## Take-away Message
 ## Inspiration for Us
 # Focus
+solve Goal-conditioned RL tasks:
+	 using contrasive learning method
+	no auxiliary losses or data augmentations for representation learning 
 # Innovation
 # Theroy
 # Perspective

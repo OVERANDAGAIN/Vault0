@@ -12,6 +12,7 @@ solve Goal-conditioned RL tasks:
 	no auxiliary losses or data augmentations for representation learning
 	relate to a critic in deep RL tasks
 # Innovation
+ it has enough novelty since it provides a clear direction to link the reward maximization and learning representation using contrastive learning
 # Theroy
 # Perspective
 # Formulation

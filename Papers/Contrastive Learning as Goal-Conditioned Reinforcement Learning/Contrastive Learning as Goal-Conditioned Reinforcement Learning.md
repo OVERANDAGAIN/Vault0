@@ -9,7 +9,8 @@
 # Focus
 solve Goal-conditioned RL tasks:
 	 using contrasive learning method
-	no auxiliary losses or data augmentations for representation learning 
+	no auxiliary losses or data augmentations for representation learning
+	relate to a critic in deep RL tasks
 # Innovation
 # Theroy
 # Perspective

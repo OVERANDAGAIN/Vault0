@@ -302,7 +302,70 @@ $$
 
 ---
 
-📌 下一节：我们将展示整个算法框架（Section 4.4）如何整合表示学习、Q 函数学习与策略学习。
+---
 
-是否继续 4.4 PPT 页面构建？
+## ✅ 方法 (5/5)：收敛性保证与策略改进理论
+
+---
+
+### 🔍 为什么 RL 方法难以收敛？
+
+* 多数 relabeling 方法缺乏理论保障：
+
+  * 要么**无收敛保证** \[6, 21, 22]
+  * 要么**假设条件苛刻** \[40, 119]
+* Contrastive RL 提出一个简单但有效的 **筛选机制（filtering）** 来保证收敛
+
+---
+
+### 🧹 筛选机制（Filtering for Convergence）
+
+**直觉**：如果轨迹是在 “错误目标” 下生成的，就不要用于训练！
+
+$$
+\text{EXCLUDETRAJ}(\tau_{i:j}) = \delta\left( \left| \frac{\pi(\tau_{i:j} \mid s_g)}{\pi(\tau_{i:j} \mid s_j)} - 1 \right| > \epsilon \right)
+$$
+
+* 若轨迹在“目标 \$s\_g\$”和“实际达成 \$s\_j\$”下的概率差异过大，排除掉
+* 实验发现：**虽然有理论意义，实际反而会影响效果**（见 Fig.13）
+
+---
+
+### 📈 引理 4.2：近似策略改进（Approximate Policy Improvement）
+
+假设：
+
+* 状态-动作是\*\*有限（tabular）\*\*的
+* Critic 是**贝叶斯最优**（Bayes-optimal）
+
+结论：
+
+* 执行一次 Contrastive RL 迭代后，策略性能有下界保证：
+
+$$
+\mathbb{E}_{\pi'}\left[ \sum_{t=0}^{\infty} \gamma^t r_{s_g}(s_t, a_t) \right]
+\ge
+\mathbb{E}_{\pi}\left[ \sum_{t=0}^{\infty} \gamma^t r_{s_g}(s_t, a_t) \right]
+- \frac{2\gamma}{1 - \gamma}
+$$
+
+* 表明 Contrastive RL 每次执行都能带来“近似策略改进”
+
+---
+
+### ✨ 总结：Contrastive RL 的理论魅力
+
+* 本质上是一个**完整的 RL 算法**
+* 具备以下**优雅属性**：
+
+| ❌ 不需要     | ✅ 具备能力                  |
+| --------- | ----------------------- |
+| 多 Q 网络    | 学习 Q 函数近似               |
+| 目标 Q 网络   | 实现策略改进保证                |
+| 数据增强（DA）  | 自然具备泛化能力                |
+| 辅助任务（aux） | 单一 contrastive 目标即可驱动学习 |
+
+---
+
+
 

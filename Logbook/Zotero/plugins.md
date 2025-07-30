@@ -5,14 +5,15 @@ updated: ...
 ---
 [[Zotero]]
 Untill [[2024-12-31]]  : About 10 plugins 
+Untill [[2025-07-30]]  : About 11 plugins  添加了 `Chartero`
 # Questions
 
 - [?] Plugins in Zotero
 
 
 # Answers
-![[Pasted image 20241231115141.png]]
 
+![[Pasted image 20250730160547.png]]
 ## GPT_Answers
 
 

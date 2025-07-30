@@ -1,0 +1,12 @@
+{
+  "vocabularyBooks": [
+    {
+      "path": "WordList/未命名.canvas",
+      "name": "未命名",
+      "enabled": true
+    }
+  ],
+  "showDefinitionOnHover": true,
+  "enableAutoHighlight": true,
+  "highlightStyle": "underline"
+}

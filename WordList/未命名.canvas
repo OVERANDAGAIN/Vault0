@@ -1,4 +1,7 @@
 {
-	"nodes":[],
+	"nodes":[
+		{"id":"b9c50c2cd4a5968f","x":-140,"y":-140,"width":400,"height":400,"type":"file","file":"WordList/test.md"},
+		{"id":"076aba4284926b7c","type":"text","text":"serendipity\n*alias1, alias2, alias3*\nn. The ability to make fortunate discoveries by accident\nExample: The discovery was pure serendipity.\n","x":10,"y":-240,"width":250,"height":60}
+	],
 	"edges":[]
 }

@@ -1,9 +1,4 @@
 {
-	"nodes":[
-		{"id":"8485637712cb6204","type":"text","text":"vword\n*alias1, alias2*\n\ndefinition or translation\n\n","x":260,"y":-140,"width":250,"height":320},
-		{"id":"076aba4284926b7c","type":"text","text":"serendipity\n*alias1,  alias3*\nn. The ability to make fortunate discoveries by accident\nExample: The discovery was pure serendipity.\n[[test]]\n","x":-120,"y":-240,"width":250,"height":260,"color":"3"}
-	],
-	"edges":[
-		{"id":"f0db00ed203755a4","fromNode":"8485637712cb6204","fromSide":"top","toNode":"076aba4284926b7c","toSide":"top"}
-	]
+	"nodes":[],
+	"edges":[]
 }

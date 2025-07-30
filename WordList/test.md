@@ -5,3 +5,6 @@ serendipity
 *alias1, alias2, alias3*
 n. The ability to make fortunate discoveries by accident
 Example: The discovery was pure serendipity.
+
+
+vword

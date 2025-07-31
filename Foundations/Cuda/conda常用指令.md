@@ -25,6 +25,10 @@ conda activate 环境名  # 进入指定环境（例如：conda activate myenv�
 # 创建新环境
 conda create -n myenv python=3.9 -y  # 创建名为 myenv 的环境，并指定 Python 版本为 3.9
 
+
+# 删除环境
+conda remove -n myenv --all  # 删除名为 myenv 的环境
+
 # 查看当前环境中的所有包
 conda list  # 列出当前环境中的所有包及版本
 
@@ -53,8 +57,7 @@ conda env export > environment.yml  # 将当前环境导出为 environment.yml �
 # 从文件创建新环境
 conda env create -f environment.yml  # 根据 environment.yml 文件创建环境
 
-# 删除环境
-conda remove -n myenv --all  # 删除名为 myenv 的环境
+
 
 # 搜索包
 conda search 包名  # 搜索指定包（例如：conda search scipy）

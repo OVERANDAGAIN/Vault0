@@ -50,7 +50,7 @@ updated: ...
 ````
 
 如何创建虚拟环境使其在指定位置 $\Longrightarrow$ 如D:\anaconda\envs\HOP 中，而不是C盘中的 .conda? 因为使用anaconda prompt会出现这种问题。[^1]
-#to_be_solved
+#to_be_solved---solved  : 见 
 
 1. `conda create` 创建环境 `python=` 指定 `python` 版本
    

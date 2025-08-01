@@ -3,7 +3,7 @@
 created: 2025-01-14T10:15
 updated: ...
 ---
-[[CUDA总结]]
+[[Conda]]
 
 # Sources
 

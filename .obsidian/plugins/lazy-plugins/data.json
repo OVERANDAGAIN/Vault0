@@ -119,6 +119,9 @@
       },
       "hi-words": {
         "startupType": "disabled"
+      },
+      "banyan": {
+        "startupType": "instant"
       }
     }
   }

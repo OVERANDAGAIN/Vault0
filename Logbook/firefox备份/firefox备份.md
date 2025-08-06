@@ -46,6 +46,8 @@ Firefox 的中文官方网站、中文社区网站以及 Firefox 在中国的账
 
 ```
 
+^c73833
+
 # Answers
 
 着手备份：[备份你的信息 \| Firefox 帮助](https://support.mozilla.org/zh-CN/kb/%E5%A4%87%E4%BB%BD%E4%BD%A0%E7%9A%84%E4%BF%A1%E6%81%AF?utm_source=www.firefox.com.cn&utm_medium=referral)[^1]

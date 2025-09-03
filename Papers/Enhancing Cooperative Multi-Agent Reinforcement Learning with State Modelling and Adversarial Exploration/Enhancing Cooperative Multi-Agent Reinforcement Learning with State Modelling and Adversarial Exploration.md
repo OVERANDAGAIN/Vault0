@@ -2,6 +2,7 @@
 
 # Inspiration
 ## Take-away Message
+变分性质 [[关于变分性质]]
 ## Inspiration for Us
 # Focus
 # Innovation

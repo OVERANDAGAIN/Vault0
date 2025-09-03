@@ -40,8 +40,7 @@ $$\log p(\mathbf{x})
 ==Why==?
 $$\log \mathbb{E}[X] 
        \;\ge\; 
-       \mathbb{E}[\log X] \quad (\text{因为 $\log$ 是上凸
-    函数})$$ 
+       \mathbb{E}[\log X] \quad (\text{因为 $\log$ 是concave(凹)函数})$$ 
 
 ````ad-help
 我们先把主要推导步骤捋清楚，然后再解释为何会用到 Jensen 不等式并且得到那个“$\ge$”号。

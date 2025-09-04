@@ -3,7 +3,7 @@
 created: 2024-12-18T20:35
 updated: ...
 ---
-[[PPO]]
+[[Papers/Proximal Learning With Opponent-Learning Awareness/PPO]]
 
 "Euclidean (L2) norm" 在中文中可以翻译为欧氏（L2）范数。它是向量空间中衡量向量大小的一种方式，通常用于计算一个向量的长度或距离。
 

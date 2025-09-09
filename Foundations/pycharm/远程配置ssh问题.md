@@ -72,7 +72,7 @@ rm -rf /tmp/pycharm_project_*   # 小心使用
 
 * **Interpreter**：`/home/fengxue/anaconda3/envs/cleanrl/bin/python`
 
-
+![[Pasted image 20250909205533.png]]
 
 
 ### 4）Run/Debug 配置核对
@@ -83,41 +83,10 @@ rm -rf /tmp/pycharm_project_*   # 小心使用
 
 ---
 
-## 验证清单
+	
 
-在代码开头临时加：
-
-```python
-import os, sys
-print("CWD =", os.getcwd())
-print("__file__ =", __file__)
-print("sys.path[0] =", sys.path[0])
-```
-
-期望输出：
-
-```
-CWD = /home/fengxue/hop_plus/...
-__file__ = /home/fengxue/hop_plus/...
-```
-
-断点应定位到 **本地工程文件**（例如 `E:\cleanRL\cleanrl\...`），而不是 `remote_sources` 或 `/tmp/pycharm_project_xxx`。
-
----
-
-## 常见坑位
-
-* **只配了 Deployment，忘了改解释器同步目录** → 仍复制到 `/tmp`。
-* **Path Mappings 漏配或不一致** → 堆栈无法映射回本地。
-* **Root path 设太高（/home/fengxue）** 且 Mappings 指错子目录 → 上传到错误位置。
-* **混用两种同步方式**（Deployment + Interpreter 的 `/tmp`）→ 路径冲突。
-
----
-
-## 一句话记忆
-
-> **唯一远程目录（`~/hop_plus`）+ 唯一路径映射（Deployment/Interpreter一致）+ 禁用/改掉 `/tmp`**
-> 断点自然回到本地文件。
+## 结果，可以看到debug停在本地项目python文件中，而不是过时的 remote_sources
+![[Pasted image 20250909205612.png]]
 
 
 ## DS_Answers

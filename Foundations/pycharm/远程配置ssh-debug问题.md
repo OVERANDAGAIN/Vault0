@@ -1,4 +1,4 @@
-[[pycharm]]]
+[[pycharm]]
 
 # Questions
 

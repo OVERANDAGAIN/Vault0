@@ -47,7 +47,7 @@ find ~/hop_plus/runs -maxdepth 2 -type f -name "events.out.tfevents.*" -ls
 ### 3）在远程启动 TensorBoard（绑定到本机环回地址）
 
 ```bash
-tensorboard --logdir ~/hop_plus/runs --host 127.0.0.1 --port 6006 --reload_interval 5
+tensorboard --logdir ~/hop_plus/cleanrl/runs/msh_rules_ns__1__1757583536 --host 127.0.0.1 --port 6006 --reload_interval 5
 ```
 
 > 不要用 `/tmp/pycharm_project_xxx`；统一用你新建的固定目录 `~/hop_plus/runs`。

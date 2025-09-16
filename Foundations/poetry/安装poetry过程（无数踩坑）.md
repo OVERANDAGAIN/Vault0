@@ -69,8 +69,8 @@ create = false
 ### ✅ 第 2 步：准备 Conda 环境并激活
 
 ```bash
-conda create -n cleanrl-tst python=3.8
-conda activate cleanrl-tst
+conda create -n cleanrl python=3.8
+conda activate cleanrl
 ```
 
 ---

@@ -35,7 +35,7 @@ updated: ...
 
 [手把手系列第一期-手把手带你跑通代码-创建conda环境-pycharm加载环境--以Informer举例-调参数-换数据集-文件结构目录\_哔哩哔哩\_bilibili](https://www.bilibili.com/video/BV1hZquY1E2p/?spm_id_from=333.337.search-card.all.click&vd_source=6c33cf6826337aad387874b66413aa72)
 
-
+Anaconda环境变量：
 ![[Pasted image 20250113211833.png]]
 
 ### 具体操作

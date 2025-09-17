@@ -1,7 +1,7 @@
 {
-  "canvasSize": 12000,
+  "canvasSize": 100000,
   "headLevel": 2,
-  "fontSize": 20,
+  "fontSize": 22,
   "background": "transparent",
   "layout": "mindmap",
   "layoutDirect": "mind map",

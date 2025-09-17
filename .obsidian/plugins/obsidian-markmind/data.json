@@ -1,10 +1,10 @@
 {
-  "canvasSize": 10000,
+  "canvasSize": 12000,
   "headLevel": 2,
-  "fontSize": 16,
+  "fontSize": 20,
   "background": "transparent",
   "layout": "mindmap",
-  "layoutDirect": "mindmap",
+  "layoutDirect": "mind map",
   "protocol": "jump-to-pdf",
   "registerPdfEvent": true,
   "viewerTheme": 2,
@@ -18,5 +18,6 @@
   "setup": 1737098717839,
   "uid": "00p01100r01100o01301201201001300t00q011",
   "useAnimate": true,
-  "removeSpace": false
+  "removeSpace": false,
+  "openCodeBlock": true
 }

@@ -21,7 +21,21 @@
 
 ## ✅ 最终推荐步骤（适配你系统：4090 + Windows + Poetry + CUDA 11.8 + Python 3.8）
 
----
+```http
+https://download.pytorch.org/whl/cu128
+```
+
+```http
+https://download.pytorch.org/whl/torchaudio/
+```
+
+```http
+https://download.pytorch.org/whl/torchvision/
+```
+
+```http
+https://download.pytorch.org/whl/torch/
+```
 
 ### 📄 1. 修改你的 `pyproject.toml`（PyTorch 相关内容）
 

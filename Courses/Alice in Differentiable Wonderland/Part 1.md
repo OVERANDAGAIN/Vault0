@@ -300,3 +300,119 @@ $$
 ---
 
 ![[Pasted image 20250923235448.png]]
+
+---
+---
+
+
+````ad-note
+非常好 👍，这页讲的是 **Jacobian（雅可比矩阵）**，它是梯度在高维函数中的自然推广。我帮你系统解释一下：
+
+---
+
+## 1. 背景：函数输入输出的维度
+
+* **标量函数**：
+  输入 $x \in \mathbb{R}^d$，输出 $y \in \mathbb{R}$。
+
+  * 梯度 $\nabla f(x)$ 是一个 **$d$-维向量**。
+
+* **向量函数**：
+  输入 $x \in \mathbb{R}^d$，输出 $y \in \mathbb{R}^o$。
+
+  * 每个输出分量 $y_i$ 都有自己的梯度（对输入的偏导）。
+  * 把这些梯度堆叠起来，就得到一个 **矩阵** —— 雅可比矩阵 (Jacobian)。
+
+---
+
+## 2. 定义：Jacobian 矩阵
+
+$$
+\partial f(x) =
+\begin{bmatrix}
+\frac{\partial y_1}{\partial x_1} & \cdots & \frac{\partial y_1}{\partial x_d} \\
+\vdots & \ddots & \vdots \\
+\frac{\partial y_o}{\partial x_1} & \cdots & \frac{\partial y_o}{\partial x_d}
+\end{bmatrix}
+\quad \sim (o,d)
+$$
+
+* 矩阵大小是 $(o, d)$。
+* 第 $i$ 行是输出 $y_i$ 对输入所有分量的梯度。
+
+特殊情况：
+
+* 当 $o=1$：Jacobian 就退化成梯度向量。
+* 当 $d=1$：Jacobian 就是普通的一维导数。
+
+---
+
+## 3. 重要性质：链式法则 (Composition)
+
+假设有复合函数 $f(g(x))$，那么它的 Jacobian 是：
+
+$$
+\partial [f(g(x))] = [\partial f(\cdot)] \, \partial g(x)
+$$
+
+这说明 **复合函数的导数就是两个 Jacobian 的矩阵乘法**。
+→ 这就是多元函数的 **链式法则**。
+
+在深度学习里，这正是 **反向传播 (backpropagation)** 的数学基础：每一层的梯度由 Jacobian 链式相乘得到。
+
+---
+
+## 4. 几何意义
+
+Jacobian 可以看作是函数在某点附近的 **最佳线性近似**：
+
+$$
+\tilde{f}(x) \approx f(x_0) + \partial f(x_0) (x - x_0)
+$$
+
+* 这其实就是 **Taylor 一阶展开**。
+* 意思是：在一个小邻域里，函数 $f$ 看起来就像一个线性变换，而这个变换由 Jacobian 矩阵给出。
+
+---
+
+## 5. 举个例子
+
+设
+
+$$
+f(x,y) =
+\begin{bmatrix}
+x^2 + y \\
+\sin(x) \\
+y^2
+\end{bmatrix}
+$$
+
+那么 Jacobian 是：
+
+$$
+J =
+\begin{bmatrix}
+2x & 1 \\
+\cos(x) & 0 \\
+0 & 2y
+\end{bmatrix}
+\quad (3 \times 2 \text{ 矩阵})
+$$
+
+解释：
+
+* 每一行对应一个输出的梯度。
+* Jacobian 捕捉了函数在输入空间 $(x,y)$ 到输出空间的「局部线性关系」。
+
+---
+
+✅ **总结**
+
+* Jacobian 是「多输出函数的梯度」，形状为 $(输出维度, 输入维度)$。
+* 它推广了偏导、梯度的概念。
+* Jacobian 的链式法则本质上就是矩阵乘法，这也是反向传播的核心。
+* 它给出了函数在某点附近的最佳线性近似（Taylor 一阶展开）。
+**PyTorch 代码**，算一个二维函数的 Jacobian，并验证链式法则？
+
+````

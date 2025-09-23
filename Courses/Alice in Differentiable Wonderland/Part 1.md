@@ -32,6 +32,8 @@ $$
 While Hadamard multiplication does not have all the interesting algebraic properties of standard matrix multiplication, it is commonly used in differentiable models for performing masking operations (e.g., setting some elements to zero) or scaling operations. Multiplicative interactions have also become popular in some recent families of models, as we will see next.
 
 ---
+---
+
 ```python
 X = torch.randn((5, 5))  
 X = torch.exp(X) # Element-wise exponential 
@@ -111,7 +113,6 @@ $$
 
 ---
 
-
 ---
 
 ing lower and upper indices, in which case we assume that the summation runs along the full axis:
@@ -125,3 +126,47 @@ In PyTorch and other frameworks, reduction operations correspond to methods havi
 ```python
 r = X.sum(axis=1)
 ```
+
+
+---
+
+---
+
+## 🔹 Asymptotic Analysis of Matrix Multiplication
+
+1. **Naive implementation**
+
+   * Matrix multiplication $Z = XY$, where
+
+     * $X$ has shape $(a, b)$
+     * $Y$ has shape $(b, c)$.
+   * To compute each element $Z_{ij}$, we need **b multiplications and b additions**.
+   * There are $a \times c$ such elements.
+   * Hence the total cost is:
+
+     $$
+     O(a \cdot b \cdot c)
+     $$
+
+   So the runtime grows linearly with respect to all three parameters.
+
+---
+
+2. **Special case: square matrices**
+
+   * If both matrices are $(n, n)$:
+
+     $$
+     O(n \cdot n \cdot n) = O(n^3)
+     $$
+   * This is why we say **naive matrix multiplication is cubic in the input dimension**.
+
+---
+
+3. **Beyond naive multiplication**
+
+   * Strassen’s algorithm: $O(n^{2.81})$
+   * Coppersmith–Winograd (and successors): $O(n^{2.37})$ (theoretical, ==not practical for most deep learning==).**(此事在Alice中亦有记载)**
+   * In practice, most frameworks (PyTorch, TensorFlow, NumPy) rely on optimized BLAS/LAPACK kernels (like Intel MKL, cuBLAS), which are still essentially $O(n^3)$ but with heavy optimizations (parallelization, cache efficiency, GPU acceleration).
+
+---

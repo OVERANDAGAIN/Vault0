@@ -1,3 +1,6 @@
+---
+创建时间: 2025-九月-23日  星期二, 8:42:54 晚上
+---
 [[Alice in Differentiable Wonderland]]
 
 
@@ -29,3 +32,9 @@ $$
 While Hadamard multiplication does not have all the interesting algebraic properties of standard matrix multiplication, it is commonly used in differentiable models for performing masking operations (e.g., setting some elements to zero) or scaling operations. Multiplicative interactions have also become popular in some recent families of models, as we will see next.
 
 ---
+```python
+X = torch.randn((5, 5))  
+X = torch.exp(X) # Element-wise exponential 
+X = torch.linalg.matrix_exp(X) # Matrix exponential
+```
+>Difference between the element-wise exponential of a matrix and the matrix exponential as defined in linear algebra textbooks. Specialized linear algebra operations are generally encapsulated in their own sub-package.

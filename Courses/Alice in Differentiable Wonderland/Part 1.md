@@ -272,3 +272,29 @@ Z = X @ Y                  # (3,5,3)
 
 
 ````
+
+---
+---
+
+
+文中定义了一个广义点积 (**Generalized Dot Product, GDT**)：
+
+$$
+\text{GDT}(X, Y) = \sum_{i,j,k} [X \odot Y]_{ijk}
+$$
+
+* 这里的 $\odot$ 表示 **Hadamard 乘法（逐元素乘法）**。
+* $[X \odot Y]_{ijk} = X_{ijk} Y_{ijk}$。
+* 最后再对所有索引 $i,j,k$ 进行求和。
+
+换句话说：
+
+$$
+\text{GDT}(X, Y) = \sum_{i,j,k} X_{ijk} Y_{ijk}
+$$
+
+> 直观理解:这其实就是「把两个张量展平成向量，再做一次普通的点积」。
+
+
+---
+

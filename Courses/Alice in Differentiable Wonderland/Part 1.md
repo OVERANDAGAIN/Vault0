@@ -112,3 +112,16 @@ $$
 ---
 
 
+---
+
+ing lower and upper indices, in which case we assume that the summation runs along the full axis:
+
+$$
+\sum_i x_i = \sum_{i=1}^n x_i
+$$
+
+In PyTorch and other frameworks, reduction operations correspond to methods having an **axis** argument:
+
+```python
+r = X.sum(axis=1)
+```

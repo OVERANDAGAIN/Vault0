@@ -1,3 +1,6 @@
+---
+创建时间: 2025-九月-23日  星期二, 6:59:09 晚上
+---
 [[HOP+迁移至cleanrl]]
 
 
@@ -95,88 +98,6 @@ from planning.mcts_moa import Node, RootParentNode, MCTS  # 兜底路径
 
 * ✅ **`target_prey` 类型**：必须传 `torch.Tensor`，不能传 numpy（否则下游 `unsqueeze` 报错）。
 * ✅ **`prev_state` 的读取**：用 `hist[-1]` 而不是把整个列表当成 state；历史为空时用 `get_initial_state()`（否则 `IndexError`）。
-
----
-
-# B) `run.py`
-
-## 1) CLI 注入 MCTS 超参
-
-* ✅ 新增参数：
-
-  * `--tree-num`、`--Q-temperature`、`--evaluation`
-  * （可选）`--mcts-sims`、`--mcts-depth`、`--mcts-cpuct`
-* ✅ 在 `make_hop_config(...)` 之后，把这些超参**回写**到配置：
-
-```python
-base_cfg.setdefault("ToM_config", {})
-base_cfg["ToM_config"].update({
-    "tree_num": args.tree_num,
-    "Q_temperature": args.Q_temperature,
-    "evaluation": args.evaluation,
-    "gamma": base_cfg["ToM_config"].get("gamma", 0.95),
-    "my_id": base_cfg["ToM_config"].get("my_id", 1),
-})
-base_cfg["mcts_config"] = {
-    "num_simulations": args.mcts_sims,
-    "max_depth": args.mcts_depth,
-    "c_puct": args.mcts_cpuct,
-    "temperature": args.Q_temperature,
-}
-for aid in cfg_by_agent:
-    cfg_by_agent[aid].setdefault("ToM_config", {})
-    cfg_by_agent[aid]["ToM_config"].update(base_cfg["ToM_config"])
-    cfg_by_agent[aid]["mcts_config"] = base_cfg["mcts_config"]
-```
-
-* （可选）把 `--wm_load_path` 默认调为 `None`，从源头关闭 WM。
-
-## 2) 策略初始化
-
-* **保持不变**（已经把 `env_creator` 传入，MCTS 需要它来 `set_state/__actionmask__`）：
-
-```python
-policy_dict[aid] = HOPPlusPolicy(
-    config=cfg_by_agent[aid],
-    env_creator=env_creator,
-    model_core=MyModel(base_cfg["model"]),
-    device=args.device,
-)
-```
-
----
-
-# C) 其他小修（非必须，但已给出建议）
-
-## 1) `model/omg_am.py` 的 tensor 拷贝 warning
-
-把：
-
-```python
-pre_action = th.tensor(action).to(th.long)
-```
-
-改为：
-
-```python
-if isinstance(action, th.Tensor):
-    pre_action = action.detach().clone().to(dtype=th.long)
-else:
-    pre_action = th.as_tensor(action, dtype=th.long)
-```
-
-## 2) `model/mcts_model.py::compute_priors_and_value`（鲁棒性可选）
-
-最前面兜底把 `subgoal` 转成 tensor（以防未来误传 numpy）：
-
-```python
-if isinstance(subgoal, np.ndarray):
-    subgoal = th.from_numpy(subgoal).float()
-elif not isinstance(subgoal, th.Tensor):
-    subgoal = th.tensor(subgoal, dtype=th.float32)
-subgoal = subgoal.to(self.device)
-subgoal = subgoal.unsqueeze(0)
-```
 
 ---
 

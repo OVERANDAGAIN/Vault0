@@ -170,3 +170,14 @@ r = X.sum(axis=1)
    * In practice, most frameworks (PyTorch, TensorFlow, NumPy) rely on optimized BLAS/LAPACK kernels (like Intel MKL, cuBLAS), which are still essentially $O(n^3)$ but with heavy optimizations (parallelization, cache efficiency, GPU acceleration).
 
 ---
+
+---
+
+As an example of the former, consider two tensors $X \sim (n,a,b)$ and $Y \sim (n,b,c)$.
+**Batched matrix multiplication (BMM)** is defined as:
+
+$$
+[\text{BMM}(X,Y)]_i = X_i Y_i \sim (n,a,c) \tag{E.2.9}
+$$
+
+Operations in most frameworks operate transparently on batched versions of their arguments, which are assumed like in this case to be **leading dimensions** (the first dimensions). For example, batched matrix multiplication in PyTorch is the same as standard matrix multiplication, see Box C.2.3.

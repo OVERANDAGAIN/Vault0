@@ -627,3 +627,21 @@ $$
 ---
 ---
 
+````ad-note
+##  下半部分：非凸模型和凸模型的对比
+
+> *“non-trivial model is non-convex … This is in contrast to … support vector machines, which maintain non-linearity while allowing for convex optimization.”*
+
+解释：
+
+* **非平凡的模型（比如神经网络）**：大多数都是 **非凸的**，因此优化中会有多个停点（局部最小值、鞍点）。
+* **凸优化的优势**：
+
+  * 比如 SVM，虽然模型可以引入非线性（通过核函数），但它的优化问题仍然是 **凸优化**。
+  * 凸优化只有一个全局最优点，所以更容易解。
+* **现实中的经验**：
+
+  * 尽管非凸问题很难保证全局最优，
+  * 但在实践中（比如深度学习），只要初始化合理，优化算法（SGD、Adam）往往还是能收敛到一个 **效果不错的点**，在经验性能上足够好。
+````
+

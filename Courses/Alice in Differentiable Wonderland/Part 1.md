@@ -703,3 +703,71 @@ $$
 ---
 
 
+````ad-note
+
+### 3. 与 KL 散度的关系
+
+事实上，可以证明：
+
+$$
+s^* = \arg\max_s \mathbb{E}_{x \sim p(x)} [\log f(x; s)]
+$$
+
+等价于：
+
+$$
+s^* = \arg\min_s D_{\text{KL}}(p(x) \, \| \, f(x; s)),
+$$
+
+也就是：**极大似然估计等价于最小化真实分布和模型分布的 KL 散度**。
+
+换句话说，MLE 选出的分布参数，是在 KL 意义下最接近真实分布的那个。
+
+---
+推导很短也很关键。设真实分布为 $p(x)$，模型族为 $f(x;s)$。定义 **KL 散度**（离散/连续只差积分号）：
+
+$$
+D_{\mathrm{KL}}\!\left(p \,\|\, f(\cdot;s)\right)
+= \mathbb{E}_{x\sim p}\!\left[\log \frac{p(x)}{f(x;s)}\right]
+= \mathbb{E}_{p}[\log p(x)] - \mathbb{E}_{p}[\log f(x;s)] .
+$$
+
+注意两点：
+
+1. $\mathbb{E}_{p}[\log p(x)]$ **与参数 $s$ 无关**；
+2. 为使 KL 有限，需要假设：只要 $p(x)>0$ 则 $f(x;s)>0$（即 $\mathrm{supp}(p)\subseteq \mathrm{supp}(f)$）。
+
+因此，对任意可行 $s$,
+
+$$
+\arg\min_{s} D_{\mathrm{KL}}\!\left(p \,\|\, f(\cdot;s)\right)
+= \arg\min_{s}\Big(\mathbb{E}_{p}[\log p(x)]-\mathbb{E}_{p}[\log f(x;s)]\Big)
+= \arg\max_{s}\mathbb{E}_{p}[\log f(x;s)] .
+$$
+
+这就得到
+
+$$
+s^*=\arg\max_{s}\mathbb{E}_{x\sim p}[\log f(x;s)]
+\quad \Longleftrightarrow \quad
+s^*=\arg\min_{s} D_{\mathrm{KL}}\!\left(p \,\|\, f(\cdot;s)\right).
+$$
+
+---
+
+### 与 MLE 的关系（样本近似）
+
+有 $n$ 个 i.i.d. 样本 $\{x_i\}_{i=1}^n\sim p$。由大数定律，
+
+$$
+\mathbb{E}_{p}[\log f(x;s)]
+\approx \frac{1}{n}\sum_{i=1}^n \log f(x_i;s) .
+$$
+
+于是最大化期望对数似然等价于最大化**经验对数似然**（即 MLE）；而这又等价于最小化 $D_{\mathrm{KL}}(p\|f(\cdot;s))$ 的经验近似。
+
+````
+
+---
+---
+

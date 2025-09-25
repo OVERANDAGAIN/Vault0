@@ -4,13 +4,14 @@
 [[Alice in Differentiable Wonderland]]
 
 
-
+# vector计算技巧
+## 与1点积
 We close with two additional observations that will be useful. First, we can write the sum of the elements of a vector as its dot product with a vector 1 composed entirely of ones:
 
 $$
 \langle x, 1 \rangle = \sum_{i=1}^{d} x_i
 $$
-
+## 向量距离
 Second, the distance between two vectors can also be written in terms of their dot products:
 
 $$
@@ -22,6 +23,7 @@ The case $y = 0$ gives us $\|x\|^2 = \langle x, x \rangle$. Both equations can b
 ---
 
 ---
+
 
 **Definition D.2.4 (Hadamard multiplication)** *The Hadamard multiplication of two matrices of the same shape is done element-wise:*
 

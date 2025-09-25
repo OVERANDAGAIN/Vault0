@@ -11,7 +11,7 @@ updated: ...
 - [?] anaconda_python_torch_pycharm配置
 
 - [?] 安装了torch之后显示仍然 `torch.is_available() = false ` （安装的是cpu版本的pytorch，只有200MB左右， GPU版的才有1G左右）
-![[Pasted image 20250114100814.png]]
+![[Pasted image 20250114100814.png|850]]
 
 # Errors
 ```bash

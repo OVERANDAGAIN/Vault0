@@ -4,5 +4,7 @@
   "accentColor": "",
   "enabledCssSnippets": [
     "image"
-  ]
+  ],
+  "baseFontSizeAction": true,
+  "baseFontSize": 19
 }

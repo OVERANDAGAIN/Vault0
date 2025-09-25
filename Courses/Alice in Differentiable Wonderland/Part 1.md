@@ -447,7 +447,55 @@ $$
 ![[Pasted image 20250923235448.png]]
 
 ## 证明
+````ad-tip
+可以用“把沿着方向 $\mathbf v$ 的一维曲线拉出来”来证。
+令
 
+$$
+g(t)=f(\mathbf x+t\mathbf v),\qquad t\in\mathbb R .
+$$
+
+则 $g(t)$ 就是把多元函数 $f$ 限制到经过点 $\mathbf x$ 且方向为 $\mathbf v$ 的直线上。**方向导数**按定义是
+
+$$
+D_{\mathbf v}f(\mathbf x)=\left.\frac{d}{dt}g(t)\right|_{t=0}
+=\left.\frac{d}{dt}f(\mathbf x+t\mathbf v)\right|_{t=0}.
+$$
+
+对 $g$ 用链式法则（或一阶泰勒展开）：
+
+$$
+\frac{d}{dt}f(\mathbf x+t\mathbf v)
+=\sum_{i=1}^d \frac{\partial f}{\partial x_i}(\mathbf x+t\mathbf v)\,\frac{d}{dt}(x_i+t v_i)
+=\sum_{i=1}^d \frac{\partial f}{\partial x_i}(\mathbf x+t\mathbf v)\,v_i .
+$$
+
+在 $t=0$ 处取值，得到
+
+$$
+D_{\mathbf v}f(\mathbf x)
+=\sum_{i=1}^d \frac{\partial f}{\partial x_i}(\mathbf x)\,v_i
+=\nabla f(\mathbf x)\cdot \mathbf v.
+$$
+
+等价地，也可从极限定义出发：
+
+$$
+D_{\mathbf v}f(\mathbf x)
+=\lim_{h\to 0}\frac{f(\mathbf x+h\mathbf v)-f(\mathbf x)}{h}
+\overset{\text{泰勒}}=
+\lim_{h\to 0}\frac{h\,\nabla f(\mathbf x)\cdot \mathbf v+o(h)}{h}
+=\nabla f(\mathbf x)\cdot \mathbf v.
+$$
+
+这就证明了
+
+$$
+D_{\mathbf v}f(\mathbf x)=\langle \nabla f(\mathbf x),\mathbf v\rangle
+=\sum_i \partial_{x_i}f(\mathbf x)\,v_i.
+$$
+
+````
 
 ---
 ---

@@ -65,7 +65,9 @@ $$
 
 ### 扩展：三种范数 正则化
 [如何通俗易懂地解释「范数」？](https://www.zhihu.com/tardis/zm/art/26884695?source_id=1003)[^1]
+
 ````ad-info
+
 
 # 📑 范数与正则化总结
 
@@ -74,6 +76,7 @@ $$
 * **数学工具**：用来度量向量/矩阵的“大小”或“复杂度”。
 * 常见范数：
 
+  * **$L^0$ “范数”**：$\|x\|_0 = \#\{i : x_i \neq 0\}$ → 表示向量中非零元素的个数，直接衡量稀疏性（严格来说不是数学意义上的范数，但常用于稀疏建模）。
   * **$L^1$ 范数**：$\|x\|_1 = \sum |x_i|$ → 强调稀疏性。
   * **$L^2$ 范数**：$\|x\|_2 = \sqrt{\sum x_i^2}$ → 几何上表示长度，平滑。
   * **$L^\infty$ 范数**：$\|x\|_\infty = \max |x_i|$ → 衡量“最大偏移量”，最坏情况。
@@ -84,6 +87,7 @@ $$
 
 * **几何形状不同**：
 
+  * $\|x\|_0 \le 1$：只允许最多 1 个非零元素 → 单位球是坐标轴上的稀疏点集。
   * $\|x\|_2 \le 1$：圆 / 球。
   * $\|x\|_1 \le 1$：菱形 / 多面体。
   * $\|x\|_\infty \le 1$：正方形 / 立方体。
@@ -106,6 +110,14 @@ $$
   * $\lambda$：平衡系数。
 
 ### 典型例子
+
+* **L0 正则化**
+
+  $$
+  R(\theta) = \|\theta\|_0
+  $$
+
+  → 强制稀疏（只保留少量非零参数），但优化问题是 NP-hard，通常用 L1 来近似。
 
 * **L2 正则化（Ridge 回归）**
 
@@ -143,20 +155,22 @@ $$
 * 范数 = **尺子**（度量大小的工具）。
 * 正则化 = **规则**（训练时用尺子惩罚过于复杂的解）。
 
+
+
 ````
 
 
 ---
 ---
 
-
+# Hadamard multiplication
 **Definition D.2.4 (Hadamard multiplication)** *The Hadamard multiplication of two matrices of the same shape is done element-wise:*
 
 $$
 [X \odot Y]_{ij} = X_{ij} Y_{ij}
 $$
 
-While Hadamard multiplication does not have all the interesting algebraic properties of standard matrix multiplication, it is commonly used in differentiable models for performing masking operations (e.g., setting some elements to zero) or scaling operations. Multiplicative interactions have also become popular in some recent families of models, as we will see next.
+While Hadamard multiplication does not have all the interesting algebraic properties of standard matrix multiplication, it is commonly used in differentiable models for performing ==masking operations== (e.g., setting some elements to zero) or ==scaling operations==. Multiplicative interactions have also become popular in some recent families of models, as we will see next.
 
 ---
 ---

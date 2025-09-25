@@ -19,9 +19,51 @@ $$
 $$
 
 The case $y = 0$ gives us $\|x\|^2 = \langle x, x \rangle$. Both equations can be useful when writing equations or in the code.
+```ad-tip
+
+### 1. 从定义出发
+
+向量的欧几里得距离平方定义为：
+
+$$
+\|x-y\|^2 = (x-y)^\top (x-y)
+$$
 
 ---
 
+### 2. 展开乘法
+
+$$
+(x-y)^\top (x-y) = x^\top x - 2x^\top y + y^\top y
+$$
+
+---
+
+### 3. 用内积符号改写
+
+* $x^\top x = \langle x, x \rangle$
+* $y^\top y = \langle y, y \rangle$
+* $x^\top y = \langle x, y \rangle$
+
+所以：
+
+$$
+\|x-y\|^2 = \langle x, x \rangle + \langle y, y \rangle - 2 \langle x, y \rangle
+$$
+
+---
+
+### 4. 特殊情况 $y=0$
+
+$$
+\|x - 0\|^2 = \langle x, x \rangle
+$$
+
+这其实就是 **范数的平方等于向量和自己做点积**。
+```
+
+
+---
 ---
 
 

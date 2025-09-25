@@ -19,6 +19,7 @@ $$
 $$
 
 The case $y = 0$ gives us $\|x\|^2 = \langle x, x \rangle$. Both equations can be useful when writing equations or in the code.
+### 证明
 ```ad-tip
 
 ### 1. 从定义出发
@@ -61,6 +62,9 @@ $$
 
 这其实就是 **范数的平方等于向量和自己做点积**。
 ```
+
+### 扩展：三种范数
+
 
 
 ---

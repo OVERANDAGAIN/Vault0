@@ -174,6 +174,8 @@ While Hadamard multiplication does not have all the interesting algebraic proper
 
 ---
 ---
+# 元素指数与矩阵指数
+连续时间演化的解？
 
 ```python
 X = torch.randn((5, 5))  
@@ -255,7 +257,7 @@ $$
 ---
 
 ---
-
+# 按axis的sum
 ing lower and upper indices, in which case we assume that the summation runs along the full axis:
 
 $$
@@ -273,7 +275,7 @@ r = X.sum(axis=1)
 
 ---
 
-## 🔹 Asymptotic Analysis of Matrix Multiplication
+# 矩阵运算复杂度
 
 1. **Naive implementation**
 
@@ -308,12 +310,12 @@ r = X.sum(axis=1)
 
    * Strassen’s algorithm: $O(n^{2.81})$
    * Coppersmith–Winograd (and successors): $O(n^{2.37})$ (theoretical, ==not practical for most deep learning==).**(此事在Alice中亦有记载)**
-   * In practice, most frameworks (PyTorch, TensorFlow, NumPy) rely on optimized BLAS/LAPACK kernels (like Intel MKL, cuBLAS), which are still essentially $O(n^3)$ but with heavy optimizations (parallelization, cache efficiency, GPU acceleration).
+   * In practice, most frameworks (PyTorch, TensorFlow, NumPy) rely on optimized BLAS/LAPACK kernels (like Intel MKL, cuBLAS), ==which are still essentially $O(n^3)$ but with heavy optimizations== (parallelization, cache efficiency, GPU acceleration).
 
 ---
 
 ---
-
+# 批次矩阵乘法: `matmul` or `mm`
 As an example of the former, consider two tensors $X \sim (n,a,b)$ and $Y \sim (n,b,c)$.
 **Batched matrix multiplication (BMM)** is defined as:
 
@@ -323,7 +325,9 @@ $$
 
 Operations in most frameworks operate transparently on batched versions of their arguments, which are assumed like in this case to be **leading dimensions** (the first dimensions). For example, batched matrix multiplication in PyTorch is the same as standard matrix multiplication, see Box C.2.3.
 ```python
-X = torch.randn((4, 5, 2)) Y = torch.randn((4, 2, 3)) (torch.matmul(X, Y)).shape # Or X @ Y # [Out]: (4, 5, 3)
+X = torch.randn((4, 5, 2)) 
+Y = torch.randn((4, 2, 3)) 
+(torch.matmul(X, Y)).shape # Or X @ Y # [Out]: (4, 5, 3)
 ```
 
 ````ad-hint
@@ -416,7 +420,7 @@ Z = X @ Y                  # (3,5,3)
 
 ---
 ---
-
+# 广义点积
 
 文中定义了一个广义点积 (**Generalized Dot Product, GDT**)：
 

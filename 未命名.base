@@ -1,6 +1,8 @@
 filters:
   and:
     - file.ext != "png"
+    - and:
+        - file.ext != "jpg"
 views:
   - type: table
     name: 表格

@@ -1508,6 +1508,12 @@ $$
 ---
 
 
+方法进化： 单独回归整数数值 $\Longrightarrow$ 使用区间round $\Longrightarrow$ 使用独热编码
+进化原因： 难以微分，梯度为0 $\Longrightarrow$ 模型可能提取到错误信息：class2与class4相比，与class3更近
+
+---
+---
+
 
 
 

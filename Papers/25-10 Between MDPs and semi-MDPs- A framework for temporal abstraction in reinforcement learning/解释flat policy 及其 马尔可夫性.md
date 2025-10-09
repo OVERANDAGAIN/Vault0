@@ -8,136 +8,110 @@ p7
 # Answers
 
 ## GPT_Answers
-好的，我来解释一下这里的 **flat policy** 在 semi-MDP 框架下的含义。
+好的，我来帮你把前面对 **flat policy** 和 **马尔可夫性** 的解释重新整理成一个统一、规范的说明版本（公式都按 `$…$` 规则输出）：
 
 ---
 
-### 背景：Policies over Options
+# Flat Policy 与 Markov 性
 
-在半马尔可夫决策过程Semi-MDP, SMDP中，我们通常不直接在原子动作 primitive actions 上建模，而是定义更高层的 **options$选项$**。
-一个 **option** 可以看作一个“子策略”，它从某个状态启动，然后持续执行一系列动作，直到达到它的终止条件。
+## 背景：Policies over Options
 
-于是就有了两层决策：
+在 **Semi-MDP (SMDP)** 中，agent 的决策并不总是直接作用于 **原子动作 $a \in \mathcal{A}$**，而是通过更高层的 **options (选项)**。
 
-1. **policy over options $μ$**：在状态 $s_t$ 下选择哪个 option $o$。
-2. **option policy**：在 option 内部，决定每一步执行什么 primitive action。
+一个 **option $o$** 本质上是一个“子策略”，它从某状态启动，然后在内部执行一系列原子动作，直到达到终止条件。
+这就产生了两层决策：
 
----
+1. **高层策略 (policy over options)**：
+   $\mu : \mathcal{S} \to \mathcal{O}$，在状态 $s_t$ 下选择 option $o$。
 
-### Flat Policy 的定义
-
-论文中说：
-
-> In this way a policy over options, μ, determines a conventional policy over actions, or flat policy, $\pi = \text{flat}$\mu.
-
-意思是：
-虽然表面上 agent 选择的是 **option**，但是由于 option 本身会映射到一连串的 primitive actions，最终在整个环境中表现出来的，依然是一个 **直接映射 state → action 的普通策略**。
-
-这个从 policy over options “展开”得到的普通动作层面的策略，就是 **flat policy**。
+2. **option 内部策略**：
+   在 option 内部，每个时间步决定执行的 primitive action。
 
 ---
 
-### 举个例子
+## Flat Policy 的定义
 
-* 设有两个 option：
+由于每个 option 最终都会映射为一连串原子动作，从环境的角度看，agent 还是在执行一个 **state → action** 的普通策略。
+因此我们可以定义：
 
-  * $o_1$：往前走 5 步。
-  * $o_2$：转左，然后往前走 2 步。
+$$
+\pi = \text{flat}(\mu)
+$$
 
-* 如果 agent 的 **policy over options μ** 在某个状态下选择 $o_1$，那么从环境角度看，它实际上就是执行了 “前进、前进、前进、前进、前进”。
-
-* 于是我们可以定义一个等价的“扁平化策略 $flat policy$” $\pi$，它直接把状态映射到原子动作$而不需要显式地再提 option 的概念$。
-
----
-
-### 总结
-
-* **policy over options $μ$**：在高层次上决定要执行哪个 option。
-* **flat policy $π = flat$μ$$**：把 option 内部执行的所有 primitive actions 展开，相当于一个标准的 MDP 策略。
-
-这样就能在 semi-MDP 框架和普通 MDP 框架之间建立联系。
-
-
-## DS_Answers
-
-
-## Other_Answers
-
-# 马尔可夫性
-
-
-
-好的，我们逐句来分析这段话里关于 **马尔可夫性 $Markov property$** 的说明：
+即把 policy over options $\mu$ 展开到原子动作层面的等价策略，这个策略被称为 **flat policy**。
 
 ---
 
-### 1. **“policies over options, which include flat policies as a special case”**
+## 举例
 
-* 意思是：一个 **policy over options $μ$** 可以看作是更一般的策略框架，**flat policy $π$** 只是其中的一种特例。
+* $o_1$：前进 5 步。
+* $o_2$：左转，然后前进 2 步。
 
-  * flat policy 相当于 “option = primitive action”，即 option 没有时间延展性，执行一步就终止。
+如果 agent 在某个状态下选了 $o_1$，从环境角度看，它就等价于执行
+“前进 → 前进 → 前进 → 前进 → 前进”。
 
----
-
-### 2. **“even if a policy is Markov and all of the options it selects are Markov”**
-
-* 这里假设两件事都成立：
-
-  1. **高层策略 μ**：选择 option 的规则是马尔可夫的$只依赖当前状态$。
-  2. **option 本身**：每个 option 的内部子策略也是马尔可夫的$只依赖当前状态$。
-
-从理论上看，好像这应该保证整个过程的 Markov 性。
+因此我们可以定义一个等价的 **flat policy $\pi$**，它直接决定原子动作，而无需显式地再引入 option 的概念。
 
 ---
 
-### 3. **“the corresponding flat policy is unlikely to be Markov if any of the options are multi-step”**
+## Flat Policy 与 Markov 性
 
-* 关键点来了：如果 **option 是时间延展的$multi-step$**，那么 **flat policy π**$把整个策略展开到原子动作层面$就很可能 **不是马尔可夫的**。
+### 1. 特殊情况：Flat Policy 是 Markov 的
 
-**为什么？**
-因为在执行一个 multi-step option 时，agent 在状态 $s_t$ 下的动作选择，取决于“这个 option 之前是怎么被选出来的，以及已经执行到第几步”。
-也就是说：
+当所有 option 都是 **primitive action（一步即终止）** 时，flat policy $\pi$ 就是标准的 Markov 策略：
+$$
+P(a_t \mid s_t) .
+$$
 
-* 不仅仅是 $s_t$ 决定当前 action，
-* 还取决于 **option 的内部进程**。
+### 2. 一般情况：Flat Policy 往往不是 Markov 的
 
-这等价于引入了“记忆”，因此失去了 Markov 性。
+即便：
+
+* 高层策略 $\mu$ 是 Markov 的（只依赖当前状态 $s_t$），
+* 每个 option 的内部策略也是 Markov 的，
+
+flat policy 仍然**不一定是 Markov 的**，只要存在 **multi-step option（时间延展的选项）**。
+
+原因是：
+
+* 在状态 $s_\tau$ 下，动作的选择不仅依赖于 $s_\tau$，
+* 还依赖于 **此刻正在执行的 option 以及它的内部进程**。
+
+因此，flat policy 的动作分布实际是：
+$$
+P(a_\tau \mid s_\tau) = \sum_{o} P(a_\tau \mid s_\tau, o_{\text{active}}, i); P(o_{\text{active}}, i \mid h_\tau),
+$$
+
+其中：
+
+* $o_{\text{active}}$：当前正在执行的 option，
+* $i$：该 option 已经执行的步数，
+* $h_\tau$：自策略启动以来的历史。
+
+这表明 flat policy 依赖于 **历史 $h_\tau$**，而不仅仅是 $s_\tau$。
+
+### 3. 如何恢复 Markov 性
+
+如果我们把扩展状态定义为：
+$$
+(s_\tau, o_{\text{active}}, i),
+$$
+那么在这个扩展状态空间中，flat policy 又重新满足 Markov 性。
 
 ---
 
-### 4. **“The action selected by the flat policy in state $s_\tau$ depends not just on $s_\tau$ but on the option being followed at that time”**
+## 总结
 
-* 在 flat policy 下：
+* **policy over options $\mu$**：高层次的决策，选择 option。
+* **flat policy $\pi = \text{flat}(\mu)$**：展开 option 后的等价动作层策略。
+* **Markov 性差异**：
 
-  * 状态 $s_\tau$ 还不足以确定动作；
-  * 你还需要知道 agent 现在正在执行哪个 option$以及它执行到哪一步$。
-
-因此 flat policy 的决策依赖的不仅是当前状态，还依赖一个“隐藏变量”$正在运行的 option$。
-
----
-
-### 5. **“and this depends stochastically on the entire history $h_{\tau}$ since the policy was initiated”**
-
-* 因为当前 option 是根据之前的 **policy over options μ** 选择出来的，而 μ 的选择依赖之前的状态序列，
-* 所以最终 flat policy 在 $s_\tau$ 下的动作，其实是 **随机依赖于整个历史轨迹 $h_\tau$**。
-
-换句话说：
-flat policy **在原始状态空间 S 上不是 Markov 的**，而是在 **扩展状态空间 $S × 当前 option × 进程$** 上才是 Markov 的。
+  * 当 option = primitive action 时，$\pi$ 在 $S$ 上是 Markov 的；
+  * 当 option 是 multi-step 时，$\pi$ 在 $S$ 上不是 Markov 的，而需要在扩展状态 $(s, o, i)$ 上才能恢复 Markov 性。
 
 ---
 
-✅ **总结一句话**：
-即使 policy over options 和每个 option 都是 Markov 的，flat policy 仍然可能失去 Markov 性，因为 multi-step options 引入了“时间延展性”和“历史依赖”。
-只有在所有 option 都是 **primitive action**$一步即终止$时，flat policy 才是 Markov 的。
-
----
-
-要不要我帮你画一张对比图：
-
-* **Markov 的 flat policy**$仅 primitive action$
-* **非 Markov 的 flat policy**$multi-step option$
-
-这样可以更直观地看到为什么会失去 Markov 性。
+要不要我帮你把 **flat policy 在 Markov / 非 Markov 情况下的对比图**画出来？直观展示为什么多步 option 会引入历史依赖。
 
 # Codes
 

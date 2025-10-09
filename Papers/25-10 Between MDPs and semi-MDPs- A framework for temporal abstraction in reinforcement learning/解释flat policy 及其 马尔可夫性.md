@@ -111,7 +111,6 @@ $$
 
 ---
 
-要不要我帮你把 **flat policy 在 Markov / 非 Markov 情况下的对比图**画出来？直观展示为什么多步 option 会引入历史依赖。
 
 # Codes
 

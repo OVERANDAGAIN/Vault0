@@ -1,6 +1,16 @@
-当然。下面是**完整的 MDP 与 SMDP（options 框架）Bellman 方程**，同时给出 **$V$ 函数**与**$Q$ 函数**的期望形式与最优形式（全部使用 `$` 或 `$$` 包裹的公式格式）。
-
 ---
+创建时间: 2025-十月-11日  星期六, 10:25:27 晚上
+---
+[[25-10 Between MDPs and semi-MDPs-A framework for temporal abstraction in reinforcement learning]]
+
+# Questions
+
+- [?] 
+
+
+# Answers
+
+## GPT_Answers
 
 ## 🧩 一、普通 MDP
 
@@ -123,4 +133,18 @@ $$
 
 ---
 
-是否希望我再帮你把这组 MDP vs SMDP 的方程对照制成表格式 LaTeX 源码（适合直接放进论文或笔记）？
+
+## DS_Answers
+
+
+## Other_Answers
+
+
+# Codes
+
+```python
+
+```
+
+
+# FootNotes

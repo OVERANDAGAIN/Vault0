@@ -66,7 +66,7 @@ $$
   ]
   where ( \mathcal{S} ) is the state space, ( \mathcal{A}_i ) the action space of agent ( i ),
   ( P ) the transition function, and ( r_i ) the individual reward.
-* Each agent learns a policy ( \pi_i(a_i|s) ) to maximize its expected cumulative reward:
+* Each agent learns a policy (  ) to maximize its expected cumulative reward:
   [
   J_i = \mathbb{E}!\left[\sum_t \gamma^t r_i(s_t, a_t^1, \dots, a_t^N)\right]
   ]

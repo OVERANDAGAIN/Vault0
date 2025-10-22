@@ -15,7 +15,8 @@ adaptation $\Longrightarrow$ 实际应用
 
 
 # Definition 
-标准的Markov Game (MDP)，一些符号定义：状态空间，动作空间，转移函数，策略，奖励函数，折扣
+标准的Markov Game (MDP)，一些符号定义：状态空间，动作空间，转移函数，策略，奖励函数，折扣 （多智能体交互总体问题）
+
 
 
 # Insights

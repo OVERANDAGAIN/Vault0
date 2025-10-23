@@ -176,6 +176,8 @@ cave+moa $\Longrightarrow$ maybe ，因为展现的是cvae+moa的表现，融合
 
 
 
+Dafoe A, Hughes E, Bachrach Y, et al. Open problems in cooperative AI[J]. arXiv preprint arXiv:2012.08630, 2020.
+
 
 
 # Limitations

@@ -91,7 +91,7 @@ $$
 按是否中断将条件期望拆分：
 $$
 \mathbb E[\cdot\mid \mathcal E(o',s)]
-=====================================
+========
 
 \mathbb E[\cdot\mid h\notin\Gamma]\mathbb P(h\notin\Gamma)
 +\mathbb E[\cdot\mid h\in\Gamma]\mathbb P(h\in\Gamma).
@@ -143,7 +143,7 @@ $$
 $$
 将其视作 Bellman 型递推不等式并迭代展开（或用不动点比较法），可知
 $$
-V^{\mu'}(s)\geV^{\mu}(s)\qquad \forall s\in S,
+V^{\mu'}(s)\ge V^{\mu}(s)\qquad \forall s\in S,
 $$
 且若 $\mathbb P(h\in\Gamma)>0$，则存在 $s$ 使
 $$
@@ -156,7 +156,12 @@ $$
 
 * 在保持“同一状态下对 option 的选择分布不变”的前提下，仅通过“在 $Q^{\mu}(h,o)<V^{\mu}(s)$ 时提前终止”的**中断规则**，即可保证每个状态的单步 Bellman 更新不劣，从而全局上
   $$
-  V^{\mu'}\geV^{\mu},
+  V^{\mu'}\ge V^{\mu},
   $$
   且中断以正概率发生时存在严格改进。
 * 关键技巧：把执行期望拆分为“未中断/中断”两类历史，分别与原执行对齐（等式）与基于触发条件的改进（不等式），再外层加权、迭代推广。
+
+
+
+
+

@@ -13,7 +13,7 @@ MDP+option=SMDP（Semi-MDP),其本质就是建模了一个更高层次的option�
 
 
 在SMDP中，option内部的累积reward与state transition以折扣形式加权，保证option作为高层action仍保持与MDP一致的马尔可夫结构。
-nterruption 是一种“on-policy improvement”机制，允许 agent 动态放弃低价值option，从而在不增加额外学习成本的情况下提升策略性能
+interruption 是一种“on-policy improvement”机制，允许 agent 动态放弃低价值option，从而在不增加额外学习成本的情况下提升策略性能
 # Focus
 
 在这篇论文： Hierarchical Reinforcement Learning: A Survey and Open Research Challenges 中提到的分层建模的综述，提到了以下方法： Discovering hierarchy in reinforcement learning with HEXQ，其许多基础概念来源于本论文： 
@@ -32,7 +32,7 @@ Between MDPs and **semi-MDPs**: A framework for temporal abstraction in reinforc
 讨论了SMDP下的：
 - 贝尔曼方程
 - 环境建模（<span style="background:#affad1">折扣版本的reward和dynamics</span>)
-- interruption机制，即若允许option终止会发生什么
+- interruption机制，agent 可以主动中断当前option并切换到更高价值的option（证明了这样做不会降低期望回报，且通常能提升。
 - subgoal机制（但这里的subgoal仍然是静态和手工制定的，不太清楚这里和option的区别？）
 # Formulation
 # Background

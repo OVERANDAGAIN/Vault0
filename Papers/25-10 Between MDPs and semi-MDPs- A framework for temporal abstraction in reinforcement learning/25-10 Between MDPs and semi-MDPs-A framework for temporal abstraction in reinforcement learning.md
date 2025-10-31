@@ -33,6 +33,9 @@ Between MDPs and **semi-MDPs**: A framework for temporal abstraction in reinforc
 - 贝尔曼方程
 - 环境建模（<span style="background:#affad1">折扣版本的reward和dynamics</span>)
 - interruption机制，agent 可以主动中断当前option并切换到更高价值的option（证明了这样做不会降低期望回报，且通常能提升。
+- intra-option learning
+	- 即使option尚未执行完，也可以根据“执行片段”更新option的模型与价值；
+	- 并且可以同时学习多个option的价值（off-policy）
 - subgoal机制（但这里的subgoal仍然是静态和手工制定的，不太清楚这里和option的区别？）
 # Formulation
 # Background

@@ -1,3 +1,6 @@
+---
+创建时间: 2025-十月-9日  星期四, 8:25:27 晚上
+---
 #paper_summary 
 
 # Inspiration
@@ -22,7 +25,7 @@ Between MDPs and **semi-MDPs**: A framework for temporal abstraction in reinforc
 讨论了SMDP下的：
 - 贝尔曼方程
 - 环境建模（<span style="background:#affad1">折扣版本的reward和dynamics</span>)
-- interuption机制，即若允许option终止会发生什么
+- interruption机制，即若允许option终止会发生什么
 - subgoal机制（但这里的subgoal仍然是静态和手工制定的，不太清楚这里和option的区别？）
 # Formulation
 # Background
@@ -30,5 +33,6 @@ Between MDPs and **semi-MDPs**: A framework for temporal abstraction in reinforc
 # Methodology
 # Evaluation
 # Results
+![[Pasted image 20251031215504.png]]
 # Limitations
 # FootNotes

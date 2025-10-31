@@ -5,8 +5,11 @@
 
 # Inspiration
 ## Take-away Message
-MDP+option=SMDP（Semi-MDP),其本质就是建模了一个更高层次的option，一旦选择了一个option,就需要在一段时期内执行完他其中包含的所有原子动作。作者还讨论了interruption机制，即假如option可以终止会发生什么。
-该框架证明了“temporally abstract actions”可以在不改变RL基本收敛理论（Bellman equation, Q-learning）的前提下统一建模。
+MDP+option=SMDP（Semi-MDP),其本质就是建模了一个更高层次的option，一旦选择了一个option,就需要在一段时期内执行完他其中包含的所有原子动作。
+作者还讨论了interruption机制: agent 可以主动中断当前option并切换到更高价值的option（证明了这样做不会降低期望回报，且通常能提升)
+ intra-option learning
+	- 即使option尚未执行完，也可以根据“执行片段”更新option的模型与价值；
+	- 并且可以同时学习多个option的价值（off-policy）
 ## Inspiration for Us
 这里的option与subgoal的关系：subgoal 并非独立于 option 的概念，而是一种“用于改进 option 的结构信号“。但是这里的option和subgoal仍然是静态和手工制定的。
 >subgoal ≈ option 的 termination criterion β(s) 所隐含的目标。
@@ -32,7 +35,7 @@ Between MDPs and **semi-MDPs**: A framework for temporal abstraction in reinforc
 讨论了SMDP下的：
 - 贝尔曼方程
 - 环境建模（<span style="background:#affad1">折扣版本的reward和dynamics</span>)
-- interruption机制，agent 可以主动中断当前option并切换到更高价值的option（证明了这样做不会降低期望回报，且通常能提升。
+- interruption机制，agent 可以主动中断当前option并切换到更高价值的option（证明了这样做不会降低期望回报，且通常能提升)
 - intra-option learning
 	- 即使option尚未执行完，也可以根据“执行片段”更新option的模型与价值；
 	- 并且可以同时学习多个option的价值（off-policy）

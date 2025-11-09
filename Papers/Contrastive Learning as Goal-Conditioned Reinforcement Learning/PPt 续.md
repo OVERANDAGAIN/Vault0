@@ -17,6 +17,12 @@
 * **每个目标对应的奖励函数**：$r_g(s, a)$
 
 ---
+* **State space**：$s_t \in \mathcal{S}$
+* **Action space**：$a_t \in \mathcal{A}$
+* **Initial state distribution**：$p_0(s)$
+* **Environment dynamics (transition probability)**：$p(s_{t+1} \mid s_t, a_t)$
+* **Goal state distribution**：$p_g(s_g)$
+* **Reward function for each goal**：$r_g(s, a)$
 
 是否需要我将这部分格式化为适用于 PowerPoint 的文字或图示版本？我也可以继续为下一页方法部分设计。
 

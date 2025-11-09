@@ -38,7 +38,7 @@ $$
 ####  强化学习目标函数
 
 * 最大化采样目标后轨迹回报：
-
+Maximize the trajectory return after sampling the objective.
 $$
 \max_\pi \mathbb{E}_{s_g \sim p_g, \tau \sim \pi(\cdot|s_g)} \left[ \sum_{t=0}^\infty \gamma^t r_g(s_t, a_t) \right]
 $$

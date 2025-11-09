@@ -620,3 +620,12 @@ Contrastive RL 的实现基于 SAC 算法，在 [ACME](https://github.com/deepmi
 
 * **Contrastive RL (NCE + C-learning):**
   The hybrid approach proposed in this work combines the advantages of contrastive representation learning and C-learning, achieving both expressive capability and stability.
+
+| Task Name          | Type          | Description                                                                          | Success Criterion          |
+| ------------------ | ------------- | ------------------------------------------------------------------------------------ | -------------------------- |
+| Fetch Reach        | Image / State | Control a robotic arm to move through the air to the target point                    | Distance to target < 5 cm  |
+| Fetch Push         | Image / State | Push an object to the target location                                                | Distance to target < 5 cm  |
+| Sawyer Push        | Image / State | Push an object to a target position on the table                                     | Distance to target < 5 cm  |
+| Sawyer Bin         | Image / State | Pick up a cube from one container and place it into another                          | Distance to target < 5 cm  |
+| Ant U-Maze         | State         | Control an ant robot to navigate through a “U”-shaped maze to the goal               | Distance to target < 0.5 m |
+| Point Spiral 11×11 | Image         | Control a ball’s XY coordinates to navigate through a spiral maze (image-based task) | Distance to target < 2 m   |

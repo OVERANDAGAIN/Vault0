@@ -119,15 +119,15 @@ $$
 \right]
 $$
 
-其中：
+Among them: 
 
-* $f(u, v) = \phi(u)^\top \psi(v)$：称为**critic函数**，即两种编码器之间的相似度；
+* $f(u, v) = \phi(u)^\top \psi(v)$： called the **"critic function** - the similarity between the two encoders.；
 
-  * $\phi(u)$：表示 u 的编码器；
-  * $\psi(v)$：表示 v 的编码器；
-* $\sigma(\cdot)$：Sigmoid 函数，用于二分类；
-* $v^+$：与 u 同源的正样本；
-* $v^-$：与 u 无关的负样本。
+  * $\phi(u)$：Represents the encoder for u；
+  * $\psi(v)$：Represents the encoder for v；
+* $\sigma(\cdot)$：The **Sigmoid** function, used for binary classification；
+* $v^+$：Positive samples homologous to u；
+* $v^-$：Negative samples unrelated to u。
 
 ---
 

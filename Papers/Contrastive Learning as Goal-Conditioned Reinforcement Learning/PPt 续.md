@@ -581,3 +581,42 @@ Contrastive RL 的实现基于 SAC 算法，在 [ACME](https://github.com/deepmi
 
 
 
+以下是图片中内容的英文翻译：
+
+---
+
+### **1. Goal-Conditioned Reinforcement Learning (Goal-Conditioned RL)**
+
+* **HER (Hindsight Experience Replay):**
+  Relabels target states after the fact, enabling learning from unsuccessful trajectories. When combined with TD3, it forms a powerful policy learning framework.
+
+* **GCBC (Goal-Conditioned Behavioral Cloning):**
+  Directly performs behavioral cloning on trajectories reaching the goal. The method is simple yet effective, using the same ((s, a, s_f)) input format as this paper.
+
+* **Model-Based:**
+  Learns the future state distribution ( p(s_f \mid s, a) ), then trains the policy to maximize the probability of reaching the goal state. Suitable for low-dimensional problems.
+
+---
+
+### **2. Representation Learning**
+
+* **Data Augmentation (DrQ series):**
+  Uses image augmentation to improve policy robustness; representative method: DrQ.
+
+* **Auxiliary Objectives:**
+
+  * **AutoEncoder (AE):** Reconstructs states as the training objective.
+  * **CURL:** Constructs positive sample pairs via data augmentation and optimizes state representations through contrastive learning.
+
+---
+
+### **3. Contrastive Reinforcement Learning Variants**
+
+* **Contrastive RL (CPC):**
+  Uses the mutual information lower bound (InfoNCE) as the objective to learn the relationship between state–action pairs and future states.
+
+* **C-learning:**
+  A contrastive learning method built around the TD objective; already proposed in prior literature.
+
+* **Contrastive RL (NCE + C-learning):**
+  The hybrid approach proposed in this work combines the advantages of contrastive representation learning and C-learning, achieving both expressive capability and stability.

@@ -24,7 +24,7 @@
 
 ## 关于矿工目标检测
 
-
+[BIMSA Videos](https://bimsa.net/bimsavideo.html?id=32767.mp4)[^2]
 
 
 ## 其他poster
@@ -43,3 +43,4 @@
 # FootNotes
 
 [^1]: b斩关于沈旭大模型可解释性的视频，与mla会上内容基本一致
+[^2]: 关于矿工目标检测的视频，与mla会上内容基本一致

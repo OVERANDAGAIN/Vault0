@@ -18,6 +18,7 @@
 [7月11日-分享会-大模型的可解释性-阿里云专家 #沈旭\_哔哩哔哩\_bilibili](https://www.bilibili.com/video/BV17Bu7zXE5B/?spm_id_from=333.1365.top_right_bar_window_default_collection.content.click&vd_source=6c33cf6826337aad387874b66413aa72)[^1]
 ### 要点：
 1. 例子1：关于大模型如何计算加法 $\Longrightarrow$ 可能与人类不同，大模型先计算高位？视频0:07:17
+2. how llm recall knowledge $\Longrightarrow$ mlp的ranking部分搞错了？llm可能不是不知道，而是不会处理? 
 
 
 

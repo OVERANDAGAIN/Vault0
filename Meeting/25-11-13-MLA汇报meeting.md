@@ -26,7 +26,7 @@
 
 [BIMSA Videos](https://bimsa.net/bimsavideo.html?id=32767.mp4)[^2]
 
-
+转文字：
 ## 其他poster
 
 

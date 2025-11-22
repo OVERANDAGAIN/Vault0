@@ -39,9 +39,9 @@ reward 写错了：例如所有人 reward 都记录到 agent_1 上；
 ### 4Random (4\*4 4h1s)
 ![[Pasted image 20251123030503.png]]
 
+### 4NS(4\*4 4h1s)
 
-
-
+![[Pasted image 20251123031714.png]]
 
 
 

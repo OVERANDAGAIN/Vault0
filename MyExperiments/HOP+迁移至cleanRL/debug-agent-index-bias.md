@@ -48,6 +48,10 @@ reward 写错了：例如所有人 reward 都记录到 agent_1 上；
 
 
 ### PPO self-play(4\*4 4h1s)
+```python
+(cleanrl) PS D:\cleanrl> tensorboard --logdir="D:\cleanrl\cleanRL\runs\PPO__2__1763839534"  
+```
+
 运行了6h，虽然最终四个平均奖励达到了2.8（总体收敛）
 
 ```ad-bug

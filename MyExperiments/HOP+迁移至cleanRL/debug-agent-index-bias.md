@@ -48,7 +48,7 @@ reward 写错了：例如所有人 reward 都记录到 agent_1 上；
 
 
 ### PPO self-play(4\*4 4h1s)
-运行了6h
+运行了6h，虽然最终四个平均奖励达到了2.8（总体收敛）
 
 ```ad-bug
 但他们的训练过程中也出现了编号相关的偏差
@@ -56,6 +56,8 @@ reward 写错了：例如所有人 reward 都记录到 agent_1 上；
 >其余三个value_loss都在上百
 
 ```
+
+
 ![[Pasted image 20251123112517.png]]
 
 

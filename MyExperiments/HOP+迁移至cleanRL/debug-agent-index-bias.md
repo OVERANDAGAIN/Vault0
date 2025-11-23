@@ -1,3 +1,6 @@
+---
+创建时间: 2025-十一月-23日  星期日, 1:59:53 凌晨
+---
 
 
 [[HOP+迁移至cleanrl]]
@@ -43,6 +46,20 @@ reward 写错了：例如所有人 reward 都记录到 agent_1 上；
 
 ![[Pasted image 20251123031714.png]]
 
+
+### PPO self-play(4\*4 4h1s)
+运行了6h
+
+```ad-bug
+但他们的训练过程中也出现了编号相关的偏差
+>player_1训练效果最好，value_loss正常
+>其余三个value_loss都在上百
+
+```
+![[Pasted image 20251123112517.png]]
+
+
+![[Pasted image 20251123112558.png]]
 
 
 

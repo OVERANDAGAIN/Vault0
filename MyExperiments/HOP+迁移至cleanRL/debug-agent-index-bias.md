@@ -69,7 +69,12 @@ reward 写错了：例如所有人 reward 都记录到 agent_1 上；
 
 
 
-
+```ad-summary
+结论：
+>环境 / 多环境封装 / reward 统计路径基本 OK；
+>问题很可能集中在「数据 → EpisodeBatch → _refine_batch → value/advantage 计算 → loss」这条链上，
+>而且是跟 my_id / agent index 相关的逻辑。
+```
 
 
 

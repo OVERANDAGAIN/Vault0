@@ -80,9 +80,30 @@ reward 写错了：例如所有人 reward 都记录到 agent_1 上；
 ### PPO+3ns 更改agent_idx分别跑四次（(4\*4 4h1s)
 
 
+#### player_1
+##### reward
+
+##### loss
+
+
+#### player_2
+##### reward
+
+##### loss
 
 
 
+#### player_3
+##### reward
+
+##### loss
+
+
+
+#### player_4
+##### reward
+
+##### loss
 
 
 

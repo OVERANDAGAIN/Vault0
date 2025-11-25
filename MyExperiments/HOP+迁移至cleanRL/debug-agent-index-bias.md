@@ -121,6 +121,26 @@ tensorboard --logdir="D:\cleanrl\cleanRL\runs\ppo_single_player2__1__1764062165"
 ![[Pasted image 20251125204734.png]]
 
 
+```ad-summary
+
+> ### 阶段结论：agent_idx_bias 的来源定位
+>
+> 1. 4×Random、4×NS 的实验中，4 个 agent 平均回报接近，对称性良好 → 环境 & VecEnv 本身没有偏置。
+> 2. 4×PPO self-play 以及 “3NS+1PPO，轮流把 PPO 绑到 player_1/2/3/4” 实验中：
+>
+>    * 奖励都能收敛到 2.8–2.9；
+>    * 但只有 PPO 作为 player_1 时 loss 曲线（尤其 value_loss、entropy）表现正常，其余位置的 loss 极大且震荡。
+> 3. 结合训练代码分析，最可疑的一点是：
+>    **`HOPPlusPolicy.train()` 可能始终在使用 `"player_1"` 的轨迹进行训练，而不随 PPO 所在的 agent 位置变化，导致“参数绑定位置”和“训练数据来源”错位。**
+> 4. 下一步工作：
+>
+>    * 在 `HOPPlusPolicy` 中显式记录 `my_aid` / `my_idx`；
+>    * 在 `train()` 开头打印 / 记录实际使用的轨迹 key，验证上述假设；
+>    * 如被证实，修复 `make_hop_config` 和 `HOPPlusPolicy.train()` 中关于 agent 索引的逻辑。
+
+
+```
+
 
 
 

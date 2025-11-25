@@ -141,7 +141,139 @@ tensorboard --logdir="D:\cleanrl\cleanRL\runs\ppo_single_player2__1__1764062165"
 
 ```
 
+## 解决方案
+### 修改：agent_id 默认都是player_1
+````ad-important
 
+
+## 1. 现在的真实现象再梳理一下
+
+* **环境对称性** 已经通过多组实验验证过：
+
+  * 4 Random、4 NS / 4 NS 混合，`player_1~4` 的平均回报非常接近；
+  * 说明 **环境本身没有编号 bias**，`__obs_state__` 的重排也没有明显问题。
+
+* **单 PPO + 3 NS** 的实验结果：
+
+  * PPO 作为 `player_1` 时：
+
+    * reward 平滑升到 $\approx 2.9$；
+    * `entropy` 先降后稳、`ppo_pg_loss / total_loss / value_loss` 都是 $\mathcal{O}(1)$ 并收敛，很“教科书式”。
+  * PPO 作为 `player_2/3/4` 时：
+
+    * reward 也能升到 $\approx 2.9$；
+    * 但：
+
+      * `entropy` 基本在 0.5–0.7 上下乱飘甚至回升；
+      * `value_loss` 几百上千、一度上升，和 `player_1` 完全两个世界。
+  * 这说明：**PPO 虽然学到了一个还不错的策略，但训练过程严重“不自洽”**，而且这种异常 **与 agent index 高度相关**。
+
+结合你之前「4 个 PPO self-play 时只有 player_1 的 loss 正常，其余 value_loss 爆炸」——这已经非常像：
+
+> *所有 PPO 策略都在用某一个固定编号的轨迹训练*。
+
+---
+
+## 2. 关键 bug：PPO 不知道“自己是谁”
+
+看 `HOPPlusPolicy.train` 的这几行（这是整个问题的核心）：
+
+```python
+def train(self, agent_trajectories: dict, agent_ids: list):
+    ...
+    my_id = self.agent_id
+    if my_id is None:
+        # 只有一个键时自动识别；否则 fallback 第一个
+        if len(agent_trajectories) == 1:
+            my_id = next(iter(agent_trajectories.keys()))
+        else:
+            my_id = agent_ids[0] if agent_ids else next(iter(agent_trajectories.keys()))
+        self.agent_id = my_id  # 记住
+```
+
+然后在收集样本时：
+
+```python
+for aid in agent_ids:
+    traj = agent_trajectories.get(aid, [])
+    ...
+    if aid == my_id:
+        my_rows.append(row)
+    else:
+        opponents_rows.append(row)
+```
+
+问题在于：
+
+### 2.1 在你的训练脚本里，`agent_ids` 一直是全体玩家
+
+在 `PPO_single_player` 主程序中，train 调用是这样的：
+
+```python
+for aid in agent_ids:
+    if aid != ppo_aid:
+        continue
+    policy_dict[aid].train(
+        agent_trajectories=agent_trajectories,
+        agent_ids=agent_ids,   # ← 这里传的是 ['player_1', 'player_2', 'player_3', 'player_4']
+    )
+```
+
+即使只有一个 PPO（比如 `player_3`），**`agent_trajectories` 里依然有四个 key**，`agent_ids` 也是 4 个名字。
+
+于是进入 `HOPPlusPolicy.train` 时：
+
+* `self.agent_id` 初始为 `None`；
+* `len(agent_trajectories) == 4`，走 `else` 分支；
+* `my_id = agent_ids[0]`，也就是永远被设成 `'player_1'`；
+* 并且 `self.agent_id = my_id` 被记住了 —— 之后每一次调用都用 `'player_1'`。
+
+**结论：无论这份 PPO policy 被挂在 `player_1`、`player_2`、`player_3` 还是 `player_4` 上，它训练时永远只吃 `player_1` 的轨迹。**
+
+## 3. 直接的修复方案
+
+核心原则：**让每个 HOPPlusPolicy 明确知道自己对应的是哪个 agent id**，而不是在 `train()` 里瞎猜。
+
+### 3.1 在创建 policy 时显式写入 `agent_id`
+
+例如在你的 `PPO_single_player` 脚本里，把这一段：
+
+```python
+for aid in agent_ids:
+    if aid == ppo_aid:
+        model_core = MyModel(base_cfg["model"])
+        policy_dict[aid] = HOPPlusPolicy(
+            config=cfg_by_agent[aid],
+            env_creator=env_creator,
+            model_core=model_core,
+            device=args.device,
+        )
+        policy_dict[aid].set_writer(writer)
+```
+
+改成：
+
+```python
+for aid in agent_ids:
+    if aid == ppo_aid:
+        cfg_this = cfg_by_agent[aid].copy()
+        cfg_this["agent_id"] = aid              # ✅ 显式告诉 PPO：你就是这个 agent
+        model_core = MyModel(cfg_this["model"])
+        policy_dict[aid] = HOPPlusPolicy(
+            config=cfg_this,
+            env_creator=env_creator,
+            model_core=model_core,
+            device=args.device,
+        )
+        policy_dict[aid].set_writer(writer)
+    else:
+        policy_dict[aid] = NSAdapter(ns_cfg)
+```
+
+````
+
+
+### 修改结果
 
 
 

@@ -79,31 +79,52 @@ reward 写错了：例如所有人 reward 都记录到 agent_1 上；
 
 ### PPO+3ns 更改agent_idx分别跑四次（(4\*4 4h1s)
 
+```ad-summary
 
-#### player_1
+```
+#### PPO as player_1
+```python
+tensorboard --logdir="D:\cleanrl\cleanRL\runs\ppo_single_player1__1__1764062161"
+```
 ##### reward
-
+![[Pasted image 20251125204623.png]]
 ##### loss
+![[Pasted image 20251125204631.png]]
 
-
-#### player_2
+####  PPO as player_2
+```python
+tensorboard --logdir="D:\cleanrl\cleanRL\runs\ppo_single_player2__1__1764062165"
+```
 ##### reward
-
+![[Pasted image 20251125204640.png]]
 ##### loss
+![[Pasted image 20251125204647.png]]
 
 
-
-#### player_3
+####  PPO as player_3
+```python
+ tensorboard --logdir="D:\cleanrl\cleanRL\runs\ppo_single_player3__1__1764062167"
+```
 ##### reward
-
+![[Pasted image 20251125204707.png]]
 ##### loss
+![[Pasted image 20251125204717.png]]
 
 
-
-#### player_4
+####  PPO as player_4
+```python
+ tensorboard --logdir="D:\cleanrl\cleanRL\runs\ppo_single_player4__1__1764062169"
+```
 ##### reward
-
+![[Pasted image 20251125204727.png]]
 ##### loss
+![[Pasted image 20251125204734.png]]
+
+
+
+
+
+
 
 
 

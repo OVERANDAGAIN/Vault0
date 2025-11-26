@@ -275,9 +275,25 @@ for aid in agent_ids:
 
 ### 修改结果
 
+#### PPO self-play (4\*4 4h1s)
+##### reward
 
 
 
+##### loss
+
+#### PPO as player_2  +  3NS(4\*4 4h1s)
+##### reward
+##### loss
+
+#### PPO as player_3  +  3NS(4\*4 4h1s)
+##### reward
+##### loss
+
+
+#### PPO as player_4  +  3NS(4\*4 4h1s)
+##### reward
+##### loss
 
 
 # Limitations

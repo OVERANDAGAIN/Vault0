@@ -276,25 +276,41 @@ for aid in agent_ids:
 ### 修改结果
 
 #### PPO self-play (4\*4 4h1s)
-##### reward
-
+```python
+tensorboard --logdir="D:\cleanrl\cleanRL\runs\PPO__2__1764077683"
+```
+##### reward(4个agent类似)
+![[Pasted image 20251126093347.png]]
 
 
 ##### loss
+![[Pasted image 20251126093434.png]]
 
 #### PPO as player_2  +  3NS(4\*4 4h1s)
+```python
+tensorboard --logdir="D:\cleanrl\cleanRL\runs\ppo_single_player2__1__1764077041"
+```
 ##### reward
+![[Pasted image 20251126093451.png]]
 ##### loss
-
+![[Pasted image 20251126093501.png]]
 #### PPO as player_3  +  3NS(4\*4 4h1s)
+```python
+tensorboard --logdir="D:\cleanrl\cleanRL\runs\ppo_single_player3__1__1764077046"
+```
 ##### reward
+![[Pasted image 20251126093510.png]]
 ##### loss
-
+![[Pasted image 20251126093530.png]]
 
 #### PPO as player_4  +  3NS(4\*4 4h1s)
+```python
+tensorboard --logdir="D:\cleanrl\cleanRL\runs\ppo_single_player4__1__1764077048"
+```
 ##### reward
+![[Pasted image 20251126093539.png]]
 ##### loss
-
+![[Pasted image 20251126093547.png]]
 
 # Limitations
 # Future Work

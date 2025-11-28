@@ -312,6 +312,50 @@ tensorboard --logdir="D:\cleanrl\cleanRL\runs\ppo_single_player4__1__1764077048"
 ##### loss
 ![[Pasted image 20251126093547.png]]
 
+
+
+
+### HOP + 3NS
+#### hop as player_2
+```python
+ tensorboard --logdir="D:\cleanrl\cleanRL\runs\msh_MBRL_1hop_3ns____2__1764322592"
+```
+```python
+ # ============ NEW MBRL Training Loop ============
+    def train(self, agent_trajectories: dict, agent_ids: list):
+
+        self.learn_count += 1
+
+        # --- 1. Push Real Data to Buffers ---
+        # This pushes to:
+        # 1. self.real_ppo_buffer (for PPO/OMG)
+        # 2. self.model_buffer (for MOA)
+        # 3. self.wm_buffer (for WM)
+        env_episodes = self._assemble_episodes_from_transitions(agent_trajectories, agent_ids)
+        for env_ep in env_episodes:
+            self._push_episode_to_buffers(env_ep, agent_ids, is_imagined=False)
+
+        # --- 2. Train World Model ---
+        # self._maybe_train_wm()
+
+        # --- 3. Train MOA ---
+        # self._maybe_train_moa()
+
+        # --- 4. Generate Imagined Data ---
+        # self._generate_model_rollouts()
+
+        # --- 5. Train PPO Policy ---
+        self._maybe_train_policy()
+
+        # --- 6. Train OMG (Subgoal) Model ---
+        # self._maybe_train_omg()
+```
+
+
+![[Pasted image 20251128214003.png]]
+
+
+
 # Limitations
 # Future Work
 # FootNotes

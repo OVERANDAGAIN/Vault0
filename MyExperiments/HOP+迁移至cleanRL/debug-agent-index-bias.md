@@ -118,7 +118,7 @@ tensorboard --logdir="D:\cleanrl\cleanRL\runs\ppo_single_player2__1__1764062165"
 
 
 ## 解决方案
-### 修改：agent_id 默认都是player_1
+### 修改
 ````ad-important
 
 

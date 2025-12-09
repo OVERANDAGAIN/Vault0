@@ -72,7 +72,7 @@ cd D:\path\to\hopplus
 1. **锁定依赖（按新配置重写 lock，不会无脑升级所有包）：**
 
    ```bash
-   poetry lock --no-update
+   poetry lock
    ```
 
 2. **再重新安装 / 校验一遍环境：**

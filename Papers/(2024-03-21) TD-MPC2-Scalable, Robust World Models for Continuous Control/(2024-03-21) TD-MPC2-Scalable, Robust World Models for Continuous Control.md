@@ -16,6 +16,11 @@
 1. 在上面的式子中，用于“决策”$\Longrightarrow$选出动作
 2. 可以用作TD的计算中减少计算
 
+## Q2:这里的trick?
+>As the magnitude of rewards may differ drastically between tasks, TD-MPC2 formulates reward and value prediction as a discrete regression (multiclass classification) problem in a log-transformed space, which is optimized by minimizing crossentropy with rt, qt as soft targets
+
+
+
 # Innovation
 # Theroy
 # Perspective

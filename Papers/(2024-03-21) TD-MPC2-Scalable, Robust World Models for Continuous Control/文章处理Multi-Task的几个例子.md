@@ -10,7 +10,9 @@
 # Questions2:
 ![[Pasted image 20251222180603.png]]
 
+# Question3: Embedding 离散化的好处
 
+![[Pasted image 20251222181314.png]]
 
 # Codes
 

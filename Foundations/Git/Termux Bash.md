@@ -10,7 +10,7 @@ git config --global user.email "xyz@gmail.com"
 ssh-keygen -C "xyz@gmail.com" -t rsa
 
 cd ~/.ssh
-gedit id_rsa.pub
+cat ~/.ssh/id_rsa.pub
 
 # Questions
 

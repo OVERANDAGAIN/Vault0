@@ -4,6 +4,13 @@ created: 2024-12-18T20:35
 updated: ...
 ---
 [[Git]]
+git config --global user.name "xyz" 
+git config --global user.email "xyz@gmail.com"
+
+ssh-keygen -C "xyz@gmail.com" -t rsa
+
+cd ~/.ssh
+gedit id_rsa.pub
 
 # Questions
 

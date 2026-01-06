@@ -1,3 +1,6 @@
+---
+创建时间: 2026-一月-6日  星期二, 11:14:08 晚上
+---
 [[(2020-03-17) Dream to Control-Learning Behaviors by Latent Imagination]]
 
 # Questions
@@ -94,6 +97,10 @@ $$\max\ I(Z;Y) - \beta I(Z;X)$$
 ## 6) 一句话总结
 
 **$I(\cdot;\cdot)$ 是互信息，衡量两个随机变量之间共享的信息量；在 IB 中，它被用来精确刻画“保留任务相关信息”和“压缩输入冗余信息”这两种相互对抗的目标。**
+
+
+
+
 ## DS_Answers
 
 

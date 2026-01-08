@@ -122,6 +122,12 @@
       },
       "banyan": {
         "startupType": "instant"
+      },
+      "sheets-basic": {
+        "startupType": "disabled"
+      },
+      "table-extended": {
+        "startupType": "instant"
       }
     }
   }

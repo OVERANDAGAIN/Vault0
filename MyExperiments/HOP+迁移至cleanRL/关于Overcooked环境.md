@@ -19,8 +19,21 @@
 2. 多菜谱 + 多原料（复杂偏好空间）
 	1. 原料数：6 种(Tomato, Onion, Carrot, Lettuce, Potato, Broccoli)
 	2. 菜谱数：9 种
-3. 
-partially observable games
+
+
+
+
+
+# 关于对手
+## 带噪声的、基于偏好的 rule-based agent
+>Fast Peer Adaptation with Context-aware Exploration
+
+每一个对手策略 =(固定菜谱偏好 + 确定性子任务规划 + 可控随机扰动),
+并非使用self-play的策略:
+$$ψ = (recipe_{pref}, P_{nav}, P_{act})$$
+
+
+
 
 
 

@@ -19,6 +19,9 @@
 
 
 ![[Pasted image 20260128184242.png]]
+
+![[Pasted image 20260128185648.png]]
+
 # Innovation
 # Background
 # Related Work

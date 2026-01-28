@@ -11,7 +11,11 @@
 
 
 # 关于环境
-## Fast Peer Adaptation with Context-aware Exploration
+## PO-Overcooked（Partially Observable Overcooked）
+>Fast Peer Adaptation with Context-aware Exploration
+
+论文明确指出其合作环境是 PO-Overcooked，在 Carroll et al. (2019) 的 Overcooked 基础上，结合 Charakorn et al. (2023) 的多菜谱版本，并做了额外、关键性的改动，
+
 partially observable games
 
 

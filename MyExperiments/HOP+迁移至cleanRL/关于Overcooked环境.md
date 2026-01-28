@@ -19,7 +19,7 @@
 2. 多菜谱 + 多原料（复杂偏好空间）
 	1. 原料数：6 种(Tomato, Onion, Carrot, Lettuce, Potato, Broccoli)
 	2. 菜谱数：9 种
-
+3. adaptation 定义为：$Neps$ 个 episode 上的总回报最大化
 
 
 

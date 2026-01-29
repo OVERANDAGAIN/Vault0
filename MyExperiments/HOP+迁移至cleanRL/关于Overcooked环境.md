@@ -1,3 +1,6 @@
+---
+创建时间: 2026-一月-28日  星期三, 8:32:32 晚上
+---
 [[HOP+迁移至cleanrl]]
 
 
@@ -21,6 +24,16 @@
 	2. 菜谱数：9 种
 3. adaptation 定义为：$Neps$ 个 episode 上的总回报最大化
 
+## multi-recipe variant
+>Generating Diverse Cooperative Agents by Learning Incompatible Policies（ICLR 2023）
+
+论文在 Overcooked 上不是用原版，而是实现了一个 multi-recipe variant，用于测试“是否能生成行为多样的合作 agent population”
+1. 原料数：4 种 ;菜谱数：6 种
+2. 观测：长度 54 的 1-D 向量（位置/朝向、相对距离、手里拿的东西及其状态、相邻 counter 的布尔量、面前物体类型与状态等）
+
+
+
+
 
 
 
@@ -32,7 +45,10 @@
 并非使用self-play的策略:
 $$ψ = (recipe_{pref}, P_{nav}, P_{act})$$
 
+## 多样 partner 分布
+>Generating Diverse Cooperative Agents by Learning Incompatible Policies（ICLR 2023）
 
+这篇不做 online adaptation；它做的是“为 adaptation 提供多样 partner 分布
 
 
 

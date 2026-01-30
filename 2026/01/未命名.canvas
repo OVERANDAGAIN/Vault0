@@ -1,0 +1,9 @@
+{
+	"nodes":[
+		{"id":"c5213d15d5ee8839","type":"file","file":"2026/01/attchments/Pasted image 20260130231331.png","x":-718,"y":-820,"width":348,"height":400},
+		{"id":"3c6bea67b5c40c27","type":"file","file":"2026/01/attchments/Pasted image 20260130231338.png","x":-260,"y":-820,"width":348,"height":400},
+		{"id":"aea896b27f81d818","type":"file","file":"2026/01/attchments/Pasted image 20260130231323.png","x":-699,"y":-372,"width":329,"height":1186},
+		{"id":"67c32fc3843e6045","type":"file","file":"2026/01/attchments/Pasted image 20260130231327.png","x":-247,"y":-360,"width":335,"height":1162}
+	],
+	"edges":[]
+}

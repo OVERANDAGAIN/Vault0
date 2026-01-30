@@ -32,7 +32,7 @@
 2. 观测：长度 54 的 1-D 向量（位置/朝向、相对距离、手里拿的东西及其状态、相邻 counter 的布尔量、面前物体类型与状态等）
 
 
-
+players have to complete and serve one of the six pre-defined recipes as fast as possible, as opposed to delivering a single menu item repeatedly.
 
 
 

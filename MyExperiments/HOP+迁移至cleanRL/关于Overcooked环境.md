@@ -24,6 +24,9 @@
 	2. 菜谱数：9 种
 3. adaptation 定义为：$Neps$ 个 episode 上的总回报最大化
 $$\max ;\mathbb{E}\Big[\sum_{n=1}^{N_{\text{eps}}}\sum_{t=1}^{T_n} r^1_{n,t}\Big]$$
+在一个固定但未知 recipe preference 的合作伙伴存在下，通过跨 episode 的交互识别该偏好，并与其协作完成对应 recipe，以最大化跨 episode 的累计回报。
+
+
 
 ## multi-recipe variant
 >Generating Diverse Cooperative Agents by Learning Incompatible Policies（ICLR 2023）

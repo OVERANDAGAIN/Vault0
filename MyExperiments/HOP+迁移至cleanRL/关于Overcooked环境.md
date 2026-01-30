@@ -34,7 +34,7 @@
 
 players have to complete and serve one of the six pre-defined recipes as fast as possible, as opposed to delivering a single menu item repeatedly.
 
-
+指标: success rate
 
 
 # 关于对手

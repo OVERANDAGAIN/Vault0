@@ -23,6 +23,7 @@
 	1. 原料数：6 种(Tomato, Onion, Carrot, Lettuce, Potato, Broccoli)
 	2. 菜谱数：9 种
 3. adaptation 定义为：$Neps$ 个 episode 上的总回报最大化
+$$\max ;\mathbb{E}\Big[\sum_{n=1}^{N_{\text{eps}}}\sum_{t=1}^{T_n} r^1_{n,t}\Big]$$
 
 ## multi-recipe variant
 >Generating Diverse Cooperative Agents by Learning Incompatible Policies（ICLR 2023）

@@ -10,7 +10,7 @@
 >哪些论文使用这个环境
 >一些adaptation任务的方法使用的类似环境， 或者在原版Overcooked环境上的改变
 >schelling图？ $\Longrightarrow$ 综述
->t-SNE
+>
 
 
 # 关于环境

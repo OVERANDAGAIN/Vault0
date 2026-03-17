@@ -11,6 +11,10 @@
 ![[Pasted image 20260317212739.png]]
 
 
+LIAM 的 **encoder 是一个 recurrent encoder（LSTM）**，在每个时刻 $t$ 生成 embedding $z_t$。这个 $z_t$ 不是只看当前一步，而是条件在 **controlled agent 到当前时刻为止的局部历史** 上，也就是 $(o^1_{1:t}, a^1_{1:t-1})$。论文原文明确写了：
+>at each time step $t$, the encoder generates $z_t$, conditioned on the controlled agent’s information up to time $t$。
+
+但 decoder **不是拿 $0:t$ 整段轨迹一次性重建整条序列**。它在每个时刻 $t$ 用当前的 $z_t$ 去重建 **modelled agent 在当前时刻的 observation 和 action**，即 $(o^{-1}_t, a^{-1}_t)$，训练损失也是对所有时刻求和。
 
 
 ## 问题二：为什么会有lIAM-VAE这个baseline，和原算法有什么不同？

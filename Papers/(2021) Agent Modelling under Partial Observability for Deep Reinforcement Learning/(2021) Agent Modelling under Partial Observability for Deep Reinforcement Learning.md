@@ -6,6 +6,7 @@
 # Inspiration
 ## Take-away Message
 文章认为==其他智能体的行为会影响受控智能体的观察==，因此可以学习受控智能体（the controlled agent）与其他被建模智能体（the modeled agents）的轨迹间的联系。
+本质上是单智能体适应固定对手policy算法，不处理非平稳性等问题
 ## Inspiration for Us
 泛化范围主要还是训练分布内，而不是开放世界对手。
 它更擅长“可反应、可交互、可探测”的对手，不擅长“静默/非反应型”对手

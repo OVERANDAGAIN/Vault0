@@ -21,7 +21,9 @@ Encoder-decoder架构：
 实验：合作（double spealer-listener)竞争（modified predator prey) 混合（level-based foraging)
 
 # Perspective
-
+1. 类似于CTDE的，执行时只有自己的信息，拿不到对手的信息
+2. 直接基于轨迹的重建或者编码？
+3. 
 # Formulation
 # Background
 # Related Work

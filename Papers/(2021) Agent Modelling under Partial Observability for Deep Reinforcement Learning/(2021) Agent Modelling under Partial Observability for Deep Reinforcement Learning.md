@@ -8,6 +8,10 @@
 ## Inspiration for Us
 # Focus
 ## 问题一：LIAM算法是基于轨迹的吗？也就是输入从0时刻至t时刻的轨迹去重建或者编码？
+![[Pasted image 20260317212739.png]]
+
+
+
 
 ## 问题二：为什么会有lIAM-VAE这个baseline，和原算法有什么不同？
 

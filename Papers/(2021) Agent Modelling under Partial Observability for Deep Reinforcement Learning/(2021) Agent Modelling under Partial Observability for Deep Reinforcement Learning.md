@@ -18,7 +18,8 @@
 Encoder-decoder架构：
 	encoder: 自己的轨迹变为latent
 	decoder:latent重建对手的obs和action
-实验：合作（
+实验：合作（double spealer-listener)竞争（modified predator prey) 混合（level-based foraging)
+
 # Perspective
 # Formulation
 # Background

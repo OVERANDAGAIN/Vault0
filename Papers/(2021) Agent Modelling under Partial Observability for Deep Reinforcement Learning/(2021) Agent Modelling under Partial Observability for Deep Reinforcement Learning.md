@@ -5,6 +5,7 @@
 
 # Inspiration
 ## Take-away Message
+文章认为==其他智能体的行为会影响受控智能体的观察==，因此可以学习受控智能体（the controlled agent）与其他被建模智能体（the modeled agents）的轨迹间的联系。
 ## Inspiration for Us
 # Focus
 ## 问题一：LIAM算法是基于轨迹的吗？也就是输入从0时刻至t时刻的轨迹去重建或者编码？

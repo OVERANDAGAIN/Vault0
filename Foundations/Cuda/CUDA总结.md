@@ -32,13 +32,15 @@ updated: ...
 4. 管理员下的命令提示符在 `conda init cmd.exe` 之后可进行虚拟环境创建，使用把torch和torchvision包下载到本地再pip安装的过程。
    
    ~~1.10.1的torch + 0.11.2的torchvision + 10.2的CUDA + 3.7.11的python~~
- ```ad-note
+
+
+`````ad-note
 下为示范，4090 ,3.7.11 仍是11.7
 
    <u>==1.10.1的torch== + ==0.11.2的torchvision==</u> + ==11.8的CUDA== + ==3.7.11的python
    `Or:`
    <u>指令自动选择的torch与torchtoolkit版本</u> + ==11.8的CUDA== + ==3.7.11的python
-```
+
 
 
 `conda install pytorch torchvision torchaudio pytorch-cuda=11.7 -c pytorch -c nvidia`
@@ -49,6 +51,7 @@ updated: ...
 ```ad-success
 可以的，每个虚拟环境CUDA版本相互独立，与本机CUDA版本也独立
 ```
+`````
 
 ## Changes
 

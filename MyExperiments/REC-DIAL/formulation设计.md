@@ -5,30 +5,20 @@
 
 [[5-15会议]]
 
-# Objectives
-# Results
-# Insights
-# Setup
-# Methodology
-# Issues & Debugging
-
-## Problem1: 
-- [?] 
-
-### 1_Answers
-
-
-### 2_Answers
 
 
 
-## Problem2: 
-- [?] 
-
-### 1_Answers
 
 
-### 2_Answers
+# 文献调研
+## DEAR
+> (2019/09/09) DEAR: Deep Reinforcement Learning for Online Advertising Impression in Recommender Systems
+
+
+
+
+
+
 
 
 

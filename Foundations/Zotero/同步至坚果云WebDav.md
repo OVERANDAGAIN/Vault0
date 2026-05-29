@@ -15,6 +15,15 @@
 使用了如下教程的配置：
 https://blog.csdn.net/sinat_27220357/article/details/124460085?
 
+
+![[Pasted image 20260518232957.png]]
+
+![[Pasted image 20260518233019.png]]
+
+
+![[Pasted image 20260518233112.png]]
+
+
 ## GPT_Answers
 
 

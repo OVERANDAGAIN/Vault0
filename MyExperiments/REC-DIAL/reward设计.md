@@ -1,290 +1,251 @@
 ---
 创建时间: 2026-五月-18日  星期一, 5:20:16 下午
 ---
-[[REC-DIAL]]
-
-# 一、问题背景
-
-在传统广告推荐场景中（例如短视频或信息流），用户面对的是一个连续内容序列。系统的核心问题不是简单地“选一个广告”，而是：
-
-* 在内容流中**何时插入广告**
-* 插入**什么广告**
-* 控制广告的**频率与密度**
-
-这些因素共同决定广告效果。仅优化单次点击（CTR）会导致策略偏向短期收益，而忽略用户长期留存和满意度，因此需要在序列层面建模长期价值（SIGIR 2024）。
-
-[1] Liu Z, Liu S, Zhang Z, et al. Sequential recommendation for optimizing both immediate feedback and long-term retention[C]//Proceedings of the 47th International ACM SIGIR Conference on Research and Development in Information Retrieval. 2024: 1872-1882.
 
 
-# 二、“内容流”到“话题流”：LLM 多轮对话的抽象
+1. **turn-level reward**：每轮根据用户反馈计算即时 reward。
+2. **segment-level reference**：用当前 topic segment 作为语义参照，判断广告是否契合、话题是否偏移。
+3. **episode-level objective**：用累计回报和 terminal reward 表达长期目标。
 
-在 LLM 多轮对话中，用户消费的对象不再是视频或文本 item，而是**随着交互不断演化的语义轨迹**。可以将其抽象为一种“话题流（topic flow）”。
 
-一个完整对话可以表示为：
+---
 
-```
-episode（一次对话）
- ├── turn 1
- ├── turn 2
- ├── turn 3
- ...
- └── turn T
-```
+# 1. 当前 reward 设计是否满足需求？
 
-但仅用 turn 序列还不够表达语义结构，因此进一步引入中间层：
+可以说：**满足大框架，但还不能直接原样放进 formulation。**
 
-```
-episode
- ├── topic segment A（若干轮）
- ├── topic segment B（若干轮）
- ├── topic segment C（若干轮）
+它已经回答了 formulation 中 reward 需要回答的核心问题：
+
+$$r_t = R(s_t, a_t, y_t, u_{t+1})$$
+
+也就是说，Planner 在状态 $s_t$ 下采取动作 $a_t$，Speaker 生成回复 $y_t$，Mock User 产生反馈 $u_{t+1}$，RewardCalculator 根据这些信息计算本轮 reward。
+
+你给的 reward 设计也明确了 reward 不是单一 CTR 或单轮满意度，而是综合：
+
+```text
+用户任务价值
+对话持续性
+广告收益
+用户反感
+广告过载
+话题偏移
+terminal outcome
 ```
 
+这和我们当前的 REC-DIAL 目标是匹配的。
 
-| 层级            | 定义              | 表示                |
-| ------------- | --------------- | ----------------- |
-| turn          | 一次用户输入 + 一次系统回复 | 最细粒度交互单位          |
-| topic segment | 若干语义一致的连续 turn  | 表示局部话题或子任务        |
-| episode       | 一次完整多轮对话        | 类比RL中的 trajectory |
+---
+
+# 2. 最大问题：符号需要全部改一下
+
+你现在的 reward 文档里有几个符号和我们 formulation 已经定义过的变量冲突。
+
+| reward 文档中的符号 | 当前含义              | 冲突对象                   | 建议改名               |
+| ------------- | ----------------- | ---------------------- | ------------------ |
+| $s_t$         | task satisfaction | RL state $s_t$         | $\eta_t^{\text{task}}$    |
+| $a_t$         | ad acceptance     | Planner action $a_t$   | $\alpha_t^{\text{ad}}$    |
+| $o_t$         | ad overload       | observation $o_t$      | $\omega_t^{\text{ad}}$    |
+| $d_t$         | topic deviation   | action 中 $d_t$ 表示是否插广告 | $\Delta_t^{\text{topic}}$ |
+| $c_t$         | continuation      | 和 $C_t^{\text{user}}$ 形式接近    | $\kappa_t^{\text{cont}}$  |
+
+所以 reward 最好改写为：
+
+$$r_t = \lambda_{\text{task}} \eta_t^{\text{task}} + \lambda_{\text{cont}} \kappa_t^{\text{cont}} + \lambda_{\text{ad}} \alpha_t^{\text{ad}} - \lambda_{\text{annoy}} \chi_t^{\text{annoy}} - \lambda_{\text{load}} \omega_t^{\text{ad}} - \lambda_{\text{drift}} \Delta_t^{\text{topic}}$$
 
 其中：
 
-> **segment ≠ turn**
-> 一个 segment 可以包含多轮对话，而一个 turn 也不能独立定义完整语义。
+| 符号                 | 含义              |
+| ------------------ | --------------- |
+| $\eta_t^{\text{task}}$    | 任务推进 / 任务满足程度   |
+| $\kappa_t^{\text{cont}}$  | 用户继续交互的信号       |
+| $\alpha_t^{\text{ad}}$    | 广告接受、点击、兴趣等商业收益 |
+| $\chi_t^{\text{annoy}}$   | 用户反感或负反馈        |
+| $\omega_t^{\text{ad}}$    | 广告过载 / 广告密度惩罚   |
+| $\Delta_t^{\text{topic}}$ | 话题偏移惩罚          |
 
-# 三、与传统流式推荐的相似性与差异
-
-| 维度   | 信息流推荐      | LLM 对话          |
-| ---- | ---------- | --------------- |
-| 用户角色 | 被动消费       | 主动交互            |
-| 系统动作 | 排序/选择 item | 回复 + 引导话题 + 插广告 |
-| 状态转移 | 基于点击/停留    | 基于语义交互          |
-| 控制能力 | 弱          | 强（可主动改变话题）      |
-
-> 在对话中，系统不仅决定“是否插广告”，还会影响**后续话题如何发展**。
-
-
-# 四、turn、segment 与 reward 的关系
-
-广告插入发生在某一轮，但效果不是局部的：
-
-举例：
-
-```
-Turn 3: 插入广告（表面相关）
-Turn 4: 用户继续聊（无明显反感）
-Turn 6: 用户突然结束对话
-```
-
-如果只看 Turn 3：
-
-* reward 可能是正的（相关、无负反馈）
-
-但从整个 segment 或 episode 看：广告可能破坏了任务主线，用户逐渐失去兴趣，最终提前退出
-
-因此：
-
-> 单轮 reward 无法反映长期副作用
-
-
----
-##  segment 在 reward 中的作用
-
-segment 不是额外结构，而是 reward 的语义参照。
-
-它主要影响三类评价：
-
-| reward 项            |            |
-| ------------------- | ---------- |
-| topic coherence     | 是否延续当前话题   |
-| ad-topic fit        | 广告是否契合当前需求 |
-| topic drift penalty | 是否不自然切换话题  |
-
-例如：
-
-* “推荐写论文工具”在“论文写作”segment 中合理
-* 在“旅游规划”segment 中就是明显偏移
-
-因此：
-
-> reward 虽然在 turn-level 计算，但以 segment-level 语义为条件
+这样不会和 $s_t, a_t, o_t, d_t$ 冲突。
 
 ---
 
-##  episode 的作用：定义最终目标
+# 3. Reward 输入需要和当前 formulation 对齐
 
-episode 层面回答的是：
+我们当前 transition 定义是：
 
-* 用户是否完成任务
-* 是否因为广告不满而退出
-* 整体体验是否平衡
+$$s_t = M(p, H_t)$$
 
-这对应强化学习中的 return：
+$$a_t = (d_t, j_t, w_t, k_t)$$
 
-$$R = \sum_{t=1}^{T} \gamma^{t-1} r_t + r_{\text{terminal}}$$
+$$y_t = \text{Speaker}(s_t, a_t)$$
 
-因此三层关系可以总结为：
+$$u_{t+1} = \text{UserSim}(H_t, y_t)$$
 
-| 层级      | reward 作用 |
-| ------- | --------- |
-| turn    | 提供局部反馈    |
-| segment | 提供语义约束    |
-| episode | 定义长期目标    |
+所以 reward 最好写成：
 
+$$r_t = R(s_t, a_t, y_t, u_{t+1}, H_t)$$
 
-# 五、奖励函数设计
+比之前：
 
-优化的对象不是单轮响应质量，而是完整对话 trajectory 的长期价值。因此需要构造一个能够同时刻画：
+$$r_t = R(s_t, a_t, y_t, u_{t+1})$$
 
-* 用户任务完成情况
-* 对话持续性（长期留存）
-* 广告带来的商业收益
-* 广告与对话带来的副作用
+多一个 $H_t$，原因是你 reward 里涉及：
 
-的 reward 。
+```text
+最近 k 轮广告数量
+当前 topic segment
+用户是否持续对话
+历史上是否已有广告曝光
+```
 
-## 5.1 单轮奖励函数定义
+这些都需要从 $H_t$ 或 episode log 中读取。
 
-==奖励组成部分无法直接观测到，而是通过利用用户反馈信号所学习到的奖励模型来进行估算。==
+如果想保持公式简洁，可以写：
 
+$$r_t = R(s_t, a_t, y_t, u_{t+1})$$
 
-在每一轮 $t$，定义即时奖励：
+但在文字里说明：$s_t$ 和 $H_t$ 已经包含必要的历史与事件日志。更严谨的版本是加上 $H_t$。
 
-$$r_t = r_t^{\text{user}} + r_t^{\text{biz}} + r_t^{\text{constraint}}$$
+---
+
+# 4. Segment 设计是合理的，但要说明它从哪里来
+
+你引入 topic segment 是有价值的，尤其对：
+
+```text
+topic coherence
+ad-topic fit
+topic drift penalty
+```
+
+非常重要。
+
+但是当前主 formulation 里没有显式定义 segment。所以需要补一句：
+
+> topic segment 不作为额外的 RL state 变量，而是由 Monitor 从 $H_t$ 或 $\sigma_t$ 中估计得到，用作 RewardCalculator 的语义参照。
+
+可以形式化为：
+
+$$z_t = Z(H_t)$$
+
+或者：
+
+$$z_t = Z(\sigma_t, \ell_t^K)$$
+
+其中 $z_t$ 表示当前 topic segment 的语义表示。
+
+然后 topic deviation 可以写成：
+
+$$\Delta_t^{\text{topic}} = 1 - \cos(\text{embed}(y_t), z_t)$$
+
+但这里还需要一个细节：**如果 Planner 本轮选择了换话题，也就是 $w_t=1$，那么不能简单把所有偏离当前 segment 的回复都当作负面。**
+
+否则 Planner 只要换话题，就会天然受到 topic deviation penalty。
+
+更合理的是：
+
+$$\Delta_t^{\text{topic}} =
+\begin{cases}
+1 - \cos(\text{embed}(y_t), z_t), & w_t = 0 \\
+1 - \cos(\text{embed}(k_t), \text{embed}(g_t, P_t^+, C_t^{\text{user}})), & w_t = 1
+\end{cases}$$
+
+含义是：
+
+```text
+如果不换话题，则惩罚当前回复偏离当前 segment；
+如果换话题，则评价新 topic 是否仍然和用户目标、偏好、约束相关。
+```
+
+不用一开始写得这么复杂，但这个逻辑需要在文档里说明。
+
+---
+
+# 5. 广告密度惩罚可以保留，但符号要改
+
+你现在写的是：
+
+$$o_t = \alpha_1 \cdot \mathbf{1}[\text{ad}_t] + \alpha_2 \cdot \sum_{i=t-k}^{t-1} \mathbf{1}[\text{ad}_i]$$
+
+建议改成：
+
+$$\omega_t^{\text{ad}} = \beta_1 \mathbf{1}[d_t=1] + \beta_2 \sum_{i=\max(0,t-K)}^{t-1} \mathbf{1}[d_i=1]$$
 
 其中：
 
-* 用户价值： $r_t^{\text{user}} = \lambda_1 s_t + \lambda_2 c_t$ 
-	* 任务完成度 $s_t$
-	* 对话持续性 $c_t$
-* 商业价值：$r_t^{\text{biz}} = \lambda_3 a_t$
-* 约束项： $r_t^{\text{constraint}} = -\lambda_4 q_t - \lambda_5 o_t - \lambda_6 d_t$
-	* 用户反感度 $q_t$
-	* 广告密度 $o_t$
-	* 话题偏移 $d_t$
+| 符号                | 含义                    |
+| ----------------- | --------------------- |
+| $d_t$             | Planner action 中是否插广告 |
+| $\omega_t^{\text{ad}}$   | 广告过载惩罚                |
+| $K$               | 统计最近广告曝光的窗口大小         |
+| $\beta_1, \beta_2$ | 广告密度惩罚内部权重            |
 
+这和我们当前 action 定义完全对应，因为 Planner 的动作里本来就有：
 
-| 奖励                        | 类别    | 符号    | 含义                | 类型       | 输出      | 计算方式                  | 信号性质 |
-| ------------------------- | ----- | ----- | ----------------- | -------- | ------- | --------------------- | ---- |
-| $r_t^{\text{user}}$       | 即时+长期 | $s_t$ | task satisfaction | 用户任务价值   | $[0,1]$ | BERT/LLM judge        | 语义推断 |
-| ^                         | ^     | $c_t$ | continuation      | 留存 proxy | 概率      | 分类模型（continue / stop） | 行为信号 |
-| $r_t^{\text{biz}}$        | 商业价值  | $a_t$ | ad acceptance     | 商业收益     | $[0,1]$ | 分类/回归模型（兴趣判别）         | 语义推断 |
-| $r_t^{\text{constraint}}$ | 约束    | $q_t$ | annoyance         | 负反馈      | $[0,1]$ | 分类模型（负情绪）             | 情绪信号 |
-| ^                         | ^     | $o_t$ | ad overload       | 广告密度     | 标量      | 规则计算（频率）              | 结构信号 |
-| ^                         | ^     | $d_t$ | topic deviation   | 话题偏移     | 距离      | embedding 相似度         | 语义结构 |
+$$d_t \in \{0,1\}$$
 
-
-## 5.2 奖励项的计算方式
-
-具体而言，在每一轮 $t$，给定：
-
-* 对话历史 $h_t$
-* 当前系统回复 $y_t$
-* 用户下一轮反馈 $u_{t+1}$
-* 当前 topic segment 表示 $z_t$
-
-各项 reward 通过以下方式计算：
+表示是否插广告。
 
 ---
 
-### （1）任务完成度 $s_t$
+# 6. 广告接受度需要和 $d_t, j_t$ 绑定
 
-刻画当前回复是否推进用户任务。
+广告收益项不应该在没有插广告时也计算。
 
-* 输出：任务推进程度（0~1）
-	* 继续深入问题 → 高
-	* 重新提问 → 中
-	* 表示无帮助 → 低
+所以：
 
----
+$$\alpha_t^{\text{ad}} = 0,\quad \text{if } d_t = 0$$
 
-### （2）对话持续性 $c_t$
+当 $d_t = 1$ 时：
 
-刻画用户是否愿意继续交互，是长期留存的信号，对应推荐系统中的 retention signal。
+$$\alpha_t^{\text{ad}} = A(j_t, y_t, u_{t+1}, H_t)$$
 
-可由以下行为近似：
+其中 $A(\cdot)$ 可以根据以下信号估计：
 
-* 用户继续提问 → 高
-* 简短回应 → 中
-* 直接结束 → 低
+```text
+用户点击广告；
+用户接受广告；
+用户追问广告；
+用户表达兴趣；
+用户没有反感但继续互动。
+```
 
----
-
-### （3）广告接受度 $a_t$
-
-广告的正向效果。
-
-典型信号包括：
-
-* 追问广告内容
-* 请求更多信息
-* 表达兴趣
+如果没有真实 click signal，那么可以先用 LLM judge / classifier 估计。文档里要明确这是 **proxy reward**，不是直接观测 reward。
 
 ---
 
-### （4）用户反感度 $q_t$
+# 7. Reward model 的边界必须写清楚
 
-刻画负向反馈。
+你文档里有一句很关键：
 
-实现方式：
+> 奖励组成部分无法直接观测到，而是通过利用用户反馈信号所学习到的奖励模型来进行估算。
 
-* 文本分类模型检测用户表达：
+这句话是合理的，但要补充一个训练边界：
 
-  * “不要推荐”
-  * “不是这个问题”
-  * 明显转移话题
+> Reward model should be fixed or offline-calibrated during Planner RL training.
 
-该项用于约束过度广告行为。
+也就是说，RewardCalculator / reward model 不应该和 Planner 一起在线更新。否则 reward function 会变，RL 环境会非平稳。
 
----
+可以写成：
 
-### （5）广告密度惩罚 $o_t$
+$$\hat{r}_t = R_{\phi}(s_t, a_t, y_t, u_{t+1}, H_t)$$
 
-刻画广告曝光频率。
+其中 $\phi$ 是 reward model 参数。
+在 Planner RL 阶段，$\phi$ 固定，优化的是：
 
-实现方式（规则定义）：
+$$\theta$$
 
-$$o_t = \alpha_1 \cdot \mathbf{1}[\text{ad}_t] + \alpha_2 \cdot \sum_{i=t-k}^{t-1}\mathbf{1}[\text{ad}_i]$$
-表示：
+即 Planner policy 参数。
 
-* 当前是否插入广告
-* 最近 $k$ 轮广告数量
+如果要更规范：
 
-用于防止连续多次插入广告。
+$$\theta^* = \arg\max_{\theta} \mathbb{E}_{\pi_{\theta}, R_{\phi}} \left[ \sum_{t=0}^{T-1} \gamma^t r_t + r_{\text{terminal}} \right]$$
 
----
-
-### （6）话题偏移 $d_t$
-
-刻画当前回复是否偏离 topic segment。
-
-实现方式：
-
-* 使用语义向量表示：
-  * $z_t$：当前 segment 表示
-  * $\text{embed}(y_t)$：当前回复表示
-$$d_t = 1 - \cos(\text{embed}(y_t), z_t)$$
-解释：
-
-* 与当前 segment 一致 → 偏移小
-* 强行引入新话题（如广告） → 偏移大
-
-
-
-## 5.3 episode-level 优化目标
-
-系统最终优化的是整段对话的累计回报：
-
-$$R = \sum_{t=1}^{T} \gamma^{t-1} r_t + r_{\text{terminal}}$$
-
-其中：
-
-* $\gamma$：折扣因子
-* $r_{\text{terminal}}$：终局奖励
+其中 $R_{\phi}$ 是固定的 reward estimator。
 
 ---
- 
- >终局奖励用于刻画对话最终结果：
+
+# 8. Terminal reward 设计是必要的，而且写得合理
+
+你现在的 terminal reward：
 
 $$r_{\text{terminal}} =
 \begin{cases}
@@ -294,28 +255,124 @@ $$r_{\text{terminal}} =
 0, & \text{中性结束}
 \end{cases}$$
 
-避免将所有“结束”视为负反馈。
+这个很重要，建议保留。
 
+它解决了一个问题：不能把所有结束都当成坏事。
 
-## 5.3 对话长度控制
+例如：
 
-在多轮对话中，如果直接累加 reward，可能导致模型通过延长对话来获得更高回报，即：
+```text
+用户任务完成后自然结束：正向
+用户因广告反感退出：强负向
+用户未完成就退出：负向
+用户中性离开：中性
+```
 
-> 对话越长，累计 reward 越高
+这和我们的 episode-level objective 是一致的。
 
-为避免这一问题，我们采用以下机制：
+---
 
-1. 折扣因子
-$$R = \sum_{t=1}^{T} \gamma^{t-1} r_t$$
-	用于降低后期 reward 的影响。
+# 9. 对话长度控制也满足需求
 
-2. **最大对话长度** 设定：
+你文档里提到三种机制：
+
+```text
+discount factor
+maximum turn length
+terminal reward
+```
+
+这三者是合理的。
+
+它能避免 Planner 通过“拖长对话”获得更高累计 reward。
+
+在 formulation 里可以写成：
+
 $$T \leq T_{\max}$$
-	避免无限对话。
 
-3. 终局奖励
-	* 任务完成（正）
-	* 因广告退出（负）
-	* 未完成退出（负）
+$$J(\theta) = \mathbb{E}_{\pi_{\theta}} \left[ \sum_{t=0}^{T-1} \gamma^t r_t + r_{\text{terminal}} \right]$$
 
+其中：
 
+$$\gamma \in [0,1]$$
+
+用于折扣未来收益。
+
+---
+
+# 10. 建议整合成当前 formulation 的 Reward 部分
+
+你可以把 reward 部分标准化为下面这个版本。
+
+---
+
+## Reward Function
+
+At each agent decision turn $t$, after the Planner selects $a_t$, the Speaker generates $y_t$, and the Mock User returns $u_{t+1}$, the RewardCalculator computes an immediate scalar reward:
+
+$$r_t = R(s_t, a_t, y_t, u_{t+1}, H_t)$$
+
+We decompose $r_t$ into user value, business value, and constraint penalties:
+
+$$r_t = \lambda_{\text{task}} \eta_t^{\text{task}} + \lambda_{\text{cont}} \kappa_t^{\text{cont}} + \lambda_{\text{ad}} \alpha_t^{\text{ad}} - \lambda_{\text{annoy}} \chi_t^{\text{annoy}} - \lambda_{\text{load}} \omega_t^{\text{ad}} - \lambda_{\text{drift}} \Delta_t^{\text{topic}}$$
+
+where:
+
+| Term               | Meaning                            | Signal type                  |
+| ------------------ | ---------------------------------- | ---------------------------- |
+| $\eta_t^{\text{task}}$    | task progress / task satisfaction  | semantic proxy               |
+| $\kappa_t^{\text{cont}}$  | continuation / retention proxy     | behavioral signal            |
+| $\alpha_t^{\text{ad}}$    | ad acceptance / ad interest        | event or semantic proxy      |
+| $\chi_t^{\text{annoy}}$   | user annoyance / negative feedback | semantic or affective proxy  |
+| $\omega_t^{\text{ad}}$    | ad overload penalty                | rule-based structural signal |
+| $\Delta_t^{\text{topic}}$ | topic drift penalty                | semantic structure signal    |
+
+其中：
+
+$$\omega_t^{\text{ad}} = \beta_1 \mathbf{1}[d_t=1] + \beta_2 \sum_{i=\max(0,t-K)}^{t-1} \mathbf{1}[d_i=1]$$
+
+话题偏移基于当前 topic segment 表示 $z_t$ 计算：
+
+$$z_t = Z(H_t)$$
+
+$$\Delta_t^{\text{topic}} = 1 - \cos(\text{embed}(y_t), z_t)$$
+
+如果本轮 Planner 明确选择换话题，即 $w_t=1$，则 $\Delta_t^{\text{topic}}$ 应评价新 topic $k_t$ 与用户目标和偏好的匹配程度，而不是简单惩罚偏离旧 segment。
+
+---
+
+## Terminal Reward
+
+Episode-level return is defined as:
+
+$$G = \sum_{t=0}^{T-1} \gamma^t r_t + r_{\text{terminal}}$$
+
+where:
+
+$$r_{\text{terminal}} =
+\begin{cases}
++R_{\text{success}}, & \text{task completed} \\
+-R_{\text{annoy}}, & \text{exit due to ad annoyance} \\
+-R_{\text{fail}}, & \text{exit before task completion} \\
+0, & \text{neutral ending}
+\end{cases}$$
+
+The Planner objective is:
+
+$$J(\theta) = \mathbb{E}_{\pi_{\theta}} \left[ \sum_{t=0}^{T-1} \gamma^t r_t + r_{\text{terminal}} \right]$$
+
+---
+
+# 11. 还需要补的内容
+
+现在 reward 文档已经足够支撑 formulation，但还需要补四个细节，才能进入实现或实验设计。
+
+第一，**每个 proxy 的具体标注或模型来源**。例如 $\eta_t^{\text{task}}$、$\chi_t^{\text{annoy}}$、$\alpha_t^{\text{ad}}$ 是 LLM judge、BERT classifier，还是 rule-based。需要后续定。
+
+第二，**reward model 是否固定**。建议在 Planner RL 阶段固定 RewardCalculator / reward model，避免 reward drift。
+
+第三，**各项 reward 的范围归一化**。最好都归一到 $[0,1]$ 或 $[-1,1]$，否则 $\lambda$ 很难调。
+
+第四，**topic segment $z_t$ 的生成方式**。需要说明它来自 Monitor 对 $H_t$ 的分段，还是来自 $\sigma_t$ 中的当前 topic summary。这个不一定要现在实现很复杂，但 formulation 里要有定义。
+
+总结：你的 reward 文档大方向是满足的，但需要做符号清理和 formulation 对齐。最重要的改动是不要再用 $s_t, a_t, o_t, d_t$ 表示 reward 子项，因为这些已经在 RL formulation 中有固定含义。

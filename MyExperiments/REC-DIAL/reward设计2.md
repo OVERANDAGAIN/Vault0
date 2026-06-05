@@ -1,3 +1,6 @@
+---
+创建时间: 2026-六月-5日  星期五, 4:02:04 下午
+---
 
 ---
 
@@ -250,7 +253,7 @@ REC-DIAL 的优化对象不是单轮回复质量，而是完整对话 trajectory
 在每一轮 $t$，定义即时奖励：
 
 $$r_t
-===
+=
 
 r_t^{\text{user}}
 +
@@ -261,19 +264,19 @@ r_t^{\text{constraint}}$$
 其中：
 
 $$r_t^{\text{user}}
-=================
+=
 
 \lambda_{\text{task}}\eta_t^{\text{task}}
 +
 \lambda_{\text{cont}}\kappa_t^{\text{cont}}$$
 
 $$r_t^{\text{biz}}
-================
+=
 
 \lambda_{\text{ad}}\alpha_t^{\text{ad}}$$
 
 $$r_t^{\text{constraint}}
-=======================
+=
 
 -\lambda_{\text{annoy}}\chi_t^{\text{annoy}}
 -\lambda_{\text{load}}\omega_t^{\text{ad}}
@@ -281,20 +284,20 @@ $$r_t^{\text{constraint}}
 
 合并后：
 
-$$r_t
-===
+$$r_t =
 
 \lambda_{\text{task}}\eta_t^{\text{task}}
 +
 \lambda_{\text{cont}}\kappa_t^{\text{cont}}
 +
 \lambda_{\text{ad}}\alpha_t^{\text{ad}}
----------------------------------------
 
-## \lambda_{\text{annoy}}\chi_t^{\text{annoy}}
+-
 
-## \lambda_{\text{load}}\omega_t^{\text{ad}}
-
+ \lambda_{\text{annoy}}\chi_t^{\text{annoy}}
+-
+ \lambda_{\text{load}}\omega_t^{\text{ad}}
+-
 \lambda_{\text{drift}}\Delta_t^{\text{topic}}$$
 
 其中：
@@ -303,12 +306,11 @@ $$r_t
 | ---- | ------------------------- | ----------------- | ------------------------- |
 | 用户价值 | $\eta_t^{\text{task}}$    | 任务推进 / 任务满足程度     | 语义模型估计                    |
 | 用户价值 | $\kappa_t^{\text{cont}}$  | 用户继续交互 / 留存 proxy | 用户反馈与终止信号                 |
-| 商业价值 | $\alpha_t^{\text{ad}}$    | 广告接受 / 广告收益       | 广告表查值 + 用户接受信号            |
+| 商业价值 | $\alpha_t^{\text{ad}}$    | 广告接受 / 广告收益       | 广告表查值                     |
 | 约束惩罚 | $\chi_t^{\text{annoy}}$   | 用户反感 / 负反馈        | 语义模型或情绪分类                 |
 | 约束惩罚 | $\omega_t^{\text{ad}}$    | 广告密度 / 广告过载       | Monitor 维护的广告统计           |
 | 约束惩罚 | $\Delta_t^{\text{topic}}$ | 话题偏移              | segment 表示与 embedding 相似度 |
 
-这里避免使用 $(s_t,a_t,d_t,o_t)$ 作为 reward 子项符号，因为这些符号已经分别用于 RL state、Planner action、广告决策和 observation。
 
 ---
 
@@ -365,15 +367,6 @@ RewardCalculator 负责评价后果：
 话题是否偏移。
 ```
 
-因此，Monitor 与 Reward 并不重复。二者关系是：
-
-$$H_t \xrightarrow{Monitor} s_t$$
-
-$$(s_t,a_t,s_{t+1}) \xrightarrow{RewardCalculator} r_t$$
-
-Monitor 输出状态事实，RewardCalculator 将状态变化和动作后果映射为标量 reward。
-
----
 
 # 七、各奖励项的计算方式
 
@@ -391,11 +384,11 @@ $$(s_t,a_t,s_{t+1})$$
 
 估计得到。关键依据包括：
 
-```text
-用户目标 g_t 是否被推进；
+```ad-note
+用户目标 $g_t$ 是否被推进；
 用户偏好和约束是否被更好满足；
 用户是否接受、追问或继续深化当前任务；
-下一状态 b_{t+1} 是否显示任务更明确或更接近完成。
+下一状态 $b_{t+1}$ 是否显示任务更明确或更接近完成。
 ```
 
 典型取值逻辑：
@@ -453,29 +446,15 @@ $$d_t=1,\quad j_t\in\mathcal{D}$$
 
 则广告基础价值可以从广告池中查表得到：
 
-$$v(j_t)=\text{reward_value}(j_t)$$
+$$v_{j_t}=\\reward\_value(j_{t})$$
 
 广告收益定义为：
 
 $$\alpha_t^{\text{ad}}
-====================
+=
 
-\mathbf{1}[d_t=1]\cdot v(j_t)\cdot \hat q_t^{\text{ad}}$$
+\mathbf{1}[d_t=1]\cdot v_{j_t}$$
 
-其中 $\hat q_t^{\text{ad}}$ 表示用户对该广告的接受程度。
-
-$\hat q_t^{\text{ad}}$ 可以来自：
-
-```text
-广告点击；
-用户明确表示感兴趣；
-用户追问广告内容；
-用户接受广告推荐；
-用户忽略广告但继续对话；
-用户明确拒绝广告。
-```
-
-如果存在直接点击或接受事件，则优先使用直接事件；如果没有直接事件，则由 reward model 根据 $s_t,a_t,s_{t+1}$ 估计。
 
 ---
 
@@ -505,15 +484,13 @@ J_\phi^{\text{annoy}}(s_t,a_t,s_{t+1})$$
 
 该项用于约束过度广告和不自然话题切换。
 
-需要注意的是，$\chi_t^{\text{annoy}}$ 是 reward penalty，不应被 Monitor 直接输出。Monitor 只记录用户反馈和状态变化，RewardCalculator 再将其转换为惩罚。
-
 ---
 
 ## 7.5 广告密度惩罚 $\omega_t^{\text{ad}}$
 
 广告密度是规则型 reward 项，不需要语义模型判断。
 
-为支持该项，Monitor 中的广告曝光状态建议定义为：
+为支持该项，Monitor 中的广告曝光状态定义为：
 
 $$e_t^{ad}=(n_t^{ad},m_t^{ad,K},\delta_t^{ad},o_t^{ad})$$
 
@@ -529,7 +506,7 @@ $$e_t^{ad}=(n_t^{ad},m_t^{ad,K},\delta_t^{ad},o_t^{ad})$$
 广告密度惩罚定义为：
 
 $$\omega_t^{\text{ad}}
-====================
+=
 
 \beta_1\mathbf{1}[d_t=1]
 +
@@ -566,7 +543,7 @@ $$w_t=0$$
 则话题偏移可以定义为：
 
 $$\Delta_t^{\text{topic}}
-=======================
+=
 
 1-\cos(\text{embed}(y_t),z_t)$$
 
@@ -579,7 +556,7 @@ $$w_t=1$$
 则不能简单惩罚偏离旧 segment。此时应评价新 topic $k_t$ 是否与用户目标和偏好相关：
 
 $$\Delta_t^{\text{topic}}
-=======================
+=
 
 1-\cos(\text{embed}(k_t),\text{embed}(g_t,P_t^+,C_t^{\text{user}}))$$
 
@@ -605,7 +582,7 @@ $$G=\sum_{t=0}^{T-1}\gamma^t r_t+r_{\text{terminal}}$$
 Planner 的优化目标为：
 
 $$J(\theta)
-=========
+=
 
 \mathbb{E}_{\pi_\theta}
 \left[
@@ -685,97 +662,3 @@ Terminal reward 区分不同结束类型：
 ```
 
 这样可以避免把“用户完成任务后结束”错误惩罚，也可以避免 Planner 通过无限延长对话获得高回报。
-
----
-
-# 十、Reward Model 与训练边界
-
-部分 reward 项可以直接由规则或数据表得到，例如：
-
-```text
-广告密度；
-广告基础价值；
-广告展示数量；
-广告间隔。
-```
-
-但也有部分项需要模型估计，例如：
-
-```text
-任务推进；
-用户反感；
-广告接受意图；
-话题偏移。
-```
-
-因此 RewardCalculator 可以被看作：
-
-$$R_\phi(s_t,a_t,s_{t+1})$$
-
-其中 $\phi$ 表示 reward model 或 judge 的参数。
-
-在 Planner RL 训练阶段，建议保持 $R_\phi$ 固定或离线校准，而不是和 Planner 同时在线更新。否则 reward function 会随训练过程变化，导致 RL 环境非平稳。
-
-最终训练对象是 Planner policy：
-
-$$\pi_\theta(a\mid s_t)$$
-
-而不是 RewardCalculator。
-
----
-
-# 十一、本节总结
-
-REC-DIAL 的 reward 设计保留六个核心项：
-
-$$r_t
-===
-
-\lambda_{\text{task}}\eta_t^{\text{task}}
-+
-\lambda_{\text{cont}}\kappa_t^{\text{cont}}
-+
-\lambda_{\text{ad}}\alpha_t^{\text{ad}}
----------------------------------------
-
-## \lambda_{\text{annoy}}\chi_t^{\text{annoy}}
-
-## \lambda_{\text{load}}\omega_t^{\text{ad}}
-
-\lambda_{\text{drift}}\Delta_t^{\text{topic}}$$
-
-其中：
-
-```text
-η_task：任务推进
-κ_cont：对话持续性
-α_ad：广告收益
-χ_annoy：用户反感
-ω_ad：广告密度
-Δ_topic：话题偏移
-```
-
-Reward 的计算统一写作：
-
-$$r_t=R_\phi(s_t,a_t,s_{t+1})$$
-
-Monitor 负责将原始历史压缩为状态：
-
-$$s_t=M(p,H_t)$$
-
-RewardCalculator 负责将状态转移和 Planner action 映射为标量 reward：
-
-$$(s_t,a_t,s_{t+1})\rightarrow r_t
-
-$$
-
-因此，Monitor 与 Reward 的边界清晰：
-
-```text
-Monitor 输出描述性状态；
-RewardCalculator 输出评价性标量；
-Planner 根据 reward 训练；
-Speaker 只负责语言实现。
-```
-
-这个 reward 设计使 Planner 学习的目标不再是单轮讨好用户或单纯最大化广告收益，而是在完整 episode 中平衡用户任务完成、对话持续性、广告价值和副作用约束。

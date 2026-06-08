@@ -461,7 +461,7 @@ $$\chi_t^{\text{annoy}}\in[0,1]$$
 它主要由 reward model / classifier 根据动作后状态估计：
 
 $$\chi_t^{\text{annoy}}
-=====================
+=
 
 J_\phi^{\text{annoy}}(s_t,a_t,s_{t+1})$$
 

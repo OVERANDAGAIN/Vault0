@@ -58,7 +58,8 @@ episode
  └── turn T
 ```
 
-但只用 turn 序列不足以描述对话中的语义结构。因为一个语义话题或用户子任务通常会跨越多轮。因此进一步引入 topic segment：
+虽然对话中会出现局部连续的话题或子任务，但不显式定义 topic segment。当前话题上下文由 Planner state 中的 user belief、rolling summary 和 recent K exchanges 共同表示。
+
 
 ```text
 episode
@@ -79,11 +80,7 @@ episode
 | topic segment | 若干语义一致的连续 turn                                          | 提供话题连贯性和广告相关性的语义参照            |
 | episode       | 一次完整多轮对话                                                | 定义长期 return 和 terminal reward |
 
-这里需要强调：
-
-> segment 不等于 turn。一个 segment 可以包含多轮对话，而单个 turn 往往不能独立表达完整语义。
-
-在 REC-DIAL 中，segment 不是新的 RL step，也不是新的 action 层级，而是 reward 计算中的语义参照。也就是说，reward 仍然是 turn-level 计算，但部分 reward 项需要结合当前 topic segment 判断。
+reward 仍然是 turn-level 计算，但部分 reward 项需要结合当前 topic segment 判断。
 
 ---
 

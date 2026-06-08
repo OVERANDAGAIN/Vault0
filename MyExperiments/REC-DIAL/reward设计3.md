@@ -192,7 +192,7 @@ topic segment 在 reward 中主要承担语义参照作用。
 
 > reward 虽然在 turn-level 计算，但部分 reward 项以 segment-level 语义为条件。
 
-在实现上，当前 topic segment 可以由 Monitor 从 rolling summary 和最近 $K$ 轮对话中维护或估计。它不需要作为额外 Planner action，也不改变 RL step 的定义。
+在实现上，当前 topic segment 可以由 Monitor 从 rolling summary 和最近 $K$ 轮对话中维护或估计。它不需要作为额外 Planner action。
 
 ---
 
@@ -302,11 +302,11 @@ $$r_t =
 | 类别   | 符号                        | 含义                | 信号来源                      |
 | ---- | ------------------------- | ----------------- | ------------------------- |
 | 用户价值 | $\eta_t^{\text{task}}$    | 任务推进 / 任务满足程度     | 语义模型估计                    |
-| 用户价值 | $\kappa_t^{\text{cont}}$  | 用户继续交互 / 留存 proxy | 用户反馈与终止信号                 |
+| ^    | $\kappa_t^{\text{cont}}$  | 用户继续交互 / 留存 proxy | 用户反馈与终止信号                 |
 | 商业价值 | $\alpha_t^{\text{ad}}$    | 广告接受 / 广告收益       | 广告表查值                     |
-| 约束惩罚 | $\chi_t^{\text{annoy}}$   | 用户反感 / 负反馈        | 语义模型或情绪分类                 |
-| 约束惩罚 | $\omega_t^{\text{ad}}$    | 广告密度 / 广告过载       | Monitor 维护的广告统计           |
-| 约束惩罚 | $\Delta_t^{\text{topic}}$ | 话题偏移              | segment 表示与 embedding 相似度 |
+| 约束项  | $\chi_t^{\text{annoy}}$   | 用户反感 / 负反馈        | 语义模型或情绪分类                 |
+| ^    | $\omega_t^{\text{ad}}$    | 广告密度 / 广告过载       | Monitor 维护的广告统计           |
+| ^    | $\Delta_t^{\text{topic}}$ | 话题偏移              | segment 表示与 embedding 相似度 |
 
 
 ---
@@ -321,11 +321,11 @@ $$r_t=R_\phi(s_t,a_t,s_{t+1})$$
 
 这样设计的原因是：
 
-```text
-s_t 描述动作前的用户需求、对话记忆和广告曝光状态；
-a_t 描述 Planner 做了什么；
-s_{t+1} 描述用户反馈后的新状态；
-reward 评价的是从 s_t 经过 a_t 到 s_{t+1} 的这次转移是否有价值。
+```ad-note
+$s_t$ 描述动作前的用户需求、对话记忆和广告曝光状态；
+$a_t$ 描述 Planner 做了什么；
+$s_{t+1}$ 描述用户反馈后的新状态；
+reward 评价的是从 $s_t$ 经过 $a_t$ 到 $s_{t+1}$ 的这次转移是否有价值。
 ```
 
 因此，RewardCalculator 不需要在主公式中直接写完整历史 $H_t$，也不额外引入新的 evidence 变量。历史信息由 Monitor 压缩进 $s_t$ 和 $s_{t+1}$。

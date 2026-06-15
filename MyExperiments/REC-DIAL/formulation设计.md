@@ -161,6 +161,9 @@ $$s_t = (p_u, B_t, D_t, E_t)$$
 | $D_t$ | DialogueContext       | 对话历史的压缩表示，包括长期摘要、最近几轮原文                    |
 | $E_t$ | AdExposureState       | 最近 $K_{\mathrm{ad}}$ 个已完成 step 中的结构化广告事件序列 |
 |       |                       |                                            |
+|       |                       |                                            |
+>！$E_t$ y与 $D_t$ 的关系,冗余
+>s_t 改名
 
 这里的 $s_t$ 是 Planner 在第 $t$ 个 decision step 的输入。
 

@@ -337,7 +337,7 @@ $$E_t
 
 # 3. Monitor 
 
-Monitor 直接把原始 observation 压缩成 Planner state：
+Monitor 直接把原始 user  压缩成 Planner state：
 
 $$s_t = M(o_t)$$
 

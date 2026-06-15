@@ -7,191 +7,531 @@
 
 
 
-Dy2025102110010
 
 
-# 文献调研
-## DEAR
-> (2019/09/09) DEAR: Deep Reinforcement Learning for Online Advertising Impression in Recommender Systems
+
+# formulation 具体
+
+```text
+将 REC-DIAL 形式化为一个部分可观测的序列决策问题。
+每个 episode 是 agent 与 Mock User 之间的一次多轮对话。
+在每个 decision step，Planner 接收由 Monitor 构造的压缩 state，并输出一个 Planner action。
+Speaker 将该 action 实现为自然语言回复。
+随后 Mock User 产生下一轮用户反馈。
+用户反馈本身不是 reward，而是 raw feedback；Monitor 和 RewardCalculator 将其分别解释为下一轮状态信号和当前轮标量 reward。
+```
 
 
-可以。下面这个版本只保留 **DEAR 原文明确给出的 formulation 和实现设置**；凡是原文没有给出的训练细节，例如 learning rate、batch size、GRU 层数等，不纳入表格。
+![[Pasted image 20260608135436.png]]
 
-# 1. DEAR 的整体 MDP 设置
 
-| 组件                   | 原文设置                                  | 具体含义                                              |
-| -------------------- | ------------------------------------- | ------------------------------------------------- |
-| **问题对象**             | Advertising problem within a rec-list | 在推荐系统已经生成 rec-list 后，广告系统决定是否插入广告、插入哪个广告、插入到哪个位置。 |
-| **MDP**              | $(S,A,P,R,\gamma)$                    | 将推荐列表中的广告插入建模为马尔可夫决策过程。                           |
-| **Agent**            | Advertising-Agent, AA                 | 广告智能体。                                            |
-| **Environment**      | $E$, users                            | 用户环境。用户浏览混合后的 rec-ad list 并反馈。                    |
-| **State**            | $s_t \in S$                           | 用户在 $t$ 之前的 browsing history + 当前 request 信息。     |
-| **Action**           | $a_t=(a^{ad}_t,a^{loc}_t)$            | 组合动作：是否插广告、插哪个广告、插到哪个位置。                          |
-| **Reward**           | $r(s_t,a_t)$                          | 广告收益 + 用户体验影响。                                    |
-| **Transition**       | $p(s_{t+1}\mid s_t,a_t)$              | 执行动作后，用户浏览并反馈，进入下一状态。                             |
-| **Discount factor**  | $\gamma \in [0,1]$；实验中 $\gamma=0.95$  | 控制未来 reward 的折扣。                                  |
-| **Policy objective** | $\pi:S\rightarrow A$                  | 学习一个广告策略，最大化长期累计 reward，即最大化广告收入并最小化广告对用户体验的负面影响。 |
 
-原文在 Problem Statement 中明确把该问题定义为 Advertising-Agent 与 users 交互的 MDP，并给出 state、action、reward、transition、discount factor 和 policy objective 的定义。
 
-# 2. State 的组成与维度
 
-DEAR 的 state 写作：
+# formulation 具体
 
-$$s_t = \text{concat}(p^{rec}_t, p^{ad}_t, c_t, rec_t)$$
+```text
+将 REC-DIAL 形式化为一个部分可观测的序列决策问题。
+每个 episode 是 agent 与 Mock User 之间的一次多轮对话。
+在每个 decision step，Planner 接收由 Monitor 构造的压缩 state，并输出一个 Planner action。
+Speaker 将该 action 实现为自然语言回复。
+随后 Mock User 产生下一轮用户反馈。
+用户反馈本身不是 reward，而是 raw feedback；Monitor 和 RewardCalculator 将其分别解释为下一轮状态信号和当前轮标量 reward。
+```
 
-| State 部分     |          符号 | 原文构造方式                                                              | 原文给出的维度 |
-| ------------ | ----------: | ------------------------------------------------------------------- | ------: |
-| 推荐浏览历史表示     | $p^{rec}_t$ | 用一个 GRU 编码用户最近浏览过的 recommendations，取最后 hidden state 表示用户对推荐内容的动态偏好。 |      64 |
-| 广告浏览历史表示     |  $p^{ad}_t$ | 用另一个 GRU 编码用户最近浏览过的 ads，取最后 hidden state 表示用户对广告内容的动态偏好。            |      64 |
-| 当前请求上下文      |       $c_t$ | 包括 OS、app version、feed type 等当前 request context。                    |      13 |
-| 当前推荐列表表示     |     $rec_t$ | 将当前 rec-list 中 $L$ 个推荐 item 的特征拼接，再经过一层 tanh 变换。                    |     360 |
-| **最终 state** |       $s_t$ | 拼接上述四部分。                                                            | **501** |
+---
 
-其中 $rec_t$ 的原文公式是：
+# Slide 1：Episode 怎么定义
 
-$$rec_t = \tanh(W_{rec}\text{concat}(rec_1,\cdots,rec_L)+b_{rec})$$
+一个 episode 是一次完整的用户-agent 多轮对话，从用户初始需求开始，到对话结束为止。
 
-所以最终 state 的维度由原文给出的四部分维度相加得到：
+在 REC-DIAL 中，episode 开始于：
 
-$$64+64+13+360=501$$
+```text
+Start:
+- sample / load user u
+- load user profile p_u
+- generate initial user query q_0
+```
+
+其中，$u$ 表示当前 episode 中的用户，$p_u$ 表示该用户的 profile / persona prior，$q_0$ 表示初始用户需求。
+
+结束条件可以包括：
+
+```text
+用户主动离开
+达到最大轮数
+任务完成
+系统主动结束
+```
+
+```ad-tip
+**当前代码里已经有其中两个比较明确的结束条件：**
+
+1. UserSimulator 返回 EXIT_ACTION
+2. turn_count 达到 max_turns
+
+`DialogueEnv.step()` 里会根据 `user_response.text == EXIT_ACTION` 判断 `done`，
+`run_simulation.py` 里会用 `turn_count < max_turns` 控制 episode 长度。
+```
+
+## Episode 长度
+
+episode 不定义为固定长度，而是定义为变长对话过程，并设置最大轮数上限。
+
+也就是说，一个 episode 的长度 $T$ 满足：
+
+$$T \leq T_{\max}$$
+
+其中，$T_{\max}$ 是最大允许轮数，而不是固定 episode 长度。
+
+1. 有些用户可能很快完成需求，
+2. 有些用户会继续探索，
+3. 有些用户会因为广告或低满意度提前离开。
+
+系统优化的是完整 episode 的长期 return，而不是固定轮数下的单轮收益。
+
+---
+
+# Slide 2：Decision step 怎么定义
+
+在对话系统文献中，turn 的用法并不完全统一。一些 dialogue annotation 语境中，turn 指某一方说话者的一次连续发言：
+
+```text
+user turn   = 用户的一次发言
+system turn = 系统的一次回复
+```
+
+而在任务型对话数据集和 dialogue policy learning 中，turn 往往也被用作对话状态更新和系统动作决策的基本轮次。因此，turn 本身不是 REC-DIAL formulation 中最关键的定义对象。
+
+> Kwan W C, Wang H R, Wang H M, et al. A survey on recent advances and challenges in reinforcement learning methods for task-oriented dialogue policy learning[J]. Machine Intelligence Research, 2023, 20(3): 318-334.
+
+
+REC-DIAL 关注的是 RL 训练中的 decision boundary。这里不讨论一个 turn 是否严格等于“用户一句话”或“用户-系统一组交互”。更重要的是明确：Planner 什么时候做一次决策，什么时候得到用户反馈，什么时候形成下一状态和 reward。
+
+因此，对于 RL formulation 来说，最自然的 step 边界就是系统做出一次 policy decision 的时刻。这个时刻对应对话中的 **system turn**。
+
+在任务型对话的 dialogue policy learning 中，系统通常在每个 turn 根据当前 dialogue state 选择下一步 system action。RL-based dialogue policy learning 进一步将 system 视为 agent，将 user 视为 environment，因此一次系统动作选择自然对应一个 RL decision step。
+
+基于这一设定，REC-DIAL 将一个 RL decision step 定义为一个 system turn：
+
+> 令 $t=0,1,\dots,T-1$ 表示 episode 中的第 $t$ 个 RL decision step。
+
+表示 episode 中的第 $t$ 个 RL decision step，其中 $T$ 是该 episode 的实际长度。
+
+在第 $t$ 个 decision step，系统已经观察到当前用户输入 $q_t$ 和此前对话历史。随后，Monitor 构造当前状态 $s_t$，Planner 选择动作 $a_t$，Speaker 生成系统回复 $y_t$，Mock User 返回下一轮用户反馈 $q_{t+1}$。随后系统构造下一状态 $s_{t+1}$，并计算 reward $r_t$。
+
+形式化表示为：
+
+$$s_t \xrightarrow{a_t} y_t \rightarrow q_{t+1} \rightarrow s_{t+1}, r_t$$
+
+最终用于 RL 训练的 transition 是：
+
+$$(s_t, a_t, r_t, s_{t+1}, \text{done}_t)$$
+
+
+
+
+
+
+# Step 2：PlannerInput / State Formulation
+
+# 2.0  原始 observation $o_t$
+
+在第 $t$ 个 decision turn，系统已经看到当前用户输入 $u_t$，并拥有截至当前的完整对话历史：
+
+$$H_t = (q_0, y_0, q_1, y_1, \dots, y_{t-1}, q_t)$$
+
+如果把 previous planner action、广告展示记录、广告点击/拒绝等事件也记录在 episode log 里，那么可以把它们视为 $H_t$ 的一部分。于是原始 observation 定义为：
+
+$$o_t = (p_{u}, H_t)$$
+
+其中：
+
+| 符号      | 含义                   |
+| ------- | -------------------- |
+| $p_{u}$ | 用户u画像或 persona prior |
+| $H_t$   | 截至当前用户输入的完整对话历史与事件日志 |
+
+这里的 $o_t$ 是原始输入，不直接交给 Planner 做决策。
+
+
+## 2.1 设计目标
+
+在 REC-DIAL 中，
+1. Planner 的输入不应是完整对话历史。完整历史过长，包含大量局部细节和噪声；
+2. 仅对当前用户输入 $q_t$ 的局部解释又缺乏长期历史上下文。
+二者都不能直接作为稳定的决策状态。
+
+因此，我们将 Planner 的输入定义为一个经过压缩和结构化后的决策状态：
+
+$$s_t = (p_u, B_t, D_t, E_t)$$
+
+其中：
+
+| 符号    | 名称                    | 含义                                         |
+| ----- | --------------------- | ------------------------------------------ |
+| $p_u$ | UserProfile / Persona | 当前用户 $u$ 的画像                               |
+| $B_t$ | BeliefState           | 系统当前对用户目标、偏好、约束和未解决问题的理解                   |
+| $D_t$ | DialogueContext       | 对话历史的压缩表示，包括长期摘要、最近几轮原文                    |
+| $E_t$ | AdExposureState       | 最近 $K_{\mathrm{ad}}$ 个已完成 step 中的结构化广告事件序列 |
+
+这里的 $s_t$ 是 Planner 在第 $t$ 个 decision step 的输入。
+
+
+---
+
+## 2.2 BeliefState ($B_t$)
+
+BeliefState 表示系统当前对用户需求和偏好的理解。
+
+定义：
+
+$$B_t = (g_t, P_t^+, P_t^-, C_t^{\text{user}}, Q_t)$$
+
+其中：
+
+| 符号 | 名称 | 含义 |
+| --- | --- | --- |
+| $g_t$ | user_goal | 当前用户目标的简短描述 |
+| $P_t^+$ | positive_preferences | 用户已表达的正向偏好 |
+| $P_t^-$ | negative_preferences | 用户已表达的负向偏好、拒绝或不想要的内容 |
+| $C_t^{\text{user}}$ | user_constraints | 用户给出的显式约束条件 |
+| $Q_t$ | open_questions | 尚未解决、但可能影响后续回复的问题 |
+
+示例：
+
+```json
+{
+  "user_goal": "寻找预算友好的日本旅行住宿建议",
+  "positive_preferences": ["budget-friendly", "near public transportation"],
+  "negative_preferences": ["luxury hotels", "crowded areas"],
+  "user_constraints": {
+    "location": "Japan",
+    "budget": "low"
+  },
+  "open_questions": ["具体城市", "旅行时间", "住宿类型"]
+}
+```
+
+BeliefState 由 Monitor 根据用户画像和截至当前的完整对话历史构造：
+
+$$B_t = M_B(p_u, H_t)$$
+
+其中，$M_B$ 表示 Monitor 中负责 belief extraction / belief update 的部分。它负责从历史中抽取并维护当前用户目标、偏好、拒绝项、显式约束和未解决问题。
+
+这里需要强调：BeliefState 并不是为了判断“信息是否足够从而推荐唯一 item”。BeliefState 的作用是帮助 Planner 判断当前更适合采取哪类动作，例如引导探索、轻量澄清、给出初步建议、正式推荐、插入广告、修复体验或结束对话。
+
+
+---
+
+## 2.3 DialogueContext ($D_t$)
+
+由于完整 dialogue history 不适合作为 Planner 输入，我们将历史信息压缩为 DialogueContext：
+
+$$D_t = (m_t, h_t^{K_{h}})$$
+
+其中：
+
+| 符号            | 名称              | 含义                        |
+| ------------- | --------------- | ------------------------- |
+| $m_t$         | rolling_summary | 对长期历史的压缩摘要                |
+| $h_t^{K_{h}}$ | recent_turns    | 最近 $K_{h}$ 个 exchange 的原文 |
+
+
+
+### 2.3.1 Rolling Summary ($m_t$)
+
+Rolling summary 保存长期有效的对话信息。
+
+
+$$m_t = M_{\mathrm{mem}}(m_{t-1}, \Delta H_t)$$
+
+其中：
+
+$$\Delta H_t = (y_{t-1}, q_t)$$
+
+即：
+
+$$\text{previous memory} + \text{latest interaction} \rightarrow \text{updated memory}$$
+
+| 操作 | 作用 |
+| --- | --- |
+| $\mathrm{Extract}_{\text{mem}}$ | 从最新交互中抽取长期有用的信息 |
+| $\mathrm{Merge}$ | 和上一轮 memory 合并，更新 resolved / pending / avoid |
+| $\mathrm{Compress}$ | 删除冗余、过期、局部细节，保持 memory 简短 |
+
+
+
+
+
+
+### 2.3.2 Recent Turns ($h_t^{K_{h}}$)
+
+Rolling summary 保存长期信息，但它不能完全替代最近几轮原文。自然语言对话中存在指代、省略、语气和局部承接问题，这类回复需要依赖最近上下文理解。
+
+因此，我们保留最近 $K_{h}$ 个 exchange：
+
+Recent turns 定义为：
+
+$$h_t^{K_{h}} =
+(q_{\tau}, y_{\tau}, q_{\tau+1}, y_{\tau+1}, \dots, q_{t-1}, y_{t-1}, q_t)$$
+
+其中：
+$$\tau = \max(0, t - K_{h})$$
+Recent turns 的作用是：
+
+* 保留局部语义和指代关系。
+* 帮助 Speaker 自然接话。
+* 避免系统重复刚刚说过的内容。
+
+
+
+> $m_t$ 表示由 Monitor 维护的长期 dialogue memory，用于记录对话主线、已解决事项、未解决事项；$h_t^{K_{h}}$ 表示最近 $K_{h}$ 个 exchange 以及当前用户输入，用于保留局部上下文。前者是压缩记忆，后者是原文窗口。
+
+
+---
+
+
+
+## 2.4 AdExposure $(E_t)$
+
+这里我们只关注广告相关的结构化事件数据，包括每一步是否展示广告、展示了哪个广告，以及用户对该广告的直接反馈。
+
+对于每一个已经完成的 decision step $k<t$，定义广告事件：
+
+$$z_k^{\mathrm{ad}}
+=
+(\mathbb{1}_k^{\mathrm{ad}}, j_k^{\mathrm{ad}}, \mathrm{out}_k^{\mathrm{ad}})$$
+
+其中：
+
+| 符号 | 含义 |
+| --- | --- |
+| $\mathbb{1}_k^{\mathrm{ad}} \in \{0,1\}$ | 第 $k$ 步是否展示广告 |
+| $j_k^{\mathrm{ad}} \in \mathcal{D} \cup \{\varnothing\}$ | 第 $k$ 步展示的广告 ID；如果没有展示广告，则为 $\varnothing$ |
+| $\mathrm{out}_k^{\mathrm{ad}} \in \mathcal{O}^{\mathrm{ad}}$ | 第 $k$ 步广告的用户反馈结果 |
+
+广告结果集合可以定义为：
+
+$$\mathcal{O}^{\mathrm{ad}}
+=
+\{
+\mathrm{none},
+\mathrm{clicked},
+\mathrm{accepted},
+\mathrm{ignored},
+\mathrm{rejected}
+\}$$
+
+
+在第 $t$ 个 decision step，Planner 不能看到当前动作之后才会产生的广告结果，因此 $E_t$ 只包含已经完成的历史广告事件。我们定义：
+
+$$E_t
+=
+(z_{\tau}^{\mathrm{ad}},z_{\tau+1}^{\mathrm{ad}},\dots,z_{t-1}^{\mathrm{ad}}),
+\quad
+\tau=\max(0,t-K_{ad})$$
+
+其中，$K_{ad}$ 是 recent ad history window 的长度。
+
+
+
+
+# 3. Monitor 的
+
+Monitor 直接把原始 observation 压缩成 Planner state：
+
+$$s_t = M(o_t)$$
 
 也就是：
 
-$$s_t \in \mathbb{R}^{501}$$
+$$s_t = M(p_{u}, H_t)$$
 
-原文明确说明，推荐历史和广告历史分别用两个 GRU 编码，当前 rec-list 通过 concat 加 tanh 得到低维 dense vector，并在 Implementation Details 中给出 $p^{rec}_t, p^{ad}_t, c_t, rec_t, a^{ad}_t$ 的维度分别为 64、64、13、360、60。
+这里 $M$ 是 Monitor。它的职责是：
 
-# 3. 原始 item / ad 特征设置
+```ad-info
+读取用户画像和完整对话历史；
+抽取当前用户需求与偏好；
+维护长期 dialogue memory $m_t$；
+保留最近 $K_h$ 个 exchange 的局部上下文；
+构造结构化广告事件序列；
+输出 Planner 可用的压缩状态 s_t。
+```
 
-| 类型           | 原文中的角色                     | 原文列出的特征                                                            | 处理方式                                      |
-| ------------ | -------------------------- | ------------------------------------------------------------------ | ----------------------------------------- |
-| Normal video | 推荐 item / recommended item | id、like score、finish score、comment score、follow score、group score  | 每个 feature 被 discretize 成 one-hot vector。 |
-| Ad video     | 广告 item / advertised item  | id、image size、bid-price、hidden-cost、predicted-CTR、predicted-recall | 每个 feature 被 discretize 成 one-hot vector。 |
+但 Monitor 仍然不做动作选择。它不能输出：
 
-原文说明，normal video 和 ad video 的特征都会被离散化为 one-hot vector，并且这些特征也被 baseline 使用，以保证公平比较。
+```text
+是否插广告；
+插哪个广告；
+是否换话题；
+换到哪个话题。
+```
 
-# 4. Action 的组成与维度
+这些是 Planner 的动作。
 
-DEAR 的 action 写作：
 
-$$a_t=(a^{ad}_t,a^{loc}_t)$$
 
-| Action 部分 |                                               符号 | 原文设置                                         | 维度 / 数量 |
-| --------- | -----------------------------------------------: | -------------------------------------------- | ------: |
-| 候选广告特征    |                                       $a^{ad}_t$ | 一个 candidate ad 的特征表示。                       |      60 |
-| 插入位置      |                                      $a^{loc}_t$ | 给定长度为 $L$ 的 rec-list，有 $L+1$ 个真实插入位置。        |   $L+1$ |
-| 不插广告      |                               special location 0 | 原文将 “not interpolating an ad” 视为特殊位置 0。      |       1 |
-| DQN 输出层   | $Q(s_t,a^{ad}_t)^0,\cdots,Q(s_t,a^{ad}_t)^{L+1}$ | 对某个 candidate ad，一次输出所有位置的 Q-value，包括 no-ad。 | $L+2=8$ |
+# 4. Planner action $a_t$
 
-因此，实验中 DQN 输出层长度为：
+Planner 的动作保持最简：
 
-$$L+2=8$$
+$$a_t = (b_t^{\mathrm{ad}}, j_t^{\mathrm{ad}}, b_t^{\mathrm{topic}}, k_t^{\mathrm{topic}})$$
 
-其中包含一个表示“不插广告”的位置。由这个等式可以直接推出实验里的 rec-list 长度满足：
+其中：
 
-$$L=6$$
+| 符号                     | 含义                    |
+| ---------------------- | --------------------- |
+| $b_t^{\mathrm{ad}}$    | 当前 step 是否插入广告        |
+| $j_t^{\mathrm{ad}}$    | 如果插入广告，选择哪个广告         |
+| $b_t^{\mathrm{topic}}$ | 当前 step 是否切换 topic    |
+| $k_t^{\mathrm{topic}}$ | 如果切换 topic，选择目标 topic |
 
-但原文直接写的是 “output layer is (L+2=8)”；$L=6$ 是由该式反推得到的。
+动作空间为：
 
-# 5. Q-network 的输入输出设置
+$$\mathcal{A} = \{0,1\} \times (\mathcal{D} \cup \{\varnothing\}) \times \{0,1\} \times (\mathcal{T} \cup \{\varnothing\})$$
 
-| 项目       | 原文设置                                             |   |                  |   |    |
-| -------- | ------------------------------------------------ | - | ---------------- | - | -- |
-| 网络输入     | state $s_t$ 和一个 candidate ad $a^{ad}_t$          |   |                  |   |    |
-| 网络输出     | 该 candidate ad 在所有位置上的 Q-value                   |   |                  |   |    |
-| 输出长度     | $L+2=8$                                          |   |                  |   |    |
-| no-ad 表示 | $Q(s_t,a^{ad}_t)^0$ 表示不插广告                       |   |                  |   |    |
-| 实际决策     | 遍历 candidate ads，并在所有 ad-location Q-values 中取最大值 |   |                  |   |    |
-| 时间复杂度变化  | 从传统枚举的 $O(|A| \cdot L)$ 降为 $O(|A|)$ |   |                  |   |    |
+Planner policy 为标准 RL 形式：
 
-也就是说，DEAR 不是一次性输出所有广告和所有位置的 Q-value，而是：
-
-$$\text{input: } (s_t, a^{ad}_t)$$
-
-$$\text{output: } [Q(s_t,a^{ad}_t)^0, Q(s_t,a^{ad}_t)^1, \cdots, Q(s_t,a^{ad}_t)^{L+1}]$$
-
-其中 index 0 对应不插广告，其他 index 对应真实插入位置。原文强调，这种设计可以同时处理 “whether / which ad / where” 三个相关子动作。
-
-# 6. Dueling-style Q-function 设置
-
-| 部分                 |                符号 | 输入                           | 原文解释                                                                           |
-| ------------------ | ----------------: | ---------------------------- | ------------------------------------------------------------------------------ |
-| Value function     |          $V(s_t)$ | state features               | 是否插广告主要受 state 影响，尤其是 browsing history、contextual information 和当前 rec-list 质量。 |
-| Advantage function | $A(s_t,a^{ad}_t)$ | state features + ad features | 选择哪个广告、放在哪个位置，与当前 rec-list 和广告特征都有关。                                           |
-| 网络结构               |                 — | —                            | 原文说使用两个 2-layer neural networks 分别生成 $V(s_t)$ 和 $A(s_t,a^{ad}_t)$。             |
-
-原文没有给出这两个 2-layer neural networks 的 hidden size、activation、optimizer 等细节。这里不展开。
-
-# 7. Reward 设置
-
-DEAR 的 reward 写作：
-
-$$r_t(s_t,a_t)=r^{ad}_t+\alpha r^{ex}_t$$
-
-| Reward 部分 |         符号 | 原文定义                                                 |
-| --------- | ---------: | ---------------------------------------------------- |
-| 广告收益      | $r^{ad}_t$ | ad income；如果插入广告，则为正值；如果不插广告，则为 0。                   |
-| 用户体验      | $r^{ex}_t$ | formal definition 中，continue 为 $1$，leave 为 $-1$。     |
-| 权重        |   $\alpha$ | 控制用户体验项的重要程度。                                        |
-| 实验实现处说明   | $r^{ex}_t$ | Implementation / Metrics 附近写的是：用户继续浏览下一列表则为 1，否则为 0。 |
-
-这里要注意，原文前后有一个小差异：Reward Function 小节中的公式是 continue = 1、leave = -1；实验说明里写的是 continue = 1、otherwise = 0。两者都属于原文内容，不能强行合并成一个版本。
-
-# 8. Transition / state update 设置
-
-| State 部分        | 从 $s_t$ 到 $s_{t+1}$ 的更新方式                                                    |
-| --------------- | ---------------------------------------------------------------------------- |
-| $p^{rec}_{t+1}$ | 时间 $t$ 浏览过的 recommendations 被加入 recommendation browsing history，再生成新的推荐偏好表示。 |
-| $p^{ad}_{t+1}$  | 时间 $t$ 浏览过的 ads 被加入 ad browsing history，再生成新的广告偏好表示。                         |
-| $c_{t+1}$       | 取决于用户在 $t+1$ 时的行为 / request context。                                         |
-| $rec_{t+1}$     | 来自推荐系统下一次生成的 rec-list。                                                       |
-
-原文明确说，recommendations 和 ads browsed at time $t$ 会被加入 browsing history，从而生成 $p^{rec}_{t+1}$ 和 $p^{ad}_{t+1}$；$c_{t+1}$ 依赖用户在 $t+1$ 的行为；$rec_{t+1}$ 来自推荐系统。
-
-# 9. 训练相关的原文设置
-
-| 项目                 | 原文设置                                                                    |
-| ------------------ | ----------------------------------------------------------------------- |
-| 训练方式               | Off-policy training                                                     |
-| 数据来源               | users’ offline log                                                      |
-| Behavior policy    | $b(s_t)$，即日志中的已有广告策略                                                    |
-| transition         | $(s_t,a_t,r_t,s_{t+1})$                                                 |
-| replay buffer size | 10,000                                                                  |
-| target network     | 使用 separated evaluation and target networks                             |
-| discount factor    | $\gamma=0.95$                                                           |
-| $\alpha$           | 通过 cross-validation 选择                                                  |
-| 不插广告时的 $a^{ad}_t$  | 使用 all-zero vector                                                      |
-| 数据划分               | 按时间顺序收集 1,000,000 sessions，前 70% 用作 training / validation，后 30% 用作 test |
-
-# 10. 最终压缩版
-
-| 模块                         | DEAR 原文设置                                                      |
-| -------------------------- | -------------------------------------------------------------- |
-| **State**                  | $s_t=\text{concat}(p^{rec}_t,p^{ad}_t,c_t,rec_t)$                     |
-| **State 维度**               | $64+64+13+360=501$                                             |
-| **Recommendation history** | GRU 编码，最后 hidden state，64 维                                    |
-| **Ad history**             | GRU 编码，最后 hidden state，64 维                                    |
-| **Context**                | OS、app version、feed type 等，13 维                                |
-| **Current rec-list**       | $rec_t=\tanh(W_{rec}\text{concat}(rec_1,\cdots,rec_L)+b_{rec})$，360 维 |
-| **Action**                 | $a_t=(a^{ad}_t,a^{loc}_t)$                                     |
-| **Ad feature**             | $a^{ad}_t$，60 维                                                |
-| **Location output**        | $L+2=8$，包含 no-ad 特殊位置                                          |
-| **Reward**                 | $r_t=r^{ad}_t+\alpha r^{ex}_t$                                 |
-| **Discount factor**        | $\gamma=0.95$                                                  |
-| **Replay buffer**          | 10,000                                                         |
-| **Network split**          | 两个 2-layer networks 分别生成 $V(s_t)$ 和 $A(s_t,a^{ad}_t)$          |
-| **Training**               | 基于 offline log 的 off-policy DQN 训练                             |
-
-一句话概括：
-
-> DEAR 的 state 是一个 501 维拼接向量，由 64 维推荐历史偏好、64 维广告历史偏好、13 维当前上下文和 360 维当前推荐列表表示组成；action 是 $(a^{ad}_t,a^{loc}_t)$，其中广告特征为 60 维，位置由 DQN 输出层表示，输出长度为 $L+2=8$，包含一个 no-ad 特殊位置；reward 为广告收益加权用户体验项，即 $r_t=r^{ad}_t+\alpha r^{ex}_t$。
+$$a_t \sim \pi_\theta(a \mid s_t)$$
 
 
 
 
+---
+
+# 5. Speaker 输入
+
+Planner 输出：
+
+$$a_t = (b_t^{\mathrm{ad}}, j_t^{\mathrm{ad}}, b_t^{\mathrm{topic}}, k_t^{\mathrm{topic}})$$
+
+Speaker 接收：
+
+$$(s_t, a_t)$$
+
+并生成自然语言回复：
+
+$$y_t = \mathrm{Speaker}(s_t, a_t)$$
 
 
-# Limitations
-# Future Work
-# FootNotes
+>Speaker 负责把 Planner action 实现为自然语言回复，但不重新决定是否插广告、插哪个广告、是否切换 topic 或切换到哪个 topic。
+
+
+# 6. Transition Formulation
+
+Transition 描述的是：在第 $t$ 个 decision step 中，系统如何从当前状态 $s_t$ 经过一次 Planner action，转移到下一状态 $s_{t+1}$，并得到当前 reward $r_t$。
+
+在第 $t$ 个 decision step，系统已经观察到当前用户输入 $q_t$，并拥有当前历史：
+
+$$H_t = (q_0, y_0, q_1, y_1, \dots, q_{t-1}, y_{t-1}, q_t)$$
+
+原始 observation 为：
+
+$$o_t = (p_u, H_t)$$
+
+Monitor 将原始 observation 压缩为 Planner state：
+
+$$s_t = M(o_t) = M(p_u, H_t)$$
+
+Planner 根据当前状态选择动作：
+
+$$a_t \sim \pi_\theta(a \mid s_t)$$
+
+其中：
+
+$$a_t = (b_t^{\mathrm{ad}}, j_t^{\mathrm{ad}}, b_t^{\mathrm{topic}}, k_t^{\mathrm{topic}})$$
+
+Speaker 根据当前状态和 Planner action 生成系统回复：
+
+$$y_t = \mathrm{Speaker}(s_t, a_t)$$
+
+随后，Mock User 根据用户画像、当前历史和系统回复产生下一轮用户输入：
+
+$$q_{t+1} = \mathrm{UserSim}(p_u, H_t, y_t)$$
+
+这里，$q_{t+1}$ 是用户对当前系统回复的 raw feedback。它本身不是 reward。
+
+如果当前 step 涉及广告展示，则系统记录本轮广告事件。对于第 $t$ 个 decision step，广告事件定义为：
+
+$$z_t^{\mathrm{ad}}
+=
+(\mathbb{1}_t^{\mathrm{ad}}, j_t^{\mathrm{ad}}, \mathrm{out}_t^{\mathrm{ad}})$$
+
+其中：
+
+$$\mathbb{1}_t^{\mathrm{ad}} = b_t^{\mathrm{ad}}$$
+
+如果本轮没有展示广告，则：
+
+$$z_t^{\mathrm{ad}} = (0, \varnothing, \mathrm{none})$$
+
+如果本轮展示了广告，则 $\mathrm{out}_t^{\mathrm{ad}}$ 由用户反馈 $q_{t+1}$ 或事件日志得到，例如 clicked、accepted、ignored 或 rejected。
+
+随后，系统更新历史：
+
+$$H_{t+1} = H_t \oplus (y_t, q_{t+1}, z_t^{\mathrm{ad}})$$
+
+其中，$\oplus$ 表示将本轮系统回复、下一轮用户输入和广告事件追加到历史中。
+
+Monitor 根据更新后的历史构造下一状态：
+
+$$s_{t+1} = M(p_u, H_{t+1})$$
+
+RewardCalculator 根据本次状态转移计算当前 reward：
+
+$$r_t = R_\phi(s_t, a_t, s_{t+1})$$
+
+因此，第 $t$ 个 decision step 形成的 RL transition 为：
+
+$$(s_t, a_t, r_t, s_{t+1}, \mathrm{done}_t)$$
+
+其中，$\mathrm{done}_t$ 表示当前 episode 是否在本次 transition 后结束。
+
+整体流程可以概括为：
+
+$$s_t
+\xrightarrow{a_t}
+y_t
+\rightarrow
+q_{t+1}
+\rightarrow
+H_{t+1}
+\rightarrow
+s_{t+1}, r_t$$
+
+
+# 7. Training Target
+
+REC-DIAL 中 RL 训练的对象是 Planner policy：
+
+$$\pi_\theta(a\mid s)$$
+
+Monitor $M$ 负责构造状态，Speaker 负责实现自然语言回复，Mock User 负责模拟环境反馈，RewardCalculator 负责计算 reward。它们共同构成训练环境的一部分，但不作为当前 RL 优化的直接对象。
+
+Planner 的目标是最大化 episode-level return：
+
+$$J(\theta)
+=
+\mathbb{E}_{\pi_\theta}
+\left[
+\sum_{t=0}^{T-1}\gamma^t r_t+r_{\mathrm{terminal}}
+\right]$$
+
+其中：
+
+$$a_t\sim\pi_\theta(a\mid s_t)$$
+
+RL 算法通过收集 episode trajectories：
+
+$$\tau =
+(s_0,a_0,r_0,s_1,a_1,r_1,\dots,s_T)$$
+
+来更新 Planner policy 参数 $\theta$。
+
+
+
+
+
+# reward设计： [[reward设计4]]
+# Metrics设计： [[metrics设计2]]

@@ -323,7 +323,7 @@ $$E_t
 
 
 
-# 3. Monitor 的
+# 3. Monitor 
 
 Monitor 直接把原始 observation 压缩成 Planner state：
 

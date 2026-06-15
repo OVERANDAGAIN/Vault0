@@ -160,6 +160,7 @@ $$s_t = (p_u, B_t, D_t, E_t)$$
 | $B_t$ | BeliefState           | 系统当前对用户目标、偏好、约束和未解决问题的理解                   |
 | $D_t$ | DialogueContext       | 对话历史的压缩表示，包括长期摘要、最近几轮原文                    |
 | $E_t$ | AdExposureState       | 最近 $K_{\mathrm{ad}}$ 个已完成 step 中的结构化广告事件序列 |
+|       |                       |                                            |
 
 这里的 $s_t$ 是 Planner 在第 $t$ 个 decision step 的输入。
 
@@ -291,11 +292,11 @@ $$z_k^{\mathrm{ad}}
 
 其中：
 
-| 符号 | 含义 |
-| --- | --- |
-| $\mathbb{1}_k^{\mathrm{ad}} \in \{0,1\}$ | 第 $k$ 步是否展示广告 |
-| $j_k^{\mathrm{ad}} \in \mathcal{D} \cup \{\varnothing\}$ | 第 $k$ 步展示的广告 ID；如果没有展示广告，则为 $\varnothing$ |
-| $\mathrm{out}_k^{\mathrm{ad}} \in \mathcal{O}^{\mathrm{ad}}$ | 第 $k$ 步广告的用户反馈结果 |
+| 符号                                                           | 含义                                        |
+| ------------------------------------------------------------ | ----------------------------------------- |
+| $\mathbb{1}_k^{\mathrm{ad}} \in \{0,1\}$                     | 第 $k$ 步是否展示广告                             |
+| $j_k^{\mathrm{ad}} \in \mathcal{D} \cup \{\varnothing\}$     | 第 $k$ 步展示的广告 ID；如果没有展示广告，则为 $\varnothing$ |
+| $\mathrm{out}_k^{\mathrm{ad}} \in \mathcal{O}^{\mathrm{ad}}$ | 第 $k$ 步广告的用户反馈结果                          |
 
 广告结果集合可以定义为：
 

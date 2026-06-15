@@ -398,6 +398,7 @@ $$a_t \sim \pi_\theta(a \mid s_t)$$
 >具体的 话题/广告的 pool 设计 。大的==静态池？==
 >先静态的 话题池 $\Longrightarrow$ planner 
 >先测 已有的数据集 
+>混排 $\Longrightarrow$ 长期收益 
 
 ---
 

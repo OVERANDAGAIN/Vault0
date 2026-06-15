@@ -144,7 +144,7 @@ $$s_{t+1}$$
 
 $$r_t = R_\phi(s_t, a_t, s_{t+1})$$
 
-这里 $R_\phi$ 是 RewardCalculator 或 reward estimator。它内部可以包含规则、查表和语义模型，但对 RL 来说，最终输出的是一个标量 reward。
+这里 $R_\phi$ 是 RewardCalculator。它内部可以包含规则、查表和语义模型，但对 RL 来说，最终输出的是一个标量 reward。
 
 ---
 

@@ -229,3 +229,8 @@ Human calibration 的作用不是替代前述指标，而是用于：
 * 校准 rule precision
 * 检查 behavioral proxy 是否偏移
 * 控制 LLM judge bias
+
+
+
+
+>metrics 更注重 商业上的 客观的指标

@@ -384,6 +384,8 @@ $$a_t = (b_t^{\mathrm{ad}}, j_t^{\mathrm{ad}}, b_t^{\mathrm{topic}}, k_t^{\mathr
 | $b_t^{\mathrm{topic}}$ | 当前 step 是否切换 topic    |
 | $k_t^{\mathrm{topic}}$ | 如果切换 topic，选择目标 topic |
 
+>! 0/-1 表示不插广告 or 不改话题
+
 动作空间为：
 
 $$\mathcal{A} = \{0,1\} \times (\mathcal{D} \cup \{\varnothing\}) \times \{0,1\} \times (\mathcal{T} \cup \{\varnothing\})$$
@@ -392,7 +394,7 @@ Planner policy 为标准 RL 形式：
 
 $$a_t \sim \pi_\theta(a \mid s_t)$$
 
-
+>具体的 话题/广告的 pool 设计 。
 
 
 ---

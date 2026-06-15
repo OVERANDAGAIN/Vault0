@@ -217,7 +217,7 @@ REC-DIAL 不是单目标任务。它同时追求：
 广告负担和用户摩擦最小化。
 ```
 
-因此，不建议把所有指标强行合成一个单一总分。更合适的方式是使用 Pareto-style evaluation 来分析不同 policy 之间的 trade-off。
+使用 Pareto-style evaluation 来分析不同 policy 之间的 trade-off。
 
 对于一个 policy $\pi$，可以定义评价向量：
 
@@ -255,8 +255,6 @@ $$\mathrm{FrictionRate}(\pi_A)
 
 也就是说，$\pi_A$ 在用户任务、商业收益和用户摩擦上整体不差，并且至少一个维度更好。
 
-实际汇报时可以画两类 Pareto-style 图：
-
 ```text
 RevenueDensity vs TaskSuccessRate
 RevenueDensity vs FrictionRate
@@ -265,167 +263,25 @@ RevenueDensity vs FrictionRate
 第一张图看商业收益和任务完成之间的 trade-off。
 第二张图看商业收益是否以更高用户摩擦为代价。
 
----
 
-# 三、Behavioral metrics 的解释边界
 
-Behavioral metrics 更接近真实用户反馈，但解释上仍需谨慎。
-
-例如：
-
-```text
-用户继续对话，不一定代表满意；
-用户未点击广告，也不一定代表反感；
-用户提前结束，也不一定代表失败；
-用户修正系统，通常表示存在目标偏移或理解错误。
-```
-
-因此 behavioral metrics 更适合作为 outcome proxy，而不是直接作为 latent satisfaction。
-
-这些行为信号可以通过以下方式识别：
-
-```text
-规则匹配；
-外部 classifier；
-LLM judge；
-human annotation。
-```
-
-但不建议直接使用训练 reward model 的内部分数作为 evaluation metric。
-
----
-
-# 四、Judge-based metrics（辅助层）
-
-有些关键维度无法仅通过行为直接观测，例如：
-
-```text
-广告是否自然；
-广告是否破坏原任务；
-当前回复是否推进用户目标；
-回复是否保持 topic coherence；
-广告是否与当前 topic context 匹配。
-```
-
-这类指标可以通过：
-
-```text
-LLM judge；
-pairwise evaluator；
-external classifier；
-human annotation。
-```
-
-进行估计。
-
-但更合适的定位是：
-
-> Judge-based metrics 用于 diagnostic，而不是 primary evaluation。
-
-否则 metrics 可能重新退化为 reward proxy。
-
-可以保留的 judge-based diagnostic 包括：
-
-```text
-Task Helpfulness
-Ad Naturalness
-Topic Coherence
-Ad-Topic Fit
-```
-
-这些指标用于解释 policy 为什么好或坏，而不是替代主要指标。
-
----
-
-# 五、Human calibration
+## 5. Human calibration
 
 完全客观的评价在开放式对话中通常不存在，因此最终需要小规模人工校准。
 
 如果有真人实验，可通过 survey / Likert scale 对 latent states 做近似观测：
 
-$$\mathrm{score} \in \{1, 2, 3, 4, 5\}$$
+$$\text{score} \in \{1,2,3,4,5\}$$
 
 例如：
 
-```text
-任务是否被解决？
-广告是否自然？
-是否愿意继续使用？
-是否感到被打扰？
-```
+* 任务是否被解决？
+* 广告是否自然？
+* 是否愿意继续使用？
+* 是否感到被打扰？
 
 Human calibration 的作用不是替代前述指标，而是用于：
 
-```text
-校准 rule precision；
-检查 behavioral proxy 是否偏移；
-控制 LLM judge bias；
-验证 Pareto trade-off 是否符合真实用户感受。
-```
-
----
-
-# 六、最终指标汇总
-
-正式实验中不需要报告过多指标。核心指标可以收敛为：
-
-| 类别 | 核心指标 | 作用 |
-| --- | --- | --- |
-| User-side outcome | Task Success Rate | 用户任务是否完成 |
-| User-side outcome | Early Failure Rate | 是否出现未完成任务的提前失败 |
-| User-side outcome | Friction Rate | 用户显式摩擦程度 |
-| Business-side outcome | Revenue Density | 单位对话长度下的广告收益 |
-| Business-side outcome | Ad Acceptance Rate | 展示广告中被接受 / 点击的比例 |
-| Ad burden | Ad Exposure Rate | 广告出现频率 |
-| Ad burden | Avg Ad Gap | 广告间隔是否过短 |
-| Ad burden | Repeated Ad Rate | 是否反复展示同一广告 |
-| Trade-off | Pareto front | 用户价值与商业价值的平衡 |
-
-其中，主表可以优先报告：
-
-```text
-Task Success Rate
-Revenue Density
-Ad Acceptance Rate
-Friction Rate
-Ad Exposure Rate
-```
-
-Pareto-style evaluation 单独作为 trade-off 分析：
-
-```text
-RevenueDensity vs TaskSuccessRate
-RevenueDensity vs FrictionRate
-```
-
----
-
-# 七、Evidence hierarchy
-
-核心上，这里的重点不是构造“另一套 reward”，而是建立一个 evidence hierarchy：
-
-### Rule-based
-
-最稳定、最可复现，但语义有限。
-
-### Behavioral
-
-更接近真实用户反馈，但存在解释歧义。
-
-### Judge-based
-
-覆盖语义质量，但主观性更高。
-
-### Human calibration
-
-作为最终校准层，控制整体偏差。
-
-$$\mathrm{Rule}
-\rightarrow
-\mathrm{Behavioral}
-\rightarrow
-\mathrm{Judge}
-\rightarrow
-\mathrm{Human\ Calibration}$$
-
-这样做的目标不是追求绝对客观，而是在可扩展性、独立性与语义覆盖之间取得相对更稳的平衡。
+* 校准 rule precision
+* 检查 behavioral proxy 是否偏移
+* 控制 LLM judge bias

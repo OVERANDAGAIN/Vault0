@@ -57,7 +57,7 @@ $$\mathbb{1}_t^{\mathrm{ad}} = b_t^{\mathrm{ad}}$$
 
 # 二、设计独立 Metrics
 
-为了避免指标过多，REC-DIAL 的 metrics 可以分成四个部分：
+ metrics 可以分成四个部分：
 
 ```text
 1. User-side outcome
@@ -68,7 +68,7 @@ $$\mathbb{1}_t^{\mathrm{ad}} = b_t^{\mathrm{ad}}$$
 
 前三类给出可计算指标，第四类用于分析用户价值和商业价值之间的平衡。
 
----
+
 
 ## 1. User-side outcome
 

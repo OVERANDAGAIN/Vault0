@@ -8,8 +8,6 @@
 
 
 
-
-
 # formulation 具体
 
 ```text
@@ -25,19 +23,6 @@ Speaker 将该 action 实现为自然语言回复。
 ![[Pasted image 20260608135436.png]]
 
 
-
-
-
-# formulation 具体
-
-```text
-将 REC-DIAL 形式化为一个部分可观测的序列决策问题。
-每个 episode 是 agent 与 Mock User 之间的一次多轮对话。
-在每个 decision step，Planner 接收由 Monitor 构造的压缩 state，并输出一个 Planner action。
-Speaker 将该 action 实现为自然语言回复。
-随后 Mock User 产生下一轮用户反馈。
-用户反馈本身不是 reward，而是 raw feedback；Monitor 和 RewardCalculator 将其分别解释为下一轮状态信号和当前轮标量 reward。
-```
 
 ---
 

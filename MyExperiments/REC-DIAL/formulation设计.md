@@ -180,13 +180,13 @@ $$B_t = (g_t, P_t^+, P_t^-, C_t^{\text{user}}, Q_t)$$
 
 其中：
 
-| 符号 | 名称 | 含义 |
-| --- | --- | --- |
-| $g_t$ | user_goal | 当前用户目标的简短描述 |
-| $P_t^+$ | positive_preferences | 用户已表达的正向偏好 |
-| $P_t^-$ | negative_preferences | 用户已表达的负向偏好、拒绝或不想要的内容 |
-| $C_t^{\text{user}}$ | user_constraints | 用户给出的显式约束条件 |
-| $Q_t$ | open_questions | 尚未解决、但可能影响后续回复的问题 |
+| 符号                  | 名称                   | 含义                   |
+| ------------------- | -------------------- | -------------------- |
+| $g_t$               | user_goal            | 当前用户目标的简短描述          |
+| $P_t^+$             | positive_preferences | 用户已表达的正向偏好           |
+| $P_t^-$             | negative_preferences | 用户已表达的负向偏好、拒绝或不想要的内容 |
+| $C_t^{\text{user}}$ | user_constraints     | 用户给出的显式约束条件          |
+| $Q_t$               | open_questions       | 尚未解决、但可能影响后续回复的问题    |
 
 示例：
 

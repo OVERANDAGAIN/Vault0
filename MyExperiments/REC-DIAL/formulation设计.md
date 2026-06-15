@@ -162,7 +162,7 @@ $$s_t = (p_u, B_t, D_t, E_t)$$
 | $E_t$ | AdExposureState       | 最近 $K_{\mathrm{ad}}$ 个已完成 step 中的结构化广告事件序列 |
 |       |                       |                                            |
 |       |                       |                                            |
->！$E_t$ y与 $D_t$ 的关系,冗余
+>！$E_t$ 与 $D_t$ 的关系,冗余
 >s_t 改名
 
 这里的 $s_t$ 是 Planner 在第 $t$ 个 decision step 的输入。
@@ -190,6 +190,7 @@ $$B_t = (g_t, P_t^+, P_t^-, C_t^{\text{user}}, Q_t)$$
 
 >用户，广告满意度等
 >广告推荐所需要的维度 @xx
+>b_t 和 r_t 重合的部分
 
 
 示例：

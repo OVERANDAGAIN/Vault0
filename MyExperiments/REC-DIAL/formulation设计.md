@@ -188,6 +188,10 @@ $$B_t = (g_t, P_t^+, P_t^-, C_t^{\text{user}}, Q_t)$$
 | $C_t^{\text{user}}$ | user_constraints     | 用户给出的显式约束条件          |
 | $Q_t$               | open_questions       | 尚未解决、但可能影响后续回复的问题    |
 
+>用户，广告满意度等
+>广告推荐所需要的维度 @xx
+
+
 示例：
 
 ```json

@@ -394,7 +394,7 @@ Planner policy 为标准 RL 形式：
 
 $$a_t \sim \pi_\theta(a \mid s_t)$$
 
->具体的 话题/广告的 pool 设计 。
+>具体的 话题/广告的 pool 设计 。大的==静态池？==
 
 
 ---

@@ -236,6 +236,9 @@ $$D_t = (m_t, h_t^{K_{h}})$$
 
 ### 2.3.1 Rolling Summary ($m_t$)
 
+>! memory module
+
+
 Rolling summary 保存长期有效的对话信息。
 
 

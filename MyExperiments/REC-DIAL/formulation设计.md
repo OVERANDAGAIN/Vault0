@@ -374,18 +374,16 @@ $$s_t = M(p_{u}, H_t)$$
 Planner 的动作保持最简：
 
 $$a_t = (b_t^{\mathrm{ad}}, j_t^{\mathrm{ad}}, b_t^{\mathrm{topic}}, k_t^{\mathrm{topic}})$$
-
+>混排(a,) ： 一维的决策
 其中：
 
-| 符号                     | 含义                    |
-| ---------------------- | --------------------- |
-| $b_t^{\mathrm{ad}}$    | 当前 step 是否插入广告        |
-| $j_t^{\mathrm{ad}}$    | 如果插入广告，选择哪个广告         |
-| $b_t^{\mathrm{topic}}$ | 当前 step 是否切换 topic    |
-| $k_t^{\mathrm{topic}}$ | 如果切换 topic，选择目标 topic |
+| 符号    | 含义                    |
+| ----- | --------------------- |
+| $j_t$ | 如果插入广告，选择哪个广告         |
+| $k_t$ | 如果切换 topic，选择目标 topic |
 
 >! 0/-1 表示不插广告 or 不改话题
->4 $\Longrightarrow$ 2 
+>4 $\Longrightarrow$ 2 $\Longrightarrow$ 1
 
 动作空间为：
 

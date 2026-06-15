@@ -55,7 +55,7 @@ $$\mathbb{1}_t^{\mathrm{ad}} = b_t^{\mathrm{ad}}$$
 
 ---
 
-# 二、设计独立 Metrics
+# 二、独立 Metrics
 
  metrics 可以分成四个部分：
 
@@ -174,7 +174,6 @@ REC-DIAL 不是单目标任务。它同时追求：
 ```text
 用户价值最大化；
 商业价值最大化；
-广告负担和用户摩擦最小化。
 ```
 
 使用 Pareto-style evaluation 来分析不同 policy 之间的 trade-off。
@@ -185,8 +184,7 @@ $$\mathbf{m}(\pi)
 =
 (
 \mathrm{TaskSuccessRate}(\pi),
-\mathrm{RevenueDensity}(\pi),
--\mathrm{FrictionRate}(\pi)
+\mathrm{RevenueDensity}(\pi)
 )$$
 
 其中：
@@ -194,7 +192,6 @@ $$\mathbf{m}(\pi)
 ```text
 TaskSuccessRate 越高越好；
 RevenueDensity 越高越好；
-FrictionRate 越低越好。
 ```
 
 若 policy $\pi_A$ 满足：
@@ -207,21 +204,8 @@ $$\mathrm{RevenueDensity}(\pi_A)
 \geq
 \mathrm{RevenueDensity}(\pi_B)$$
 
-$$\mathrm{FrictionRate}(\pi_A)
-\leq
-\mathrm{FrictionRate}(\pi_B)$$
 
 并且至少一个不等式严格成立，则称 $\pi_A$ Pareto-dominates $\pi_B$。
-
-也就是说，$\pi_A$ 在用户任务、商业收益和用户摩擦上整体不差，并且至少一个维度更好。
-
-```text
-RevenueDensity vs TaskSuccessRate
-RevenueDensity vs FrictionRate
-```
-
-第一张图看商业收益和任务完成之间的 trade-off。
-第二张图看商业收益是否以更高用户摩擦为代价。
 
 
 

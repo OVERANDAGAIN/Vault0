@@ -274,14 +274,14 @@ $$r_t
 
 其中：
 
-| 类别 | 符号 | 含义 | 信号来源 |
-| --- | --- | --- | --- |
-| 用户价值 | $\eta_t^{\mathrm{task}}$ | 任务推进 / 任务满足程度 | $(s_t, a_t, s_{t+1})$ |
-| 用户价值 | $\kappa_t^{\mathrm{cont}}$ | 用户继续交互 / 留存 proxy | $s_{t+1}$, done signal |
-| 商业价值 | $\alpha_t^{\mathrm{ad}}$ | 广告展示价值 / 商业收益 | Planner action 与广告池 |
-| 约束项 | $\chi_t^{\mathrm{annoy}}$ | 用户反感 / 负反馈 | $(s_t, a_t, s_{t+1})$ |
-| 约束项 | $\omega_t^{\mathrm{ad}}$ | 广告密度 / 广告过载 | $(a_t, E_t)$ |
-| 约束项 | $\Delta_t^{\mathrm{topic}}$ | 话题偏移 | $(s_t, a_t, s_{t+1})$ |
+| 类别   | 符号                          | 含义      | 信号来源                   |
+| ---- | --------------------------- | ------- | ---------------------- |
+| 用户价值 | $\eta_t^{\mathrm{task}}$    | 任务推进    | $(s_t, a_t, s_{t+1})$  |
+| 用户价值 | $\kappa_t^{\mathrm{cont}}$  | 用户继续交互  | $s_{t+1}$, done signal |
+| 商业价值 | $\alpha_t^{\mathrm{ad}}$    | 广告 商业收益 | Planner action 与广告池    |
+| 约束项  | $\chi_t^{\mathrm{annoy}}$   | 用户反感    | $(s_t, a_t, s_{t+1})$  |
+| 约束项  | $\omega_t^{\mathrm{ad}}$    | 广告密度    | $(a_t, E_t)$           |
+| 约束项  | $\Delta_t^{\mathrm{topic}}$ | 话题偏移    | $(s_t, a_t, s_{t+1})$  |
 
 ---
 
@@ -342,8 +342,6 @@ RewardCalculator 负责评价后果：
 ---
 
 # 七、各奖励项的计算方式
-
----
 
 ## 7.1 任务推进 $(\eta_t^{\mathrm{task}})$
 

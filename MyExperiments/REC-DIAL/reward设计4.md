@@ -282,6 +282,7 @@ $$r_t
 | 约束项  | $\chi_t^{\mathrm{annoy}}$   | 用户反感    | $(s_t, a_t, s_{t+1})$  |
 | 约束项  | $\omega_t^{\mathrm{ad}}$    | 广告密度    | $(a_t, E_t)$           |
 | 约束项  | $\Delta_t^{\mathrm{topic}}$ | 话题偏移    | $(s_t, a_t, s_{t+1})$  |
+>用户的满意度 $\Longrightarrow$ 三个约束项
 
 ---
 

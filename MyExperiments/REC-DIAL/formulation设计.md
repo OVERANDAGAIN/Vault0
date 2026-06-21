@@ -159,11 +159,9 @@ $$s_t = (p_u, B_t, D_t, E_t)$$
 | $p_u$ | UserProfile / Persona | 当前用户 $u$ 的画像                               |
 | $B_t$ | BeliefState           | 系统当前对用户目标、偏好、约束和未解决问题的理解                   |
 | $D_t$ | DialogueContext       | 对话历史的压缩表示，包括长期摘要、最近几轮原文                    |
-| $E_t$ | AdExposureState       | 最近 $K_{\mathrm{ad}}$ 个已完成 step 中的结构化广告事件序列 |
 |       |                       |                                            |
 |       |                       |                                            |
->！$E_t$ 与 $D_t$ 的关系,冗余
->s_t 改名
+
 
 这里的 $s_t$ 是 Planner 在第 $t$ 个 decision step 的输入。
 
@@ -185,28 +183,13 @@ $$B_t = (g_t, P_t^+, P_t^-, C_t^{\text{user}}, Q_t)$$
 | $g_t$               | user_goal            | 当前用户目标的简短描述          |
 | $P_t^+$             | positive_preferences | 用户已表达的正向偏好           |
 | $P_t^-$             | negative_preferences | 用户已表达的负向偏好、拒绝或不想要的内容 |
-| $C_t^{\text{user}}$ | user_constraints     | 用户给出的显式约束条件          |
-| $Q_t$               | open_questions       | 尚未解决、但可能影响后续回复的问题    |
+
 
 >用户，广告满意度等
 >广告推荐所需要的维度 @xx
 >满意度等信息-》》 planner和reward 的输入
 
 
-示例：
-
-```json
-{
-  "user_goal": "寻找预算友好的日本旅行住宿建议",
-  "positive_preferences": ["budget-friendly", "near public transportation"],
-  "negative_preferences": ["luxury hotels", "crowded areas"],
-  "user_constraints": {
-    "location": "Japan",
-    "budget": "low"
-  },
-  "open_questions": ["具体城市", "旅行时间", "住宿类型"]
-}
-```
 
 BeliefState 由 Monitor 根据用户画像和截至当前的完整对话历史构造：
 

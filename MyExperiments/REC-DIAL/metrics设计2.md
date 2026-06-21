@@ -26,7 +26,9 @@ $$\mathcal{E}
 其中
 
 
-$$a_t = (b_t^{\mathrm{ad}}, j_t^{\mathrm{ad}}, b_t^{\mathrm{topic}}, k_t^{\mathrm{topic}})$$
+
+$$a_t \in \mathcal{A}$$
+
 
 $$z_t^{\mathrm{ad}}
 =
@@ -41,13 +43,11 @@ $$\mathbb{1}_t^{\mathrm{ad}} = b_t^{\mathrm{ad}}$$
 | $T$ | episode 的实际 decision step 数 | episode log |
 | $q_t$ | 第 $t$ 个 decision step 开始时的用户输入 | simulator / real user log |
 | $y_t$ | 第 $t$ 个 decision step 的系统回复 | agent log |
-| $a_t$ | Planner action | planner log |
-| $b_t^{\mathrm{ad}}$ | 当前 step 是否插入广告 | planner action |
-| $j_t^{\mathrm{ad}}$ | 当前 step 选择的广告 ID | planner action / ad metadata |
-| $b_t^{\mathrm{topic}}$ | 当前 step 是否切换 topic | planner action |
-| $k_t^{\mathrm{topic}}$ | 当前 step 选择的目标 topic | planner action |
+| $a_t$ | Planner 输出的一维离散动作 | planner log |
 | $z_t^{\mathrm{ad}}$ | 当前 step 的广告事件 | event log |
-| $\mathrm{out}_t^{\mathrm{ad}}$ | 广告反馈结果，如 clicked / accepted / ignored / rejected | simulator / user event |
+| $\mathbb{1}_t^{\mathrm{ad}}$ | 当前 step 是否展示广告 | derived from $a_t$ / event log |
+| $j_t^{\mathrm{ad}}$ | 当前 step 展示的广告 ID；如果没有广告，则为 $-1$ | event log |
+| $\mathrm{out}_t^{\mathrm{ad}}$ | 广告反馈结果，如 clicked / accepted / ignored / rejected / none | simulator / user event |
 | $q_{t+1}$ | 用户对当前系统回复的下一轮反馈 | simulator / real user log |
 | $\mathrm{done}_t$ | 当前 step 后 episode 是否结束 | environment |
 | $\mathrm{exit_reason}$ | episode 结束原因 | environment / simulator / annotation |

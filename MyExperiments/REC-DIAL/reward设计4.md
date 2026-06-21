@@ -280,7 +280,7 @@ $$r_t
 | 用户价值 | $\kappa_t^{\mathrm{cont}}$  | ==用户继续交互？== | $s_{t+1}$, done signal |
 | 商业价值 | $\alpha_t^{\mathrm{ad}}$    | 广告 商业收益     | Planner action 与广告池    |
 
->用户的满意度 $\Longrightarrow$ 三个约束项
+>添加用户的满意度  新一项
 
 ---
 

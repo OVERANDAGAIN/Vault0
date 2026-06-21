@@ -325,9 +325,6 @@ $$a_t = (b_t^{\mathrm{ad}}, j_t^{\mathrm{ad}}, b_t^{\mathrm{topic}}, k_t^{\mathr
 >! 0/-1 表示不插广告 or 不改话题
 >4 $\Longrightarrow$ 2 $\Longrightarrow$ 1
 
-动作空间为：
-
-$$\mathcal{A} = \{0,1\} \times (\mathcal{D} \cup \{\varnothing\}) \times \{0,1\} \times (\mathcal{T} \cup \{\varnothing\})$$
 
 Planner policy 为标准 RL 形式：
 

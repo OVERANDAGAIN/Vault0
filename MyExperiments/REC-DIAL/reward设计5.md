@@ -250,27 +250,9 @@ $$r_t^{\mathrm{biz}}
 =
 \lambda_{\mathrm{ad}} \alpha_t^{\mathrm{ad}}$$
 
-$$r_t^{\mathrm{constraint}}
-=
--\lambda_{\mathrm{annoy}} \chi_t^{\mathrm{annoy}}
--\lambda_{\mathrm{load}} \omega_t^{\mathrm{ad}}
--\lambda_{\mathrm{drift}} \Delta_t^{\mathrm{topic}}$$
+
 
 合并后：
-
-$$r_t
-=
-\lambda_{\mathrm{task}} \eta_t^{\mathrm{task}}
-+
-\lambda_{\mathrm{cont}} \kappa_t^{\mathrm{cont}}
-+
-\lambda_{\mathrm{ad}} \alpha_t^{\mathrm{ad}}
--
-\lambda_{\mathrm{annoy}} \chi_t^{\mathrm{annoy}}
--
-\lambda_{\mathrm{load}} \omega_t^{\mathrm{ad}}
--
-\lambda_{\mathrm{drift}} \Delta_t^{\mathrm{topic}}$$
 
 其中：
 
@@ -280,7 +262,7 @@ $$r_t
 | 用户价值 | $\kappa_t^{\mathrm{cont}}$  | ==用户继续交互？== | $s_{t+1}$, done signal |
 | 商业价值 | $\alpha_t^{\mathrm{ad}}$    | 广告 商业收益     | Planner action 与广告池    |
 
->用户的满意度 $\Longrightarrow$ 三个约束项
+>三项约束删去，改为 添加用户的满意度等  新一项
 
 ---
 
@@ -434,118 +416,9 @@ b_t^{\mathrm{ad}} \cdot v_{j_t^{\mathrm{ad}}}$$
 
 ---
 
-## 7.4 用户反感 $(\chi_t^{\mathrm{annoy}})$
 
-$$\chi_t^{\mathrm{annoy}} \in [0, 1]$$
 
-用户反感项刻画本轮动作是否造成负向体验。
-
-它主要由 RewardCalculator 根据动作前状态、Planner action 和动作后状态估计：
-
-$$\chi_t^{\mathrm{annoy}}
-=
-J_\phi^{\mathrm{annoy}}(s_t, a_t, s_{t+1})$$
-
-典型负向信号包括：
-
-```text
-用户明确拒绝广告；
-用户表示“不要推荐”；
-用户表示“不是这个问题”；
-用户对话题切换不满；
-用户认为回复生硬或无关；
-用户提前退出并表现出负面原因。
-```
-
-该项用于约束过度广告、不自然话题切换和破坏用户任务体验的动作。
-
----
-
-## 7.5 广告密度惩罚 $(\omega_t^{\mathrm{ad}})$
-
-广告密度是规则型 reward 项，不需要语义模型判断。
-
-前面定义的 AdExposureState $E_t$ 是最近 $K_{\mathrm{ad}}$ 个已完成 decision step 中的广告事件序列：
-
-$$E_t
-=
-(z_{\tau_{\mathrm{ad}}}^{\mathrm{ad}},
-z_{\tau_{\mathrm{ad}}+1}^{\mathrm{ad}},
-\dots,
-z_{t-1}^{\mathrm{ad}})$$
-
-其中：
-
-$$\tau_{\mathrm{ad}} = \max(0, t - K_{\mathrm{ad}})$$
-
-每个广告事件为：
-
-$$z_k^{\mathrm{ad}}
-=
-(\mathbb{1}_k^{\mathrm{ad}}, j_k^{\mathrm{ad}}, \mathrm{out}_k^{\mathrm{ad}})$$
-
-最近广告负担可以由 $E_t$ 派生得到：
-
-$$L_t^{\mathrm{ad}}
-=
-\sum_{k = \tau_{\mathrm{ad}}}^{t-1}
-\mathbb{1}_k^{\mathrm{ad}}$$
-
-其中，$L_t^{\mathrm{ad}}$ 表示当前 step 之前最近 $K_{\mathrm{ad}}$ 步中已经展示的广告数量。
-
-广告密度惩罚定义为：
-
-$$\omega_t^{\mathrm{ad}}
-=
-\beta_1 b_t^{\mathrm{ad}}
-+
-\beta_2 L_t^{\mathrm{ad}}$$
-
-其中：
-
-| 符号 | 含义 |
-| --- | --- |
-| $b_t^{\mathrm{ad}}$ | 本轮是否插入广告 |
-| $L_t^{\mathrm{ad}}$ | 最近 $K_{\mathrm{ad}}$ 步广告展示次数 |
-| $\beta_1, \beta_2$ | 广告密度惩罚的内部权重 |
-
-该项用于防止连续多轮插入广告，避免 Planner 学到“频繁插广告以获取商业收益”的短视策略。
-
-如果需要更强的冷却机制，也可以从 $E_t$ 或完整 episode log 中派生距离上一次广告的间隔，但不需要将其作为 Planner state 的顶层变量重复列出。
-
----
-
-## 7.6 话题偏移 $(\Delta_t^{\mathrm{topic}})$
-
-$$\Delta_t^{\mathrm{topic}} \in [0, 1]$$
-
-话题偏移项刻画本轮动作是否造成不自然的话题漂移。
-
-这里不显式维护 topic segment，而是使用当前 Planner state 中的 topic context 进行判断：
-
-$$\mathrm{TopicContext}_t = (B_t, D_t)$$
-
-其中，$B_t$ 表示用户当前目标、偏好、约束和未解决问题，$D_t$ 表示长期 dialogue memory 和最近局部上下文。
-
-因此，话题偏移惩罚定义为：
-
-$$\Delta_t^{\mathrm{topic}}
-=
-J_\phi^{\mathrm{topic}}(s_t, a_t, s_{t+1})$$
-
-如果：
-
-$$b_t^{\mathrm{topic}} = 0$$
-
-即 Planner 没有选择切换 topic，则该项评价系统回复是否偏离当前用户目标和最近上下文。
-
-如果：
-
-$$b_t^{\mathrm{topic}} = 1$$
-
-即 Planner 选择切换 topic，则该项评价目标话题 $k_t^{\mathrm{topic}}$ 是否与用户目标、偏好和对话上下文相关，而不是简单惩罚偏离旧话题。
-
-这样，$\Delta_t^{\mathrm{topic}}$ 不依赖显式 topic segment，而是直接基于状态转移进行评价。
+！约束项需要改为满意度等信息
 
 ---
 

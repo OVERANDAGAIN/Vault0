@@ -98,6 +98,17 @@ $$\mathrm{TaskSuccessRate}
 Early Failure Rate 用于衡量用户是否在任务未完成时提前失败退出。
 
 
+对于单个 episode：
+
+$$\mathrm{EarlyFailure}
+=
+\mathbb{I}
+(
+T < T_{\max}
+\land
+\mathrm{exit_reason} \in \{\mathrm{task_failed}, \mathrm{ad_annoyance}\}
+)$$
+
 对 $N$ 个 episodes：
 
 $$\mathrm{EarlyFailureRate}
@@ -232,5 +243,4 @@ Human calibration 的作用不是替代前述指标，而是用于：
 
 
 
-
->metrics 更注重 商业上的 客观的指标
+整体上，metrics 更强调商业上可观测的客观价值指标，例如 Revenue、

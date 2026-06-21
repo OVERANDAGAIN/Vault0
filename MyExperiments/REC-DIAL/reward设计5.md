@@ -1,3 +1,6 @@
+---
+创建时间: 2026-六月-22日  星期一, 6:00:20 早上
+---
 
 # 一、问题背景
 
@@ -16,13 +19,15 @@
 
 在 REC-DIAL 中，这个问题进一步复杂。系统不是在信息流中插入广告，而是在多轮自然语言对话中插入广告。Planner 不仅决定广告是否出现，还会影响后续对话如何发展。因此，reward 需要评价的不只是某一轮广告是否被接受，还包括：
 
+
 ```text
 1. 当前回复是否推进用户任务；
-2. 用户是否愿意继续对话；
-3. 广告是否带来商业收益；
-4. 广告是否造成反感；
-5. 广告是否过于频繁；
-6. 当前回复是否破坏话题连贯性。
+2. 用户满意度是否提升或下降；
+3. 用户是否愿意继续对话；
+4. 广告是否带来商业收益；
+5. 广告是否造成反感；
+6. 广告是否过于频繁；
+7. 当前回复是否破坏话题连贯性。
 ```
 
 
@@ -127,18 +132,17 @@ Step 6: 用户提前结束对话
 ## 4.1 Step-level reward
 
 step-level reward 评价当前 Planner action 的即时后果。
-
 在第 $t$ 个 decision step，Planner state 为：
 
-$$s_t$$
+$$s_t = (p_u, B_t, D_t)$$
 
-Planner action 为：
+Planner action 为一维离散动作：
 
-$$a_t = (b_t^{\mathrm{ad}}, j_t^{\mathrm{ad}}, b_t^{\mathrm{topic}}, k_t^{\mathrm{topic}})$$
+$$a_t \in \mathcal{A}$$
 
 Speaker 生成系统回复 $y_t$，Mock User 产生下一轮用户输入 $q_{t+1}$。Monitor 根据更新后的历史得到下一状态：
 
-$$s_{t+1}$$
+$$s_{t+1} = (p_u, B_{t+1}, D_{t+1})$$
 
 因此，本轮 reward 写作：
 
@@ -154,13 +158,15 @@ REC-DIAL 不显式维护 topic segment，而是使用当前 Planner state 中的
 
 $$\mathrm{TopicContext}_t = (B_t, D_t)$$
 
-它影响三类判断：
+
+它影响以下判断：
 
 | 评价项 | 作用 |
 | --- | --- |
-| topic coherence | 当前回复是否延续当前用户目标和对话主线 |
+| task progress | 当前回复是否推进用户目标 |
+| satisfaction change | 当前 action 是否改善或损害用户体验 |
 | ad-topic fit | 广告是否契合当前用户需求和对话上下文 |
-| topic drift penalty | 当前回复是否造成不自然的话题偏移 |
+| topic coherence | topic action 是否自然承接当前对话 |
 
 例如：
 
@@ -173,7 +179,7 @@ $$\mathrm{TopicContext}_t = (B_t, D_t)$$
 
 > reward 虽然在 step-level 计算，但部分 reward 项以当前 topic context 为条件。
 
-在实现上，topic context 由 Monitor 从 BeliefState、dialogue memory 和最近 $K_h$ 个 exchange 中构造，不需要作为额外 Planner action，也不需要显式定义 topic segment。
+在实现上，topic context 由 Monitor 从 BeliefState 和 memory module 中构造，不需要作为额外 Planner action，也不需要显式定义 topic segment。
 
 ---
 
@@ -181,11 +187,11 @@ $$\mathrm{TopicContext}_t = (B_t, D_t)$$
 
 episode 层面评价的是整段对话的最终结果，例如：
 
+
 ```text
 用户任务是否完成；
+用户满意度是否整体较好；
 用户是否因为广告反感退出；
-是否出现过度广告；
-整体体验是否平衡；
 商业收益是否在不破坏用户体验的前提下获得。
 ```
 
@@ -217,16 +223,17 @@ REC-DIAL 的优化对象不是单轮回复质量，而是完整对话 trajectory
 
 ```text
 1. 用户任务是否被推进；
-2. 用户是否愿意继续对话；
-3. 广告是否带来商业价值；
-4. 用户是否产生反感；
-5. 广告是否过于密集；
-6. 回复或广告是否造成话题偏移。
+2. 用户满意度是否提升；
+3. 用户是否愿意继续对话；
+4. 广告是否带来商业价值。
 ```
+
+其中，用户反感、广告过密和话题偏移不再作为单独的显式约束项，而是通过用户满意度变化、对话持续性、任务推进和 terminal reward 间接体现。
 
 ---
 
 ## 5.1 单步奖励函数定义
+
 
 在每一个 decision step $t$，定义即时奖励：
 
@@ -234,9 +241,7 @@ $$r_t
 =
 r_t^{\mathrm{user}}
 +
-r_t^{\mathrm{biz}}
-+
-r_t^{\mathrm{constraint}}$$
+r_t^{\mathrm{biz}}$$
 
 其中：
 
@@ -244,25 +249,34 @@ $$r_t^{\mathrm{user}}
 =
 \lambda_{\mathrm{task}} \eta_t^{\mathrm{task}}
 +
+\lambda_{\mathrm{sat}} \xi_t^{\mathrm{sat}}
++
 \lambda_{\mathrm{cont}} \kappa_t^{\mathrm{cont}}$$
 
 $$r_t^{\mathrm{biz}}
 =
 \lambda_{\mathrm{ad}} \alpha_t^{\mathrm{ad}}$$
 
-
-
 合并后：
+
+$$r_t
+=
+\lambda_{\mathrm{task}} \eta_t^{\mathrm{task}}
++
+\lambda_{\mathrm{sat}} \xi_t^{\mathrm{sat}}
++
+\lambda_{\mathrm{cont}} \kappa_t^{\mathrm{cont}}
++
+\lambda_{\mathrm{ad}} \alpha_t^{\mathrm{ad}}$$
 
 其中：
 
-| 类别   | 符号                          | 含义          | 信号来源                   |
-| ---- | --------------------------- | ----------- | ---------------------- |
-| 用户价值 | $\eta_t^{\mathrm{task}}$    | 任务推进        | $(s_t, a_t, s_{t+1})$  |
-| 用户价值 | $\kappa_t^{\mathrm{cont}}$  | ==用户继续交互？== | $s_{t+1}$, done signal |
-| 商业价值 | $\alpha_t^{\mathrm{ad}}$    | 广告 商业收益     | Planner action 与广告池    |
-
->三项约束删去，改为 添加用户的满意度等  新一项
+| 类别 | 符号 | 含义 | 信号来源 |
+| --- | --- | --- | --- |
+| 用户价值 | $\eta_t^{\mathrm{task}}$ | 任务推进 | $(s_t, a_t, s_{t+1})$ |
+| 用户价值 | $\xi_t^{\mathrm{sat}}$ | 用户满意度变化 | $(B_t, B_{t+1})$ |
+| 用户价值 | $\kappa_t^{\mathrm{cont}}$ | 用户继续交互 / 留存 proxy | $s_{t+1}$, done signal |
+| 商业价值 | $\alpha_t^{\mathrm{ad}}$ | 广告商业收益 | Planner action 与广告池 |
 
 ---
 
@@ -295,7 +309,7 @@ Monitor 和 RewardCalculator 会使用同一批底层信号，例如用户输入
 
 | 模块 | 输入 | 输出 | 性质 |
 | --- | --- | --- | --- |
-| Monitor | $o_t = (p_u, H_t)$ | $s_t$ | 描述性状态 |
+| Monitor | $o_t = (p_u, H_t)$ | $s_t = (p_u, B_t, D_t)$ | 描述性状态 |
 | RewardCalculator | $(s_t, a_t, s_{t+1})$ | $r_t$ | 评价性标量 |
 
 Monitor 负责描述事实：
@@ -303,21 +317,18 @@ Monitor 负责描述事实：
 ```text
 用户当前目标是什么；
 用户有哪些正负偏好；
-用户有哪些显式约束；
-长期 dialogue memory 是什么；
-最近 K_h 个 exchange 是什么；
-最近 K_ad 个 step 中发生过哪些广告事件。
+用户当前满意度状态是什么；
+memory module 中的长期和近期上下文是什么；
+历史中发生过哪些广告展示、点击、忽略或拒绝事件。
 ```
 
 RewardCalculator 负责评价后果：
 
 ```text
 这轮动作是否推进任务；
+用户满意度是否提升或下降；
 用户是否愿意继续；
-广告是否带来收益；
-用户是否反感；
-广告是否过于密集；
-话题是否偏移。
+广告是否带来收益。
 ```
 
 ---
@@ -335,10 +346,10 @@ $$\eta_t^{\mathrm{task}} \in [0, 1]$$
 $$(s_t, a_t, s_{t+1})$$
 
 估计得到。关键依据包括：
-
 ```text
 用户目标 g_t 是否被推进；
-用户偏好和约束是否被更好满足；
+用户正向偏好是否被更好满足；
+用户负向偏好或拒绝项是否被避免；
 用户是否接受、追问或继续深化当前任务；
 下一状态 B_{t+1} 是否显示任务更明确或更接近完成。
 ```
@@ -354,7 +365,43 @@ $$(s_t, a_t, s_{t+1})$$
 
 ---
 
-## 7.2 对话持续性 $(\kappa_t^{\mathrm{cont}})$
+## 7.2 用户满意度变化 $(\xi_t^{\mathrm{sat}})$
+
+$$\xi_t^{\mathrm{sat}} \in [-1, 1]$$
+
+用户满意度变化项刻画本轮 action 之后用户满意度是否改善。
+
+BeliefState 中包含用户满意度状态：
+
+$$B_t = (g_t, P_t^+, P_t^-, \mathrm{sat}_t)$$
+
+因此，可以根据动作前后的满意度状态计算：
+
+$$\xi_t^{\mathrm{sat}}
+=
+\rho(\mathrm{sat}_{t+1}) - \rho(\mathrm{sat}_t)$$
+
+其中，$\rho(\cdot)$ 是把满意度状态映射成数值的函数。例如：
+
+| 满意度状态 | 数值 |
+| --- | --- |
+| positive | $1$ |
+| neutral | $0$ |
+| negative | $-1$ |
+
+如果实现中使用连续满意度分数，也可以直接用：
+
+$$\xi_t^{\mathrm{sat}}
+=
+\mathrm{sat}_{t+1} - \mathrm{sat}_t$$
+
+该项用于奖励改善用户体验的动作，并惩罚导致用户满意度下降的动作。
+
+需要注意，$\xi_t^{\mathrm{sat}}$ 是基于状态转移的评价项，而不是直接来自用户真实心理状态。它由 Monitor 或 judge 根据用户反馈和对话历史估计。
+
+---
+
+## 7.3 对话持续性 $(\kappa_t^{\mathrm{cont}})$
 
 $$\kappa_t^{\mathrm{cont}} \in [0, 1]$$
 
@@ -376,49 +423,53 @@ $$\kappa_t^{\mathrm{cont}} \in [0, 1]$$
 
 ---
 
-## 7.3 广告展示价值 $(\alpha_t^{\mathrm{ad}})$
+## 7.4 广告商业收益 $(\alpha_t^{\mathrm{ad}})$
 
 $$\alpha_t^{\mathrm{ad}} \in [0, 1] \ \text{or a non-negative scalar}$$
 
-广告展示价值项刻画本轮广告 action 带来的商业价值。
+广告商业收益项刻画本轮广告 action 是否带来商业价值。
 
-Planner action 中：
+当前 Planner action 是一维离散动作。若：
 
-$$a_t = (b_t^{\mathrm{ad}}, j_t^{\mathrm{ad}}, b_t^{\mathrm{topic}}, k_t^{\mathrm{topic}})$$
+$$0 \leq a_t < |\mathcal{D}|$$
 
-其中，$b_t^{\mathrm{ad}}$ 表示是否插广告，$j_t^{\mathrm{ad}}$ 表示具体广告。
+则当前 action 是广告动作，展示广告：
+
+$$j_t^{\mathrm{ad}} = a_t$$
+
+否则当前 action 不是广告动作。
+
+定义广告动作指示变量：
+
+$$\mathbb{1}_t^{\mathrm{ad}}
+=
+\mathbb{I}(0 \leq a_t < |\mathcal{D}|)$$
 
 如果本轮不插广告：
 
-$$b_t^{\mathrm{ad}} = 0
+$$\mathbb{1}_t^{\mathrm{ad}} = 0
 \Rightarrow
 \alpha_t^{\mathrm{ad}} = 0$$
 
 如果本轮插广告：
 
-$$b_t^{\mathrm{ad}} = 1,
-\quad
-j_t^{\mathrm{ad}} \in \mathcal{D}$$
+$$\mathbb{1}_t^{\mathrm{ad}} = 1$$
 
 则广告基础价值可以从广告池中查表得到：
 
-$$v_{j_t^{\mathrm{ad}}}
+$$v(j_t^{\mathrm{ad}})
 =
 \mathrm{reward\_value}(j_t^{\mathrm{ad}})$$
 
-广告展示价值定义为：
+广告商业收益定义为：
 
 $$\alpha_t^{\mathrm{ad}}
 =
-b_t^{\mathrm{ad}} \cdot v_{j_t^{\mathrm{ad}}}$$
+\mathbb{1}_t^{\mathrm{ad}}
+\cdot
+v(j_t^{\mathrm{ad}})$$
 
-这里的 $\alpha_t^{\mathrm{ad}}$ 表示广告展示价值或商业收益，不等同于用户广告接受。用户是否接受、忽略或拒绝广告，会通过广告事件和用户反馈体现在 $s_{t+1}$ 中，并影响反感惩罚、持续性和 terminal reward。
-
----
-
-
-
-！约束项需要改为满意度等信息
+这里的 $\alpha_t^{\mathrm{ad}}$ 表示广告展示带来的商业价值，不等同于用户广告满意度。用户是否接受、忽略或拒绝广告，会通过 $s_{t+1}$、用户满意度变化、对话持续性和 terminal reward 体现。
 
 ---
 

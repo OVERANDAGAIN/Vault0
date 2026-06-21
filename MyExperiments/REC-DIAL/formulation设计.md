@@ -150,7 +150,7 @@ $$o_t = (p_{u}, H_t)$$
 
 因此，我们将 Planner 的输入定义为一个经过压缩和结构化后的决策状态：
 
-$$s_t = (p_u, B_t, D_t, E_t)$$
+$$s_t = (p_u, B_t, D_t)$$
 
 其中：
 
@@ -161,7 +161,6 @@ $$s_t = (p_u, B_t, D_t, E_t)$$
 | $D_t$ | DialogueContext       | 对话历史的压缩表示，包括长期摘要、最近几轮原文                    |
 |       |                       |                                            |
 |       |                       |                                            |
-
 
 这里的 $s_t$ 是 Planner 在第 $t$ 个 decision step 的输入。
 
@@ -178,16 +177,14 @@ $$B_t = (g_t, P_t^+, P_t^-, C_t^{\text{user}}, Q_t)$$
 
 其中：
 
-| 符号                  | 名称                   | 含义                   |
-| ------------------- | -------------------- | -------------------- |
-| $g_t$               | user_goal            | 当前用户目标的简短描述          |
-| $P_t^+$             | positive_preferences | 用户已表达的正向偏好           |
-| $P_t^-$             | negative_preferences | 用户已表达的负向偏好、拒绝或不想要的内容 |
+| 符号      | 名称                   | 含义                   |
+| ------- | -------------------- | -------------------- |
+| $g_t$   | user_goal            | 当前用户目标的简短描述          |
+| $P_t^+$ | positive_preferences | 用户已表达的正向偏好           |
+| $P_t^-$ | negative_preferences | 用户已表达的负向偏好、拒绝或不想要的内容 |
+|         |                      |                      |
 
 
->用户，广告满意度等
->广告推荐所需要的维度 @xx
->满意度等信息-》》 planner和reward 的输入
 
 
 
@@ -271,49 +268,6 @@ Recent turns 的作用是：
 
 
 ---
-
-
-
-## 2.4 AdExposure $(E_t)$
-
-这里我们只关注广告相关的结构化事件数据，包括每一步是否展示广告、展示了哪个广告，以及用户对该广告的直接反馈。
-
-对于每一个已经完成的 decision step $k<t$，定义广告事件：
-
-$$z_k^{\mathrm{ad}}
-=
-(\mathbb{1}_k^{\mathrm{ad}}, j_k^{\mathrm{ad}}, \mathrm{out}_k^{\mathrm{ad}})$$
-
-其中：
-
-| 符号                                                           | 含义                                        |
-| ------------------------------------------------------------ | ----------------------------------------- |
-| $\mathbb{1}_k^{\mathrm{ad}} \in \{0,1\}$                     | 第 $k$ 步是否展示广告                             |
-| $j_k^{\mathrm{ad}} \in \mathcal{D} \cup \{\varnothing\}$     | 第 $k$ 步展示的广告 ID；如果没有展示广告，则为 $\varnothing$ |
-| $\mathrm{out}_k^{\mathrm{ad}} \in \mathcal{O}^{\mathrm{ad}}$ | 第 $k$ 步广告的用户反馈结果                          |
-
-广告结果集合可以定义为：
-
-$$\mathcal{O}^{\mathrm{ad}}
-=
-\{
-\mathrm{none},
-\mathrm{clicked},
-\mathrm{accepted},
-\mathrm{ignored},
-\mathrm{rejected}
-\}$$
-
-
-在第 $t$ 个 decision step，Planner 不能看到当前动作之后才会产生的广告结果，因此 $E_t$ 只包含已经完成的历史广告事件。我们定义：
-
-$$E_t
-=
-(z_{\tau}^{\mathrm{ad}},z_{\tau+1}^{\mathrm{ad}},\dots,z_{t-1}^{\mathrm{ad}}),
-\quad
-\tau=\max(0,t-K_{ad})$$
-
-其中，$K_{ad}$ 是 recent ad history window 的长度。
 
 
 

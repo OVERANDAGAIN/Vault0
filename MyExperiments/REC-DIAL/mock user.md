@@ -5,21 +5,38 @@
 
 
 
+### 第一组：整体地图
 
+1. **A Survey on LLM-based Conversational User Simulation**
+   用来把握分类框架。重点看 Who / What / How / Evaluation / Applications。综述明确把 conversational user simulation 组织为 Who、What、How 三个核心问题，并进一步总结 evaluation、datasets、applications 和 open challenges。
 
-第一组，直接搜 LLM 用户模拟：
+### 第二组：推荐场景 user simulator 的评价
 
-A Survey on LLM-based Conversational User Simulation。
-这是 2026 年的综述
+2. **Evaluating Large Language Models as Generative User Simulators for Conversational Recommendation**
+   看五任务评价协议。
 
-第二组，搜“真实性缺口”：
+3. **How Reliable is Your Simulator? Analysis on the Limitations of Current LLM-based User Simulators for Conversational Recommendation**
+   看数据泄漏、prompt 不可控、评估高估问题。
 
-一个是 Google Research 的 ConvApparel(ConvApparel: A Benchmark Dataset and Validation Framework for User Simulators in Conversational Recommenders)，它明确指出 LLM 用户模拟器常见问题包括过度冗长、persona 不一致、偏好表达不稳定、不合理的知识水平、过高耐心等；这些问题本质上来自 LLM 默认被训练成 helpful assistant，而不是“有缺陷、容易不耐烦的普通用户”。
+4. **ConvApparel: A Benchmark Dataset and Validation Framework for User Simulators in Conversational Recommenders**
+   看 realism gap、human-likeness、counterfactual validation。
 
-第三组，搜 conversational recommender，因为你的系统里有推荐/广告成分：
+### 第三组：机制设计
 
-Evaluating Large Language Models as Generative User Simulators for Conversational Recommendation。这篇很重要，因为它不是只提出一个 simulator，而是提出了评估协议，测试 synthetic user 是否能做到：选择谈论的物品、表达二元偏好、表达开放式偏好、请求推荐、给出反馈。它也指出 baseline simulator 会偏离真实人类行为
+5. **UserSimCRS**
+   看 classic agenda-based + satisfaction + conditional generation 的模拟器结构。
 
-UserSimCRS
+6. **CSHI**
+   看插件式、可控、可扩展、记忆驱动的 simulator 工程框架。
 
-RecUserSim
+7. **RecUserSim**
+   重点看 profile / memory / bounded-rationality action / explicit rating / refinement，这是你后面设计 reaction model 最值得借鉴的。
+
+### 第四组：训练鲁棒性
+
+8. **Beyond Cooperative Simulators: Generating Realistic User Personas for Robust Evaluation of LLM Agents**
+   看非合作、多样、困难用户如何让 agent 更鲁棒。
+
+9. **DAUS**
+   可选。看 goal coherence 和 hallucination mitigation。
+

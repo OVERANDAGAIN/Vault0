@@ -1,6 +1,9 @@
 ---
 创建时间: 2026-September-15th  Tuesday, 7:57:44 pm
 ---
+改：现阶段插件自动验证git和obsidian。所以不需要进行下面的步骤
+即使验证失败，只要添加一下用户邮箱和remote,大概也能连上，ssh都不用设置了
+
 
 [Git的配置、本地绑定Github及基本使用-CSDN博客](https://blog.csdn.net/m0_56676311/article/details/135509261)
 

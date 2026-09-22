@@ -1,5 +1,5 @@
 ---
-创建时间: 2024-十二月-31日  星期二, 11:45:39 中午
+创建时间: 2026-September-7th  Monday, 7:19:17 pm
 created: 2024-12-31T11:45
 updated: ...
 ---
@@ -13,6 +13,10 @@ Untill [[2025-07-30]]  : About 10 plugins  移出了 `Chartero` ==（太卡了�
 
 
 # Answers
+
+从Syncthing中获取目前的十个 plugins 文件。
+然后配置坚果云 [[同步至坚果云WebDav]]
+
 ![[Pasted image 20241231115141.png]]
 
 
@@ -29,7 +33,7 @@ qDE1753860434724
 ![[Pasted image 20250916190406.png]]
 
 其中的“配置”按钮：
-
+小牛密码是：31415926
 ![[Pasted image 20250916190340.png]]
 
 

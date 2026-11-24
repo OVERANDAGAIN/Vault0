@@ -6,5 +6,6 @@
     "image"
   ],
   "baseFontSizeAction": true,
-  "baseFontSize": 13
+  "baseFontSize": 13,
+  "showRibbon": true
 }

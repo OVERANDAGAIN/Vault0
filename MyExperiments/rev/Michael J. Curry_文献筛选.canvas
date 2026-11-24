@@ -1,0 +1,451 @@
+{
+  "nodes": [
+    {
+      "id": "0000000000000001",
+      "type": "group",
+      "x": 0,
+      "y": 0,
+      "width": 2284,
+      "height": 956,
+      "label": "第一层  全部公开工作",
+      "color": "#64748B"
+    },
+    {
+      "id": "0000000000000009",
+      "type": "group",
+      "x": 0,
+      "y": 1101,
+      "width": 2284,
+      "height": 529,
+      "label": "第二层  按与综述的关系筛选",
+      "color": "#64748B"
+    },
+    {
+      "id": "0000000000000016",
+      "type": "group",
+      "x": 21,
+      "y": 1775,
+      "width": 556,
+      "height": 833,
+      "label": "第三层  优先读综述和领域地图",
+      "color": "#397766"
+    },
+    {
+      "id": "000000000000001d",
+      "type": "group",
+      "x": 583,
+      "y": 1775,
+      "width": 556,
+      "height": 592,
+      "label": "第三层  精读直接相关论文",
+      "color": "#396A9A"
+    },
+    {
+      "id": "0000000000000022",
+      "type": "group",
+      "x": 1145,
+      "y": 1775,
+      "width": 556,
+      "height": 785,
+      "label": "第三层  按需补读",
+      "color": "#95723E"
+    },
+    {
+      "id": "0000000000000002",
+      "type": "text",
+      "x": 702,
+      "y": 40,
+      "width": 880,
+      "height": 254,
+      "text": "## Michael J. Curry\n\n**伊利诺伊大学芝加哥分校（UIC）｜10 项公开成果**\n\n2024 · 4 项｜2025 · 3 项｜2026 · 3 项\n\n2024–2026 年公开论文，截至 2026-11-24。预印本、会议及期刊版本合并，按区间内最早可核验版本归年。作者身份和书目经个人主页、ORCID、DBLP、OpenAlex、Crossref 与 DataCite 交叉核对。\n\n[作者主页](https://currymj.github.io/) · [UIC 研究生教师名录](https://catalog.uic.edu/gcat/graduatefaculty/) · [DBLP](https://dblp.org/pid/255/4719.html) · [ORCID](https://orcid.org/0000-0001-8052-5074)",
+      "color": "#64748B"
+    },
+    {
+      "id": "0000000000000003",
+      "type": "text",
+      "x": 317,
+      "y": 398,
+      "width": 526,
+      "height": 518,
+      "text": "## 2024｜4 项\n\n- **让自利智能体如实申报路径需求** · 多智能体路径规划、近似分配、VCG 支付  \n  [Scalable Mechanism Design for Multi-Agent Path Finding](https://ijcai.org/proceedings/2024/7)（IJCAI 2024）\n\n- **学习动态环境中的拍卖规则** · 动态机制、仿射最大化、双层优化  \n  [Automated Design of Affine Maximizer Mechanisms in Dynamic Settings](https://arxiv.org/abs/2402.08129)（AAAI 2024）\n\n- **设计多资产自动做市机制** · 可微经济学、最优传输、逆向选择  \n  [Optimal Automated Market Makers: Differentiable Economics and Strong Duality](https://arxiv.org/abs/2402.09129)（2024 预印，WINE 2025）\n\n- **〔广告或推荐〕从完整候选回答中竞价选一条** · MOSAIC、广告主偏好聚合、激励相容  \n  [Truthful Aggregation of LLMs with an Application to Online Advertising](https://arxiv.org/abs/2405.05905)（2024 预印，NeurIPS 2025）"
+    },
+    {
+      "id": "0000000000000005",
+      "type": "text",
+      "x": 879,
+      "y": 398,
+      "width": 526,
+      "height": 518,
+      "text": "## 2025｜3 项\n\n- **〔综述〕自动化机制设计综述** · 线性规划、样本复杂度、可微经济学  \n  [Automated Mechanism Design: A Survey](https://www.sigecom.org/exchanges/volume_22/2/CURRY.pdf)（ACM SIGecom Exchanges 22(2)）  \n  **共同作者** · 王同翰\n\n- **用 LLM 代理表达课程组合偏好** · 自然语言偏好获取、组合分配、课程匹配  \n  [LLM-Powered Preference Elicitation in Combinatorial Assignment](https://arxiv.org/abs/2502.10308)\n\n- **让文本评分鼓励如实表达** · 适当评分规则、人类偏好、同行评分  \n  [Aligned Textual Scoring Rules](https://arxiv.org/abs/2507.06221)（ICML 2025 研讨会）"
+    },
+    {
+      "id": "0000000000000007",
+      "type": "text",
+      "x": 1441,
+      "y": 398,
+      "width": 526,
+      "height": 518,
+      "text": "## 2026｜3 项\n\n- **物品估值不同时怎么组织交换** · 易货交换、个体理性、福利优化  \n  [Barter Exchange with Asymmetric Item Valuations](https://doi.org/10.1145/3774904.3792349)（WWW 2026）\n\n- **汇总多智能体回答的置信度** · 协作推理、置信度聚合、相关性校准  \n  [Confidence Composition for Multiagent Language Model Systems](https://arxiv.org/abs/2606.13591v2)（Curry 见 2026 年 9 月 v2 署名）\n\n- **〔广告或推荐〕对整页的广告和自然内容联合排序** · 信息流竞价、排列外部性、激励相容  \n  [MIRT: Transformers for Truthful Generative Auctions with Whole-feed Permutation Externalities](https://arxiv.org/abs/2610.06559)"
+    },
+    {
+      "id": "000000000000000a",
+      "type": "text",
+      "x": 792,
+      "y": 1141,
+      "width": 700,
+      "height": 140,
+      "text": "## 先找综述，再筛原始研究\n\n先用综述看已有框架。再看原始论文回答的是生成、投放、竞价还是评估。与这些问题相邻的工作按需保留。",
+      "color": "#64748B"
+    },
+    {
+      "id": "000000000000000e",
+      "type": "text",
+      "x": 36,
+      "y": 1391,
+      "width": 526,
+      "height": 199,
+      "text": "### 综述与领域入口\n\n**作者书目中的综述归类 · 1 项**\n\n先读与王同翰合著的正式综述，再用两篇外部文章核对 LLM 广告和机制设计各自已覆盖的范围。",
+      "color": "#397766"
+    },
+    {
+      "id": "0000000000000010",
+      "type": "text",
+      "x": 598,
+      "y": 1391,
+      "width": 526,
+      "height": 199,
+      "text": "### 直接相关的广告与推荐\n\n**作者书目中的广告与推荐归类 · 2 项**\n\n两篇直接相关。MOSAIC 竞价选择完整的 LLM 回答，MIRT 竞价选择广告和自然内容混排的信息流。按竞价对象、分配与支付三项对照。",
+      "color": "#396A9A"
+    },
+    {
+      "id": "0000000000000012",
+      "type": "text",
+      "x": 1160,
+      "y": 1391,
+      "width": 526,
+      "height": 199,
+      "text": "### 相邻研究\n\n**作者书目中的相邻归类 · 4 项**\n\n如果综述还讨论怎样获取偏好、给文本评分、合并多个代理的判断，读这一组。动态拍卖可补机制背景。",
+      "color": "#95723E"
+    },
+    {
+      "id": "0000000000000014",
+      "type": "text",
+      "x": 1722,
+      "y": 1391,
+      "width": 526,
+      "height": 199,
+      "text": "### 其余公开工作\n\n**作者书目中的其他归类 · 3 项**\n\n目录中留存其他方向。第一轮扫中文短题和关键词，后续按具体问题回查。",
+      "color": "#697281"
+    },
+    {
+      "id": "0000000000000017",
+      "type": "text",
+      "x": 36,
+      "y": 1815,
+      "width": 526,
+      "height": 175,
+      "text": "### 自动化机制设计综述\n\n**Curry 与王同翰共同署名。** 先读引言和第 5 节，梳理怎么用优化、学习理论和深度学习来设计机制。\n\n[Automated Mechanism Design: A Survey](https://www.sigecom.org/exchanges/volume_22/2/CURRY.pdf)",
+      "color": "#397766"
+    },
+    {
+      "id": "0000000000000019",
+      "type": "text",
+      "x": 36,
+      "y": 2080,
+      "width": 526,
+      "height": 199,
+      "text": "### LLM 与机制设计的双向综述\n\n**外部正式综述。** 分开看怎样用 LLM 设计机制，以及怎样借助机制设计改进 LLM 的评估、对齐与交互。\n\n[Mechanism design meets large language models: Foundations and frontiers](https://www.sciencedirect.com/science/article/pii/S3051390126000334)",
+      "color": "#397766"
+    },
+    {
+      "id": "000000000000001b",
+      "type": "text",
+      "x": 36,
+      "y": 2369,
+      "width": 526,
+      "height": 199,
+      "text": "### 广告机制的领域概览\n\n**Feizi 等的外部观点文。** 先看第 2 节的系统框架和第 4.5 节的研究对照，补广告场景和逐词竞价的脉络。\n\n[Online Advertisements with LLMs: Opportunities and Challenges](https://www.sigecom.org/exchanges/volume_22/2/FEIZI.pdf)",
+      "color": "#397766"
+    },
+    {
+      "id": "000000000000001e",
+      "type": "text",
+      "x": 598,
+      "y": 1815,
+      "width": 526,
+      "height": 223,
+      "text": "### MOSAIC：生成完整候选答案后再竞价\n\n对照左淞等的逐词拍卖，先看正式版第 2 节，再看第 4、5 节怎样从整段候选回答中分配并收费。重点记用户效用、广告主申报和真实性保证。\n\n[Truthful Aggregation of LLMs（NeurIPS 2025）](https://proceedings.neurips.cc/paper_files/paper/2025/file/d60b6b7f0ba6bf07d975b3bbdacea702-Paper-Conference.pdf) · [逐词拍卖对照（外部）](https://arxiv.org/abs/2310.10826)",
+      "color": "#396A9A"
+    },
+    {
+      "id": "0000000000000020",
+      "type": "text",
+      "x": 598,
+      "y": 2128,
+      "width": 526,
+      "height": 199,
+      "text": "### MIRT：广告和自然内容合排\n\n看第 1、3 节。Transformer 先生成不依赖出价的候选信息流，平台再用出价选排列。点击率取决于广告周围的内容，排序因此会改变广告价值。\n\n[MIRT 原文](https://arxiv.org/html/2610.06559v1)",
+      "color": "#396A9A"
+    },
+    {
+      "id": "0000000000000023",
+      "type": "text",
+      "x": 1160,
+      "y": 1815,
+      "width": 526,
+      "height": 175,
+      "text": "### 偏好获取：用自然语言表达组合偏好\n\n让 LLM 从用户描述中为课程组合提供偏好估计，对照广告机制里用户偏好从哪里来。\n\n[LLM-Powered Preference Elicitation](https://arxiv.org/abs/2502.10308)",
+      "color": "#95723E"
+    },
+    {
+      "id": "0000000000000025",
+      "type": "text",
+      "x": 1160,
+      "y": 2080,
+      "width": 526,
+      "height": 175,
+      "text": "### 文本评价：让如实描述得分更高\n\n在可证明适当的评分规则内，拟合人类参考分数。用来区分评分是否符合人类偏好和报告者是否有动机说实话。\n\n[Aligned Textual Scoring Rules](https://arxiv.org/abs/2507.06221)",
+      "color": "#95723E"
+    },
+    {
+      "id": "0000000000000027",
+      "type": "text",
+      "x": 1160,
+      "y": 2345,
+      "width": 526,
+      "height": 175,
+      "text": "### 多代理：怎么合并置信度\n\n看多个代理的答案和置信信号相关时，如何降低汇总后的过度自信。\n\n[Confidence Composition](https://arxiv.org/abs/2606.13591v2)",
+      "color": "#95723E"
+    },
+    {
+      "id": "0000000000000029",
+      "type": "text",
+      "x": 1722,
+      "y": 1815,
+      "width": 526,
+      "height": 145,
+      "text": "### 会上提到的共同作者\n\n- **王同翰** · [自动化机制设计综述](https://www.sigecom.org/exchanges/volume_22/2/CURRY.pdf)",
+      "color": "#64748B"
+    },
+    {
+      "id": "000000000000002a",
+      "type": "text",
+      "x": 1722,
+      "y": 2006,
+      "width": 526,
+      "height": 151,
+      "text": "### 直接共同署名\n\n**王同翰**共同署名自动化机制设计综述。\n\n[王同翰与 Curry 的综述](https://www.sigecom.org/exchanges/volume_22/2/CURRY.pdf)",
+      "color": "#64748B"
+    },
+    {
+      "id": "000000000000002b",
+      "type": "text",
+      "x": 1722,
+      "y": 2203,
+      "width": 526,
+      "height": 199,
+      "text": "### 从这两篇继续追其他人\n\nMOSAIC 第 2 节讨论 **Paul Dütting、Haifeng Xu、左淞** 的逐词拍卖。MIRT 第 1.1 节引用 **王同翰** 的 GemNet 和 **邓小铁** 的神经拍卖设计。这里是引用关系。\n\n[逐词拍卖](https://arxiv.org/abs/2310.10826) · [MIRT](https://arxiv.org/html/2610.06559v1) · [GemNet](https://arxiv.org/abs/2406.07428)",
+      "color": "#64748B"
+    }
+  ],
+  "edges": [
+    {
+      "id": "0000000000000004",
+      "fromNode": "0000000000000002",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "0000000000000003",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "2024｜4 项",
+      "color": "#64748B"
+    },
+    {
+      "id": "0000000000000006",
+      "fromNode": "0000000000000002",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "0000000000000005",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "2025｜3 项",
+      "color": "#64748B"
+    },
+    {
+      "id": "0000000000000008",
+      "fromNode": "0000000000000002",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "0000000000000007",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "2026｜3 项",
+      "color": "#64748B"
+    },
+    {
+      "id": "000000000000000b",
+      "fromNode": "0000000000000003",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "000000000000000a",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "进入主题筛选",
+      "color": "#64748B"
+    },
+    {
+      "id": "000000000000000c",
+      "fromNode": "0000000000000005",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "000000000000000a",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "进入主题筛选",
+      "color": "#64748B"
+    },
+    {
+      "id": "000000000000000d",
+      "fromNode": "0000000000000007",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "000000000000000a",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "进入主题筛选",
+      "color": "#64748B"
+    },
+    {
+      "id": "000000000000000f",
+      "fromNode": "000000000000000a",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "000000000000000e",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "先看综述",
+      "color": "#397766"
+    },
+    {
+      "id": "0000000000000011",
+      "fromNode": "000000000000000a",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "0000000000000010",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "进入原始研究",
+      "color": "#396A9A"
+    },
+    {
+      "id": "0000000000000013",
+      "fromNode": "000000000000000a",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "0000000000000012",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "按问题补背景",
+      "color": "#95723E"
+    },
+    {
+      "id": "0000000000000015",
+      "fromNode": "000000000000000a",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "0000000000000014",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "留在全量目录",
+      "color": "#697281"
+    },
+    {
+      "id": "0000000000000018",
+      "fromNode": "000000000000000e",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "0000000000000017",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "先读这份",
+      "color": "#397766"
+    },
+    {
+      "id": "000000000000001a",
+      "fromNode": "0000000000000017",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "0000000000000019",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "接着补这一块",
+      "color": "#397766"
+    },
+    {
+      "id": "000000000000001c",
+      "fromNode": "0000000000000019",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "000000000000001b",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "接着补这一块",
+      "color": "#397766"
+    },
+    {
+      "id": "000000000000001f",
+      "fromNode": "0000000000000010",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "000000000000001e",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "先看直接证据",
+      "color": "#396A9A"
+    },
+    {
+      "id": "0000000000000021",
+      "fromNode": "000000000000001e",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "0000000000000020",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "对照下一篇",
+      "color": "#396A9A"
+    },
+    {
+      "id": "0000000000000024",
+      "fromNode": "0000000000000012",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "0000000000000023",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "按问题选读",
+      "color": "#95723E"
+    },
+    {
+      "id": "0000000000000026",
+      "fromNode": "0000000000000023",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "0000000000000025",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "再补一个切面",
+      "color": "#95723E"
+    },
+    {
+      "id": "0000000000000028",
+      "fromNode": "0000000000000025",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "0000000000000027",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "再补一个切面",
+      "color": "#95723E"
+    }
+  ]
+}

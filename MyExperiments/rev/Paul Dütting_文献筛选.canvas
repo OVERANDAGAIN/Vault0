@@ -1,0 +1,624 @@
+{
+  "nodes": [
+    {
+      "id": "0000000000000001",
+      "type": "group",
+      "x": 0,
+      "y": 0,
+      "width": 2846,
+      "height": 2410,
+      "label": "第一层  全部公开工作",
+      "color": "#64748B"
+    },
+    {
+      "id": "0000000000000013",
+      "type": "group",
+      "x": 0,
+      "y": 2555,
+      "width": 2846,
+      "height": 510,
+      "label": "第二层  按与综述的关系筛选",
+      "color": "#64748B"
+    },
+    {
+      "id": "0000000000000020",
+      "type": "group",
+      "x": 21,
+      "y": 3210,
+      "width": 696,
+      "height": 1037,
+      "label": "第三层  优先读综述和领域地图",
+      "color": "#397766"
+    },
+    {
+      "id": "0000000000000029",
+      "type": "group",
+      "x": 723,
+      "y": 3210,
+      "width": 696,
+      "height": 1024,
+      "label": "第三层  精读直接相关论文",
+      "color": "#396A9A"
+    },
+    {
+      "id": "0000000000000032",
+      "type": "group",
+      "x": 1425,
+      "y": 3210,
+      "width": 696,
+      "height": 809,
+      "label": "第三层  按需补读",
+      "color": "#95723E"
+    },
+    {
+      "id": "0000000000000002",
+      "type": "text",
+      "x": 983,
+      "y": 40,
+      "width": 880,
+      "height": 230,
+      "text": "## Paul Dütting\n\n**Google Research（苏黎世）｜47 项公开成果**\n\n2024 · 20 项｜2025 · 10 项｜2026 · 17 项\n\n2024–2026-11-24 的可核实公开论文和预印本。按区间内最早可核实版本归年；正式发表、预印本与扩展摘要合并。\n\n[作者主页](https://paulduetting.com/) · [DBLP](https://dblp.org/pid/70/7588.html) · [ORCID](https://orcid.org/0000-0002-0635-6812) · [Yale Cowles 讨论论文](https://cowles.yale.edu/publications/author/Paul%20Du%CC%88tting)",
+      "color": "#64748B"
+    },
+    {
+      "id": "0000000000000003",
+      "type": "text",
+      "x": 36,
+      "y": 374,
+      "width": 526,
+      "height": 1006,
+      "text": "## 2024｜1–8 / 20\n\n- **〔广告或推荐〕逐 token 拍卖聚合语言模型输出** · 生成式广告、激励相容、二价式支付  \n  [Mechanism Design for Large Language Models](https://arxiv.org/abs/2310.10826)（WWW 2024；合并 IJCAI 2025 扩展摘要）  \n  **共同作者** · Haifeng Xu、Song Zuo\n\n- **〔综述〕算法合约理论综述** · 隐藏行动、合约设计、近似与学习  \n  [Algorithmic Contract Theory: A Survey](https://doi.org/10.1561/0400000113)（FnTTCS 2024）\n\n- **〔广告或推荐〕学习如何卖出联合广告位** · 商家与品牌联合投放、在线学习、遗憾  \n  [Selling Joint Ads: A Regret Minimization Perspective](https://arxiv.org/abs/2409.07819)（EC 2024）\n\n- **〔广告或推荐〕用分配后反馈改进广告支付** · 偏好与信息、点击反馈、数据驱动 VCG  \n  [Data-Driven Mechanism Design: Jointly Eliciting Preferences and Information](https://arxiv.org/abs/2412.16132)（EC 2025 扩展摘要）  \n  **共同作者** · Haifeng Xu、Song Zuo\n\n- **〔广告或推荐〕比较位置拍卖对模型误设的稳健性** · 搜索广告、位置排序、均衡与 VCG  \n  [Nontruthful Position Auctions Are More Robust to Misspecification](https://doi.org/10.1287/moor.2023.1380)（Mathematics of Operations Research 2024 卷期）\n\n- **用深度学习近似求解最优拍卖** · RegretNet、收入优化、激励约束  \n  [Optimal Auctions through Deep Learning: Advances in Differentiable Economics](https://doi.org/10.1145/3630749)（JACM 2024；早版 ICML 2019）\n\n- **用动态合约引导强化学习代理** · 委托代理、合同支付、马尔可夫决策  \n  [Principal-Agent Reinforcement Learning: Orchestrating AI Agents with Contracts](https://arxiv.org/abs/2407.18074)  \n  **共同作者** · Tonghan Wang\n\n- **研究超出总替代条件的组合合约** · 隐藏行动、集合估值、近似算法  \n  [Combinatorial Contracts Beyond Gross Substitutes](https://doi.org/10.1137/1.9781611977912.5)（SODA 2024）"
+    },
+    {
+      "id": "0000000000000005",
+      "type": "text",
+      "x": 598,
+      "y": 374,
+      "width": 526,
+      "height": 1006,
+      "text": "## 2024｜9–16 / 20\n\n- **识别复杂合约的信息与查询障碍** · 合约设计、近似界、查询复杂度  \n  [When Contracts Get Complex: Information-Theoretic Barriers](https://arxiv.org/abs/2403.09794)（SODA 2026；早期题名 The Query Complexity of Contracts）\n\n- **用组合行动模型扩展多代理合约** · 团队激励、多个行动、近似算法  \n  [Multi-Agent Combinatorial Contracts](https://arxiv.org/abs/2405.08260)（SODA 2025）\n\n- **分析模糊合同与委托代理激励** · 模糊厌恶、合同菜单、隐藏行动  \n  [Ambiguous Contracts](https://doi.org/10.3982/ecta22687)（Econometrica 2024；早版 EC 2023）\n\n- **用少量历史样本做在线组合分配** · 在线拍卖、样本效率、福利保证  \n  [Online Combinatorial Allocations and Auctions with Few Samples](https://arxiv.org/abs/2409.11091)（FOCS 2024）\n\n- **衡量动态定价达到收入基准所需的竞争** · 动态定价、竞争复杂度、收入基准  \n  [The Competition Complexity of Dynamic Pricing](https://doi.org/10.1287/moor.2022.0230)（Mathematics of Operations Research 2024 卷期）\n\n- **衡量在线选择达到先知收益所需的额外竞争** · 先知不等式、在线选择、竞争复杂度  \n  [The Competition Complexity of Prophet Inequalities](https://arxiv.org/abs/2402.11084)（EC 2024；合并 MOR 2026 期刊版）\n\n- **给出次可加估值组合拍卖的在线福利界** · 先知不等式、组合拍卖、次可加估值  \n  [An O(log log m) Prophet Inequality for Subadditive Combinatorial Auctions](https://doi.org/10.1137/20M1382799)（SIAM Journal on Computing 2024 卷期）\n\n- **将不完美外部建议纳入在线选择** · 秘书问题、预测增强、稳健性  \n  [Secretaries with Advice](https://doi.org/10.1287/moor.2023.1384)（Mathematics of Operations Research 2024 卷期）"
+    },
+    {
+      "id": "0000000000000007",
+      "type": "text",
+      "x": 1160,
+      "y": 374,
+      "width": 526,
+      "height": 1006,
+      "text": "## 2024｜17–20 / 20\n\n- **在输入变化时稳定更新子模选择** · 子模优化、选择一致性、变更成本  \n  [Consistent Submodular Maximization](https://arxiv.org/abs/2405.19977)（ICML 2024）\n\n- **研究拟阵约束向在线问题的嵌入** · 拟阵嵌入、在线算法、秘书问题  \n  [Online Matroid Embeddings](https://arxiv.org/abs/2407.10316)（ICALP 2026）\n\n- **在有限调整次数下维护子模解** · 常数重配置、稳定性、近似界  \n  [The Cost of Consistency: Submodular Maximization with Constant Recourse](https://arxiv.org/abs/2412.02492)（STOC 2025）\n\n- **在插入与删除下维护拟阵约束子模解** · 动态优化、拟阵、更新开销  \n  [Fully Dynamic Submodular Maximization over Matroids](https://doi.org/10.1145/3698397)（2024 在线；2025 卷期）"
+    },
+    {
+      "id": "0000000000000009",
+      "type": "text",
+      "x": 1722,
+      "y": 374,
+      "width": 526,
+      "height": 1006,
+      "text": "## 2025｜1–8 / 10\n\n- **用伪维分析学习合同所需样本** · 合同学习、样本复杂度、表示误差  \n  [The Pseudo-Dimension of Contracts](https://arxiv.org/abs/2501.14474)（EC 2025）\n\n- **研究如何用简洁合同表达不确定性** · 模糊厌恶、合约简洁性、组合行动  \n  [Succinct Ambiguous Contracts](https://arxiv.org/abs/2503.02592)\n\n- **借助大模型研究语言怎样改变先验信念** · 语言框架、贝叶斯说服、信息设计  \n  [Information Design With Large Language Models](https://arxiv.org/abs/2509.25565)（EC 2026）  \n  **共同作者** · Haifeng Xu、Song Zuo\n\n- **根据质量估计聚合语言模型的排序** · 查询表现预测、排序聚合、信息检索  \n  [QPP-RA: Aggregating Large Language Model Rankings](https://doi.org/10.1145/3731120.3744575)（ICTIR 2025）\n\n- **将单代理合同算法推广到多代理** · 黑盒推广、多人激励、稳健性  \n  [Black-Box Lifting and Robustness Theorems for Multi-Agent Contracts](https://arxiv.org/abs/2511.19358)（EC 2026）\n\n- **在组合行动下求解激励合约** · 隐藏行动、总替代、可计算性  \n  [Combinatorial Contracts](https://doi.org/10.1137/23m1611828)（SIAM Journal on Computing 2025；早版 FOCS 2021）\n\n- **建立双边贸易利润最大化的遗憾界** · 买卖双边、动态定价、在线学习  \n  [Nearly Tight Regret Bounds for Profit Maximization in Bilateral Trade](https://arxiv.org/abs/2509.22563)（FOCS 2025）\n\n- **从摘要中恢复经删除后的子模解** · 删除稳健、非单调子模、拟阵约束  \n  [Deletion Robust Non-Monotone Submodular Maximization over Matroids](https://jmlr.org/papers/v26/23-1219.html)（JMLR 2025）"
+    },
+    {
+      "id": "000000000000000b",
+      "type": "text",
+      "x": 2284,
+      "y": 374,
+      "width": 526,
+      "height": 1006,
+      "text": "## 2025｜9–10 / 10\n\n- **分析在线选择中的群体公平和偏差** · 多群体秘书问题、选择配额、在线算法  \n  [Fairness and Bias in Online Selection](https://doi.org/10.1287/opre.2021.0662)（2025 在线；2026 卷期）\n\n- **研究逐期买卖面对先知时的收益保证** · 在线交易、买卖时机、先知基准  \n  [Trading Prophets](https://doi.org/10.1287/opre.2023.0593)（2025 在线；2026 卷期）"
+    },
+    {
+      "id": "000000000000000d",
+      "type": "text",
+      "x": 598,
+      "y": 1484,
+      "width": 526,
+      "height": 886,
+      "text": "## 2026｜1–8 / 17\n\n- **〔综述〕给计算机研究者的合约理论导读** · 隐藏行动、委托代理、算法合约  \n  [An Introduction to Contract Theory for Computer Scientists](https://arxiv.org/abs/2610.17336)（ACM SIGecom Exchanges 24(1)）\n\n- **〔广告或推荐〕给多轮对话推荐设计反馈约束的支付** · 购物助手、用户反馈、动态激励  \n  [From Conversations to Mechanisms: Aligning Advertiser Incentives in AI-Powered Product Recommendations](https://cowles.yale.edu/sites/default/files/2026-04/d2513.pdf)（Yale Cowles 工作论文）  \n  **共同作者** · Haifeng Xu、Song Zuo\n\n- **〔广告或推荐〕比较赞助购物的自动出价均衡** · 赞助电商、预算目标、GSP 与 VCG  \n  [Autobidding Equilibria in Sponsored Shopping](https://arxiv.org/abs/2602.21966)（EC 2026）\n\n- **研究对代理一视同仁的激励合同** · 匿名合同、团队激励、近似算法  \n  [Anonymous Contracts](https://arxiv.org/abs/2602.12118)\n\n- **用需求类型刻画组合合约的结构** · 组合合约、需求结构、可计算性  \n  [Combinatorial Contracts Through Demand Types](https://arxiv.org/abs/2604.15125)\n\n- **在信息逐步揭示时学习多人合同** · 动态团队、在线学习、激励  \n  [Online Multi-Agent Contracts](https://arxiv.org/abs/2608.18241)\n\n- **刻画多人出力与团队支付的权衡** · 团队合约、多人激励、近似算法  \n  [Multi-Agent Contracts](https://doi.org/10.1145/3801154)（JACM 2026；早版 STOC 2023）\n\n- **分析团队合同中如何披露信息** · 全透明、贝叶斯说服、多人合同  \n  [Transparency in Team Contracts](https://arxiv.org/abs/2611.07494)"
+    },
+    {
+      "id": "000000000000000f",
+      "type": "text",
+      "x": 1160,
+      "y": 1484,
+      "width": 526,
+      "height": 886,
+      "text": "## 2026｜9–16 / 17\n\n- **研究信息有限时双边市场的福利机制** · 抽样、双边交易、预算平衡  \n  [Efficient Two-Sided Markets with Limited Information](https://doi.org/10.1137/22m1518918)（SIAM Journal on Computing 2026；早版 STOC 2021）\n\n- **分析平滑对手下双边贸易的利润学习** · 线上贸易、平滑对手、遗憾  \n  [Profit Maximization in Bilateral Trade against a Smooth Adversary](https://arxiv.org/abs/2605.12664)\n\n- **给动态子模选择提供统一稳定框架** · 子模优化、动态更新、重配置  \n  [A General Framework for Dynamic Consistent Submodular Maximization](https://arxiv.org/abs/2606.04946)（ICML 2026）\n\n- **在看不到原图时做图拟阵在线选择** · 图拟阵、秘书问题、在线约束  \n  [Graphic Matroid Secretary without the Graph](https://arxiv.org/abs/2608.11413)\n\n- **为风险厌恶的卖家设计单品交易** · 均值方差、支付时点、一口价  \n  [Selling a Single Item: A Mean-Variance Approach](https://ssrn.com/abstract=7344602)（SSRN 2026-08）\n\n- **把公平约束纳入先知式在线选择** · 在线选择、群体公平、先知不等式  \n  [Fair Prophets](https://arxiv.org/abs/2609.21826)\n\n- **研究随机到达情况下的在线匹配保证** · 随机匹配、在线分配、竞争比  \n  [Optimal Online Stochastic Matching](https://arxiv.org/abs/2610.19866)\n\n- **让在线选择算法与最优在线策略相比** · 秘书问题、先知模型、比较基准  \n  [Prophet Secretary Against the Online Optimal](https://doi.org/10.1287/moor.2023.0252)（2026-10 在线；早版 EC 2023）"
+    },
+    {
+      "id": "0000000000000011",
+      "type": "text",
+      "x": 1722,
+      "y": 1484,
+      "width": 526,
+      "height": 886,
+      "text": "## 2026｜17–17 / 17\n\n- **分析完全已知未来时子模解的稳定性** · 离线预见、子模优化、解集变动  \n  [Consistent Submodular Maximization with Full Foresight](https://arxiv.org/abs/2611.06223)"
+    },
+    {
+      "id": "0000000000000014",
+      "type": "text",
+      "x": 1073,
+      "y": 2595,
+      "width": 700,
+      "height": 140,
+      "text": "## 先找综述，再筛原始研究\n\n先用综述看已有框架。再看原始论文回答的是生成、投放、竞价还是评估。与这些问题相邻的工作按需保留。",
+      "color": "#64748B"
+    },
+    {
+      "id": "0000000000000018",
+      "type": "text",
+      "x": 36,
+      "y": 2845,
+      "width": 666,
+      "height": 180,
+      "text": "### 综述与领域入口\n\n**作者书目中的综述归类 · 2 项**\n\n先看 Dütting 自己的两份合同综述，再用 LLM 广告与机制设计的外部综述确定阅读边界。",
+      "color": "#397766"
+    },
+    {
+      "id": "000000000000001a",
+      "type": "text",
+      "x": 738,
+      "y": 2845,
+      "width": 666,
+      "height": 180,
+      "text": "### 直接相关的广告与推荐\n\n**作者书目中的广告与推荐归类 · 6 项**\n\n生成时怎样分配广告影响力，传统广告位怎样由多方联合购买，以及购物助手怎样按新到的用户反馈改进推荐和支付。",
+      "color": "#396A9A"
+    },
+    {
+      "id": "000000000000001c",
+      "type": "text",
+      "x": 1440,
+      "y": 2845,
+      "width": 666,
+      "height": 180,
+      "text": "### 相邻研究\n\n**作者书目中的相邻归类 · 20 项**\n\n补偏好如何被文字表达、代理如何被合约激励，以及市场规则是否能从数据学习。",
+      "color": "#95723E"
+    },
+    {
+      "id": "000000000000001e",
+      "type": "text",
+      "x": 2142,
+      "y": 2845,
+      "width": 666,
+      "height": 180,
+      "text": "### 其余公开工作\n\n**作者书目中的其他归类 · 19 项**\n\n目录中留存其他方向。第一轮扫中文短题和关键词，后续按具体问题回查。",
+      "color": "#697281"
+    },
+    {
+      "id": "0000000000000021",
+      "type": "text",
+      "x": 36,
+      "y": 3250,
+      "width": 666,
+      "height": 175,
+      "text": "### 本人长综述｜算法合约理论\n\n从单代理隐藏行动读起，再看组合与多人合同。它提供激励工具箱，适合补 Token Auction 背后的机制语言。\n\n[Algorithmic Contract Theory: A Survey](https://doi.org/10.1561/0400000113)",
+      "color": "#397766"
+    },
+    {
+      "id": "0000000000000023",
+      "type": "text",
+      "x": 36,
+      "y": 3515,
+      "width": 666,
+      "height": 162,
+      "text": "### 本人短导读｜计算机研究者的合约入门\n\n先用这份短文认清委托人、代理人、合同和支付，再按需要回到较长的 2024 综述。\n\n[An Introduction to Contract Theory for Computer Scientists](https://arxiv.org/abs/2610.17336)",
+      "color": "#397766"
+    },
+    {
+      "id": "0000000000000025",
+      "type": "text",
+      "x": 36,
+      "y": 3767,
+      "width": 666,
+      "height": 175,
+      "text": "### 外部广告框架｜先看哪些环节可以竞价\n\nFeizi 等本文为观点与研究框架。读 §2 与 §4.5，比较改写、召回、估值和拍卖进入生成流程的位置。\n\n[Online Advertisements with LLMs](https://www.sigecom.org/exchanges/volume_22/2/FEIZI.pdf)",
+      "color": "#397766"
+    },
+    {
+      "id": "0000000000000027",
+      "type": "text",
+      "x": 36,
+      "y": 4032,
+      "width": 666,
+      "height": 175,
+      "text": "### 外部综述｜机制设计与 LLM 的双向关系\n\nChen 等分别梳理用 LLM 做机制仿真与用机制设计改善 LLM。用它核对激励和评估的综述覆盖。\n\n[Mechanism design meets large language models: Foundations and frontiers](https://doi.org/10.1016/j.slads.2026.100033)",
+      "color": "#397766"
+    },
+    {
+      "id": "000000000000002a",
+      "type": "text",
+      "x": 738,
+      "y": 3250,
+      "width": 666,
+      "height": 175,
+      "text": "### Token Auction｜买生成时的影响力\n\n同一广告位上，广告主的语言模型参与逐 token 聚合。先看分配规则与付款条件怎样配合。\n\n[Mechanism Design for Large Language Models](https://arxiv.org/abs/2310.10826)",
+      "color": "#396A9A"
+    },
+    {
+      "id": "000000000000002c",
+      "type": "text",
+      "x": 738,
+      "y": 3515,
+      "width": 666,
+      "height": 162,
+      "text": "### 联合广告｜多人一起买一个位置\n\n商家和品牌都从曝光中受益。对照固定广告位的联合竞价与逐 token 的联合生成。\n\n[Selling Joint Ads](https://arxiv.org/abs/2409.07819)",
+      "color": "#396A9A"
+    },
+    {
+      "id": "000000000000002e",
+      "type": "text",
+      "x": 738,
+      "y": 3767,
+      "width": 666,
+      "height": 175,
+      "text": "### AI 购物｜用户反馈怎样影响支付\n\n先看单轮信息揭示与事后数据，再看多轮对话里购买、离开和追问怎样帮助调整后续推荐。\n\n[Data-Driven Mechanism Design](https://arxiv.org/abs/2412.16132) · [From Conversations to Mechanisms](https://cowles.yale.edu/sites/default/files/2026-04/d2513.pdf)",
+      "color": "#396A9A"
+    },
+    {
+      "id": "0000000000000030",
+      "type": "text",
+      "x": 738,
+      "y": 4032,
+      "width": 666,
+      "height": 162,
+      "text": "### 广告位｜把自动出价与位置博弈放在一起读\n\n分别看模型误设时的位置排序均衡，以及赞助购物中的 GSP 和 VCG 自动出价均衡。\n\n[Nontruthful Position Auctions](https://doi.org/10.1287/moor.2023.1380) · [Autobidding Equilibria in Sponsored Shopping](https://arxiv.org/abs/2602.21966)",
+      "color": "#396A9A"
+    },
+    {
+      "id": "0000000000000033",
+      "type": "text",
+      "x": 1440,
+      "y": 3250,
+      "width": 666,
+      "height": 175,
+      "text": "### 语言框架会改变什么\n\n研究如何使用语言改变受众对状态的先验信念，再用信号做细化。广告综述可借来区分内容措辞和资源分配。\n\n[Information Design With Large Language Models](https://arxiv.org/abs/2509.25565)",
+      "color": "#95723E"
+    },
+    {
+      "id": "0000000000000035",
+      "type": "text",
+      "x": 1440,
+      "y": 3515,
+      "width": 666,
+      "height": 175,
+      "text": "### LLM 排序如何聚合\n\n用查询表现预测衡量候选排名质量。可以对照有经济激励的输出聚合和一般信息检索排序。\n\n[QPP-RA: Aggregating Large Language Model Rankings](https://doi.org/10.1145/3731120.3744575)",
+      "color": "#95723E"
+    },
+    {
+      "id": "0000000000000037",
+      "type": "text",
+      "x": 1440,
+      "y": 3780,
+      "width": 666,
+      "height": 199,
+      "text": "### 合约和可学习机制\n\n与王同翰合写的 PARL 从隐含行动和支付切入。可微分经济学论文则提供直接优化拍卖规则的技术背景。\n\n[Principal-Agent Reinforcement Learning](https://arxiv.org/abs/2407.18074) · [Optimal Auctions through Deep Learning](https://doi.org/10.1145/3630749)",
+      "color": "#95723E"
+    },
+    {
+      "id": "0000000000000039",
+      "type": "text",
+      "x": 2142,
+      "y": 3250,
+      "width": 666,
+      "height": 209,
+      "text": "### 会上提到的共同作者\n\n- **Haifeng Xu** · [逐 token 拍卖聚合语言模型输出](https://arxiv.org/abs/2310.10826)、[用分配后反馈改进广告支付](https://arxiv.org/abs/2412.16132)、[借助大模型研究语言怎样改变先验信念](https://arxiv.org/abs/2509.25565)、[给多轮对话推荐设计反馈约束的支付](https://cowles.yale.edu/sites/default/files/2026-04/d2513.pdf)\n- **Song Zuo** · [逐 token 拍卖聚合语言模型输出](https://arxiv.org/abs/2310.10826)、[用分配后反馈改进广告支付](https://arxiv.org/abs/2412.16132)、[借助大模型研究语言怎样改变先验信念](https://arxiv.org/abs/2509.25565)、[给多轮对话推荐设计反馈约束的支付](https://cowles.yale.edu/sites/default/files/2026-04/d2513.pdf)\n- **Tonghan Wang** · [用动态合约引导强化学习代理](https://arxiv.org/abs/2407.18074)",
+      "color": "#64748B"
+    },
+    {
+      "id": "000000000000003a",
+      "type": "text",
+      "x": 2142,
+      "y": 3505,
+      "width": 666,
+      "height": 199,
+      "text": "### 会议里点名的三位共同署名\n\nPaul Dütting、徐海峰和左淞都署名于下列工作。可以从逐 token 竞价，顺着看结果反馈、语言呈现和多轮购物推荐。会议论文还由 Vahab Mirrokni 和 Renato Paes Leme 共同署名。\n\n[Token Auction](https://arxiv.org/abs/2310.10826) · [用反馈设计支付](https://arxiv.org/abs/2412.16132) · [LLM 与信息呈现](https://arxiv.org/abs/2509.25565) · [多轮购物推荐与激励](https://elischolar.library.yale.edu/cowles-discussion-paper-series/2941/)",
+      "color": "#64748B"
+    },
+    {
+      "id": "000000000000003b",
+      "type": "text",
+      "x": 2142,
+      "y": 3750,
+      "width": 666,
+      "height": 175,
+      "text": "### 三位作者的共同线索\n\nDütting、Haifeng Xu 和 Song Zuo 共同署名四篇，主题从生成时拍卖延伸到数据驱动支付、对话推荐和语言框架。\n\n[Token Auction](https://arxiv.org/abs/2310.10826) · [Data-Driven](https://arxiv.org/abs/2412.16132) · [对话推荐](https://cowles.yale.edu/sites/default/files/2026-04/d2513.pdf) · [语言框架](https://arxiv.org/abs/2509.25565)",
+      "color": "#64748B"
+    },
+    {
+      "id": "000000000000003c",
+      "type": "text",
+      "x": 2142,
+      "y": 3971,
+      "width": 666,
+      "height": 175,
+      "text": "### 对照已有作者画布\n\nCurry 的 MOSAIC 聚合完整候选回复。邓小铁署名的 arXiv 扩展综述在广告小节中串起两种拍卖。\n\n[MOSAIC](https://arxiv.org/abs/2405.05905) · [博弈论与 LLM 综述 §4.1.4](https://arxiv.org/html/2502.09053v2#S4.SS1.SSS4)",
+      "color": "#64748B"
+    }
+  ],
+  "edges": [
+    {
+      "id": "0000000000000004",
+      "fromNode": "0000000000000002",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "0000000000000003",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "2024｜1–8 / 20",
+      "color": "#64748B"
+    },
+    {
+      "id": "0000000000000006",
+      "fromNode": "0000000000000002",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "0000000000000005",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "2024｜9–16 / 20",
+      "color": "#64748B"
+    },
+    {
+      "id": "0000000000000008",
+      "fromNode": "0000000000000002",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "0000000000000007",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "2024｜17–20 / 20",
+      "color": "#64748B"
+    },
+    {
+      "id": "000000000000000a",
+      "fromNode": "0000000000000002",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "0000000000000009",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "2025｜1–8 / 10",
+      "color": "#64748B"
+    },
+    {
+      "id": "000000000000000c",
+      "fromNode": "0000000000000002",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "000000000000000b",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "2025｜9–10 / 10",
+      "color": "#64748B"
+    },
+    {
+      "id": "000000000000000e",
+      "fromNode": "0000000000000003",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "000000000000000d",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "2026｜1–8 / 17",
+      "color": "#64748B"
+    },
+    {
+      "id": "0000000000000010",
+      "fromNode": "0000000000000005",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "000000000000000f",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "2026｜9–16 / 17",
+      "color": "#64748B"
+    },
+    {
+      "id": "0000000000000012",
+      "fromNode": "0000000000000007",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "0000000000000011",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "2026｜17–17 / 17",
+      "color": "#64748B"
+    },
+    {
+      "id": "0000000000000015",
+      "fromNode": "000000000000000d",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "0000000000000014",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "进入主题筛选",
+      "color": "#64748B"
+    },
+    {
+      "id": "0000000000000016",
+      "fromNode": "000000000000000f",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "0000000000000014",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "进入主题筛选",
+      "color": "#64748B"
+    },
+    {
+      "id": "0000000000000017",
+      "fromNode": "0000000000000011",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "0000000000000014",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "进入主题筛选",
+      "color": "#64748B"
+    },
+    {
+      "id": "0000000000000019",
+      "fromNode": "0000000000000014",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "0000000000000018",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "先看综述",
+      "color": "#397766"
+    },
+    {
+      "id": "000000000000001b",
+      "fromNode": "0000000000000014",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "000000000000001a",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "进入原始研究",
+      "color": "#396A9A"
+    },
+    {
+      "id": "000000000000001d",
+      "fromNode": "0000000000000014",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "000000000000001c",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "按问题补背景",
+      "color": "#95723E"
+    },
+    {
+      "id": "000000000000001f",
+      "fromNode": "0000000000000014",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "000000000000001e",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "留在全量目录",
+      "color": "#697281"
+    },
+    {
+      "id": "0000000000000022",
+      "fromNode": "0000000000000018",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "0000000000000021",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "先读这份",
+      "color": "#397766"
+    },
+    {
+      "id": "0000000000000024",
+      "fromNode": "0000000000000021",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "0000000000000023",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "接着补这一块",
+      "color": "#397766"
+    },
+    {
+      "id": "0000000000000026",
+      "fromNode": "0000000000000023",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "0000000000000025",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "接着补这一块",
+      "color": "#397766"
+    },
+    {
+      "id": "0000000000000028",
+      "fromNode": "0000000000000025",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "0000000000000027",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "接着补这一块",
+      "color": "#397766"
+    },
+    {
+      "id": "000000000000002b",
+      "fromNode": "000000000000001a",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "000000000000002a",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "先看直接证据",
+      "color": "#396A9A"
+    },
+    {
+      "id": "000000000000002d",
+      "fromNode": "000000000000002a",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "000000000000002c",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "对照下一篇",
+      "color": "#396A9A"
+    },
+    {
+      "id": "000000000000002f",
+      "fromNode": "000000000000002c",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "000000000000002e",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "对照下一篇",
+      "color": "#396A9A"
+    },
+    {
+      "id": "0000000000000031",
+      "fromNode": "000000000000002e",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "0000000000000030",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "对照下一篇",
+      "color": "#396A9A"
+    },
+    {
+      "id": "0000000000000034",
+      "fromNode": "000000000000001c",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "0000000000000033",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "按问题选读",
+      "color": "#95723E"
+    },
+    {
+      "id": "0000000000000036",
+      "fromNode": "0000000000000033",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "0000000000000035",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "再补一个切面",
+      "color": "#95723E"
+    },
+    {
+      "id": "0000000000000038",
+      "fromNode": "0000000000000035",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "0000000000000037",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "再补一个切面",
+      "color": "#95723E"
+    }
+  ]
+}

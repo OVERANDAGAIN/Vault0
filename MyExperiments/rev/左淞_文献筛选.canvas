@@ -1,0 +1,566 @@
+{
+  "nodes": [
+    {
+      "id": "0000000000000001",
+      "type": "group",
+      "x": 0,
+      "y": 0,
+      "width": 2284,
+      "height": 1372,
+      "label": "第一层  全部公开工作",
+      "color": "#64748B"
+    },
+    {
+      "id": "000000000000000b",
+      "type": "group",
+      "x": 0,
+      "y": 1517,
+      "width": 2284,
+      "height": 529,
+      "label": "第二层  按与综述的关系筛选",
+      "color": "#64748B"
+    },
+    {
+      "id": "0000000000000019",
+      "type": "group",
+      "x": 21,
+      "y": 2191,
+      "width": 556,
+      "height": 1098,
+      "label": "第三层  优先读综述和领域地图",
+      "color": "#397766"
+    },
+    {
+      "id": "0000000000000022",
+      "type": "group",
+      "x": 583,
+      "y": 2191,
+      "width": 556,
+      "height": 1050,
+      "label": "第三层  精读直接相关论文",
+      "color": "#396A9A"
+    },
+    {
+      "id": "000000000000002b",
+      "type": "group",
+      "x": 1145,
+      "y": 2191,
+      "width": 556,
+      "height": 1098,
+      "label": "第三层  按需补读",
+      "color": "#95723E"
+    },
+    {
+      "id": "0000000000000002",
+      "type": "text",
+      "x": 702,
+      "y": 40,
+      "width": 880,
+      "height": 254,
+      "text": "## 左淞 Song Zuo\n\n**Google Research｜20 项公开成果**\n\n2024 · 14 项｜2025 · 2 项｜2026 · 4 项\n\n2024–2026-11-24 的可核对公开成果。按区间内首个公开版本归年，正式版与预印本并条。含一篇综述和一部专著，专著各章合并。\n\n[Google Research 作者页](https://research.google/people/songzuo/) · [个人主页](https://sites.google.com/view/songzuo/home) · [DBLP 作者书目](https://dblp.org/pid/123/4898.html) · [Yale Cowles 作者书目](https://cowles.yale.edu/publications/author/%20Song%20Zuo) · [清华姓名核对](https://iiis.tsinghua.edu.cn/info/1018/2154.htm)",
+      "color": "#64748B"
+    },
+    {
+      "id": "0000000000000003",
+      "type": "text",
+      "x": 36,
+      "y": 398,
+      "width": 526,
+      "height": 934,
+      "text": "## 2024｜1–8 / 14\n\n- **〔综述〕在线广告自动出价与拍卖综述** · 自动出价、均衡效率、拍卖设计  \n  [Auto-bidding and Auctions in Online Advertising: A Survey](https://www.sigecom.org/exchanges/volume_22/1/AGGARWAL.pdf)（ACM SIGecom Exchanges 22(1)）\n\n- **AI 驱动的机制设计专著** · 多维机制、动态机制、多目标优化  \n  [AI-Driven Mechanism Design](https://link.springer.com/book/10.1007/978-981-97-9286-3)（Springer 2024，整书）\n\n- **〔广告或推荐〕按生成 token 拍卖广告影响力** · 生成式广告、模型分布聚合、支付  \n  [Mechanism Design for Large Language Models](https://arxiv.org/abs/2310.10826)（WWW 2024，合并 IJCAI 2025 摘要）  \n  **共同作者** · Paul Dütting、Haifeng Xu\n\n- **价值最大化广告主的二价位置拍卖效率** · GSP、位置折扣、无政府代价  \n  [Efficiency of the Generalized Second-Price Auction for Value Maximizers](https://arxiv.org/abs/2310.03105)（WWW 2024）\n\n- **比较不同拍卖中的非统一出价倍率** · 自动出价、实证、均衡效率  \n  [Non-uniform Bid-scaling and Equilibria for Different Auctions: An Empirical Study](https://arxiv.org/abs/2311.10679)（WWW 2024）\n\n- **解释广告自动出价的循环与多稳态** · 回报约束、市场拓扑、动态系统  \n  [Complex Dynamics in Autobidding Systems](https://arxiv.org/abs/2406.19350)（EC 2024）\n\n- **按点击收费的广告拍卖如何披露点击率** · CTR 校准、贝叶斯信息设计、收入  \n  [Bayesian Calibrated Click-Through Auctions](https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ICALP.2024.44)（ICALP 2024）  \n  **共同作者** · Haifeng Xu\n\n- **回报约束买家的最优补贴报价** · 固定单价、参与补贴、价值最大化  \n  [Optimal Mechanisms for a Value Maximizer: The Futility of Screening Targets](https://research.google/pubs/optimal-mechanisms-for-a-value-maximizer-the-futility-of-screening-targets/)（EC 2024）"
+    },
+    {
+      "id": "0000000000000005",
+      "type": "text",
+      "x": 598,
+      "y": 398,
+      "width": 526,
+      "height": 934,
+      "text": "## 2024｜9–14 / 14\n\n- **比较一价拍卖中的自动与传统出价效率** · FPA、混合出价者、学习辅助  \n  [Efficiency of the First-Price Auction in the Autobidding World](https://papers.nips.cc/paper_files/paper/2024/file/fb6279dab0e9282261e4311301b7f822-Paper-Conference.pdf)（NeurIPS 2024）\n\n- **解释出价更灵活为何可能损害整体福利** · 非统一出价倍率、一价拍卖、效率  \n  [Autobidder's Dilemma: Why More Sophisticated Autobidders Lead to Worse Auction Efficiency](https://research.google/pubs/autobidders-dilemma-why-more-sophisticated-autobidders-lead-to-worse-auction-efficiency/)（NeurIPS 2024）\n\n- **把多参数贝叶斯合约归约为单参数问题** · 委托代理、私人类型、近似归约  \n  [A Reduction from Multi-Parameter to Single-Parameter Bayesian Contract Design](https://arxiv.org/abs/2404.03476)（SODA 2025）  \n  **共同作者** · Haifeng Xu\n\n- **用次模优化设计采购拍卖** · 私人采购成本、社会福利、非负盈余  \n  [Procurement Auctions via Approximately Optimal Submodular Optimization](https://proceedings.mlr.press/v267/deng25e.html)（ICML 2025）\n\n- **〔广告或推荐〕用分配后观测改进机制及支付** · 广告互动反馈、状态估计、VCG 扩展  \n  [Data-Driven Mechanism Design: Jointly Eliciting Preferences and Information](https://arxiv.org/abs/2412.16132)（EC 2025）  \n  **共同作者** · Paul Dütting、Haifeng Xu\n\n- **测试 LLM 在双边谈判中的策略能力** · 买卖代理、成交价、经济效率  \n  [LLMs at the Bargaining Table](https://research.google/pubs/llms-at-the-bargaining-table/)（ICML Agentic Markets 研讨会）"
+    },
+    {
+      "id": "0000000000000007",
+      "type": "text",
+      "x": 1160,
+      "y": 398,
+      "width": 526,
+      "height": 934,
+      "text": "## 2025｜2 项\n\n- **〔广告或推荐〕给生成内容里的赞助素材分配位置** · 位置—素材点击率、匹配、级联模型  \n  [Position Auctions in AI-Generated Content](https://arxiv.org/abs/2506.03309)（WWW 2026）\n\n- **用 LLM 研究表达方式如何改变信念** · 语言框架、贝叶斯说服、提示优化  \n  [Information Design With Large Language Models](https://arxiv.org/abs/2509.25565)（EC 2026）  \n  **共同作者** · Paul Dütting、Haifeng Xu"
+    },
+    {
+      "id": "0000000000000009",
+      "type": "text",
+      "x": 1722,
+      "y": 398,
+      "width": 526,
+      "height": 934,
+      "text": "## 2026｜4 项\n\n- **总结人机合作做理论研究的案例** · Gemini、数学证明、迭代验证  \n  [Accelerating Scientific Research with Gemini: Case Studies and Common Techniques](https://arxiv.org/abs/2602.03837)（arXiv）\n\n- **〔广告或推荐〕用多轮购物反馈约束广告主激励** · 对话推荐、购买与追问、动态支付  \n  [From Conversations to Mechanisms: Aligning Advertiser Incentives in AI-Powered Product Recommendations](https://cowles.yale.edu/sites/default/files/2026-04/d2513.pdf)（Yale Cowles 工作论文）  \n  **共同作者** · Paul Dütting、Haifeng Xu\n\n- **让战略代理形成自筹资金的市场** · 预算平衡、私人努力成本、序贯拍卖  \n  [Forging Self-Funded Marketplaces among Strategic Agents](https://arxiv.org/abs/2608.14548)（EC 2026 摘要）\n\n- **用多个代理协同推进长程理论研究** · 并行证明、策略探索、结果核查  \n  [Stellar Colosseum: A Many-Agent Harness for Long-Horizon Research in Mathematics and Theoretical Computer Science](https://arxiv.org/abs/2609.15983)（arXiv）"
+    },
+    {
+      "id": "000000000000000c",
+      "type": "text",
+      "x": 792,
+      "y": 1557,
+      "width": 700,
+      "height": 140,
+      "text": "## 先找综述，再筛原始研究\n\n先用综述看已有框架。再看原始论文回答的是生成、投放、竞价还是评估。与这些问题相邻的工作按需保留。",
+      "color": "#64748B"
+    },
+    {
+      "id": "0000000000000011",
+      "type": "text",
+      "x": 36,
+      "y": 1807,
+      "width": 526,
+      "height": 199,
+      "text": "### 综述与领域入口\n\n**作者书目中的综述归类 · 1 项**\n\n先读左淞合著的在线广告自动出价综述，抓住传统拍卖基线。再用 LLM 广告概览和机制设计交叉综述核对拟写范围。",
+      "color": "#397766"
+    },
+    {
+      "id": "0000000000000013",
+      "type": "text",
+      "x": 598,
+      "y": 1807,
+      "width": 526,
+      "height": 199,
+      "text": "### 直接相关的广告与推荐\n\n**作者书目中的广告与推荐归类 · 4 项**\n\n直接相关的四篇分为逐 token 竞价、内容位置、互动反馈与多轮商品推荐。每篇先抓清广告主买什么、系统观测什么、支付依据是什么。",
+      "color": "#396A9A"
+    },
+    {
+      "id": "0000000000000015",
+      "type": "text",
+      "x": 1160,
+      "y": 1807,
+      "width": 526,
+      "height": 199,
+      "text": "### 相邻研究\n\n**作者书目中的相邻归类 · 10 项**\n\n传统广告拍卖、语言说服和 LLM 代理交易是三个旁支。按综述篇幅选读，优先保留能解释原生广告与传统投放差异的部分。",
+      "color": "#95723E"
+    },
+    {
+      "id": "0000000000000017",
+      "type": "text",
+      "x": 1722,
+      "y": 1807,
+      "width": 526,
+      "height": 199,
+      "text": "### 其余公开工作\n\n**作者书目中的其他归类 · 5 项**\n\n目录中留存其他方向。第一轮扫中文短题和关键词，后续按具体问题回查。",
+      "color": "#697281"
+    },
+    {
+      "id": "000000000000001a",
+      "type": "text",
+      "x": 36,
+      "y": 2231,
+      "width": 526,
+      "height": 175,
+      "text": "### 本人综述｜在线广告自动出价\n\n梳理出价算法、拍卖均衡与效率、最优拍卖设计。用来定义传统在线广告基线，进入 LLM 原生广告之前先读。\n\n[Auto-bidding and Auctions in Online Advertising: A Survey](https://www.sigecom.org/exchanges/volume_22/1/AGGARWAL.pdf)",
+      "color": "#397766"
+    },
+    {
+      "id": "000000000000001c",
+      "type": "text",
+      "x": 36,
+      "y": 2496,
+      "width": 526,
+      "height": 199,
+      "text": "### 外部综述入口｜LLM 广告系统\n\nFeizi 等的领域观点文。读 §2 的系统分解和 §4.5 的机制比较，找到生成式广告怎么接入拍卖。\n\n[Online Advertisements with LLMs: Opportunities and Challenges](https://www.sigecom.org/exchanges/volume_22/2/FEIZI.pdf)",
+      "color": "#397766"
+    },
+    {
+      "id": "000000000000001e",
+      "type": "text",
+      "x": 36,
+      "y": 2785,
+      "width": 526,
+      "height": 199,
+      "text": "### 外部综述｜机制设计与 LLM\n\nChen 等从 LLM 用于机制设计，以及机制设计用于 LLM 两个方向组织材料。适合核对激励、评估、对齐的覆盖边界。\n\n[Mechanism design meets large language models: Foundations and frontiers](https://doi.org/10.1016/j.slads.2026.100033)",
+      "color": "#397766"
+    },
+    {
+      "id": "0000000000000020",
+      "type": "text",
+      "x": 36,
+      "y": 3074,
+      "width": 526,
+      "height": 175,
+      "text": "### 本人专著｜一般机制设计工具\n\n浏览多维、动态、多目标三章。需要核对传统机制的定义或拓展模型时再查。\n\n[AI-Driven Mechanism Design](https://link.springer.com/book/10.1007/978-981-97-9286-3)",
+      "color": "#397766"
+    },
+    {
+      "id": "0000000000000023",
+      "type": "text",
+      "x": 598,
+      "y": 2231,
+      "width": 526,
+      "height": 175,
+      "text": "### 精读 1｜逐 token 竞价\n\n看广告主怎样通过出价影响生成概率，以及机制的单调性和付款规则。左淞、Paul Dütting、Haifeng Xu 同篇署名。\n\n[Mechanism Design for Large Language Models](https://arxiv.org/abs/2310.10826)",
+      "color": "#396A9A"
+    },
+    {
+      "id": "0000000000000025",
+      "type": "text",
+      "x": 598,
+      "y": 2496,
+      "width": 526,
+      "height": 175,
+      "text": "### 精读 2｜生成内容里的广告位置\n\n对每个位置和素材组合分别估计点击率。看上下文适配、位置分配和用户行为怎么一起进入机制。\n\n[Position Auctions in AI-Generated Content](https://arxiv.org/abs/2506.03309)",
+      "color": "#396A9A"
+    },
+    {
+      "id": "0000000000000027",
+      "type": "text",
+      "x": 598,
+      "y": 2761,
+      "width": 526,
+      "height": 175,
+      "text": "### 精读 3｜多轮商品推荐的广告主激励\n\n购物助手在追问、购买或退出之后获取反馈。看多轮推荐和按反馈支付如何处理广告主的私人信息。\n\n[From Conversations to Mechanisms](https://cowles.yale.edu/sites/default/files/2026-04/d2513.pdf)",
+      "color": "#396A9A"
+    },
+    {
+      "id": "0000000000000029",
+      "type": "text",
+      "x": 598,
+      "y": 3026,
+      "width": 526,
+      "height": 175,
+      "text": "### 精读 4｜用分配后的反馈结算\n\n从新观察估计共同状态，以此设计支付。广告互动是应用之一，可与多轮推荐论文一起读。\n\n[Data-Driven Mechanism Design](https://arxiv.org/abs/2412.16132)",
+      "color": "#396A9A"
+    },
+    {
+      "id": "000000000000002c",
+      "type": "text",
+      "x": 1160,
+      "y": 2231,
+      "width": 526,
+      "height": 199,
+      "text": "### 传统投放基线｜点击率也要设计\n\n先分清出价、预计点击率、展示位置与最终支付。贝叶斯校准一篇讨论平台披露多少点击率信息。\n\n[Bayesian Calibrated Click-Through Auctions](https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ICALP.2024.44) · [Efficiency of Generalized Second-Price Auction](https://arxiv.org/abs/2310.03105)",
+      "color": "#95723E"
+    },
+    {
+      "id": "000000000000002e",
+      "type": "text",
+      "x": 1160,
+      "y": 2520,
+      "width": 526,
+      "height": 199,
+      "text": "### 自动出价｜局部自由度与整体效率\n\n一篇比较不同拍卖里的出价倍率，另一篇分析重复竞价为何出现循环和多稳态。\n\n[Non-uniform Bid-scaling and Equilibria](https://arxiv.org/abs/2311.10679) · [Complex Dynamics in Autobidding Systems](https://arxiv.org/abs/2406.19350)",
+      "color": "#95723E"
+    },
+    {
+      "id": "0000000000000030",
+      "type": "text",
+      "x": 1160,
+      "y": 2809,
+      "width": 526,
+      "height": 175,
+      "text": "### 内容表达｜语言如何改变用户判断\n\n看 LLM 如何用于分析表达方式对信念的影响。如果综述讨论广告说服与用户利益，可用来补这一层。\n\n[Information Design With Large Language Models](https://arxiv.org/abs/2509.25565)",
+      "color": "#95723E"
+    },
+    {
+      "id": "0000000000000032",
+      "type": "text",
+      "x": 1160,
+      "y": 3074,
+      "width": 526,
+      "height": 175,
+      "text": "### 代理电商｜买卖双方如何谈判\n\n双边谈判场景观察成交与成交价，适合对照对话推荐中的平台职责和交易代理的职责。\n\n[LLMs at the Bargaining Table](https://research.google/pubs/llms-at-the-bargaining-table/)",
+      "color": "#95723E"
+    },
+    {
+      "id": "0000000000000034",
+      "type": "text",
+      "x": 1722,
+      "y": 2231,
+      "width": 526,
+      "height": 257,
+      "text": "### 会上提到的共同作者\n\n- **Paul Dütting** · [按生成 token 拍卖广告影响力](https://arxiv.org/abs/2310.10826)、[用分配后观测改进机制及支付](https://arxiv.org/abs/2412.16132)、[用 LLM 研究表达方式如何改变信念](https://arxiv.org/abs/2509.25565)、[用多轮购物反馈约束广告主激励](https://cowles.yale.edu/sites/default/files/2026-04/d2513.pdf)\n- **Haifeng Xu** · [按生成 token 拍卖广告影响力](https://arxiv.org/abs/2310.10826)、[按点击收费的广告拍卖如何披露点击率](https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ICALP.2024.44)、[把多参数贝叶斯合约归约为单参数问题](https://arxiv.org/abs/2404.03476)、[用分配后观测改进机制及支付](https://arxiv.org/abs/2412.16132)、[用 LLM 研究表达方式如何改变信念](https://arxiv.org/abs/2509.25565)、[用多轮购物反馈约束广告主激励](https://cowles.yale.edu/sites/default/files/2026-04/d2513.pdf)",
+      "color": "#64748B"
+    },
+    {
+      "id": "0000000000000035",
+      "type": "text",
+      "x": 1722,
+      "y": 2534,
+      "width": 526,
+      "height": 199,
+      "text": "### 交叉署名｜Paul Dütting 与 Haifeng Xu\n\n两人共同出现在 Token Auction、Data-Driven、语言信息设计和多轮对话推荐四篇。Haifeng Xu 还合著了贝叶斯点击率校准与贝叶斯合约的论文。\n\n[Token Auction](https://arxiv.org/abs/2310.10826) · [多轮对话推荐](https://cowles.yale.edu/sites/default/files/2026-04/d2513.pdf)",
+      "color": "#64748B"
+    },
+    {
+      "id": "0000000000000036",
+      "type": "text",
+      "x": 1722,
+      "y": 2779,
+      "width": 526,
+      "height": 199,
+      "text": "### 横向对照｜王同翰、邓小铁与 Curry\n\n王同翰的 NaiAD 可对照数据和评估，邓小铁的 Ad Insertion 可对照怎样插入文案，Curry 的 MOSAIC 可对照如何设计赞助内容组合。以下是对照阅读，作者署名见原文。\n\n[NaiAD 相关工作](https://arxiv.org/html/2605.09918v1#S6) · [Ad Insertion](https://arxiv.org/abs/2601.19435) · [MOSAIC](https://arxiv.org/abs/2405.05905)",
+      "color": "#64748B"
+    }
+  ],
+  "edges": [
+    {
+      "id": "0000000000000004",
+      "fromNode": "0000000000000002",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "0000000000000003",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "2024｜1–8 / 14",
+      "color": "#64748B"
+    },
+    {
+      "id": "0000000000000006",
+      "fromNode": "0000000000000002",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "0000000000000005",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "2024｜9–14 / 14",
+      "color": "#64748B"
+    },
+    {
+      "id": "0000000000000008",
+      "fromNode": "0000000000000002",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "0000000000000007",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "2025｜2 项",
+      "color": "#64748B"
+    },
+    {
+      "id": "000000000000000a",
+      "fromNode": "0000000000000002",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "0000000000000009",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "2026｜4 项",
+      "color": "#64748B"
+    },
+    {
+      "id": "000000000000000d",
+      "fromNode": "0000000000000003",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "000000000000000c",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "进入主题筛选",
+      "color": "#64748B"
+    },
+    {
+      "id": "000000000000000e",
+      "fromNode": "0000000000000005",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "000000000000000c",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "进入主题筛选",
+      "color": "#64748B"
+    },
+    {
+      "id": "000000000000000f",
+      "fromNode": "0000000000000007",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "000000000000000c",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "进入主题筛选",
+      "color": "#64748B"
+    },
+    {
+      "id": "0000000000000010",
+      "fromNode": "0000000000000009",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "000000000000000c",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "进入主题筛选",
+      "color": "#64748B"
+    },
+    {
+      "id": "0000000000000012",
+      "fromNode": "000000000000000c",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "0000000000000011",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "先看综述",
+      "color": "#397766"
+    },
+    {
+      "id": "0000000000000014",
+      "fromNode": "000000000000000c",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "0000000000000013",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "进入原始研究",
+      "color": "#396A9A"
+    },
+    {
+      "id": "0000000000000016",
+      "fromNode": "000000000000000c",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "0000000000000015",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "按问题补背景",
+      "color": "#95723E"
+    },
+    {
+      "id": "0000000000000018",
+      "fromNode": "000000000000000c",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "0000000000000017",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "留在全量目录",
+      "color": "#697281"
+    },
+    {
+      "id": "000000000000001b",
+      "fromNode": "0000000000000011",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "000000000000001a",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "先读这份",
+      "color": "#397766"
+    },
+    {
+      "id": "000000000000001d",
+      "fromNode": "000000000000001a",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "000000000000001c",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "接着补这一块",
+      "color": "#397766"
+    },
+    {
+      "id": "000000000000001f",
+      "fromNode": "000000000000001c",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "000000000000001e",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "接着补这一块",
+      "color": "#397766"
+    },
+    {
+      "id": "0000000000000021",
+      "fromNode": "000000000000001e",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "0000000000000020",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "接着补这一块",
+      "color": "#397766"
+    },
+    {
+      "id": "0000000000000024",
+      "fromNode": "0000000000000013",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "0000000000000023",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "先看直接证据",
+      "color": "#396A9A"
+    },
+    {
+      "id": "0000000000000026",
+      "fromNode": "0000000000000023",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "0000000000000025",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "对照下一篇",
+      "color": "#396A9A"
+    },
+    {
+      "id": "0000000000000028",
+      "fromNode": "0000000000000025",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "0000000000000027",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "对照下一篇",
+      "color": "#396A9A"
+    },
+    {
+      "id": "000000000000002a",
+      "fromNode": "0000000000000027",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "0000000000000029",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "对照下一篇",
+      "color": "#396A9A"
+    },
+    {
+      "id": "000000000000002d",
+      "fromNode": "0000000000000015",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "000000000000002c",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "按问题选读",
+      "color": "#95723E"
+    },
+    {
+      "id": "000000000000002f",
+      "fromNode": "000000000000002c",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "000000000000002e",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "再补一个切面",
+      "color": "#95723E"
+    },
+    {
+      "id": "0000000000000031",
+      "fromNode": "000000000000002e",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "0000000000000030",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "再补一个切面",
+      "color": "#95723E"
+    },
+    {
+      "id": "0000000000000033",
+      "fromNode": "0000000000000030",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "0000000000000032",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "再补一个切面",
+      "color": "#95723E"
+    }
+  ]
+}

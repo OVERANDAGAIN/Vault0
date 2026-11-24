@@ -5,8 +5,8 @@
       "type": "group",
       "x": 0,
       "y": 0,
-      "width": 2120,
-      "height": 814,
+      "width": 2290,
+      "height": 1227,
       "label": "第一层  全部公开工作",
       "color": "#64748B"
     },
@@ -14,8 +14,8 @@
       "id": "0000000000000002",
       "type": "group",
       "x": 0,
-      "y": 946,
-      "width": 2120,
+      "y": 1359,
+      "width": 2290,
       "height": 554,
       "label": "第二层  与新综述的关系",
       "color": "#64748B"
@@ -24,8 +24,8 @@
       "id": "0000000000000003",
       "type": "group",
       "x": 0,
-      "y": 1640,
-      "width": 514,
+      "y": 2053,
+      "width": 555,
       "height": 952,
       "label": "第三层  优先精读综述与领域入口",
       "color": "#397766"
@@ -33,9 +33,9 @@
     {
       "id": "0000000000000004",
       "type": "group",
-      "x": 535,
-      "y": 1640,
-      "width": 514,
+      "x": 578,
+      "y": 2053,
+      "width": 555,
       "height": 952,
       "label": "第三层  选读广告原始研究",
       "color": "#396A9A"
@@ -43,9 +43,9 @@
     {
       "id": "0000000000000005",
       "type": "group",
-      "x": 1070,
-      "y": 1640,
-      "width": 514,
+      "x": 1156,
+      "y": 2053,
+      "width": 555,
       "height": 952,
       "label": "第三层  核对推荐和安全的范围",
       "color": "#95723E"
@@ -53,55 +53,55 @@
     {
       "id": "0000000000000006",
       "type": "text",
-      "x": 677,
+      "x": 731,
       "y": 39,
-      "width": 766,
-      "height": 178,
-      "text": "## 王同翰 Tonghan Wang\n\n**2024–2026｜30 篇论文和 1 篇博士论文**\n\n截至 2026-11-24，预印本与正式版合并。加粗标出本人综述和 6 篇直接研究广告的论文。\n\n[清华](https://collegeai.tsinghua.edu.cn/en/People/Full_time_PI/Tonghan_WANG.htm) · [作者主页](https://tonghanwang.github.io/) · [DBLP](https://dblp.org/pid/175/6039-1.html)",
+      "width": 827,
+      "height": 206,
+      "text": "## 王同翰 Tonghan Wang\n\n**2024–2026｜30 篇论文和 1 篇博士论文**\n\n截至 2026-11-24，预印本与正式版合并。中文短题和关键词用于扫读，英文标题链接原文。带标记的是本人综述和直接广告论文。\n\n[清华](https://collegeai.tsinghua.edu.cn/en/People/Full_time_PI/Tonghan_WANG.htm) · [作者主页](https://tonghanwang.github.io/) · [DBLP](https://dblp.org/pid/175/6039-1.html)",
       "color": "#64748B"
     },
     {
       "id": "0000000000000007",
       "type": "text",
-      "x": 34,
-      "y": 306,
-      "width": 486,
-      "height": 470,
-      "text": "## 2024｜7 篇\n\n- [Multi-Sender Persuasion: A Computational Perspective](https://proceedings.mlr.press/v235/hossain24c.html)\n- [Position: Social Environment Design Should be Further Developed for AI-based Policy-Making](https://proceedings.mlr.press/v235/zhang24cl.html)\n- [GemNet: Menu-Based, Strategy-Proof Multi-Bidder Auctions Through Deep Learning](https://arxiv.org/abs/2406.07428)\n- [Principal-Agent Reinforcement Learning: Orchestrating AI Agents with Contracts](https://arxiv.org/abs/2407.18074)\n- [Multi-agent policy transfer via task relationship modeling](https://doi.org/10.1007/s11432-023-3862-1)\n- [The Bandit Whisperer: Communication Learning for Restless Bandits](https://arxiv.org/abs/2408.05686)（AAAI 2025）\n- [On Diffusion Models for Multi-Agent Partial Observability: Shared Attractors, Error Bounds, and Composite Flow](https://arxiv.org/abs/2410.13953)（AAMAS 2025）"
+      "x": 37,
+      "y": 337,
+      "width": 525,
+      "height": 852,
+      "text": "## 2024｜7 篇\n\n- **多发送者说服** · 贝叶斯说服、信息披露、均衡  \n  [Multi-Sender Persuasion: A Computational Perspective](https://proceedings.mlr.press/v235/hossain24c.html)  \n  **共同作者** · Haifeng Xu\n\n- **用 AI 辅助政策制定** · 社会环境设计、政策仿真  \n  [Position: Social Environment Design Should be Further Developed for AI-based Policy-Making](https://proceedings.mlr.press/v235/zhang24cl.html)\n\n- **用深度学习设计多买家拍卖** · 菜单机制、如实报价  \n  [GemNet: Menu-Based, Strategy-Proof Multi-Bidder Auctions Through Deep Learning](https://arxiv.org/abs/2406.07428)\n\n- **用合约协调智能体** · 委托代理、强化学习  \n  [Principal-Agent Reinforcement Learning: Orchestrating AI Agents with Contracts](https://arxiv.org/abs/2407.18074)  \n  **共同作者** · Paul Dütting\n\n- **多智能体跨任务迁移** · 任务关系、协作策略复用  \n  [Multi-agent policy transfer via task relationship modeling](https://doi.org/10.1007/s11432-023-3862-1)\n\n- **用通信应对资源分配的数据误差** · Restless Bandits、Q 值通信  \n  [The Bandit Whisperer: Communication Learning for Restless Bandits](https://arxiv.org/abs/2408.05686)（AAAI 2025）\n\n- **从局部观测重建全局状态** · 多智能体、扩散模型  \n  [On Diffusion Models for Multi-Agent Partial Observability: Shared Attractors, Error Bounds, and Composite Flow](https://arxiv.org/abs/2410.13953)（AAMAS 2025）"
     },
     {
       "id": "0000000000000009",
       "type": "text",
-      "x": 556,
-      "y": 306,
-      "width": 486,
-      "height": 470,
-      "text": "## 2025｜7 篇＋博士论文\n\n- **[Automated Mechanism Design: A Survey](https://www.sigecom.org/exchanges/volume_22/2/CURRY.pdf)**（与 Michael J. Curry 合著）\n- [BundleFlow: Deep Menus for Combinatorial Auctions by Diffusion-Based Optimization](https://arxiv.org/abs/2502.15283)\n- [Robust Optimization with Diffusion Models for Green Security](https://arxiv.org/abs/2503.05730)\n- [Adaptive Frontier Exploration on Graphs with Applications to Network-Based Disease Testing](https://arxiv.org/abs/2505.21671)\n- [Composite Flow Matching for Reinforcement Learning with Shifted-Dynamics Data](https://arxiv.org/abs/2505.23062)\n- [Translate Policy to Language: Flow Matching Generated Rewards for LLM Explanations](https://arxiv.org/abs/2502.12530)（ICLR 2026）\n- [Celebrating Diversity With Subtask Specialization in Shared Multiagent Reinforcement Learning](https://doi.org/10.1109/TNNLS.2023.3326744)（2025 卷期）\n- [Advancing Deep Learning for Multiagent AI: Mechanisms, Organizations, and Dynamics](https://dash.harvard.edu/entities/publication/a78c8389-7eb0-4e91-a0a7-d1f5d88ff8a5)（哈佛博士论文）"
+      "x": 600,
+      "y": 337,
+      "width": 525,
+      "height": 852,
+      "text": "## 2025｜7 篇＋博士论文\n\n- **〔综述〕自动化机制设计综述** · 线性规划、学习理论、可微经济学  \n  [Automated Mechanism Design: A Survey](https://www.sigecom.org/exchanges/volume_22/2/CURRY.pdf)  \n  **共同作者** · Michael J. Curry\n\n- **生成组合拍卖菜单** · 单买家、扩散模型、商品组合  \n  [BundleFlow: Deep Menus for Combinatorial Auctions by Diffusion-Based Optimization](https://arxiv.org/abs/2502.15283)\n\n- **保护区巡逻的鲁棒优化** · 扩散模型、对手建模  \n  [Robust Optimization with Diffusion Models for Green Security](https://arxiv.org/abs/2503.05730)  \n  **共同作者** · Haifeng Xu\n\n- **在网络上自适应扩大筛查** · 图上探索、疾病检测  \n  [Adaptive Frontier Exploration on Graphs with Applications to Network-Based Disease Testing](https://arxiv.org/abs/2505.21671)\n\n- **复用离线数据适配新环境** · 流匹配、动力学偏移  \n  [Composite Flow Matching for Reinforcement Learning with Shifted-Dynamics Data](https://arxiv.org/abs/2505.23062)\n\n- **让 LLM 解释智能体决策** · 流匹配奖励、自然语言解释  \n  [Translate Policy to Language: Flow Matching Generated Rewards for LLM Explanations](https://arxiv.org/abs/2502.12530)（ICLR 2026）\n\n- **共享策略中的多智能体分工** · 子任务专门化、信息瓶颈  \n  [Celebrating Diversity With Subtask Specialization in Shared Multiagent Reinforcement Learning](https://doi.org/10.1109/TNNLS.2023.3326744)（2025 卷期）\n\n- **〔博论〕多智能体学习的机制与组织** · 激励、交互结构、动力学  \n  [Advancing Deep Learning for Multiagent AI: Mechanisms, Organizations, and Dynamics](https://dash.harvard.edu/entities/publication/a78c8389-7eb0-4e91-a0a7-d1f5d88ff8a5)（哈佛博士论文）"
     },
     {
       "id": "000000000000000b",
       "type": "text",
-      "x": 1078,
-      "y": 306,
-      "width": 486,
-      "height": 470,
-      "text": "## 2026｜2–7 月，8 篇\n\n- [LLM Active Alignment: A Nash Equilibrium Perspective](https://arxiv.org/abs/2602.06836)\n- **[Incentive-Aware Multi-Fidelity Optimization for Generative Advertising in Large Language Models](https://arxiv.org/abs/2604.06263)**（COLM 2026）\n- [The Memory Curse: How Expanded Recall Erodes Cooperative Intent in LLM Agents](https://arxiv.org/abs/2605.08060)\n- **[LLM Advertisement based on Neuron Auctions](https://arxiv.org/abs/2605.08326)**\n- [How LLMs Are Persuaded: A Few Attention Heads, Rerouted](https://arxiv.org/abs/2605.09314)\n- **[NaiAD: Initiate Data-Driven Research for LLM Advertising](https://arxiv.org/abs/2605.09918)**\n- [Duality for Optimal Multi-Item, Multi-Bidder Auction Design: Revenue Certificates through Deep Learning](https://arxiv.org/abs/2606.10112)（EC 2026）\n- **[PILA: Plug-and-Play Insertion for LLM-native Advertising](https://arxiv.org/abs/2607.25590)**"
+      "x": 1164,
+      "y": 337,
+      "width": 525,
+      "height": 852,
+      "text": "## 2026｜2–7 月，8 篇\n\n- **一群 LLM 如何选择对齐谁** · 纳什均衡、人群偏好  \n  [LLM Active Alignment: A Nash Equilibrium Perspective](https://arxiv.org/abs/2602.06836)\n\n- **〔广告〕兼顾生成成本和广告竞价** · 多保真优化、VCG 激励  \n  [Incentive-Aware Multi-Fidelity Optimization for Generative Advertising in Large Language Models](https://arxiv.org/abs/2604.06263)（COLM 2026）\n\n- **更长记忆如何影响合作** · LLM 智能体、社会困境  \n  [The Memory Curse: How Expanded Recall Erodes Cooperative Intent in LLM Agents](https://arxiv.org/abs/2605.08060)\n\n- **〔广告〕竞价购买对模型内部的干预** · 品牌神经元、广告曝光  \n  [LLM Advertisement based on Neuron Auctions](https://arxiv.org/abs/2605.08326)\n\n- **模型为什么会被说服改答案** · 注意力头、因果干预  \n  [How LLMs Are Persuaded: A Few Attention Heads, Rerouted](https://arxiv.org/abs/2605.09314)\n\n- **〔广告〕原生广告数据集与评测** · 广告插入、用户体验、商业效用  \n  [NaiAD: Initiate Data-Driven Research for LLM Advertising](https://arxiv.org/abs/2605.09918)\n\n- **计算最优拍卖收入的上界** · 拍卖对偶、多商品、多买家  \n  [Duality for Optimal Multi-Item, Multi-Bidder Auction Design: Revenue Certificates through Deep Learning](https://arxiv.org/abs/2606.10112)（EC 2026）\n\n- **〔广告〕生成后插入广告** · 回答改写、独立插入模块  \n  [PILA: Plug-and-Play Insertion for LLM-native Advertising](https://arxiv.org/abs/2607.25590)"
     },
     {
       "id": "000000000000000d",
       "type": "text",
-      "x": 1600,
-      "y": 306,
-      "width": 486,
-      "height": 470,
-      "text": "## 2026｜7–10 月，8 篇\n\n- **[Evaluating and Pricing Advertisements in AI-Generated Responses](https://arxiv.org/abs/2607.27686)**\n- [Every Cache Entry Earns Its Place: Global Allocation of Resolution and Coverage for KV Cache Compression](https://arxiv.org/abs/2608.07001)\n- [Verbalizing Multi-Token Concepts in LLMs](https://arxiv.org/abs/2608.31084)\n- [Loyal Agents: Training LLM Agents to Protect Principal Interests Under Strategic Information Asymmetry](https://arxiv.org/abs/2609.34714)\n- [A mechanistic study of language model introspection](https://arxiv.org/abs/2609.35108)\n- [Growing and Transferring Pathways for LLM Reinforcement Learning](https://arxiv.org/abs/2610.16489)\n- **[DiffAuction: An Auction-Driven Framework for Generative Image Advertising](https://arxiv.org/abs/2610.34917)**\n- [ACCT: Asymmetric Cross-LLM Context Transfer](https://arxiv.org/abs/2610.42116)"
+      "x": 1728,
+      "y": 337,
+      "width": 525,
+      "height": 852,
+      "text": "## 2026｜7–10 月，8 篇\n\n- **〔广告〕用点击意向估计给广告定价** · 代理评估、支付规则  \n  [Evaluating and Pricing Advertisements in AI-Generated Responses](https://arxiv.org/abs/2607.27686)\n\n- **给长上下文分配 KV 缓存** · 缓存压缩、分辨率、覆盖率  \n  [Every Cache Entry Earns Its Place: Global Allocation of Resolution and Coverage for KV Cache Compression](https://arxiv.org/abs/2608.07001)\n\n- **读出模型里的多词概念** · 模型解释、内部表征  \n  [Verbalizing Multi-Token Concepts in LLMs](https://arxiv.org/abs/2608.31084)\n\n- **用户代理抵抗外部诱导** · 利益保护、信息泄露、购物推荐  \n  [Loyal Agents: Training LLM Agents to Protect Principal Interests Under Strategic Information Asymmetry](https://arxiv.org/abs/2609.34714)\n\n- **模型怎么识别自己的内部扰动** · 模型内省、注意力头  \n  [A mechanistic study of language model introspection](https://arxiv.org/abs/2609.35108)\n\n- **跨模型迁移强化学习路径** · 可迁移子网络、LLM 训练  \n  [Growing and Transferring Pathways for LLM Reinforcement Learning](https://arxiv.org/abs/2610.16489)\n\n- **〔广告〕在同一张生成图里竞拍曝光** · 多品牌、扩散生成、点击意向  \n  [DiffAuction: An Auction-Driven Framework for Generative Image Advertising](https://arxiv.org/abs/2610.34917)\n\n- **跨规模模型复用上下文缓存** · KV 迁移、推理效率  \n  [ACCT: Asymmetric Cross-LLM Context Transfer](https://arxiv.org/abs/2610.42116)"
     },
     {
       "id": "000000000000000f",
       "type": "text",
-      "x": 732,
-      "y": 986,
-      "width": 656,
+      "x": 791,
+      "y": 1399,
+      "width": 708,
       "height": 144,
       "text": "## 用什么标准筛\n\n先找综述和领域概览。原始论文再看它是否直接回答广告怎么生成、怎么竞价、怎么评估，以及与推荐或安全有什么关系。",
       "color": "#64748B"
@@ -109,9 +109,9 @@
     {
       "id": "0000000000000014",
       "type": "text",
-      "x": 34,
-      "y": 1222,
-      "width": 486,
+      "x": 37,
+      "y": 1635,
+      "width": 525,
       "height": 241,
       "text": "### 综述与领域入口\n\n**本人署名综述** · *Automated Mechanism Design: A Survey*\n\n**广告文献地图** · *NaiAD* 的相关工作，及其引用的 Feizi 等人的领域概览。\n\n这条线先用来判断已有工作怎样组织、我们的范围会不会重合。",
       "color": "#397766"
@@ -119,9 +119,9 @@
     {
       "id": "0000000000000015",
       "type": "text",
-      "x": 556,
-      "y": 1222,
-      "width": 486,
+      "x": 600,
+      "y": 1635,
+      "width": 525,
       "height": 241,
       "text": "### 直接相关 · 生成式广告\n\n- **插入** · PILA\n- **竞价与分配** · Neuron Auctions、Multi-Fidelity\n- **数据、评估与定价** · NaiAD、Evaluating and Pricing\n- **生成图像广告** · DiffAuction",
       "color": "#396A9A"
@@ -129,9 +129,9 @@
     {
       "id": "0000000000000016",
       "type": "text",
-      "x": 1078,
-      "y": 1222,
-      "width": 486,
+      "x": 1164,
+      "y": 1635,
+      "width": 525,
       "height": 241,
       "text": "### 相邻 · 推荐、安全与竞价背景\n\n- **推荐与用户利益** · Loyal Agents\n- **模型如何被影响** · How LLMs Are Persuaded\n- **一般竞价机制** · GemNet、BundleFlow、Duality\n\n写到对应问题时，再用这些工作补背景。",
       "color": "#95723E"
@@ -139,9 +139,9 @@
     {
       "id": "0000000000000017",
       "type": "text",
-      "x": 1600,
-      "y": 1222,
-      "width": 486,
+      "x": 1728,
+      "y": 1635,
+      "width": 525,
       "height": 241,
       "text": "### 其余 · 了解作者的研究范围\n\n基础模型训练与推理、模型解释、多智能体强化学习，以及安全优化、疾病检测等应用。\n\n第一轮扫标题，暂时留在总表。",
       "color": "#697281"
@@ -149,9 +149,9 @@
     {
       "id": "000000000000001c",
       "type": "text",
-      "x": 17,
-      "y": 1678,
-      "width": 480,
+      "x": 18,
+      "y": 2091,
+      "width": 518,
       "height": 236,
       "text": "### 先读 Feizi 等的广告概览\n\n**领域观点文，王同翰的 NaiAD 引用了它。** 先读 §2 和 §4.5，记下广告系统怎么拆解，以及 token auction 和其他机制怎么放在一起比较。\n\n[Online Advertisements with LLMs: Opportunities and Challenges](https://www.sigecom.org/exchanges/volume_22/2/FEIZI.pdf)",
       "color": "#397766"
@@ -159,9 +159,9 @@
     {
       "id": "000000000000001d",
       "type": "text",
-      "x": 17,
-      "y": 1997,
-      "width": 480,
+      "x": 18,
+      "y": 2410,
+      "width": 518,
       "height": 236,
       "text": "### 再读 NaiAD 的相关工作\n\n**§6.1–6.2** 分别梳理广告算法与机制、数据集与基准。在这两节标出宋卓、邓小铁和 Michael J. Curry 的相关论文线索。\n\n[NaiAD · §6 Related Works](https://arxiv.org/html/2605.09918v1#S6)",
       "color": "#397766"
@@ -169,9 +169,9 @@
     {
       "id": "000000000000001e",
       "type": "text",
-      "x": 17,
-      "y": 2316,
-      "width": 480,
+      "x": 18,
+      "y": 2729,
+      "width": 518,
       "height": 236,
       "text": "### 再补王同翰与 Curry 的综述\n\n**正式综述，SIGecom Exchanges 2025。** 先扫引言和目录，再读 §5，了解深度学习做自动化机制设计的路线。\n\n[Automated Mechanism Design: A Survey](https://www.sigecom.org/exchanges/volume_22/2/CURRY.pdf)",
       "color": "#397766"
@@ -179,19 +179,19 @@
     {
       "id": "0000000000000022",
       "type": "text",
-      "x": 552,
-      "y": 1678,
-      "width": 480,
-      "height": 236,
-      "text": "### 竞价买的是哪种影响力\n\n*Neuron Auctions* 把广告主买到的影响力定义在模型内部。对照会议里的 token auction，记下两篇分别在竞价什么。\n\n[LLM Advertisement based on Neuron Auctions](https://arxiv.org/abs/2605.08326) · [会议讨论的 token auction 论文](https://arxiv.org/abs/2310.10826)",
+      "x": 596,
+      "y": 2091,
+      "width": 518,
+      "height": 252,
+      "text": "### 竞价买的是哪种影响力\n\n*Neuron Auctions* 把广告主买到的影响力定义在模型内部。对照会议里的 token auction，记下两篇分别在竞价什么。\n\n[LLM Advertisement based on Neuron Auctions](https://arxiv.org/abs/2605.08326) · [会议提到的 Token Auction](https://arxiv.org/abs/2310.10826)（Dütting、Haifeng Xu、Song Zuo 等）",
       "color": "#396A9A"
     },
     {
       "id": "0000000000000023",
       "type": "text",
-      "x": 552,
-      "y": 1997,
-      "width": 480,
+      "x": 596,
+      "y": 2410,
+      "width": 518,
       "height": 236,
       "text": "### 广告效果怎么进入定价\n\n读 *Evaluating and Pricing*，看作者如何估计点击意向，以及这个估计如何进入支付规则。把代理指标和实际点击分开记。\n\n[Evaluating and Pricing Advertisements in AI-Generated Responses](https://arxiv.org/abs/2607.27686)",
       "color": "#396A9A"
@@ -199,9 +199,9 @@
     {
       "id": "0000000000000024",
       "type": "text",
-      "x": 552,
-      "y": 2316,
-      "width": 480,
+      "x": 596,
+      "y": 2729,
+      "width": 518,
       "height": 236,
       "text": "### 广告能不能在生成后插入\n\n读 *PILA*，了解原回答生成后，由独立模块改写并插入广告的做法。用它对照生成过程中的广告机制。\n\n[PILA: Plug-and-Play Insertion for LLM-native Advertising](https://arxiv.org/abs/2607.25590)",
       "color": "#396A9A"
@@ -209,9 +209,9 @@
     {
       "id": "0000000000000028",
       "type": "text",
-      "x": 1087,
-      "y": 1678,
-      "width": 480,
+      "x": 1174,
+      "y": 2091,
+      "width": 518,
       "height": 236,
       "text": "### 核对生成式推荐已有综述\n\n如果新综述要把推荐写进去，先看这篇综述如何组织数据、模型和任务，尤其是对话式推荐覆盖到了哪里。\n\n[A Survey on Generative Recommendation: Data, Model, and Tasks](https://arxiv.org/abs/2510.27157)",
       "color": "#95723E"
@@ -219,9 +219,9 @@
     {
       "id": "0000000000000029",
       "type": "text",
-      "x": 1087,
-      "y": 1997,
-      "width": 480,
+      "x": 1174,
+      "y": 2410,
+      "width": 518,
       "height": 236,
       "text": "### 核对广告安全已有框架\n\nQiu 与 Mei 按品牌提及、信息呈现、行为引导和长期偏好梳理生成式广告的商业影响。适合用来判断安全议题如何纳入。\n\n[Generative AI Advertising as a Problem of Trustworthy Commercial Intervention](https://arxiv.org/abs/2605.18673)",
       "color": "#95723E"
@@ -229,12 +229,32 @@
     {
       "id": "000000000000002a",
       "type": "text",
-      "x": 1087,
-      "y": 2316,
-      "width": 480,
+      "x": 1174,
+      "y": 2729,
+      "width": 518,
       "height": 236,
       "text": "### 看一个推荐安全的例子\n\n*Loyal Agents* 的 Commerce Guidance 子集包含购物等推荐场景。看用户委托的代理遇到外部商业影响时，如何保护用户利益。\n\n[Loyal Agents · 论文全文](https://arxiv.org/html/2609.34714v1)",
       "color": "#95723E"
+    },
+    {
+      "id": "00000000000000f1",
+      "type": "text",
+      "x": 1728,
+      "y": 2091,
+      "width": 525,
+      "height": 253,
+      "color": "#64748B",
+      "text": "### 会上提到的共同作者\n\n- **Michael J. Curry** · [自动化机制设计综述](https://www.sigecom.org/exchanges/volume_22/2/CURRY.pdf)\n- **Haifeng Xu** · [多发送者说服](https://proceedings.mlr.press/v235/hossain24c.html)、[保护区巡逻的鲁棒优化](https://arxiv.org/abs/2503.05730)\n- **Paul Dütting** · [用合约协调智能体](https://arxiv.org/abs/2407.18074)"
+    },
+    {
+      "id": "00000000000000f2",
+      "type": "text",
+      "x": 1728,
+      "y": 2410,
+      "width": 525,
+      "height": 280,
+      "color": "#64748B",
+      "text": "### 从 NaiAD 的引用继续找\n\n- **Song Zuo、Paul Dütting、Haifeng Xu 等** · [Token Auction 论文](https://arxiv.org/abs/2310.10826)\n- **Michael J. Curry 等** · [诚实聚合 LLM 与在线广告](https://arxiv.org/abs/2405.05905)\n- **Xiaotie Deng 等** · [在 LLM 回答中插入广告](https://arxiv.org/abs/2601.19435)\n\n[回到 NaiAD 的相关工作](https://arxiv.org/html/2605.09918v1#S6)"
     }
   ],
   "edges": [
